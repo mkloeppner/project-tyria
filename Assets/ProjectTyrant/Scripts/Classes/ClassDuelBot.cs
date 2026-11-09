@@ -35,8 +35,10 @@ namespace ProjectTyrant
         }
 
         Queue<string> _queue; float _seconds, _scale; string _archetypeId;
-        Result _cur; float _t, _nextAct, _respawnAt, _nextMech, _nextDodge; int _mechStep; Combatant _player, _enemy; SkillCaster _caster; ClassMechanicHost _host;
-        EnemyArchetype _arch; Vector3 _arena; string _ownClass; bool _active;
+        Result _cur; float _t, _nextAct, _respawnAt, _nextMech, _nextDodge, _nextElite; int _mechStep; Combatant _player, _enemy; SkillCaster _caster; ClassMechanicHost _host;
+        EnemyArchetype _arch; Vector3 _arena; string _ownClass; bool _active; string _eliteId; bool _sigCast; float _sigShot;
+        /// <summary>Captures der Signatur-Skills (Temp/PT_QA/m26_&lt;spez&gt;.png).</summary>
+        public static bool CaptureSignatures = true;
 
         void Start()
         {
@@ -63,18 +65,19 @@ namespace ProjectTyrant
                 Debug.Log("[ProjectTyrant] Klassen-Duell fertig:\n" + Report);
                 Destroy(gameObject); return;
             }
-            var id = _queue.Dequeue();
+            var entry = _queue.Dequeue(); var parts = entry.Split('/'); var id = parts[0]; _eliteId = parts.Length > 1 ? parts[1] : null;
             var p = PlayerProfile.Instance; var gm = GameManager.Instance;
             if (p == null || gm == null || gm.Player == null || _arch == null) { Debug.LogWarning("[ProjectTyrant] Duell: Profil/Spieler/Archetyp fehlt"); Destroy(gameObject); return; }
             p.DebugSwitchClass(id); p.SaveSuspended = true; p.DebugUnlockAll();
             p.State.Loadout.FillDefaults(p.CurrentClass.SkillPool);
+            if (_eliteId != null) Debug.Log("[ProjectTyrant] Duell-Elite: " + p.DebugActivateElite(_eliteId));
             _player = gm.Player; _caster = _player.GetComponent<SkillCaster>(); _host = _player.GetComponent<ClassMechanicHost>();
             p.State.Loadout.ApplyTo(_caster);
             for (int i = 0; i < 10; i++) { var s = _caster.GetSkillInSlot(i); if (s != null) _caster.SetCooldown(s, 0f); }
             _player.Revive(1f); var dc = _player.GetComponent<DownedController>(); if (dc != null) dc.ResetState();
             _arena = FindQuietSpot(_player.transform.position);
             var pcon = _player.GetComponent<PlayerController>(); if (pcon != null) pcon.Teleport(_arena, _player.transform.rotation); else _player.transform.position = _arena;
-            _cur = new Result { ClassId = id }; _t = 0f; _nextAct = 0f; _respawnAt = 0.5f; _nextMech = 2f; _mechStep = 0; _active = true;
+            _cur = new Result { ClassId = _eliteId != null ? id + "/" + _eliteId : id }; _sigCast = _eliteId == null; _sigShot = -1f; _t = 0f; _nextAct = 0f; _respawnAt = 0.5f; _nextMech = 2f; _nextElite = 3f; _mechStep = 0; _active = true;
             _player.Damaged += OnPlayerDamaged;
         }
 
@@ -146,6 +149,17 @@ namespace ProjectTyrant
                 if (!threat) foreach (var g in FindObjectsByType<GroundTelegraph>()) if (g != null && !g.Resolved && g.Delay - g.Elapsed < 0.45f && (g.transform.position - _player.transform.position).sqrMagnitude < g.Radius * g.Radius) { threat = true; break; }
                 if (threat && pc2.Dodge.TryStartDodge(-_player.transform.forward)) { _cur.Dodges++; _nextDodge = _t + 0.8f; }
             }
+
+            // Signatur-Skill der Spezialisierung einmal gezielt wirken und festhalten
+            if (!_sigCast && _t > 6f && !_caster.IsCasting && _host != null && _host.Elite != null)
+            {
+                _sigCast = true; var spec = _host.Elite; SkillDefinition sig = null;
+                foreach (var sk in spec.AllSkills()) if (sk != null && sk.Id.EndsWith(spec.SignatureSkill)) sig = sk;
+                if (sig != null && _caster.TryCast(sig, true, sig.IsGroundTargeted ? _enemy.transform.position : (Vector3?)null, true)) { _cur.Casts++; _sigShot = _t + Mathf.Max(0.35f, sig.CastTime + 0.2f); }
+            }
+            if (_sigShot > 0f && _t >= _sigShot) { _sigShot = -1f; if (CaptureSignatures) ScreenCapture.CaptureScreenshot("Temp/PT_QA/m26_" + _eliteId + ".png"); }
+            // Elite-Mechanik (F5) regelmäßig
+            if (_host != null && _host.Elite != null && _t >= _nextElite) { _host.UseMechanic(4); _nextElite = _t + 7f; _cur.Mechanic++; }
 
             // Klassenmechanik
             if (_host != null && _host.Kind != ClassMechanicKind.None && _t >= _nextMech)

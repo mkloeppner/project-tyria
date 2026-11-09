@@ -24,7 +24,7 @@ namespace ProjectTyrant.Tests
                         if (e.Prefab.GetComponent<VfxInstance>() == null) missing.Add(e.Key + " ohne VfxInstance");
                         if (e.Prefab.GetComponentsInChildren<Renderer>(true).Length == 0) missing.Add(e.Key + " ohne Renderer");
                     }
-            Assert.AreEqual(13 * 11 * 4, cat.Entries.Count);
+            Assert.AreEqual(13 * (11 + 16) * 4, cat.Entries.Count);   // 11 Grund-Paletten (M23) + 16 Elite-Signaturen (M26)
             Assert.IsEmpty(missing, string.Join(", ", missing));
         }
 
@@ -47,7 +47,7 @@ namespace ProjectTyrant.Tests
         public void Palettes_Complete_AndDistinct()
         {
             var cat = Cat;
-            Assert.AreEqual(11, cat.Palettes.Count);
+            Assert.AreEqual(11 + 16, cat.Palettes.Count);   // M26: + 16 Signatur-Paletten der Elite-Spezialisierungen
             var seen = new HashSet<VfxPalette>();
             foreach (var p in cat.Palettes) { Assert.IsTrue(seen.Add(p.Id)); Assert.IsFalse(string.IsNullOrEmpty(p.SoundFamily)); Assert.Greater(p.A.maxColorComponent, 0.05f); }
             foreach (VfxPalette p in System.Enum.GetValues(typeof(VfxPalette))) Assert.IsTrue(seen.Contains(p), p.ToString());
