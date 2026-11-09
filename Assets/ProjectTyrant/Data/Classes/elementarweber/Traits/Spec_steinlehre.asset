@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b0f7ae59a421748ae87ff08598901d, type: 3}
+  m_Name: Spec_steinlehre
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SpecializationDefinition
+  Id: steinlehre
+  DisplayName: Stein- und Quelllehre
+  Description: Erde, Wasser, Schutz und Heilung.
+  Color: {r: 0.55, g: 0.7, b: 0.85, a: 1}
+  Minors:
+  - {fileID: 11400000, guid: 8a9a75b99695c624ca690e9608dd934c, type: 2}
+  - {fileID: 11400000, guid: 24bdc047fda0c4646b7fb690b1319892, type: 2}
+  - {fileID: 11400000, guid: 96070dac547fa3c4f95945747a3fe859, type: 2}
+  Majors:
+  - {fileID: 11400000, guid: 568c6d35eb1ec5e42808238e19009ca9, type: 2}
+  - {fileID: 11400000, guid: 7888a13a2f3f0da44aca0ce099dad8e1, type: 2}
+  - {fileID: 11400000, guid: 07e11a61e9c73164e9370f2801d10c87, type: 2}
+  - {fileID: 11400000, guid: c4b97ba24a82c4947b0aba17e1cc91e6, type: 2}
+  - {fileID: 11400000, guid: 0d570573ab4f1554ab4aeed1cdec1e22, type: 2}
+  - {fileID: 11400000, guid: 649a8e122470bba48b9ce17366da3a60, type: 2}
+  - {fileID: 11400000, guid: 5798c7ef0c1e9f843ae3e972cdcea70f, type: 2}
+  - {fileID: 11400000, guid: 6a5d12362122e874485a4f8cf7404780, type: 2}
+  - {fileID: 11400000, guid: a23bdf6427e9f2748b0472f71f65df4b, type: 2}

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554474852b9839349beaf73d1a134f55, type: 3}
+  m_Name: Vendor_karma_kerla
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.VendorDefinition
+  Id: karma_kerla
+  DisplayName: Hauptfrau Kerla (Karma)
+  Kind: 2
+  Stock:
+  - Item: {fileID: 11400000, guid: 0562f1b9d5b85fe42b9a403bcc6a0bb6, type: 2}
+    PriceCopper: 0
+    PriceKarma: 1800
+    Count: 1
+  - Item: {fileID: 11400000, guid: 757e9baa37b521f4d987f1b5276199a1, type: 2}
+    PriceCopper: 0
+    PriceKarma: 1400
+    Count: 1
+  - Item: {fileID: 11400000, guid: 449e73e8a6b714546a970fc7592b2505, type: 2}
+    PriceCopper: 0
+    PriceKarma: 1200
+    Count: 1
+  - Item: {fileID: 11400000, guid: 948e8dbb3c95a864aa83eb974467ec1a, type: 2}
+    PriceCopper: 0
+    PriceKarma: 50
+    Count: 5

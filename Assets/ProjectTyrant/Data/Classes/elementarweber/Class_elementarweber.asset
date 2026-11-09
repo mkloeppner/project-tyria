@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35582dcb05479724fae4bb6b0020ac9d, type: 3}
+  m_Name: Class_elementarweber
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ClassDefinition
+  Id: elementarweber
+  DisplayName: Elementarweber
+  Summary: "Leichte R\xFCstung \xB7 vier Einstimmungen \xB7 Stab, Zepter + Fokus, Dolch + Dolch \xB7 Glyphen, Beschw\xF6rungen, Arkan."
+  Armor: 0
+  Color: {r: 0.95, g: 0.55, b: 0.25, a: 1}
+  SecondaryColor: {r: 0.35, g: 0.6, b: 1, a: 1}
+  Palette: 8
+  Mechanic: 2
+  ResourceName: Einstimmung
+  MechanicLabels:
+  - Feuer
+  - Wasser
+  - Luft
+  - Erde
+  MechanicSummary: "Einstimmungen: F1 Feuer, F2 Wasser, F3 Luft, F4 Erde tauschen die Waffenskills 1\u20135 (10 s Abklingzeit der verlassenen Einstimmung). Wechsel l\xE4sst ein kurzes Elementarfeld zur\xFCck."
+  WeaponSets:
+  - {fileID: 11400000, guid: 2880560b04442864b8312366cff8760c, type: 2}
+  - {fileID: 11400000, guid: 5c736f3b17ff02542a556eb753d22e4e, type: 2}
+  - {fileID: 11400000, guid: 3fe3c64793c313943807838916b17daa, type: 2}
+  StartWeapons: 0200000007000000i
+  SkillPool:
+  - {fileID: 11400000, guid: a1ddb15f832565546a6d2ab3239f4f58, type: 2}
+  - {fileID: 11400000, guid: ded474891bfc00f40a34fcd09ceeb80e, type: 2}
+  - {fileID: 11400000, guid: 11a9f887babffae45b9b3e211136f7ea, type: 2}
+  - {fileID: 11400000, guid: 2b60d9b8b79e9684cb8307ce409109cd, type: 2}
+  - {fileID: 11400000, guid: 826dfcb5a77523f4aa02ca7d322ccf01, type: 2}
+  - {fileID: 11400000, guid: 831c2089bcead2940b8b8b89b57a9278, type: 2}
+  - {fileID: 11400000, guid: 0f5ff6836b152e6468dadba932f05eca, type: 2}
+  - {fileID: 11400000, guid: 233536ded381104449426849a371559b, type: 2}
+  - {fileID: 11400000, guid: e2eb65ec2ac4e7f4db528c14c64d15b5, type: 2}
+  - {fileID: 11400000, guid: 54c4ac2de147d9745b41356b763178bf, type: 2}
+  - {fileID: 11400000, guid: 19fb86b226e88a3498bb8a8c065f1967, type: 2}
+  - {fileID: 11400000, guid: 6647307e020f42a449831fd7bd3d4b93, type: 2}
+  - {fileID: 11400000, guid: 4a58b49c623083b4bab147cde002911b, type: 2}
+  - {fileID: 11400000, guid: dacce393fb1e00048aa1e6ba0f55997f, type: 2}
+  ExtraSkills:
+  - {fileID: 11400000, guid: 06064e476a132b14896385bf3e94e885, type: 2}
+  - {fileID: 11400000, guid: 0f63f965780f5944fba247564c40e6a1, type: 2}
+  - {fileID: 11400000, guid: 419ec0193eed8ed4994102d46e94cfc5, type: 2}
+  - {fileID: 11400000, guid: c9062bfd989cf844db94b20864515669, type: 2}
+  - {fileID: 11400000, guid: f83e62383b78b9f4ba310cf25a11da61, type: 2}
+  - {fileID: 11400000, guid: 6582d28352d83824885abec8ef213a46, type: 2}
+  - {fileID: 11400000, guid: 6221cb928637fca4e8af3e6fb755dea5, type: 2}
+  - {fileID: 11400000, guid: d5f31fa0b9a5db04d8197b83267a03db, type: 2}
+  - {fileID: 11400000, guid: 10cea72f7400eed459fe893201091952, type: 2}
+  - {fileID: 11400000, guid: 1ade8908bb6c8d44b9d81bdc1028a7ed, type: 2}
+  - {fileID: 11400000, guid: 403d52b0cbeb5eb4ea6fad68462b037a, type: 2}
+  - {fileID: 11400000, guid: 4efe3bddaa8b6034680671783fdc6577, type: 2}
+  - {fileID: 11400000, guid: 4bfb45048d895cf4aad1c7374204fbf7, type: 2}
+  - {fileID: 11400000, guid: b3136501cf2b42f45a7105d7f7e62bd4, type: 2}
+  - {fileID: 11400000, guid: 91a56e9c08265c641aab4cfefbe7c71d, type: 2}
+  Specializations:
+  - {fileID: 11400000, guid: ff2aa85a1fd1c6244a5ca5eb88e37d75, type: 2}
+  - {fileID: 11400000, guid: 6f22b0e170a6a2c43af057e15c02b3b9, type: 2}
+  - {fileID: 11400000, guid: 62f20fcd169309c47b0b5c6b3156f75d, type: 2}
+  SwapInCombat: 0
+  SignatureSkill: ST05_Sternenglut

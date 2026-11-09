@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_moor_irrlichter
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: moor_irrlichter
+  Title: "Irrlichter entz\xFCnden"
+  Description: "Entz\xFCnde die Laternen am Nebelkreuz, damit die F\xE4hrleute den Weg finden."
+  ChainId: 
+  Objective: 8
+  Center: {x: 60, y: 2.1, z: 20}
+  Radius: 30
+  Duration: 210
+  TargetCount: 4
+  Triggers:
+  - Type: 1
+    Delay: 20
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 300
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 240
+  GoldContribution: 3241.9355
+  Experience: 1081
+  Karma: 324
+  Coins: 173
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: nebelmoor_moor_irrlichter
+  Path: []
+  DeliverPoint: {x: 60, y: 2.1, z: 20}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 2f0b2a30a79533f4f9b512832f11f5b0, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 0}
+  Sites:
+  - {x: 71.052734, y: 1.9524553, z: 24.67302}
+  - {x: 55.32698, y: 1.8270544, z: 31.052732}
+  - {x: 48.94727, y: 1.4733399, z: 15.326978}
+  - {x: 64.67302, y: 1.6450019, z: 8.9472685}
+  SiteChannel: 2
+  SiteLabel: "Laterne entz\xFCnden"
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0

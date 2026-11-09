@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
+  m_Name: Weapon_AxtFackel
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
+  DisplayName: Axt & Fackel
+  Visual: 3
+  WeaponColor: {r: 0.9, g: 0.5, b: 0.2, a: 1}
+  Skills:
+  - {fileID: 11400000, guid: 002493749376b904eb79267a52202d10, type: 2}
+  - {fileID: 11400000, guid: 1700a9f2c4186ef4580d6c8d4b0b2323, type: 2}
+  - {fileID: 11400000, guid: fe55a04a060bc494a8180be10f347f5d, type: 2}
+  - {fileID: 11400000, guid: aa56d474d794aa146a6b9faec8442ea1, type: 2}
+  - {fileID: 11400000, guid: 9db2ce60555ef4a408397315d0d668c1, type: 2}
+  Kind: 4
+  ClassId: wildhueter
+  Attunement: []
+  StealthSkill: {fileID: 0}

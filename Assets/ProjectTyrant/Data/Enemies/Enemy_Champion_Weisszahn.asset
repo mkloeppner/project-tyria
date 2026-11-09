@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a9756ba196e784f8aead94cb329eb1, type: 3}
+  m_Name: Enemy_Champion_Weisszahn
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EnemyArchetype
+  DisplayName: "Rudelf\xFChrer Wei\xDFzahn"
+  Tier: 3
+  Team: 2
+  Prefab: {fileID: 4306981047685477725, guid: 9db97abe157bff14ea7444a12dccb90e, type: 3}
+  FixedLevel: 0
+  AttributeFactor: 1
+  ArmorFactor: 1.6
+  HealthFactor: 14
+  MaxHealth: 0
+  AttackCoefficient: 6
+  AttackRange: 2.8
+  AttackInterval: 1.8
+  AttackWindup: 0.6
+  Palette: 7
+  MoveSpeed: 6.5
+  AggroRange: 18
+  LeashRange: 45
+  Scale: 2.2
+  OnHitDebuff:
+    Type: 17
+    Stacks: 1
+    Duration: 3
+  HasTelegraph: 1
+  TelegraphRadius: 5
+  TelegraphDelay: 1.3
+  TelegraphCoefficient: 16
+  TelegraphInterval: 11
+  Behavior: 4
+  BehaviorRadius: 12
+  BehaviorInterval: 12
+  BehaviorCoefficient: 4
+  BehaviorEffect:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  SummonArchetype: {fileID: 0}
+  ProjectileColor: {r: 0.5, g: 0.9, b: 0.3, a: 1}
+  Defiance: 500
+  ContributionValue: 120
+  Experience: 800
+  Loot: {fileID: 11400000, guid: dc6a13d1d2861534682109619d361169, type: 2}

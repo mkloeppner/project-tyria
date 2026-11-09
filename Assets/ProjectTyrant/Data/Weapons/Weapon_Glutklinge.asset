@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
+  m_Name: Weapon_Glutklinge
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
+  DisplayName: Glutklinge
+  Visual: 0
+  WeaponColor: {r: 0.95, g: 0.45, b: 0.18, a: 1}
+  Skills:
+  - {fileID: 11400000, guid: e79cfaf7a69e817489c836ed3e1eb014, type: 2}
+  - {fileID: 11400000, guid: 5402fd34caa63044084fefd5d92bce85, type: 2}
+  - {fileID: 11400000, guid: 33524e0bf0891154b9b0a7aa2c8f14ec, type: 2}
+  - {fileID: 11400000, guid: 4e7393b88eeb8fe4f95f1dd3523b78aa, type: 2}
+  - {fileID: 11400000, guid: 206c5e0fb58e5d145aa1e37dcce251ee, type: 2}
+  Kind: 1
+  ClassId: waechter
+  Attunement: []
+  StealthSkill: {fileID: 0}

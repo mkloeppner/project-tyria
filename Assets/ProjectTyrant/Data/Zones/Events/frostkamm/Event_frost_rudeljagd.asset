@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_frost_rudeljagd
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: frost_rudeljagd
+  Title: Rudeljagd am Kammpass
+  Description: "Jage die Eisw\xF6lfe, bis Rudelf\xFChrer Wei\xDFzahn erscheint."
+  ChainId: 
+  Objective: 7
+  Center: {x: 200, y: 0, z: 20}
+  Radius: 40
+  Duration: 360
+  TargetCount: 8
+  Triggers:
+  - Type: 1
+    Delay: 30
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 420
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 360
+  GoldContribution: 4403.226
+  Experience: 1468
+  Karma: 440
+  Coins: 235
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: frostkamm_frost_rudeljagd
+  Path: []
+  DeliverPoint: {x: 200, y: 0, z: 20}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 611b933018f0a93478c771de2d6475a3, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 11400000, guid: 238ac16e8e51a024c9e86f60d7538fc4, type: 2}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b0f7ae59a421748ae87ff08598901d, type: 3}
+  m_Name: Spec_giftkunst
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SpecializationDefinition
+  Id: giftkunst
+  DisplayName: "T\xF6dliche K\xFCnste"
+  Description: "Gift, Zust\xE4nde und Gifte."
+  Color: {r: 0.5, g: 0.75, b: 0.3, a: 1}
+  Minors:
+  - {fileID: 11400000, guid: 36e14c083327c0e4da1564ebd694d5de, type: 2}
+  - {fileID: 11400000, guid: c053e4bf9e9f259468ed7e5aa5460262, type: 2}
+  - {fileID: 11400000, guid: 4e6376e982668c545a7f92945bdc72db, type: 2}
+  Majors:
+  - {fileID: 11400000, guid: c47e6c599acdeb44bb88ca2e951fbd70, type: 2}
+  - {fileID: 11400000, guid: c580a4ef3438585469d66c551c521651, type: 2}
+  - {fileID: 11400000, guid: 8af101ee110e95b4da61c66fbe27d07f, type: 2}
+  - {fileID: 11400000, guid: 13d6770acc7ec0045909e4ca3c83a546, type: 2}
+  - {fileID: 11400000, guid: 4e3dbeb7de258744ebd8304642e441d8, type: 2}
+  - {fileID: 11400000, guid: 915427bb3323a5c4e92be63d91181b0b, type: 2}
+  - {fileID: 11400000, guid: 320d39931ba0f744fa82e0fa9d850ffe, type: 2}
+  - {fileID: 11400000, guid: 83342bfa0264d824080b39444a71cfdb, type: 2}
+  - {fileID: 11400000, guid: eb6c5202401617347874acaf867560c9, type: 2}

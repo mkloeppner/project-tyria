@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b0f7ae59a421748ae87ff08598901d, type: 3}
+  m_Name: Spec_glutlehre
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SpecializationDefinition
+  Id: glutlehre
+  DisplayName: Glutlehre
+  Description: Feuer, Brennen und Kraft.
+  Color: {r: 1, g: 0.45, b: 0.15, a: 1}
+  Minors:
+  - {fileID: 11400000, guid: f1538d55d65d5614eb05301dc2eec3b9, type: 2}
+  - {fileID: 11400000, guid: 0edb548053661184d80fc5c476ceabf6, type: 2}
+  - {fileID: 11400000, guid: 14f74702643b9a241b23bba1ec94f2c2, type: 2}
+  Majors:
+  - {fileID: 11400000, guid: ca59052c2033a354392e3d50669d3f34, type: 2}
+  - {fileID: 11400000, guid: d3f1a7e55e0dd1649abd89dafdad4774, type: 2}
+  - {fileID: 11400000, guid: c2c82110527161a498e98c27208bd75c, type: 2}
+  - {fileID: 11400000, guid: 45c9e5f130411884c876ffcb28b7b1d2, type: 2}
+  - {fileID: 11400000, guid: 101ba32a81cefcd4c89079d2610146f2, type: 2}
+  - {fileID: 11400000, guid: df997094dd6aa714a9249fadc5a90557, type: 2}
+  - {fileID: 11400000, guid: 6cfc9793c33536447959e895c612af95, type: 2}
+  - {fileID: 11400000, guid: f7c6e34e6c234e34f9da28b25ca19812, type: 2}
+  - {fileID: 11400000, guid: 1e4df8ce4f35985408ca60c9d802e24c, type: 2}

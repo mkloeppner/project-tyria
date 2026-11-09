@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ce25957b3fe044c9f27b1173b9aa42, type: 3}
+  m_Name: ClipSet_Bird
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Anim.AnimClipSet
+  Rig: Bird
+  Clips:
+  - Name: Bird_Idle
+    Clip: {fileID: 7400000, guid: 6545d025914c79444a66a5e51e7c808b, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 3
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Bird_Walk
+    Clip: {fileID: 7400000, guid: cd0baa57c836e6b4eaeab7850420e72a, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 1.2
+    Markers:
+    - Type: FootL
+      Time: 0.6333333
+    - Type: FootR
+      Time: 0.033333335
+    FootL: []
+    FootR: []
+  - Name: Bird_Run
+    Clip: {fileID: 7400000, guid: b0ff05b811d975247ba1e04571892ab2, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 0.6
+    Markers:
+    - Type: FootL
+      Time: 0.3
+    - Type: FootR
+      Time: 0
+    FootL: []
+    FootR: []
+  - Name: Bird_Jump
+    Clip: {fileID: 7400000, guid: c813fc2769eaa0647ae3d57335dcf82e, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 0.8
+    Markers:
+    - Type: Effect
+      Time: 0.15
+    - Type: FootL
+      Time: 0.6
+    - Type: FootR
+      Time: 0.62
+    - Type: End
+      Time: 0.75
+    FootL: []
+    FootR: []
+  - Name: Bird_Attack
+    Clip: {fileID: 7400000, guid: 69b78a091e7047b43b12779107d0e308, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 1.1
+    Markers:
+    - Type: Effect
+      Time: 0
+    - Type: Hit
+      Time: 0.72
+    - Type: End
+      Time: 1
+    FootL: []
+    FootR: []
+  - Name: Bird_Hit
+    Clip: {fileID: 7400000, guid: d865f499648e7c64880adfb4546e805c, type: 2}
+    Layer: 3
+    Loop: 0
+    Length: 0.35
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Bird_Death
+    Clip: {fileID: 7400000, guid: 6bea0be8854023047a9b2bb26f4648b8, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 1.2
+    Markers:
+    - Type: Hit
+      Time: 1
+    - Type: End
+      Time: 1.2
+    FootL: []
+    FootR: []
+  - Name: Bird_Sniff
+    Clip: {fileID: 7400000, guid: 8e1f51ee38752f64ab05f0a1d6300dee, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 2
+    Markers:
+    - Type: Effect
+      Time: 0.5
+    FootL: []
+    FootR: []

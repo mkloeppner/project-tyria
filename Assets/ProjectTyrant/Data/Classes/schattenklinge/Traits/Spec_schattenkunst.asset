@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b0f7ae59a421748ae87ff08598901d, type: 3}
+  m_Name: Spec_schattenkunst
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SpecializationDefinition
+  Id: schattenkunst
+  DisplayName: Schattenkunst
+  Description: "Tarnung, Heilung und T\xE4uschungen."
+  Color: {r: 0.45, g: 0.35, b: 0.6, a: 1}
+  Minors:
+  - {fileID: 11400000, guid: 8400a0febd8e16c469152ab8e42ebf89, type: 2}
+  - {fileID: 11400000, guid: c48d867e14a2b1348bf5573ce8e69e43, type: 2}
+  - {fileID: 11400000, guid: 9a0723843e4c00843abf28a56f1f3b82, type: 2}
+  Majors:
+  - {fileID: 11400000, guid: 423f58247ff12fc4393ca8da7edff7e0, type: 2}
+  - {fileID: 11400000, guid: 4ce7c6adc01b06444b5c90936a17aa65, type: 2}
+  - {fileID: 11400000, guid: a3ef889228115d3409edf4c20a827ae8, type: 2}
+  - {fileID: 11400000, guid: 59753886b8f9a3f43acc208952397fb5, type: 2}
+  - {fileID: 11400000, guid: 9277bebe4d71e154384c9694834e4147, type: 2}
+  - {fileID: 11400000, guid: 865f80e5bb0f57e47baabbcbceeec4fc, type: 2}
+  - {fileID: 11400000, guid: d3d82a62d456d9a43bcf1787af0c0e69, type: 2}
+  - {fileID: 11400000, guid: 823795e6c4831244cac77d2eccd5178c, type: 2}
+  - {fileID: 11400000, guid: 61c7bcd46d712a64bab5e3db95df164e, type: 2}

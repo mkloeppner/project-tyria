@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b0f7ae59a421748ae87ff08598901d, type: 3}
+  m_Name: Spec_sturm
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SpecializationDefinition
+  Id: sturm
+  DisplayName: Sturmweisheit
+  Description: "Zust\xE4nde, Kontrolle, Stab und Fallen."
+  Color: {r: 0.55, g: 0.5, b: 1, a: 1}
+  Minors:
+  - {fileID: 11400000, guid: 9582ce1870e833d4ebd53a5948a918dc, type: 2}
+  - {fileID: 11400000, guid: ec4cd3d9e3b43bc4a933937d018669cc, type: 2}
+  - {fileID: 11400000, guid: cd395ee7d64e8f14a8385109b77b260a, type: 2}
+  Majors:
+  - {fileID: 11400000, guid: c467886f3318d764ca7368af898d4a91, type: 2}
+  - {fileID: 11400000, guid: 57652f4e64834e64c8b607ac30acf15a, type: 2}
+  - {fileID: 11400000, guid: 97c4c1eff2607854eaa00488b3eedc68, type: 2}
+  - {fileID: 11400000, guid: 1f3d85552c322114385887d387c92b15, type: 2}
+  - {fileID: 11400000, guid: 26d9aa51155467146b90bb298fae93de, type: 2}
+  - {fileID: 11400000, guid: 8c1e7869db1c7b04e994624fd1c83fa0, type: 2}
+  - {fileID: 11400000, guid: fd675320555e0ab4ba711a1815d8f1a1, type: 2}
+  - {fileID: 11400000, guid: 9cd630b1c1bf8b645a94484c47f28cec, type: 2}
+  - {fileID: 11400000, guid: 00c2ac1bc0a454c45acfacab2f5f487e, type: 2}

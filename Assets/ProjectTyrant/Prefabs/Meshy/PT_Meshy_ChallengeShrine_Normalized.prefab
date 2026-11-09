@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6653299065310246831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9152935427310409502}
+  - component: {fileID: 3057385599059489517}
+  - component: {fileID: 4328815705743781448}
+  m_Layer: 0
+  m_Name: PT_Meshy_ChallengeShrine_Normalized
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9152935427310409502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6653299065310246831}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3568619630381984584}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3057385599059489517
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6653299065310246831}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3798959, y: 1.8000001, z: 1.3941903}
+  m_Center: {x: 0, y: 0.90000004, z: 0}
+--- !u!114 &4328815705743781448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6653299065310246831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66376cbdce4e2643bce761e3a31e033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.PlaceholderMarker
+  AssetId: PT_Meshy_ChallengeShrine
+  MeshyPrompt: (Meshy-generiert)
+  ReplacedByMeshy: 1
+--- !u!1001 &3894753687814933667
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9152935427310409502}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: aac0ec47c20eff148b0be3bcb5cf8692, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0013434887
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aac0ec47c20eff148b0be3bcb5cf8692, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8967608
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aac0ec47c20eff148b0be3bcb5cf8692, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00071531534
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aac0ec47c20eff148b0be3bcb5cf8692, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aac0ec47c20eff148b0be3bcb5cf8692, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aac0ec47c20eff148b0be3bcb5cf8692, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aac0ec47c20eff148b0be3bcb5cf8692, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aac0ec47c20eff148b0be3bcb5cf8692, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aac0ec47c20eff148b0be3bcb5cf8692, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aac0ec47c20eff148b0be3bcb5cf8692, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: aac0ec47c20eff148b0be3bcb5cf8692, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 02d7daa894e831d4e9a87d3bdb9a8368, type: 2}
+    - target: {fileID: 919132149155446097, guid: aac0ec47c20eff148b0be3bcb5cf8692, type: 3}
+      propertyPath: m_Name
+      value: PT_Meshy_ChallengeShrine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aac0ec47c20eff148b0be3bcb5cf8692, type: 3}
+--- !u!4 &3568619630381984584 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: aac0ec47c20eff148b0be3bcb5cf8692, type: 3}
+  m_PrefabInstance: {fileID: 3894753687814933667}
+  m_PrefabAsset: {fileID: 0}

@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_frostkamm
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: frostkamm
+  DisplayName: Frostkamm
+  Description: "Verschneite Terrassen und Gipfel \u2013 Heimat des Frostschlunds."
+  SceneName: PT_Zone_Frostkamm
+  Seed: 25030
+  Size: 1100
+  LevelMin: 25
+  LevelMax: 30
+  Biome: {fileID: 11400000, guid: d621af870013bd14ab85bca9578801a2, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: frostkamm_nebelmoor
+    Position: {x: -20, y: 14, z: -470}
+    Yaw: 2.4366481
+    TargetZone: nebelmoor
+    TargetPortal: nebelmoor_frostkamm
+  - Id: frostkamm_gluetoede
+    Position: {x: 460, y: -4.1458035, z: 40}
+    Yaw: -94.96974
+    TargetZone: gluetoede
+    TargetPortal: gluetoede_frostkamm
+  DefaultSpawn: {x: 0, y: 13.989325, z: -440}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.3
+    y: 0.4
+    width: 0.32
+    height: 0.32
+  ContinentColor: {r: 0.7254902, g: 0.79607844, b: 0.84705883, a: 1}
+  Waypoints:
+  - Id: wp_frost_ankunft
+    Name: Wegmarke Firnpforte
+    Position: {x: 24, y: 7.009785, z: -410}
+  - Id: wp_frost_lager
+    Name: Wegmarke Bergsteigerlager
+    Position: {x: -260, y: 6.010132, z: -220}
+  - Id: wp_frost_pass
+    Name: Wegmarke Kammpass
+    Position: {x: 120, y: 21, z: -60}
+  - Id: wp_frost_mine
+    Name: Wegmarke Kristallmine
+    Position: {x: 380, y: 28, z: -260}
+  - Id: wp_frost_tempel
+    Name: Wegmarke Eiswind
+    Position: {x: -180, y: 7.0328674, z: 240}
+  Tips:
+  - "Der Springer \xFCberwindet die Terrassen des Frostkamms mit einem Satz."
+  - Der Weltboss Frostschlund erscheint alle 15 Minuten.
+  Regions:
+  - Name: Bergsteigerlager
+    Center: {x: -240, y: -270}
+    Radius: 110
+    LevelMin: 25
+    LevelMax: 26
+  - Name: Adlerhorst
+    Center: {x: 230, y: 120}
+    Radius: 110
+    LevelMin: 27
+    LevelMax: 29
+  - Name: Kristallmine
+    Center: {x: 360, y: -200}
+    Radius: 110
+    LevelMin: 25
+    LevelMax: 27
+  - Name: Eiswindtempel
+    Center: {x: -260, y: 160}
+    Radius: 110
+    LevelMin: 28
+    LevelMax: 30
+  - Name: Schlund des Frostes
+    Center: {x: 40, y: 330}
+    Radius: 110
+    LevelMin: 29
+    LevelMax: 30
+  TimerLabel: Frostschlund
+  TimerPeriod: 900
+  TimerOffset: 120
+  TimerPosition: {x: 40, y: 13.279403, z: 330}
+  TimerEventId: frostschlund
+  CompletionIds:
+  - wp_frost_ankunft
+  - wp_frost_lager
+  - wp_frost_pass
+  - wp_frost_mine
+  - wp_frost_tempel
+  - poi_frost_lager
+  - poi_frost_horst
+  - poi_frost_mine
+  - poi_frost_tempel
+  - poi_frost_schlund
+  - vista_frost_balkon
+  - vista_frost_firnsaeule
+  - vista_frost_lawinenwacht
+  - hc_frost_gletscher
+  - hc_frost_herausforderer
+  - hc_frost_relikt
+  - hc_frost_grat
+  - heart_frost_runa
+  - heart_frost_bodo
+  - heart_frost_saga

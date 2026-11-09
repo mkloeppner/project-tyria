@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b0f7ae59a421748ae87ff08598901d, type: 3}
+  m_Name: Spec_glut
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SpecializationDefinition
+  Id: glut
+  DisplayName: Glutzorn
+  Description: "Kraft, kritische Treffer und Gro\xDFschwert."
+  Color: {r: 0.95, g: 0.45, b: 0.2, a: 1}
+  Minors:
+  - {fileID: 11400000, guid: b9343da9e6a4d20479ba88788b6eaa9d, type: 2}
+  - {fileID: 11400000, guid: a633fe4cb6c801742ab29d8646808105, type: 2}
+  - {fileID: 11400000, guid: 310f5f8352d3314408c3871a19779578, type: 2}
+  Majors:
+  - {fileID: 11400000, guid: a5b773e1c6d7f4347a2c9181ef18fbc9, type: 2}
+  - {fileID: 11400000, guid: b363c6f172b5c8847b3b79ef74c601a2, type: 2}
+  - {fileID: 11400000, guid: 1aa29f23c868d2c4b933cb2150604a79, type: 2}
+  - {fileID: 11400000, guid: 8fc56c567923def4da1f2dfb3786ce1f, type: 2}
+  - {fileID: 11400000, guid: 40f8f568b37b87e4e85fab5734994bfc, type: 2}
+  - {fileID: 11400000, guid: 93be919e309a25a4da79e30a5182e359, type: 2}
+  - {fileID: 11400000, guid: 5ed0621aa37e170468408180921ca507, type: 2}
+  - {fileID: 11400000, guid: 7f54dadd388ce4e4495d582b39b16efe, type: 2}
+  - {fileID: 11400000, guid: 2e93fe4248d960645ad8f12759bbc474, type: 2}

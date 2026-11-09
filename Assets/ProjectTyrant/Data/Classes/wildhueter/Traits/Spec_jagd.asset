@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b0f7ae59a421748ae87ff08598901d, type: 3}
+  m_Name: Spec_jagd
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SpecializationDefinition
+  Id: jagd
+  DisplayName: Jagdinstinkt
+  Description: "Kraft, Pr\xE4zision und Langbogen."
+  Color: {r: 0.8, g: 0.7, b: 0.3, a: 1}
+  Minors:
+  - {fileID: 11400000, guid: 8672649244a8664449a350bd77a70a33, type: 2}
+  - {fileID: 11400000, guid: 57397bd2596efc043b87d56f9017ab11, type: 2}
+  - {fileID: 11400000, guid: c8e065ee810abe74ca9c036dd4f88406, type: 2}
+  Majors:
+  - {fileID: 11400000, guid: aa7c9a06f8375274dafe4aafdf41c0fa, type: 2}
+  - {fileID: 11400000, guid: 82ca382e992cdb64894c02b190aad5eb, type: 2}
+  - {fileID: 11400000, guid: 35fee871540e99c428545df2a5b29c17, type: 2}
+  - {fileID: 11400000, guid: 64b579d86b2eb414ea1b69add3fc002c, type: 2}
+  - {fileID: 11400000, guid: 4c56d774d7520c44e86bbdad8e2242b2, type: 2}
+  - {fileID: 11400000, guid: d98b8abb4d8dafe4e9c072e921af1eb0, type: 2}
+  - {fileID: 11400000, guid: fa91546a5c937024a9ce12129afd2710, type: 2}
+  - {fileID: 11400000, guid: 892ffd06ae0e5da4f97df0e153b616cb, type: 2}
+  - {fileID: 11400000, guid: 3770351971f2f31419029ce6e171cc25, type: 2}

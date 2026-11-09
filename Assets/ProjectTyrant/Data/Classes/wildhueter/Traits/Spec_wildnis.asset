@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b0f7ae59a421748ae87ff08598901d, type: 3}
+  m_Name: Spec_wildnis
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SpecializationDefinition
+  Id: wildnis
+  DisplayName: Wildniskunde
+  Description: "Fallen, Wildnisfertigkeiten und Zust\xE4nde."
+  Color: {r: 0.45, g: 0.7, b: 0.35, a: 1}
+  Minors:
+  - {fileID: 11400000, guid: 92301a5dab6ac0541b70d9bda0596c9f, type: 2}
+  - {fileID: 11400000, guid: e21ed5a02b544964da75148e3b26a550, type: 2}
+  - {fileID: 11400000, guid: 75caa5b24b04c08448cf9123878c83a9, type: 2}
+  Majors:
+  - {fileID: 11400000, guid: e1a0a9f35f2d0aa4b960718c8cd61fc7, type: 2}
+  - {fileID: 11400000, guid: d1dd002693a31734f85e0d5886da4109, type: 2}
+  - {fileID: 11400000, guid: ccaf3a1d2f668d6449b1f08803cb2c0b, type: 2}
+  - {fileID: 11400000, guid: fa5fb0781978b42429ed64e317156661, type: 2}
+  - {fileID: 11400000, guid: 83225cb12dd88fd4e8e67c1223631723, type: 2}
+  - {fileID: 11400000, guid: 31facfca904ba534e9bf3ddb9e2a0c57, type: 2}
+  - {fileID: 11400000, guid: 47713e41c231fe04586ccd4e495698c9, type: 2}
+  - {fileID: 11400000, guid: 04a08bc236858d04c845ecd2d8d0d159, type: 2}
+  - {fileID: 11400000, guid: 2359101ab49576d4d8735923070a7545, type: 2}

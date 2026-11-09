@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69ab7e33496bbb498dbb59b14be3f4a, type: 3}
+  m_Name: Mastery_Gleiten
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.MasteryLineDefinition
+  Line: 1
+  DisplayName: Gleiten
+  Description: "Der Gleiter: Leertaste in der Luft. Sp\xE4ter Aufwinde und schnelleres Gleiten."
+  Icon: mastery_glide
+  Color: {r: 0.95, g: 0.85, b: 0.55, a: 1}
+  Ranks:
+  - Name: Gleitschirm
+    Effect: "Leertaste in der Luft \xF6ffnet den Gleiter"
+    Xp: 4000
+    Points: 1
+  - Name: Aufwinde
+    Effect: "Aufwind-S\xE4ulen heben dich beim Gleiten an"
+    Xp: 10000
+    Points: 2
+  - Name: Segelflug
+    Effect: Gleiten schneller (11 m/s) und flacher (Sinken 2,2 m/s)
+    Xp: 18000
+    Points: 3

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b0f7ae59a421748ae87ff08598901d, type: 3}
+  m_Name: Spec_tierbund
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SpecializationDefinition
+  Id: tierbund
+  DisplayName: Tierbund
+  Description: "Gef\xE4hrte, Signale, Heilung und Segen."
+  Color: {r: 0.6, g: 0.5, b: 0.3, a: 1}
+  Minors:
+  - {fileID: 11400000, guid: aba93d06b56c25a449a10e5c3c3fef11, type: 2}
+  - {fileID: 11400000, guid: 626e3b5bcb98a454fbd36654943538d2, type: 2}
+  - {fileID: 11400000, guid: a22cbaa8149061540a7bc40ad03baf4f, type: 2}
+  Majors:
+  - {fileID: 11400000, guid: c13b4cbc1a2ffeb4a95697f73934cfaa, type: 2}
+  - {fileID: 11400000, guid: cad4f1176acd91547a82ea369db12a5d, type: 2}
+  - {fileID: 11400000, guid: bd9380e7475a273419e6b986fd2c622d, type: 2}
+  - {fileID: 11400000, guid: edf2c9348043d8c40a9f84411fd6e669, type: 2}
+  - {fileID: 11400000, guid: 6f06935ed5a07c34ebc0579baa2d2b8d, type: 2}
+  - {fileID: 11400000, guid: 69de40dbf022a0949918021bb5e007d1, type: 2}
+  - {fileID: 11400000, guid: 1fc02101a0986ec4fb8ae75ebacaa93f, type: 2}
+  - {fileID: 11400000, guid: 82a6f3054b9efcf43a06e092aed0153e, type: 2}
+  - {fileID: 11400000, guid: 0b0cd90d6b0ce2445a8817e9e8bdb42d, type: 2}

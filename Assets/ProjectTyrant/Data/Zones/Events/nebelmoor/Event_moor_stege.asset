@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_moor_stege
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: moor_stege
+  Title: Stege vor dem Versinken retten
+  Description: "Die Bohlenstege der Torfstecher brechen ein \u2013 repariere sie, bevor die Moorschleicher kommen."
+  ChainId: 
+  Objective: 6
+  Center: {x: -60, y: 2.110483, z: -270}
+  Radius: 34
+  Duration: 240
+  TargetCount: 5
+  Triggers:
+  - Type: 1
+    Delay: 20
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 240
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 240
+  GoldContribution: 2661.2903
+  Experience: 887
+  Karma: 266
+  Coins: 142
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: nebelmoor_moor_stege
+  Path: []
+  DeliverPoint: {x: -60, y: 2.110483, z: -270}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 197a40b5c0fb02d4793660d43ea42fc5, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 0}
+  Sites:
+  - {x: -49.86833, y: 2.2372296, z: -265.7164}
+  - {x: -60.94309, y: 2.1717792, z: -259.0405}
+  - {x: -70.71453, y: 2.2996747, z: -267.51025}
+  - {x: -65.678856, y: 1.9682794, z: -279.42075}
+  - {x: -52.795193, y: 2.1821523, z: -278.31207}
+  SiteChannel: 3
+  SiteLabel: Steg reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0

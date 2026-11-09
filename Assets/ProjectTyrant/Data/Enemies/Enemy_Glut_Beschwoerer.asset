@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a9756ba196e784f8aead94cb329eb1, type: 3}
+  m_Name: Enemy_Glut_Beschwoerer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EnemyArchetype
+  DisplayName: "Glutbeschw\xF6rer"
+  Tier: 2
+  Team: 2
+  Prefab: {fileID: 5921345475638662209, guid: f1869e03be102a24a972b538aa0d307d, type: 3}
+  FixedLevel: 0
+  AttributeFactor: 1.1
+  ArmorFactor: 1.6
+  HealthFactor: 3
+  MaxHealth: 0
+  AttackCoefficient: 3.6
+  AttackRange: 11
+  AttackInterval: 2.2
+  AttackWindup: 0.6
+  Palette: 10
+  MoveSpeed: 3.8
+  AggroRange: 16
+  LeashRange: 45
+  Scale: 1.2
+  OnHitDebuff:
+    Type: 14
+    Stacks: 1
+    Duration: 3
+  HasTelegraph: 0
+  TelegraphRadius: 5
+  TelegraphDelay: 1.5
+  TelegraphCoefficient: 25
+  TelegraphInterval: 9
+  Behavior: 8
+  BehaviorRadius: 6
+  BehaviorInterval: 12
+  BehaviorCoefficient: 4
+  BehaviorEffect:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  SummonArchetype: {fileID: 11400000, guid: 3a8a6cd2e3618c14fa9fb62050d1fb73, type: 2}
+  ProjectileColor: {r: 1, g: 0.55, b: 0.15, a: 1}
+  Defiance: 0
+  ContributionValue: 30
+  Experience: 180
+  Loot: {fileID: 11400000, guid: 47202ee697ef1654dbeac5785cfaa47e, type: 2}

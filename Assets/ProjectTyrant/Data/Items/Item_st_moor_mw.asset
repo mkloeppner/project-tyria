@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d901df07c9037a14f8a8b4c187e0bce4, type: 3}
+  m_Name: Item_st_moor_mw
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ItemDefinition
+  Id: st_moor_mw
+  DisplayName: Schilfrohr-Stab des Aasfressers
+  Description: "Zweih\xE4ndiger Stab. W\xE4chter, Elementarweber; Elite: Hainw\xE4chter (Wildh\xFCter), Phantomt\xE4nzer (Schattenklinge)."
+  Icon: {fileID: 0}
+  Type: 0
+  Rarity: 3
+  RequiredLevel: 18
+  ItemLevel: 18
+  Weapon: 2
+  Armor: 0
+  Trinket: 0
+  WeaponStrengthMin: 579
+  WeaponStrengthMax: 639
+  Defense: 0
+  Prefix: Aasfresser
+  Attributes:
+  - Attr: 5
+    Value: 60
+  - Attr: 0
+    Value: 30
+  - Attr: 3
+    Value: 30
+  MaxStack: 1
+  VendorValue: 244
+  Binding: 0
+  Salvage:
+  - Material: {fileID: 11400000, guid: 733fefeb6f15833438d244d289f1fed0, type: 2}
+    Min: 1
+    Max: 3
+  BagSize: 0
+  KitCharges: 0
+  Consumable: 0
+  FoodAttributes: []
+  FoodDurationMinutes: 30
+  HealBase: 0
+  ContainerLoot: {fileID: 0}

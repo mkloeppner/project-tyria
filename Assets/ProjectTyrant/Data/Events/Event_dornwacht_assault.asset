@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_dornwacht_assault
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: dornwacht_assault
+  Title: "Gegenschlag: St\xFCrmt die Rabenschanze"
+  Description: Der Angriff ist abgewehrt. Tragt den Kampf ins Lager der Aschkrallen!
+  ChainId: dornwacht
+  Objective: 0
+  Center: {x: 58, y: 2.5, z: 58}
+  Radius: 32
+  Duration: 180
+  TargetCount: 8
+  Triggers:
+  - Type: 2
+    Delay: 0
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: dornwacht_champion
+  FailNext: 
+  Cooldown: 5
+  GoldContribution: 12000
+  Experience: 600
+  Karma: 160
+  Coins: 60
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: camp_assault
+  Path: []
+  DeliverPoint: {x: 0, y: 0, z: 0}
+  CaptureRadius: 11.2
+  CaptureTime: 6
+  WaveSize: 3
+  WaveInterval: 15
+  Trash: {fileID: 11400000, guid: 53babf5c9b2da9447a1d04456d071871, type: 2}
+  Veteran: {fileID: 11400000, guid: 40c3a1cad1a3142469531571570555fe, type: 2}
+  Boss: {fileID: 11400000, guid: 733bcea6c1ed56d44b7ca3b77e231e5c, type: 2}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0

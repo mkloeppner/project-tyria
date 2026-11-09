@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_glut_blitzableiter
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: glut_blitzableiter
+  Title: Blitzableiter errichten
+  Description: "Hilf Oleg, die Blitzableiter vor dem n\xE4chsten Sturm aufzurichten."
+  ChainId: 
+  Objective: 6
+  Center: {x: 180, y: 3.2613547, z: 215}
+  Radius: 32
+  Duration: 240
+  TargetCount: 4
+  Triggers:
+  - Type: 1
+    Delay: 20
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 240
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 240
+  GoldContribution: 4693.5483
+  Experience: 1565
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: gluetoede_glut_blitzableiter
+  Path: []
+  DeliverPoint: {x: 180, y: 3.2613547, z: 215}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 3a8a6cd2e3618c14fa9fb62050d1fb73, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 0}
+  Sites:
+  - {x: 189.21062, y: 3.2349954, z: 218.89418}
+  - {x: 176.10582, y: 3.2344878, z: 224.21062}
+  - {x: 170.7894, y: 3.3564827, z: 211.10582}
+  - {x: 183.89418, y: 3.4963577, z: 205.78938}
+  SiteChannel: 3
+  SiteLabel: Blitzableiter aufrichten
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0

@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ce25957b3fe044c9f27b1173b9aa42, type: 3}
+  m_Name: ClipSet_Beetle
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Anim.AnimClipSet
+  Rig: Beetle
+  Clips:
+  - Name: Beetle_Idle
+    Clip: {fileID: 7400000, guid: e05378e05a9a97540a9ac6568e8f08fa, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 3
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Beetle_Walk
+    Clip: {fileID: 7400000, guid: af515158d58d681419aeccf8e538bbbc, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 1.2
+    Markers:
+    - Type: FootL
+      Time: 0.9
+    - Type: FootR
+      Time: 0.96666664
+    FootL: []
+    FootR: []
+  - Name: Beetle_Run
+    Clip: {fileID: 7400000, guid: 84e7a09d7ba1da34cbef55763cc6a12a, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 0.6
+    Markers:
+    - Type: FootL
+      Time: 0.43333334
+    - Type: FootR
+      Time: 0.4
+    FootL: []
+    FootR: []
+  - Name: Beetle_Jump
+    Clip: {fileID: 7400000, guid: 0627645158a250c47b84cb654a96bc42, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 0.8
+    Markers:
+    - Type: Effect
+      Time: 0.15
+    - Type: FootL
+      Time: 0.6
+    - Type: FootR
+      Time: 0.62
+    - Type: End
+      Time: 0.75
+    FootL: []
+    FootR: []
+  - Name: Beetle_Attack
+    Clip: {fileID: 7400000, guid: 8c1e89a66ff9fe64e80387a8de261682, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 1.1
+    Markers:
+    - Type: Effect
+      Time: 0
+    - Type: Hit
+      Time: 0.72
+    - Type: End
+      Time: 1
+    FootL: []
+    FootR: []
+  - Name: Beetle_Hit
+    Clip: {fileID: 7400000, guid: 20c210c16a41f4e4bb378657a7e77e79, type: 2}
+    Layer: 3
+    Loop: 0
+    Length: 0.35
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Beetle_Death
+    Clip: {fileID: 7400000, guid: 0b74b23fcc29a8246a4db9ac4ef0fa51, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 1.2
+    Markers:
+    - Type: Hit
+      Time: 1
+    - Type: End
+      Time: 1.2
+    FootL: []
+    FootR: []
+  - Name: Beetle_Sniff
+    Clip: {fileID: 7400000, guid: e27e51ae19b37e64bab29c687427fda2, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 2
+    Markers:
+    - Type: Effect
+      Time: 0.5
+    FootL: []
+    FootR: []

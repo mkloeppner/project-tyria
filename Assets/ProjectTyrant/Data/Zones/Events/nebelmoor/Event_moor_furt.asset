@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_moor_furt
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: moor_furt
+  Title: "Kr\xF6tenfurt verteidigen"
+  Description: "Halte die F\xE4hrkisten der Kr\xF6tenfurt gegen anr\xFCckende Moorschleicher."
+  ChainId: 
+  Objective: 1
+  Center: {x: 340, y: 2.1, z: -60}
+  Radius: 32
+  Duration: 180
+  TargetCount: 0
+  Triggers:
+  - Type: 1
+    Delay: 20
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 360
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 240
+  GoldContribution: 3096.7742
+  Experience: 1032
+  Karma: 310
+  Coins: 165
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: nebelmoor_moor_furt
+  Path: []
+  DeliverPoint: {x: 340, y: 2.1, z: -60}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 3
+  WaveInterval: 22
+  Trash: {fileID: 11400000, guid: 197a40b5c0fb02d4793660d43ea42fc5, type: 2}
+  Veteran: {fileID: 11400000, guid: d93cb94ace8b77f41a3826ea7dec05b4, type: 2}
+  Boss: {fileID: 0}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0

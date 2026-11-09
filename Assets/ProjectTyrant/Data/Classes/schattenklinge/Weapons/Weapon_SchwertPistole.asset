@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
+  m_Name: Weapon_SchwertPistole
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
+  DisplayName: Schwert & Pistole
+  Visual: 7
+  WeaponColor: {r: 0.7, g: 0.7, b: 0.75, a: 1}
+  Skills:
+  - {fileID: 11400000, guid: 9c0e28c2569078245bb60646641182c9, type: 2}
+  - {fileID: 11400000, guid: 35157d0eb8982d44590c11011e53ac8e, type: 2}
+  - {fileID: 11400000, guid: bbb2f15b09cf96d44acd94606843d1cb, type: 2}
+  - {fileID: 11400000, guid: f6f73d5efdf047a48839e45d7ce303ad, type: 2}
+  - {fileID: 11400000, guid: 41ebed95e58ea034abcc13d3372e2729, type: 2}
+  Kind: 8
+  ClassId: schattenklinge
+  Attunement: []
+  StealthSkill: {fileID: 11400000, guid: 16e72fbb33eb23545b574a7fb411c2e3, type: 2}

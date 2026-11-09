@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_DD23_Sturmsprung
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: elementarweber_DD23_Sturmsprung
+  DisplayName: Sturmsprung
+  Description: Sprung zum Ziel. Sprung-Finisher.
+  ShortLabel: 3
+  IconColor: {r: 0.95, g: 0.55, b: 0.25, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 7
+  CastTime: 0.25
+  Cooldown: 12
+  Delivery: 4
+  Range: 9
+  Radius: 2.5
+  TargetCount: 5
+  Coefficient: 0.99
+  Hits: 1
+  HitInterval: 0.25
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 34
+  LeapDistance: 9
+  TargetBuffs:
+  - Type: 24
+    Stacks: 2
+    Duration: 6
+  SelfBuffs: []
+  ShareWithAllies: 0
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 0
+  Field: 0
+  FieldDuration: 5
+  FieldRadius: 4
+  FieldTickCoefficient: 0
+  Finisher: 2
+  Timeline:
+    Activation: 0.25
+    Aftercast: 0.25000003
+    Hits:
+    - 0.25
+    Projectiles: []
+    Movement: 2
+    MoveDistance: 9
+    Instant: 0
+    Channel: 0
+    Clip: Dagger_Thrust
+    AnimScale: 1.1904762
+    VfxCharge: Charge/Luft/M
+    VfxRelease: Release/Luft/M
+    VfxProjectile: 
+    VfxImpact: Impact/Luft/M
+    VfxAfter: 
+    SfxCharge: Luft/Charge
+    SfxRelease: Luft/Release
+    SfxImpact: Luft/Impact
+  Chain: []
+  Palette: 2
+  PaletteExplicit: 1
+  WeaponStyleOverride: Dagger
+  ClassId: elementarweber
+  InitiativeCost: 0
+  Element: 2
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

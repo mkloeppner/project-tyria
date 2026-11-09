@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
+  m_Name: Weapon_Conjure_Glutbeil
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
+  DisplayName: Glutbeil
+  Visual: 9
+  WeaponColor: {r: 1, g: 0.5, b: 0.15, a: 1}
+  Skills:
+  - {fileID: 11400000, guid: 06064e476a132b14896385bf3e94e885, type: 2}
+  - {fileID: 11400000, guid: 0f63f965780f5944fba247564c40e6a1, type: 2}
+  - {fileID: 11400000, guid: 419ec0193eed8ed4994102d46e94cfc5, type: 2}
+  - {fileID: 11400000, guid: c9062bfd989cf844db94b20864515669, type: 2}
+  - {fileID: 11400000, guid: f83e62383b78b9f4ba310cf25a11da61, type: 2}
+  Kind: 0
+  ClassId: elementarweber
+  Attunement: []
+  StealthSkill: {fileID: 0}

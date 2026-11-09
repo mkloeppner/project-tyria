@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3868e70530e3f342978ac4b9e687eca, type: 3}
+  m_Name: Mount_Raptor
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.MountDefinition
+  Kind: 1
+  DisplayName: Raptor
+  Description: "Schneller L\xE4ufer mit weitem Satz \u2013 \xFCberspringt Lavarisse und Schluchten."
+  AbilityText: "Weiter Sprung nach vorn (\u2248 15 m)"
+  EngageText: "Schwanzfeger: Schaden + Verkr\xFCppelung"
+  Stats:
+    Kind: 1
+    Speed: 11.5
+    WaterSpeed: 4
+    MaxHealth: 6000
+    LeapSpeed: 18
+    LeapTime: 0.9
+    LeapUp: 10
+    ChargeTime: 0
+    MinJump: 0
+    MaxJump: 0
+    HopHeight: 1.4
+    EngageCoefficient: 3.5
+    EngageRadius: 4.5
+    EngageRange: 10
+    DodgeDistance: 6
+    DodgeCooldown: 3
+  PriceCopper: 20000
+  RequiredHeart: heart_gerstenbrunn
+  VendorZone: sonnfurt
+  Icon: mount_raptor
+  Prefab: {fileID: 1675207413160565480, guid: 48480926d8f2f344999535712db92b70, type: 3}
+  SeatHeight: 1.55

@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_C2_FrostbogenBeschwoeren
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: elementarweber_C2_FrostbogenBeschwoeren
+  DisplayName: "Frostbogen beschw\xF6ren"
+  Description: "Beschw\xF6rung: Frostbogen ersetzt die Waffenskills f\xFCr 20 s."
+  ShortLabel: Bogen
+  IconColor: {r: 0.95, g: 0.55, b: 0.25, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 2
+  Category: 7
+  Tier: 2
+  UnlockCost: 4
+  StartsUnlocked: 0
+  Weapon: 0
+  CastTime: 0.5
+  Cooldown: 40
+  Delivery: 3
+  Range: 0
+  Radius: 2.5
+  TargetCount: 5
+  Coefficient: 0
+  Hits: 1
+  HitInterval: 0.25
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 34
+  LeapDistance: 0
+  TargetBuffs: []
+  SelfBuffs: []
+  ShareWithAllies: 0
+  CleanseCount: 0
+  Special: 6
+  EvadesDuringCast: 0
+  Field: 0
+  FieldDuration: 5
+  FieldRadius: 4
+  FieldTickCoefficient: 0
+  Finisher: 0
+  Timeline:
+    Activation: 0.5
+    Aftercast: 0.2272727
+    Hits:
+    - 0.5
+    Projectiles: []
+    Movement: 0
+    MoveDistance: 0
+    Instant: 0
+    Channel: 0
+    Clip: Cast1H
+    AnimScale: 1.5151515
+    VfxCharge: Charge/Frost/M
+    VfxRelease: Release/Frost/M
+    VfxProjectile: 
+    VfxImpact: Aura/Frost/M
+    VfxAfter: 
+    SfxCharge: Frost/Charge
+    SfxRelease: Frost/Release
+    SfxImpact: Frost/Buff
+  Chain: []
+  Palette: 9
+  PaletteExplicit: 1
+  WeaponStyleOverride: 
+  ClassId: elementarweber
+  InitiativeCost: 0
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 11400000, guid: d6687308408e2ab4caed82e8fe84ac55, type: 2}
+  TrapLifetime: 0

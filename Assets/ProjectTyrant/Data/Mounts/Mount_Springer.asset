@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3868e70530e3f342978ac4b9e687eca, type: 3}
+  m_Name: Mount_Springer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.MountDefinition
+  Kind: 2
+  DisplayName: Springer
+  Description: "Kr\xE4ftiger H\xFCpfer \u2013 l\xE4dt Spr\xFCnge bis 15 m H\xF6he auf."
+  AbilityText: "Halten: Sprung aufladen (3\u201315 m), loslassen: springen"
+  EngageText: "Stampfer: Schaden + 1,5 s Bet\xE4ubung"
+  Stats:
+    Kind: 2
+    Speed: 9.5
+    WaterSpeed: 3.5
+    MaxHealth: 5000
+    LeapSpeed: 0
+    LeapTime: 0
+    LeapUp: 0
+    ChargeTime: 1.2
+    MinJump: 3
+    MaxJump: 15
+    HopHeight: 3
+    EngageCoefficient: 4.5
+    EngageRadius: 5
+    EngageRange: 12
+    DodgeDistance: 5
+    DodgeCooldown: 3
+  PriceCopper: 60000
+  RequiredHeart: heart_frost_runa
+  VendorZone: frostkamm
+  Icon: mount_springer
+  Prefab: {fileID: 1499269824622341075, guid: 9493fe22e8759c441af62178970d3ad7, type: 3}
+  SeatHeight: 1.7

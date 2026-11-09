@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_nebelmoor
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: nebelmoor
+  DisplayName: Nebelmoor
+  Description: "Versunkene Kan\xE4le, Nebelschwaden und Torfinseln."
+  SceneName: PT_Zone_Nebelmoor
+  Seed: 15025
+  Size: 1000
+  LevelMin: 15
+  LevelMax: 25
+  Biome: {fileID: 11400000, guid: f8c5ff7239752c940b9c96770b50cb59, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: nebelmoor_sonnfurt
+    Position: {x: -30, y: 2.6364026, z: -420}
+    Yaw: 4.085617
+    TargetZone: sonnfurt
+    TargetPortal: sonnfurt_nebelmoor
+  - Id: nebelmoor_frostkamm
+    Position: {x: 20, y: 2.1, z: 420}
+    Yaw: -177.2737
+    TargetZone: frostkamm
+    TargetPortal: frostkamm_nebelmoor
+  DefaultSpawn: {x: 0, y: 2.9627912, z: -380}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.28
+    y: 0.05
+    width: 0.3
+    height: 0.3
+  ContinentColor: {r: 0.37254903, g: 0.47843137, b: 0.32156864, a: 1}
+  Waypoints:
+  - Id: wp_moor_torfsteg
+    Name: Wegmarke Torfsteg
+    Position: {x: 14, y: 2.2021427, z: -352}
+  - Id: wp_moor_schilf
+    Name: Wegmarke Schilfwacht
+    Position: {x: -250, y: 2.1, z: -150}
+  - Id: wp_moor_nebelkreuz
+    Name: Wegmarke Nebelkreuz
+    Position: {x: 60, y: 2.1, z: 20}
+  - Id: wp_moor_kroetenfurt
+    Name: "Wegmarke Kr\xF6tenfurt"
+    Position: {x: 300, y: 2.1, z: -150}
+  - Id: wp_moor_weidenhoehe
+    Name: "Wegmarke Weidenh\xF6he"
+    Position: {x: -120, y: 2.1, z: 300}
+  Tips:
+  - "Im Nebelmoor sind Kan\xE4le tief \u2013 mit dem Skimmer gleitest du \xFCber Wasser."
+  - "Giftnebel schw\xE4cht dich, bis du die Umwelt-Beherrschung gelernt hast."
+  Regions:
+  - Name: Torfstecher-Siedlung
+    Center: {x: -70, y: -300}
+    Radius: 110
+    LevelMin: 15
+    LevelMax: 16
+  - Name: Versunkener Wachturm
+    Center: {x: -300, y: 40}
+    Radius: 110
+    LevelMin: 17
+    LevelMax: 19
+  - Name: Insel der Irrlichter
+    Center: {x: 190, y: 170}
+    Radius: 110
+    LevelMin: 20
+    LevelMax: 22
+  - Name: "Kr\xF6tenfurt"
+    Center: {x: 340, y: -60}
+    Radius: 110
+    LevelMin: 18
+    LevelMax: 20
+  - Name: "H\xE4ngende Weiden"
+    Center: {x: -60, y: 360}
+    Radius: 110
+    LevelMin: 23
+    LevelMax: 25
+  TimerLabel: 
+  TimerPeriod: 0
+  TimerOffset: 0
+  TimerPosition: {x: 0, y: 0, z: 0}
+  TimerEventId: 
+  CompletionIds:
+  - wp_moor_torfsteg
+  - wp_moor_schilf
+  - wp_moor_nebelkreuz
+  - wp_moor_kroetenfurt
+  - wp_moor_weidenhoehe
+  - poi_moor_torfstecher
+  - poi_moor_wachturm
+  - poi_moor_irrlichter
+  - poi_moor_kroetenfurt
+  - poi_moor_weiden
+  - vista_moor_pfahlturm
+  - vista_moor_weidenkrone
+  - vista_moor_nebelspitze
+  - hc_moor_quelle
+  - hc_moor_herausforderer
+  - hc_moor_moorleiche
+  - hc_moor_irrlicht
+  - heart_moor_ilse
+  - heart_moor_merle
+  - heart_moor_albin

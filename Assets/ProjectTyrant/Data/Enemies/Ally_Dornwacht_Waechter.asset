@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a9756ba196e784f8aead94cb329eb1, type: 3}
+  m_Name: Ally_Dornwacht_Waechter
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EnemyArchetype
+  DisplayName: "Dornwacht-W\xE4chter"
+  Tier: 0
+  Team: 1
+  Prefab: {fileID: 1367727025300332894, guid: e9d4635582f390f4882c6d5ca3c8507c, type: 3}
+  FixedLevel: 10
+  AttributeFactor: 1
+  ArmorFactor: 1.6
+  HealthFactor: 2.5
+  MaxHealth: 0
+  AttackCoefficient: 2.5
+  AttackRange: 2.4
+  AttackInterval: 1.8
+  AttackWindup: 0.6
+  Palette: 7
+  MoveSpeed: 4.4
+  AggroRange: 14
+  LeashRange: 20
+  Scale: 1
+  OnHitDebuff:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  HasTelegraph: 0
+  TelegraphRadius: 5
+  TelegraphDelay: 1.5
+  TelegraphCoefficient: 25
+  TelegraphInterval: 9
+  Behavior: 0
+  BehaviorRadius: 6
+  BehaviorInterval: 8
+  BehaviorCoefficient: 4
+  BehaviorEffect:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  SummonArchetype: {fileID: 0}
+  ProjectileColor: {r: 0.5, g: 0.9, b: 0.3, a: 1}
+  Defiance: 0
+  ContributionValue: 0
+  Experience: 50
+  Loot: {fileID: 0}

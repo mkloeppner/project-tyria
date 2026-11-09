@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
+  m_Name: Weapon_Kurzbogen
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
+  DisplayName: Kurzbogen
+  Visual: 8
+  WeaponColor: {r: 0.5, g: 0.4, b: 0.3, a: 1}
+  Skills:
+  - {fileID: 11400000, guid: dde1d288881c60543972f8dc8bbe6a4a, type: 2}
+  - {fileID: 11400000, guid: caf4ce01bee733e4fa29ad29093a126b, type: 2}
+  - {fileID: 11400000, guid: 7b9a320c46628a944b65f5f647e57977, type: 2}
+  - {fileID: 11400000, guid: a076a809f8a4ab8428b9666e323d9918, type: 2}
+  - {fileID: 11400000, guid: b477f36beba8620449091861ceb22877, type: 2}
+  Kind: 9
+  ClassId: schattenklinge
+  Attunement: []
+  StealthSkill: {fileID: 11400000, guid: f6f90b9e0202b784a8a042e16348eb8b, type: 2}

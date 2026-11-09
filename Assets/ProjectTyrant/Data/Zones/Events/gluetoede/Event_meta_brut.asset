@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_meta_brut
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: meta_brut
+  Title: "Sturm \xFCber der Glut\xF6de: Sturmbrut zur\xFCckschlagen"
+  Description: "Halte die Vorr\xE4te der Sturmreiter gegen die Sturmbrut."
+  ChainId: sturm
+  Objective: 1
+  Center: {x: 250, y: 0.67954916, z: 320}
+  Radius: 36
+  Duration: 150
+  TargetCount: 0
+  Triggers:
+  - Type: 2
+    Delay: 0
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: meta_tyrann
+  FailNext: 
+  Cooldown: 60
+  GoldContribution: 4693.5483
+  Experience: 1565
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: gluetoede_meta_brut
+  Path: []
+  DeliverPoint: {x: 250, y: 0.67954916, z: 320}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 3
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 3a8a6cd2e3618c14fa9fb62050d1fb73, type: 2}
+  Veteran: {fileID: 11400000, guid: 3de62761c8a7b744b8ef2a569d7ede01, type: 2}
+  Boss: {fileID: 0}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: sturm
+  MetaPhase: 3

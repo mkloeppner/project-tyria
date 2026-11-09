@@ -1,0 +1,27 @@
+{
+    "name": "ProjectTyrant.Editor",
+    "rootNamespace": "ProjectTyrant.EditorTools",
+    "references": [
+        "ProjectTyrant.Runtime",
+        "Unity.ProBuilder",
+        "Unity.ProBuilder.Editor",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.InputSystem",
+        "Unity.Cinemachine",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "Unity.Animation.Rigging"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

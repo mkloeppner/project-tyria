@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554474852b9839349beaf73d1a134f55, type: 3}
+  m_Name: Vendor_karma_kaya
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.VendorDefinition
+  Id: karma_kaya
+  DisplayName: "Sp\xE4herin Kaya (Karma)"
+  Kind: 2
+  Stock:
+  - Item: {fileID: 11400000, guid: 5a01efa6a26e4054b8464dce5a537d7d, type: 2}
+    PriceCopper: 0
+    PriceKarma: 3000
+    Count: 1
+  - Item: {fileID: 11400000, guid: 0c7eab4d49e98434e96291076946072a, type: 2}
+    PriceCopper: 0
+    PriceKarma: 3000
+    Count: 1
+  - Item: {fileID: 11400000, guid: 46125fafc8cfc4e45b2d3a22b36956c9, type: 2}
+    PriceCopper: 0
+    PriceKarma: 2400
+    Count: 1
+  - Item: {fileID: 11400000, guid: 89e8e467d8aa0384c895eb6cc2940664, type: 2}
+    PriceCopper: 0
+    PriceKarma: 2400
+    Count: 1

@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_supplies
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: supplies
+  Title: "Vorr\xE4te f\xFCr Sonnfurt"
+  Description: "Pl\xFCnderer \xFCberfallen Gerstenbrunn! Sammle die verstreuten Vorratskisten und bring sie zur Abgabestelle in Sonnfurt."
+  ChainId: 
+  Objective: 3
+  Center: {x: -8, y: 1.2, z: -60}
+  Radius: 22
+  Duration: 180
+  TargetCount: 6
+  Triggers:
+  - Type: 1
+    Delay: 30
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.8
+    Period: 0
+  - Type: 0
+    Delay: 320
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 300
+  GoldContribution: 5000
+  Experience: 450
+  Karma: 160
+  Coins: 80
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: vorraete_knapp
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 600
+  WorldHook: collect
+  Path: []
+  DeliverPoint: {x: -46, y: 1, z: -56}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 53babf5c9b2da9447a1d04456d071871, type: 2}
+  Veteran: {fileID: 11400000, guid: 40c3a1cad1a3142469531571570555fe, type: 2}
+  Boss: {fileID: 11400000, guid: 733bcea6c1ed56d44b7ca3b77e231e5c, type: 2}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0

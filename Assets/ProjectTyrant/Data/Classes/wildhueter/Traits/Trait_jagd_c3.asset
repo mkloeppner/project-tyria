@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e51929a5d730ca74eb5dcbb829663ed2, type: 3}
+  m_Name: Trait_jagd_c3
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.TraitDefinition
+  Id: jagd_c3
+  DisplayName: Klingenmeister
+  Description: Schwert-Fertigkeiten laden 20 % schneller auf; +7 % Schwert-Schaden.
+  Glyph: K
+  Tier: 3
+  Major: 1
+  Modifiers:
+  - Kind: 7
+    Attr: 0
+    Attr2: 0
+    Value: 0.2
+    Value2: 0
+    Effect: 0
+    Stacks: 1
+    Duration: 0
+    Scope: 0
+    Trigger: 0
+    Target: 0
+    InternalCooldown: 0
+    Weapon: 5
+    Category: 0
+    SlotType: 0
+    MatchSlotType: 0
+  - Kind: 6
+    Attr: 0
+    Attr2: 0
+    Value: 0.07
+    Value2: 0
+    Effect: 0
+    Stacks: 1
+    Duration: 0
+    Scope: 0
+    Trigger: 0
+    Target: 0
+    InternalCooldown: 0
+    Weapon: 5
+    Category: 0
+    SlotType: 0
+    MatchSlotType: 0

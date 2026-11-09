@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_moor_kolossjagd
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: moor_kolossjagd
+  Title: Jagd auf den Uralten Moorkoloss
+  Description: "Treibe die Sumpfspucker aus dem Weidengrund, bis ihr Anf\xFChrer sich zeigt."
+  ChainId: 
+  Objective: 7
+  Center: {x: -60, y: -0.7673744, z: 230}
+  Radius: 40
+  Duration: 360
+  TargetCount: 8
+  Triggers:
+  - Type: 1
+    Delay: 30
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 420
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 360
+  GoldContribution: 3677.4194
+  Experience: 1226
+  Karma: 368
+  Coins: 196
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: nebelmoor_moor_kolossjagd
+  Path: []
+  DeliverPoint: {x: -60, y: -0.7673744, z: 230}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 2f0b2a30a79533f4f9b512832f11f5b0, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 11400000, guid: f26a9eecee67e2c4894fa8511013fd2d, type: 2}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0

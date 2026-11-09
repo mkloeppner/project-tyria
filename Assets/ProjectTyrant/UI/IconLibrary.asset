@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fae7ad29e852f4fa8598bd6fd3aeb1, type: 3}
+  m_Name: IconLibrary
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.IconLibrary
+  Entries:
+  - Id: ui_round
+    Sprite: {fileID: 21300000, guid: 7c471741e56c3624fac9bae335848fa2, type: 3}
+  - Id: ui_panel
+    Sprite: {fileID: 21300000, guid: 1cce0471dc17d224eb96bdca5a0af190, type: 3}
+  - Id: ui_circle
+    Sprite: {fileID: 21300000, guid: 00511b9b69d1bd5418dcb35c3504fdd8, type: 3}
+  - Id: ui_ring
+    Sprite: {fileID: 21300000, guid: b524fb0b1750264438f778496a6402fa, type: 3}
+  - Id: ui_slot
+    Sprite: {fileID: 21300000, guid: 958a5f7e44e99aa4e9268490a092e873, type: 3}
+  - Id: ui_frame
+    Sprite: {fileID: 21300000, guid: 2685ab6ebd855644a84140435e67f19f, type: 3}
+  - Id: effect_Aegis
+    Sprite: {fileID: 21300000, guid: c1919ff34588c0149973977d4e97c66c, type: 3}
+  - Id: effect_Vigor
+    Sprite: {fileID: 21300000, guid: 0058b1214701b9148a4493cf0de3d764, type: 3}
+  - Id: effect_Swiftness
+    Sprite: {fileID: 21300000, guid: e178d387a0503714ba4cd242949884a8, type: 3}
+  - Id: effect_Resolution
+    Sprite: {fileID: 21300000, guid: f2441da0d0a433d47a23401b430f6bcf, type: 3}
+  - Id: effect_Might
+    Sprite: {fileID: 21300000, guid: b8ea1074677534f43a6a6509d9538a88, type: 3}
+  - Id: effect_Regeneration
+    Sprite: {fileID: 21300000, guid: 5a18e44fa73de5741abf311a70cd21a0, type: 3}
+  - Id: effect_Quickness
+    Sprite: {fileID: 21300000, guid: 6b0e34854fc9c9448a8c7f3c5a034272, type: 3}
+  - Id: effect_Protection
+    Sprite: {fileID: 21300000, guid: e2891b2840a0555488e474e0b6b6ab53, type: 3}
+  - Id: effect_Stability
+    Sprite: {fileID: 21300000, guid: 5609bc6ab36c335498e9cfb9ec328f34, type: 3}
+  - Id: effect_Alacrity
+    Sprite: {fileID: 21300000, guid: 42bbaa93221e1384d85f10501606e82c, type: 3}
+  - Id: effect_Resistance
+    Sprite: {fileID: 21300000, guid: 2e09370a02a300d4db125ac6731b64d0, type: 3}
+  - Id: effect_Fury
+    Sprite: {fileID: 21300000, guid: d36b552e261ff804d8da28dafa090117, type: 3}
+  - Id: effect_Blind
+    Sprite: {fileID: 21300000, guid: 4aedc540c3be2d64990230b04574ba24, type: 3}
+  - Id: effect_Bleeding
+    Sprite: {fileID: 21300000, guid: 703576124c0b4514197e1ce0cb08086f, type: 3}
+  - Id: effect_Burning
+    Sprite: {fileID: 21300000, guid: c4d40f82cff0d98428782c9cc475419a, type: 3}
+  - Id: effect_Fear
+    Sprite: {fileID: 21300000, guid: a439b1759ce7b5040934b2378f8a2959, type: 3}
+  - Id: effect_Poison
+    Sprite: {fileID: 21300000, guid: 9fc8738d645949840a579ffed2c55b36, type: 3}
+  - Id: effect_Chill
+    Sprite: {fileID: 21300000, guid: c1e7fac0e6c35e94b89dcee8f2328b38, type: 3}
+  - Id: effect_Torment
+    Sprite: {fileID: 21300000, guid: 636dc9bde7e9e2f4b80f0d4f50740a48, type: 3}
+  - Id: effect_Weakness
+    Sprite: {fileID: 21300000, guid: 05f480383c3d3db42adc526d1454a38f, type: 3}
+  - Id: effect_Taunt
+    Sprite: {fileID: 21300000, guid: f743358e1c26988419c963c57c4f5798, type: 3}
+  - Id: effect_Cripple
+    Sprite: {fileID: 21300000, guid: cd08b4f4dd50af6468dad67a4a917d3a, type: 3}
+  - Id: effect_Slow
+    Sprite: {fileID: 21300000, guid: dd0f9d59e4e11bf418386f31c85ba7d4, type: 3}
+  - Id: effect_Confusion
+    Sprite: {fileID: 21300000, guid: 640f59ead7c80d44388c40ab3ee76072, type: 3}
+  - Id: effect_Vulnerability
+    Sprite: {fileID: 21300000, guid: 89bc7319b4325e946a68843920939b76, type: 3}
+  - Id: effect_Immobilize
+    Sprite: {fileID: 21300000, guid: 918e10020c06b9d439bf8449829f060c, type: 3}
+  - Id: effect_Stealth
+    Sprite: {fileID: 21300000, guid: 025e975e58efff94f930abaa57513db0, type: 3}
+  - Id: effect_Stun
+    Sprite: {fileID: 21300000, guid: 6794557d2a98090439f358274c597286, type: 3}
+  - Id: effect_Revealed
+    Sprite: {fileID: 21300000, guid: 47d32bc60058cfa4f8d18631c678915b, type: 3}
+  - Id: fact_damage
+    Sprite: {fileID: 21300000, guid: 2b6b2e640401a284fa7eb9668a4b14a4, type: 3}
+  - Id: fact_heal
+    Sprite: {fileID: 21300000, guid: 31f2ffb3d2ecd064daff85d0ce544770, type: 3}
+  - Id: fact_time
+    Sprite: {fileID: 21300000, guid: 3b9eae3209e770645ba33c2d0a85951b, type: 3}
+  - Id: fact_range
+    Sprite: {fileID: 21300000, guid: 5cad6406dde51544fbe332bb262ce1a2, type: 3}
+  - Id: fact_radius
+    Sprite: {fileID: 21300000, guid: d60874a988f40044b859fb9a5bf61ae4, type: 3}
+  - Id: fact_targets
+    Sprite: {fileID: 21300000, guid: a7353d27dccc2a545bb83af245bb7bff, type: 3}
+  - Id: fact_cleanse
+    Sprite: {fileID: 21300000, guid: 1c89a613f549bfb4ba01a53833df995e, type: 3}
+  - Id: fact_field
+    Sprite: {fileID: 21300000, guid: fb77de95e4117464bbad869b0e226195, type: 3}
+  - Id: fact_finisher
+    Sprite: {fileID: 21300000, guid: b61bf316825ad9c4ebc2bcae767a3bf7, type: 3}
+  - Id: item_greatsword
+    Sprite: {fileID: 21300000, guid: f05c8091d3ebf324ea1e7801835f1b87, type: 3}
+  - Id: item_staff
+    Sprite: {fileID: 21300000, guid: 3647889ba49f91049b8b3b8d78f06aae, type: 3}
+  - Id: item_armor_head
+    Sprite: {fileID: 21300000, guid: 9c1dc024b64d37e40a952ee428716433, type: 3}
+  - Id: item_armor_shoulders
+    Sprite: {fileID: 21300000, guid: 4378093386a0f10478d23c54758edb8a, type: 3}
+  - Id: item_armor_chest
+    Sprite: {fileID: 21300000, guid: a8210a5d08f49374ca9a6330d1e210b7, type: 3}
+  - Id: item_armor_hands
+    Sprite: {fileID: 21300000, guid: a89b79443f224814a8fb248dca7d5f06, type: 3}
+  - Id: item_armor_legs
+    Sprite: {fileID: 21300000, guid: f4316e98cf9b8514f9ffbf87d17169a2, type: 3}
+  - Id: item_armor_feet
+    Sprite: {fileID: 21300000, guid: 4b4fe5efb287a0b4da75e91e1e0d0063, type: 3}
+  - Id: item_trinket_back
+    Sprite: {fileID: 21300000, guid: 27fdecf297a70bd409c1eb85f5b1b65d, type: 3}
+  - Id: item_trinket_amulet
+    Sprite: {fileID: 21300000, guid: f24c6a022c8616142aa3e89b6bb619dc, type: 3}
+  - Id: item_trinket_ring
+    Sprite: {fileID: 21300000, guid: fdabb2ee132a4a24ebeb9448da1b2c22, type: 3}
+  - Id: item_trinket_accessory
+    Sprite: {fileID: 21300000, guid: c46121af365253e49aa7ec790c2548b5, type: 3}
+  - Id: item_potion
+    Sprite: {fileID: 21300000, guid: f04a5b8777e4bed48b1ff34025d0be9f, type: 3}
+  - Id: item_food
+    Sprite: {fileID: 21300000, guid: 4cab98402b75492468c525257ae45d2a, type: 3}
+  - Id: item_container
+    Sprite: {fileID: 21300000, guid: f21a9ef3710be304f803cc43a429f336, type: 3}
+  - Id: item_material
+    Sprite: {fileID: 21300000, guid: bd9152ad20c72da40af76e36ddf4b958, type: 3}
+  - Id: item_junk
+    Sprite: {fileID: 21300000, guid: c0b03bb8942ce9e4892e4dcb18006b80, type: 3}
+  - Id: item_bag
+    Sprite: {fileID: 21300000, guid: e6d0b00214affe04184bdc11c29283ab, type: 3}
+  - Id: item_kit
+    Sprite: {fileID: 21300000, guid: 49ee71daf8f6a66448688c3a90551c79, type: 3}
+  - Id: ui_hero_silhouette
+    Sprite: {fileID: 21300000, guid: 2709e2738989022428e2983a86ff34e3, type: 3}
+  - Id: item_unknown
+    Sprite: {fileID: 21300000, guid: c2493bb8826a31642a96fea9d7c0c331, type: 3}
+  - Id: map_waypoint
+    Sprite: {fileID: 21300000, guid: e743980d1d741a1488c30419566962e3, type: 3}
+  - Id: map_waypoint_contested
+    Sprite: {fileID: 21300000, guid: 2e81edf70e512814f9621ffc858efc9b, type: 3}
+  - Id: map_poi
+    Sprite: {fileID: 21300000, guid: 9229a7a12d44b7e48939dd6764e60aab, type: 3}
+  - Id: map_vista
+    Sprite: {fileID: 21300000, guid: a2539ecdec9321d4199aa9594754d10c, type: 3}
+  - Id: map_hero
+    Sprite: {fileID: 21300000, guid: b8a9b6a90c4dd8b4a8c200ebba7a60e2, type: 3}
+  - Id: map_heart
+    Sprite: {fileID: 21300000, guid: 934607494a17cb24f8a5711acc5abfa1, type: 3}
+  - Id: map_vendor
+    Sprite: {fileID: 21300000, guid: 4efb07c9ebca0f24a9c0320ab02a2693, type: 3}
+  - Id: map_event
+    Sprite: {fileID: 21300000, guid: da18e4b22fd67ee4196e3f180974775e, type: 3}
+  - Id: map_ev_kill
+    Sprite: {fileID: 21300000, guid: 244481faa144dae43bc1c768f07fe7b4, type: 3}
+  - Id: map_ev_defend
+    Sprite: {fileID: 21300000, guid: 02f2b905cbd714d4aaf3d2e19e6aeae4, type: 3}
+  - Id: map_ev_escort
+    Sprite: {fileID: 21300000, guid: 33efe260f2a1fa7489daa8c95b047254, type: 3}
+  - Id: map_ev_collect
+    Sprite: {fileID: 21300000, guid: 4dd8206aefd321344830e3d8ee9fa407, type: 3}
+  - Id: map_ev_capture
+    Sprite: {fileID: 21300000, guid: 55fdfbbf3f09b6643b451a91e25f7683, type: 3}
+  - Id: map_boss
+    Sprite: {fileID: 21300000, guid: cebfe8ff716a92c47aaeee69795c301c, type: 3}
+  - Id: map_ally
+    Sprite: {fileID: 21300000, guid: ec389d44c3907e0479e9c4a12e6307a6, type: 3}
+  - Id: map_target
+    Sprite: {fileID: 21300000, guid: 2e6254f35d6fe8141bc43a1f350d3420, type: 3}
+  - Id: map_personal
+    Sprite: {fileID: 21300000, guid: 92f37de8ca1b0cc44a32209de6f793af, type: 3}
+  - Id: map_player
+    Sprite: {fileID: 21300000, guid: b2ecb269e951a7a4b9db555f50b740ef, type: 3}
+  - Id: map_portal
+    Sprite: {fileID: 21300000, guid: 7b9d90a093e759548add86a8a31a0595, type: 3}
+  - Id: map_insight
+    Sprite: {fileID: 21300000, guid: 6b1ebb77f9ef4ab4dae46db0428e5882, type: 3}
+  - Id: map_worldboss
+    Sprite: {fileID: 21300000, guid: 3c5a69557fc156449a53879a19501e6f, type: 3}
+  - Id: mount_raptor
+    Sprite: {fileID: 21300000, guid: f19a53312cc18b543b347bf313275a03, type: 3}
+  - Id: mount_springer
+    Sprite: {fileID: 21300000, guid: 680365538ea95674dbcd8489eca79e0d, type: 3}
+  - Id: mount_skimmer
+    Sprite: {fileID: 21300000, guid: 2bc8663177f0a25498fa7e63dd44c6fc, type: 3}
+  - Id: mastery_glide
+    Sprite: {fileID: 21300000, guid: 17501c9352aba1e43a10264aae226020, type: 3}
+  - Id: mastery_env
+    Sprite: {fileID: 21300000, guid: e027513d8f1d5bf41a977aa3fa3f1d69, type: 3}
+  - Id: mastery_cmd
+    Sprite: {fileID: 21300000, guid: 2201630662b25da4487b615a91a16e26, type: 3}

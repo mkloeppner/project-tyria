@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d17e6fd0b41a3943b528b049d841254, type: 3}
+  m_Name: Loot_Pouch
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.LootTable
+  DisplayName: "Pl\xFCnderer-Beutel"
+  Rolls: 2
+  Guaranteed: []
+  Weighted:
+  - Kind: 1
+    Weight: 30
+    Item: {fileID: 0}
+    Rarity: 1
+    Category: 0
+    MinCount: 1
+    MaxCount: 1
+  - Kind: 1
+    Weight: 20
+    Item: {fileID: 0}
+    Rarity: 2
+    Category: 0
+    MinCount: 1
+    MaxCount: 1
+  - Kind: 0
+    Weight: 15
+    Item: {fileID: 11400000, guid: 9b3fff901eb07754c85e0958c43eebde, type: 2}
+    Rarity: 1
+    Category: 0
+    MinCount: 1
+    MaxCount: 3
+  - Kind: 0
+    Weight: 15
+    Item: {fileID: 11400000, guid: a919f06554119bf4299ee2b2bf153e85, type: 2}
+    Rarity: 1
+    Category: 0
+    MinCount: 1
+    MaxCount: 3
+  - Kind: 0
+    Weight: 20
+    Item: {fileID: 11400000, guid: 0f71a2031507735439e51f30188c5f92, type: 2}
+    Rarity: 1
+    Category: 0
+    MinCount: 1
+    MaxCount: 1
+  MinCopper: 10
+  MaxCopper: 40
+  KarmaBonus: 0

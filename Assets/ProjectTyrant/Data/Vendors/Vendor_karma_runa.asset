@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554474852b9839349beaf73d1a134f55, type: 3}
+  m_Name: Vendor_karma_runa
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.VendorDefinition
+  Id: karma_runa
+  DisplayName: "Bergf\xFChrerin Runa (Karma)"
+  Kind: 2
+  Stock:
+  - Item: {fileID: 11400000, guid: 1069571682be27341b7a0baf04d3e405, type: 2}
+    PriceCopper: 0
+    PriceKarma: 1800
+    Count: 1
+  - Item: {fileID: 11400000, guid: db41851bfa350924a8ac1a3909e8edb6, type: 2}
+    PriceCopper: 0
+    PriceKarma: 1800
+    Count: 1
+  - Item: {fileID: 11400000, guid: 6cee646b765cfeb469772cfbdc08e3a4, type: 2}
+    PriceCopper: 0
+    PriceKarma: 1500
+    Count: 1
+  - Item: {fileID: 11400000, guid: 87b38c5d4145e4b409ef4dfe84badeef, type: 2}
+    PriceCopper: 0
+    PriceKarma: 1300
+    Count: 1

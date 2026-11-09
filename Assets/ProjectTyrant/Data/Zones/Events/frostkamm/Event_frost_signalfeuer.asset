@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_frost_signalfeuer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: frost_signalfeuer
+  Title: Signalfeuer am Pass
+  Description: "Entz\xFCnde die Signalfeuer, damit die Bergf\xFChrer den Pass sichern k\xF6nnen."
+  ChainId: 
+  Objective: 8
+  Center: {x: 120, y: 21, z: -60}
+  Radius: 30
+  Duration: 210
+  TargetCount: 4
+  Triggers:
+  - Type: 1
+    Delay: 20
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 300
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 240
+  GoldContribution: 4258.0645
+  Experience: 1419
+  Karma: 426
+  Coins: 227
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: frostkamm_frost_signalfeuer
+  Path: []
+  DeliverPoint: {x: 120, y: 21, z: -60}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 3f63996bde8b0e64eaabbdc9a7dbd8c7, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 0}
+  Sites:
+  - {x: 131.05273, y: 20.899778, z: -55.32698}
+  - {x: 115.32698, y: 20.97994, z: -48.94727}
+  - {x: 108.947266, y: 20.894075, z: -64.67302}
+  - {x: 124.67302, y: 21, z: -71.052734}
+  SiteChannel: 2.5
+  SiteLabel: "Signalfeuer entz\xFCnden"
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0

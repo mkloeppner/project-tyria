@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_LB2_Pfeilhagel
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: wildhueter_LB2_Pfeilhagel
+  DisplayName: Pfeilhagel
+  Description: Schnelle Folge von 6 Pfeilen; 1 Verwundbarkeit je Treffer.
+  ShortLabel: Hagel
+  IconColor: {r: 0.45, g: 0.75, b: 0.3, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 3
+  CastTime: 0.25
+  Cooldown: 10
+  Delivery: 1
+  Range: 30
+  Radius: 2.5
+  TargetCount: 5
+  Coefficient: 0.28
+  Hits: 6
+  HitInterval: 0.25
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 34
+  LeapDistance: 0
+  TargetBuffs:
+  - Type: 24
+    Stacks: 1
+    Duration: 6
+  SelfBuffs: []
+  ShareWithAllies: 0
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 0
+  Field: 0
+  FieldDuration: 5
+  FieldRadius: 4
+  FieldTickCoefficient: 0
+  Finisher: 0
+  Timeline:
+    Activation: 1.5
+    Aftercast: 0.6428572
+    Hits: []
+    Projectiles:
+    - 0.25
+    - 0.5
+    - 0.75
+    - 1
+    - 1.25
+    - 1.5
+    Movement: 0
+    MoveDistance: 0
+    Instant: 0
+    Channel: 1
+    Clip: Bow_Shoot
+    AnimScale: 2.6785715
+    VfxCharge: Charge/Natur/M
+    VfxRelease: Release/Natur/M
+    VfxProjectile: Projectile/Natur/M
+    VfxImpact: Impact/Natur/M
+    VfxAfter: 
+    SfxCharge: Natur/Charge
+    SfxRelease: Natur/Release
+    SfxImpact: Natur/Impact
+  Chain: []
+  Palette: 4
+  PaletteExplicit: 1
+  WeaponStyleOverride: Bow
+  ClassId: wildhueter
+  InitiativeCost: 0
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

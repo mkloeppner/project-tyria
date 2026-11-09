@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_meta_siegel
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: meta_siegel
+  Title: "Sturm \xFCber der Glut\xF6de: Sturmsiegel brechen"
+  Description: Brich die vier Sturmsiegel, damit der Tyrann seine Deckung verliert.
+  ChainId: sturm
+  Objective: 8
+  Center: {x: 250, y: 1.6, z: 340}
+  Radius: 40
+  Duration: 210
+  TargetCount: 4
+  Triggers:
+  - Type: 2
+    Delay: 0
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: meta_brut
+  FailNext: 
+  Cooldown: 60
+  GoldContribution: 4693.5483
+  Experience: 1565
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: gluetoede_meta_siegel
+  Path: []
+  DeliverPoint: {x: 250, y: 1.6, z: 340}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 1
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 116bc23a658f8cc43a83273424903c1e, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 0}
+  Sites:
+  - {x: 263.81592, y: -1.5717515, z: 345.84128}
+  - {x: 244.15872, y: 3.3753366, z: 353.81592}
+  - {x: 236.18408, y: -1.7245598, z: 334.15872}
+  - {x: 255.84128, y: 0.104979716, z: 326.18408}
+  SiteChannel: 3
+  SiteLabel: Sturmsiegel brechen
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: sturm
+  MetaPhase: 2

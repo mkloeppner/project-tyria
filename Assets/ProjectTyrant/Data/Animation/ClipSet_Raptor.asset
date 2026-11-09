@@ -1,0 +1,188 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ce25957b3fe044c9f27b1173b9aa42, type: 3}
+  m_Name: ClipSet_Raptor
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Anim.AnimClipSet
+  Rig: Raptor
+  Clips:
+  - Name: Raptor_Idle
+    Clip: {fileID: 7400000, guid: 2b082a80915fca642a5b7d6dd3a9b892, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 3
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Raptor_Walk
+    Clip: {fileID: 7400000, guid: 2265903633f733f45a038b85c4df2656, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 1.2
+    Markers:
+    - Type: FootL
+      Time: 0.6333333
+    - Type: FootR
+      Time: 0.06666667
+    FootL: []
+    FootR: []
+  - Name: Raptor_Run
+    Clip: {fileID: 7400000, guid: 18b26a53979eca74dba1fa9d26758363, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 0.6
+    Markers:
+    - Type: FootL
+      Time: 0.5
+    - Type: FootR
+      Time: 0.2
+    FootL: []
+    FootR: []
+  - Name: Raptor_Jump
+    Clip: {fileID: 7400000, guid: 6d41208db0d683d4f9cd842f7b08b8c6, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 0.8
+    Markers:
+    - Type: Effect
+      Time: 0.15
+    - Type: FootL
+      Time: 0.6
+    - Type: FootR
+      Time: 0.62
+    - Type: End
+      Time: 0.75
+    FootL: []
+    FootR: []
+  - Name: Raptor_Attack
+    Clip: {fileID: 7400000, guid: f9009b81b7188bb469d2e7a80099971b, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 1.1
+    Markers:
+    - Type: Effect
+      Time: 0
+    - Type: Hit
+      Time: 0.72
+    - Type: End
+      Time: 1
+    FootL: []
+    FootR: []
+  - Name: Raptor_Hit
+    Clip: {fileID: 7400000, guid: 262da418488787d4fa8417fb660d4fbe, type: 2}
+    Layer: 3
+    Loop: 0
+    Length: 0.35
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Raptor_Death
+    Clip: {fileID: 7400000, guid: cd30b4f2c8fa20045b96b2d6cd0c0bb0, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 1.2
+    Markers:
+    - Type: Hit
+      Time: 1
+    - Type: End
+      Time: 1.2
+    FootL: []
+    FootR: []
+  - Name: Raptor_Sniff
+    Clip: {fileID: 7400000, guid: 6e405d7355814a34eb57cf1d3cef137d, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 2
+    Markers:
+    - Type: Effect
+      Time: 0.5
+    FootL: []
+    FootR: []
+  - Name: Raptor_MIdle
+    Clip: {fileID: 7400000, guid: d3145a51e35b7bd43ae474147ced196f, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 3
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Raptor_MRun
+    Clip: {fileID: 7400000, guid: 74e909eb2644b2a47a5249e2db01c558, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 0.55
+    Markers:
+    - Type: FootL
+      Time: 0.46666667
+    - Type: FootR
+      Time: 0.16666667
+    FootL: []
+    FootR: []
+  - Name: Raptor_MLeap
+    Clip: {fileID: 7400000, guid: 80d5142e98171be43a430f200247242b, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 0.9
+    Markers:
+    - Type: Effect
+      Time: 0.15
+    - Type: FootL
+      Time: 0.7
+    - Type: End
+      Time: 0.85
+    FootL: []
+    FootR: []
+  - Name: Raptor_MCharge
+    Clip: {fileID: 7400000, guid: e6ae14b88c6b68d4baccce3180c46bc1, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 0.5
+    Markers:
+    - Type: FootL
+      Time: 0.125
+    - Type: FootR
+      Time: 0.185
+    FootL: []
+    FootR: []
+  - Name: Raptor_MHover
+    Clip: {fileID: 7400000, guid: 44cd531c683b8154e8088b003a6b3af6, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 1.2
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Raptor_MEngage
+    Clip: {fileID: 7400000, guid: 728e150875f4c874e93cd830d2faca22, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 1
+    Markers:
+    - Type: Effect
+      Time: 0
+    - Type: Hit
+      Time: 0.72
+    - Type: End
+      Time: 0.92
+    FootL: []
+    FootR: []
+  - Name: Raptor_MKnockOff
+    Clip: {fileID: 7400000, guid: b84999ca4e2fe75478768765dd8a2594, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 0.8
+    Markers:
+    - Type: Hit
+      Time: 0.2
+    - Type: End
+      Time: 0.75
+    FootL: []
+    FootR: []

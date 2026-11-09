@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_sonnfurt
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: sonnfurt
+  DisplayName: Grenzmark Ashveil
+  Description: "Gr\xFCne Grenzlande um den Weiler Sonnfurt."
+  SceneName: PT_Zone_Sonnfurt
+  Seed: 4242
+  Size: 200
+  LevelMin: 1
+  LevelMax: 15
+  Biome: {fileID: 11400000, guid: 1f0f6fc7ba99d5a48a988ffa2ceeb377, type: 2}
+  LegacyLayout: 1
+  Portals:
+  - Id: sonnfurt_nebelmoor
+    Position: {x: -10, y: 0.11583114, z: 62}
+    Yaw: 170.83765
+    TargetZone: nebelmoor
+    TargetPortal: nebelmoor_sonnfurt
+  DefaultSpawn: {x: -54, y: 1, z: -51}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.06
+    y: 0.08
+    width: 0.2
+    height: 0.2
+  ContinentColor: {r: 0.49803922, g: 0.6509804, b: 0.3529412, a: 1}
+  Waypoints:
+  - Id: wp_sonnfurt
+    Name: Wegmarke Sonnfurt
+    Position: {x: -54, y: 1, z: -54}
+  Tips:
+  - "Herzen zeigen dir, wo Bewohner Hilfe brauchen \u2013 sie bringen Karma und Ruf."
+  - "Das Portal am Nordrand f\xFChrt ins Nebelmoor (Stufe 15\u201325)."
+  Regions: []
+  TimerLabel: 
+  TimerPeriod: 0
+  TimerOffset: 0
+  TimerPosition: {x: 0, y: 0, z: 0}
+  TimerEventId: 
+  CompletionIds: []

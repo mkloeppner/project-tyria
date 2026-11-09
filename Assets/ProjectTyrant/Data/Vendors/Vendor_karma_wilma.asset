@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554474852b9839349beaf73d1a134f55, type: 3}
+  m_Name: Vendor_karma_wilma
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.VendorDefinition
+  Id: karma_wilma
+  DisplayName: "B\xE4uerin Wilma (Karma)"
+  Kind: 2
+  Stock:
+  - Item: {fileID: 11400000, guid: 0c0bc7022f79d854f8b2011a1cb593f5, type: 2}
+    PriceCopper: 0
+    PriceKarma: 30
+    Count: 5
+  - Item: {fileID: 11400000, guid: 8fe267cdf2ce31e4cb9a8012158e4295, type: 2}
+    PriceCopper: 0
+    PriceKarma: 30
+    Count: 5
+  - Item: {fileID: 11400000, guid: f48400f43ec60524286374c9228e4069, type: 2}
+    PriceCopper: 0
+    PriceKarma: 420
+    Count: 1
+  - Item: {fileID: 11400000, guid: ab58f7a099d5b064b982bb4cd6d35306, type: 2}
+    PriceCopper: 0
+    PriceKarma: 380
+    Count: 1
+  - Item: {fileID: 11400000, guid: 1a5c82e4d9c2d3c46b546a7b37f51715, type: 2}
+    PriceCopper: 0
+    PriceKarma: 300
+    Count: 1

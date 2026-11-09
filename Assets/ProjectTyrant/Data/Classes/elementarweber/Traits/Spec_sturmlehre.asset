@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b0f7ae59a421748ae87ff08598901d, type: 3}
+  m_Name: Spec_sturmlehre
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SpecializationDefinition
+  Id: sturmlehre
+  DisplayName: Sturmlehre
+  Description: Luft, kritische Treffer und Tempo.
+  Color: {r: 0.75, g: 0.7, b: 1, a: 1}
+  Minors:
+  - {fileID: 11400000, guid: aef75552cceae704e8a25fa0d535932a, type: 2}
+  - {fileID: 11400000, guid: 24981c352d0ce1b41b901180bc3ffa11, type: 2}
+  - {fileID: 11400000, guid: 86682a13d6439a54e99b242283a9e1f5, type: 2}
+  Majors:
+  - {fileID: 11400000, guid: 38511a60a421fba4ab0c48cfccc9d9e8, type: 2}
+  - {fileID: 11400000, guid: a7e8644461310b04ab02902a0036cfe8, type: 2}
+  - {fileID: 11400000, guid: 583aee99610db3d4d8ed9bb287d41b9d, type: 2}
+  - {fileID: 11400000, guid: 2b61b3e13fafe494b95a4e1b28e8f13c, type: 2}
+  - {fileID: 11400000, guid: e48fb11daa9c9214199508b4c167c70a, type: 2}
+  - {fileID: 11400000, guid: d0df86131d6f87542baad958b238dc88, type: 2}
+  - {fileID: 11400000, guid: 4c1eeef14ba3a0743bd07ae86ab96530, type: 2}
+  - {fileID: 11400000, guid: 4dc4992f9df99bf4698896ef57561396, type: 2}
+  - {fileID: 11400000, guid: 0cd8da3ff94edd24494260fe9940dcb7, type: 2}

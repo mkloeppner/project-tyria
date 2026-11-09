@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35582dcb05479724fae4bb6b0020ac9d, type: 3}
+  m_Name: Class_waechter
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ClassDefinition
+  Id: waechter
+  DisplayName: "W\xE4chter"
+  Summary: "Schwere R\xFCstung \xB7 Segen, Rufe und Meditationen \xB7 Gro\xDFschwert und Stab."
+  Armor: 2
+  Color: {r: 0.95, g: 0.8, b: 0.35, a: 1}
+  SecondaryColor: {r: 0.35, g: 0.55, b: 0.95, a: 1}
+  Palette: 6
+  Mechanic: 0
+  ResourceName: 
+  MechanicLabels:
+  - 
+  - 
+  - 
+  - 
+  MechanicSummary: "Schwere R\xFCstung, Segen und Feuer: Glutklinge im Nahkampf, Sturmruf aus der Ferne."
+  WeaponSets:
+  - {fileID: 11400000, guid: 1728debb3a7ba984696a59eb7f19275c, type: 2}
+  - {fileID: 11400000, guid: a229d0cf59e08b34297855d20fe07686, type: 2}
+  StartWeapons: 0100000002000000i
+  SkillPool:
+  - {fileID: 11400000, guid: 9fb0a867ae2eb4b4693805c3758702c2, type: 2}
+  - {fileID: 11400000, guid: 99c539ed9db65c646b644fddcecc683f, type: 2}
+  - {fileID: 11400000, guid: db628b238c5f571479cca6ea912962c3, type: 2}
+  - {fileID: 11400000, guid: 1c3dd0a7f746763428df6c9bb8126d0d, type: 2}
+  - {fileID: 11400000, guid: a098c1d3844a950498c65fdae063e5f8, type: 2}
+  - {fileID: 11400000, guid: 9aa407061eba6cc4bb878d38dcb5261a, type: 2}
+  - {fileID: 11400000, guid: eb6148ce51d39d44c951ec863632eb55, type: 2}
+  - {fileID: 11400000, guid: aa4708184bd45ac4192cc36bd950094c, type: 2}
+  - {fileID: 11400000, guid: cb3fcc68ba6826f44a8d1d64f208be2a, type: 2}
+  - {fileID: 11400000, guid: 81f69902a7aa49344b74b4330f3f22a8, type: 2}
+  - {fileID: 11400000, guid: 615fa942977869146996b27dc5bd6896, type: 2}
+  - {fileID: 11400000, guid: ff16e06ef25243f4ab23fa196f458693, type: 2}
+  - {fileID: 11400000, guid: 8f0df4ce23c883647b3f46c7baa29eda, type: 2}
+  - {fileID: 11400000, guid: 8ec972a5e1b43a14d982bd87ead99ec9, type: 2}
+  ExtraSkills: []
+  Specializations:
+  - {fileID: 11400000, guid: bafb395e14a3dbb408709ff0349c01c2, type: 2}
+  - {fileID: 11400000, guid: 551005876262e0f468ba00a4778e61c1, type: 2}
+  - {fileID: 11400000, guid: 599e986db25769844918b1db2c601a73, type: 2}
+  SwapInCombat: 1
+  SignatureSkill: GS5_Bergbrecher

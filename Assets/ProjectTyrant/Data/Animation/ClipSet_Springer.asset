@@ -1,0 +1,188 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ce25957b3fe044c9f27b1173b9aa42, type: 3}
+  m_Name: ClipSet_Springer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Anim.AnimClipSet
+  Rig: Springer
+  Clips:
+  - Name: Springer_Idle
+    Clip: {fileID: 7400000, guid: 8866766c81e74f34a9467fc053b7bb0e, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 3
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Springer_Walk
+    Clip: {fileID: 7400000, guid: 451ea940086f2924aa7b03e3a45f066b, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 1.2
+    Markers:
+    - Type: FootL
+      Time: 0.9
+    - Type: FootR
+      Time: 1
+    FootL: []
+    FootR: []
+  - Name: Springer_Run
+    Clip: {fileID: 7400000, guid: c9e9871059cf92842badbbf1327c79e4, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 0.6
+    Markers:
+    - Type: FootL
+      Time: 0.43333334
+    - Type: FootR
+      Time: 0.4
+    FootL: []
+    FootR: []
+  - Name: Springer_Jump
+    Clip: {fileID: 7400000, guid: 6cf56c1e79f89274f984676b62487174, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 0.8
+    Markers:
+    - Type: Effect
+      Time: 0.15
+    - Type: FootL
+      Time: 0.6
+    - Type: FootR
+      Time: 0.62
+    - Type: End
+      Time: 0.75
+    FootL: []
+    FootR: []
+  - Name: Springer_Attack
+    Clip: {fileID: 7400000, guid: 0e23fccc61a8bf249973543a282a6446, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 1.1
+    Markers:
+    - Type: Effect
+      Time: 0
+    - Type: Hit
+      Time: 0.72
+    - Type: End
+      Time: 1
+    FootL: []
+    FootR: []
+  - Name: Springer_Hit
+    Clip: {fileID: 7400000, guid: 67f720c7dd1f7374cb18d0c4055ff3d2, type: 2}
+    Layer: 3
+    Loop: 0
+    Length: 0.35
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Springer_Death
+    Clip: {fileID: 7400000, guid: 25a7bd68de7983b468990a4f1bd17481, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 1.2
+    Markers:
+    - Type: Hit
+      Time: 1
+    - Type: End
+      Time: 1.2
+    FootL: []
+    FootR: []
+  - Name: Springer_Sniff
+    Clip: {fileID: 7400000, guid: 16c0f49dea29f1646b67b6b9d1a35d19, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 2
+    Markers:
+    - Type: Effect
+      Time: 0.5
+    FootL: []
+    FootR: []
+  - Name: Springer_MIdle
+    Clip: {fileID: 7400000, guid: 6000cdfaa4194b245b180e8613e840d2, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 3
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Springer_MRun
+    Clip: {fileID: 7400000, guid: cd76d4cf7611ac548bc449e5b0c0025a, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 0.55
+    Markers:
+    - Type: FootL
+      Time: 0.4
+    - Type: FootR
+      Time: 0.4
+    FootL: []
+    FootR: []
+  - Name: Springer_MLeap
+    Clip: {fileID: 7400000, guid: 78b1c981e6feb074a9e17cea33493088, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 0.9
+    Markers:
+    - Type: Effect
+      Time: 0.15
+    - Type: FootL
+      Time: 0.7
+    - Type: End
+      Time: 0.85
+    FootL: []
+    FootR: []
+  - Name: Springer_MCharge
+    Clip: {fileID: 7400000, guid: 8d18df93e7c160e42af49ce3be1f0ebd, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 0.5
+    Markers:
+    - Type: FootL
+      Time: 0.125
+    - Type: FootR
+      Time: 0.185
+    FootL: []
+    FootR: []
+  - Name: Springer_MHover
+    Clip: {fileID: 7400000, guid: f98ba58cb86fb7a41b71f2ee28cfe050, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 1.2
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Springer_MEngage
+    Clip: {fileID: 7400000, guid: 3fe33057d0cd0534193cd8cb738070e4, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 1
+    Markers:
+    - Type: Effect
+      Time: 0
+    - Type: Hit
+      Time: 0.72
+    - Type: End
+      Time: 0.92
+    FootL: []
+    FootR: []
+  - Name: Springer_MKnockOff
+    Clip: {fileID: 7400000, guid: 771901afce78b664a856b554d02dc656, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 0.8
+    Markers:
+    - Type: Hit
+      Time: 0.2
+    - Type: End
+      Time: 0.75
+    FootL: []
+    FootR: []

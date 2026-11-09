@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
+  m_Name: Weapon_Sturmruf
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
+  DisplayName: Sturmruf
+  Visual: 1
+  WeaponColor: {r: 0.55, g: 0.45, b: 0.95, a: 1}
+  Skills:
+  - {fileID: 11400000, guid: 64185f9d137cf354999cb133041e74b1, type: 2}
+  - {fileID: 11400000, guid: 192d3260431689f4e86d851c48126e9e, type: 2}
+  - {fileID: 11400000, guid: c309988b29a5cd746bbbae02c70e004f, type: 2}
+  - {fileID: 11400000, guid: 79e411da8b982f04490a82ea6355900d, type: 2}
+  - {fileID: 11400000, guid: 9c097005f7dc6104d8ed1a33deabbdcb, type: 2}
+  Kind: 2
+  ClassId: waechter
+  Attunement: []
+  StealthSkill: {fileID: 0}

@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d901df07c9037a14f8a8b4c187e0bce4, type: 3}
+  m_Name: Item_ar_frost_head
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ItemDefinition
+  Id: ar_frost_head
+  DisplayName: Firnwacht-Helm des Berserkers
+  Description: "Schwere R\xFCstung."
+  Icon: {fileID: 0}
+  Type: 1
+  Rarity: 4
+  RequiredLevel: 26
+  ItemLevel: 26
+  Weapon: 0
+  Armor: 0
+  Trinket: 0
+  WeaponStrengthMin: 0
+  WeaponStrengthMax: 0
+  Defense: 125
+  Prefix: Berserker
+  Attributes:
+  - Attr: 0
+    Value: 26
+  - Attr: 1
+    Value: 13
+  - Attr: 4
+    Value: 13
+  MaxStack: 1
+  VendorValue: 414
+  Binding: 0
+  Salvage:
+  - Material: {fileID: 11400000, guid: 728bb96acfca4fe45b42e8148e1ce902, type: 2}
+    Min: 1
+    Max: 2
+  - Material: {fileID: 11400000, guid: 9926693d7abcbc44ba0b6a1928aba0d0, type: 2}
+    Min: 1
+    Max: 2
+  BagSize: 0
+  KitCharges: 0
+  Consumable: 0
+  FoodAttributes: []
+  FoodDurationMinutes: 30
+  HealBase: 0
+  ContainerLoot: {fileID: 0}

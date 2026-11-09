@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d11adad32d5644cb10198acb2e9143, type: 3}
+  m_Name: EventChain_Grenzposten
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventChain
+  ChainName: Grenzposten Dornwacht
+  FirstStage: defend
+  EventRadius: 32
+  AutoStartDelay: 60
+  RestartCooldown: 60
+  Stages:
+  - Id: defend
+    Title: "Verteidigt die Vorr\xE4te der Dornwacht"
+    Description: "Aschkrallen-Pl\xFCnderer greifen den Grenzposten an. Sch\xFCtzt die Vorratskisten!"
+    Type: 0
+    Duration: 90
+    TargetCount: 8
+    WaveSize: 3
+    WaveInterval: 15
+    SuccessNext: assault
+    FailNext: recapture
+    GoldContribution: 9000
+    Karma: 120
+    Coins: 40
+    Experience: 400
+  - Id: assault
+    Title: "Gegenschlag: St\xFCrmt die Rabenschanze"
+    Description: Der Angriff ist abgewehrt. Tragt den Kampf ins Lager der Aschkrallen!
+    Type: 1
+    Duration: 180
+    TargetCount: 8
+    WaveSize: 3
+    WaveInterval: 15
+    SuccessNext: champion
+    FailNext: 
+    GoldContribution: 12000
+    Karma: 160
+    Coins: 60
+    Experience: 600
+  - Id: recapture
+    Title: "Erobert den Grenzposten zur\xFCck"
+    Description: "Die Aschkrallen haben die Dornwacht \xFCberrannt. Vertreibt sie und haltet den Platz!"
+    Type: 2
+    Duration: 180
+    TargetCount: 6
+    WaveSize: 3
+    WaveInterval: 15
+    SuccessNext: champion
+    FailNext: 
+    GoldContribution: 12000
+    Karma: 160
+    Coins: 60
+    Experience: 600
+  - Id: champion
+    Title: "Besiegt Grolmok, den Aschenf\xFCrsten"
+    Description: "Der Anf\xFChrer der Aschkrallen ist erschienen. Weicht seinen Erdst\xF6\xDFen aus!"
+    Type: 3
+    Duration: 300
+    TargetCount: 8
+    WaveSize: 3
+    WaveInterval: 15
+    SuccessNext: 
+    FailNext: 
+    GoldContribution: 30000
+    Karma: 400
+    Coins: 150
+    Experience: 1500
+  Trash: {fileID: 11400000, guid: 53babf5c9b2da9447a1d04456d071871, type: 2}
+  Veteran: {fileID: 11400000, guid: 40c3a1cad1a3142469531571570555fe, type: 2}
+  Champion: {fileID: 11400000, guid: 733bcea6c1ed56d44b7ca3b77e231e5c, type: 2}

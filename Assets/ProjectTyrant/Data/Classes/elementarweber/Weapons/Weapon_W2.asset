@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
+  m_Name: Weapon_W2
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
+  DisplayName: Doppeldolche
+  Visual: 6
+  WeaponColor: {r: 0.95, g: 0.55, b: 0.25, a: 1}
+  Skills:
+  - {fileID: 11400000, guid: 4e181d705923ea64797efdd2c979bc09, type: 2}
+  - {fileID: 11400000, guid: 9dd95b3092a4b254db34bbc4df309173, type: 2}
+  - {fileID: 11400000, guid: b7c8f509eef057a46beadd864fcb578b, type: 2}
+  - {fileID: 11400000, guid: a458b0a18f02ad849b3e8deceb173b38, type: 2}
+  - {fileID: 11400000, guid: 7bd969785392c724b8537263d2088b45, type: 2}
+  Kind: 7
+  ClassId: elementarweber
+  Attunement:
+  - {fileID: 11400000, guid: 4e181d705923ea64797efdd2c979bc09, type: 2}
+  - {fileID: 11400000, guid: 9dd95b3092a4b254db34bbc4df309173, type: 2}
+  - {fileID: 11400000, guid: b7c8f509eef057a46beadd864fcb578b, type: 2}
+  - {fileID: 11400000, guid: a458b0a18f02ad849b3e8deceb173b38, type: 2}
+  - {fileID: 11400000, guid: 7bd969785392c724b8537263d2088b45, type: 2}
+  - {fileID: 11400000, guid: 0e8ab7f8b18a7384c81add54557a1c6e, type: 2}
+  - {fileID: 11400000, guid: 905685d3b785452489b9f6655f8530c4, type: 2}
+  - {fileID: 11400000, guid: 43652ca8db02c56459033b581db0e212, type: 2}
+  - {fileID: 11400000, guid: 0b4f6236abdcc974caa6a28651caf28b, type: 2}
+  - {fileID: 11400000, guid: f6de5f3c83ed1684ebfe225cff5deb7a, type: 2}
+  - {fileID: 11400000, guid: e48fff8790780194d89f4bf1769264e6, type: 2}
+  - {fileID: 11400000, guid: 671c331b4ca2bb74c81d016da92f5319, type: 2}
+  - {fileID: 11400000, guid: 0303a8f8cfc6249459bad014213c2361, type: 2}
+  - {fileID: 11400000, guid: 76e1baeacd218004ab6022b69949f741, type: 2}
+  - {fileID: 11400000, guid: db569ba75d7d89f479228e2d4ef74ae4, type: 2}
+  - {fileID: 11400000, guid: d055243753f663b429a9c9d04198315b, type: 2}
+  - {fileID: 11400000, guid: 6d4aa2c956a620046b4aa6bee55f4acf, type: 2}
+  - {fileID: 11400000, guid: 3ab4d260c006e8948afa244e954e51e8, type: 2}
+  - {fileID: 11400000, guid: 7405474e9a473f5409788949b976b23e, type: 2}
+  - {fileID: 11400000, guid: 55fbb63f9cb168742b82277872e18050, type: 2}
+  StealthSkill: {fileID: 0}

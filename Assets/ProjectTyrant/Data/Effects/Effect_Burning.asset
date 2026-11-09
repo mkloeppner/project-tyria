@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89cc8cd776e69f64a99bd97d1e83ba4d, type: 3}
+  m_Name: Effect_Burning
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EffectDefinition
+  Type: 14
+  DisplayName: Brennen
+  Description: Hoher Schaden pro Sekunde je Stapel.
+  Category: 1
+  Stacking: 0
+  MaxStacks: 25
+  TickInterval: 1
+  MaxDuration: 30
+  Implemented: 1
+  Color: {r: 1, g: 0.45, b: 0.1, a: 1}
+  Glyph: F
+  Icon: {fileID: 21300000, guid: c4d40f82cff0d98428782c9cc475419a, type: 3}

@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_LB5_Dornenregen
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: wildhueter_LB5_Dornenregen
+  DisplayName: Dornenregen
+  Description: Pfeilregen am Zielort (6 Wellen), Blutung.
+  ShortLabel: Regen
+  IconColor: {r: 0.45, g: 0.75, b: 0.3, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 3
+  CastTime: 0.5
+  Cooldown: 24
+  Delivery: 2
+  Range: 30
+  Radius: 4.5
+  TargetCount: 5
+  Coefficient: 0.3
+  Hits: 6
+  HitInterval: 0.8
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 34
+  LeapDistance: 0
+  TargetBuffs:
+  - Type: 13
+    Stacks: 1
+    Duration: 5
+  SelfBuffs: []
+  ShareWithAllies: 0
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 0
+  Field: 0
+  FieldDuration: 5
+  FieldRadius: 4
+  FieldTickCoefficient: 0
+  Finisher: 0
+  Timeline:
+    Activation: 4.5
+    Aftercast: 0
+    Hits:
+    - 0.5
+    - 1.3
+    - 2.1
+    - 2.9
+    - 3.7
+    - 4.5
+    Projectiles: []
+    Movement: 0
+    MoveDistance: 0
+    Instant: 0
+    Channel: 1
+    Clip: Cast2H
+    AnimScale: 5.769231
+    VfxCharge: Charge/Natur/L
+    VfxRelease: Sigil/Natur/L
+    VfxProjectile: 
+    VfxImpact: Pillar/Natur/L
+    VfxAfter: 
+    SfxCharge: Natur/Charge
+    SfxRelease: Natur/Release
+    SfxImpact: Natur/Impact
+  Chain: []
+  Palette: 4
+  PaletteExplicit: 1
+  WeaponStyleOverride: Bow
+  ClassId: wildhueter
+  InitiativeCost: 0
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_SF23_Funkenregen
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: elementarweber_SF23_Funkenregen
+  DisplayName: Funkenregen
+  Description: Elementarfeld am Zielort (6 s).
+  ShortLabel: 3
+  IconColor: {r: 0.95, g: 0.55, b: 0.25, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 6
+  CastTime: 0.75
+  Cooldown: 18
+  Delivery: 2
+  Range: 22
+  Radius: 4
+  TargetCount: 5
+  Coefficient: 0.33
+  Hits: 1
+  HitInterval: 0.25
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 34
+  LeapDistance: 0
+  TargetBuffs:
+  - Type: 24
+    Stacks: 2
+    Duration: 6
+  SelfBuffs: []
+  ShareWithAllies: 0
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 0
+  Field: 3
+  FieldDuration: 6
+  FieldRadius: 4
+  FieldTickCoefficient: 0.2
+  Finisher: 0
+  Timeline:
+    Activation: 0.75
+    Aftercast: 0.31363633
+    Hits:
+    - 0.75
+    Projectiles: []
+    Movement: 0
+    MoveDistance: 0
+    Instant: 0
+    Channel: 0
+    Clip: Cast2H
+    AnimScale: 1.3636364
+    VfxCharge: Charge/Luft/M
+    VfxRelease: Sigil/Luft/M
+    VfxProjectile: 
+    VfxImpact: GroundCircle/Luft/M
+    VfxAfter: GroundCircle/Luft/M
+    SfxCharge: Luft/Charge
+    SfxRelease: Luft/Release
+    SfxImpact: Luft/Impact
+  Chain: []
+  Palette: 2
+  PaletteExplicit: 1
+  WeaponStyleOverride: Scepter
+  ClassId: elementarweber
+  InitiativeCost: 0
+  Element: 2
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_CJ_Frostbogen1
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: elementarweber_CJ_Frostbogen1
+  DisplayName: Frostpfeil
+  Description: Beschworene Waffe.
+  ShortLabel: Frostp
+  IconColor: {r: 0.95, g: 0.55, b: 0.25, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 0
+  CastTime: 0.5
+  Cooldown: 0
+  Delivery: 1
+  Range: 26
+  Radius: 2.5
+  TargetCount: 5
+  Coefficient: 0.7
+  Hits: 1
+  HitInterval: 0.25
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 34
+  LeapDistance: 0
+  TargetBuffs:
+  - Type: 17
+    Stacks: 1
+    Duration: 4
+  SelfBuffs: []
+  ShareWithAllies: 0
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 0
+  Field: 0
+  FieldDuration: 5
+  FieldRadius: 4
+  FieldTickCoefficient: 0
+  Finisher: 0
+  Timeline:
+    Activation: 0.35
+    Aftercast: 0.15000002
+    Hits: []
+    Projectiles:
+    - 0.35
+    Movement: 0
+    MoveDistance: 0
+    Instant: 0
+    Channel: 0
+    Clip: Bow_Auto1
+    AnimScale: 0.8333333
+    VfxCharge: Charge/Frost/S
+    VfxRelease: Release/Frost/S
+    VfxProjectile: Projectile/Frost/S
+    VfxImpact: Impact/Frost/S
+    VfxAfter: 
+    SfxCharge: Frost/Charge
+    SfxRelease: Frost/Swing1
+    SfxImpact: Frost/Impact
+  Chain: []
+  Palette: 9
+  PaletteExplicit: 1
+  WeaponStyleOverride: Bow
+  ClassId: elementarweber
+  InitiativeCost: 0
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

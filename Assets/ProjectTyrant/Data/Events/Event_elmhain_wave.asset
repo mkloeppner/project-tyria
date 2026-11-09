@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_elmhain_wave
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: elmhain_wave
+  Title: Gegenangriff auf Elmhain
+  Description: "Aschkrallen-Brecher st\xFCrmen die Ruinen. Besiegt die Veteranen!"
+  ChainId: elmhain
+  Objective: 0
+  Center: {x: 58, y: 2, z: -55}
+  Radius: 22
+  Duration: 120
+  TargetCount: 3
+  Triggers:
+  - Type: 2
+    Delay: 0
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 5
+  GoldContribution: 9000
+  Experience: 550
+  Karma: 180
+  Coins: 80
+  GoldItemRoll: 1
+  SetFlagOnSuccess: elmhain_befreit
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 600
+  WorldHook: elmhain_wave
+  Path: []
+  DeliverPoint: {x: 0, y: 0, z: 0}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 3
+  WaveInterval: 15
+  Trash: {fileID: 11400000, guid: 53babf5c9b2da9447a1d04456d071871, type: 2}
+  Veteran: {fileID: 11400000, guid: 40c3a1cad1a3142469531571570555fe, type: 2}
+  Boss: {fileID: 11400000, guid: 733bcea6c1ed56d44b7ca3b77e231e5c, type: 2}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0

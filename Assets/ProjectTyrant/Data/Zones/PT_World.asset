@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b68f508ea7fee4f91c865a48bd22f7, type: 3}
+  m_Name: PT_World
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WorldDefinition
+  StartZone: sonnfurt
+  Zones:
+  - {fileID: 11400000, guid: d30d2b5d6fad931418ed27bc25b2be2f, type: 2}
+  - {fileID: 11400000, guid: dbb4d79f86193a742945097764f87a29, type: 2}
+  - {fileID: 11400000, guid: 3131b0a346c92944a90f1ed149ce5abb, type: 2}
+  - {fileID: 11400000, guid: cce5b21fdebc50c47afc6cf0ab359c4e, type: 2}
+  Tips:
+  - "Mit M \xF6ffnest du die Karte \u2013 weiter herauszoomen zeigt den Kontinent."
+  - Wegmarken anderer Zonen kosten einen Aufschlag.
+  - "In niedrigeren Zonen wirst du herabgestuft \u2013 Belohnungen bleiben fair."
+  - "Dr\xFCcke F an Portalen, Einblicken und beim Stallmeister."

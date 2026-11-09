@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c21f1a3ffc6eb7448deca60b73fb741, type: 3}
+  m_Name: VfxLibrary
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.VfxLibrary
+  GroundMarker: {fileID: 2100000, guid: 6da884e7fa568424f9057caeecb29c1e, type: 2}
+  ProjectileGlow: {fileID: 2100000, guid: 4d0787e69148dda4388535b4e994f69c, type: 2}
+  FlashSolid: {fileID: 2100000, guid: 788e3dee1c3f07c4f87a177bb0ba1400, type: 2}
+  HitFlash: {fileID: 2100000, guid: 0db6140551581e940bdef1c020ac592d, type: 2}
+  ParticleGlow: {fileID: 2100000, guid: f4ceb6db6d0d161468b4db3f28f2c8a8, type: 2}
+  ParticleDrop: {fileID: 2100000, guid: 0968c79d271162242934ce907c654cf4, type: 2}
+  HitSound: {fileID: 8300000, guid: 221af2ad63662004e80d1eacd7a57343, type: 3}
+  CastSound: {fileID: 8300000, guid: 42405661057f54d49a7ec42eb146c282, type: 3}
+  ComboSound: {fileID: 8300000, guid: b02d0ff2708862e4ea7199d4ac7c56ca, type: 3}
+  DodgeSound: {fileID: 8300000, guid: 0c213f324dfcbc44f89d38d571e12633, type: 3}
+  EventSound: {fileID: 8300000, guid: 2a13dc635bd106d47a8afd6b141304a9, type: 3}
+  LootSound: {fileID: 8300000, guid: 3b553ab441d91e54b8d699c03d639dc9, type: 3}
+  LevelUpSound: {fileID: 8300000, guid: aa61f884f0b85b64ea35cf8f93923d9f, type: 3}
+  DiscoverSound: {fileID: 8300000, guid: 252ee34bc953fc14f9cf277e45a7cc3a, type: 3}
+  EquipSound: {fileID: 8300000, guid: 55b2e2f59a8236a4398e91e356f6aed5, type: 3}
+  CoinSound: {fileID: 8300000, guid: d252b2cc4d3dd7944b688cba8f7b5b23, type: 3}
+  FailSound: {fileID: 8300000, guid: d58b142095d4158449b2bf1f1f2431ad, type: 3}

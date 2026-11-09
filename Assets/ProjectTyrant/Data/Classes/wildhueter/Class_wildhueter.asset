@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35582dcb05479724fae4bb6b0020ac9d, type: 3}
+  m_Name: Class_wildhueter
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ClassDefinition
+  Id: wildhueter
+  DisplayName: "Wildh\xFCter"
+  Summary: "Mittlere R\xFCstung \xB7 Tiergef\xE4hrte \xB7 Langbogen, Axt + Fackel, Schwert + Kriegshorn \xB7 Fallen, Signale, Wildnis."
+  Armor: 1
+  Color: {r: 0.45, g: 0.75, b: 0.3, a: 1}
+  SecondaryColor: {r: 0.9, g: 0.75, b: 0.3, a: 1}
+  Palette: 4
+  Mechanic: 1
+  ResourceName: "Tiergef\xE4hrte"
+  MechanicLabels:
+  - Angriff
+  - Familie
+  - "Zur\xFCck"
+  - Wechsel
+  MechanicSummary: "Tiergef\xE4hrte: F1 greift dein Ziel an, F2 Familien-Skill, F3 ruft zur\xFCck (Passiv), F4 wechselt den Gef\xE4hrten (2 aktiv, 20 s). Wolf, B\xE4r oder Falke."
+  WeaponSets:
+  - {fileID: 11400000, guid: 8dfd422dc64ca02499f13aab828e2f5b, type: 2}
+  - {fileID: 11400000, guid: ec7a1b37e65112a4688fe84f21655b8d, type: 2}
+  - {fileID: 11400000, guid: c7ecabcc743f67446a9c3fc15b1815e9, type: 2}
+  StartWeapons: 0300000005000000i
+  SkillPool:
+  - {fileID: 11400000, guid: aa40f61dca7305a4ab0a3b3930a4c3ad, type: 2}
+  - {fileID: 11400000, guid: 8ea84e263750a7f4d84d1e75d515e02a, type: 2}
+  - {fileID: 11400000, guid: e94ba4774c404ad48b750d558a125450, type: 2}
+  - {fileID: 11400000, guid: 30eb3f0784aba7c43af2ea8d3e926d03, type: 2}
+  - {fileID: 11400000, guid: 977ea13586b32df4992dd87178494f81, type: 2}
+  - {fileID: 11400000, guid: 898a2f358001a88448dead5680122b2d, type: 2}
+  - {fileID: 11400000, guid: c7f701c80db002c4a8416ed1b08be4d9, type: 2}
+  - {fileID: 11400000, guid: c40b8437b7b866740b146a16f925fa7e, type: 2}
+  - {fileID: 11400000, guid: bbc8a23f2191fc64ead5e425d13f1f2f, type: 2}
+  - {fileID: 11400000, guid: 2f68459f65c7cc943bff900bec6e2324, type: 2}
+  - {fileID: 11400000, guid: 09dd1e26bd6d27a488c98692cb718cfd, type: 2}
+  - {fileID: 11400000, guid: b9cd96891ef90a64cbc5d6dfd0f617c9, type: 2}
+  - {fileID: 11400000, guid: 3a724715bf07a404da45b52d10431565, type: 2}
+  - {fileID: 11400000, guid: 0fd756b718d64e143a1013fe223de854, type: 2}
+  ExtraSkills:
+  - {fileID: 11400000, guid: 343410b4a69b11f45b8c4c14e91ece82, type: 2}
+  - {fileID: 11400000, guid: 55d3d7470227c48418817a95254a602e, type: 2}
+  - {fileID: 11400000, guid: a8f1a5716cfa5374a8746e1cf5136976, type: 2}
+  Specializations:
+  - {fileID: 11400000, guid: 27fbf9da279ea964489d1c115c600f8f, type: 2}
+  - {fileID: 11400000, guid: 1dc473462a275684f9e9afee134e9fd0, type: 2}
+  - {fileID: 11400000, guid: 1b2b28b8eb0a2ae4bb8d27d5a3d82eee, type: 2}
+  SwapInCombat: 1
+  SignatureSkill: LB5_Dornenregen

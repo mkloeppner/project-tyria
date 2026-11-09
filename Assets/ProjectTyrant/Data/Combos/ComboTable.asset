@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711b71277a9ff0c46ab993287b8b37c8, type: 3}
+  m_Name: ComboTable
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ComboTable
+  Entries:
+  - Field: 1
+    Finisher: 1
+    ResultName: Flammende Macht
+    ResultType: 0
+    Buff:
+      Type: 4
+      Stacks: 3
+      Duration: 20
+    Amount: 0
+    Coefficient: 0
+    Cleanse: 0
+    Radius: 6
+  - Field: 1
+    Finisher: 2
+    ResultName: Glutlandung
+    ResultType: 2
+    Buff:
+      Type: 14
+      Stacks: 3
+      Duration: 4
+    Amount: 0
+    Coefficient: 0
+    Cleanse: 0
+    Radius: 4
+  - Field: 1
+    Finisher: 3
+    ResultName: Brandgeschoss
+    ResultType: 4
+    Buff:
+      Type: 14
+      Stacks: 1
+      Duration: 3
+    Amount: 0
+    Coefficient: 0
+    Cleanse: 0
+    Radius: 5
+  - Field: 1
+    Finisher: 4
+    ResultName: Funkenwirbel
+    ResultType: 3
+    Buff:
+      Type: 14
+      Stacks: 1
+      Duration: 3
+    Amount: 180
+    Coefficient: 0.6
+    Cleanse: 0
+    Radius: 5
+  - Field: 2
+    Finisher: 1
+    ResultName: Heilende Woge
+    ResultType: 1
+    Buff:
+      Type: 0
+      Stacks: 0
+      Duration: 0
+    Amount: 1200
+    Coefficient: 0
+    Cleanse: 1
+    Radius: 6
+  - Field: 2
+    Finisher: 2
+    ResultName: Quellsprung
+    ResultType: 1
+    Buff:
+      Type: 0
+      Stacks: 0
+      Duration: 0
+    Amount: 900
+    Coefficient: 0
+    Cleanse: 1
+    Radius: 3
+  - Field: 2
+    Finisher: 3
+    ResultName: Lebensgeschoss
+    ResultType: 5
+    Buff:
+      Type: 5
+      Stacks: 1
+      Duration: 3
+    Amount: 0
+    Coefficient: 0
+    Cleanse: 0
+    Radius: 5
+  - Field: 3
+    Finisher: 1
+    ResultName: Sturmesschub
+    ResultType: 0
+    Buff:
+      Type: 2
+      Stacks: 1
+      Duration: 8
+    Amount: 0
+    Coefficient: 0
+    Cleanse: 0
+    Radius: 6
+  - Field: 3
+    Finisher: 3
+    ResultName: Blitzgeschoss
+    ResultType: 4
+    Buff:
+      Type: 24
+      Stacks: 2
+      Duration: 6
+    Amount: 0
+    Coefficient: 0
+    Cleanse: 0
+    Radius: 5
+  - Field: 3
+    Finisher: 4
+    ResultName: Funkenschlag
+    ResultType: 2
+    Buff:
+      Type: 24
+      Stacks: 4
+      Duration: 8
+    Amount: 0
+    Coefficient: 0
+    Cleanse: 0
+    Radius: 5
+  - Field: 4
+    Finisher: 1
+    ResultName: Rauchschleier-Tarnung
+    ResultType: 0
+    Buff:
+      Type: 26
+      Stacks: 1
+      Duration: 3
+    Amount: 0
+    Coefficient: 0
+    Cleanse: 0
+    Radius: 5
+  - Field: 4
+    Finisher: 2
+    ResultName: Schattensprung
+    ResultType: 0
+    Buff:
+      Type: 26
+      Stacks: 1
+      Duration: 2
+    Amount: 0
+    Coefficient: 0
+    Cleanse: 0
+    Radius: 2

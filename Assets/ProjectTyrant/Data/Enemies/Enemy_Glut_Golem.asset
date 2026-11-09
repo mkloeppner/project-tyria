@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a9756ba196e784f8aead94cb329eb1, type: 3}
+  m_Name: Enemy_Glut_Golem
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EnemyArchetype
+  DisplayName: Lavagolem
+  Tier: 2
+  Team: 2
+  Prefab: {fileID: 4587197760370599026, guid: ec7553f9d41cc114dbbbce3538638aee, type: 3}
+  FixedLevel: 0
+  AttributeFactor: 1.1
+  ArmorFactor: 1.6
+  HealthFactor: 4.4
+  MaxHealth: 0
+  AttackCoefficient: 5.4
+  AttackRange: 3
+  AttackInterval: 2.8
+  AttackWindup: 0.75
+  Palette: 10
+  MoveSpeed: 3.6
+  AggroRange: 15
+  LeashRange: 45
+  Scale: 1.6
+  OnHitDebuff:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  HasTelegraph: 0
+  TelegraphRadius: 5
+  TelegraphDelay: 1.5
+  TelegraphCoefficient: 25
+  TelegraphInterval: 9
+  Behavior: 9
+  BehaviorRadius: 5
+  BehaviorInterval: 10
+  BehaviorCoefficient: 7
+  BehaviorEffect:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  SummonArchetype: {fileID: 0}
+  ProjectileColor: {r: 1, g: 0.4, b: 0.1, a: 1}
+  Defiance: 0
+  ContributionValue: 32
+  Experience: 190
+  Loot: {fileID: 11400000, guid: 47202ee697ef1654dbeac5785cfaa47e, type: 2}

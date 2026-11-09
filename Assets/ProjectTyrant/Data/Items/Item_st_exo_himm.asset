@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d901df07c9037a14f8a8b4c187e0bce4, type: 3}
+  m_Name: Item_st_exo_himm
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ItemDefinition
+  Id: st_exo_himm
+  DisplayName: Sternenfall-Stab des Himmlischen
+  Description: "Zweih\xE4ndiger Stab. W\xE4chter, Elementarweber; Elite: Hainw\xE4chter (Wildh\xFCter), Phantomt\xE4nzer (Schattenklinge)."
+  Icon: {fileID: 0}
+  Type: 0
+  Rarity: 5
+  RequiredLevel: 15
+  ItemLevel: 15
+  Weapon: 2
+  Armor: 0
+  Trinket: 0
+  WeaponStrengthMin: 515
+  WeaponStrengthMax: 569
+  Defense: 0
+  Prefix: Himmlisch
+  Attributes:
+  - Attr: 0
+    Value: 23
+  - Attr: 1
+    Value: 23
+  - Attr: 2
+    Value: 23
+  - Attr: 3
+    Value: 23
+  - Attr: 4
+    Value: 23
+  - Attr: 5
+    Value: 23
+  - Attr: 6
+    Value: 23
+  - Attr: 7
+    Value: 23
+  - Attr: 8
+    Value: 23
+  MaxStack: 1
+  VendorValue: 314
+  Binding: 2
+  Salvage:
+  - Material: {fileID: 11400000, guid: 733fefeb6f15833438d244d289f1fed0, type: 2}
+    Min: 1
+    Max: 3
+  - Material: {fileID: 11400000, guid: 9926693d7abcbc44ba0b6a1928aba0d0, type: 2}
+    Min: 1
+    Max: 2
+  - Material: {fileID: 11400000, guid: cd9371d1af8c4ce42b963a9d7593f3b5, type: 2}
+    Min: 1
+    Max: 1
+  BagSize: 0
+  KitCharges: 0
+  Consumable: 0
+  FoodAttributes: []
+  FoodDurationMinutes: 30
+  HealBase: 0
+  ContainerLoot: {fileID: 0}

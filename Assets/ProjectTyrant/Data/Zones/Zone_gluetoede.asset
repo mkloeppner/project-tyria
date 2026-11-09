@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_gluetoede
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: gluetoede
+  DisplayName: "Glut\xF6de"
+  Description: Aschefelder, Lavarisse und der ewige Sturm.
+  SceneName: PT_Zone_Gluetoede
+  Seed: 30030
+  Size: 1200
+  LevelMin: 30
+  LevelMax: 30
+  Biome: {fileID: 11400000, guid: 22ef9fad1082962418bc2bfbd2bec883, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: gluetoede_frostkamm
+    Position: {x: -510, y: 3.5233886, z: -30}
+    Yaw: 86.63354
+    TargetZone: frostkamm
+    TargetPortal: frostkamm_gluetoede
+  DefaultSpawn: {x: -470, y: 1.6, z: 0}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.66
+    y: 0.3
+    width: 0.3
+    height: 0.34
+  ContinentColor: {r: 0.5411765, g: 0.3529412, b: 0.27450982, a: 1}
+  Waypoints:
+  - Id: wp_glut_ankunft
+    Name: Wegmarke Aschentor
+    Position: {x: -436, y: 1.6, z: 30}
+  - Id: wp_glut_feld
+    Name: Wegmarke Schlackenfeld
+    Position: {x: -200, y: 3.5, z: -200}
+  - Id: wp_glut_schmiede
+    Name: Wegmarke Glutschmiede
+    Position: {x: 0, y: 10.462033, z: 60}
+  - Id: wp_glut_krater
+    Name: Wegmarke Kraterrand
+    Position: {x: 250, y: 7, z: -150}
+  - Id: wp_glut_sturm
+    Name: Wegmarke Sturmauge
+    Position: {x: 220, y: 3.4944887, z: 260}
+  Tips:
+  - "Lavarisse brennen \u2013 erst die Umwelt-Beherrschung macht sie passierbar."
+  - "Das Meta-Ereignis \u201ESturm \xFCber der Glut\xF6de\u201C verl\xE4uft in vier Phasen."
+  Regions:
+  - Name: Lager der Sturmreiter
+    Center: {x: -380, y: -80}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Verlassene Esse
+    Center: {x: -60, y: -280}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Obsidianfeld
+    Center: {x: 40, y: 170}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Glutkrater
+    Center: {x: 310, y: -220}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Auge des Sturms
+    Center: {x: 250, y: 340}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  TimerLabel: "Sturm \xFCber der Glut\xF6de"
+  TimerPeriod: 1200
+  TimerOffset: 300
+  TimerPosition: {x: 250, y: 1.6, z: 345}
+  TimerEventId: sturm
+  CompletionIds:
+  - wp_glut_ankunft
+  - wp_glut_feld
+  - wp_glut_schmiede
+  - wp_glut_krater
+  - wp_glut_sturm
+  - poi_glut_lager
+  - poi_glut_esse
+  - poi_glut_obsidian
+  - poi_glut_krater
+  - poi_glut_auge
+  - vista_glut_aschenkamm
+  - vista_glut_schlackenturm
+  - vista_glut_brandwacht
+  - hc_glut_aschequelle
+  - hc_glut_herausforderer
+  - hc_glut_glutsiegel
+  - hc_glut_sturmstein
+  - heart_glut_kaya
+  - heart_glut_torvald
+  - heart_glut_oleg

@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ce25957b3fe044c9f27b1173b9aa42, type: 3}
+  m_Name: ClipSet_Ray
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Anim.AnimClipSet
+  Rig: Ray
+  Clips:
+  - Name: Ray_Idle
+    Clip: {fileID: 7400000, guid: 9cd9e60073c6d2a489b9ff79a095722b, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 3
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Ray_Walk
+    Clip: {fileID: 7400000, guid: b0aa88047b4e5e14daba6ee78fde65ba, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 1.2
+    Markers:
+    - Type: FootL
+      Time: 0
+    FootL: []
+    FootR: []
+  - Name: Ray_Run
+    Clip: {fileID: 7400000, guid: d62b28f3057fdd442ac67ddc8a157b51, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 0.6
+    Markers:
+    - Type: FootL
+      Time: 0
+    FootL: []
+    FootR: []
+  - Name: Ray_Jump
+    Clip: {fileID: 7400000, guid: 3ee7a46f07e18f44ba03044119b6d93a, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 0.8
+    Markers:
+    - Type: Effect
+      Time: 0.15
+    - Type: FootL
+      Time: 0.6
+    - Type: FootR
+      Time: 0.62
+    - Type: End
+      Time: 0.75
+    FootL: []
+    FootR: []
+  - Name: Ray_Attack
+    Clip: {fileID: 7400000, guid: 2df3a7cbbf1822245bffa07008008ee2, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 1.1
+    Markers:
+    - Type: Effect
+      Time: 0
+    - Type: Hit
+      Time: 0.72
+    - Type: End
+      Time: 1
+    FootL: []
+    FootR: []
+  - Name: Ray_Hit
+    Clip: {fileID: 7400000, guid: 9c94b3eda9a0a3448a6b1c31e231b648, type: 2}
+    Layer: 3
+    Loop: 0
+    Length: 0.35
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Ray_Death
+    Clip: {fileID: 7400000, guid: 5e8f3c45f56c8dc4297f90d09cfc8dfc, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 1.2
+    Markers:
+    - Type: Hit
+      Time: 1
+    - Type: End
+      Time: 1.2
+    FootL: []
+    FootR: []
+  - Name: Ray_Sniff
+    Clip: {fileID: 7400000, guid: cf2f216ca79528048b2f2daa57f75b18, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 2
+    Markers:
+    - Type: Effect
+      Time: 0.5
+    FootL: []
+    FootR: []
+  - Name: Ray_MIdle
+    Clip: {fileID: 7400000, guid: 60e5184cc88efab43a671e59fff54dcd, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 3
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Ray_MRun
+    Clip: {fileID: 7400000, guid: 70964b1e82c8fc049ba9c370bd4df4d6, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 0.55
+    Markers:
+    - Type: FootL
+      Time: 0
+    FootL: []
+    FootR: []
+  - Name: Ray_MLeap
+    Clip: {fileID: 7400000, guid: edc7ebbbf13a9a64aa762f04ca8bd9a5, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 0.9
+    Markers:
+    - Type: Effect
+      Time: 0.15
+    - Type: FootL
+      Time: 0.7
+    - Type: End
+      Time: 0.85
+    FootL: []
+    FootR: []
+  - Name: Ray_MCharge
+    Clip: {fileID: 7400000, guid: e1ff66d26a9f09c48b983b19aa4e6b56, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 0.5
+    Markers:
+    - Type: FootL
+      Time: 0.125
+    - Type: FootR
+      Time: 0.185
+    FootL: []
+    FootR: []
+  - Name: Ray_MHover
+    Clip: {fileID: 7400000, guid: 210bfeb4355d3d24ab02ef94d75a58a4, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 1.2
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Ray_MEngage
+    Clip: {fileID: 7400000, guid: d8a0960c17af452438d1076b3e8a270e, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 1
+    Markers:
+    - Type: Effect
+      Time: 0
+    - Type: Hit
+      Time: 0.72
+    - Type: End
+      Time: 0.92
+    FootL: []
+    FootR: []
+  - Name: Ray_MKnockOff
+    Clip: {fileID: 7400000, guid: 4aa224d98211a1a4fbde464df1474623, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 0.8
+    Markers:
+    - Type: Hit
+      Time: 0.2
+    - Type: End
+      Time: 0.75
+    FootL: []
+    FootR: []

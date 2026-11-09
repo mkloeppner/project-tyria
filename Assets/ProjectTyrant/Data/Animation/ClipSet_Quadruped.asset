@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ce25957b3fe044c9f27b1173b9aa42, type: 3}
+  m_Name: ClipSet_Quadruped
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Anim.AnimClipSet
+  Rig: Quadruped
+  Clips:
+  - Name: Quadruped_Idle
+    Clip: {fileID: 7400000, guid: 849b0e3d8851f4a4da45df40d44e511a, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 3
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Quadruped_Walk
+    Clip: {fileID: 7400000, guid: 7251b3ca4e155164d9fc9f27740e176d, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 1.2
+    Markers:
+    - Type: FootL
+      Time: 0.9
+    - Type: FootR
+      Time: 1
+    FootL: []
+    FootR: []
+  - Name: Quadruped_Run
+    Clip: {fileID: 7400000, guid: 3868d3f5c5b658341af5efaa5de0d766, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 0.6
+    Markers:
+    - Type: FootL
+      Time: 0.43333334
+    - Type: FootR
+      Time: 0.4
+    FootL: []
+    FootR: []
+  - Name: Quadruped_Jump
+    Clip: {fileID: 7400000, guid: 3c7755084feed9849856fc354c3544c5, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 0.8
+    Markers:
+    - Type: Effect
+      Time: 0.15
+    - Type: FootL
+      Time: 0.6
+    - Type: FootR
+      Time: 0.62
+    - Type: End
+      Time: 0.75
+    FootL: []
+    FootR: []
+  - Name: Quadruped_Attack
+    Clip: {fileID: 7400000, guid: 5442b980c3a0a8644a3623695d7076fd, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 1.1
+    Markers:
+    - Type: Effect
+      Time: 0
+    - Type: Hit
+      Time: 0.72
+    - Type: End
+      Time: 1
+    FootL: []
+    FootR: []
+  - Name: Quadruped_Hit
+    Clip: {fileID: 7400000, guid: 60c0ba0d506c43f4e88c6a97272733af, type: 2}
+    Layer: 3
+    Loop: 0
+    Length: 0.35
+    Markers: []
+    FootL: []
+    FootR: []
+  - Name: Quadruped_Death
+    Clip: {fileID: 7400000, guid: a8942a9c6064e7844a69fac6776e42e7, type: 2}
+    Layer: 1
+    Loop: 0
+    Length: 1.2
+    Markers:
+    - Type: Hit
+      Time: 1
+    - Type: End
+      Time: 1.2
+    FootL: []
+    FootR: []
+  - Name: Quadruped_Sniff
+    Clip: {fileID: 7400000, guid: 0421885119279314680508394f16e60a, type: 2}
+    Layer: 0
+    Loop: 1
+    Length: 2
+    Markers:
+    - Type: Effect
+      Time: 0.5
+    FootL: []
+    FootR: []

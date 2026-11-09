@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a9756ba196e784f8aead94cb329eb1, type: 3}
+  m_Name: Pet_Falke
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EnemyArchetype
+  DisplayName: Falke
+  Tier: 0
+  Team: 1
+  Prefab: {fileID: 3721213605551952356, guid: 85ac7d1b87c0cf84b97757ea62de594d, type: 3}
+  FixedLevel: 0
+  AttributeFactor: 1
+  ArmorFactor: 1.6
+  HealthFactor: 0.7
+  MaxHealth: 0
+  AttackCoefficient: 2.2
+  AttackRange: 2.4
+  AttackInterval: 1.3
+  AttackWindup: 0.6
+  Palette: 4
+  MoveSpeed: 8
+  AggroRange: 12
+  LeashRange: 1000
+  Scale: 1
+  OnHitDebuff:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  HasTelegraph: 0
+  TelegraphRadius: 5
+  TelegraphDelay: 1.5
+  TelegraphCoefficient: 25
+  TelegraphInterval: 9
+  Behavior: 0
+  BehaviorRadius: 6
+  BehaviorInterval: 8
+  BehaviorCoefficient: 4
+  BehaviorEffect:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  SummonArchetype: {fileID: 0}
+  ProjectileColor: {r: 0.5, g: 0.9, b: 0.3, a: 1}
+  Defiance: 0
+  ContributionValue: 0
+  Experience: 0
+  Loot: {fileID: 0}

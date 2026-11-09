@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_DD3_Todeswirbel
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: schattenklinge_DD3_Todeswirbel
+  DisplayName: Todeswirbel
+  Description: 'Doppelwaffen-Skill: wirbelnder Sprung (5 Treffer), weicht aus, Wirbel-Finisher.'
+  ShortLabel: Wirbel
+  IconColor: {r: 0.55, g: 0.35, b: 0.75, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 7
+  CastTime: 0.25
+  Cooldown: 0
+  Delivery: 3
+  Range: 0
+  Radius: 3.2
+  TargetCount: 5
+  Coefficient: 0.35
+  Hits: 5
+  HitInterval: 0.18
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 34
+  LeapDistance: 0
+  TargetBuffs:
+  - Type: 13
+    Stacks: 1
+    Duration: 6
+  SelfBuffs: []
+  ShareWithAllies: 0
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 1
+  Field: 0
+  FieldDuration: 5
+  FieldRadius: 4
+  FieldTickCoefficient: 0
+  Finisher: 4
+  Timeline:
+    Activation: 0.97
+    Aftercast: 0.24249995
+    Hits:
+    - 0.25
+    - 0.43
+    - 0.61
+    - 0.79
+    - 0.97
+    Projectiles: []
+    Movement: 0
+    MoveDistance: 0
+    Instant: 0
+    Channel: 1
+    Clip: Dagger_Whirl
+    AnimScale: 1.2125
+    VfxCharge: Charge/Schatten/M
+    VfxRelease: Shockwave/Schatten/M
+    VfxProjectile: 
+    VfxImpact: Impact/Schatten/M
+    VfxAfter: 
+    SfxCharge: Schatten/Charge
+    SfxRelease: Schatten/Release
+    SfxImpact: Schatten/Impact
+  Chain: []
+  Palette: 5
+  PaletteExplicit: 1
+  WeaponStyleOverride: Dagger
+  ClassId: schattenklinge
+  InitiativeCost: 4
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0
