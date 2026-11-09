@@ -12,10 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51929a5d730ca74eb5dcbb829663ed2, type: 3}
   m_Name: Trait_weber_1
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.TraitDefinition
-  Id: 
-  DisplayName: 
-  Description: 
-  Glyph: '?'
-  Tier: 1
+  Id: weber_t1
+  DisplayName: Doppelklinge
+  Description: "Wut halten 20 % l\xE4nger. +60 Wildheit."
+  Glyph: D
+  Tier: 2
   Major: 0
-  Modifiers: []
+  Modifiers:
+  - Kind: 8
+    Attr: 0
+    Attr2: 0
+    Value: 0.2
+    Value2: 0
+    Effect: 11
+    Stacks: 1
+    Duration: 0
+    Scope: 0
+    Trigger: 0
+    Target: 0
+    InternalCooldown: 0
+    Weapon: 0
+    Category: 0
+    SlotType: 0
+    MatchSlotType: 0
+  - Kind: 0
+    Attr: 4
+    Attr2: 0
+    Value: 60
+    Value2: 0
+    Effect: 0
+    Stacks: 1
+    Duration: 0
+    Scope: 0
+    Trigger: 0
+    Target: 0
+    InternalCooldown: 0
+    Weapon: 0
+    Category: 0
+    SlotType: 0
+    MatchSlotType: 0

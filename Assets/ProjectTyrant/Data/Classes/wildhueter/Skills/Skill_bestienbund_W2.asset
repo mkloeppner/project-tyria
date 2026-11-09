@@ -12,32 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
   m_Name: Skill_bestienbund_W2
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
-  Id: 
-  DisplayName: Skill
-  Description: 
-  ShortLabel: SK
-  IconColor: {r: 1, g: 1, b: 1, a: 1}
+  Id: wildhueter_bestienbund_W2
+  DisplayName: Rudelwirbel
+  Description: Wirbelnder Angriff um dich (4 Treffer), Blutung. Wirbel-Finisher.
+  ShortLabel: Rudelw.
+  IconColor: {r: 0.78, g: 0.38, b: 0.2, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
   Category: 0
   Tier: 1
   UnlockCost: 0
-  StartsUnlocked: 0
-  Weapon: 0
-  CastTime: 0.5
-  Cooldown: 0
-  Delivery: 0
-  Range: 3
-  Radius: 2.5
+  StartsUnlocked: 1
+  Weapon: 12
+  CastTime: 0.3
+  Cooldown: 8
+  Delivery: 3
+  Range: 0
+  Radius: 3.2
   TargetCount: 5
-  Coefficient: 1
-  Hits: 1
-  HitInterval: 0.25
+  Coefficient: 0.36
+  Hits: 4
+  HitInterval: 0.18
   HealBase: 0
   HealCoefficient: 0
-  ProjectileSpeed: 30
+  ProjectileSpeed: 34
   LeapDistance: 0
-  TargetBuffs: []
+  TargetBuffs:
+  - Type: 13
+    Stacks: 1
+    Duration: 5
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
@@ -47,31 +50,35 @@ MonoBehaviour:
   FieldDuration: 5
   FieldRadius: 4
   FieldTickCoefficient: 0
-  Finisher: 0
+  Finisher: 4
   Timeline:
-    Activation: 0
-    Aftercast: 0
-    Hits: []
+    Activation: 0.84000003
+    Aftercast: 0.21000004
+    Hits:
+    - 0.3
+    - 0.48000002
+    - 0.66
+    - 0.84000003
     Projectiles: []
     Movement: 0
     MoveDistance: 0
     Instant: 0
-    Channel: 0
-    Clip: 
-    AnimScale: 1
-    VfxCharge: 
-    VfxRelease: 
+    Channel: 1
+    Clip: Dagger_Whirl
+    AnimScale: 1.0500001
+    VfxCharge: Charge/Wildblut/M
+    VfxRelease: Shockwave/Wildblut/M
     VfxProjectile: 
-    VfxImpact: 
+    VfxImpact: Impact/Wildblut/M
     VfxAfter: 
-    SfxCharge: 
-    SfxRelease: 
-    SfxImpact: 
+    SfxCharge: Wildblut/Charge
+    SfxRelease: Wildblut/Release
+    SfxImpact: Wildblut/Impact
   Chain: []
-  Palette: 6
-  PaletteExplicit: 0
-  WeaponStyleOverride: 
-  ClassId: 
+  Palette: 12
+  PaletteExplicit: 1
+  WeaponStyleOverride: Dagger
+  ClassId: wildhueter
   InitiativeCost: 0
   Element: -1
   StealthSeconds: 0

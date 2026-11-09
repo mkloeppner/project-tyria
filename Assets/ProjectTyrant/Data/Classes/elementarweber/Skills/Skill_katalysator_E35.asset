@@ -12,32 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
   m_Name: Skill_katalysator_E35
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
-  Id: 
-  DisplayName: Skill
-  Description: 
-  ShortLabel: SK
-  IconColor: {r: 1, g: 1, b: 1, a: 1}
+  Id: elementarweber_katalysator_E35
+  DisplayName: Felsbeben
+  Description: Starker Elementar-Skill um dich (Explosions-Finisher).
+  ShortLabel: 5
+  IconColor: {r: 0.35, g: 0.9, b: 0.55, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
   Category: 0
   Tier: 1
   UnlockCost: 0
-  StartsUnlocked: 0
-  Weapon: 0
-  CastTime: 0.5
-  Cooldown: 0
-  Delivery: 0
-  Range: 3
-  Radius: 2.5
+  StartsUnlocked: 1
+  Weapon: 10
+  CastTime: 0.75
+  Cooldown: 28
+  Delivery: 3
+  Range: 0
+  Radius: 5
   TargetCount: 5
-  Coefficient: 1
-  Hits: 1
-  HitInterval: 0.25
+  Coefficient: 1.3499999
+  Hits: 2
+  HitInterval: 0.6
   HealBase: 0
   HealCoefficient: 0
-  ProjectileSpeed: 30
+  ProjectileSpeed: 34
   LeapDistance: 0
-  TargetBuffs: []
+  TargetBuffs:
+  - Type: 13
+    Stacks: 2
+    Duration: 6
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
@@ -47,33 +50,35 @@ MonoBehaviour:
   FieldDuration: 5
   FieldRadius: 4
   FieldTickCoefficient: 0
-  Finisher: 0
+  Finisher: 1
   Timeline:
-    Activation: 0
-    Aftercast: 0
-    Hits: []
+    Activation: 1.35
+    Aftercast: 1.3500001
+    Hits:
+    - 0.75
+    - 1.35
     Projectiles: []
     Movement: 0
     MoveDistance: 0
     Instant: 0
-    Channel: 0
-    Clip: 
-    AnimScale: 1
-    VfxCharge: 
-    VfxRelease: 
+    Channel: 1
+    Clip: Hammer_Heavy
+    AnimScale: 1.7307693
+    VfxCharge: Charge/Erde/L
+    VfxRelease: Shockwave/Erde/L
     VfxProjectile: 
-    VfxImpact: 
+    VfxImpact: Impact/Erde/L
     VfxAfter: 
-    SfxCharge: 
-    SfxRelease: 
-    SfxImpact: 
+    SfxCharge: Erde/Charge
+    SfxRelease: Erde/Release
+    SfxImpact: Erde/Impact
   Chain: []
-  Palette: 6
-  PaletteExplicit: 0
-  WeaponStyleOverride: 
-  ClassId: 
+  Palette: 3
+  PaletteExplicit: 1
+  WeaponStyleOverride: Hammer
+  ClassId: elementarweber
   InitiativeCost: 0
-  Element: -1
+  Element: 3
   StealthSeconds: 0
   StealthAttack: 0
   ConjureSet: {fileID: 0}

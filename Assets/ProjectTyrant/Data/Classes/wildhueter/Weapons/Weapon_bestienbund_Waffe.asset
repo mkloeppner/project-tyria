@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
   m_Name: Weapon_bestienbund_Waffe
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
-  DisplayName: Waffe
-  Visual: 0
-  WeaponColor: {r: 1, g: 1, b: 1, a: 1}
+  DisplayName: Dolch & Kriegshorn
+  Visual: 12
+  WeaponColor: {r: 0.78, g: 0.38, b: 0.2, a: 1}
   Skills:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Kind: 0
-  ClassId: 
+  - {fileID: 11400000, guid: 30d4a1fa6cf355b428e78310a04a3d58, type: 2}
+  - {fileID: 11400000, guid: 09836ace98f346c4693dac3186979aa7, type: 2}
+  - {fileID: 11400000, guid: 7295562cdc5d5374ca645cfdbbd4045b, type: 2}
+  - {fileID: 11400000, guid: 773cc5c54fd616b428824876f2e23ea7, type: 2}
+  - {fileID: 11400000, guid: 8b0340a39ac519e48971ed1f79b08248, type: 2}
+  Kind: 12
+  ClassId: wildhueter
   Attunement: []
   StealthSkill: {fileID: 0}

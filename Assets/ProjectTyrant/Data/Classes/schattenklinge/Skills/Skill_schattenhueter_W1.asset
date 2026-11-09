@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_schattenhueter_W1
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: schattenklinge_schattenhueter_W1
+  DisplayName: Schattenbolzen
+  Description: Grundangriff auf bis zu 22 m; Qual (1). Projektil-Finisher.
+  ShortLabel: Schatt.
+  IconColor: {r: 0.5, g: 0.2, b: 0.8, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 16
+  CastTime: 0.6
+  Cooldown: 0
+  Delivery: 1
+  Range: 22
+  Radius: 2.5
+  TargetCount: 5
+  Coefficient: 0.72
+  Hits: 1
+  HitInterval: 0.25
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 40
+  LeapDistance: 0
+  TargetBuffs:
+  - Type: 18
+    Stacks: 1
+    Duration: 4
+  SelfBuffs: []
+  ShareWithAllies: 0
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 0
+  Field: 0
+  FieldDuration: 5
+  FieldRadius: 4
+  FieldTickCoefficient: 0
+  Finisher: 3
+  Timeline:
+    Activation: 0.3
+    Aftercast: 0.29999998
+    Hits: []
+    Projectiles:
+    - 0.3
+    Movement: 0
+    MoveDistance: 0
+    Instant: 0
+    Channel: 0
+    Clip: Scepter_Auto1
+    AnimScale: 1.3333334
+    VfxCharge: Charge/Tiefviolett/S
+    VfxRelease: Release/Tiefviolett/S
+    VfxProjectile: Projectile/Tiefviolett/S
+    VfxImpact: Impact/Tiefviolett/S
+    VfxAfter: 
+    SfxCharge: Tiefviolett/Charge
+    SfxRelease: Tiefviolett/Swing1
+    SfxImpact: Tiefviolett/Impact
+  Chain: []
+  Palette: 21
+  PaletteExplicit: 1
+  WeaponStyleOverride: Scepter
+  ClassId: schattenklinge
+  InitiativeCost: 0
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

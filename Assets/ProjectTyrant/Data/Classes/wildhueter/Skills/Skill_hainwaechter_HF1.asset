@@ -12,34 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
   m_Name: Skill_hainwaechter_HF1
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
-  Id: 
-  DisplayName: Skill
-  Description: 
-  ShortLabel: SK
-  IconColor: {r: 1, g: 1, b: 1, a: 1}
+  Id: wildhueter_hainwaechter_HF1
+  DisplayName: Mondsegen
+  Description: "Hainform: Heilt Verb\xFCndete im Umkreis, Regeneration."
+  ShortLabel: Mondse.
+  IconColor: {r: 0.78, g: 0.88, b: 1, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
   Category: 0
   Tier: 1
   UnlockCost: 0
-  StartsUnlocked: 0
+  StartsUnlocked: 1
   Weapon: 0
   CastTime: 0.5
-  Cooldown: 0
-  Delivery: 0
-  Range: 3
-  Radius: 2.5
+  Cooldown: 3
+  Delivery: 3
+  Range: 0
+  Radius: 7
   TargetCount: 5
-  Coefficient: 1
+  Coefficient: 0.2
   Hits: 1
   HitInterval: 0.25
-  HealBase: 0
-  HealCoefficient: 0
-  ProjectileSpeed: 30
+  HealBase: 1400
+  HealCoefficient: 0.35
+  ProjectileSpeed: 34
   LeapDistance: 0
   TargetBuffs: []
-  SelfBuffs: []
-  ShareWithAllies: 0
+  SelfBuffs:
+  - Type: 5
+    Stacks: 1
+    Duration: 6
+  ShareWithAllies: 1
   CleanseCount: 0
   Special: 0
   EvadesDuringCast: 0
@@ -49,29 +52,30 @@ MonoBehaviour:
   FieldTickCoefficient: 0
   Finisher: 0
   Timeline:
-    Activation: 0
-    Aftercast: 0
-    Hits: []
+    Activation: 0.5
+    Aftercast: 0.33333334
+    Hits:
+    - 0.5
     Projectiles: []
     Movement: 0
     MoveDistance: 0
     Instant: 0
     Channel: 0
-    Clip: 
-    AnimScale: 1
-    VfxCharge: 
-    VfxRelease: 
+    Clip: Staff_Heavy
+    AnimScale: 0.64102566
+    VfxCharge: Charge/Mondlicht/L
+    VfxRelease: Shockwave/Mondlicht/L
     VfxProjectile: 
-    VfxImpact: 
-    VfxAfter: 
-    SfxCharge: 
-    SfxRelease: 
-    SfxImpact: 
+    VfxImpact: Impact/Mondlicht/L
+    VfxAfter: Aura/Mondlicht/S
+    SfxCharge: Mondlicht/Charge
+    SfxRelease: Mondlicht/Release
+    SfxImpact: Mondlicht/Impact
   Chain: []
-  Palette: 6
-  PaletteExplicit: 0
-  WeaponStyleOverride: 
-  ClassId: 
+  Palette: 11
+  PaletteExplicit: 1
+  WeaponStyleOverride: Staff
+  ClassId: wildhueter
   InitiativeCost: 0
   Element: -1
   StealthSeconds: 0

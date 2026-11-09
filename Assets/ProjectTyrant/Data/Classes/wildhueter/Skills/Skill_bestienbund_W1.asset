@@ -12,30 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
   m_Name: Skill_bestienbund_W1
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
-  Id: 
-  DisplayName: Skill
-  Description: 
-  ShortLabel: SK
-  IconColor: {r: 1, g: 1, b: 1, a: 1}
+  Id: wildhueter_bestienbund_W1
+  DisplayName: Fangzahn
+  Description: Grundangriff (Kette aus drei Gliedern), das dritte Glied verursacht Blutung.
+  ShortLabel: Fangza. I
+  IconColor: {r: 0.78, g: 0.38, b: 0.2, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
   Category: 0
   Tier: 1
   UnlockCost: 0
-  StartsUnlocked: 0
-  Weapon: 0
+  StartsUnlocked: 1
+  Weapon: 12
   CastTime: 0.5
   Cooldown: 0
   Delivery: 0
   Range: 3
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 1
+  Coefficient: 0.62
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
   HealCoefficient: 0
-  ProjectileSpeed: 30
+  ProjectileSpeed: 34
   LeapDistance: 0
   TargetBuffs: []
   SelfBuffs: []
@@ -49,29 +49,32 @@ MonoBehaviour:
   FieldTickCoefficient: 0
   Finisher: 0
   Timeline:
-    Activation: 0
-    Aftercast: 0
-    Hits: []
+    Activation: 0.25
+    Aftercast: 0.25
+    Hits:
+    - 0.25
     Projectiles: []
     Movement: 0
     MoveDistance: 0
     Instant: 0
     Channel: 0
-    Clip: 
-    AnimScale: 1
-    VfxCharge: 
-    VfxRelease: 
-    VfxProjectile: 
-    VfxImpact: 
+    Clip: Dagger_Auto1
+    AnimScale: 1.4285715
+    VfxCharge: Charge/Wildblut/S
+    VfxRelease: Release/Wildblut/S
+    VfxProjectile: Trail/Wildblut/S
+    VfxImpact: Impact/Wildblut/S
     VfxAfter: 
-    SfxCharge: 
-    SfxRelease: 
-    SfxImpact: 
-  Chain: []
-  Palette: 6
-  PaletteExplicit: 0
-  WeaponStyleOverride: 
-  ClassId: 
+    SfxCharge: Wildblut/Charge
+    SfxRelease: Wildblut/Swing1
+    SfxImpact: Wildblut/Impact
+  Chain:
+  - {fileID: 11400000, guid: 7ee4e6b23fbba1c47b680ad298629803, type: 2}
+  - {fileID: 11400000, guid: 3e2e6041068414646b00c11eda260bfc, type: 2}
+  Palette: 12
+  PaletteExplicit: 1
+  WeaponStyleOverride: Dagger
+  ClassId: wildhueter
   InitiativeCost: 0
   Element: -1
   StealthSeconds: 0

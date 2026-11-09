@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
   m_Name: Weapon_hainwaechter_Waffe
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
-  DisplayName: Waffe
-  Visual: 0
-  WeaponColor: {r: 1, g: 1, b: 1, a: 1}
+  DisplayName: Hainstab
+  Visual: 1
+  WeaponColor: {r: 0.78, g: 0.88, b: 1, a: 1}
   Skills:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Kind: 0
-  ClassId: 
+  - {fileID: 11400000, guid: 7a0ac67dc18fa394f9806238401f3f2d, type: 2}
+  - {fileID: 11400000, guid: c132af1bd7d34ba4288d2ba156fb2d27, type: 2}
+  - {fileID: 11400000, guid: 279c61b39c3646e40bd3c62219db3d06, type: 2}
+  - {fileID: 11400000, guid: efcfc50169f7cb647880a3c2b327964e, type: 2}
+  - {fileID: 11400000, guid: 19915234e03280b45a48660632071f8c, type: 2}
+  Kind: 2
+  ClassId: wildhueter
   Attunement: []
   StealthSkill: {fileID: 0}

@@ -12,33 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
   m_Name: Skill_sturmrufer_T0_SchreiderStille
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
-  Id: 
-  DisplayName: Skill
-  Description: 
-  ShortLabel: SK
-  IconColor: {r: 1, g: 1, b: 1, a: 1}
+  Id: elementarweber_sturmrufer_T0_SchreiderStille
+  DisplayName: Schrei der Stille
+  Description: "Ruf: Heilung; Eile f\xFCr dich."
+  ShortLabel: Schrei.
+  IconColor: {r: 0.9, g: 0.92, b: 1, a: 1}
   Icon: {fileID: 0}
-  SlotType: 0
-  Category: 0
+  SlotType: 1
+  Category: 1
   Tier: 1
   UnlockCost: 0
-  StartsUnlocked: 0
+  StartsUnlocked: 1
   Weapon: 0
-  CastTime: 0.5
-  Cooldown: 0
-  Delivery: 0
-  Range: 3
+  CastTime: 0.75
+  Cooldown: 25
+  Delivery: 3
+  Range: 0
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 1
+  Coefficient: 0
   Hits: 1
   HitInterval: 0.25
-  HealBase: 0
-  HealCoefficient: 0
-  ProjectileSpeed: 30
+  HealBase: 5200
+  HealCoefficient: 1
+  ProjectileSpeed: 34
   LeapDistance: 0
   TargetBuffs: []
-  SelfBuffs: []
+  SelfBuffs:
+  - Type: 2
+    Stacks: 1
+    Duration: 6
   ShareWithAllies: 0
   CleanseCount: 0
   Special: 0
@@ -49,29 +52,30 @@ MonoBehaviour:
   FieldTickCoefficient: 0
   Finisher: 0
   Timeline:
-    Activation: 0
-    Aftercast: 0
-    Hits: []
+    Activation: 0.75
+    Aftercast: 0.75000006
+    Hits:
+    - 0.75
     Projectiles: []
     Movement: 0
     MoveDistance: 0
     Instant: 0
     Channel: 0
-    Clip: 
-    AnimScale: 1
-    VfxCharge: 
-    VfxRelease: 
+    Clip: Cheer
+    AnimScale: 1.25
+    VfxCharge: Charge/Gewitter/M
+    VfxRelease: Release/Gewitter/M
     VfxProjectile: 
-    VfxImpact: 
-    VfxAfter: 
-    SfxCharge: 
-    SfxRelease: 
-    SfxImpact: 
+    VfxImpact: Aura/Gewitter/M
+    VfxAfter: Aura/Gewitter/S
+    SfxCharge: Gewitter/Charge
+    SfxRelease: Gewitter/Release
+    SfxImpact: Gewitter/Buff
   Chain: []
-  Palette: 6
-  PaletteExplicit: 0
+  Palette: 15
+  PaletteExplicit: 1
   WeaponStyleOverride: 
-  ClassId: 
+  ClassId: elementarweber
   InitiativeCost: 0
   Element: -1
   StealthSeconds: 0

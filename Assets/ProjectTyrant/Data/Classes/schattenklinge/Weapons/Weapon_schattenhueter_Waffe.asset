@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
+  m_Name: Weapon_schattenhueter_Waffe
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
+  DisplayName: Zepter & Pistole
+  Visual: 16
+  WeaponColor: {r: 0.5, g: 0.2, b: 0.8, a: 1}
+  Skills:
+  - {fileID: 11400000, guid: 581e0a1a3a2a4f2408435ee306d968c3, type: 2}
+  - {fileID: 11400000, guid: bbf09f942e3621045ad730328d775787, type: 2}
+  - {fileID: 11400000, guid: 8a0ffe7a3bd8d314092ccd0e0b67d3a7, type: 2}
+  - {fileID: 11400000, guid: bdf681b3e7531df4487d9680aafb32ca, type: 2}
+  - {fileID: 11400000, guid: 7ea03524db858844c92d49f5d922b194, type: 2}
+  Kind: 16
+  ClassId: schattenklinge
+  Attunement: []
+  StealthSkill: {fileID: 11400000, guid: 957b4ec006243bd4d816423f33ee25bf, type: 2}

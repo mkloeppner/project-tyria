@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_bollwerkmeister_W3
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: waechter_bollwerkmeister_W3
+  DisplayName: Schildsprung
+  Description: "Sprung zum Ziel (9 m). Sprung-Finisher; Schutz f\xFCr dich."
+  ShortLabel: Schild.
+  IconColor: {r: 0.65, g: 0.78, b: 1, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 18
+  CastTime: 0.3
+  Cooldown: 12
+  Delivery: 4
+  Range: 9
+  Radius: 2.5
+  TargetCount: 5
+  Coefficient: 0.95
+  Hits: 1
+  HitInterval: 0.25
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 34
+  LeapDistance: 9
+  TargetBuffs: []
+  SelfBuffs:
+  - Type: 7
+    Stacks: 1
+    Duration: 6
+  ShareWithAllies: 0
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 0
+  Field: 0
+  FieldDuration: 5
+  FieldRadius: 4
+  FieldTickCoefficient: 0
+  Finisher: 2
+  Timeline:
+    Activation: 0.3
+    Aftercast: 0.3
+    Hits:
+    - 0.3
+    Projectiles: []
+    Movement: 2
+    MoveDistance: 9
+    Instant: 0
+    Channel: 0
+    Clip: Sword_Thrust
+    AnimScale: 1.1764705
+    VfxCharge: Charge/Bollwerk/M
+    VfxRelease: Release/Bollwerk/M
+    VfxProjectile: 
+    VfxImpact: Impact/Bollwerk/M
+    VfxAfter: Aura/Bollwerk/S
+    SfxCharge: Bollwerk/Charge
+    SfxRelease: Bollwerk/Release
+    SfxImpact: Bollwerk/Impact
+  Chain: []
+  Palette: 24
+  PaletteExplicit: 1
+  WeaponStyleOverride: Sword
+  ClassId: waechter
+  InitiativeCost: 0
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

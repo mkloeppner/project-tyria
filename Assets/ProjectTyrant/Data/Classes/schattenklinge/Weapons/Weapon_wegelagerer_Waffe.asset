@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
   m_Name: Weapon_wegelagerer_Waffe
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
-  DisplayName: Waffe
-  Visual: 0
-  WeaponColor: {r: 1, g: 1, b: 1, a: 1}
+  DisplayName: Wegelagerer-Gewehr
+  Visual: 11
+  WeaponColor: {r: 0.85, g: 0.15, b: 0.15, a: 1}
   Skills:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Kind: 0
-  ClassId: 
+  - {fileID: 11400000, guid: b5d43f288bb3e244ba9667bfcc46fbcb, type: 2}
+  - {fileID: 11400000, guid: 2a52070ceb706f940a8d7c538d41907a, type: 2}
+  - {fileID: 11400000, guid: b4872172088d2124d812580bc071260d, type: 2}
+  - {fileID: 11400000, guid: fb5031325d2ff0147a63f62d0ca36e4c, type: 2}
+  - {fileID: 11400000, guid: 150e824735ea2ed449f10ee9ef6884f2, type: 2}
+  Kind: 11
+  ClassId: schattenklinge
   Attunement: []
-  StealthSkill: {fileID: 0}
+  StealthSkill: {fileID: 11400000, guid: fd658c0fa91dfe343b38ba7603d57a36, type: 2}

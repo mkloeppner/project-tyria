@@ -67,5 +67,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ff2aa85a1fd1c6244a5ca5eb88e37d75, type: 2}
   - {fileID: 11400000, guid: 6f22b0e170a6a2c43af057e15c02b3b9, type: 2}
   - {fileID: 11400000, guid: 62f20fcd169309c47b0b5c6b3156f75d, type: 2}
+  EliteSpecs:
+  - {fileID: 11400000, guid: 5f028e93ff112f44d85bc7541000f908, type: 2}
+  - {fileID: 11400000, guid: 5b95150254989f54eaa89b9902367d9c, type: 2}
+  - {fileID: 11400000, guid: cd760cb1638c6b44e94ac881c2c5fb50, type: 2}
+  - {fileID: 11400000, guid: ce8e6b3239c88fc4eb717f147911fcf4, type: 2}
   SwapInCombat: 0
   SignatureSkill: ST05_Sternenglut

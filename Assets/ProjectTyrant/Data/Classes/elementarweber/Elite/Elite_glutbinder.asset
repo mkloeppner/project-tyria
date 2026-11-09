@@ -12,34 +12,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd942f5b622e6814eb6bd51730ade8bd, type: 3}
   m_Name: Elite_glutbinder
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EliteSpecDefinition
-  Id: 
-  DisplayName: 
-  Description: 
-  Color: {r: 1, g: 1, b: 1, a: 1}
+  Id: glutbinder
+  DisplayName: Glutbinder
+  Description: "Lava auf Obsidian \u2013 Zepter & Dolch, Erdbruch, Beschw\xF6rungen."
+  Color: {r: 1, g: 0.45, b: 0.1, a: 1}
   Minors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: c86101121fff2b6458f7563b0ec59db9, type: 2}
+  - {fileID: 11400000, guid: 98553033f523620478c7d12dc8e8e180, type: 2}
+  - {fileID: 11400000, guid: 62e4b35453b0c1d45b195736e18e2c80, type: 2}
   Majors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  ClassId: 
-  Mechanic: 0
-  MechanicLabel: 
-  MechanicSummary: 
-  Weapon: {fileID: 0}
-  SkillType: 0
-  TypeSkills: []
-  MechanicSkills: []
-  Palette: 0
-  Accent: {r: 1, g: 1, b: 1, a: 1}
-  SoundMotif: 
-  CastPose: Cast2H
-  SignatureSkill: 
+  - {fileID: 11400000, guid: 44df3ef83303c4941ae9d4f4356a4e66, type: 2}
+  - {fileID: 11400000, guid: 6b873295bedd43b4d9b0f20c0e47694c, type: 2}
+  - {fileID: 11400000, guid: 08d8139b94601b3438db02dcc1bc7675, type: 2}
+  - {fileID: 11400000, guid: 2692895b4c25fea4fb1562b95f9335ed, type: 2}
+  - {fileID: 11400000, guid: 2f7588a27f063a1459e8add9428d1925, type: 2}
+  - {fileID: 11400000, guid: aec5643560944ba4a92f15aec6d92187, type: 2}
+  - {fileID: 11400000, guid: 518f56f1390d7ab47a5e2e444ef5b28f, type: 2}
+  - {fileID: 11400000, guid: 29874785ace4bda49ac918420e80d04f, type: 2}
+  - {fileID: 11400000, guid: 8327692e5926241438af7ce7c95b1132, type: 2}
+  ClassId: elementarweber
+  Mechanic: 8
+  MechanicLabel: Erdbruch
+  MechanicSummary: "F5 Erdbruch: Feuer und Erde verschmelzen \u2013 ein Lava-Feld am Ziel (Brennen, Blutung, Feuerfeld, 20 s Abklingzeit). Beschw\xF6rungen bleiben 50 % l\xE4nger."
+  Weapon: {fileID: 11400000, guid: 8219b18b5784ab64ea863ade42ba428e, type: 2}
+  SkillType: 7
+  TypeSkills:
+  - {fileID: 11400000, guid: 5b26e76296d04ef418ccde45780c55c5, type: 2}
+  - {fileID: 11400000, guid: 176c0462edb8ee24ca576544f4d03e4b, type: 2}
+  - {fileID: 11400000, guid: 654ab0883926ccb4b82e556de2c55f46, type: 2}
+  - {fileID: 11400000, guid: 2036bd1033eea4344a3fc4691863ae51, type: 2}
+  - {fileID: 11400000, guid: f579d3ae91c8ca741a160dd714d285c2, type: 2}
+  MechanicSkills:
+  - {fileID: 11400000, guid: d17b609d007f9414a874614fd257a3d4, type: 2}
+  Palette: 18
+  Accent: {r: 1, g: 0.45, b: 0.1, a: 1}
+  SoundMotif: Lava
+  CastPose: Cast1H
+  SignatureSkill: glutbinder_EB_Lava

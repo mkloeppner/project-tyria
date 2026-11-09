@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd942f5b622e6814eb6bd51730ade8bd, type: 3}
+  m_Name: Elite_dornenschild
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EliteSpecDefinition
+  Id: dornenschild
+  DisplayName: Dornenschild
+  Description: "Smaragd-Gold und Dornenkreise \u2013 Zepter & Fackel, Dornenhaut, Weihen."
+  Color: {r: 0.3, g: 0.85, b: 0.45, a: 1}
+  Minors:
+  - {fileID: 11400000, guid: ad0da05c42f194e4bb9012549604eaf1, type: 2}
+  - {fileID: 11400000, guid: 896221ae357a96340b19ef13146d907f, type: 2}
+  - {fileID: 11400000, guid: e410c09e3de1dce49833cfc450adf9d2, type: 2}
+  Majors:
+  - {fileID: 11400000, guid: cb7c191a206747f488a0b67240ed0d33, type: 2}
+  - {fileID: 11400000, guid: a42f854115885f049b34b574d1e77070, type: 2}
+  - {fileID: 11400000, guid: 81f22d8701fbbe54b925e039d79e7ca1, type: 2}
+  - {fileID: 11400000, guid: 0938c6ac7864a924fbfd252e8f3b224f, type: 2}
+  - {fileID: 11400000, guid: 4b3ef128b635c004b8d000fd74f53339, type: 2}
+  - {fileID: 11400000, guid: 4e8cdc5e8d7bd9847a57c0eea70bb6a0, type: 2}
+  - {fileID: 11400000, guid: be877e57a1adb1f4a85f0b861be53a2d, type: 2}
+  - {fileID: 11400000, guid: f7105c3032458db4d9c399b98c9c9e37, type: 2}
+  - {fileID: 11400000, guid: 35025bcfc1c9f8b478808d58d6b635cf, type: 2}
+  ClassId: waechter
+  Mechanic: 16
+  MechanicLabel: Dornenhaut
+  MechanicSummary: "F5 Dornenhaut: 8 s Vergeltung \u2013 direkte Treffer verletzen den Angreifer, jeden Zeitpunkt (1 s) wird ein Zustand von dir als Brennen auf den n\xE4chsten Gegner zur\xFCckgeworfen; Entschlossenheit, 30 s Abklingzeit."
+  Weapon: {fileID: 11400000, guid: 6d7de0b3d2811134a95e46249fed094c, type: 2}
+  SkillType: 22
+  TypeSkills:
+  - {fileID: 11400000, guid: b6e5dcd007aa69141a158635aa8c9e52, type: 2}
+  - {fileID: 11400000, guid: 50ad1d95437d5fa47b8d71f002dffda7, type: 2}
+  - {fileID: 11400000, guid: b267d0e249cbaa9429051f8194a9114c, type: 2}
+  - {fileID: 11400000, guid: 49583c78640fc3348aebe1b09ac9f8a9, type: 2}
+  - {fileID: 11400000, guid: be238243bee4ba24eb2ab3f39c3a6fa5, type: 2}
+  MechanicSkills:
+  - {fileID: 11400000, guid: ef52d18eb0a84fd41af59e8ef1c6a00e, type: 2}
+  Palette: 26
+  Accent: {r: 0.3, g: 0.85, b: 0.45, a: 1}
+  SoundMotif: Smaragd
+  CastPose: Cast1H
+  SignatureSkill: dornenschild_DS_Dornenhaut

@@ -12,34 +12,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd942f5b622e6814eb6bd51730ade8bd, type: 3}
   m_Name: Elite_sturmfalke
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EliteSpecDefinition
-  Id: 
-  DisplayName: 
-  Description: 
-  Color: {r: 1, g: 1, b: 1, a: 1}
+  Id: sturmfalke
+  DisplayName: Sturmfalke
+  Description: "Federn und Zielstrahl \u2013 Gewehr, Markieren, Markierungen."
+  Color: {r: 0.55, g: 0.82, b: 1, a: 1}
   Minors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 763d2b93f54d4e3479fb3e09a3599b50, type: 2}
+  - {fileID: 11400000, guid: 147460471f15d7043b5699f9cd4782d3, type: 2}
+  - {fileID: 11400000, guid: e07e944e40d08e544b826a44541d17e5, type: 2}
   Majors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  ClassId: 
-  Mechanic: 0
-  MechanicLabel: 
-  MechanicSummary: 
-  Weapon: {fileID: 0}
-  SkillType: 0
-  TypeSkills: []
-  MechanicSkills: []
-  Palette: 0
-  Accent: {r: 1, g: 1, b: 1, a: 1}
-  SoundMotif: 
-  CastPose: Cast2H
-  SignatureSkill: 
+  - {fileID: 11400000, guid: 2ce7e5892b11b9342bd4d8f7e519cd98, type: 2}
+  - {fileID: 11400000, guid: ebdef1d5452610343ba0ca8639b84537, type: 2}
+  - {fileID: 11400000, guid: 831c4d14c0c654a43a3d7a4e5d86e7db, type: 2}
+  - {fileID: 11400000, guid: a0e9184338a5acb4aa5ce380eb26df04, type: 2}
+  - {fileID: 11400000, guid: 11778f5a6b5f4094d816fbf02929ead3, type: 2}
+  - {fileID: 11400000, guid: d52c40713e4582d4cb33bea1b19bfa3a, type: 2}
+  - {fileID: 11400000, guid: 15cee64c12db5de45b484824fb73bbc7, type: 2}
+  - {fileID: 11400000, guid: 3cbdc5d6156d6164eb46894734329698, type: 2}
+  - {fileID: 11400000, guid: cff48641a5186754e848b08b10f311ec, type: 2}
+  ClassId: wildhueter
+  Mechanic: 4
+  MechanicLabel: Markieren
+  MechanicSummary: "F5 Markieren: das Ziel erh\xE4lt 5 Verwundbarkeit, der Gef\xE4hrte greift es an; dein n\xE4chster Skill 1 wird zum aufgeladenen Pr\xE4zisionsschuss (15 s)."
+  Weapon: {fileID: 11400000, guid: 33ca9b100f2f7654882b59e66a04d37d, type: 2}
+  SkillType: 14
+  TypeSkills:
+  - {fileID: 11400000, guid: af6eebdcdbaa7a14e979355fe1b2457e, type: 2}
+  - {fileID: 11400000, guid: 13b38511fd1841d428424900d6c9a6ae, type: 2}
+  - {fileID: 11400000, guid: 3d2e4d0f21654164895e6d55c69a613d, type: 2}
+  - {fileID: 11400000, guid: 9cebbacc901ff4547af7b19fabacd26d, type: 2}
+  - {fileID: 11400000, guid: e62eb0ece88b0e8408ef5d042e50f9f4, type: 2}
+  MechanicSkills:
+  - {fileID: 11400000, guid: 99786f3afa765cf479066fdebca27a76, type: 2}
+  - {fileID: 11400000, guid: 15f5cd9f64e418244b7e918b22b6ce32, type: 2}
+  Palette: 14
+  Accent: {r: 0.55, g: 0.82, b: 1, a: 1}
+  SoundMotif: Himmel
+  CastPose: Bow_Shoot
+  SignatureSkill: sturmfalke_SF_Praezision

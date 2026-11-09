@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_klingenwirbel_KW_Rueckruf
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: schattenklinge_klingenwirbel_KW_Rueckruf
+  DisplayName: "R\xFCckruf"
+  Description: "Die Axt kehrt zur\xFCck und trifft auf dem R\xFCckflug (2 Treffer, Blutung); +3 Initiative."
+  ShortLabel: "R\xFCckruf"
+  IconColor: {r: 0.5, g: 0.88, b: 0.95, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 0
+  CastTime: 0
+  Cooldown: 0
+  Delivery: 1
+  Range: 20
+  Radius: 2.5
+  TargetCount: 5
+  Coefficient: 0.9
+  Hits: 2
+  HitInterval: 0.25
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 45
+  LeapDistance: 0
+  TargetBuffs:
+  - Type: 13
+    Stacks: 2
+    Duration: 6
+  SelfBuffs: []
+  ShareWithAllies: 0
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 0
+  Field: 0
+  FieldDuration: 5
+  FieldRadius: 4
+  FieldTickCoefficient: 0
+  Finisher: 0
+  Timeline:
+    Activation: 0.25
+    Aftercast: 0.0000000017029897
+    Hits: []
+    Projectiles:
+    - 0
+    - 0.25
+    Movement: 0
+    MoveDistance: 0
+    Instant: 0
+    Channel: 1
+    Clip: Axe_Shoot
+    AnimScale: 0.35714287
+    VfxCharge: 
+    VfxRelease: Release/Stahl/M
+    VfxProjectile: Projectile/Stahl/M
+    VfxImpact: Impact/Stahl/M
+    VfxAfter: 
+    SfxCharge: 
+    SfxRelease: Stahl/Release
+    SfxImpact: Stahl/Impact
+  Chain: []
+  Palette: 22
+  PaletteExplicit: 1
+  WeaponStyleOverride: Axe
+  ClassId: schattenklinge
+  InitiativeCost: 0
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

@@ -12,34 +12,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd942f5b622e6814eb6bd51730ade8bd, type: 3}
   m_Name: Elite_wegelagerer
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EliteSpecDefinition
-  Id: 
-  DisplayName: 
-  Description: 
-  Color: {r: 1, g: 1, b: 1, a: 1}
+  Id: wegelagerer
+  DisplayName: Wegelagerer
+  Description: "Pulverrauch und Laserlinie \u2013 Gewehr, Bosheit, Kantrips."
+  Color: {r: 0.85, g: 0.15, b: 0.15, a: 1}
   Minors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 3fc8bff36b7d02b428202b8484fb6018, type: 2}
+  - {fileID: 11400000, guid: 5269c84319616a2488b7fa1a03e54e69, type: 2}
+  - {fileID: 11400000, guid: 9120eae9ab69f264e999f768c0015ff1, type: 2}
   Majors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  ClassId: 
-  Mechanic: 0
-  MechanicLabel: 
-  MechanicSummary: 
-  Weapon: {fileID: 0}
-  SkillType: 0
-  TypeSkills: []
-  MechanicSkills: []
-  Palette: 0
-  Accent: {r: 1, g: 1, b: 1, a: 1}
-  SoundMotif: 
-  CastPose: Cast2H
-  SignatureSkill: 
+  - {fileID: 11400000, guid: ba1e420ae63ec11478642a6aad3915b9, type: 2}
+  - {fileID: 11400000, guid: 61c2c16dc9fa2cc40ae3bddc6bd47df5, type: 2}
+  - {fileID: 11400000, guid: 63814fe7f4558064e8f12ad887b9e53b, type: 2}
+  - {fileID: 11400000, guid: fc8bf00a7deca1448b05f83c64061b6b, type: 2}
+  - {fileID: 11400000, guid: d4bab6ada852c574386b806723611248, type: 2}
+  - {fileID: 11400000, guid: dbc81da5c9b66c74ba52becbd38f8423, type: 2}
+  - {fileID: 11400000, guid: e3f75b36c07cc3347b14bed639dd981f, type: 2}
+  - {fileID: 11400000, guid: 5b8b2ea7b9a80f9449b67e6368a3f6b4, type: 2}
+  - {fileID: 11400000, guid: 7eb8f6c24898d294ab955edfa612c245, type: 2}
+  ClassId: schattenklinge
+  Mechanic: 9
+  MechanicLabel: Knien
+  MechanicSummary: "F1 Stehlen markiert das Ziel; Treffer darauf bauen Bosheit auf (max. 5). Bei voller Bosheit wird Skill 5 zum Todesschuss (+15 % Schaden je Bosheit). F5 Knien: unbeweglich, +10 % Schaden, +150 Pr\xE4zision."
+  Weapon: {fileID: 11400000, guid: d22dd30a356ecd94b9037e59357bd9ef, type: 2}
+  SkillType: 16
+  TypeSkills:
+  - {fileID: 11400000, guid: b03f6948001db674784b92cf5af6efa0, type: 2}
+  - {fileID: 11400000, guid: 155f6a6cbd0fd2048a1f4e218efe051d, type: 2}
+  - {fileID: 11400000, guid: 5f45b16c4c7d64342a8ba4cf3926bb4e, type: 2}
+  - {fileID: 11400000, guid: fd6ee351917b1264caa76c0922bc9ce6, type: 2}
+  - {fileID: 11400000, guid: ab878188bcd058f4796f8b4ec230c424, type: 2}
+  MechanicSkills:
+  - {fileID: 11400000, guid: 2a548720ad1be2943bee56c58b6eb759, type: 2}
+  Palette: 19
+  Accent: {r: 0.85, g: 0.15, b: 0.15, a: 1}
+  SoundMotif: Pulver
+  CastPose: Bow_Shoot
+  SignatureSkill: wegelagerer_WL_Todesschuss

@@ -12,32 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
   m_Name: Skill_sturmfalke_W2
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
-  Id: 
-  DisplayName: Skill
-  Description: 
-  ShortLabel: SK
-  IconColor: {r: 1, g: 1, b: 1, a: 1}
+  Id: wildhueter_sturmfalke_W2
+  DisplayName: Salve
+  Description: Drei schnelle Geschosse; je Treffer Verwundbarkeit.
+  ShortLabel: Salve
+  IconColor: {r: 0.55, g: 0.82, b: 1, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
   Category: 0
   Tier: 1
   UnlockCost: 0
-  StartsUnlocked: 0
-  Weapon: 0
+  StartsUnlocked: 1
+  Weapon: 11
   CastTime: 0.5
-  Cooldown: 0
-  Delivery: 0
-  Range: 3
+  Cooldown: 8
+  Delivery: 1
+  Range: 30
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 1
-  Hits: 1
-  HitInterval: 0.25
+  Coefficient: 0.42
+  Hits: 3
+  HitInterval: 0.2
   HealBase: 0
   HealCoefficient: 0
-  ProjectileSpeed: 30
+  ProjectileSpeed: 34
   LeapDistance: 0
-  TargetBuffs: []
+  TargetBuffs:
+  - Type: 24
+    Stacks: 1
+    Duration: 5
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
@@ -49,29 +52,32 @@ MonoBehaviour:
   FieldTickCoefficient: 0
   Finisher: 0
   Timeline:
-    Activation: 0
-    Aftercast: 0
+    Activation: 0.9
+    Aftercast: 0.3857143
     Hits: []
-    Projectiles: []
+    Projectiles:
+    - 0.5
+    - 0.7
+    - 0.9
     Movement: 0
     MoveDistance: 0
     Instant: 0
-    Channel: 0
-    Clip: 
-    AnimScale: 1
-    VfxCharge: 
-    VfxRelease: 
-    VfxProjectile: 
-    VfxImpact: 
+    Channel: 1
+    Clip: Bow_Shoot
+    AnimScale: 1.6071428
+    VfxCharge: Charge/Himmel/M
+    VfxRelease: Release/Himmel/M
+    VfxProjectile: Projectile/Himmel/M
+    VfxImpact: Impact/Himmel/M
     VfxAfter: 
-    SfxCharge: 
-    SfxRelease: 
-    SfxImpact: 
+    SfxCharge: Himmel/Charge
+    SfxRelease: Himmel/Release
+    SfxImpact: Himmel/Impact
   Chain: []
-  Palette: 6
-  PaletteExplicit: 0
-  WeaponStyleOverride: 
-  ClassId: 
+  Palette: 14
+  PaletteExplicit: 1
+  WeaponStyleOverride: Bow
+  ClassId: wildhueter
   InitiativeCost: 0
   Element: -1
   StealthSeconds: 0

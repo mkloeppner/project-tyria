@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_phantomtaenzer_PT_1
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: schattenklinge_phantomtaenzer_PT_1
+  DisplayName: "Phantomsto\xDF"
+  Description: "Ausweich-Fertigkeit: Sto\xDF aufs Ziel, bet\xE4ubt (0,5 s)."
+  ShortLabel: Phanto.
+  IconColor: {r: 0.92, g: 0.75, b: 0.4, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 0
+  CastTime: 0
+  Cooldown: 0
+  Delivery: 0
+  Range: 4
+  Radius: 2.5
+  TargetCount: 5
+  Coefficient: 1.2
+  Hits: 1
+  HitInterval: 0.25
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 34
+  LeapDistance: 0
+  TargetBuffs:
+  - Type: 27
+    Stacks: 1
+    Duration: 0.5
+  SelfBuffs: []
+  ShareWithAllies: 0
+  CleanseCount: 0
+  Special: 1
+  EvadesDuringCast: 0
+  Field: 0
+  FieldDuration: 5
+  FieldRadius: 4
+  FieldTickCoefficient: 0
+  Finisher: 0
+  Timeline:
+    Activation: 0
+    Aftercast: 0.25
+    Hits:
+    - 0
+    Projectiles: []
+    Movement: 3
+    MoveDistance: 0
+    Instant: 1
+    Channel: 0
+    Clip: Staff_Thrust
+    AnimScale: 0.41666666
+    VfxCharge: 
+    VfxRelease: Release/Staubgold/M
+    VfxProjectile: Trail/Staubgold/M
+    VfxImpact: Impact/Staubgold/M
+    VfxAfter: 
+    SfxCharge: 
+    SfxRelease: Staubgold/Release
+    SfxImpact: Staubgold/Impact
+  Chain: []
+  Palette: 20
+  PaletteExplicit: 1
+  WeaponStyleOverride: Staff
+  ClassId: schattenklinge
+  InitiativeCost: 0
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

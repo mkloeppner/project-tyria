@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd942f5b622e6814eb6bd51730ade8bd, type: 3}
+  m_Name: Elite_sturmherold
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EliteSpecDefinition
+  Id: sturmherold
+  DisplayName: Sturmherold
+  Description: "Elektroblaue Blitzs\xE4ulen \u2013 Hammer, Sturmzorn, Symbole."
+  Color: {r: 0.3, g: 0.62, b: 1, a: 1}
+  Minors:
+  - {fileID: 11400000, guid: 512ed8101dadce34882a881663e98dc8, type: 2}
+  - {fileID: 11400000, guid: 353daef06b5f07e4bbe8d73269c4353a, type: 2}
+  - {fileID: 11400000, guid: 9689468a9886f264caf2e11979e28cbc, type: 2}
+  Majors:
+  - {fileID: 11400000, guid: 32f7710ea3e1d554db89389212c161a3, type: 2}
+  - {fileID: 11400000, guid: 268dd257dd573be4995f26bc00f23906, type: 2}
+  - {fileID: 11400000, guid: e051e697a0a5fcf43a3463075b078bc8, type: 2}
+  - {fileID: 11400000, guid: 135e67bee6a314746b5e8fd24961f6a6, type: 2}
+  - {fileID: 11400000, guid: 4d8ff87758654ff4fb37b70b67cf30ab, type: 2}
+  - {fileID: 11400000, guid: a4f7ddea40bccbe439c82eaf0eef3d35, type: 2}
+  - {fileID: 11400000, guid: 938bec4ebde4ccc46aafa6a67e5d9735, type: 2}
+  - {fileID: 11400000, guid: eb4904f5558f85c42850433aea05c880, type: 2}
+  - {fileID: 11400000, guid: 87cede50aa2cd8845ac7d35c2312ca1c, type: 2}
+  ClassId: waechter
+  Mechanic: 15
+  MechanicLabel: Sturmzorn
+  MechanicSummary: "F5 Sturmzorn: 10 s lang schl\xE4gt bei jedem gewirkten Skill ein Blitz am Ziel ein (max. 1/s); Schnelligkeit f\xFCr dich und Verb\xFCndete (10 m), 25 s Abklingzeit."
+  Weapon: {fileID: 11400000, guid: 1b550a8ca15a9b9449a4b5af91b477d8, type: 2}
+  SkillType: 21
+  TypeSkills:
+  - {fileID: 11400000, guid: 8bac6c25e338561428f46d822d42b824, type: 2}
+  - {fileID: 11400000, guid: c2393fe50e176b64f9fea46a23d3c8e5, type: 2}
+  - {fileID: 11400000, guid: 069b9c64299cf864894b56c08f8e2b4d, type: 2}
+  - {fileID: 11400000, guid: 89dda00ff9ee1384f918850c91ece126, type: 2}
+  - {fileID: 11400000, guid: a3ad4447b7f1de8488be1552260de54e, type: 2}
+  MechanicSkills:
+  - {fileID: 11400000, guid: 6f00c4b5037d3ab4bab4f8edce824e39, type: 2}
+  Palette: 25
+  Accent: {r: 0.3, g: 0.62, b: 1, a: 1}
+  SoundMotif: Sturmblau
+  CastPose: Cast2H
+  SignatureSkill: sturmherold_SH_Blitz

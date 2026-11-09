@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd942f5b622e6814eb6bd51730ade8bd, type: 3}
+  m_Name: Elite_schattenhueter
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EliteSpecDefinition
+  Id: schattenhueter
+  DisplayName: "Schattenh\xFCter"
+  Description: "Tentakel-Schatten und Risse \u2013 Zepter & Pistole, Schattenschleier, Brunnen."
+  Color: {r: 0.5, g: 0.2, b: 0.8, a: 1}
+  Minors:
+  - {fileID: 11400000, guid: cf498c2f21d82654bacc3d8f51871e87, type: 2}
+  - {fileID: 11400000, guid: 6301320f1e09731469e7752aa214e04f, type: 2}
+  - {fileID: 11400000, guid: f7bfc74e2333fc24985d227432a85d7f, type: 2}
+  Majors:
+  - {fileID: 11400000, guid: 8eeaa74860095b3488950ca188703b9f, type: 2}
+  - {fileID: 11400000, guid: f89cd17585a424346bbe52cb943b6e6d, type: 2}
+  - {fileID: 11400000, guid: e89fd4b77d5dacc4799dba16f29dbcb0, type: 2}
+  - {fileID: 11400000, guid: 8812e1eee737b3e4f8daa7de64a6ac22, type: 2}
+  - {fileID: 11400000, guid: 937193574ec6c1d4d9a89206f26a3482, type: 2}
+  - {fileID: 11400000, guid: e606a9a0286052f4e875309b91d2caab, type: 2}
+  - {fileID: 11400000, guid: 75c3e8c5e9af4f54c80641ad96082ced, type: 2}
+  - {fileID: 11400000, guid: b323d7d5e6ce32d4f84894a330a0dd66, type: 2}
+  - {fileID: 11400000, guid: bed8e1fa1c3d74c45aa4770295eda057, type: 2}
+  ClassId: schattenklinge
+  Mechanic: 11
+  MechanicLabel: Schattenschleier
+  MechanicSummary: "F2 oder F5 Schattenschleier: zweite Lebensleiste aus Schattenkraft (ab 50 %), Schaden trifft zuerst den Schleier, die Kraft sinkt mit der Zeit; Skills 1\u20135 werden zu Schleier-Skills mit Unterst\xFCtzung f\xFCr Verb\xFCndete. Treffer und Initiative laden Schattenkraft."
+  Weapon: {fileID: 11400000, guid: a2453c3c2246fbf4fa069fec93fae7d9, type: 2}
+  SkillType: 18
+  TypeSkills:
+  - {fileID: 11400000, guid: 566849f4fd90bca46b80d437123146c2, type: 2}
+  - {fileID: 11400000, guid: c49f5cf1d314ca34688298956dea58f6, type: 2}
+  - {fileID: 11400000, guid: 102ce6aa840749d4e8f6269f544f7740, type: 2}
+  - {fileID: 11400000, guid: 3486c038342563b4ba0419a90bd2e4e0, type: 2}
+  - {fileID: 11400000, guid: 85228cb6eecc10043a0725c159255227, type: 2}
+  MechanicSkills:
+  - {fileID: 11400000, guid: 997ec816984a9fd41a3f89362c012bf3, type: 2}
+  - {fileID: 11400000, guid: 4e4a394ab8517a244a28094c4df5a8de, type: 2}
+  - {fileID: 11400000, guid: 843a287f74ca7f641b3e4ceb1302495c, type: 2}
+  - {fileID: 11400000, guid: 28950b25d69599f429c4ca956e41535e, type: 2}
+  - {fileID: 11400000, guid: c0fe4c485c387214b8412958267c710e, type: 2}
+  Palette: 21
+  Accent: {r: 0.5, g: 0.2, b: 0.8, a: 1}
+  SoundMotif: Tiefviolett
+  CastPose: Cast1H
+  SignatureSkill: schattenhueter_SS2

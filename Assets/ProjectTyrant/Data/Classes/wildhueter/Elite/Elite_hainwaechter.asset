@@ -12,34 +12,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd942f5b622e6814eb6bd51730ade8bd, type: 3}
   m_Name: Elite_hainwaechter
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EliteSpecDefinition
-  Id: 
-  DisplayName: 
-  Description: 
-  Color: {r: 1, g: 1, b: 1, a: 1}
+  Id: hainwaechter
+  DisplayName: "Hainw\xE4chter"
+  Description: "Heilung, Mondlicht und Wurzeln \u2013 Stab, Hainform, Glyphen."
+  Color: {r: 0.78, g: 0.88, b: 1, a: 1}
   Minors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: a341d8ea08727ad47b6cf62c1b0b1e54, type: 2}
+  - {fileID: 11400000, guid: 38904ba372a40fb49bed8397c323e7b5, type: 2}
+  - {fileID: 11400000, guid: b7cb0d9a210051b4b83d7898b48417b0, type: 2}
   Majors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  ClassId: 
-  Mechanic: 0
-  MechanicLabel: 
-  MechanicSummary: 
-  Weapon: {fileID: 0}
-  SkillType: 0
-  TypeSkills: []
-  MechanicSkills: []
-  Palette: 0
-  Accent: {r: 1, g: 1, b: 1, a: 1}
-  SoundMotif: 
-  CastPose: Cast2H
-  SignatureSkill: 
+  - {fileID: 11400000, guid: 766bcdab1297a2a439c30862d4621f03, type: 2}
+  - {fileID: 11400000, guid: f9dc922a9f2cd304e83cf89e21ae27d5, type: 2}
+  - {fileID: 11400000, guid: 632aed355e208964393d9df91103cb11, type: 2}
+  - {fileID: 11400000, guid: 830a8a77dedb57144a48bcd559208d03, type: 2}
+  - {fileID: 11400000, guid: 72887b0183744f147ab8ed41ec1e8de8, type: 2}
+  - {fileID: 11400000, guid: bf8e95761d0865d448e5c45322a815ea, type: 2}
+  - {fileID: 11400000, guid: 61f6eec1b86dc0c4ab3c2b25be1c5df9, type: 2}
+  - {fileID: 11400000, guid: 47ec2ee9880405d4687aba043494e4a6, type: 2}
+  - {fileID: 11400000, guid: ccf7a802a7f53e84a856dc5b19373d97, type: 2}
+  ClassId: wildhueter
+  Mechanic: 1
+  MechanicLabel: Hainform
+  MechanicSummary: "F5 Hainform: die Leiste f\xFCllt sich durch Heilung (und langsam im Kampf); voll \u2192 15 s Avatar mit 5 Heil- und Unterst\xFCtzungs-Skills (F5 beendet fr\xFCher)."
+  Weapon: {fileID: 11400000, guid: 157e30494e1b4fc4ca7f004bd152b969, type: 2}
+  SkillType: 6
+  TypeSkills:
+  - {fileID: 11400000, guid: 1b3d20feb36c01a488a3add211f2db74, type: 2}
+  - {fileID: 11400000, guid: 7c97bff8428ea384bb38c86c4c92102a, type: 2}
+  - {fileID: 11400000, guid: 502b4d9bf54d90847af7ca21f19f7408, type: 2}
+  - {fileID: 11400000, guid: ec27bf33f6fbeb94386af8a960a75a78, type: 2}
+  - {fileID: 11400000, guid: 0615f5ad817679a4aa704abc48d7aa6a, type: 2}
+  MechanicSkills:
+  - {fileID: 11400000, guid: dfb7633abd43ae549b7f98a7e4fd4ff3, type: 2}
+  - {fileID: 11400000, guid: 86144224fa946b14fbc3f5afe4d86b5f, type: 2}
+  - {fileID: 11400000, guid: c4ba1aab163f46748bc4b9adb8a8e8be, type: 2}
+  - {fileID: 11400000, guid: f23d79404147adf4795c5d3ecd6066d8, type: 2}
+  - {fileID: 11400000, guid: 079f092af20df8d48a95d842799ab886, type: 2}
+  Palette: 11
+  Accent: {r: 0.78, g: 0.88, b: 1, a: 1}
+  SoundMotif: Mondlicht
+  CastPose: CastChannel
+  SignatureSkill: hainwaechter_HF5

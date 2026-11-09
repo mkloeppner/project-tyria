@@ -12,33 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
   m_Name: Skill_weber_T2_HaltungderWoge
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
-  Id: 
-  DisplayName: Skill
-  Description: 
-  ShortLabel: SK
-  IconColor: {r: 1, g: 1, b: 1, a: 1}
+  Id: elementarweber_weber_T2_HaltungderWoge
+  DisplayName: Haltung der Woge
+  Description: "Haltung: lange St\xE4rkung (Wut, Eile), daf\xFCr 2 Verwundbarkeit f\xFCr dich."
+  ShortLabel: Haltun.
+  IconColor: {r: 0.85, g: 0.55, b: 0.85, a: 1}
   Icon: {fileID: 0}
-  SlotType: 0
-  Category: 0
-  Tier: 1
+  SlotType: 2
+  Category: 12
+  Tier: 2
   UnlockCost: 0
-  StartsUnlocked: 0
+  StartsUnlocked: 1
   Weapon: 0
-  CastTime: 0.5
-  Cooldown: 0
-  Delivery: 0
-  Range: 3
+  CastTime: 0
+  Cooldown: 30
+  Delivery: 3
+  Range: 0
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 1
+  Coefficient: 0
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
   HealCoefficient: 0
-  ProjectileSpeed: 30
+  ProjectileSpeed: 34
   LeapDistance: 0
   TargetBuffs: []
-  SelfBuffs: []
+  SelfBuffs:
+  - Type: 11
+    Stacks: 1
+    Duration: 12
+  - Type: 2
+    Stacks: 1
+    Duration: 8
+  - Type: 24
+    Stacks: 2
+    Duration: 4
   ShareWithAllies: 0
   CleanseCount: 0
   Special: 0
@@ -50,28 +59,29 @@ MonoBehaviour:
   Finisher: 0
   Timeline:
     Activation: 0
-    Aftercast: 0
-    Hits: []
+    Aftercast: 0.25
+    Hits:
+    - 0
     Projectiles: []
     Movement: 0
     MoveDistance: 0
-    Instant: 0
+    Instant: 1
     Channel: 0
-    Clip: 
-    AnimScale: 1
+    Clip: Cast1H
+    AnimScale: 0.5208334
     VfxCharge: 
-    VfxRelease: 
+    VfxRelease: Release/Zwielicht/M
     VfxProjectile: 
-    VfxImpact: 
-    VfxAfter: 
+    VfxImpact: Aura/Zwielicht/M
+    VfxAfter: Aura/Zwielicht/S
     SfxCharge: 
-    SfxRelease: 
-    SfxImpact: 
+    SfxRelease: Zwielicht/Release
+    SfxImpact: Zwielicht/Buff
   Chain: []
-  Palette: 6
-  PaletteExplicit: 0
+  Palette: 16
+  PaletteExplicit: 1
   WeaponStyleOverride: 
-  ClassId: 
+  ClassId: elementarweber
   InitiativeCost: 0
   Element: -1
   StealthSeconds: 0

@@ -12,66 +12,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
   m_Name: Skill_glutbinder_T2_Lavageistrufen
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
-  Id: 
-  DisplayName: Skill
-  Description: 
-  ShortLabel: SK
-  IconColor: {r: 1, g: 1, b: 1, a: 1}
+  Id: elementarweber_glutbinder_T2_Lavageistrufen
+  DisplayName: Lavageist rufen
+  Description: "Beschw\xF6rung: ruft einen ortsfesten Elementar-Diener (10 s), der Gegner im Umkreis jede Sekunde trifft und brennt (Feuerfeld)."
+  ShortLabel: Lavage.
+  IconColor: {r: 1, g: 0.45, b: 0.1, a: 1}
   Icon: {fileID: 0}
-  SlotType: 0
-  Category: 0
-  Tier: 1
+  SlotType: 2
+  Category: 7
+  Tier: 2
   UnlockCost: 0
-  StartsUnlocked: 0
+  StartsUnlocked: 1
   Weapon: 0
-  CastTime: 0.5
-  Cooldown: 0
-  Delivery: 0
-  Range: 3
-  Radius: 2.5
+  CastTime: 0.25
+  Cooldown: 30
+  Delivery: 2
+  Range: 18
+  Radius: 3.5
   TargetCount: 5
-  Coefficient: 1
-  Hits: 1
-  HitInterval: 0.25
+  Coefficient: 0.25
+  Hits: 10
+  HitInterval: 1
   HealBase: 0
   HealCoefficient: 0
-  ProjectileSpeed: 30
+  ProjectileSpeed: 34
   LeapDistance: 0
-  TargetBuffs: []
+  TargetBuffs:
+  - Type: 14
+    Stacks: 1
+    Duration: 3
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
   Special: 0
   EvadesDuringCast: 0
-  Field: 0
-  FieldDuration: 5
+  Field: 1
+  FieldDuration: 8
   FieldRadius: 4
-  FieldTickCoefficient: 0
+  FieldTickCoefficient: 0.1
   Finisher: 0
   Timeline:
-    Activation: 0
-    Aftercast: 0
-    Hits: []
+    Activation: 9.25
+    Aftercast: 0.00000009842216
+    Hits:
+    - 0.25
+    - 1.25
+    - 2.25
+    - 3.25
+    - 4.25
+    - 5.25
+    - 6.25
+    - 7.25
+    - 8.25
+    - 9.25
     Projectiles: []
     Movement: 0
     MoveDistance: 0
     Instant: 0
-    Channel: 0
-    Clip: 
-    AnimScale: 1
-    VfxCharge: 
-    VfxRelease: 
+    Channel: 1
+    Clip: Cast1H
+    AnimScale: 19.270834
+    VfxCharge: Charge/Lava/M
+    VfxRelease: Sigil/Lava/M
     VfxProjectile: 
-    VfxImpact: 
-    VfxAfter: 
-    SfxCharge: 
-    SfxRelease: 
-    SfxImpact: 
+    VfxImpact: GroundCircle/Lava/M
+    VfxAfter: GroundCircle/Lava/M
+    SfxCharge: Lava/Charge
+    SfxRelease: Lava/Release
+    SfxImpact: Lava/Impact
   Chain: []
-  Palette: 6
-  PaletteExplicit: 0
+  Palette: 18
+  PaletteExplicit: 1
   WeaponStyleOverride: 
-  ClassId: 
+  ClassId: elementarweber
   InitiativeCost: 0
   Element: -1
   StealthSeconds: 0

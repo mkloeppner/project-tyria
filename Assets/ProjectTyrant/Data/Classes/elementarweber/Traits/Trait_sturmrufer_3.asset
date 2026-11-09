@@ -12,10 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51929a5d730ca74eb5dcbb829663ed2, type: 3}
   m_Name: Trait_sturmrufer_3
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.TraitDefinition
-  Id: 
-  DisplayName: 
-  Description: 
-  Glyph: '?'
+  Id: sturmrufer_t3
+  DisplayName: "Hornbl\xE4ser"
+  Description: Fertigkeiten der Elite-Waffe laden 20 % schneller auf. +5 % Schaden mit der Elite-Waffe.
+  Glyph: H
   Tier: 1
-  Major: 0
-  Modifiers: []
+  Major: 1
+  Modifiers:
+  - Kind: 7
+    Attr: 0
+    Attr2: 0
+    Value: 0.2
+    Value2: 0
+    Effect: 0
+    Stacks: 1
+    Duration: 0
+    Scope: 0
+    Trigger: 0
+    Target: 0
+    InternalCooldown: 0
+    Weapon: 13
+    Category: 0
+    SlotType: 0
+    MatchSlotType: 0
+  - Kind: 6
+    Attr: 0
+    Attr2: 0
+    Value: 0.05
+    Value2: 0
+    Effect: 0
+    Stacks: 1
+    Duration: 0
+    Scope: 0
+    Trigger: 0
+    Target: 0
+    InternalCooldown: 0
+    Weapon: 13
+    Category: 0
+    SlotType: 0
+    MatchSlotType: 0

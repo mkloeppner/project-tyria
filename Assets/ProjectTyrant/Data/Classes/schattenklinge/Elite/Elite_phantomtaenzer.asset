@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd942f5b622e6814eb6bd51730ade8bd, type: 3}
+  m_Name: Elite_phantomtaenzer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EliteSpecDefinition
+  Id: phantomtaenzer
+  DisplayName: "Phantomt\xE4nzer"
+  Description: "Staubgold und Wirbelspuren \u2013 Stab, Phantomtanz, K\xF6rperfertigkeiten."
+  Color: {r: 0.92, g: 0.75, b: 0.4, a: 1}
+  Minors:
+  - {fileID: 11400000, guid: 8a153432854957248b467cb156502f43, type: 2}
+  - {fileID: 11400000, guid: b0f664576ca1885409c45bde66003a60, type: 2}
+  - {fileID: 11400000, guid: 5dcd2119ae5c6af49b69ca4630959e93, type: 2}
+  Majors:
+  - {fileID: 11400000, guid: 966777618da241a49a77aaf4ef69e89f, type: 2}
+  - {fileID: 11400000, guid: c7d8b8f496d1dc044a01b96cfee55e81, type: 2}
+  - {fileID: 11400000, guid: e9908c96991d3b0499ec52871a33e227, type: 2}
+  - {fileID: 11400000, guid: 725fafe12382b6247ad89afe133700ad, type: 2}
+  - {fileID: 11400000, guid: 365a0fd0387381d42a13fff070031294, type: 2}
+  - {fileID: 11400000, guid: b429a56cb15ca1c4e875d1fc0b863644, type: 2}
+  - {fileID: 11400000, guid: 44591c73a60daf9478340e84f3a4d63f, type: 2}
+  - {fileID: 11400000, guid: c5e842b677cbdd649a60b4401793da93, type: 2}
+  - {fileID: 11400000, guid: 6c8898477aaa50644b0e35c28979e817, type: 2}
+  ClassId: schattenklinge
+  Mechanic: 10
+  MechanicLabel: Ausweich-Skill
+  MechanicSummary: "Drei Ausdauer-Balken (150); jedes Ausweichen wird zum Angriff. F5 w\xE4hlt die Ausweich-Fertigkeit: Staubwirbel (Fl\xE4che), Phantomsto\xDF (Einzelziel, bet\xE4ubt), Sandsprung (Sprung)."
+  Weapon: {fileID: 11400000, guid: 4c9162675b43fe34bbfc66754fdd7ec5, type: 2}
+  SkillType: 17
+  TypeSkills:
+  - {fileID: 11400000, guid: 2a58570e4ef53a64490be79698c58bd5, type: 2}
+  - {fileID: 11400000, guid: eaa87511c91c3dd4eb12e77803742eeb, type: 2}
+  - {fileID: 11400000, guid: d49d66fc8b98db94595d14b6f2b0fcdf, type: 2}
+  - {fileID: 11400000, guid: 507eb354e41b9be4e80ffb31c7b88802, type: 2}
+  - {fileID: 11400000, guid: 0b08854645719a84d89f366c9d89dd79, type: 2}
+  MechanicSkills:
+  - {fileID: 11400000, guid: efb43dcff942c9b4d9a29af404c0470c, type: 2}
+  - {fileID: 11400000, guid: 2115d165984ecfd43856ef7fe85d46d6, type: 2}
+  - {fileID: 11400000, guid: 19889bd9f60635447b400d5ac62f84ce, type: 2}
+  Palette: 20
+  Accent: {r: 0.92, g: 0.75, b: 0.4, a: 1}
+  SoundMotif: Staubgold
+  CastPose: Staff_Spin
+  SignatureSkill: phantomtaenzer_PT_0

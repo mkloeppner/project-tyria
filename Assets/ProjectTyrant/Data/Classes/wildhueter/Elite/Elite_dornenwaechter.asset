@@ -12,34 +12,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd942f5b622e6814eb6bd51730ade8bd, type: 3}
   m_Name: Elite_dornenwaechter
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EliteSpecDefinition
-  Id: 
-  DisplayName: 
-  Description: 
-  Color: {r: 1, g: 1, b: 1, a: 1}
+  Id: dornenwaechter
+  DisplayName: "Dornenw\xE4chter"
+  Description: "Gift und Ranken \u2013 Hammer, Entfesseln, Entfesselungs-Rufe."
+  Color: {r: 0.5, g: 0.9, b: 0.2, a: 1}
   Minors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 19b685814dd654946a6801fc480cdbb2, type: 2}
+  - {fileID: 11400000, guid: 04937e30735d4634eb7fc7caef0e38f6, type: 2}
+  - {fileID: 11400000, guid: b2864743f8ad16a4eac33b19a0314103, type: 2}
   Majors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  ClassId: 
-  Mechanic: 0
-  MechanicLabel: 
-  MechanicSummary: 
-  Weapon: {fileID: 0}
-  SkillType: 0
-  TypeSkills: []
-  MechanicSkills: []
-  Palette: 0
-  Accent: {r: 1, g: 1, b: 1, a: 1}
-  SoundMotif: 
+  - {fileID: 11400000, guid: b6753480c41c13449a97ac859853a99b, type: 2}
+  - {fileID: 11400000, guid: c3fda10c92337ac4aaa55783daa392a0, type: 2}
+  - {fileID: 11400000, guid: d7d28aed9e83272489b075b1bda004f3, type: 2}
+  - {fileID: 11400000, guid: 842497a07e4078b46963840992be28e7, type: 2}
+  - {fileID: 11400000, guid: 601d9ef0b8b43ca4c8c46824ea3c2f5a, type: 2}
+  - {fileID: 11400000, guid: c53f15afd30817b4d98401119c5dc8af, type: 2}
+  - {fileID: 11400000, guid: 4aa98ab1dc5332544960f8793819b6ca, type: 2}
+  - {fileID: 11400000, guid: b8941aea14f4c5d49a7f475148c759b0, type: 2}
+  - {fileID: 11400000, guid: 7314bbe4eb5d5ee48bf923e2322c4d56, type: 2}
+  ClassId: wildhueter
+  Mechanic: 3
+  MechanicLabel: Entfesseln
+  MechanicSummary: "F5 Entfesseln: die Verst\xE4rkung wechselt zwischen dir (+10 % Schaden, Skills 1\u20132 werden zu Dornenhieb und Rankensprung) und dem Gef\xE4hrten (10 Macht, Wut). Entfesselungs-Rufe lassen den Gef\xE4hrten Kontrolle einsetzen."
+  Weapon: {fileID: 11400000, guid: 9cf78fa53898e5c4ba11d08302440561, type: 2}
+  SkillType: 13
+  TypeSkills:
+  - {fileID: 11400000, guid: 49807c1dd985fed429d76bab2e4e4568, type: 2}
+  - {fileID: 11400000, guid: a9089203adf6c794590dc7dddd48c758, type: 2}
+  - {fileID: 11400000, guid: 0aaf801693fa0454e90aefa2cefe2181, type: 2}
+  - {fileID: 11400000, guid: 15adca43fe470f540b3287b9a2c58745, type: 2}
+  - {fileID: 11400000, guid: 26c55abe5274a2d48bdcff54dbf072a3, type: 2}
+  MechanicSkills:
+  - {fileID: 11400000, guid: 371f11f9a4141c8409d41215e857bb9b, type: 2}
+  - {fileID: 11400000, guid: 6d143caa79a6ab041aa31d44840236a9, type: 2}
+  Palette: 13
+  Accent: {r: 0.5, g: 0.9, b: 0.2, a: 1}
+  SoundMotif: Dorngift
   CastPose: Cast2H
-  SignatureSkill: 
+  SignatureSkill: dornenwaechter_W5

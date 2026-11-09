@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_schattenhueter_SS1
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: schattenklinge_schattenhueter_SS1
+  DisplayName: Schleierpfeil
+  Description: "Schattenschleier: Schaden und Pein am Ziel; heilt den n\xE4chsten Verb\xFCndeten."
+  ShortLabel: Schlei.
+  IconColor: {r: 0.5, g: 0.2, b: 0.8, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 0
+  CastTime: 0.4
+  Cooldown: 0
+  Delivery: 1
+  Range: 22
+  Radius: 6
+  TargetCount: 5
+  Coefficient: 0.7
+  Hits: 1
+  HitInterval: 0.25
+  HealBase: 500
+  HealCoefficient: 0.1
+  ProjectileSpeed: 34
+  LeapDistance: 0
+  TargetBuffs:
+  - Type: 18
+    Stacks: 1
+    Duration: 4
+  SelfBuffs: []
+  ShareWithAllies: 1
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 0
+  Field: 0
+  FieldDuration: 5
+  FieldRadius: 4
+  FieldTickCoefficient: 0
+  Finisher: 0
+  Timeline:
+    Activation: 0.4
+    Aftercast: 0.18181813
+    Hits: []
+    Projectiles:
+    - 0.4
+    Movement: 0
+    MoveDistance: 0
+    Instant: 0
+    Channel: 0
+    Clip: Cast1H
+    AnimScale: 1.2121211
+    VfxCharge: Charge/Tiefviolett/L
+    VfxRelease: Release/Tiefviolett/L
+    VfxProjectile: Projectile/Tiefviolett/L
+    VfxImpact: Impact/Tiefviolett/L
+    VfxAfter: 
+    SfxCharge: Tiefviolett/Charge
+    SfxRelease: Tiefviolett/Release
+    SfxImpact: Tiefviolett/Impact
+  Chain: []
+  Palette: 21
+  PaletteExplicit: 1
+  WeaponStyleOverride: Scepter
+  ClassId: schattenklinge
+  InitiativeCost: 0
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

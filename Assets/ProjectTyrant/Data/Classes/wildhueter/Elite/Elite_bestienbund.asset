@@ -12,34 +12,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd942f5b622e6814eb6bd51730ade8bd, type: 3}
   m_Name: Elite_bestienbund
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EliteSpecDefinition
-  Id: 
-  DisplayName: 
-  Description: 
-  Color: {r: 1, g: 1, b: 1, a: 1}
+  Id: bestienbund
+  DisplayName: Bestienbund
+  Description: "Wildheit und Blut \u2013 Dolch & Kriegshorn, Verschmelzen, Haltungen."
+  Color: {r: 0.78, g: 0.38, b: 0.2, a: 1}
   Minors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: bb8c6134b2b490d44bbaa8cd5aa5461c, type: 2}
+  - {fileID: 11400000, guid: 371209b2df8cf394e8c5dc807ef7cf26, type: 2}
+  - {fileID: 11400000, guid: 7a9be0490886f8b47952cb382d3c4ffb, type: 2}
   Majors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  ClassId: 
-  Mechanic: 0
-  MechanicLabel: 
-  MechanicSummary: 
-  Weapon: {fileID: 0}
-  SkillType: 0
-  TypeSkills: []
-  MechanicSkills: []
-  Palette: 0
-  Accent: {r: 1, g: 1, b: 1, a: 1}
-  SoundMotif: 
-  CastPose: Cast2H
-  SignatureSkill: 
+  - {fileID: 11400000, guid: 24bc4f02e71747e4e9d8d10ce8e091ae, type: 2}
+  - {fileID: 11400000, guid: 697fba237de6c9940bc7d13869fbe24b, type: 2}
+  - {fileID: 11400000, guid: d719716ae911e894c8cd64c35a94ffc1, type: 2}
+  - {fileID: 11400000, guid: abc5a0092eb754549aae2ea3d3c7193d, type: 2}
+  - {fileID: 11400000, guid: 0a07b0f92f9d3444d9b8f3add7bbc9ba, type: 2}
+  - {fileID: 11400000, guid: 94c3aea3ba307c84fa6181039748b4df, type: 2}
+  - {fileID: 11400000, guid: 8ab32f623f81bac47aa72ed177878cad, type: 2}
+  - {fileID: 11400000, guid: 667d70503c5d7a4429add8f327b45a11, type: 2}
+  - {fileID: 11400000, guid: b3a98c6f0b37cab4c916c0660ed3bc6b, type: 2}
+  ClassId: wildhueter
+  Mechanic: 2
+  MechanicLabel: Verschmelzen
+  MechanicSummary: "F5 Verschmelzen: der Gef\xE4hrte wird Teil von dir \u2013 kein aktiver Gef\xE4hrte, daf\xFCr +150 Kraft/Pr\xE4zision, +100 Wildheit; F1/F2 setzen die Familien-Skills beider Gef\xE4hrten ein, F3 Raserei. F5 trennt wieder."
+  Weapon: {fileID: 11400000, guid: f1ba45977b18cf049aa53d59f8414ffa, type: 2}
+  SkillType: 12
+  TypeSkills:
+  - {fileID: 11400000, guid: d9732017786f5e749a88a8258ceedee7, type: 2}
+  - {fileID: 11400000, guid: f013c1943a972ff419b1fd47035ec377, type: 2}
+  - {fileID: 11400000, guid: 03f5feb481896a24ea10d6a084a1896b, type: 2}
+  - {fileID: 11400000, guid: 68de3c0df8dbc394aacc34e7f094bfc5, type: 2}
+  - {fileID: 11400000, guid: a2a6c3e8590c2684ebc3977023b53e3a, type: 2}
+  MechanicSkills:
+  - {fileID: 11400000, guid: 32109687ae23ce540bd65c16aeb0db77, type: 2}
+  Palette: 12
+  Accent: {r: 0.78, g: 0.38, b: 0.2, a: 1}
+  SoundMotif: Wildblut
+  CastPose: Cast1H
+  SignatureSkill: bestienbund_BB_Raserei

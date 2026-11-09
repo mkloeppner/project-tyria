@@ -55,5 +55,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 27fbf9da279ea964489d1c115c600f8f, type: 2}
   - {fileID: 11400000, guid: 1dc473462a275684f9e9afee134e9fd0, type: 2}
   - {fileID: 11400000, guid: 1b2b28b8eb0a2ae4bb8d27d5a3d82eee, type: 2}
+  EliteSpecs:
+  - {fileID: 11400000, guid: e88957efef57e494a8ac05d6379ec21f, type: 2}
+  - {fileID: 11400000, guid: 5918531b8bb17934d90781440591aaab, type: 2}
+  - {fileID: 11400000, guid: feb02676460a0114896fda1022708e65, type: 2}
+  - {fileID: 11400000, guid: bff6a4224177c0143bb3ae540fbcc6ad, type: 2}
   SwapInCombat: 1
   SignatureSkill: LB5_Dornenregen

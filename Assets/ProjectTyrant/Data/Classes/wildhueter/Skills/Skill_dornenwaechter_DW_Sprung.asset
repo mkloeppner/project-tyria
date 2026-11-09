@@ -12,32 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
   m_Name: Skill_dornenwaechter_DW_Sprung
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
-  Id: 
-  DisplayName: Skill
-  Description: 
-  ShortLabel: SK
-  IconColor: {r: 1, g: 1, b: 1, a: 1}
+  Id: wildhueter_dornenwaechter_DW_Sprung
+  DisplayName: Rankensprung
+  Description: 'Entfesselt: Sprung zum Ziel, Ranken immobilisieren (1,5 s).'
+  ShortLabel: Ranken.
+  IconColor: {r: 0.5, g: 0.9, b: 0.2, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
   Category: 0
   Tier: 1
   UnlockCost: 0
-  StartsUnlocked: 0
+  StartsUnlocked: 1
   Weapon: 0
-  CastTime: 0.5
-  Cooldown: 0
-  Delivery: 0
-  Range: 3
+  CastTime: 0.3
+  Cooldown: 6
+  Delivery: 4
+  Range: 10
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 1
+  Coefficient: 1.2
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
   HealCoefficient: 0
-  ProjectileSpeed: 30
-  LeapDistance: 0
-  TargetBuffs: []
+  ProjectileSpeed: 34
+  LeapDistance: 10
+  TargetBuffs:
+  - Type: 25
+    Stacks: 1
+    Duration: 1.5
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
@@ -47,31 +50,32 @@ MonoBehaviour:
   FieldDuration: 5
   FieldRadius: 4
   FieldTickCoefficient: 0
-  Finisher: 0
+  Finisher: 2
   Timeline:
-    Activation: 0
-    Aftercast: 0
-    Hits: []
+    Activation: 0.3
+    Aftercast: 0.3
+    Hits:
+    - 0.3
     Projectiles: []
-    Movement: 0
-    MoveDistance: 0
+    Movement: 2
+    MoveDistance: 10
     Instant: 0
     Channel: 0
-    Clip: 
-    AnimScale: 1
-    VfxCharge: 
-    VfxRelease: 
+    Clip: Hammer_Thrust
+    AnimScale: 0.7692308
+    VfxCharge: Charge/Dorngift/M
+    VfxRelease: Release/Dorngift/M
     VfxProjectile: 
-    VfxImpact: 
+    VfxImpact: Impact/Dorngift/M
     VfxAfter: 
-    SfxCharge: 
-    SfxRelease: 
-    SfxImpact: 
+    SfxCharge: Dorngift/Charge
+    SfxRelease: Dorngift/Release
+    SfxImpact: Dorngift/Impact
   Chain: []
-  Palette: 6
-  PaletteExplicit: 0
-  WeaponStyleOverride: 
-  ClassId: 
+  Palette: 13
+  PaletteExplicit: 1
+  WeaponStyleOverride: Hammer
+  ClassId: wildhueter
   InitiativeCost: 0
   Element: -1
   StealthSeconds: 0

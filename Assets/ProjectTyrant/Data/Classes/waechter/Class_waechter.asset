@@ -51,5 +51,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bafb395e14a3dbb408709ff0349c01c2, type: 2}
   - {fileID: 11400000, guid: 551005876262e0f468ba00a4778e61c1, type: 2}
   - {fileID: 11400000, guid: 599e986db25769844918b1db2c601a73, type: 2}
+  EliteSpecs:
+  - {fileID: 11400000, guid: 39810ef36405fd944bd09fa4c1ce5754, type: 2}
+  - {fileID: 11400000, guid: 4ebb349adaf395a45abfaf4a4a15c76a, type: 2}
+  - {fileID: 11400000, guid: 476834e651237bd468092998a18b1de3, type: 2}
+  - {fileID: 11400000, guid: db94727f2612b1845b24e3a44d69ee18, type: 2}
   SwapInCombat: 1
   SignatureSkill: GS5_Bergbrecher

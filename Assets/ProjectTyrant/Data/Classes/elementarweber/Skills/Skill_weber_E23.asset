@@ -12,32 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
   m_Name: Skill_weber_E23
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
-  Id: 
-  DisplayName: Skill
-  Description: 
-  ShortLabel: SK
-  IconColor: {r: 1, g: 1, b: 1, a: 1}
+  Id: elementarweber_weber_E23
+  DisplayName: Donnertanz
+  Description: Sprung zum Ziel. Sprung-Finisher.
+  ShortLabel: 3
+  IconColor: {r: 0.85, g: 0.55, b: 0.85, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
   Category: 0
   Tier: 1
   UnlockCost: 0
-  StartsUnlocked: 0
-  Weapon: 0
-  CastTime: 0.5
-  Cooldown: 0
-  Delivery: 0
-  Range: 3
+  StartsUnlocked: 1
+  Weapon: 14
+  CastTime: 0.3
+  Cooldown: 14
+  Delivery: 4
+  Range: 9
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 1
+  Coefficient: 0.99
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
   HealCoefficient: 0
-  ProjectileSpeed: 30
-  LeapDistance: 0
-  TargetBuffs: []
+  ProjectileSpeed: 34
+  LeapDistance: 9
+  TargetBuffs:
+  - Type: 24
+    Stacks: 2
+    Duration: 6
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
@@ -47,33 +50,34 @@ MonoBehaviour:
   FieldDuration: 5
   FieldRadius: 4
   FieldTickCoefficient: 0
-  Finisher: 0
+  Finisher: 2
   Timeline:
-    Activation: 0
-    Aftercast: 0
-    Hits: []
+    Activation: 0.3
+    Aftercast: 0.3
+    Hits:
+    - 0.3
     Projectiles: []
-    Movement: 0
-    MoveDistance: 0
+    Movement: 2
+    MoveDistance: 9
     Instant: 0
     Channel: 0
-    Clip: 
-    AnimScale: 1
-    VfxCharge: 
-    VfxRelease: 
+    Clip: Sword_Thrust
+    AnimScale: 1.1764705
+    VfxCharge: Charge/Luft/M
+    VfxRelease: Release/Luft/M
     VfxProjectile: 
-    VfxImpact: 
+    VfxImpact: Impact/Luft/M
     VfxAfter: 
-    SfxCharge: 
-    SfxRelease: 
-    SfxImpact: 
+    SfxCharge: Luft/Charge
+    SfxRelease: Luft/Release
+    SfxImpact: Luft/Impact
   Chain: []
-  Palette: 6
-  PaletteExplicit: 0
-  WeaponStyleOverride: 
-  ClassId: 
+  Palette: 2
+  PaletteExplicit: 1
+  WeaponStyleOverride: Sword
+  ClassId: elementarweber
   InitiativeCost: 0
-  Element: -1
+  Element: 2
   StealthSeconds: 0
   StealthAttack: 0
   ConjureSet: {fileID: 0}

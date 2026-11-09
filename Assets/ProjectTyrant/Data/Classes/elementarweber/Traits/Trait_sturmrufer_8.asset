@@ -12,10 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51929a5d730ca74eb5dcbb829663ed2, type: 3}
   m_Name: Trait_sturmrufer_8
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.TraitDefinition
-  Id: 
-  DisplayName: 
-  Description: 
-  Glyph: '?'
-  Tier: 1
-  Major: 0
-  Modifiers: []
+  Id: sturmrufer_t8
+  DisplayName: "R\xFCckenwind"
+  Description: "+7 % Schaden, solange du Eile hast. Eile halten 15 % l\xE4nger."
+  Glyph: R
+  Tier: 2
+  Major: 1
+  Modifiers:
+  - Kind: 5
+    Attr: 0
+    Attr2: 0
+    Value: 0.07
+    Value2: 0
+    Effect: 2
+    Stacks: 1
+    Duration: 0
+    Scope: 0
+    Trigger: 0
+    Target: 0
+    InternalCooldown: 0
+    Weapon: 0
+    Category: 0
+    SlotType: 0
+    MatchSlotType: 0
+  - Kind: 8
+    Attr: 0
+    Attr2: 0
+    Value: 0.15
+    Value2: 0
+    Effect: 2
+    Stacks: 1
+    Duration: 0
+    Scope: 0
+    Trigger: 0
+    Target: 0
+    InternalCooldown: 0
+    Weapon: 0
+    Category: 0
+    SlotType: 0
+    MatchSlotType: 0

@@ -12,16 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
   m_Name: Weapon_weber_Waffe
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
-  DisplayName: Waffe
-  Visual: 0
-  WeaponColor: {r: 1, g: 1, b: 1, a: 1}
+  DisplayName: Degen & Fokus
+  Visual: 14
+  WeaponColor: {r: 0.85, g: 0.55, b: 0.85, a: 1}
   Skills:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Kind: 0
-  ClassId: 
-  Attunement: []
+  - {fileID: 11400000, guid: 4262176c9bb4adf4dbfd224cda67423b, type: 2}
+  - {fileID: 11400000, guid: 730b5e2720c72bb408ae94d133b39998, type: 2}
+  - {fileID: 11400000, guid: 43f62e3aec3a58a43b6efed5c0363638, type: 2}
+  - {fileID: 11400000, guid: 5acfa7dc02b3836469cfb5e6ab0eae9a, type: 2}
+  - {fileID: 11400000, guid: 1c900ff25eccd5b44bdb5acb8320da3b, type: 2}
+  Kind: 14
+  ClassId: elementarweber
+  Attunement:
+  - {fileID: 11400000, guid: 4262176c9bb4adf4dbfd224cda67423b, type: 2}
+  - {fileID: 11400000, guid: 730b5e2720c72bb408ae94d133b39998, type: 2}
+  - {fileID: 11400000, guid: 43f62e3aec3a58a43b6efed5c0363638, type: 2}
+  - {fileID: 11400000, guid: 5acfa7dc02b3836469cfb5e6ab0eae9a, type: 2}
+  - {fileID: 11400000, guid: 1c900ff25eccd5b44bdb5acb8320da3b, type: 2}
+  - {fileID: 11400000, guid: 9afec67301c1bb246a10ff9ee0671d31, type: 2}
+  - {fileID: 11400000, guid: 19f12eb558e03a84da7ce4509c5cae2d, type: 2}
+  - {fileID: 11400000, guid: 4055a9db17aad8e4390530ab9d89284c, type: 2}
+  - {fileID: 11400000, guid: c8cd8b2c38cd46e4a932f1fe27c5094f, type: 2}
+  - {fileID: 11400000, guid: 8babaca275d3739468e21ec146cc1f9a, type: 2}
+  - {fileID: 11400000, guid: f02fd9ee4ee1f984d983e158f49a83a6, type: 2}
+  - {fileID: 11400000, guid: c9085c5fa673ba8408fa383a9ea4fae0, type: 2}
+  - {fileID: 11400000, guid: 73581b3b6f821ef4c94cd1f1d931e1d9, type: 2}
+  - {fileID: 11400000, guid: 0c2aa7535f1e47446a8d5c98f9fb7874, type: 2}
+  - {fileID: 11400000, guid: 563c22dacd2605b45976514cd873fc80, type: 2}
+  - {fileID: 11400000, guid: 60bfa898ae4eec74f8304b9060a9e7d7, type: 2}
+  - {fileID: 11400000, guid: 6663d9a83f5e29a449da48d310713afe, type: 2}
+  - {fileID: 11400000, guid: 6052fde140781394ea9d4b9596e2cf32, type: 2}
+  - {fileID: 11400000, guid: 30ed793aa547a804f8918848fc1cde4a, type: 2}
+  - {fileID: 11400000, guid: 170c45ff20934f548a3e1f31c4fb7276, type: 2}
   StealthSkill: {fileID: 0}

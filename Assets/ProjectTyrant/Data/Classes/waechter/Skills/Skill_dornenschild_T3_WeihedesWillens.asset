@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_dornenschild_T3_WeihedesWillens
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: waechter_dornenschild_T3_WeihedesWillens
+  DisplayName: Weihe des Willens
+  Description: "Weihe: Weihekreis am Zielort \u2013 Entschlossenheit f\xFCr Verb\xFCndete, Blutung f\xFCr Gegner."
+  ShortLabel: Weihe .
+  IconColor: {r: 0.3, g: 0.85, b: 0.45, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 2
+  Category: 22
+  Tier: 3
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 0
+  CastTime: 0.25
+  Cooldown: 35
+  Delivery: 2
+  Range: 15
+  Radius: 5
+  TargetCount: 5
+  Coefficient: 0.2
+  Hits: 3
+  HitInterval: 1.5
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 34
+  LeapDistance: 0
+  TargetBuffs:
+  - Type: 13
+    Stacks: 1
+    Duration: 4
+  SelfBuffs:
+  - Type: 3
+    Stacks: 1
+    Duration: 6
+  ShareWithAllies: 1
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 0
+  Field: 0
+  FieldDuration: 5
+  FieldRadius: 4
+  FieldTickCoefficient: 0
+  Finisher: 0
+  Timeline:
+    Activation: 3.25
+    Aftercast: 0.0000000036507828
+    Hits:
+    - 0.25
+    - 1.75
+    - 3.25
+    Projectiles: []
+    Movement: 0
+    MoveDistance: 0
+    Instant: 0
+    Channel: 1
+    Clip: Cast1H
+    AnimScale: 6.7708335
+    VfxCharge: Charge/Smaragd/L
+    VfxRelease: Sigil/Smaragd/L
+    VfxProjectile: 
+    VfxImpact: Pillar/Smaragd/L
+    VfxAfter: Aura/Smaragd/S
+    SfxCharge: Smaragd/Charge
+    SfxRelease: Smaragd/Release
+    SfxImpact: Smaragd/Impact
+  Chain: []
+  Palette: 26
+  PaletteExplicit: 1
+  WeaponStyleOverride: 
+  ClassId: waechter
+  InitiativeCost: 0
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

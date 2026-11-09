@@ -57,5 +57,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b3a663d38ce93454dad25c92076ed3b7, type: 2}
   - {fileID: 11400000, guid: 3cca30057d828eb42b92eb27507b036e, type: 2}
   - {fileID: 11400000, guid: 9eab728a5a405d14f8ccf0aea16a16c1, type: 2}
+  EliteSpecs:
+  - {fileID: 11400000, guid: 3b695f341c15afc408ee8069210adda2, type: 2}
+  - {fileID: 11400000, guid: 2ea540241a1239c4a9ad151a9178311e, type: 2}
+  - {fileID: 11400000, guid: cff5a616a57588945abe8ebf776db110, type: 2}
+  - {fileID: 11400000, guid: c4cf60f41cac9ca46adcb8c3d55d5029, type: 2}
   SwapInCombat: 1
   SignatureSkill: DD3_Todeswirbel

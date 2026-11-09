@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
   m_Name: Weapon_sturmfalke_Waffe
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
-  DisplayName: Waffe
-  Visual: 0
-  WeaponColor: {r: 1, g: 1, b: 1, a: 1}
+  DisplayName: Falkengewehr
+  Visual: 11
+  WeaponColor: {r: 0.55, g: 0.82, b: 1, a: 1}
   Skills:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Kind: 0
-  ClassId: 
+  - {fileID: 11400000, guid: 2d03fe141a2833b41ba6abcbce6d3809, type: 2}
+  - {fileID: 11400000, guid: 220bb2ea29afd0a4596549dbd6e1d26e, type: 2}
+  - {fileID: 11400000, guid: e252c35ca89b76c498cf73e95ea94842, type: 2}
+  - {fileID: 11400000, guid: 52e8ff7e17c1d204580281d513b92868, type: 2}
+  - {fileID: 11400000, guid: 7e69dd47aa9867c4cae73b637b6d3bf8, type: 2}
+  Kind: 11
+  ClassId: wildhueter
   Attunement: []
   StealthSkill: {fileID: 0}

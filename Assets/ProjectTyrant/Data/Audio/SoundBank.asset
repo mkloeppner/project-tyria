@@ -2323,6 +2323,3366 @@ MonoBehaviour:
       LoopSeam: 0.000013733865
       CentroidHz: 797.07227
       Seconds: 0.6628798
+  - Id: Mondlicht/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 50be209e433798f45859f253c924c2a3, type: 3}
+    - {fileID: 8300000, guid: e9219a87045c58641b5e509f5709e39b, type: 3}
+    - {fileID: 8300000, guid: 12ccc1dfb14022245a6b14a0205ae565, type: 3}
+    Stats:
+    - PeakDb: -1.0486114
+      RmsDb: -10.069337
+      Dc: 0.0000000013822502
+      LoopSeam: 0.000023197106
+      CentroidHz: 2459.2275
+      Seconds: 0.7
+    - PeakDb: -1.017983
+      RmsDb: -10.066198
+      Dc: 0.0000000013624123
+      LoopSeam: 0.000023142473
+      CentroidHz: 2586.1638
+      Seconds: 0.7699546
+    - PeakDb: -1.0336332
+      RmsDb: -10.069193
+      Dc: -3.799789e-10
+      LoopSeam: 0.000023005708
+      CentroidHz: 2435.3132
+      Seconds: 0.7255329
+  - Id: Mondlicht/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: e7ef7923743ed194abef3e93cfc33b25, type: 3}
+    - {fileID: 8300000, guid: 75a6e397cd4b5574fb138758b95cf6a5, type: 3}
+    - {fileID: 8300000, guid: f9f2e7d7e6b41db43b24f0dffaaa2f3a, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -11.670891
+      Dc: 0.0000000010833907
+      LoopSeam: 0.00007156684
+      CentroidHz: 4264.1523
+      Seconds: 0.45
+    - PeakDb: -1.0086907
+      RmsDb: -11.672813
+      Dc: -4.5453716e-10
+      LoopSeam: 0.00007203879
+      CentroidHz: 4420.3936
+      Seconds: 0.41126984
+    - PeakDb: -1.0086901
+      RmsDb: -11.71142
+      Dc: -0.0000000015063633
+      LoopSeam: 0.00007150904
+      CentroidHz: 4475.932
+      Seconds: 0.4703855
+  - Id: Mondlicht/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 3084c94703092b04e8ca54a0acfea547, type: 3}
+    - {fileID: 8300000, guid: 1485eb88d65f93d499f99c7c505673d7, type: 3}
+    - {fileID: 8300000, guid: 3b816113c73498f4083ca7870be37039, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.608741
+      Dc: 0.000000001538218
+      LoopSeam: 0.00000009434734
+      CentroidHz: 3185.073
+      Seconds: 0.22
+    - PeakDb: -1.0086907
+      RmsDb: -10.601589
+      Dc: -0.0000000012485007
+      LoopSeam: 0.00000005646143
+      CentroidHz: 3130.7983
+      Seconds: 0.2139229
+    - PeakDb: -1.0086901
+      RmsDb: -10.742384
+      Dc: -2.619159e-10
+      LoopSeam: 0.00000004575122
+      CentroidHz: 3312.5269
+      Seconds: 0.22217686
+  - Id: Mondlicht/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 3a8e0f755bf38b747b73cebef9306b19, type: 3}
+    - {fileID: 8300000, guid: 95217e4a26a1a6842be1dee85844ba84, type: 3}
+    - {fileID: 8300000, guid: 045da2bf3c5531e43af1c5cded9ce2ac, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.596939
+      Dc: 0.0000000017018121
+      LoopSeam: 0.000000046640707
+      CentroidHz: 3273.8022
+      Seconds: 0.28
+    - PeakDb: -1.0086901
+      RmsDb: -10.749641
+      Dc: 0.0000000022316613
+      LoopSeam: 0.00000018745777
+      CentroidHz: 3412.7268
+      Seconds: 0.25528345
+    - PeakDb: -1.0086907
+      RmsDb: -10.62133
+      Dc: -0.0000000015042887
+      LoopSeam: 0.00000015104888
+      CentroidHz: 3596.6304
+      Seconds: 0.30362812
+  - Id: Mondlicht/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 25f5b2bd46746e54a8e87a1ec2916c25, type: 3}
+    - {fileID: 8300000, guid: 9e87fe8fab33bca45b283a0a68530f99, type: 3}
+    - {fileID: 8300000, guid: 9eef42c9c5e80ab4bb113afcea89d3b8, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.628085
+      Dc: 9.471248e-10
+      LoopSeam: 0.000000016523842
+      CentroidHz: 3474.7039
+      Seconds: 0.34
+    - PeakDb: -1.0086901
+      RmsDb: -10.632454
+      Dc: -6.919995e-10
+      LoopSeam: 0.0000001877197
+      CentroidHz: 3552.5642
+      Seconds: 0.35961452
+    - PeakDb: -1.0086907
+      RmsDb: -10.59146
+      Dc: 8.731189e-10
+      LoopSeam: 0.00000013114186
+      CentroidHz: 3610.573
+      Seconds: 0.315034
+  - Id: Mondlicht/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: b9c94a56361990843bd9a042ccf35399, type: 3}
+    - {fileID: 8300000, guid: 70d76403c005a0849bee10893ce70890, type: 3}
+    - {fileID: 8300000, guid: 6749b5ec1bc78a042afd28ac8af74b44, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -11.500188
+      Dc: 0.0000000021532462
+      LoopSeam: 0.00011388183
+      CentroidHz: 5183.703
+      Seconds: 0.42
+    - PeakDb: -1.0086907
+      RmsDb: -11.562215
+      Dc: -0.0000000013214012
+      LoopSeam: 0.00010090797
+      CentroidHz: 4773.691
+      Seconds: 0.44020408
+    - PeakDb: -1.0086901
+      RmsDb: -11.546808
+      Dc: 0.0000000016587243
+      LoopSeam: 0.000004960515
+      CentroidHz: 5182.8965
+      Seconds: 0.45984128
+  - Id: Mondlicht/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 034f10ac72b0e4c47a95ae634e64068f, type: 3}
+    - {fileID: 8300000, guid: 7eb640a6c1f794e4abd7b85081733a70, type: 3}
+    - {fileID: 8300000, guid: 3f00e8a4e7c5bad41933e87678c098f9, type: 3}
+    Stats:
+    - PeakDb: -1.0066686
+      RmsDb: -10.230616
+      Dc: -0.0000000021058897
+      LoopSeam: 0.000029631876
+      CentroidHz: 1677.8173
+      Seconds: 0.65
+    - PeakDb: -1.0023845
+      RmsDb: -10.327438
+      Dc: -3.9626927e-10
+      LoopSeam: 0.000030131821
+      CentroidHz: 1743.2932
+      Seconds: 0.65739226
+    - PeakDb: -1.0013452
+      RmsDb: -10.352085
+      Dc: -0.000000003286378
+      LoopSeam: 0.000030175444
+      CentroidHz: 1733.3315
+      Seconds: 0.6869615
+  - Id: Wildblut/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 0a31c17c0f8dcd440b196671c76d7c27, type: 3}
+    - {fileID: 8300000, guid: 367ea1889b0c08c4fae90c7cc1a71aa2, type: 3}
+    - {fileID: 8300000, guid: b937e3c4969c1f54492c7ac3125443f4, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.309339
+      Dc: -0.000000004757085
+      LoopSeam: 0.0000000012805685
+      CentroidHz: 1333.5419
+      Seconds: 0.7
+    - PeakDb: -1.0086901
+      RmsDb: -10.316796
+      Dc: -0.0000000018604788
+      LoopSeam: 0.0000002074521
+      CentroidHz: 1325.2032
+      Seconds: 0.6869161
+    - PeakDb: -1.0086907
+      RmsDb: -10.22462
+      Dc: -0.000000001630568
+      LoopSeam: 0.000000017345883
+      CentroidHz: 1258.2767
+      Seconds: 0.75673467
+  - Id: Wildblut/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 91b39dc41359af4448b6e8b0205338e3, type: 3}
+    - {fileID: 8300000, guid: 359b916a2d171c4418401be98155a739, type: 3}
+    - {fileID: 8300000, guid: f0f99c23449778e4dbe0213a9c674b16, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -11.33551
+      Dc: -0.0000000018578973
+      LoopSeam: 0.00005325768
+      CentroidHz: 2631.336
+      Seconds: 0.45
+    - PeakDb: -1.0086907
+      RmsDb: -11.364923
+      Dc: -0.0000000015852929
+      LoopSeam: 0.000058193924
+      CentroidHz: 2648.6555
+      Seconds: 0.43151927
+    - PeakDb: -1.0086901
+      RmsDb: -11.254367
+      Dc: 9.1749747e-10
+      LoopSeam: 0.000057486584
+      CentroidHz: 2699.4038
+      Seconds: 0.43582767
+  - Id: Wildblut/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 597f5337174b3de418bd542e152c6e5e, type: 3}
+    - {fileID: 8300000, guid: d7bfdd95b2e3eb74494fff6dfa891e3e, type: 3}
+    - {fileID: 8300000, guid: e99fa43bf69e0a64e9d846e6b396a081, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.645795
+      Dc: -0.0000000022257254
+      LoopSeam: 0.0000017269049
+      CentroidHz: 3225.235
+      Seconds: 0.22
+    - PeakDb: -1.0086907
+      RmsDb: -10.705882
+      Dc: 9.1654795e-10
+      LoopSeam: 0.0000018234714
+      CentroidHz: 3292.8076
+      Seconds: 0.20603174
+    - PeakDb: -1.0086907
+      RmsDb: -10.789875
+      Dc: -5.313283e-10
+      LoopSeam: 0.0000017897255
+      CentroidHz: 3246.4924
+      Seconds: 0.2093424
+  - Id: Wildblut/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: acd6e3e72a023914aad8d33fdd51e954, type: 3}
+    - {fileID: 8300000, guid: c3af88b702aa67e4898f36374a48316f, type: 3}
+    - {fileID: 8300000, guid: 6ea98ecd5f4caa94bafcfcf0c75ba568, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.607496
+      Dc: 0.0000000012086092
+      LoopSeam: 0.0000014806865
+      CentroidHz: 3533.4575
+      Seconds: 0.28
+    - PeakDb: -1.0086901
+      RmsDb: -10.551588
+      Dc: 0.0000000031214729
+      LoopSeam: 0.0000014189209
+      CentroidHz: 3507.005
+      Seconds: 0.28684807
+    - PeakDb: -1.0086901
+      RmsDb: -10.781872
+      Dc: 0.000000002386135
+      LoopSeam: 0.0000012217351
+      CentroidHz: 3626.1843
+      Seconds: 0.28265306
+  - Id: Wildblut/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: e9981dbbaa659cc41b6bbb07442058df, type: 3}
+    - {fileID: 8300000, guid: 467f0bbd66f072e44aa221ae2ecbef07, type: 3}
+    - {fileID: 8300000, guid: b18ffda5f268196418879acdb4bd1fc7, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.743134
+      Dc: -0.0000000023688451
+      LoopSeam: 0.000011824071
+      CentroidHz: 2630.892
+      Seconds: 0.34
+    - PeakDb: -1.0086907
+      RmsDb: -10.676522
+      Dc: 0.000000002748893
+      LoopSeam: 0.000010783086
+      CentroidHz: 2957.1455
+      Seconds: 0.30834466
+    - PeakDb: -1.0086907
+      RmsDb: -10.694998
+      Dc: -0.0000000018962438
+      LoopSeam: 0.00001244212
+      CentroidHz: 2790.1953
+      Seconds: 0.36773244
+  - Id: Wildblut/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 5e7d10568fd58a242a1e0e1dc959f64b, type: 3}
+    - {fileID: 8300000, guid: 03b33b1dc38fc084f9b730191ac996ba, type: 3}
+    - {fileID: 8300000, guid: 330bd19da1585104aa697067b1728f83, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -11.0132065
+      Dc: 0.000000002623125
+      LoopSeam: 0.000013145036
+      CentroidHz: 1478.6088
+      Seconds: 0.42
+    - PeakDb: -1.0086907
+      RmsDb: -10.926836
+      Dc: -0.0000000019545063
+      LoopSeam: 0.000025026035
+      CentroidHz: 1545.7954
+      Seconds: 0.39750567
+    - PeakDb: -1.0086901
+      RmsDb: -11.087685
+      Dc: 0.0000000020836013
+      LoopSeam: 0.0000033757824
+      CentroidHz: 1528.727
+      Seconds: 0.45557824
+  - Id: Wildblut/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: ce5a532023c7d2a4e84b7c4f0d6f5d5d, type: 3}
+    - {fileID: 8300000, guid: 6c281fbc13a081441ad3d185d1f59de8, type: 3}
+    - {fileID: 8300000, guid: 3b374904d0653064ca1a3c4fb34bbd38, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.405936
+      Dc: -5.3586174e-10
+      LoopSeam: 0.00001030456
+      CentroidHz: 633.5638
+      Seconds: 0.65
+    - PeakDb: -1.0010581
+      RmsDb: -10.34202
+      Dc: 0.0000000026773832
+      LoopSeam: 0.000010121366
+      CentroidHz: 610.874
+      Seconds: 0.6765306
+    - PeakDb: -1.0001996
+      RmsDb: -10.486553
+      Dc: -0.0000000013682222
+      LoopSeam: 0.000010009506
+      CentroidHz: 621.4575
+      Seconds: 0.6746939
+  - Id: Dorngift/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: f4c825dbacfca794792c417f9fd7d6a2, type: 3}
+    - {fileID: 8300000, guid: fee73391334759f418625bcb91bf9183, type: 3}
+    - {fileID: 8300000, guid: e5dab00323a8d4f4c82ed7166bd7cd28, type: 3}
+    Stats:
+    - PeakDb: -1.003878
+      RmsDb: -10.154074
+      Dc: -0.00000000295677
+      LoopSeam: 0.00000018146238
+      CentroidHz: 2244.8555
+      Seconds: 0.7
+    - PeakDb: -1.003276
+      RmsDb: -10.158333
+      Dc: 0.000000002190852
+      LoopSeam: 0.000000002386514
+      CentroidHz: 2463.036
+      Seconds: 0.70469385
+    - PeakDb: -1.0115619
+      RmsDb: -10.142694
+      Dc: 0.0000000011178808
+      LoopSeam: 0.000000056919816
+      CentroidHz: 2448.3872
+      Seconds: 0.69653064
+  - Id: Dorngift/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 5417b12af2c38aa4cbfe41c47e4b7c17, type: 3}
+    - {fileID: 8300000, guid: 51e840545a167b14e9e4687d3bf1d621, type: 3}
+    - {fileID: 8300000, guid: 63980bd9a26c4944cb63dc75ff0a9e8a, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -11.418433
+      Dc: 0.0000000025948181
+      LoopSeam: 0.00015774416
+      CentroidHz: 3322.4275
+      Seconds: 0.45
+    - PeakDb: -1.0086907
+      RmsDb: -11.50876
+      Dc: -0.0000000012363883
+      LoopSeam: 0.00015680591
+      CentroidHz: 3338.7993
+      Seconds: 0.44399092
+    - PeakDb: -1.0086901
+      RmsDb: -11.523971
+      Dc: 0.0000000011456904
+      LoopSeam: 0.00015612604
+      CentroidHz: 3032.6965
+      Seconds: 0.45358276
+  - Id: Dorngift/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 99cd84e1de042db4ab397dfd8eaf118c, type: 3}
+    - {fileID: 8300000, guid: 4c3b888a520850c408d9c15bfe8e23cf, type: 3}
+    - {fileID: 8300000, guid: f7174896b70b3cd4fa22bd418d2fce8a, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.925766
+      Dc: -0.00000000116867
+      LoopSeam: 0.0000017504208
+      CentroidHz: 2749.357
+      Seconds: 0.22
+    - PeakDb: -1.0086907
+      RmsDb: -10.630599
+      Dc: -4.4502727e-10
+      LoopSeam: 0.000001718814
+      CentroidHz: 2846.718
+      Seconds: 0.19854875
+    - PeakDb: -1.0086907
+      RmsDb: -10.71227
+      Dc: 0.0000000016394996
+      LoopSeam: 0.0000018178835
+      CentroidHz: 2599.4353
+      Seconds: 0.20306122
+  - Id: Dorngift/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: f0e476fa87836ee40ae8b7a0ad600ec5, type: 3}
+    - {fileID: 8300000, guid: c512fe520f8200540b65b40aeb9d2bbf, type: 3}
+    - {fileID: 8300000, guid: 0bfed2ad36aa37442be7656788913ad5, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.690254
+      Dc: -0.0000000037232033
+      LoopSeam: 0.0000012825658
+      CentroidHz: 2824.812
+      Seconds: 0.28
+    - PeakDb: -1.0086901
+      RmsDb: -10.676905
+      Dc: 0.0000000016762709
+      LoopSeam: 0.0000012124947
+      CentroidHz: 2789.572
+      Seconds: 0.29768708
+    - PeakDb: -1.0086907
+      RmsDb: -10.840933
+      Dc: 7.345309e-10
+      LoopSeam: 0.0000013577519
+      CentroidHz: 2913.9973
+      Seconds: 0.28414965
+  - Id: Dorngift/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: ac8b16ec92dedab49901e569209355e0, type: 3}
+    - {fileID: 8300000, guid: 2fc503e7efd567b4ab108c7bc97240cf, type: 3}
+    - {fileID: 8300000, guid: fbeeb619d0ad26748b9a751d196fcbc1, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.746899
+      Dc: -4.5309662e-10
+      LoopSeam: 0.00000076694414
+      CentroidHz: 3021.705
+      Seconds: 0.34
+    - PeakDb: -1.0086907
+      RmsDb: -10.6919565
+      Dc: -0.0000000019668815
+      LoopSeam: 0.0000010653748
+      CentroidHz: 3169.7012
+      Seconds: 0.36115646
+    - PeakDb: -1.0086907
+      RmsDb: -10.62367
+      Dc: 3.9642148e-10
+      LoopSeam: 0.0000013106292
+      CentroidHz: 2865.133
+      Seconds: 0.3423356
+  - Id: Dorngift/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 446399a8b4478f74ebc8cb37a0ce6684, type: 3}
+    - {fileID: 8300000, guid: 721303e38a24bc04cbd6f7ec763cb5a2, type: 3}
+    - {fileID: 8300000, guid: 44101821f4e99e648bdef8b2ebe505d5, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -11.116099
+      Dc: 0.0000000011904009
+      LoopSeam: 0.00007708208
+      CentroidHz: 4058.906
+      Seconds: 0.42
+    - PeakDb: -1.0086907
+      RmsDb: -10.837997
+      Dc: -0.0000000029463334
+      LoopSeam: 0.000018448161
+      CentroidHz: 4304.8013
+      Seconds: 0.38142857
+    - PeakDb: -1.0086907
+      RmsDb: -10.845369
+      Dc: -0.000000001304394
+      LoopSeam: 0.000022919266
+      CentroidHz: 4078.5376
+      Seconds: 0.4056009
+  - Id: Dorngift/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 921b2be1358c84449867e0d0bf8ebe45, type: 3}
+    - {fileID: 8300000, guid: d3660e00328b6f64c9e65053c27d6bee, type: 3}
+    - {fileID: 8300000, guid: ef654875bfc28824188e4bcd9da8952e, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.444605
+      Dc: -5.630853e-10
+      LoopSeam: 0.000016276623
+      CentroidHz: 1019.50885
+      Seconds: 0.65
+    - PeakDb: -1.0016531
+      RmsDb: -10.375021
+      Dc: -0.0000000015228825
+      LoopSeam: 0.000016286787
+      CentroidHz: 1027.1104
+      Seconds: 0.6588889
+    - PeakDb: -1.0086901
+      RmsDb: -10.471964
+      Dc: -0.0000000025998739
+      LoopSeam: 0.000016905018
+      CentroidHz: 1053.6362
+      Seconds: 0.6167574
+  - Id: Himmel/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 2317a0d1de921a3418004682c685ef8f, type: 3}
+    - {fileID: 8300000, guid: 3747fdffbfa529e4a840ace3dc1f1c6b, type: 3}
+    - {fileID: 8300000, guid: 9b3a126456500784b8a0d8ed2973ba57, type: 3}
+    Stats:
+    - PeakDb: -1.0125153
+      RmsDb: -10.132671
+      Dc: 8.752724e-10
+      LoopSeam: 0.00000009742689
+      CentroidHz: 3221.1692
+      Seconds: 0.7
+    - PeakDb: -1.019804
+      RmsDb: -10.130015
+      Dc: 0.0000000023995361
+      LoopSeam: 0.00000008963161
+      CentroidHz: 3168.1687
+      Seconds: 0.7042177
+    - PeakDb: -1.0179265
+      RmsDb: -10.125292
+      Dc: -7.804669e-11
+      LoopSeam: 0.00000010128679
+      CentroidHz: 3227.9126
+      Seconds: 0.7544671
+  - Id: Himmel/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: ad0f28d9ffa7bee4cb61f9c818eed5ed, type: 3}
+    - {fileID: 8300000, guid: f6e69dc1d96f00c47adbff890cb1c730, type: 3}
+    - {fileID: 8300000, guid: 506ab51a93899b94db96ea73795c78ea, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -11.197024
+      Dc: -5.5913024e-10
+      LoopSeam: 0.000029577874
+      CentroidHz: 7090.6396
+      Seconds: 0.45
+    - PeakDb: -1.0086901
+      RmsDb: -11.257614
+      Dc: -0.0000000016735326
+      LoopSeam: 0.000065761385
+      CentroidHz: 6796.1196
+      Seconds: 0.44920635
+    - PeakDb: -1.0086901
+      RmsDb: -11.306683
+      Dc: 7.6567785e-10
+      LoopSeam: 0.0000019124127
+      CentroidHz: 6851.382
+      Seconds: 0.45619047
+  - Id: Himmel/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: cbef8250ed4f4564cb291fe81396dbe4, type: 3}
+    - {fileID: 8300000, guid: bbe224904e9058542b13e96783d6b88c, type: 3}
+    - {fileID: 8300000, guid: bb2adc3795f081849b9ceacdcbbca992, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.706872
+      Dc: -0.0000000020677873
+      LoopSeam: 0.0000016594422
+      CentroidHz: 3474.9807
+      Seconds: 0.22
+    - PeakDb: -1.0086901
+      RmsDb: -10.675216
+      Dc: 0.0000000016201032
+      LoopSeam: 0.0000016097911
+      CentroidHz: 3496.4338
+      Seconds: 0.23179138
+    - PeakDb: -1.0086907
+      RmsDb: -10.6799755
+      Dc: 0.000000003595845
+      LoopSeam: 0.0000014307006
+      CentroidHz: 3764.1443
+      Seconds: 0.22156462
+  - Id: Himmel/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 0ae66995e84848046a9e5e1ab71af79c, type: 3}
+    - {fileID: 8300000, guid: 797bba1e26e4105428a04ab008b028e0, type: 3}
+    - {fileID: 8300000, guid: 47b7ee10a2e569c4ea3657a5c102f2e5, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.873144
+      Dc: 0.0000000017871402
+      LoopSeam: 0.0000008788047
+      CentroidHz: 3717.3984
+      Seconds: 0.28
+    - PeakDb: -1.0086907
+      RmsDb: -10.618446
+      Dc: -0.0000000015340519
+      LoopSeam: 0.0000013862445
+      CentroidHz: 3725.4229
+      Seconds: 0.27235827
+    - PeakDb: -1.0086901
+      RmsDb: -10.663853
+      Dc: -0.0000000017756472
+      LoopSeam: 0.0000010052754
+      CentroidHz: 3385.13
+      Seconds: 0.27136055
+  - Id: Himmel/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 3da03ee722f450d468249867df71f12f, type: 3}
+    - {fileID: 8300000, guid: 3ae652e0f024bdc4eb995f086483a06f, type: 3}
+    - {fileID: 8300000, guid: 057ff1094868c014b8207d3aefbbeb31, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.688124
+      Dc: -0.0000000010322129
+      LoopSeam: 0.000001187902
+      CentroidHz: 3860.4546
+      Seconds: 0.34
+    - PeakDb: -1.0086901
+      RmsDb: -10.747161
+      Dc: 0.0000000012767297
+      LoopSeam: 0.0000008766074
+      CentroidHz: 3788.0125
+      Seconds: 0.3306576
+    - PeakDb: -1.0086907
+      RmsDb: -10.803413
+      Dc: -9.767173e-10
+      LoopSeam: 0.0000011333032
+      CentroidHz: 3510.3433
+      Seconds: 0.37256235
+  - Id: Himmel/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 61cadd0c8aad75040b8751781a46d863, type: 3}
+    - {fileID: 8300000, guid: 05a543e220ed3c64fb7afe39fb4d1e87, type: 3}
+    - {fileID: 8300000, guid: 0d7e090755fafb14c83c03040f761ee9, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -11.685301
+      Dc: 5.3780824e-10
+      LoopSeam: 0.000101395286
+      CentroidHz: 6963.371
+      Seconds: 0.42
+    - PeakDb: -1.0086907
+      RmsDb: -11.665593
+      Dc: -0.0000000011347837
+      LoopSeam: 0.000060010876
+      CentroidHz: 6906.2466
+      Seconds: 0.39380953
+    - PeakDb: -1.0086907
+      RmsDb: -11.679144
+      Dc: 0.0000000012715383
+      LoopSeam: 0.00010305259
+      CentroidHz: 7043.1387
+      Seconds: 0.4300227
+  - Id: Himmel/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 9db88e45f86a70449b08e5dbcab3ee2f, type: 3}
+    - {fileID: 8300000, guid: 9ef7fbd131dac2646adddc6898940d46, type: 3}
+    - {fileID: 8300000, guid: 65e0ea4ed8003be43928eaa35aa689d5, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.533858
+      Dc: -0.000000001083098
+      LoopSeam: 0.000046319154
+      CentroidHz: 2788.4438
+      Seconds: 0.65
+    - PeakDb: -1.0011034
+      RmsDb: -10.330624
+      Dc: -0.000000001881427
+      LoopSeam: 0.000047201687
+      CentroidHz: 2772.7156
+      Seconds: 0.58603173
+    - PeakDb: -1.0086901
+      RmsDb: -10.485126
+      Dc: -0.0000000020706565
+      LoopSeam: 0.000045866327
+      CentroidHz: 2785.2432
+      Seconds: 0.66408163
+  - Id: Gewitter/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 5d8af0fe52702c6488841aa2ec7ee1f2, type: 3}
+    - {fileID: 8300000, guid: ba2b8b89042b508408702d0c9c710bcb, type: 3}
+    - {fileID: 8300000, guid: 9f47903ce4801ad42bbc0c699d573cd2, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.277862
+      Dc: 0.0000000029219793
+      LoopSeam: 0.00000012060627
+      CentroidHz: 2795.9316
+      Seconds: 0.7
+    - PeakDb: -1.0086901
+      RmsDb: -10.289622
+      Dc: 0.0000000012541729
+      LoopSeam: 0.000000047846697
+      CentroidHz: 2920.3489
+      Seconds: 0.69426304
+    - PeakDb: -1.0086907
+      RmsDb: -10.258268
+      Dc: 0.0000000012782279
+      LoopSeam: 0.00000004476169
+      CentroidHz: 2921.5427
+      Seconds: 0.715805
+  - Id: Gewitter/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: d49fbe81c3e728549a3a6e9e80e0f39c, type: 3}
+    - {fileID: 8300000, guid: bebd872b8a488d64da0ba970d48c578d, type: 3}
+    - {fileID: 8300000, guid: 035a6f0938fcb6d4cb13ee0271f638bb, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -11.5029
+      Dc: 0.000000002512448
+      LoopSeam: 0.000030340743
+      CentroidHz: 6045.8438
+      Seconds: 0.45
+    - PeakDb: -1.0086907
+      RmsDb: -11.527606
+      Dc: 9.729939e-10
+      LoopSeam: 0.000085006235
+      CentroidHz: 5961.28
+      Seconds: 0.41111112
+    - PeakDb: -1.0086901
+      RmsDb: -11.485816
+      Dc: -0.0000000017094894
+      LoopSeam: 0.000008208619
+      CentroidHz: 5940.2466
+      Seconds: 0.48147392
+  - Id: Gewitter/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 4b64073d5503a1846bc9deb28bd367c0, type: 3}
+    - {fileID: 8300000, guid: 668a40a87d4f6c34da9b5dbbb3412ea5, type: 3}
+    - {fileID: 8300000, guid: 22bc827908e78f643adc27ea6c6937b3, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.736164
+      Dc: 0.0000000010230009
+      LoopSeam: 0.0000019627914
+      CentroidHz: 3865.865
+      Seconds: 0.22
+    - PeakDb: -1.0086901
+      RmsDb: -10.632175
+      Dc: 0.0000000021332758
+      LoopSeam: 0.0000018695428
+      CentroidHz: 3876.8757
+      Seconds: 0.20399094
+    - PeakDb: -1.0086907
+      RmsDb: -10.717078
+      Dc: 0.0000000019456996
+      LoopSeam: 0.0000018900901
+      CentroidHz: 4177.86
+      Seconds: 0.21390022
+  - Id: Gewitter/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 85c4e5678d0c3ac43a43dede46cc5fa6, type: 3}
+    - {fileID: 8300000, guid: b337a3b9cb8bd244397f866f8d2218d2, type: 3}
+    - {fileID: 8300000, guid: 911de978c6ae91f4b97eb58a14e5ddbb, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.730665
+      Dc: -6.3490746e-10
+      LoopSeam: 0.0000012077508
+      CentroidHz: 4499.1343
+      Seconds: 0.28
+    - PeakDb: -1.0086901
+      RmsDb: -10.690168
+      Dc: -3.484363e-10
+      LoopSeam: 0.0000016145932
+      CentroidHz: 4559.703
+      Seconds: 0.27161
+    - PeakDb: -1.0086901
+      RmsDb: -10.764101
+      Dc: 0.0000000031704868
+      LoopSeam: 0.000001502387
+      CentroidHz: 4526.599
+      Seconds: 0.26090702
+  - Id: Gewitter/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 4eacfae38726d014da641b052582c616, type: 3}
+    - {fileID: 8300000, guid: 2b30b6430138ee74caf0d820e20df5aa, type: 3}
+    - {fileID: 8300000, guid: dd90914965ec90b46939eca4fdc8fe1d, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.592764
+      Dc: -0.0000000024134454
+      LoopSeam: 0.000004705391
+      CentroidHz: 3787.902
+      Seconds: 0.34
+    - PeakDb: -1.0086907
+      RmsDb: -10.579939
+      Dc: 0.000000002449516
+      LoopSeam: 0.00001352164
+      CentroidHz: 3924.7595
+      Seconds: 0.32800454
+    - PeakDb: -1.0086907
+      RmsDb: -10.510002
+      Dc: 0.0000000031146894
+      LoopSeam: 0.0000016617123
+      CentroidHz: 4044.5845
+      Seconds: 0.32024944
+  - Id: Gewitter/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 8fdb1f0943d1f384ca1514983572c7f8, type: 3}
+    - {fileID: 8300000, guid: 4ffa686216594ff47a8320c85320e3e8, type: 3}
+    - {fileID: 8300000, guid: 830cf7ac3e1d77d4f85b34e488b99278, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -11.306986
+      Dc: -0.0000000013042328
+      LoopSeam: 0.000029407209
+      CentroidHz: 6219.974
+      Seconds: 0.42
+    - PeakDb: -1.0086907
+      RmsDb: -11.325634
+      Dc: -0.0000000024943392
+      LoopSeam: 0.00012367498
+      CentroidHz: 5901.1646
+      Seconds: 0.43444446
+    - PeakDb: -1.0086907
+      RmsDb: -11.358311
+      Dc: 0.000000002068003
+      LoopSeam: 0.00004846236
+      CentroidHz: 6148.5723
+      Seconds: 0.43857142
+  - Id: Gewitter/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 116ae51e3a6ac5347a264a96a3211f3a, type: 3}
+    - {fileID: 8300000, guid: 2f424af2f1b92e142b08e75a35f4d9f9, type: 3}
+    - {fileID: 8300000, guid: ce42638860826a04c831e482f6b0b1f1, type: 3}
+    Stats:
+    - PeakDb: -1.0012627
+      RmsDb: -10.360168
+      Dc: -0.0000000017347591
+      LoopSeam: 0.000024363238
+      CentroidHz: 1600.8073
+      Seconds: 0.65
+    - PeakDb: -1.0086901
+      RmsDb: -10.41975
+      Dc: -0.0000000025573887
+      LoopSeam: 0.00002423895
+      CentroidHz: 1620.6475
+      Seconds: 0.6226757
+    - PeakDb: -1.0086907
+      RmsDb: -10.402199
+      Dc: 0.000000001556827
+      LoopSeam: 0.00002423075
+      CentroidHz: 1614.5581
+      Seconds: 0.67387754
+  - Id: Zwielicht/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: dbd56b2af594bb54aa2b57831d293deb, type: 3}
+    - {fileID: 8300000, guid: 8ca061716ba38e24a9e31623f0d3eb5f, type: 3}
+    - {fileID: 8300000, guid: 2c2cd21499520d846aa61157f75b37ea, type: 3}
+    Stats:
+    - PeakDb: -1.0455475
+      RmsDb: -10.084211
+      Dc: 0.0000000026463827
+      LoopSeam: 0.00000009145151
+      CentroidHz: 2182.2234
+      Seconds: 0.7
+    - PeakDb: -1.0446477
+      RmsDb: -10.091633
+      Dc: 0.0000000021899518
+      LoopSeam: 0.00000006746268
+      CentroidHz: 2181.6177
+      Seconds: 0.7206803
+    - PeakDb: -1.0356022
+      RmsDb: -10.099594
+      Dc: -0.000000001670205
+      LoopSeam: 0.00000007661947
+      CentroidHz: 2154.6692
+      Seconds: 0.6935828
+  - Id: Zwielicht/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 370d473ca1a27c6409b556b505b3dec7, type: 3}
+    - {fileID: 8300000, guid: f673c999399cb0e46b503e1691390331, type: 3}
+    - {fileID: 8300000, guid: eb6e632160e1a834da38bb2d4e26a9e8, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -11.700791
+      Dc: 0.0000000021762647
+      LoopSeam: 0.00009087933
+      CentroidHz: 4162.882
+      Seconds: 0.45
+    - PeakDb: -1.0086907
+      RmsDb: -11.638613
+      Dc: 9.520862e-10
+      LoopSeam: 0.00009007752
+      CentroidHz: 4013.5024
+      Seconds: 0.42995465
+    - PeakDb: -1.0086907
+      RmsDb: -11.675186
+      Dc: 0.0000000016287347
+      LoopSeam: 0.000089778216
+      CentroidHz: 4115.152
+      Seconds: 0.46997732
+  - Id: Zwielicht/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 2dcc0bc4c3b56fd4f838be8636c01481, type: 3}
+    - {fileID: 8300000, guid: 939a8911d1756764294d5f4e0558df0e, type: 3}
+    - {fileID: 8300000, guid: 04960b5a42e99d44093404a1883372e5, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.652255
+      Dc: 6.864005e-10
+      LoopSeam: 0.0000003373716
+      CentroidHz: 2878.1543
+      Seconds: 0.22
+    - PeakDb: -1.0086907
+      RmsDb: -10.600374
+      Dc: 1.1868624e-11
+      LoopSeam: 0.00000013085082
+      CentroidHz: 2936.2202
+      Seconds: 0.21197279
+    - PeakDb: -1.0086907
+      RmsDb: -10.632898
+      Dc: -3.1651778e-10
+      LoopSeam: 0.00000022651511
+      CentroidHz: 3080.2214
+      Seconds: 0.21208617
+  - Id: Zwielicht/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: ad6cc162fa1ee1542a8a8efc06f87fb4, type: 3}
+    - {fileID: 8300000, guid: e05af4493addd824791026a3222bd39c, type: 3}
+    - {fileID: 8300000, guid: 95ca08448b9eaab4f958b3115a98a6f8, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.618629
+      Dc: -3.7964193e-10
+      LoopSeam: 0.0000003243331
+      CentroidHz: 3112.8706
+      Seconds: 0.28
+    - PeakDb: -1.0086901
+      RmsDb: -10.593538
+      Dc: -7.5498024e-10
+      LoopSeam: 0.0000001886583
+      CentroidHz: 2833.86
+      Seconds: 0.30306122
+    - PeakDb: -1.0086901
+      RmsDb: -10.727652
+      Dc: 0.0000000011301262
+      LoopSeam: 0.0000002758461
+      CentroidHz: 2861.2263
+      Seconds: 0.2589569
+  - Id: Zwielicht/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: e44e470823f513e44a22d3b9a6ace7a9, type: 3}
+    - {fileID: 8300000, guid: 911f73fc11a0bac4cb5492b4944021b0, type: 3}
+    - {fileID: 8300000, guid: 3ded6080b9e38bc4e9910e2604923cd0, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.63326
+      Dc: 0.0000000025495426
+      LoopSeam: 0.0000005342881
+      CentroidHz: 3295.0771
+      Seconds: 0.34
+    - PeakDb: -1.0086907
+      RmsDb: -10.676653
+      Dc: -0.000000002789271
+      LoopSeam: 0.000000006359187
+      CentroidHz: 3423.7234
+      Seconds: 0.34079364
+    - PeakDb: -1.0086907
+      RmsDb: -10.648118
+      Dc: -0.0000000015806674
+      LoopSeam: 0.000000024534529
+      CentroidHz: 3261.0105
+      Seconds: 0.33396825
+  - Id: Zwielicht/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 91c7c1ab349dc2441820614419b81f40, type: 3}
+    - {fileID: 8300000, guid: 2c6611da87ec09f4ea0a9906d2eb7ecf, type: 3}
+    - {fileID: 8300000, guid: 555b5daaeaba7674691541a616fc56ce, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -11.669745
+      Dc: 0.0000000011908871
+      LoopSeam: 0.0000009338255
+      CentroidHz: 4941.816
+      Seconds: 0.42
+    - PeakDb: -1.0086901
+      RmsDb: -11.773778
+      Dc: -0.0000000011309148
+      LoopSeam: 0.000008215895
+      CentroidHz: 5002.769
+      Seconds: 0.43712017
+    - PeakDb: -1.0086907
+      RmsDb: -11.610945
+      Dc: -8.903225e-10
+      LoopSeam: 0.000036803576
+      CentroidHz: 4790.09
+      Seconds: 0.43117914
+  - Id: Zwielicht/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: e0451a9d88cd5234490167fcaca47267, type: 3}
+    - {fileID: 8300000, guid: f9eff02faadc1b14c92e5b6a9fa4b893, type: 3}
+    - {fileID: 8300000, guid: b36b11023e1aad14a900615ea732804e, type: 3}
+    Stats:
+    - PeakDb: -1.003448
+      RmsDb: -10.308636
+      Dc: -3.5825898e-10
+      LoopSeam: 0.000031166666
+      CentroidHz: 1766.7498
+      Seconds: 0.65
+    - PeakDb: -1.003208
+      RmsDb: -10.32939
+      Dc: 0.0000000017841052
+      LoopSeam: 0.00003215969
+      CentroidHz: 1852.1453
+      Seconds: 0.6546032
+    - PeakDb: -1.0028186
+      RmsDb: -10.2609005
+      Dc: 5.768457e-10
+      LoopSeam: 0.00003160813
+      CentroidHz: 1806.7821
+      Seconds: 0.67219955
+  - Id: Jade/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 1c2cb4708f93bfd4dbd33c1a7b507ec1, type: 3}
+    - {fileID: 8300000, guid: a3fbb78b2f5b96d4d9911c53bb7b3637, type: 3}
+    - {fileID: 8300000, guid: d5bc8c824e805fe4495dc8eb0e655e7b, type: 3}
+    Stats:
+    - PeakDb: -1.0407664
+      RmsDb: -10.062661
+      Dc: -0.0000000023875364
+      LoopSeam: 0.000023158127
+      CentroidHz: 2748.7412
+      Seconds: 0.7
+    - PeakDb: -1.0528493
+      RmsDb: -10.073266
+      Dc: 0.000000002988758
+      LoopSeam: 0.00002307705
+      CentroidHz: 2687.0154
+      Seconds: 0.7160091
+    - PeakDb: -1.0333837
+      RmsDb: -10.065862
+      Dc: 0.0000000015218867
+      LoopSeam: 0.000023053653
+      CentroidHz: 2845.6377
+      Seconds: 0.75
+  - Id: Jade/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 353b9ed332f3cf44eb944ae80881e1ec, type: 3}
+    - {fileID: 8300000, guid: c2eb8a4755100134784ba8bb514529be, type: 3}
+    - {fileID: 8300000, guid: 49202f30df1d2384aa5bc17d2ba87d35, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -11.73052
+      Dc: 0.0000000019386808
+      LoopSeam: 0.00009435532
+      CentroidHz: 4133.2886
+      Seconds: 0.45
+    - PeakDb: -1.0086901
+      RmsDb: -11.701569
+      Dc: 0.0000000020870619
+      LoopSeam: 0.00009078294
+      CentroidHz: 4234.982
+      Seconds: 0.48598638
+    - PeakDb: -1.0086901
+      RmsDb: -11.725714
+      Dc: 0.0000000019839885
+      LoopSeam: 0.00008783885
+      CentroidHz: 4348.688
+      Seconds: 0.4761678
+  - Id: Jade/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 06a5234b75ef1564eafa5665cf2f6a90, type: 3}
+    - {fileID: 8300000, guid: 554dd35486235ad43a4b899cb098b4cf, type: 3}
+    - {fileID: 8300000, guid: 2843487c30a97774c9a73e9fdd36e693, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.490848
+      Dc: -4.2608833e-10
+      LoopSeam: 0.00000001731678
+      CentroidHz: 3093.2693
+      Seconds: 0.22
+    - PeakDb: -1.0086901
+      RmsDb: -10.646825
+      Dc: 0.0000000010690322
+      LoopSeam: 0.00000026553244
+      CentroidHz: 3269.7695
+      Seconds: 0.2140136
+    - PeakDb: -1.0086901
+      RmsDb: -10.841351
+      Dc: -0.0000000015009582
+      LoopSeam: 0.00000034683035
+      CentroidHz: 2886.259
+      Seconds: 0.20950113
+  - Id: Jade/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 9f6ea1e5e534eab48ae43d493a49d627, type: 3}
+    - {fileID: 8300000, guid: 967307a3655c27a448b1bbc3aa0aa66c, type: 3}
+    - {fileID: 8300000, guid: cb0a57f8d23a56b47945525b75fd5752, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.755382
+      Dc: -0.0000000012432486
+      LoopSeam: 0.00000019656727
+      CentroidHz: 3292.7346
+      Seconds: 0.28
+    - PeakDb: -1.0086907
+      RmsDb: -10.61926
+      Dc: -0.0000000026968034
+      LoopSeam: 0.00000008704956
+      CentroidHz: 3447.267
+      Seconds: 0.2844898
+    - PeakDb: -1.0086907
+      RmsDb: -10.679388
+      Dc: -8.52476e-11
+      LoopSeam: 0.000000063097104
+      CentroidHz: 3046.5535
+      Seconds: 0.28768706
+  - Id: Jade/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: d98ef780a064f364aa55b3a892a1f921, type: 3}
+    - {fileID: 8300000, guid: f1fabf8c82f9e00409eb9d6643433a45, type: 3}
+    - {fileID: 8300000, guid: 8782a48185435b343b325b19b5043ae5, type: 3}
+    Stats:
+    - PeakDb: -1.0004586
+      RmsDb: -10.2759
+      Dc: -0.0000000020482473
+      LoopSeam: 0.000018384308
+      CentroidHz: 3055.9954
+      Seconds: 0.34
+    - PeakDb: -1.0086907
+      RmsDb: -10.307285
+      Dc: -0.0000000029713942
+      LoopSeam: 0.0000026779016
+      CentroidHz: 2993.5127
+      Seconds: 0.36517006
+    - PeakDb: -1.0086901
+      RmsDb: -10.32673
+      Dc: -0.000000002580935
+      LoopSeam: 0.000005177455
+      CentroidHz: 3093.0457
+      Seconds: 0.34557822
+  - Id: Jade/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: f5b8b2dd6cfef9d40974c7bb9f8ddcef, type: 3}
+    - {fileID: 8300000, guid: 642737fd6047c6846b5d8ddf6801160c, type: 3}
+    - {fileID: 8300000, guid: 4589ea7aef6046e44b74cfe15114564f, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -11.553333
+      Dc: -0.0000000017727306
+      LoopSeam: 0.00013210776
+      CentroidHz: 5517.562
+      Seconds: 0.42
+    - PeakDb: -1.0086907
+      RmsDb: -11.585985
+      Dc: 0.0000000020687874
+      LoopSeam: 0.0000072433468
+      CentroidHz: 5632.0254
+      Seconds: 0.4226984
+    - PeakDb: -1.0086901
+      RmsDb: -11.652763
+      Dc: -0.0000000013332928
+      LoopSeam: 0.000046537258
+      CentroidHz: 5870.719
+      Seconds: 0.39199546
+  - Id: Jade/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: f37591854152c9247ba2d5b7ebeb339d, type: 3}
+    - {fileID: 8300000, guid: 881539a8286c8fa4bbdb71fbf56ba705, type: 3}
+    - {fileID: 8300000, guid: 3e38d9d57d581a1498acdb817a24ecd7, type: 3}
+    Stats:
+    - PeakDb: -1.0024943
+      RmsDb: -10.321021
+      Dc: 0.000000002875106
+      LoopSeam: 0.000034281566
+      CentroidHz: 1964.3663
+      Seconds: 0.65
+    - PeakDb: -1.0055223
+      RmsDb: -10.241718
+      Dc: 0.0000000024590088
+      LoopSeam: 0.000034767752
+      CentroidHz: 1986.7083
+      Seconds: 0.6749887
+    - PeakDb: -1.0062157
+      RmsDb: -10.228638
+      Dc: 0.0000000018030704
+      LoopSeam: 0.000033780183
+      CentroidHz: 1949.7228
+      Seconds: 0.6522902
+  - Id: Lava/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 7492cbaf3e348bf448c65c0380748280, type: 3}
+    - {fileID: 8300000, guid: b2c94e894700268458433b1b17f953fb, type: 3}
+    - {fileID: 8300000, guid: d88838132d1ae8c40bae23d8e67242b4, type: 3}
+    Stats:
+    - PeakDb: -1.0051217
+      RmsDb: -10.204517
+      Dc: -0.0000000015648655
+      LoopSeam: 0.000000044630724
+      CentroidHz: 1865.7932
+      Seconds: 0.7
+    - PeakDb: -1.0026362
+      RmsDb: -10.152157
+      Dc: -9.1516833e-10
+      LoopSeam: 0.0000263424
+      CentroidHz: 1840.4142
+      Seconds: 0.67133784
+    - PeakDb: -1.0086901
+      RmsDb: -10.31608
+      Dc: -6.577477e-10
+      LoopSeam: 0.0000000012805685
+      CentroidHz: 1686.4939
+      Seconds: 0.76839
+  - Id: Lava/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 018807039bb70834980081da0351e5d8, type: 3}
+    - {fileID: 8300000, guid: fa7e8db3f4611b44bb6cfe85f9aaa393, type: 3}
+    - {fileID: 8300000, guid: 2e81dead3e4b41149ac092e68db2f77c, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.916603
+      Dc: 0.0000000015755338
+      LoopSeam: 0.00005242182
+      CentroidHz: 2493.6335
+      Seconds: 0.45
+    - PeakDb: -1.0001856
+      RmsDb: -10.881044
+      Dc: -0.000000001717945
+      LoopSeam: 0.000056486577
+      CentroidHz: 2549.7249
+      Seconds: 0.44777778
+    - PeakDb: -1.0086901
+      RmsDb: -10.980005
+      Dc: -0.0000000011744011
+      LoopSeam: 0.000054256467
+      CentroidHz: 2486.9922
+      Seconds: 0.47129253
+  - Id: Lava/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 2e40c7a856cd59f489b4307bf5c8d0d3, type: 3}
+    - {fileID: 8300000, guid: 2d65c8bc71d5e2146a71d4854bbf57bc, type: 3}
+    - {fileID: 8300000, guid: 7874671b301742640a5ccfb423846da7, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.696403
+      Dc: 0.0000000019578372
+      LoopSeam: 0.0000016502745
+      CentroidHz: 2938.0613
+      Seconds: 0.22
+    - PeakDb: -1.0086907
+      RmsDb: -11.034985
+      Dc: 0.0000000015511126
+      LoopSeam: 0.000001533539
+      CentroidHz: 3417.8557
+      Seconds: 0.23904762
+    - PeakDb: -1.0086907
+      RmsDb: -10.669766
+      Dc: -0.0000000011530895
+      LoopSeam: 0.000001873821
+      CentroidHz: 3087.2983
+      Seconds: 0.20489796
+  - Id: Lava/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: dea78de98fd6bb8499a8dc2ffb16bd25, type: 3}
+    - {fileID: 8300000, guid: 284de8404d075634aa3e320763e39cf4, type: 3}
+    - {fileID: 8300000, guid: e0467f352b93e1c48ba82637ee884490, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.774302
+      Dc: -0.000000001543647
+      LoopSeam: 0.0000011125521
+      CentroidHz: 3319.1165
+      Seconds: 0.28
+    - PeakDb: -1.0086907
+      RmsDb: -10.543624
+      Dc: 0.000000001561349
+      LoopSeam: 0.0000014148391
+      CentroidHz: 3358.4985
+      Seconds: 0.2652608
+    - PeakDb: -1.0086907
+      RmsDb: -10.71385
+      Dc: 0.0000000021395858
+      LoopSeam: 0.0000012104138
+      CentroidHz: 3344.1726
+      Seconds: 0.26938775
+  - Id: Lava/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 09761d7d09caee94ab12e2e80f32f231, type: 3}
+    - {fileID: 8300000, guid: 8b084451ffb3c3b409aa6e61cf39a4d1, type: 3}
+    - {fileID: 8300000, guid: 72f81bfe37d841e4e80740c6f4d8225c, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.660191
+      Dc: -0.0000000016754185
+      LoopSeam: 0.000013551209
+      CentroidHz: 2641.5088
+      Seconds: 0.34
+    - PeakDb: -1.0086907
+      RmsDb: -10.766834
+      Dc: -0.0000000011141793
+      LoopSeam: 0.000008314499
+      CentroidHz: 2642.6338
+      Seconds: 0.33235827
+    - PeakDb: -1.0086901
+      RmsDb: -10.704428
+      Dc: 0.000000001779484
+      LoopSeam: 0.0000132441055
+      CentroidHz: 2792.4575
+      Seconds: 0.33258504
+  - Id: Lava/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 8e0532a956994fa429ea49e0f057fbba, type: 3}
+    - {fileID: 8300000, guid: e4ac170dc6d789f409dd423afd8d0fcc, type: 3}
+    - {fileID: 8300000, guid: db0afa6667cb2204987138c4501946d6, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.853603
+      Dc: 0.0000000014143409
+      LoopSeam: 0.00000384741
+      CentroidHz: 3424.9133
+      Seconds: 0.42
+    - PeakDb: -1.0086907
+      RmsDb: -10.791937
+      Dc: 1.8877222e-10
+      LoopSeam: 0.00002442277
+      CentroidHz: 3471.094
+      Seconds: 0.39369616
+    - PeakDb: -1.0086907
+      RmsDb: -10.822349
+      Dc: -0.0000000030324196
+      LoopSeam: 0.000032565207
+      CentroidHz: 3541.9956
+      Seconds: 0.4471882
+  - Id: Lava/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: da0edac2d517c3042bf1ed246f034e06, type: 3}
+    - {fileID: 8300000, guid: fc341b8429ee39c4b8b81a94e3ef2867, type: 3}
+    - {fileID: 8300000, guid: 3383ff0484353144796a82c57b390333, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.519501
+      Dc: -0.0000000028466551
+      LoopSeam: 0.000008284478
+      CentroidHz: 515.8754
+      Seconds: 0.65
+    - PeakDb: -1.0086901
+      RmsDb: -10.340089
+      Dc: 0.0000000028056657
+      LoopSeam: 0.000007891547
+      CentroidHz: 501.1814
+      Seconds: 0.61621314
+    - PeakDb: -1.0086907
+      RmsDb: -10.587488
+      Dc: 0.000000002377597
+      LoopSeam: 0.000008251329
+      CentroidHz: 531.7991
+      Seconds: 0.7090476
+  - Id: Pulver/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 0f6227a66155caf47948ea009c03954d, type: 3}
+    - {fileID: 8300000, guid: 403fae6f078099845b18e121bf3d5cf6, type: 3}
+    - {fileID: 8300000, guid: af3d45e6cdbf2214aaea2edc26f996f2, type: 3}
+    Stats:
+    - PeakDb: -1.0402166
+      RmsDb: -10.026807
+      Dc: 0.0000000042860093
+      LoopSeam: 0.000000023585017
+      CentroidHz: 2024.8752
+      Seconds: 0.7
+    - PeakDb: -1.0366137
+      RmsDb: -10.025869
+      Dc: 0.0000000028620872
+      LoopSeam: 0.0000010809308
+      CentroidHz: 2157.986
+      Seconds: 0.73834467
+    - PeakDb: -1.0710003
+      RmsDb: -10.021137
+      Dc: -0.0000000034050716
+      LoopSeam: 0.00000016353442
+      CentroidHz: 2000.6106
+      Seconds: 0.6844218
+  - Id: Pulver/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: ff4ce717c47f3eb4cbcff4ca2abc34d0, type: 3}
+    - {fileID: 8300000, guid: 7ee8c0ded33461241b601977df8c46e9, type: 3}
+    - {fileID: 8300000, guid: 48234d9a3747f97429f1ae91755bdf28, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -11.790486
+      Dc: -0.0000000015884173
+      LoopSeam: 0.00007580151
+      CentroidHz: 3683.4875
+      Seconds: 0.45
+    - PeakDb: -1.0086901
+      RmsDb: -11.81353
+      Dc: 0.0000000023383373
+      LoopSeam: 0.0000796087
+      CentroidHz: 3664.4138
+      Seconds: 0.40743765
+    - PeakDb: -1.0086907
+      RmsDb: -11.787764
+      Dc: -8.5778235e-10
+      LoopSeam: 0.00008075277
+      CentroidHz: 3542.1895
+      Seconds: 0.42571428
+  - Id: Pulver/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 631221ad6ee08d04ba7f01fe15764d66, type: 3}
+    - {fileID: 8300000, guid: 877cecdf915f7b640b9bfc2504aa79c4, type: 3}
+    - {fileID: 8300000, guid: 100a799ff46f4794e87e2fc323f7fbe3, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.537356
+      Dc: -0.000000002371998
+      LoopSeam: 0.0000013381359
+      CentroidHz: 3564.3408
+      Seconds: 0.22
+    - PeakDb: -1.0086907
+      RmsDb: -10.449451
+      Dc: -4.8406024e-10
+      LoopSeam: 0.0000011485536
+      CentroidHz: 3718.9648
+      Seconds: 0.23340136
+    - PeakDb: -1.0086901
+      RmsDb: -10.499133
+      Dc: -0.0000000021301254
+      LoopSeam: 0.000001472712
+      CentroidHz: 3650.7537
+      Seconds: 0.21151927
+  - Id: Pulver/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: d79edb2283054534bbf1d3237f1faf7d, type: 3}
+    - {fileID: 8300000, guid: 8c5450524df68a842bbde0c26597f011, type: 3}
+    - {fileID: 8300000, guid: 4545221c5d21a0d4ab958baee261b9e5, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.379535
+      Dc: 0.0000000026566365
+      LoopSeam: 0.0000013372337
+      CentroidHz: 3962.195
+      Seconds: 0.28
+    - PeakDb: -1.0086907
+      RmsDb: -10.407194
+      Dc: 0.0000000027447746
+      LoopSeam: 0.0000011448574
+      CentroidHz: 3526.6997
+      Seconds: 0.2722449
+    - PeakDb: -1.0086901
+      RmsDb: -10.470639
+      Dc: 0.000000001935615
+      LoopSeam: 0.0000009752694
+      CentroidHz: 3799.4548
+      Seconds: 0.2906576
+  - Id: Pulver/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: a948861a4b841774aa1237a4923b2d1d, type: 3}
+    - {fileID: 8300000, guid: 99d2a2a7bfdf8ba48acbfdb54fdb6331, type: 3}
+    - {fileID: 8300000, guid: 928af6671f6cca247af1f5ee5f05b0eb, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.454462
+      Dc: -7.914002e-10
+      LoopSeam: 0.000007728231
+      CentroidHz: 3205.293
+      Seconds: 0.34
+    - PeakDb: -1.0086907
+      RmsDb: -10.532545
+      Dc: 0.0000000016120445
+      LoopSeam: 0.0000050523086
+      CentroidHz: 3144.3352
+      Seconds: 0.31156462
+    - PeakDb: -1.0086907
+      RmsDb: -10.5
+      Dc: -0.0000000016069732
+      LoopSeam: 0.000004309695
+      CentroidHz: 3126.504
+      Seconds: 0.33517006
+  - Id: Pulver/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: c6a7a841201247849bfe7dd5d09c3b01, type: 3}
+    - {fileID: 8300000, guid: 34a7a8d8e0281dc49b62e4fe1d238d69, type: 3}
+    - {fileID: 8300000, guid: 25f8fb025b68f5a4382ff35dc33311b2, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.896988
+      Dc: 0.000000002272126
+      LoopSeam: 0.00008763527
+      CentroidHz: 4425.27
+      Seconds: 0.42
+    - PeakDb: -1.0086907
+      RmsDb: -10.914024
+      Dc: 0.0000000022941442
+      LoopSeam: 0.000007787166
+      CentroidHz: 4465.608
+      Seconds: 0.4292517
+    - PeakDb: -1.0086901
+      RmsDb: -10.917479
+      Dc: 0.0000000014323908
+      LoopSeam: 0.00000015372643
+      CentroidHz: 4391.618
+      Seconds: 0.40226758
+  - Id: Pulver/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: cd126891eea0790479f5ee5817e03b9c, type: 3}
+    - {fileID: 8300000, guid: 90c5fc2e67ecf83458a705e456ff3ded, type: 3}
+    - {fileID: 8300000, guid: f2ba6ef52dbe1084a812dc4b34f5c870, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.453454
+      Dc: -0.0000000029489617
+      LoopSeam: 0.00001163609
+      CentroidHz: 816.41266
+      Seconds: 0.65
+    - PeakDb: -1.0086907
+      RmsDb: -10.500017
+      Dc: 0.0000000014128957
+      LoopSeam: 0.0000120967015
+      CentroidHz: 853.0434
+      Seconds: 0.60929704
+    - PeakDb: -1.0012918
+      RmsDb: -10.307988
+      Dc: -0.0000000012555895
+      LoopSeam: 0.0000115575385
+      CentroidHz: 797.6126
+      Seconds: 0.5860771
+  - Id: Staubgold/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 39322962d10c184479c3d2d8a9a625fa, type: 3}
+    - {fileID: 8300000, guid: 93797eef386795845babf392a89e8ea6, type: 3}
+    - {fileID: 8300000, guid: ae8317ba57a10b2458830d7e0bf5cfed, type: 3}
+    Stats:
+    - PeakDb: -1.0052636
+      RmsDb: -10.154913
+      Dc: -0.0000000015262235
+      LoopSeam: 0.00000009749783
+      CentroidHz: 1816.4153
+      Seconds: 0.7
+    - PeakDb: -1.0140116
+      RmsDb: -10.147166
+      Dc: -3.397862e-10
+      LoopSeam: 0.00000013620593
+      CentroidHz: 1821.0197
+      Seconds: 0.7546712
+    - PeakDb: -1.0089989
+      RmsDb: -10.147542
+      Dc: 0.0000000010401527
+      LoopSeam: 0.00000003716559
+      CentroidHz: 1810.6854
+      Seconds: 0.7545125
+  - Id: Staubgold/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: e0e505b6a3628944ebec036ade56e222, type: 3}
+    - {fileID: 8300000, guid: a76677971c7742f409b4ec2d1882b8f5, type: 3}
+    - {fileID: 8300000, guid: 102be8fdaddcf2c4cb3c87de32c469e3, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -11.756544
+      Dc: -0.0000000014571413
+      LoopSeam: 0.00007938905
+      CentroidHz: 3369.3171
+      Seconds: 0.45
+    - PeakDb: -1.0086907
+      RmsDb: -11.707171
+      Dc: -9.2108465e-10
+      LoopSeam: 0.00007482077
+      CentroidHz: 3155.9263
+      Seconds: 0.42276645
+    - PeakDb: -1.0086901
+      RmsDb: -11.719467
+      Dc: 9.374904e-10
+      LoopSeam: 0.00007942447
+      CentroidHz: 3113.2761
+      Seconds: 0.48020408
+  - Id: Staubgold/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 361eb20de8065a445a6d08196160e6fe, type: 3}
+    - {fileID: 8300000, guid: 3eca5aadae81c404783e76f347dc0a28, type: 3}
+    - {fileID: 8300000, guid: eede0ae73c1293640af38ff14df2a608, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.703426
+      Dc: -0.0000000011596105
+      LoopSeam: 0.0000014963298
+      CentroidHz: 2944.0447
+      Seconds: 0.22
+    - PeakDb: -1.0086907
+      RmsDb: -10.641251
+      Dc: -1.9051086e-10
+      LoopSeam: 0.000001464854
+      CentroidHz: 2950.5317
+      Seconds: 0.22637188
+    - PeakDb: -1.0086907
+      RmsDb: -10.712132
+      Dc: 6.177655e-10
+      LoopSeam: 0.0000018715509
+      CentroidHz: 2773.5784
+      Seconds: 0.1997279
+  - Id: Staubgold/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: f6a327233547f48438e18f04f89d057b, type: 3}
+    - {fileID: 8300000, guid: d91480c25b1fce1478d65424af57040f, type: 3}
+    - {fileID: 8300000, guid: 24a16ad243286124b90f5fda67ebcf8e, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.685301
+      Dc: 3.0931585e-10
+      LoopSeam: 0.0000013985846
+      CentroidHz: 3072.174
+      Seconds: 0.28
+    - PeakDb: -1.0086907
+      RmsDb: -10.772586
+      Dc: 4.004632e-10
+      LoopSeam: 0.0000010093208
+      CentroidHz: 2915.0195
+      Seconds: 0.2817687
+    - PeakDb: -1.0086907
+      RmsDb: -10.781084
+      Dc: -3.7701386e-10
+      LoopSeam: 0.000001325141
+      CentroidHz: 2678.6519
+      Seconds: 0.27789116
+  - Id: Staubgold/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: fd79115b66daf364089ac53a090be6d7, type: 3}
+    - {fileID: 8300000, guid: 390580e5abfc2ed43939f91fc146f5cb, type: 3}
+    - {fileID: 8300000, guid: 21a3c19e74205f747898235f00ce252c, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.383264
+      Dc: -0.0000000024499849
+      LoopSeam: 0.0000026685884
+      CentroidHz: 2726.9324
+      Seconds: 0.34
+    - PeakDb: -1.0086907
+      RmsDb: -10.464579
+      Dc: 0.0000000029576248
+      LoopSeam: 0.0000014004763
+      CentroidHz: 2481.2947
+      Seconds: 0.36637187
+    - PeakDb: -1.0086901
+      RmsDb: -10.396002
+      Dc: -0.000000003455509
+      LoopSeam: 0.00000057462603
+      CentroidHz: 2760.9875
+      Seconds: 0.34061223
+  - Id: Staubgold/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: d619e2484bd6182448640bc5ed06bab6, type: 3}
+    - {fileID: 8300000, guid: 4db921c16095ced4185cd2464e8fe52a, type: 3}
+    - {fileID: 8300000, guid: c7a3f80ebf6fbc244afca7c5f986abd5, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -11.27317
+      Dc: 0.0000000015529064
+      LoopSeam: 0.000008802046
+      CentroidHz: 3924.0232
+      Seconds: 0.42
+    - PeakDb: -1.0086907
+      RmsDb: -11.324195
+      Dc: 8.4531043e-10
+      LoopSeam: 0.000051348296
+      CentroidHz: 3933.8203
+      Seconds: 0.45678005
+    - PeakDb: -1.0086901
+      RmsDb: -11.573164
+      Dc: 0.0000000012498524
+      LoopSeam: 0.000020139094
+      CentroidHz: 4391.803
+      Seconds: 0.4119501
+  - Id: Staubgold/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: a9347e8bd83f4124ab654e2eaf1d1d21, type: 3}
+    - {fileID: 8300000, guid: 2b499968bd7ab2c459c4961392791578, type: 3}
+    - {fileID: 8300000, guid: a637fdd7aac2ee14ba221b1ef5d5383b, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.430098
+      Dc: -0.0000000017796923
+      LoopSeam: 0.000019516738
+      CentroidHz: 1221.658
+      Seconds: 0.65
+    - PeakDb: -1.0086901
+      RmsDb: -10.525369
+      Dc: -0.0000000026461886
+      LoopSeam: 0.000019100546
+      CentroidHz: 1233.3335
+      Seconds: 0.6676644
+    - PeakDb: -1.0086907
+      RmsDb: -10.456563
+      Dc: -0.000000002671181
+      LoopSeam: 0.000019369349
+      CentroidHz: 1230.7358
+      Seconds: 0.6531519
+  - Id: Tiefviolett/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: df7dbc953676c354b863be0fe8fa2c38, type: 3}
+    - {fileID: 8300000, guid: 7c05fedf411ddc04d8926e49f5f1b452, type: 3}
+    - {fileID: 8300000, guid: bee3e9373e63b3243b28263dfa106ee8, type: 3}
+    Stats:
+    - PeakDb: -1.0099845
+      RmsDb: -10.124616
+      Dc: 0.0000000031455791
+      LoopSeam: 0.000000059982995
+      CentroidHz: 974.446
+      Seconds: 0.7
+    - PeakDb: -1.0028547
+      RmsDb: -10.130462
+      Dc: 0.0000000031237812
+      LoopSeam: 0.000000084604835
+      CentroidHz: 958.708
+      Seconds: 0.699161
+    - PeakDb: -1.0047021
+      RmsDb: -10.172127
+      Dc: 9.445164e-10
+      LoopSeam: 0.000000043422915
+      CentroidHz: 1027.854
+      Seconds: 0.73594105
+  - Id: Tiefviolett/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 76b711de647f21443bbfb8c4e56bd7c1, type: 3}
+    - {fileID: 8300000, guid: 63ff7da963fff944c8aae86addaed9f2, type: 3}
+    - {fileID: 8300000, guid: 107b3169ce5a04145be3b831607857e1, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -11.418804
+      Dc: -0.0000000019412953
+      LoopSeam: 0.000104674575
+      CentroidHz: 2881.3618
+      Seconds: 0.45
+    - PeakDb: -1.0086901
+      RmsDb: -11.502366
+      Dc: -4.5483123e-10
+      LoopSeam: 0.00010689325
+      CentroidHz: 2973.2625
+      Seconds: 0.4054195
+    - PeakDb: -1.0086907
+      RmsDb: -11.482527
+      Dc: 0.0000000016101582
+      LoopSeam: 0.000106651016
+      CentroidHz: 2961.709
+      Seconds: 0.4769161
+  - Id: Tiefviolett/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 8e1c884b01a5a92439a2d6c83105a99c, type: 3}
+    - {fileID: 8300000, guid: 4e1ecb82ac6413d48af46e5d0495d770, type: 3}
+    - {fileID: 8300000, guid: eba329f069cb84e46bb64ddb82cd9e4c, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.677794
+      Dc: 0.000000002867311
+      LoopSeam: 0.0000016927952
+      CentroidHz: 2807.379
+      Seconds: 0.22
+    - PeakDb: -1.0086901
+      RmsDb: -10.644793
+      Dc: -0.0000000023395912
+      LoopSeam: 0.0000017505081
+      CentroidHz: 2882.903
+      Seconds: 0.22904763
+    - PeakDb: -1.0086907
+      RmsDb: -10.953466
+      Dc: 9.511126e-10
+      LoopSeam: 0.000001324297
+      CentroidHz: 2835.824
+      Seconds: 0.23040816
+  - Id: Tiefviolett/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: dec7f8a10ffa031489f6eba9e95f28c4, type: 3}
+    - {fileID: 8300000, guid: f069e64d817f03b498c605ac3083c5a5, type: 3}
+    - {fileID: 8300000, guid: 9d9312ac7393dc84f898af00412a26aa, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.616531
+      Dc: -0.0000000028281373
+      LoopSeam: 0.00000131251
+      CentroidHz: 3155.4722
+      Seconds: 0.28
+    - PeakDb: -1.0086907
+      RmsDb: -10.551735
+      Dc: -0.0000000014044903
+      LoopSeam: 0.0000016909325
+      CentroidHz: 3232.8564
+      Seconds: 0.26160997
+    - PeakDb: -1.000519
+      RmsDb: -10.520148
+      Dc: -0.0000000019113435
+      LoopSeam: 0.0000017173315
+      CentroidHz: 3128.749
+      Seconds: 0.25201815
+  - Id: Tiefviolett/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 7f227b36743b96a40b6e1d9c2c2ea491, type: 3}
+    - {fileID: 8300000, guid: 8fb8659868d66244782eb503c71557e7, type: 3}
+    - {fileID: 8300000, guid: d9c5df0b565492944bd32a37f091bfe0, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.884111
+      Dc: -0.0000000025901739
+      LoopSeam: 0.00000092515256
+      CentroidHz: 3322.1675
+      Seconds: 0.34
+    - PeakDb: -1.0086901
+      RmsDb: -10.842611
+      Dc: -0.0000000011108865
+      LoopSeam: 0.000001201668
+      CentroidHz: 3123.5747
+      Seconds: 0.33972788
+    - PeakDb: -1.0086907
+      RmsDb: -10.939789
+      Dc: -0.0000000034938827
+      LoopSeam: 0.000000998567
+      CentroidHz: 3287.818
+      Seconds: 0.31151927
+  - Id: Tiefviolett/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: f07e0cbf6f0f06f429ae808abb9a9929, type: 3}
+    - {fileID: 8300000, guid: 8259c49a786af1c43b03fb77ace86d19, type: 3}
+    - {fileID: 8300000, guid: d5421f376d2b04a49a9ad2bd7302c4c1, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -11.205831
+      Dc: -0.0000000028376779
+      LoopSeam: 0.00000040832674
+      CentroidHz: 598.5515
+      Seconds: 0.42
+    - PeakDb: -1.0086907
+      RmsDb: -11.3304
+      Dc: -2.4403754e-10
+      LoopSeam: 0.0000000013969839
+      CentroidHz: 598.72406
+      Seconds: 0.44
+    - PeakDb: -1.0086907
+      RmsDb: -11.124946
+      Dc: 6.969263e-10
+      LoopSeam: 0.00000016609556
+      CentroidHz: 624.525
+      Seconds: 0.38693878
+  - Id: Tiefviolett/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 949cbcf21f08aad4d8ff6e03c0c0f8cb, type: 3}
+    - {fileID: 8300000, guid: ef8ba37c2e21388409a9a7c4a6c36be9, type: 3}
+    - {fileID: 8300000, guid: 584012203dddc474580bbdae1381bbfd, type: 3}
+    Stats:
+    - PeakDb: -1.0004802
+      RmsDb: -10.353879
+      Dc: -9.627524e-10
+      LoopSeam: 0.0000001853623
+      CentroidHz: 391.60767
+      Seconds: 0.65
+    - PeakDb: -1.00576
+      RmsDb: -10.300266
+      Dc: -0.0000000017351477
+      LoopSeam: 0.00000016034028
+      CentroidHz: 404.18814
+      Seconds: 0.7040363
+    - PeakDb: -1.0146452
+      RmsDb: -10.29191
+      Dc: 0.000000003511421
+      LoopSeam: 0.00000013606041
+      CentroidHz: 390.00787
+      Seconds: 0.6885261
+  - Id: Stahl/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 72e5926db7af6444485416111062c576, type: 3}
+    - {fileID: 8300000, guid: 88fa635b8a6da2a4d8488ffce44085ab, type: 3}
+    - {fileID: 8300000, guid: 1f59d86d68ef6c642bb42b0007eb4701, type: 3}
+    Stats:
+    - PeakDb: -1.0132879
+      RmsDb: -10.100237
+      Dc: 0.0000000015534106
+      LoopSeam: 0.000023244793
+      CentroidHz: 3353.6245
+      Seconds: 0.7
+    - PeakDb: -1.0234587
+      RmsDb: -10.100245
+      Dc: 0.0000000033033272
+      LoopSeam: 0.000022646404
+      CentroidHz: 3423.2078
+      Seconds: 0.76770973
+    - PeakDb: -1.0179195
+      RmsDb: -10.099627
+      Dc: -0.0000000017281443
+      LoopSeam: 0.00002268716
+      CentroidHz: 3387.57
+      Seconds: 0.69081634
+  - Id: Stahl/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 92fb738110eefd745aa06eb3847e8f24, type: 3}
+    - {fileID: 8300000, guid: 8f16f796217e4be4fa62ef71a3068c9d, type: 3}
+    - {fileID: 8300000, guid: 3a2a030cc8af2f24e88c8ea37884841a, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -11.548844
+      Dc: -0.0000000018752908
+      LoopSeam: 0.00014971424
+      CentroidHz: 6447.4473
+      Seconds: 0.45
+    - PeakDb: -1.0086901
+      RmsDb: -11.522936
+      Dc: -0.0000000015989319
+      LoopSeam: 0.00014525566
+      CentroidHz: 5870.586
+      Seconds: 0.45519274
+    - PeakDb: -1.0086907
+      RmsDb: -11.531314
+      Dc: 0.0000000020144486
+      LoopSeam: 0.00014759522
+      CentroidHz: 6036.88
+      Seconds: 0.46321994
+  - Id: Stahl/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: fbed0a6ae72266e478f3ef5ced632887, type: 3}
+    - {fileID: 8300000, guid: 4cab7e78d0afecd458e5dc9c432c31fe, type: 3}
+    - {fileID: 8300000, guid: 5de1c48219c1c214c8c84bb51eaa7c07, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.71094
+      Dc: 3.1696323e-10
+      LoopSeam: 0.000001410488
+      CentroidHz: 3394.8318
+      Seconds: 0.22
+    - PeakDb: -1.0086907
+      RmsDb: -10.683657
+      Dc: -0.0000000020338138
+      LoopSeam: 0.0000016824342
+      CentroidHz: 3060.7754
+      Seconds: 0.21623583
+    - PeakDb: -1.0086907
+      RmsDb: -10.609802
+      Dc: -0.0000000024690499
+      LoopSeam: 0.0000013620811
+      CentroidHz: 3687.2148
+      Seconds: 0.22045352
+  - Id: Stahl/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 74846c80ca50f024ea7552c04f49e0e8, type: 3}
+    - {fileID: 8300000, guid: 9d7bb20e738798741b9d11c3571b0738, type: 3}
+    - {fileID: 8300000, guid: c6c705a44ac343b4e8b52a57473c553b, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.685315
+      Dc: 0.0000000016599382
+      LoopSeam: 0.0000011467055
+      CentroidHz: 3551.2283
+      Seconds: 0.28
+    - PeakDb: -1.0086907
+      RmsDb: -10.742583
+      Dc: 0.0000000022735254
+      LoopSeam: 0.0000010094373
+      CentroidHz: 3386.8904
+      Seconds: 0.26462585
+    - PeakDb: -1.0086901
+      RmsDb: -10.737805
+      Dc: -0.0000000014899734
+      LoopSeam: 0.0000013714889
+      CentroidHz: 3715.5813
+      Seconds: 0.26108843
+  - Id: Stahl/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 097bfdea2ce4e5a4c9685f66555eb93e, type: 3}
+    - {fileID: 8300000, guid: eb1340b60996b0f4ab85171e640cbb33, type: 3}
+    - {fileID: 8300000, guid: fb5284e524a97a348b028eb45d04fa87, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.765086
+      Dc: 0.000000002120047
+      LoopSeam: 0.0000010379008
+      CentroidHz: 3771.804
+      Seconds: 0.34
+    - PeakDb: -1.0086907
+      RmsDb: -10.688411
+      Dc: 0.0000000030557041
+      LoopSeam: 0.00000087797525
+      CentroidHz: 4040.7678
+      Seconds: 0.34986395
+    - PeakDb: -1.0086907
+      RmsDb: -10.731607
+      Dc: 0.0000000014442731
+      LoopSeam: 0.0000010186923
+      CentroidHz: 3757.76
+      Seconds: 0.35553288
+  - Id: Stahl/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 2c30a25ee6b2c1d4ab8a4eb2eea7f139, type: 3}
+    - {fileID: 8300000, guid: cb7d5e4b436beff409332d3c38373624, type: 3}
+    - {fileID: 8300000, guid: c9ab229d1389eed46ba110771229f1f4, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -11.623587
+      Dc: 9.181334e-10
+      LoopSeam: 0.000016639446
+      CentroidHz: 6524.35
+      Seconds: 0.42
+    - PeakDb: -1.0086901
+      RmsDb: -11.614572
+      Dc: 0.0000000016446848
+      LoopSeam: 0.00009302609
+      CentroidHz: 6725.398
+      Seconds: 0.426712
+    - PeakDb: -1.0086907
+      RmsDb: -11.619817
+      Dc: -0.0000000010079557
+      LoopSeam: 0.00001575076
+      CentroidHz: 6507.8594
+      Seconds: 0.45104307
+  - Id: Stahl/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 3ff70b62059189d41b3bc93c703cff03, type: 3}
+    - {fileID: 8300000, guid: cad2d04fd30c03545a8a315756159ce9, type: 3}
+    - {fileID: 8300000, guid: 5f12a3ccea0a06d45aed6661931007c6, type: 3}
+    Stats:
+    - PeakDb: -1.0004928
+      RmsDb: -10.362537
+      Dc: -0.0000000033628007
+      LoopSeam: 0.0000398203
+      CentroidHz: 2408.2866
+      Seconds: 0.65
+    - PeakDb: -1.0086901
+      RmsDb: -10.538069
+      Dc: 0.0000000016437595
+      LoopSeam: 0.000041112005
+      CentroidHz: 2519.9495
+      Seconds: 0.681678
+    - PeakDb: -1.0086907
+      RmsDb: -10.398187
+      Dc: -0.0000000023019908
+      LoopSeam: 0.000038697195
+      CentroidHz: 2395.7202
+      Seconds: 0.60594106
+  - Id: Richtglut/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: bd2dc3445e5a02340a4de68c047ec65d, type: 3}
+    - {fileID: 8300000, guid: 998d4a711716f80479ab95be96dfb70a, type: 3}
+    - {fileID: 8300000, guid: b33c4963684cb2a4f909473fa6bf5eda, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.232758
+      Dc: 0.0000000018456704
+      LoopSeam: 0.000020783045
+      CentroidHz: 2989.1016
+      Seconds: 0.7
+    - PeakDb: -1.0086901
+      RmsDb: -10.23147
+      Dc: 0.0000000019017452
+      LoopSeam: 0.000002228422
+      CentroidHz: 3000.1875
+      Seconds: 0.6537415
+    - PeakDb: -1.0086901
+      RmsDb: -10.238825
+      Dc: -9.429931e-10
+      LoopSeam: 0.000019068364
+      CentroidHz: 2994.7698
+      Seconds: 0.634195
+  - Id: Richtglut/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 59e9e82d4e0679145a3e3c1936c40f1f, type: 3}
+    - {fileID: 8300000, guid: 8af22ebff53b202419e8105885637a01, type: 3}
+    - {fileID: 8300000, guid: 012d1654f78a68a4fb5e1de93cf0aca9, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -11.536607
+      Dc: -0.0000000023415574
+      LoopSeam: 0.000049944036
+      CentroidHz: 5050.9966
+      Seconds: 0.45
+    - PeakDb: -1.0086901
+      RmsDb: -11.493024
+      Dc: -0.0000000017454632
+      LoopSeam: 0.00005117926
+      CentroidHz: 4973.5723
+      Seconds: 0.4179365
+    - PeakDb: -1.0086901
+      RmsDb: -11.485428
+      Dc: 0.0000000020410185
+      LoopSeam: 0.00005006988
+      CentroidHz: 4777.1035
+      Seconds: 0.4459864
+  - Id: Richtglut/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 93128166776165346949d0364ebfb90f, type: 3}
+    - {fileID: 8300000, guid: ae2bc438e62edd9468817270aa06920c, type: 3}
+    - {fileID: 8300000, guid: 4713b271c44ddf545a2a3fdef2351031, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.7086525
+      Dc: 0.0000000016835319
+      LoopSeam: 0.0000016718404
+      CentroidHz: 4099.9595
+      Seconds: 0.22
+    - PeakDb: -1.0086907
+      RmsDb: -10.636524
+      Dc: -8.1847007e-10
+      LoopSeam: 0.0000018489081
+      CentroidHz: 4156.526
+      Seconds: 0.21478458
+    - PeakDb: -1.0086907
+      RmsDb: -10.765615
+      Dc: 0.0000000022406628
+      LoopSeam: 0.0000014654943
+      CentroidHz: 4075.0974
+      Seconds: 0.22294785
+  - Id: Richtglut/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 8098ba5dd5a7ac94fa8139fadcb18bb6, type: 3}
+    - {fileID: 8300000, guid: 4e6c30cf626939d4294e8b7bc9ed6dbc, type: 3}
+    - {fileID: 8300000, guid: 9fb4a6a2a2fed074ea53226b8d2af50f, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.692748
+      Dc: -0.0000000024324787
+      LoopSeam: 0.0000015392143
+      CentroidHz: 4498.092
+      Seconds: 0.28
+    - PeakDb: -1.0086907
+      RmsDb: -10.61019
+      Dc: -8.291665e-10
+      LoopSeam: 0.000000955115
+      CentroidHz: 4668.097
+      Seconds: 0.30058956
+    - PeakDb: -1.0086907
+      RmsDb: -10.776936
+      Dc: -2.332291e-10
+      LoopSeam: 0.0000011527591
+      CentroidHz: 4661.9077
+      Seconds: 0.30582768
+  - Id: Richtglut/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 23eedd3a45e2b794a83b02ed39dc8e77, type: 3}
+    - {fileID: 8300000, guid: e3724b62b5302f8438310cddb304a3a6, type: 3}
+    - {fileID: 8300000, guid: f94a44a8b45e3564395a0b90ef36a22f, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.661547
+      Dc: -0.0000000031607834
+      LoopSeam: 0.0000011139055
+      CentroidHz: 4618.6685
+      Seconds: 0.34
+    - PeakDb: -1.0086907
+      RmsDb: -10.664411
+      Dc: 0.0000000020926836
+      LoopSeam: 0.0000007728813
+      CentroidHz: 4736.382
+      Seconds: 0.34845805
+    - PeakDb: -1.0086907
+      RmsDb: -10.651089
+      Dc: -3.9466166e-10
+      LoopSeam: 0.0000010150397
+      CentroidHz: 4418.7485
+      Seconds: 0.31893423
+  - Id: Richtglut/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 3232eec1eec2546449b2b399eff250fa, type: 3}
+    - {fileID: 8300000, guid: 8756e1f5eca3e844bba107da49cf2e60, type: 3}
+    - {fileID: 8300000, guid: 05fb4f1f3eaa1e648b84078e669340e6, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.92345
+      Dc: 5.183586e-10
+      LoopSeam: 0.00013646822
+      CentroidHz: 4923.71
+      Seconds: 0.42
+    - PeakDb: -1.0086901
+      RmsDb: -10.95808
+      Dc: 7.2338463e-10
+      LoopSeam: 0.00009392982
+      CentroidHz: 4857.3066
+      Seconds: 0.41489795
+    - PeakDb: -1.0086907
+      RmsDb: -11.062261
+      Dc: 0.0000000011297534
+      LoopSeam: 0.000086716056
+      CentroidHz: 4874.606
+      Seconds: 0.43888888
+  - Id: Richtglut/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 892da28c32277b14e8bd6f8ea503f905, type: 3}
+    - {fileID: 8300000, guid: 53e1b92bb34e39b4387cd854f9b2a026, type: 3}
+    - {fileID: 8300000, guid: 75e3934bd2739174e8feca8ea93e0025, type: 3}
+    Stats:
+    - PeakDb: -1.0040971
+      RmsDb: -10.284862
+      Dc: -0.000000003244524
+      LoopSeam: 0.000036057827
+      CentroidHz: 2030.0914
+      Seconds: 0.65
+    - PeakDb: -1.0105249
+      RmsDb: -10.226316
+      Dc: 4.93024e-10
+      LoopSeam: 0.00003497572
+      CentroidHz: 1972.2882
+      Seconds: 0.6058957
+    - PeakDb: -1.0042564
+      RmsDb: -10.273929
+      Dc: -0.0000000018686557
+      LoopSeam: 0.00003472968
+      CentroidHz: 1970.8387
+      Seconds: 0.69798183
+  - Id: Bollwerk/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 5fd7493c48761d347b8994e841cc9460, type: 3}
+    - {fileID: 8300000, guid: 5667ea204836746439fde838447264db, type: 3}
+    - {fileID: 8300000, guid: 3efdb7de61d0f374191089fd047b4175, type: 3}
+    Stats:
+    - PeakDb: -1.043529
+      RmsDb: -10.064001
+      Dc: 0.0000000012395941
+      LoopSeam: 0.000022554399
+      CentroidHz: 1854.119
+      Seconds: 0.7
+    - PeakDb: -1.0578172
+      RmsDb: -10.067917
+      Dc: -0.0000000025379114
+      LoopSeam: 0.000022406275
+      CentroidHz: 1883.5625
+      Seconds: 0.75435376
+    - PeakDb: -1.0308317
+      RmsDb: -10.068933
+      Dc: 0.0000000027797027
+      LoopSeam: 0.000022595996
+      CentroidHz: 1893.8605
+      Seconds: 0.68086165
+  - Id: Bollwerk/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: aa3e880c4d26758429d5b69d44b0d6f1, type: 3}
+    - {fileID: 8300000, guid: c796afd14c10acd408701af0dc813568, type: 3}
+    - {fileID: 8300000, guid: 80bf415a206fa614eab8765dc59798f4, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -11.78903
+      Dc: 6.847363e-10
+      LoopSeam: 0.000016799779
+      CentroidHz: 2707.8176
+      Seconds: 0.45
+    - PeakDb: -1.0086901
+      RmsDb: -11.734523
+      Dc: 0.0000000012001586
+      LoopSeam: 0.000015824917
+      CentroidHz: 2599.3792
+      Seconds: 0.45916098
+    - PeakDb: -1.0086907
+      RmsDb: -11.721021
+      Dc: 0.0000000014153978
+      LoopSeam: 0.000022555876
+      CentroidHz: 2717.0413
+      Seconds: 0.4385034
+  - Id: Bollwerk/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 5d7797ce4d5c95c4291eebb93f975877, type: 3}
+    - {fileID: 8300000, guid: 55aecbbffe0e1d348a69598c0c391971, type: 3}
+    - {fileID: 8300000, guid: de10f29bfc9d948408f10ce04740d569, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.569615
+      Dc: -0.000000001374578
+      LoopSeam: 0.00000007514609
+      CentroidHz: 2805.1235
+      Seconds: 0.22
+    - PeakDb: -1.0086901
+      RmsDb: -10.599862
+      Dc: -0.000000001872227
+      LoopSeam: 0.00000031484524
+      CentroidHz: 3043.4219
+      Seconds: 0.22328798
+    - PeakDb: -1.0086901
+      RmsDb: -10.550008
+      Dc: 6.1977923e-10
+      LoopSeam: 0.00000020071457
+      CentroidHz: 2715.7395
+      Seconds: 0.23886621
+  - Id: Bollwerk/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 0febccaebe4fe28419e1095d4d9af492, type: 3}
+    - {fileID: 8300000, guid: df017a2c04f734e4bbae2a93952a180b, type: 3}
+    - {fileID: 8300000, guid: f09b45260f012774c934149ce660d1ec, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.639675
+      Dc: -5.8057303e-10
+      LoopSeam: 0.00000023166649
+      CentroidHz: 3005.1843
+      Seconds: 0.28
+    - PeakDb: -1.0086907
+      RmsDb: -10.65864
+      Dc: 4.6498835e-10
+      LoopSeam: 0.0000002788729
+      CentroidHz: 2933.9788
+      Seconds: 0.2529932
+    - PeakDb: -1.0086907
+      RmsDb: -10.726784
+      Dc: 0.0000000014076657
+      LoopSeam: 0.00000047625508
+      CentroidHz: 3210.3105
+      Seconds: 0.26344672
+  - Id: Bollwerk/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: e9aa27ae8e566d44e854ef92beed11b9, type: 3}
+    - {fileID: 8300000, guid: c5d596dd66ced5c488ac4ae149257020, type: 3}
+    - {fileID: 8300000, guid: 13878f546308e264e90282b42c4c20ee, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.57863
+      Dc: 0.0000000013162443
+      LoopSeam: 0.000001962646
+      CentroidHz: 2505.4958
+      Seconds: 0.34
+    - PeakDb: -1.0086907
+      RmsDb: -10.54838
+      Dc: 0.0000000011745231
+      LoopSeam: 0.000008510193
+      CentroidHz: 2565.9475
+      Seconds: 0.3559637
+    - PeakDb: -1.0086901
+      RmsDb: -10.528684
+      Dc: -9.8915154e-11
+      LoopSeam: 0.0000072126277
+      CentroidHz: 2625.8728
+      Seconds: 0.36931974
+  - Id: Bollwerk/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 42e9f2ec773aa73439d446b81a924e81, type: 3}
+    - {fileID: 8300000, guid: 7ca73c95a8e34ef48b78254ad32d742f, type: 3}
+    - {fileID: 8300000, guid: defef9e5105363c469bd52b5b5e70b6f, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -11.205464
+      Dc: 0.000000001217802
+      LoopSeam: 0.00003512601
+      CentroidHz: 3187.4968
+      Seconds: 0.42
+    - PeakDb: -1.0086901
+      RmsDb: -11.170063
+      Dc: -0.0000000013494632
+      LoopSeam: 0.00002580299
+      CentroidHz: 3380.832
+      Seconds: 0.4214966
+    - PeakDb: -1.0086901
+      RmsDb: -11.138277
+      Dc: -0.0000000018120637
+      LoopSeam: 0.00003070105
+      CentroidHz: 3253.4128
+      Seconds: 0.43029478
+  - Id: Bollwerk/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 20d7aa0384b43c246b3c38155b5b0dfc, type: 3}
+    - {fileID: 8300000, guid: af647ceb91236e4449a846f049e7f1ef, type: 3}
+    - {fileID: 8300000, guid: b5b12dc172a729b41a7bfe85c6e89449, type: 3}
+    Stats:
+    - PeakDb: -1.0001549
+      RmsDb: -10.399867
+      Dc: -0.0000000017818296
+      LoopSeam: 0.000021852164
+      CentroidHz: 1256.5422
+      Seconds: 0.65
+    - PeakDb: -1.0006411
+      RmsDb: -10.312498
+      Dc: -0.0000000010119754
+      LoopSeam: 0.00002222127
+      CentroidHz: 1255.5978
+      Seconds: 0.605805
+    - PeakDb: -1.0086907
+      RmsDb: -10.469131
+      Dc: 0.0000000018917867
+      LoopSeam: 0.000022895776
+      CentroidHz: 1337.5376
+      Seconds: 0.6160998
+  - Id: Sturmblau/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: e8ebf68231793554db1474621876e1dd, type: 3}
+    - {fileID: 8300000, guid: 7cb51f6de9152a44eb0b47d3986d1f93, type: 3}
+    - {fileID: 8300000, guid: cc2f487b36f227340bce5e599a2e1124, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.24955
+      Dc: -0.0000000018686377
+      LoopSeam: 0.000000058033038
+      CentroidHz: 2980.2607
+      Seconds: 0.7
+    - PeakDb: -1.0086907
+      RmsDb: -10.259417
+      Dc: 0.000000002004274
+      LoopSeam: 0.000000061059836
+      CentroidHz: 3087.6328
+      Seconds: 0.75081635
+    - PeakDb: -1.0086907
+      RmsDb: -10.285825
+      Dc: 0.0000000026588964
+      LoopSeam: 0.0000000023283064
+      CentroidHz: 2909.5657
+      Seconds: 0.6652381
+  - Id: Sturmblau/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 6ca7dcdb47f8f0e4dbfe4ade788ed5df, type: 3}
+    - {fileID: 8300000, guid: fecf31abce2924d49a9bb2f79b3f79a4, type: 3}
+    - {fileID: 8300000, guid: 77e0cd2cf5bc89740b1beebd66c11af0, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -11.408806
+      Dc: -0.0000000024525528
+      LoopSeam: 0.000018236839
+      CentroidHz: 6228.7915
+      Seconds: 0.45
+    - PeakDb: -1.0086901
+      RmsDb: -11.311627
+      Dc: -0.0000000015435591
+      LoopSeam: 0.00002675422
+      CentroidHz: 6221.273
+      Seconds: 0.4057823
+    - PeakDb: -1.0086901
+      RmsDb: -11.366687
+      Dc: 0.0000000014850964
+      LoopSeam: 0.000074561685
+      CentroidHz: 6197.0923
+      Seconds: 0.48380953
+  - Id: Sturmblau/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: f109750695c504d408e385e6d8bea641, type: 3}
+    - {fileID: 8300000, guid: 0c60194ae4ef9f74a8f9c2dc9ca5d13f, type: 3}
+    - {fileID: 8300000, guid: ae9992617e73ce3489eafd96eb577684, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.752282
+      Dc: -0.0000000016939802
+      LoopSeam: 0.0000017255661
+      CentroidHz: 4264.1646
+      Seconds: 0.22
+    - PeakDb: -1.0086907
+      RmsDb: -10.6101265
+      Dc: 7.0456824e-10
+      LoopSeam: 0.0000017657876
+      CentroidHz: 4099.151
+      Seconds: 0.22746032
+    - PeakDb: -1.0086901
+      RmsDb: -10.807075
+      Dc: 6.5268974e-10
+      LoopSeam: 0.0000014315883
+      CentroidHz: 4100.936
+      Seconds: 0.23011337
+  - Id: Sturmblau/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 46b4e87dcf9945643a51182abfda069d, type: 3}
+    - {fileID: 8300000, guid: 9abb05f30fd3bed4db60981e88e82742, type: 3}
+    - {fileID: 8300000, guid: 9e1b41cb7a8ec754fbe227049b001c25, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.645016
+      Dc: 0.000000002254953
+      LoopSeam: 0.0000013086828
+      CentroidHz: 4576.9927
+      Seconds: 0.28
+    - PeakDb: -1.0086907
+      RmsDb: -10.679503
+      Dc: -0.000000001538779
+      LoopSeam: 0.0000010879012
+      CentroidHz: 4664.57
+      Seconds: 0.2796372
+    - PeakDb: -1.0086901
+      RmsDb: -10.63662
+      Dc: 3.2566214e-10
+      LoopSeam: 0.0000012307428
+      CentroidHz: 4466.3335
+      Seconds: 0.26258504
+  - Id: Sturmblau/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 83eb901f907634743ab0dae173f759f6, type: 3}
+    - {fileID: 8300000, guid: 1d14da11f3358cf409ba5df339b21d0e, type: 3}
+    - {fileID: 8300000, guid: d4a52aec838f45245b4cf228aa922533, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.406208
+      Dc: 0.0000000017883237
+      LoopSeam: 0.0000074687414
+      CentroidHz: 4037.931
+      Seconds: 0.34
+    - PeakDb: -1.0086907
+      RmsDb: -10.450588
+      Dc: -0.0000000030088914
+      LoopSeam: 0.0000066281063
+      CentroidHz: 3844.1965
+      Seconds: 0.36435375
+    - PeakDb: -1.0006486
+      RmsDb: -10.385947
+      Dc: 0.0000000030108807
+      LoopSeam: 0.0000032216776
+      CentroidHz: 3723.1025
+      Seconds: 0.32376418
+  - Id: Sturmblau/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: fbafc014ee478de4dab58eafc7d60fde, type: 3}
+    - {fileID: 8300000, guid: 1638e6718a0b8384b88a0a275bf7ee52, type: 3}
+    - {fileID: 8300000, guid: 3170921eed4a0eb4aa36748e7f754d1b, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -11.451204
+      Dc: 0.0000000011140237
+      LoopSeam: 0.000010802178
+      CentroidHz: 6391.5293
+      Seconds: 0.42
+    - PeakDb: -1.0086901
+      RmsDb: -11.471576
+      Dc: -0.000000002044743
+      LoopSeam: 0.00002793959
+      CentroidHz: 6646.4746
+      Seconds: 0.41873017
+    - PeakDb: -1.0086901
+      RmsDb: -11.453413
+      Dc: 0.0000000016226674
+      LoopSeam: 0.00023248233
+      CentroidHz: 6318.9653
+      Seconds: 0.42743763
+  - Id: Sturmblau/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 693feca815b84af4ab1e5e0e41fdec45, type: 3}
+    - {fileID: 8300000, guid: 5a43790c635c7f346ae24f324221c34a, type: 3}
+    - {fileID: 8300000, guid: 118e52f829e6d2947bd2020f126c26cc, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -10.518228
+      Dc: 0.0000000014930961
+      LoopSeam: 0.000027308244
+      CentroidHz: 1794.342
+      Seconds: 0.65
+    - PeakDb: -1.0086901
+      RmsDb: -10.501095
+      Dc: 8.020244e-10
+      LoopSeam: 0.000027245347
+      CentroidHz: 1817.2753
+      Seconds: 0.7055102
+    - PeakDb: -1.0086907
+      RmsDb: -10.492864
+      Dc: 0.0000000024906857
+      LoopSeam: 0.00002685345
+      CentroidHz: 1776.0709
+      Seconds: 0.69492066
+  - Id: Smaragd/Charge
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: eec79b801599574428b2b6788e550241, type: 3}
+    - {fileID: 8300000, guid: 62addb8a37bf8244b8ff033afb0c030e, type: 3}
+    - {fileID: 8300000, guid: fab978228808d7141bfcd4cf957eaf7d, type: 3}
+    Stats:
+    - PeakDb: -1.006654
+      RmsDb: -10.1425705
+      Dc: 0.000000002310797
+      LoopSeam: 0.00000015669502
+      CentroidHz: 2488.098
+      Seconds: 0.7
+    - PeakDb: -1.0164167
+      RmsDb: -10.137497
+      Dc: 0.0000000025244644
+      LoopSeam: 0.00000018127685
+      CentroidHz: 2490.5332
+      Seconds: 0.76816326
+    - PeakDb: -1.005828
+      RmsDb: -10.137425
+      Dc: -6.842403e-10
+      LoopSeam: 0.00000009452924
+      CentroidHz: 2465.4026
+      Seconds: 0.67587304
+  - Id: Smaragd/Release
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: e638a2afdb048ad4f83a303f3bf129da, type: 3}
+    - {fileID: 8300000, guid: ef45fc55727569845a862b2b36445a58, type: 3}
+    - {fileID: 8300000, guid: 5104402a048368445a8eef5c4a245cac, type: 3}
+    Stats:
+    - PeakDb: -1.0086907
+      RmsDb: -11.62047
+      Dc: 0.0000000013136514
+      LoopSeam: 0.000058886944
+      CentroidHz: 3772.2378
+      Seconds: 0.45
+    - PeakDb: -1.0086901
+      RmsDb: -11.570548
+      Dc: 0.0000000015529499
+      LoopSeam: 0.00006093012
+      CentroidHz: 3761.2678
+      Seconds: 0.45081633
+    - PeakDb: -1.0086901
+      RmsDb: -11.584751
+      Dc: -0.000000001931559
+      LoopSeam: 0.000059069425
+      CentroidHz: 3524.7268
+      Seconds: 0.43641722
+  - Id: Smaragd/Swing1
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: a91c5c9b35903cf439de930af9ed08ac, type: 3}
+    - {fileID: 8300000, guid: d9720402ae5c3384dbb6407460dec4f8, type: 3}
+    - {fileID: 8300000, guid: 491daa1575352634c99f385493527b6d, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.731973
+      Dc: -0.0000000012956964
+      LoopSeam: 0.0000016378472
+      CentroidHz: 2889.176
+      Seconds: 0.22
+    - PeakDb: -1.0086901
+      RmsDb: -10.640754
+      Dc: -0.0000000036456267
+      LoopSeam: 0.0000015908226
+      CentroidHz: 2763.483
+      Seconds: 0.21934241
+    - PeakDb: -1.0086901
+      RmsDb: -10.712066
+      Dc: -0.0000000012867537
+      LoopSeam: 0.0000014866819
+      CentroidHz: 3175.3215
+      Seconds: 0.21340136
+  - Id: Smaragd/Swing2
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: a72584574a6522d4c8ce6f50633e85ed, type: 3}
+    - {fileID: 8300000, guid: bc95bfc02b4471342bee4928e3cfe379, type: 3}
+    - {fileID: 8300000, guid: 04bfbd0b1f40e634ea6f51f997d7f82f, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.713239
+      Dc: -2.8592606e-11
+      LoopSeam: 0.0000014947727
+      CentroidHz: 3095.5193
+      Seconds: 0.28
+    - PeakDb: -1.0086907
+      RmsDb: -10.648336
+      Dc: 0.0000000030801226
+      LoopSeam: 0.0000015247797
+      CentroidHz: 3076.331
+      Seconds: 0.2639229
+    - PeakDb: -1.0086901
+      RmsDb: -10.670871
+      Dc: 0.000000001982972
+      LoopSeam: 0.0000009596115
+      CentroidHz: 2915.8655
+      Seconds: 0.30628118
+  - Id: Smaragd/Swing3
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: 4c95b4b0eb306244f8db1eb909b06a49, type: 3}
+    - {fileID: 8300000, guid: 88a502cf5b574bc4f81160f365d9854d, type: 3}
+    - {fileID: 8300000, guid: aeb1f91f638a3014ba0b1ad13c35b657, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -10.71409
+      Dc: -0.0000000017540275
+      LoopSeam: 0.00000086447835
+      CentroidHz: 3204.2021
+      Seconds: 0.34
+    - PeakDb: -1.0086901
+      RmsDb: -10.681095
+      Dc: 0.0000000013784023
+      LoopSeam: 0.0000011228622
+      CentroidHz: 3029.9946
+      Seconds: 0.32632652
+    - PeakDb: -1.0086901
+      RmsDb: -10.751691
+      Dc: 0.0000000015357109
+      LoopSeam: 0.0000013720128
+      CentroidHz: 3260.7717
+      Seconds: 0.31582767
+  - Id: Smaragd/Impact
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: c38df02d5182d3341b94cd9666a1e331, type: 3}
+    - {fileID: 8300000, guid: e8fb9284365d46b4885ae37ef4e23257, type: 3}
+    - {fileID: 8300000, guid: 241035fada54835458e4c66c7cf45574, type: 3}
+    Stats:
+    - PeakDb: -1.0086901
+      RmsDb: -11.559005
+      Dc: 0.000000002046654
+      LoopSeam: 0.000013014418
+      CentroidHz: 4738.4136
+      Seconds: 0.42
+    - PeakDb: -1.0086901
+      RmsDb: -11.467169
+      Dc: -0.0000000023481597
+      LoopSeam: 0.00009200867
+      CentroidHz: 4654.784
+      Seconds: 0.41582766
+    - PeakDb: -1.0086907
+      RmsDb: -11.4139385
+      Dc: 6.8928413e-10
+      LoopSeam: 0.00004322201
+      CentroidHz: 4830.734
+      Seconds: 0.41226757
+  - Id: Smaragd/Buff
+    Category: 1
+    Group: 4
+    Loop: 0
+    Spatial: 1
+    VolumeDb: 0
+    Priority: 5
+    Clips:
+    - {fileID: 8300000, guid: e7217c50af53ece41b45bf550ba81e93, type: 3}
+    - {fileID: 8300000, guid: e697669a11d2f2f4fb7c4ca1b736b879, type: 3}
+    - {fileID: 8300000, guid: 64cfe42668775e74cbebac3e096d0467, type: 3}
+    Stats:
+    - PeakDb: -1.0034264
+      RmsDb: -10.291186
+      Dc: 0.0000000026447258
+      LoopSeam: 0.00002660144
+      CentroidHz: 1519.2189
+      Seconds: 0.65
+    - PeakDb: -1.0059832
+      RmsDb: -10.291648
+      Dc: 5.5994137e-10
+      LoopSeam: 0.000025979147
+      CentroidHz: 1480.4691
+      Seconds: 0.6388209
+    - PeakDb: -1.0047835
+      RmsDb: -10.242296
+      Dc: 0.0000000025955234
+      LoopSeam: 0.00002648676
+      CentroidHz: 1507.5573
+      Seconds: 0.6651247
   - Id: Hit/Flesh
     Category: 2
     Group: 4

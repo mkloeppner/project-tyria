@@ -12,10 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51929a5d730ca74eb5dcbb829663ed2, type: 3}
   m_Name: Trait_katalysator_10
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.TraitDefinition
-  Id: 
-  DisplayName: 
-  Description: 
-  Glyph: '?'
-  Tier: 1
-  Major: 0
-  Modifiers: []
+  Id: katalysator_t10
+  DisplayName: "Leichter Fu\xDF"
+  Description: "Ausweichen: Elan f\xFCr dich (3 s, Abklingzeit 10 s). Ausweichen: heilt dich (Abklingzeit 10 s)."
+  Glyph: L
+  Tier: 3
+  Major: 1
+  Modifiers:
+  - Kind: 9
+    Attr: 0
+    Attr2: 0
+    Value: 0
+    Value2: 0
+    Effect: 1
+    Stacks: 1
+    Duration: 3
+    Scope: 0
+    Trigger: 2
+    Target: 0
+    InternalCooldown: 10
+    Weapon: 0
+    Category: 0
+    SlotType: 0
+    MatchSlotType: 0
+  - Kind: 10
+    Attr: 0
+    Attr2: 0
+    Value: 600
+    Value2: 0.2
+    Effect: 0
+    Stacks: 1
+    Duration: 0
+    Scope: 0
+    Trigger: 2
+    Target: 0
+    InternalCooldown: 10
+    Weapon: 0
+    Category: 0
+    SlotType: 0
+    MatchSlotType: 0

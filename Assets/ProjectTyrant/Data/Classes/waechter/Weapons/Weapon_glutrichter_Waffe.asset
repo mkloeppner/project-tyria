@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
+  m_Name: Weapon_glutrichter_Waffe
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
+  DisplayName: Richterbogen
+  Visual: 2
+  WeaponColor: {r: 1, g: 0.68, b: 0.25, a: 1}
+  Skills:
+  - {fileID: 11400000, guid: f70ce119252533045b73d9d5ac737116, type: 2}
+  - {fileID: 11400000, guid: 3bee12be44251064eac055f8a777ce17, type: 2}
+  - {fileID: 11400000, guid: 0ca1bcbf082f25e4892752a34b6a9164, type: 2}
+  - {fileID: 11400000, guid: 9bd71440f2305d647b8eb177d8eb3690, type: 2}
+  - {fileID: 11400000, guid: 1c2b5c1367767d1428e66b224c8244df, type: 2}
+  Kind: 3
+  ClassId: waechter
+  Attunement: []
+  StealthSkill: {fileID: 0}

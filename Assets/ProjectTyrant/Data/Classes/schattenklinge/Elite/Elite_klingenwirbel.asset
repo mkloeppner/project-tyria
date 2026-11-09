@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd942f5b622e6814eb6bd51730ade8bd, type: 3}
+  m_Name: Elite_klingenwirbel
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EliteSpecDefinition
+  Id: klingenwirbel
+  DisplayName: Klingenwirbel
+  Description: "Stahlsilber und Rotations-Trails \u2013 Axt & Dolch, R\xFCckruf, Vorbereitungen."
+  Color: {r: 0.5, g: 0.88, b: 0.95, a: 1}
+  Minors:
+  - {fileID: 11400000, guid: c38896bf13e969c459d9619b55804036, type: 2}
+  - {fileID: 11400000, guid: a07e12a01ce5a7b4cb4bfd1b2c12632f, type: 2}
+  - {fileID: 11400000, guid: eff0147bbc220ef47a6a6037cad10ac4, type: 2}
+  Majors:
+  - {fileID: 11400000, guid: 3bf8d2839b123274e907109e50e0bd18, type: 2}
+  - {fileID: 11400000, guid: c6ded1162716147439f789a606e658ef, type: 2}
+  - {fileID: 11400000, guid: 0f20b65eb31bc2f42b3920e989042e4e, type: 2}
+  - {fileID: 11400000, guid: 821b88dff6ab0e241a4eb305c0df8124, type: 2}
+  - {fileID: 11400000, guid: 01eb38c356e780f4bae30e63de5903e2, type: 2}
+  - {fileID: 11400000, guid: cdb45f2f6e91aad44bd9bedfb80b1a9e, type: 2}
+  - {fileID: 11400000, guid: dc1efa249f2d04c4085fcefcb0d1bd1e, type: 2}
+  - {fileID: 11400000, guid: 5339900fb274c644d8af910ef99de182, type: 2}
+  - {fileID: 11400000, guid: a0a2b7a8f03e2cf4ea42c6944d1b14f6, type: 2}
+  ClassId: schattenklinge
+  Mechanic: 12
+  MechanicLabel: "R\xFCckruf"
+  MechanicSummary: "Geworfene \xC4xte kehren zur\xFCck: nach einem Axtwurf wird F1 (oder F5) zum R\xFCckruf \u2013 Treffer auf dem R\xFCckflug, +3 Initiative. Nach 6 s f\xE4llt die Axt von selbst zur\xFCck."
+  Weapon: {fileID: 11400000, guid: 9ecc57de251ee00449b32488e1287f1f, type: 2}
+  SkillType: 19
+  TypeSkills:
+  - {fileID: 11400000, guid: 5e7e8d2e7a2f9f440a0f983ec81c6c79, type: 2}
+  - {fileID: 11400000, guid: 0d02282f2375d5b42af9e885172e50e8, type: 2}
+  - {fileID: 11400000, guid: bc3345359f05a8547b9894dc411f1367, type: 2}
+  - {fileID: 11400000, guid: 87a596d3baac78e43940efed5fe9356c, type: 2}
+  - {fileID: 11400000, guid: 600c7c08c91892946a0ed1649982b512, type: 2}
+  MechanicSkills:
+  - {fileID: 11400000, guid: d8a9cb4c51be1364ab29938e3733eba8, type: 2}
+  Palette: 22
+  Accent: {r: 0.5, g: 0.88, b: 0.95, a: 1}
+  SoundMotif: Stahl
+  CastPose: Axe_Throw
+  SignatureSkill: klingenwirbel_KW_Rueckruf

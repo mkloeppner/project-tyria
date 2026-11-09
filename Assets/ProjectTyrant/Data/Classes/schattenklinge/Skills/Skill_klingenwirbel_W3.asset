@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_klingenwirbel_W3
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: schattenklinge_klingenwirbel_W3
+  DisplayName: Wirbelsprung
+  Description: "Schuss aus der Ausweichbewegung; Eile und Eile f\xFCr dich."
+  ShortLabel: Wirbel.
+  IconColor: {r: 0.5, g: 0.88, b: 0.95, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 17
+  CastTime: 0.3
+  Cooldown: 0
+  Delivery: 1
+  Range: 18
+  Radius: 2.5
+  TargetCount: 5
+  Coefficient: 0.5
+  Hits: 1
+  HitInterval: 0.25
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 34
+  LeapDistance: 0
+  TargetBuffs: []
+  SelfBuffs:
+  - Type: 2
+    Stacks: 1
+    Duration: 5
+  - Type: 2
+    Stacks: 1
+    Duration: 6
+  ShareWithAllies: 0
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 1
+  Field: 0
+  FieldDuration: 5
+  FieldRadius: 4
+  FieldTickCoefficient: 0
+  Finisher: 0
+  Timeline:
+    Activation: 0.3
+    Aftercast: 0.16666666
+    Hits: []
+    Projectiles:
+    - 0.3
+    Movement: 0
+    MoveDistance: 0
+    Instant: 0
+    Channel: 0
+    Clip: Axe_Shoot
+    AnimScale: 0.6666667
+    VfxCharge: Charge/Stahl/M
+    VfxRelease: Release/Stahl/M
+    VfxProjectile: Projectile/Stahl/M
+    VfxImpact: Impact/Stahl/M
+    VfxAfter: Aura/Stahl/S
+    SfxCharge: Stahl/Charge
+    SfxRelease: Stahl/Release
+    SfxImpact: Stahl/Impact
+  Chain: []
+  Palette: 22
+  PaletteExplicit: 1
+  WeaponStyleOverride: Axe
+  ClassId: schattenklinge
+  InitiativeCost: 4
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

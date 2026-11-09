@@ -12,34 +12,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd942f5b622e6814eb6bd51730ade8bd, type: 3}
   m_Name: Elite_weber
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EliteSpecDefinition
-  Id: 
-  DisplayName: 
-  Description: 
-  Color: {r: 1, g: 1, b: 1, a: 1}
+  Id: weber
+  DisplayName: Weber
+  Description: "Verwobene Elemente \u2013 Schwert & Fokus, Doppel-Einstimmung, Haltungen."
+  Color: {r: 0.85, g: 0.55, b: 0.85, a: 1}
   Minors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: f9ba08048c6751747b16d6f90ba1d2e4, type: 2}
+  - {fileID: 11400000, guid: a39b9b7a3ccbf3f43ab5d3c9823cdcc2, type: 2}
+  - {fileID: 11400000, guid: e050172dfea96e045b487b925a8a1af5, type: 2}
   Majors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  ClassId: 
-  Mechanic: 0
-  MechanicLabel: 
-  MechanicSummary: 
-  Weapon: {fileID: 0}
-  SkillType: 0
-  TypeSkills: []
-  MechanicSkills: []
-  Palette: 0
-  Accent: {r: 1, g: 1, b: 1, a: 1}
-  SoundMotif: 
-  CastPose: Cast2H
-  SignatureSkill: 
+  - {fileID: 11400000, guid: 0f1d37c53b4d0f34ebb73c642083e2dc, type: 2}
+  - {fileID: 11400000, guid: 4b1b55d301e5ff2468ed5d3af5b0285a, type: 2}
+  - {fileID: 11400000, guid: 8acf0434167f1954ca469554d9986e66, type: 2}
+  - {fileID: 11400000, guid: 2bbb67c0c9eaf1047a531bb38d2e6c0f, type: 2}
+  - {fileID: 11400000, guid: 4ed1f56388354664cab88f8b3563525d, type: 2}
+  - {fileID: 11400000, guid: f45660ba80229cf49b90ce67850ed721, type: 2}
+  - {fileID: 11400000, guid: b18de7eab079eae40a38727768d78717, type: 2}
+  - {fileID: 11400000, guid: d33ad4302fcc75f41ab4041a105decba, type: 2}
+  - {fileID: 11400000, guid: 413d6523ceccc2548a8d9a39532a078f, type: 2}
+  ClassId: elementarweber
+  Mechanic: 6
+  MechanicLabel: Doppel-Einstimmung
+  MechanicSummary: "Doppel-Einstimmung: Hauptelement = gew\xE4hlte, Nebenelement = vorherige Einstimmung; Skill 3 wird zum Kombi-Skill beider Elemente (6 Kombinationen)."
+  Weapon: {fileID: 11400000, guid: 08e74758a12cacc47bb4be33b3d3a862, type: 2}
+  SkillType: 12
+  TypeSkills:
+  - {fileID: 11400000, guid: 9dbfd20dfd581324491d7d7388929c96, type: 2}
+  - {fileID: 11400000, guid: be7bf475e230b834eb778f92d66a4b6d, type: 2}
+  - {fileID: 11400000, guid: 0661adedabc51574993ee58a92f9a5e0, type: 2}
+  - {fileID: 11400000, guid: 454316be711d4df4e83e47cee7d08645, type: 2}
+  - {fileID: 11400000, guid: d0c23efaafce0e74086e787774ca522d, type: 2}
+  MechanicSkills:
+  - {fileID: 11400000, guid: 88c2a9144caa6a94e97a124c1d343f57, type: 2}
+  - {fileID: 11400000, guid: 5764b8ae3ac6cb54caab8e4a03060bed, type: 2}
+  - {fileID: 11400000, guid: c3a646eded78ca44d886304616178fc2, type: 2}
+  - {fileID: 11400000, guid: 58d7af310b8f20b42a21708d204dfe45, type: 2}
+  - {fileID: 11400000, guid: 991c24cbfbd175a4b9169904a8a127ca, type: 2}
+  - {fileID: 11400000, guid: e988f907b37e6a54dade36221e188417, type: 2}
+  Palette: 16
+  Accent: {r: 0.85, g: 0.55, b: 0.85, a: 1}
+  SoundMotif: Zwielicht
+  CastPose: Cast1H
+  SignatureSkill: weber_KO_2

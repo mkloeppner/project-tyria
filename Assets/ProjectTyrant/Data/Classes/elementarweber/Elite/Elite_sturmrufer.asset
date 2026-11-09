@@ -12,34 +12,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd942f5b622e6814eb6bd51730ade8bd, type: 3}
   m_Name: Elite_sturmrufer
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EliteSpecDefinition
-  Id: 
-  DisplayName: 
-  Description: 
-  Color: {r: 1, g: 1, b: 1, a: 1}
+  Id: sturmrufer
+  DisplayName: Sturmrufer
+  Description: "Gewitter und Donner \u2013 Zepter & Kriegshorn, \xDCberladen, Schreie."
+  Color: {r: 0.9, g: 0.92, b: 1, a: 1}
   Minors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 17930f42b72777441917cae2272d79d9, type: 2}
+  - {fileID: 11400000, guid: 7a7f65c32f92e6a468dea42791fc019e, type: 2}
+  - {fileID: 11400000, guid: 4974d78eb360b4245a5fc10539af1d9f, type: 2}
   Majors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  ClassId: 
-  Mechanic: 0
-  MechanicLabel: 
-  MechanicSummary: 
-  Weapon: {fileID: 0}
-  SkillType: 0
-  TypeSkills: []
-  MechanicSkills: []
-  Palette: 0
-  Accent: {r: 1, g: 1, b: 1, a: 1}
-  SoundMotif: 
-  CastPose: Cast2H
-  SignatureSkill: 
+  - {fileID: 11400000, guid: d04b7f14adb77894da4f61c5f88a8f86, type: 2}
+  - {fileID: 11400000, guid: 3fd09632188ae8240b4fa439f2e52558, type: 2}
+  - {fileID: 11400000, guid: 7e4a4a7bb9429e044885562d95154ef4, type: 2}
+  - {fileID: 11400000, guid: d10aa1d1a0d4b0a4280850903d3f287e, type: 2}
+  - {fileID: 11400000, guid: dc99f2c9520c2d746b0327ab5ca6aea3, type: 2}
+  - {fileID: 11400000, guid: 1eb1abb4a677bd74e86a1de23b7803d0, type: 2}
+  - {fileID: 11400000, guid: e7750732e50ae064bac023f035245694, type: 2}
+  - {fileID: 11400000, guid: 21f575f55eb55614bab5487336313c66, type: 2}
+  - {fileID: 11400000, guid: 915d2c3c07b6eda44b7c36c1880384dd, type: 2}
+  ClassId: elementarweber
+  Mechanic: 5
+  MechanicLabel: "\xDCberladen"
+  MechanicSummary: "\xDCberladen: nach 5 s in einer Einstimmung deren Taste erneut dr\xFCcken (oder F5) \u2013 \xDCberlade-Kanal mit Fl\xE4chenwirkung des Elements; danach l\xE4dt diese Einstimmung 5 s l\xE4nger."
+  Weapon: {fileID: 11400000, guid: c453df28308c7f0459ef8c9419cd01dc, type: 2}
+  SkillType: 1
+  TypeSkills:
+  - {fileID: 11400000, guid: d650bf3adace8da4dbe2ee3d8397ebbf, type: 2}
+  - {fileID: 11400000, guid: caf78a97b28ee7441bdfe0b75ffef60a, type: 2}
+  - {fileID: 11400000, guid: b86bc7e871313a04583b1a1030a9d9ae, type: 2}
+  - {fileID: 11400000, guid: 2ea384259c63b484bbcb5ab451ca91fd, type: 2}
+  - {fileID: 11400000, guid: 9a160bd62610ed144ae73b05807f7386, type: 2}
+  MechanicSkills:
+  - {fileID: 11400000, guid: e69bdf81385ab0142a2ef9cb66a025b7, type: 2}
+  - {fileID: 11400000, guid: 34b02470fc4380144ac7f86174b1c667, type: 2}
+  - {fileID: 11400000, guid: f4849496680a87c4a849cc6a37bb7d81, type: 2}
+  - {fileID: 11400000, guid: 67ddd651cb901ae41bd104744db582b2, type: 2}
+  Palette: 15
+  Accent: {r: 0.9, g: 0.92, b: 1, a: 1}
+  SoundMotif: Gewitter
+  CastPose: CastChannel
+  SignatureSkill: sturmrufer_UL_2

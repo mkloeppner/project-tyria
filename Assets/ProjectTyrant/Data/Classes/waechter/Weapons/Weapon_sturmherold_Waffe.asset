@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
+  m_Name: Weapon_sturmherold_Waffe
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
+  DisplayName: Donnerhammer
+  Visual: 10
+  WeaponColor: {r: 0.3, g: 0.62, b: 1, a: 1}
+  Skills:
+  - {fileID: 11400000, guid: 18ed933156085874bb665a01b4626b9b, type: 2}
+  - {fileID: 11400000, guid: 713042d7a671a7d4581532691fd52cc2, type: 2}
+  - {fileID: 11400000, guid: 3d910422f53bdfd449e3a3ec97425fe8, type: 2}
+  - {fileID: 11400000, guid: afca527c685f60c4383c3a8291800a6e, type: 2}
+  - {fileID: 11400000, guid: a627763692ae99a418719cac6c40bcea, type: 2}
+  Kind: 10
+  ClassId: waechter
+  Attunement: []
+  StealthSkill: {fileID: 0}

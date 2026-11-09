@@ -12,16 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
   m_Name: Weapon_glutbinder_Waffe
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
-  DisplayName: Waffe
-  Visual: 0
-  WeaponColor: {r: 1, g: 1, b: 1, a: 1}
+  DisplayName: Zepter & Glutdolch
+  Visual: 15
+  WeaponColor: {r: 1, g: 0.45, b: 0.1, a: 1}
   Skills:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Kind: 0
-  ClassId: 
-  Attunement: []
+  - {fileID: 11400000, guid: 3967130e1c3e20248a84f05ccd3cbb9f, type: 2}
+  - {fileID: 11400000, guid: f98cb9045aa365849b5f5a631944b853, type: 2}
+  - {fileID: 11400000, guid: f28e4df898618844886488137a07a146, type: 2}
+  - {fileID: 11400000, guid: 5bceb4bf0a397314091e25565db9b05e, type: 2}
+  - {fileID: 11400000, guid: f840dc49b2a539b4ab838d942b1fb4fb, type: 2}
+  Kind: 15
+  ClassId: elementarweber
+  Attunement:
+  - {fileID: 11400000, guid: 3967130e1c3e20248a84f05ccd3cbb9f, type: 2}
+  - {fileID: 11400000, guid: f98cb9045aa365849b5f5a631944b853, type: 2}
+  - {fileID: 11400000, guid: f28e4df898618844886488137a07a146, type: 2}
+  - {fileID: 11400000, guid: 5bceb4bf0a397314091e25565db9b05e, type: 2}
+  - {fileID: 11400000, guid: f840dc49b2a539b4ab838d942b1fb4fb, type: 2}
+  - {fileID: 11400000, guid: c7a7389eb585df14ca98f0d10ab1ee49, type: 2}
+  - {fileID: 11400000, guid: 960440b0593ad7f4dbeca361b034c6f3, type: 2}
+  - {fileID: 11400000, guid: 9db8befb1808cb64aa0c8b392b474427, type: 2}
+  - {fileID: 11400000, guid: f81ff73d817a27d4bb60d2fcf42bb6f7, type: 2}
+  - {fileID: 11400000, guid: cb700a8fccb3a28458d1a8bc695b5592, type: 2}
+  - {fileID: 11400000, guid: d59fefad48c21dc4aad6d8e81ebc484d, type: 2}
+  - {fileID: 11400000, guid: af75f73167da13f46bf641b2985b2c00, type: 2}
+  - {fileID: 11400000, guid: 172517ffc9069074b9650a1a26706aa7, type: 2}
+  - {fileID: 11400000, guid: 8dc2e4ae21b31f6408195c854a8cd6a0, type: 2}
+  - {fileID: 11400000, guid: cbfb722518ccfe04ebf2b3f77756d562, type: 2}
+  - {fileID: 11400000, guid: 6759f62806f6f4e41a1574fe74ab4bd0, type: 2}
+  - {fileID: 11400000, guid: e6c1554312da1b64db725a62b128b38a, type: 2}
+  - {fileID: 11400000, guid: 1f1ec6fb993852f4bb92ae27a8e4ce4c, type: 2}
+  - {fileID: 11400000, guid: 5cde1455f31e49b4c91068b0b0c4a190, type: 2}
+  - {fileID: 11400000, guid: 7721c8861c8fe7a498116dfba57e6b9c, type: 2}
   StealthSkill: {fileID: 0}

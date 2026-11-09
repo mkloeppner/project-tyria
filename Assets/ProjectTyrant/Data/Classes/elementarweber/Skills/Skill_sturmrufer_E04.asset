@@ -12,33 +12,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
   m_Name: Skill_sturmrufer_E04
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
-  Id: 
-  DisplayName: Skill
-  Description: 
-  ShortLabel: SK
-  IconColor: {r: 1, g: 1, b: 1, a: 1}
+  Id: elementarweber_sturmrufer_E04
+  DisplayName: Glutfanfare
+  Description: 'Flammen-Aura: 3 Macht, Brennen um dich.'
+  ShortLabel: 4
+  IconColor: {r: 0.9, g: 0.92, b: 1, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
   Category: 0
   Tier: 1
   UnlockCost: 0
-  StartsUnlocked: 0
-  Weapon: 0
-  CastTime: 0.5
-  Cooldown: 0
-  Delivery: 0
-  Range: 3
-  Radius: 2.5
+  StartsUnlocked: 1
+  Weapon: 13
+  CastTime: 0.25
+  Cooldown: 20
+  Delivery: 3
+  Range: 0
+  Radius: 4
   TargetCount: 5
-  Coefficient: 1
+  Coefficient: 0.46
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
   HealCoefficient: 0
-  ProjectileSpeed: 30
+  ProjectileSpeed: 34
   LeapDistance: 0
-  TargetBuffs: []
-  SelfBuffs: []
+  TargetBuffs:
+  - Type: 14
+    Stacks: 2
+    Duration: 4
+  SelfBuffs:
+  - Type: 4
+    Stacks: 3
+    Duration: 8
   ShareWithAllies: 0
   CleanseCount: 0
   Special: 0
@@ -49,31 +55,32 @@ MonoBehaviour:
   FieldTickCoefficient: 0
   Finisher: 0
   Timeline:
-    Activation: 0
-    Aftercast: 0
-    Hits: []
+    Activation: 0.25
+    Aftercast: 0.16666667
+    Hits:
+    - 0.25
     Projectiles: []
     Movement: 0
     MoveDistance: 0
     Instant: 0
     Channel: 0
-    Clip: 
-    AnimScale: 1
-    VfxCharge: 
-    VfxRelease: 
+    Clip: Scepter_Heavy
+    AnimScale: 0.32051283
+    VfxCharge: Charge/Feuer/M
+    VfxRelease: Shockwave/Feuer/M
     VfxProjectile: 
-    VfxImpact: 
-    VfxAfter: 
-    SfxCharge: 
-    SfxRelease: 
-    SfxImpact: 
+    VfxImpact: Impact/Feuer/M
+    VfxAfter: Aura/Feuer/S
+    SfxCharge: Feuer/Charge
+    SfxRelease: Feuer/Release
+    SfxImpact: Feuer/Impact
   Chain: []
-  Palette: 6
-  PaletteExplicit: 0
-  WeaponStyleOverride: 
-  ClassId: 
+  Palette: 0
+  PaletteExplicit: 1
+  WeaponStyleOverride: Scepter
+  ClassId: elementarweber
   InitiativeCost: 0
-  Element: -1
+  Element: 0
   StealthSeconds: 0
   StealthAttack: 0
   ConjureSet: {fileID: 0}

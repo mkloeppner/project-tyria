@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52faca4bebb26224b91819044d941662, type: 3}
   m_Name: Weapon_dornenwaechter_Waffe
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
-  DisplayName: Waffe
-  Visual: 0
-  WeaponColor: {r: 1, g: 1, b: 1, a: 1}
+  DisplayName: Rankenhammer
+  Visual: 10
+  WeaponColor: {r: 0.5, g: 0.9, b: 0.2, a: 1}
   Skills:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Kind: 0
-  ClassId: 
+  - {fileID: 11400000, guid: 0172dbf102d400a46b35cf4ae8ca68f6, type: 2}
+  - {fileID: 11400000, guid: 435022c486e61b843b435d105571a060, type: 2}
+  - {fileID: 11400000, guid: 852b9cc6096983346b6e6ad594fe5284, type: 2}
+  - {fileID: 11400000, guid: 9a6d4f93ef218684c9ab7c50880703a6, type: 2}
+  - {fileID: 11400000, guid: 0a839066650ed3d4891b8b131dc5b885, type: 2}
+  Kind: 10
+  ClassId: wildhueter
   Attunement: []
   StealthSkill: {fileID: 0}

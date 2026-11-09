@@ -12,66 +12,77 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
   m_Name: Skill_glutbinder_EB_Lava
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
-  Id: 
-  DisplayName: Skill
-  Description: 
-  ShortLabel: SK
-  IconColor: {r: 1, g: 1, b: 1, a: 1}
+  Id: elementarweber_glutbinder_EB_Lava
+  DisplayName: Lavafeld
+  Description: "Erdbruch: Lava-Feld am Zielort (5 Treffer) \u2013 Brennen und Blutung, Feuerfeld."
+  ShortLabel: Lavafe.
+  IconColor: {r: 1, g: 0.45, b: 0.1, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
   Category: 0
   Tier: 1
   UnlockCost: 0
-  StartsUnlocked: 0
+  StartsUnlocked: 1
   Weapon: 0
   CastTime: 0.5
   Cooldown: 0
-  Delivery: 0
-  Range: 3
-  Radius: 2.5
+  Delivery: 2
+  Range: 22
+  Radius: 4.5
   TargetCount: 5
-  Coefficient: 1
-  Hits: 1
-  HitInterval: 0.25
+  Coefficient: 0.35
+  Hits: 5
+  HitInterval: 0.8
   HealBase: 0
   HealCoefficient: 0
-  ProjectileSpeed: 30
+  ProjectileSpeed: 34
   LeapDistance: 0
-  TargetBuffs: []
+  TargetBuffs:
+  - Type: 14
+    Stacks: 2
+    Duration: 4
+  - Type: 13
+    Stacks: 2
+    Duration: 6
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
   Special: 0
   EvadesDuringCast: 0
-  Field: 0
+  Field: 1
   FieldDuration: 5
   FieldRadius: 4
-  FieldTickCoefficient: 0
+  FieldTickCoefficient: 0.1
   Finisher: 0
   Timeline:
-    Activation: 0
+    Activation: 3.7
     Aftercast: 0
-    Hits: []
+    Hits:
+    - 0.5
+    - 1.3
+    - 2.1
+    - 2.9
+    - 3.7
     Projectiles: []
     Movement: 0
     MoveDistance: 0
     Instant: 0
-    Channel: 0
-    Clip: 
-    AnimScale: 1
-    VfxCharge: 
-    VfxRelease: 
+    Channel: 1
+    Clip: Cast2H
+    AnimScale: 4.74359
+    VfxCharge: Charge/Lava/L
+    VfxRelease: Sigil/Lava/L
     VfxProjectile: 
-    VfxImpact: 
-    VfxAfter: 
-    SfxCharge: 
-    SfxRelease: 
-    SfxImpact: 
+    VfxImpact: GroundCircle/Lava/L
+    VfxAfter: GroundCircle/Lava/L
+    SfxCharge: Lava/Charge
+    SfxRelease: Lava/Release
+    SfxImpact: Lava/Impact
   Chain: []
-  Palette: 6
-  PaletteExplicit: 0
-  WeaponStyleOverride: 
-  ClassId: 
+  Palette: 18
+  PaletteExplicit: 1
+  WeaponStyleOverride: Scepter
+  ClassId: elementarweber
   InitiativeCost: 0
   Element: -1
   StealthSeconds: 0

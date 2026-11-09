@@ -12,10 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51929a5d730ca74eb5dcbb829663ed2, type: 3}
   m_Name: Trait_sturmfalke_7
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.TraitDefinition
-  Id: 
-  DisplayName: 
-  Description: 
-  Glyph: '?'
-  Tier: 1
-  Major: 0
-  Modifiers: []
+  Id: sturmfalke_t7
+  DisplayName: Federkiel
+  Description: 'Kritische Treffer: Verwundbarkeit auf das Ziel (4 s, Abklingzeit 2 s).'
+  Glyph: F
+  Tier: 2
+  Major: 1
+  Modifiers:
+  - Kind: 9
+    Attr: 0
+    Attr2: 0
+    Value: 0
+    Value2: 0
+    Effect: 24
+    Stacks: 1
+    Duration: 4
+    Scope: 0
+    Trigger: 1
+    Target: 1
+    InternalCooldown: 2
+    Weapon: 0
+    Category: 0
+    SlotType: 0
+    MatchSlotType: 0

@@ -12,34 +12,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd942f5b622e6814eb6bd51730ade8bd, type: 3}
   m_Name: Elite_katalysator
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EliteSpecDefinition
-  Id: 
-  DisplayName: 
-  Description: 
-  Color: {r: 1, g: 1, b: 1, a: 1}
+  Id: katalysator
+  DisplayName: Katalysator
+  Description: "Jade und rotierende Ringe \u2013 Hammer, Elementarkern, Verst\xE4rkungen."
+  Color: {r: 0.35, g: 0.9, b: 0.55, a: 1}
   Minors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: fe90d096329b71b46b68174d4babf87e, type: 2}
+  - {fileID: 11400000, guid: 713301b2f4151e340b5eabbc2397b838, type: 2}
+  - {fileID: 11400000, guid: 6347e083925a0364bba5057b308f5d05, type: 2}
   Majors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  ClassId: 
-  Mechanic: 0
-  MechanicLabel: 
-  MechanicSummary: 
-  Weapon: {fileID: 0}
-  SkillType: 0
-  TypeSkills: []
-  MechanicSkills: []
-  Palette: 0
-  Accent: {r: 1, g: 1, b: 1, a: 1}
-  SoundMotif: 
+  - {fileID: 11400000, guid: a8a247b805e84944a82c06755d6f4566, type: 2}
+  - {fileID: 11400000, guid: 56ebe7c792b71de4692eac54943ec813, type: 2}
+  - {fileID: 11400000, guid: 6605a07d7a3363a47aa53bd33af9d966, type: 2}
+  - {fileID: 11400000, guid: bf7b5dfa876904e42b7de1f795c0a64c, type: 2}
+  - {fileID: 11400000, guid: c39ae50e8b66aba45ab5d6917eb70dc3, type: 2}
+  - {fileID: 11400000, guid: 86539fc4be7d3c044baea7284ff4fdff, type: 2}
+  - {fileID: 11400000, guid: 29420e7e91f086a4097250bc8296cdc0, type: 2}
+  - {fileID: 11400000, guid: 852be6fe25ae71e4c9727f50bec8fb8a, type: 2}
+  - {fileID: 11400000, guid: 83944e2aa2d68a44a86de1ae1dfca967, type: 2}
+  ClassId: elementarweber
+  Mechanic: 7
+  MechanicLabel: Elementarkern
+  MechanicSummary: "F5 Elementarkern: Treffer laden Energie (max. 30); eine Sph\xE4re kostet 10 und gibt dir und Verb\xFCndeten Segen nach Einstimmung (Feuer Macht, Wasser Regeneration, Luft Wut, Erde Schutz), 10 s Abklingzeit."
+  Weapon: {fileID: 11400000, guid: ad611bcb84929b74ba9c666395bd2ebe, type: 2}
+  SkillType: 15
+  TypeSkills:
+  - {fileID: 11400000, guid: 7958d3218506a8340990edc0a510e2e0, type: 2}
+  - {fileID: 11400000, guid: 0fb18ce07de887f489432e9d58a35462, type: 2}
+  - {fileID: 11400000, guid: 7632fd13fcff5964881ac8bd629c3800, type: 2}
+  - {fileID: 11400000, guid: 65d93e64d1216f14c991379f1d71d887, type: 2}
+  - {fileID: 11400000, guid: 6b56b25a60fe7e64b85c527aa70ec0f1, type: 2}
+  MechanicSkills:
+  - {fileID: 11400000, guid: 1949e0e791940ff428b2a5b0f73789a6, type: 2}
+  - {fileID: 11400000, guid: 3b02473bd35664740805de0af7ee5028, type: 2}
+  - {fileID: 11400000, guid: 3f05eb559e8e0644eac91e1a44997f4c, type: 2}
+  - {fileID: 11400000, guid: b42ee7369c1bf214f8c20aa4ea35c3e1, type: 2}
+  Palette: 17
+  Accent: {r: 0.35, g: 0.9, b: 0.55, a: 1}
+  SoundMotif: Jade
   CastPose: Cast2H
-  SignatureSkill: 
+  SignatureSkill: katalysator_KE_0
