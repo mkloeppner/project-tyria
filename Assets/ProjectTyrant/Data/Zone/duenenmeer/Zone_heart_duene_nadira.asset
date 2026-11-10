@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Sammle verstreute Waren, repariere Zelte und versorge ersch\xF6pfte Tr\xE4ger."
   Position: {x: -200, y: 1.5, z: -60}
   Radius: 30
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0

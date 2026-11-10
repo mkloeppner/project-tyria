@@ -6,7 +6,7 @@ namespace ProjectTyrant.Balance
     [CreateAssetMenu(menuName = "Project Tyrant/Balance/Config")]
     public class BalanceConfig : ScriptableObject
     {
-        public DangerProfile[] Levels = new DangerProfile[6];
+        public DangerProfile[] Levels = new DangerProfile[DangerTable.MaxLevel + 1];
         public ExpectedPlayer Player = new ExpectedPlayer();
         public DangerSettings Get(int level)
         {

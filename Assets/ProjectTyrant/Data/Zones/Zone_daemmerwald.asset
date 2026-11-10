@@ -18,22 +18,32 @@ MonoBehaviour:
   SceneName: PT_Zone_Daemmerwald
   Seed: 30102
   Size: 1000
-  LevelMin: 30
-  LevelMax: 30
+  LevelMin: 50
+  LevelMax: 60
   Biome: {fileID: 11400000, guid: 1a048c2e2dcbdef4fa46855b7af52378, type: 2}
   LegacyLayout: 0
   Portals:
   - Id: daemmerwald_silberkueste
-    Position: {x: -30, y: 0, z: -460}
+    Position: {x: -30, y: 6.4816146, z: -460}
     Yaw: 3.731397
     TargetZone: silberkueste
     TargetPortal: silberkueste_daemmerwald
   - Id: daemmerwald_silbermund
-    Position: {x: 14, y: 0, z: -410}
+    Position: {x: 14, y: 3.1585233, z: -410}
     Yaw: -1.9556814
     TargetZone: silberkueste
     TargetPortal: plaza_daemmerwald
-  DefaultSpawn: {x: 0, y: 0, z: -420}
+  - Id: daemmerwald_aschenkessel_k
+    Position: {x: -76.508095, y: 2.3119898, z: 412.97278}
+    Yaw: 169.50427
+    TargetZone: aschenkessel
+    TargetPortal: aschenkessel_daemmerwald_k
+  - Id: daemmerwald_gruener_schlund_k
+    Position: {x: 333.34058, y: 2.6240249, z: 255.50746}
+    Yaw: -127.470375
+    TargetZone: gruener_schlund
+    TargetPortal: gruener_schlund_daemmerwald_k
+  DefaultSpawn: {x: 0, y: 2.653615, z: -420}
   ContinentRect:
     serializedVersion: 2
     x: 0.04
@@ -41,7 +51,28 @@ MonoBehaviour:
     width: 0.26
     height: 0.26
   ContinentColor: {r: 0.2901961, g: 0.2901961, b: 0.41568628, a: 1}
-  Waypoints: []
+  Waypoints:
+  - Id: wp_wald_ankunft
+    Name: Wegmarke Waldsaum
+    Position: {x: 10, y: 3.1874495, z: -400}
+  - Id: wp_wald_lichtung
+    Name: Wegmarke Lichtung
+    Position: {x: -160, y: 3.5061016, z: -180}
+  - Id: wp_wald_hain
+    Name: Wegmarke Alter Hain
+    Position: {x: 230, y: 2.682058, z: 120}
+  - Id: wp_wald_stein
+    Name: "Wegmarke W\xE4chterstein"
+    Position: {x: 20, y: 1.5557252, z: 280}
+  - Id: wp_daemmerwald_ankunft_silberkueste
+    Name: "Portal-Wegmarke Silberk\xFCste"
+    Position: {x: -21.609526, y: 6.3253584, z: -454.01273}
+  - Id: wp_daemmerwald_ankunft_aschenkessel_k
+    Name: Portal-Wegmarke Aschenkessel
+    Position: {x: -67.41512, y: 2.347731, z: 407.07318}
+  - Id: wp_daemmerwald_ankunft_gruener_schlund_k
+    Name: "Portal-Wegmarke Gr\xFCner Schlund"
+    Position: {x: 336.57858, y: 2.6240246, z: 251.85736}
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 2.653615, z: -420}
@@ -52,6 +83,12 @@ MonoBehaviour:
   - Entrance: portal:daemmerwald_silbermund
     Position: {x: 13.795241, y: 3.1585233, z: -404.0035}
     WaypointId: wp_wald_ankunft
+  - Entrance: portal:daemmerwald_aschenkessel_k
+    Position: {x: -75.41512, y: 2.3119898, z: 407.07318}
+    WaypointId: wp_daemmerwald_ankunft_aschenkessel_k
+  - Entrance: portal:daemmerwald_gruener_schlund_k
+    Position: {x: 328.57858, y: 2.6240249, z: 251.85736}
+    WaypointId: wp_daemmerwald_ankunft_gruener_schlund_k
   Tips:
   - "Violette Verderbnis brennt \u2013 Laternen und W\xE4chtersteine sch\xFCtzen."
   - "Der Alte Hain erwacht in regelm\xE4\xDFigen Abst\xE4nden."
@@ -60,28 +97,28 @@ MonoBehaviour:
   - Name: Dorf auf der Lichtung
     Center: {x: -150, y: -200}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 52
+    LevelMax: 54
   - Name: Der Alte Hain
     Center: {x: 200, y: 150}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 56
+    LevelMax: 58
   - Name: "W\xE4chterstein"
     Center: {x: 0, y: 300}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 58
+    LevelMax: 60
   - Name: Violetter Grund
     Center: {x: -260, y: 120}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 56
+    LevelMax: 58
   - Name: Zerfallene Kapelle
     Center: {x: 300, y: -220}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 53
+    LevelMax: 55
   TimerLabel: Der Alte Hain
   TimerPeriod: 1080
   TimerOffset: 240
@@ -160,3 +197,5 @@ MonoBehaviour:
   - heart_wald_hira
   - heart_wald_oda
   - heart_wald_laternen
+  Region: 0
+  IsHub: 0

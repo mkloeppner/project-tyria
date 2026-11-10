@@ -34,6 +34,8 @@ namespace ProjectTyrant
             DebugCommands.Extra.Add(("Admin: Story-Szenen an/aus", a => { StoryAdmin.PlayScenes = !StoryAdmin.PlayScenes; return "Szenen beim Weiter: " + (StoryAdmin.PlayScenes ? "abspielen" : "überspringen"); }));
             DebugCommands.Extra.Add(("Admin: Story-Auto-Wahl an/aus", a => { StoryAdmin.AutoChoose = !StoryAdmin.AutoChoose; return "Wahl-Stellen: " + (StoryAdmin.AutoChoose ? "erste Antwort automatisch" : "selbst wählen"); }));
             DebugCommands.Extra.Add(("Admin: Story-Reisen an/aus", a => { StoryAdmin.Travel = !StoryAdmin.Travel; return "Nach dem Weiter zur Zone reisen: " + (StoryAdmin.Travel ? "ja" : "nein"); }));
+            DebugCommands.Extra.Add(("Admin: /level N (1–80)", a => { int.TryParse((a ?? "").Replace("/level", "").Trim(), out int n); if (n <= 0) n = AttributeSet.MaxLevel; var p = P; if (p != null) p.State.AdminMark("level:" + n); return DebugCommands.SetLevel(n); }));   // Lauf 11
+            DebugCommands.Extra.Add(("Admin: Weltboss-Fahrplan", a => { var e = WorldBossSchedule.ActiveBoss(System.DateTime.Now.TimeOfDay.TotalSeconds); return "Jetzt: " + e.Name + " (" + e.Zone + ", Stufe " + e.Level + ") · Zarathis in " + UnityEngine.Mathf.RoundToInt(WorldBossSchedule.SecondsUntil("fall_von_zarathis", System.DateTime.Now.TimeOfDay.TotalSeconds) / 60f) + " min"; }));   // Lauf 11
             DebugCommands.Extra.Add(("Admin: Kennzeichnungen anzeigen", a => { var p = P; if (p == null) return "Kein Profil"; return p.State.AdminMarks.Count == 0 ? "keine Admin-Freischaltungen" : p.State.AdminMarks.Count + ": " + string.Join(", ", p.State.AdminMarks); }));
         }
 

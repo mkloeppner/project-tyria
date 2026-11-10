@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Flicke die Weidenz\xE4une und sammle Moorbeeren."
   Position: {x: -150, y: 2.1, z: 255}
   Radius: 30
-  Experience: 981
+  Experience: 2942
   Karma: 613
   Copper: 294
   HeroPoints: 0

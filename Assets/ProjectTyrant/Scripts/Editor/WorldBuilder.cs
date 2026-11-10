@@ -84,6 +84,7 @@ namespace ProjectTyrant.EditorTools
                 b.Weather = WeatherKind.AshWind; b.Ambient = AmbientKind.Embers;
             });
             BuildBiomesLauf6();
+            BuildBiomesLauf11();   // Lauf 11
             AssetDatabase.SaveAssets();
         }
 
@@ -147,13 +148,13 @@ namespace ProjectTyrant.EditorTools
             moor.Portals.Add(P("nebelmoor_frostkamm", new Vector3(20f, 0f, 420f), "frostkamm", "frostkamm_nebelmoor"));
             moor.Tips.AddRange(new[] { "Im Nebelmoor sind Kanäle tief – mit dem Skimmer gleitest du über Wasser.", "Giftnebel schwächt dich, bis du die Umwelt-Beherrschung gelernt hast." });
 
-            var frost = Def("frostkamm", "Frostkamm", "Verschneite Terrassen und Gipfel – Heimat des Frostschlunds.", 25030, 1100f, 25, 30, "gebirge",
+            var frost = Def("frostkamm", "Frostkamm", "Verschneite Terrassen und Gipfel – Heimat des Frostschlunds.", 25030, 1100f, 25, 35, "gebirge",
                 new Rect(0.3f, 0.4f, 0.32f, 0.32f), C("#b9cbd8"), new Vector3(0f, 0f, -440f));
             frost.Portals.Add(P("frostkamm_nebelmoor", new Vector3(-20f, 0f, -470f), "nebelmoor", "nebelmoor_frostkamm"));
             frost.Portals.Add(P("frostkamm_gluetoede", new Vector3(460f, 0f, 40f), "gluetoede", "gluetoede_frostkamm"));
             frost.Tips.AddRange(new[] { "Der Springer überwindet die Terrassen des Frostkamms mit einem Satz.", "Der Weltboss Frostschlund erscheint alle 15 Minuten." });
 
-            var glut = Def("gluetoede", "Glutöde", "Aschefelder, Lavarisse und der ewige Sturm.", 30030, 1200f, 30, 30, "asche",
+            var glut = Def("gluetoede", "Glutöde", "Aschefelder, Lavarisse und der ewige Sturm.", 30030, 1200f, 35, 45, "asche",
                 new Rect(0.66f, 0.3f, 0.3f, 0.34f), C("#8a5a46"), new Vector3(-470f, 0f, 0f));
             glut.Portals.Add(P("gluetoede_frostkamm", new Vector3(-510f, 0f, -30f), "frostkamm", "frostkamm_gluetoede"));
             glut.Tips.AddRange(new[] { "Lavarisse brennen – erst die Umwelt-Beherrschung macht sie passierbar.", "Das Meta-Ereignis „Sturm über der Glutöde“ verläuft in vier Phasen." });
@@ -164,6 +165,8 @@ namespace ProjectTyrant.EditorTools
             w.StartZone = "sonnfurt";
             w.Zones = new List<ZoneDefinition> { sonn, moor, frost, glut };
             w.Zones.AddRange(extra);
+            var all10 = new List<ZoneDefinition>(w.Zones);
+            w.Zones.AddRange(BuildZonesLauf11(all10));   // Lauf 11: 20 Zonen in drei Regionen
             w.Tips = new List<string> { "Mit M öffnest du die Karte – weiter herauszoomen zeigt den Kontinent.", "Wegmarken anderer Zonen kosten einen Aufschlag.", "In niedrigeren Zonen wirst du herabgestuft – Belohnungen bleiben fair.", "Drücke F an Portalen, Einblicken und beim Stallmeister." };
             EditorUtility.SetDirty(w);
             AssetDatabase.SaveAssets();

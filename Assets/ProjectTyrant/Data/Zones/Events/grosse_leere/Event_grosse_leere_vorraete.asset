@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_grosse_leere_vorraete
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: grosse_leere_vorraete
+  Title: "Vorr\xE4te f\xFCr Nomaden der Leere"
+  Description: "Sammle Vorr\xE4te und bring sie zu Nomaden der Leere."
+  ChainId: 
+  Objective: 3
+  Center: {x: -454.98294, y: -1.153578, z: 163.00021}
+  Radius: 34
+  Duration: 240
+  TargetCount: 6
+  Triggers:
+  - Type: 1
+    Delay: 20
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 420
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 240
+  GoldContribution: 4693.5483
+  Experience: 1877
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: grosse_leere_grosse_leere_vorraete
+  Path: []
+  DeliverPoint: {x: -444.98294, y: -1.2184192, z: 171.00021}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: cfd80fe2645bc67408686c9b1b9f54fa, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 0}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0
+  Tier: 2
+  TierSet: 0
+  BalanceBaseTargets: 0

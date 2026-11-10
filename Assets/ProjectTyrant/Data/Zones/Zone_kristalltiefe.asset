@@ -18,22 +18,22 @@ MonoBehaviour:
   SceneName: PT_Zone_Kristalltiefe
   Seed: 30104
   Size: 900
-  LevelMin: 30
-  LevelMax: 30
+  LevelMin: 65
+  LevelMax: 75
   Biome: {fileID: 11400000, guid: 2cba07233dee48344a86540722a177e2, type: 2}
   LegacyLayout: 0
   Portals:
   - Id: kristalltiefe_silberkueste
-    Position: {x: -20, y: 0, z: -420}
+    Position: {x: -20, y: 25.39357, z: -420}
     Yaw: 2.726311
     TargetZone: silberkueste
     TargetPortal: silberkueste_kristalltiefe
   - Id: kristalltiefe_silbermund
-    Position: {x: 14, y: 0, z: -370}
+    Position: {x: 14, y: 1.7, z: -370}
     Yaw: -2.1669147
     TargetZone: silberkueste
     TargetPortal: plaza_kristalltiefe
-  DefaultSpawn: {x: 0, y: 0, z: -380}
+  DefaultSpawn: {x: 0, y: 1.7, z: -380}
   ContinentRect:
     serializedVersion: 2
     x: 0.62
@@ -41,7 +41,22 @@ MonoBehaviour:
     width: 0.18
     height: 0.22
   ContinentColor: {r: 0.2901961, g: 0.2901961, b: 0.47843137, a: 1}
-  Waypoints: []
+  Waypoints:
+  - Id: wp_tiefe_eingang
+    Name: "Wegmarke H\xF6hlenmund"
+    Position: {x: 10, y: 1.7, z: -360}
+  - Id: wp_tiefe_see
+    Name: Wegmarke Schwarzer See
+    Position: {x: -150, y: 1.7, z: -40}
+  - Id: wp_tiefe_pilze
+    Name: Wegmarke Pilzwald
+    Position: {x: 200, y: 1.7, z: -120}
+  - Id: wp_tiefe_herz
+    Name: Wegmarke Kristallherz
+    Position: {x: 120, y: 1.7, z: 200}
+  - Id: wp_kristalltiefe_ankunft_silberkueste
+    Name: "Portal-Wegmarke Silberk\xFCste"
+    Position: {x: -26.64281, y: 25.3794, z: -418.00684}
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 1.7, z: -380}
@@ -60,28 +75,28 @@ MonoBehaviour:
   - Name: Schwarzer See
     Center: {x: -180, y: -10}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 70
+    LevelMax: 72
   - Name: Pilzwald
     Center: {x: 230, y: -150}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 68
+    LevelMax: 70
   - Name: "Kristallbr\xFCcke"
     Center: {x: 0, y: 80}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 70
+    LevelMax: 72
   - Name: Kammer der Stimme
     Center: {x: 150, y: 150}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 71
+    LevelMax: 73
   - Name: Verlassene Zwergenmine
     Center: {x: -280, y: 250}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 73
+    LevelMax: 75
   TimerLabel: 
   TimerPeriod: 0
   TimerOffset: 0
@@ -160,3 +175,5 @@ MonoBehaviour:
   - heart_tiefe_lys
   - heart_tiefe_fischer
   - heart_tiefe_laternen
+  Region: 0
+  IsHub: 0

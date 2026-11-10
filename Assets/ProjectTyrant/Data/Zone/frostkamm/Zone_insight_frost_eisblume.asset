@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: Eine Blume, die nie taut.
   Position: {x: 0, y: 7, z: -200}
   Radius: 3
-  Experience: 274
+  Experience: 284
   Karma: 0
   Copper: 0
   HeroPoints: 0

@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a9756ba196e784f8aead94cb329eb1, type: 3}
+  m_Name: Enemy_Wueste_Flammenkultist
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EnemyArchetype
+  DisplayName: Flammenkultist
+  Tier: 1
+  Team: 2
+  Prefab: {fileID: 6757914657317539574, guid: 6a800b4da9f9f2e498b23f26e0425c0e, type: 3}
+  FixedLevel: 0
+  AttributeFactor: 1
+  ArmorFactor: 1.6
+  HealthFactor: 0.8
+  MaxHealth: 0
+  AttackCoefficient: 3
+  AttackRange: 12
+  AttackInterval: 2.1
+  AttackWindup: 0.7
+  Palette: 7
+  MoveSpeed: 5
+  AggroRange: 14
+  LeashRange: 45
+  Scale: 1
+  OnHitDebuff:
+    Type: 14
+    Stacks: 1
+    Duration: 3
+  HasTelegraph: 0
+  TelegraphRadius: 5
+  TelegraphDelay: 1.5
+  TelegraphCoefficient: 25
+  TelegraphInterval: 9
+  Behavior: 2
+  BehaviorRadius: 6
+  BehaviorInterval: 8
+  BehaviorCoefficient: 4
+  BehaviorEffect:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  SummonArchetype: {fileID: 0}
+  ProjectileColor: {r: 1, g: 0.5, b: 0.1, a: 1}
+  Defiance: 0
+  Role: 0
+  CurveExempt: 0
+  PursuitExempt: 0
+  NeutralCreature: 0
+  ContributionValue: 10
+  Experience: 60
+  Loot: {fileID: 11400000, guid: acfccf0fe09174d42bb05a8032a5cf0c, type: 2}

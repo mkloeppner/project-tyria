@@ -23,17 +23,17 @@ MonoBehaviour:
   Weapon: 2
   Armor: 0
   Trinket: 0
-  WeaponStrengthMin: 108
-  WeaponStrengthMax: 120
+  WeaponStrengthMin: 62
+  WeaponStrengthMax: 69
   Defense: 0
   Prefix: Kleriker
   Attributes:
   - Attr: 6
-    Value: 8
+    Value: 4
   - Attr: 0
-    Value: 4
+    Value: 2
   - Attr: 2
-    Value: 4
+    Value: 2
   MaxStack: 1
   VendorValue: 59
   Binding: 0

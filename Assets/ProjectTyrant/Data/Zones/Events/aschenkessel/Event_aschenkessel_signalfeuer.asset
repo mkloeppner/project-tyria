@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_aschenkessel_signalfeuer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: aschenkessel_signalfeuer
+  Title: 'Basaltterrassen: Signalfeuer'
+  Description: "Entz\xFCnde die Signalfeuer von Basaltterrassen, bevor die Nacht hereinbricht."
+  ChainId: 
+  Objective: 8
+  Center: {x: 120.36566, y: 0, z: 163.09386}
+  Radius: 30
+  Duration: 210
+  TargetCount: 4
+  Triggers:
+  - Type: 1
+    Delay: 20
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 480
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 240
+  GoldContribution: 4693.5483
+  Experience: 1877
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: aschenkessel_aschenkessel_signalfeuer
+  Path: []
+  DeliverPoint: {x: 120.36566, y: 0, z: 163.09386}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 3a8a6cd2e3618c14fa9fb62050d1fb73, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 0}
+  Sites:
+  - {x: 130.49733, y: 1.7518947, z: 167.37746}
+  - {x: 116.08206, y: 0.7818926, z: 173.22552}
+  - {x: 110.23399, y: 0, z: 158.81026}
+  - {x: 124.64926, y: 0.31581685, z: 152.96219}
+  SiteChannel: 2.5
+  SiteLabel: "Feuer entz\xFCnden"
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0
+  Tier: 2
+  TierSet: 0
+  BalanceBaseTargets: 0

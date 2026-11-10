@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_gruene_flut
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: gruene_flut
+  DisplayName: "Gr\xFCne Flut"
+  Description: Ein erstarrtes Jademeer mit Inseln und Schiffswracks.
+  SceneName: PT_Zone_Gruene_flut
+  Seed: 61458
+  Size: 1300
+  LevelMin: 80
+  LevelMax: 80
+  Biome: {fileID: 11400000, guid: 1c83e0b2333c82d46a708cc1a5db2b95, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: gruene_flut_jadehafen
+    Position: {x: -375.5204, y: 0, z: -396.359}
+    Yaw: 43.45355
+    TargetZone: jadehafen
+    TargetPortal: jadehafen_gruene_flut
+  - Id: gruene_flut_nebelkueste
+    Position: {x: 541.449, y: 0, z: -70.34912}
+    Yaw: -82.59717
+    TargetZone: nebelkueste
+    TargetPortal: nebelkueste_gruene_flut
+  DefaultSpawn: {x: 0, y: 0, z: -494}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.04
+    y: 0.04
+    width: 0.34
+    height: 0.3
+  ContinentColor: {r: 0.2509804, g: 0.627451, b: 0.5019608, a: 1}
+  Waypoints: []
+  Arrivals: []
+  Tips:
+  - Mit dem Boot erreichst du die Angelstellen am besten.
+  - 'Signatur: Boot-Zone, Angelstellen, Jade-Minen-Events'
+  LoadingImage: {fileID: 0}
+  Regions: []
+  TimerLabel: 
+  TimerPeriod: 0
+  TimerOffset: 0
+  TimerPosition: {x: 0, y: 0, z: 0}
+  TimerEventId: 
+  DangerMap:
+    ZoneId: 
+    Size: 1000
+    Anchors: []
+    Waypoints: []
+    BandEdges: []
+    BandLevels: 
+    Areas: []
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 30
+    WaypointSafeRadius: 25
+  CompletionIds: []
+  Region: 2
+  IsHub: 0

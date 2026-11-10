@@ -40,7 +40,7 @@ MonoBehaviour:
   FailNext: 
   Cooldown: 240
   GoldContribution: 4693.5483
-  Experience: 1565
+  Experience: 1877
   Karma: 469
   Coins: 250
   GoldItemRoll: 1
@@ -60,10 +60,10 @@ MonoBehaviour:
   Veteran: {fileID: 0}
   Boss: {fileID: 0}
   Sites:
-  - {x: 280.13168, y: 2.305214, z: 174.2836}
+  - {x: 280.13168, y: 2.2715678, z: 174.2836}
   - {x: 265.7164, y: 2.0060706, z: 180.13167}
-  - {x: 259.86832, y: 1.7999676, z: 165.7164}
-  - {x: 274.2836, y: 0, z: 159.86833}
+  - {x: 259.86832, y: 1.799895, z: 165.7164}
+  - {x: 274.2836, y: 0.66678745, z: 159.86833}
   SiteChannel: 2.5
   SiteLabel: "Leuchtfeuer entz\xFCnden"
   PhaseThresholds: []

@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_glutkessel
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: glutkessel
+  DisplayName: Glutkessel
+  Description: "Lavaschluchten und der Tempel des Flammenk\xF6nigs."
+  SceneName: PT_Zone_Glutkessel
+  Seed: 40237
+  Size: 1100
+  LevelMin: 80
+  LevelMax: 80
+  Biome: {fileID: 11400000, guid: 22ef9fad1082962418bc2bfbd2bec883, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: glutkessel_klingenschlucht
+    Position: {x: -317.74802, y: 1.9431485, z: -335.3807}
+    Yaw: 43.45355
+    TargetZone: klingenschlucht
+    TargetPortal: klingenschlucht_glutkessel
+  - Id: glutkessel_zarathis
+    Position: {x: 458.14914, y: 1.6, z: -59.52618}
+    Yaw: -82.59717
+    TargetZone: zarathis
+    TargetPortal: zarathis_glutkessel
+  DefaultSpawn: {x: 0, y: 3.3330348, z: -418}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.44
+    y: 0.68
+    width: 0.24
+    height: 0.28
+  ContinentColor: {r: 0.7529412, g: 0.2509804, b: 0.1254902, a: 1}
+  Waypoints:
+  - Id: wp_glutkessel_ankunft
+    Name: Wegmarke Glutkessel
+    Position: {x: 12, y: 3.5, z: -400}
+  - Id: wp_glutkessel_flammentempel
+    Name: Wegmarke Flammentempel
+    Position: {x: -350.02762, y: 1.6, z: -247.48802}
+  - Id: wp_glutkessel_lavaschlucht
+    Name: Wegmarke Lavaschlucht
+    Position: {x: 317.99606, y: 3.5, z: 49.921013}
+  - Id: wp_glutkessel_kultbasar
+    Name: Wegmarke Kultbasar
+    Position: {x: 74.74041, y: 2.779786, z: 130.42522}
+  - Id: wp_glutkessel_aschentreppe
+    Name: Wegmarke Aschentreppe
+    Position: {x: 191.39467, y: 4.353239, z: 221.91733}
+  - Id: wp_glutkessel_ankunft_klingenschlucht
+    Name: Portal-Wegmarke Klingenschlucht
+    Position: {x: -305.62143, y: 2.2475739, z: -331.02512}
+  - Id: wp_glutkessel_ankunft_zarathis
+    Name: Portal-Wegmarke Zarathis
+    Position: {x: 459.12738, y: 1.6000001, z: -54.753113}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 3.3330348, z: -418}
+    WaypointId: wp_glutkessel_ankunft
+  - Entrance: portal:glutkessel_klingenschlucht
+    Position: {x: -313.62143, y: 1.9431485, z: -331.02512}
+    WaypointId: wp_glutkessel_ankunft_klingenschlucht
+  - Entrance: portal:glutkessel_zarathis
+    Position: {x: 452.19916, y: 1.6, z: -58.753113}
+    WaypointId: wp_glutkessel_ankunft_zarathis
+  Tips:
+  - Der Kult belagert den Flammentempel in drei Phasen.
+  - "Signatur: Story-Kapitel 4\u20136, Meta Belagerung des Flammentempels"
+  LoadingImage: {fileID: 0}
+  Regions:
+  - Name: Aschentreppe
+    Center: {x: 186.22585, y: -296.3413}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: "Glutbr\xFCcke"
+    Center: {x: -374.48804, y: -337.607}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Opferplatz
+    Center: {x: 423.08734, y: 31.081533}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: "Schwarze S\xE4ulen"
+    Center: {x: 332.35062, y: 297.0346}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Feuerquelle
+    Center: {x: 359.2774, y: 440}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  TimerLabel: Belagerung des Flammentempels
+  TimerPeriod: 1800
+  TimerOffset: 300
+  TimerPosition: {x: -158.13745, y: 0, z: -440}
+  TimerEventId: glutkessel_flammentempel
+  DangerMap:
+    ZoneId: 
+    Size: 1000
+    Anchors: []
+    Waypoints: []
+    BandEdges: []
+    BandLevels: 
+    Areas: []
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 30
+    WaypointSafeRadius: 25
+  CompletionIds:
+  - wp_glutkessel_ankunft
+  - wp_glutkessel_flammentempel
+  - wp_glutkessel_lavaschlucht
+  - wp_glutkessel_kultbasar
+  - wp_glutkessel_aschentreppe
+  - poi_glutkessel_aschentreppe
+  - poi_glutkessel_glutbruecke
+  - poi_glutkessel_opferplatz
+  - poi_glutkessel_schwarze_saeulen
+  - poi_glutkessel_feuerquelle
+  - vista_glutkessel_0
+  - vista_glutkessel_1
+  - vista_glutkessel_2
+  - hc_glutkessel_0
+  - hc_glutkessel_1
+  - hc_glutkessel_2
+  - hc_glutkessel_3
+  - heart_glutkessel_0
+  - heart_glutkessel_1
+  - heart_glutkessel_2
+  - heart_glutkessel_3
+  Region: 1
+  IsHub: 0

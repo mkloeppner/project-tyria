@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: Sammle Nistmaterial und flicke die Nester.
   Position: {x: -200, y: 12, z: 60}
   Radius: 30
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0

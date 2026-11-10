@@ -25,6 +25,10 @@ namespace ProjectTyrant
             _heading = Flat(transform.forward); _ruleT = 0f; _airT = 0f; _wasBanned = false;
         }
 
+        float _pullBanT;
+        /// <summary>Lauf 11: Gegner der Gefahrenstufe 6 holen Flieger vom Himmel – <paramref name="seconds"/> s Flugverbot (sanftes Absinken).</summary>
+        public void PullFromSky(float seconds) { _pullBanT = Mathf.Max(_pullBanT, seconds); }
+
         /// <summary>Beherrschung geändert (Admin/Rang erlernt): Flugwerte neu setzen, Zustand bleibt.</summary>
         public void RefreshFlightParams()
         {
@@ -109,7 +113,8 @@ namespace ProjectTyrant
             var mm = PlayerProfile.Instance != null ? PlayerProfile.Instance.Mastery : null;
             _ruleT -= dt;
             if (_ruleT <= 0f) { _ruleT = 0.25f; FlightRule = EvaluateFlightHere(); }
-            f.Banned = !FlightRule.Allowed;
+            if (_pullBanT > 0f) _pullBanT -= dt;
+            f.Banned = !FlightRule.Allowed || _pullBanT > 0f;
             f.Ceiling = FlightRule.Ceiling;
             if (f.Banned && !_wasBanned && (f.Airborne || input.JumpPressed)) GameEventBus.Notify(FlightRule.Reason, new Color(1f, 0.7f, 0.4f));
             _wasBanned = f.Banned;

@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_grosse_leere_verteidigung
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: grosse_leere_verteidigung
+  Title: Riesenrippe verteidigen
+  Description: Halte Riesenrippe gegen die Sandgeister.
+  ChainId: 
+  Objective: 1
+  Center: {x: 270.84152, y: -0.10689599, z: -130.8809}
+  Radius: 32
+  Duration: 180
+  TargetCount: 0
+  Triggers:
+  - Type: 1
+    Delay: 20
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 480
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 240
+  GoldContribution: 4693.5483
+  Experience: 1877
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: grosse_leere_grosse_leere_verteidigung
+  Path: []
+  DeliverPoint: {x: 270.84152, y: -0.10689599, z: -130.8809}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 3
+  WaveInterval: 20
+  Trash: {fileID: 11400000, guid: cfd80fe2645bc67408686c9b1b9f54fa, type: 2}
+  Veteran: {fileID: 11400000, guid: c5a8653225005fb4aae9e5a7c3dbbc78, type: 2}
+  Boss: {fileID: 0}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0
+  Tier: 2
+  TierSet: 0
+  BalanceBaseTargets: 0

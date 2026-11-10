@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_weisse_stille
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: weisse_stille
+  DisplayName: "Wei\xDFe Stille"
+  Description: "Gletscher, Eish\xF6hlen und eine Polarnacht ohne Ende."
+  SceneName: PT_Zone_Weisse_stille
+  Seed: 72010
+  Size: 1200
+  LevelMin: 70
+  LevelMax: 80
+  Biome: {fileID: 11400000, guid: 9a2e8520af3745548b497f2300d341ad, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: weisse_stille_himmelsspitzen_k
+    Position: {x: 284.5798, y: 0.22478503, z: 415.96912}
+    Yaw: -145.62253
+    TargetZone: himmelsspitzen
+    TargetPortal: himmelsspitzen_weisse_stille_k
+  - Id: weisse_stille_schaedelkueste
+    Position: {x: 499.79904, y: -4.970235, z: -64.937645}
+    Yaw: -82.59717
+    TargetZone: schaedelkueste
+    TargetPortal: schaedelkueste_weisse_stille
+  DefaultSpawn: {x: 0, y: 5, z: -456}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.82
+    y: 0
+    width: 0.16
+    height: 0.04
+  ContinentColor: {r: 0.9098039, g: 0.9411765, b: 0.972549, a: 1}
+  Waypoints:
+  - Id: wp_weisse_stille_ankunft
+    Name: "Wegmarke Wei\xDFe Stille"
+    Position: {x: 12, y: 5, z: -438}
+  - Id: wp_weisse_stille_heiligtum_der_urskai
+    Name: Wegmarke Heiligtum der Urskai
+    Position: {x: 376.2989, y: -4.9029393, z: -263.43234}
+  - Id: wp_weisse_stille_gletscherzunge
+    Name: Wegmarke Gletscherzunge
+    Position: {x: 80.24894, y: -4.9940987, z: 36.12093}
+  - Id: wp_weisse_stille_eishoehle
+    Name: "Wegmarke Eish\xF6hle"
+    Position: {x: 422.34625, y: 0, z: 161.23564}
+  - Id: wp_weisse_stille_polarlichtgrat
+    Name: Wegmarke Polarlichtgrat
+    Position: {x: 226.58359, y: 5, z: 277.52368}
+  - Id: wp_weisse_stille_ankunft_himmelsspitzen_k
+    Name: Portal-Wegmarke Himmelsspitzen
+    Position: {x: 289.19196, y: 0.22478503, z: 411.0171}
+  - Id: wp_weisse_stille_ankunft_schaedelkueste
+    Name: "Portal-Wegmarke Sch\xE4delk\xFCste"
+    Position: {x: 500.77725, y: -4.970235, z: -60.164574}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 5, z: -456}
+    WaypointId: wp_weisse_stille_ankunft
+  - Entrance: portal:weisse_stille_himmelsspitzen_k
+    Position: {x: 281.19196, y: 0.22478503, z: 411.0171}
+    WaypointId: wp_weisse_stille_ankunft_himmelsspitzen_k
+  - Entrance: portal:weisse_stille_schaedelkueste
+    Position: {x: 493.84906, y: -4.970235, z: -64.16457}
+    WaypointId: wp_weisse_stille_ankunft_schaedelkueste
+  Tips:
+  - "Der Schneesturm kehrt in Zyklen zur\xFCck \u2013 Feuerschalen w\xE4rmen."
+  - "Signatur: Schneesturm-Zyklus, Weltboss Gletscherw\xE4chter"
+  LoadingImage: {fileID: 0}
+  Regions:
+  - Name: Polarlichtgrat
+    Center: {x: -441.36414, y: -373.43875}
+    Radius: 110
+    LevelMin: 70
+    LevelMax: 72
+  - Name: Frostgrab
+    Center: {x: 205.93161, y: -321.57297}
+    Radius: 110
+    LevelMin: 71
+    LevelMax: 73
+  - Name: Schneefeldlager
+    Center: {x: -430.6068, y: 162.42479}
+    Radius: 110
+    LevelMin: 76
+    LevelMax: 78
+  - Name: Kristallbruch
+    Center: {x: 268.90472, y: 393.28387}
+    Radius: 110
+    LevelMin: 78
+    LevelMax: 80
+  - Name: Stiller See
+    Center: {x: -338.98727, y: 480}
+    Radius: 110
+    LevelMin: 79
+    LevelMax: 80
+  TimerLabel: "Gletscherw\xE4chter"
+  TimerPeriod: 7200
+  TimerOffset: 4200
+  TimerPosition: {x: 423.49023, y: -5, z: 350.28586}
+  TimerEventId: gletscherwaechter
+  DangerMap:
+    ZoneId: 
+    Size: 1000
+    Anchors: []
+    Waypoints: []
+    BandEdges: []
+    BandLevels: 
+    Areas: []
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 30
+    WaypointSafeRadius: 25
+  CompletionIds:
+  - wp_weisse_stille_ankunft
+  - wp_weisse_stille_heiligtum_der_urskai
+  - wp_weisse_stille_gletscherzunge
+  - wp_weisse_stille_eishoehle
+  - wp_weisse_stille_polarlichtgrat
+  - poi_weisse_stille_polarlichtgrat
+  - poi_weisse_stille_frostgrab
+  - poi_weisse_stille_schneefeldlager
+  - poi_weisse_stille_kristallbruch
+  - poi_weisse_stille_stiller_see
+  - vista_weisse_stille_0
+  - vista_weisse_stille_1
+  - vista_weisse_stille_2
+  - hc_weisse_stille_0
+  - hc_weisse_stille_1
+  - hc_weisse_stille_2
+  - hc_weisse_stille_3
+  - heart_weisse_stille_0
+  - heart_weisse_stille_1
+  - heart_weisse_stille_2
+  - heart_weisse_stille_3
+  Region: 0
+  IsHub: 0

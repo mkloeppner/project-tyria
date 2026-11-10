@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Erklimme die Treppe und genie\xDFe die Aussicht."
   Position: {x: -380, y: 26.988024, z: -20}
   Radius: 3
-  Experience: 710
+  Experience: 758
   Karma: 0
   Copper: 0
   HeroPoints: 0

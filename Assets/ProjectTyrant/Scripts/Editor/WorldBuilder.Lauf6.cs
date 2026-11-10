@@ -76,22 +76,22 @@ namespace ProjectTyrant.EditorTools
 
         static List<ZoneDefinition> BuildZonesLauf6(ZoneDefinition sonn, ZoneDefinition moor, ZoneDefinition frost, ZoneDefinition glut)
         {
-            var kueste = Def("silberkueste", "Silberküste", "Steilküste, Strände und Silbermund, die Hafenstadt der hundert Segel.", 30101, 900f, 30, 30, "kueste",
+            var kueste = Def("silberkueste", "Silberküste", "Steilküste, Strände und Silbermund, die Hafenstadt der hundert Segel.", 30101, 900f, 40, 50, "kueste",
                 new Rect(0.04f, 0.34f, 0.24f, 0.24f), C("#9fc0d8"), new Vector3(0f, 0f, 22f));
             kueste.Tips.AddRange(new[] { "Silbermund: Portalplatz mit Portalen in jede Zone, Bank, Bündnis-Viertel und Markt.", "Wegmarken von Silbermund aus sind günstiger." });
-            var wald = Def("daemmerwald", "Dämmerwald", "Ein alter Wald, in den violettes Licht kriecht.", 30102, 1000f, 30, 30, "wald",
+            var wald = Def("daemmerwald", "Dämmerwald", "Ein alter Wald, in den violettes Licht kriecht.", 30102, 1000f, 50, 60, "wald",
                 new Rect(0.04f, 0.6f, 0.26f, 0.26f), C("#4a4a6a"), new Vector3(0f, 0f, -420f));
             wald.Tips.AddRange(new[] { "Violette Verderbnis brennt – Laternen und Wächtersteine schützen.", "Der Alte Hain erwacht in regelmäßigen Abständen." });
-            var duene = Def("duenenmeer", "Dünenmeer", "Goldene Dünen, Oasen und versunkene Ruinen.", 30103, 1100f, 30, 30, "wueste",
+            var duene = Def("duenenmeer", "Dünenmeer", "Goldene Dünen, Oasen und versunkene Ruinen.", 30103, 1100f, 60, 70, "wueste",
                 new Rect(0.62f, 0.66f, 0.34f, 0.3f), C("#e4c48a"), new Vector3(-470f, 0f, 0f));
             duene.Tips.AddRange(new[] { "Alle 12 Minuten zieht ein Sandsturm auf – Späher-Zelte bieten Schutz.", "Der Raptor springt über die Schluchten." });
-            var tiefe = Def("kristalltiefe", "Kristalltiefe", "Höhlen unter den Hügeln, erleuchtet nur von Kristallen.", 30104, 900f, 30, 30, "tiefe",
+            var tiefe = Def("kristalltiefe", "Kristalltiefe", "Höhlen unter den Hügeln, erleuchtet nur von Kristallen.", 30104, 900f, 65, 75, "tiefe",
                 new Rect(0.62f, 0.04f, 0.18f, 0.22f), C("#4a4a7a"), new Vector3(0f, 0f, -380f));
             tiefe.Tips.AddRange(new[] { "Ohne Licht siehst du wenig – trag eine Laterne oder bleib nahe an den Kristallen.", "Blinde Jäger hören Schritte." });
-            var himmel = Def("himmelsspitzen", "Himmelsspitzen", "Gipfel und schwebende Inseln über den Wolken.", 30105, 1000f, 30, 30, "himmel",
+            var himmel = Def("himmelsspitzen", "Himmelsspitzen", "Gipfel und schwebende Inseln über den Wolken.", 30105, 1000f, 75, 80, "himmel",
                 new Rect(0.32f, 0.74f, 0.28f, 0.24f), C("#d8e8f8"), new Vector3(0f, 0f, -420f));
             himmel.Tips.AddRange(new[] { "Aufwinde tragen Gleitende nach oben.", "Wer das Vertrauen der Himmelswächter gewinnt, fliegt mit einem Greif." });
-            var feste = Def("tyrannenfeste", "Tyrannenfeste", "Die verderbte Festung des Tyrannen auf schwarzem Fels.", 30106, 900f, 30, 30, "feste",
+            var feste = Def("tyrannenfeste", "Tyrannenfeste", "Die verderbte Festung des Tyrannen auf schwarzem Fels.", 30106, 900f, 80, 80, "feste",
                 new Rect(0.82f, 0.04f, 0.16f, 0.22f), C("#5a2a3a"), new Vector3(0f, 0f, -400f));
             feste.Tips.AddRange(new[] { "Die Belagerung der Feste: drei Tore, der Hof, der Thronsaal.", "Die Feste öffnet sich erst mit Kapitel 10 der Persönlichen Geschichte." });
 

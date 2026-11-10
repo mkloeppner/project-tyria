@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: Versorge verletzte Reiher, brich Treibgut-Sperren mit der Harpune auf und jubel den Kindern beim Bootsrennen zu.
   Position: {x: -200, y: 2.5, z: 250}
   Radius: 26
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0

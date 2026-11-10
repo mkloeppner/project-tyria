@@ -15,13 +15,13 @@ namespace ProjectTyrant
 
     /// <summary>
     /// Lauf 5 / M26: Elite-Spezialisierung wie GW2 – eine besondere Eigenschaftslinie (3 Neben + 9 Haupt), die nur den dritten
-    /// Spezialisierungsplatz belegen kann; nur eine gleichzeitig aktiv. Freischaltung ab Stufe 30 in drei Schritten zu je 10 Heldenpunkten
+    /// Spezialisierungsplatz belegen kann; nur eine gleichzeitig aktiv. Freischaltung ab Stufe 80 (Lauf 11) in drei Schritten zu je 10 Heldenpunkten
     /// (1 Linie, 2 Waffe, 3 Skilltyp). Bringt eine Waffe, eine Mechanik-Variante, einen Skilltyp (1 Heil, 3 Hilfe, 1 Elite) und eine Signatur.
     /// </summary>
     [CreateAssetMenu(menuName = "Project Tyrant/Elite Specialization")]
     public class EliteSpecDefinition : SpecializationDefinition
     {
-        public const int RequiredLevel = 30, StepCost = 10, Steps = 3;
+        public const int RequiredLevel = LevelCurves.Cap, StepCost = 10, Steps = 3;
         public const int StepLine = 1, StepWeapon = 2, StepSkills = 3;
 
         public string ClassId;

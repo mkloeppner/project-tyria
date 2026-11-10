@@ -25,27 +25,27 @@ MonoBehaviour:
   Trinket: 0
   WeaponStrengthMin: 0
   WeaponStrengthMax: 0
-  Defense: 74
+  Defense: 22
   Prefix: Himmlisch
   Attributes:
   - Attr: 0
-    Value: 5
+    Value: 1
   - Attr: 1
-    Value: 5
+    Value: 1
   - Attr: 2
-    Value: 5
+    Value: 1
   - Attr: 3
-    Value: 5
+    Value: 1
   - Attr: 4
-    Value: 5
+    Value: 1
   - Attr: 5
-    Value: 5
+    Value: 1
   - Attr: 6
-    Value: 5
+    Value: 1
   - Attr: 7
-    Value: 5
+    Value: 1
   - Attr: 8
-    Value: 5
+    Value: 1
   MaxStack: 1
   VendorValue: 314
   Binding: 2

@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_gruener_schlund_signalfeuer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: gruener_schlund_signalfeuer
+  Title: 'Schlundfall: Signalfeuer'
+  Description: "Entz\xFCnde die Signalfeuer von Schlundfall, bevor die Nacht hereinbricht."
+  ChainId: 
+  Objective: 8
+  Center: {x: -8.306534, y: -2.1950052, z: 165.8726}
+  Radius: 30
+  Duration: 210
+  TargetCount: 4
+  Triggers:
+  - Type: 1
+    Delay: 20
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 480
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 240
+  GoldContribution: 4693.5483
+  Experience: 1877
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: gruener_schlund_gruener_schlund_signalfeuer
+  Path: []
+  DeliverPoint: {x: -8.306534, y: -2.1950052, z: 165.8726}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: d2700a718f1b191428fdab53e90136c9, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 0}
+  Sites:
+  - {x: 1.8251369, y: -1.1473924, z: 170.1562}
+  - {x: -12.590136, y: -2.3166964, z: 176.00427}
+  - {x: -18.438204, y: -2.8480027, z: 161.589}
+  - {x: -4.0229306, y: -2.4514472, z: 155.74094}
+  SiteChannel: 2.5
+  SiteLabel: "Feuer entz\xFCnden"
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0
+  Tier: 2
+  TierSet: 0
+  BalanceBaseTargets: 0

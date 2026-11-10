@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Sammle Heilkr\xE4uter und verbinde verwundete Waldl\xE4ufer."
   Position: {x: -40, y: 2.4328787, z: 200}
   Radius: 30
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0

@@ -47,6 +47,7 @@ namespace ProjectTyrant.EditorTools
             BuildWeapons();
             BuildArmor();
             BuildTrinkets();
+            BuildLevel80Tiers();   // Lauf 11
             BuildConsumables();
             BuildUtility();
             var db = Asset<ItemDatabase>(ItemDir + "/ItemDatabase.asset");
@@ -235,6 +236,51 @@ namespace ProjectTyrant.EditorTools
             Trinket("tr_back_frost", "Firnmantel", TrinketKind.Back, ItemRarity.Rare, 26, "Ritter");
             Trinket("tr_acc_glut", "Glutträne", TrinketKind.Accessory, ItemRarity.Exotic, 30, "Berserker");
             Trinket("tr_amulet_glut", "Sturmherz-Amulett", TrinketKind.Amulet, ItemRarity.Exotic, 30, "Himmlisch");
+        }
+
+        // ---------------- Lauf 11: Ausrüstung Level 40–80 ----------------
+        public static readonly (int level, string tier)[] Tiers80 = { (40, "Steppen"), (50, "Klippen"), (60, "Vulkan"), (70, "Gletscher"), (80, "Drachen") };
+
+        static string KindLabel(WeaponKind k)
+        {
+            switch (k)
+            {
+                case WeaponKind.Greatsword: return "Großschwert"; case WeaponKind.Staff: return "Stab"; case WeaponKind.Longbow: return "Langbogen";
+                case WeaponKind.AxeTorch: return "Axt & Fackel"; case WeaponKind.SwordWarhorn: return "Schwert & Horn"; case WeaponKind.ScepterFocus: return "Zepter & Fokus";
+                case WeaponKind.DaggerDagger: return "Dolche"; case WeaponKind.SwordPistol: return "Säbel & Pistole"; case WeaponKind.Shortbow: return "Kurzbogen";
+                case WeaponKind.Hammer: return "Hammer"; case WeaponKind.Rifle: return "Gewehr"; case WeaponKind.DaggerWarhorn: return "Dolch & Horn";
+                case WeaponKind.ScepterWarhorn: return "Zepter & Horn"; case WeaponKind.SwordFocus: return "Degen & Fokus"; case WeaponKind.ScepterDagger: return "Zepter & Dolch";
+                case WeaponKind.ScepterPistol: return "Zepter & Pistole"; case WeaponKind.AxeDagger: return "Axt & Dolch"; case WeaponKind.SwordShield: return "Schwert & Schild";
+                case WeaponKind.ScepterTorch: return "Zepter & Fackel";
+                default: return k.ToString();
+            }
+        }
+
+        /// <summary>
+        /// Lauf 11: je Level-Band 40/50/60/70/80 ein Satz Waffen (alle Waffenarten), Rüstung (6 Teile) und Schmuck; Seltenheit nach GW2-Verteilung
+        /// (40 Meisterwerk, 50 Selten, ab 60 Exotisch), auf 80 zusätzlich Aufgestiegen (Rüstung, Schmuck). Level-80-Exotisch = Werte aus EQUIPMENT.md.
+        /// </summary>
+        static void BuildLevel80Tiers()
+        {
+            string[] pre = { "Berserker", "Soldat", "Aasfresser", "Ritter", "Wüterich", "Kleriker" };
+            foreach (var (lvl, tier) in Tiers80)
+            {
+                var r = LevelCurves.LootRarityCap(lvl);
+                int i = 0;
+                foreach (WeaponKind k in System.Enum.GetValues(typeof(WeaponKind)))
+                {
+                    if (k == WeaponKind.None) continue;
+                    Weapon(ItemIds.Prefix(k) + "_l" + lvl, tier + "-" + KindLabel(k), k, r, lvl, pre[i++ % pre.Length]);
+                }
+                for (int p = 0; p < 6; p++) Armor("l" + lvl, tier, (ArmorPiece)p, r, lvl, pre[(p + lvl / 10) % pre.Length]);
+                Trinket("tr_back_l" + lvl, tier + "umhang", TrinketKind.Back, r, lvl, pre[lvl / 10 % pre.Length]);
+                Trinket("tr_amulet_l" + lvl, tier + "amulett", TrinketKind.Amulet, r, lvl, pre[(lvl / 10 + 1) % pre.Length]);
+                Trinket("tr_ring_l" + lvl, tier + "ring", TrinketKind.Ring, r, lvl, pre[(lvl / 10 + 2) % pre.Length]);
+                Trinket("tr_acc_l" + lvl, tier + "ohrring", TrinketKind.Accessory, r, lvl, pre[(lvl / 10 + 3) % pre.Length]);
+            }
+            for (int p = 0; p < 6; p++) Armor("asc80", "Sternenschmiede", (ArmorPiece)p, ItemRarity.Ascended, 80, p % 2 == 0 ? "Berserker" : "Himmlisch");
+            Trinket("tr_amulet_asc80", "Sternenherz-Amulett", TrinketKind.Amulet, ItemRarity.Ascended, 80, "Berserker");
+            Trinket("tr_ring_asc80", "Sternenring", TrinketKind.Ring, ItemRarity.Ascended, 80, "Himmlisch");
         }
 
         // ---------------- Verbrauchsgüter ----------------

@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d901df07c9037a14f8a8b4c187e0bce4, type: 3}
+  m_Name: Item_sw_l40
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ItemDefinition
+  Id: sw_l40
+  DisplayName: Steppen-Zepter & Horn des Berserkers
+  Description: 'Zepter und Kriegshorn (Nebenhand). Elite: Sturmrufer (Elementarweber).'
+  Icon: {fileID: 0}
+  Type: 0
+  Rarity: 3
+  RequiredLevel: 40
+  ItemLevel: 40
+  Weapon: 13
+  Armor: 0
+  Trinket: 0
+  WeaponStrengthMin: 391
+  WeaponStrengthMax: 432
+  Defense: 0
+  Prefix: Berserker
+  Attributes:
+  - Attr: 0
+    Value: 40
+  - Attr: 1
+    Value: 20
+  - Attr: 4
+    Value: 20
+  MaxStack: 1
+  VendorValue: 488
+  Binding: 0
+  Salvage:
+  - Material: {fileID: 11400000, guid: 9b3fff901eb07754c85e0958c43eebde, type: 2}
+    Min: 1
+    Max: 3
+  BagSize: 0
+  KitCharges: 0
+  Consumable: 0
+  FoodAttributes: []
+  FoodDurationMinutes: 30
+  HealBase: 0
+  ContainerLoot: {fileID: 0}

@@ -119,7 +119,8 @@ namespace ProjectTyrant.EditorTools
                 "stylized painterly fantasy colossal ice giant world boss with glacier shoulders and glowing blue cracks, game-ready low poly, hand-painted texture, full body");
             var meta = Arch("Meta_Sturmtyrann");
             Stats(meta, "Der Sturmtyrann", EnemyTier.Champion, 70f, 8.5f, 4.5f, 2.8f, 0.8f, 3.6f, 26f, 3.6f, 3000, 400f);
-            meta.FixedLevel = 30; meta.AttributeFactor = 1.25f; meta.Behavior = NpcBehavior.Charger; meta.BehaviorInterval = 9f; meta.BehaviorCoefficient = 10f; meta.ProjectileColor = new Color(0.7f, 0.8f, 1f);
+            meta.FixedLevel = 45;   // Lauf 11: Glutkern (Glutöde 35–45)
+            meta.AttributeFactor = 1.25f; meta.Behavior = NpcBehavior.Charger; meta.BehaviorInterval = 9f; meta.BehaviorCoefficient = 10f; meta.ProjectileColor = new Color(0.7f, 0.8f, 1f);
             meta.HasTelegraph = true; meta.TelegraphRadius = 8f; meta.TelegraphDelay = 1.6f; meta.TelegraphCoefficient = 20f; meta.TelegraphInterval = 10f; meta.Defiance = 1200f; meta.Loot = champBag;
             meta.Prefab = Prefab("PT_Meta_Sturmtyrann", meta, p => CreatureBuilder.Humanoid(p, "Sturmtyrann", new CreatureBuilder.Look { Body = C(0.25f, 0.24f, 0.3f), Belly = C(0.35f, 0.32f, 0.4f), Accent = C(0.6f, 0.75f, 1f), Eye = new Color(1.2f, 1.4f, 2.2f), Glow = 2f }, 2.4f, 1.6f, false, false, false, true),
                 "stylized painterly fantasy storm titan made of dark basalt with crackling blue lightning veins, game-ready low poly, hand-painted texture, full body");
@@ -128,6 +129,7 @@ namespace ProjectTyrant.EditorTools
             BuildCritters();
             BuildBalanceCreatures(trashLoot);   // Balance B1: neutrale Tiere der Startzone
             BuildLauf6(trashLoot, vetLoot, champBag);   // Lauf 6: Gegner der sechs neuen Zonen, Story-Gegner
+            BuildLauf11(trashLoot, vetLoot, champBag);   // Lauf 11: Regionen-Fraktionen, Weltbosse, Ambient-Tiere
             AssetDatabase.SaveAssets();
         }
 

@@ -112,13 +112,13 @@ namespace ProjectTyrant.EditorTools
                 p => CreatureBuilder.Humanoid(p, "Knight", new CreatureBuilder.Look { Body = C(0.12f, 0.1f, 0.14f), Belly = C(0.25f, 0.15f, 0.3f), Accent = C(0.7f, 0.3f, 1f), Eye = new Color(1.4f, 0.5f, 2.2f), Glow = 1.4f }, 2.3f, 1.5f, false, true, false, true),
                 "stylized painterly fantasy corrupted knight in cracked black armor leaking violet light, game-ready low poly, hand-painted texture, full body", EnemyTier.Veteran, new EffectApplication(EffectType.Torment, 1, 3f));
             var heraldMeta = Champ("Meta_Herold", "Der Herold", knight, 60f, 1500f, champBag, NpcBehavior.Charger, 1.5f);
-            heraldMeta.FixedLevel = 30; heraldMeta.AttributeFactor = 1.25f;
+            heraldMeta.FixedLevel = 80; heraldMeta.AttributeFactor = 1.25f;
             var herold = DataBuilder.Archetype("Story_Herold"); if (herold != null && herold.Prefab != null) heraldMeta.Prefab = herold.Prefab;
 
             // ---- Story: Vareth (nur in der Story-Instanz) ----
             var vareth = Arch("Story_Vareth");
             Stats(vareth, "Vareth, der Tyrann", EnemyTier.Champion, 70f, 8f, 4.5f, 2.8f, 0.85f, 3.2f, 26f, 2.7f, 3000, 400f);
-            vareth.FixedLevel = 30; vareth.AttributeFactor = 1.25f; vareth.Behavior = NpcBehavior.Pull; vareth.BehaviorRadius = 7f; vareth.BehaviorInterval = 9f; vareth.BehaviorCoefficient = 9f;
+            vareth.FixedLevel = 80; vareth.AttributeFactor = 1.25f; vareth.Behavior = NpcBehavior.Pull; vareth.BehaviorRadius = 7f; vareth.BehaviorInterval = 9f; vareth.BehaviorCoefficient = 9f;
             vareth.HasTelegraph = true; vareth.TelegraphRadius = 8f; vareth.TelegraphDelay = 1.7f; vareth.TelegraphCoefficient = 20f; vareth.TelegraphInterval = 10f; vareth.Defiance = 1800f;
             vareth.ProjectileColor = new Color(0.9f, 0.4f, 0.2f); vareth.SummonArchetype = guard;
             vareth.Prefab = Prefab("PT_Enemy_Story_Vareth", vareth, p => MeshyOr(p, "PT_Meshy_Story_vareth", 2.7f, CreatureBuilder.Humanoid(p, "Vareth", new CreatureBuilder.Look { Body = C(0.22f, 0.1f, 0.08f), Belly = C(0.35f, 0.15f, 0.1f), Accent = C(0.85f, 0.42f, 0.29f), Eye = new Color(2f, 0.6f, 0.2f), Glow = 1.6f }, 2.7f, 1.6f, false, false, false, true)),

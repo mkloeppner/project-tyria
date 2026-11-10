@@ -125,6 +125,17 @@ namespace ProjectTyrant.Balance
         };
         public static readonly float[] StartBands = { 45f, 120f };
 
+        /// <summary>Lauf 11: Gefahrenstufen der Regions-Zonen aus <see cref="RegionZones"/>; Hubs: alle Orte Stufe 0 (Stadt).</summary>
+        public static Spec RegionSpec(string zoneId)
+        {
+            var s = RegionZones.Get(zoneId);
+            if (s == null) return default;
+            var spec = new Spec { Entry = s.DangerEntry, Core = s.DangerCore, CoreAt = 0.3f };
+            if (s.Hub) spec.Cities = s.Places;
+            if (s.DangerCore >= 6) spec.NoLeash = new[] { s.Places[0], s.Places[5] };
+            return spec;
+        }
+
         public static int StartRegionLevel(string name)
         {
             foreach (var r in StartRegions) if (r.name == name) return r.level;
@@ -152,9 +163,15 @@ namespace ProjectTyrant.Balance
                 foreach (var r in regions) { int l = StartRegionLevel(r.name); if (l >= 0) m.Areas.Add(new DangerArea { Name = r.name, Center = r.center, Radius = StartRegionRadius(r.name, r.radius), Level = l }); }
                 return m;
             }
-            Specs.TryGetValue(zoneId, out var spec);
+            if (!Specs.TryGetValue(zoneId, out var spec)) spec = RegionSpec(zoneId);   // Lauf 11: Regions-Zonen
             if (spec.CoreAt <= 0f) spec = new Spec { Entry = 2, Core = 3, CoreAt = 0.33f };
-            m.BandEdges.Add(size * spec.CoreAt); m.BandLevels.AddRange(new[] { spec.Entry, spec.Core });
+            if (spec.Core - spec.Entry >= 2)   // Lauf 11: keine Sprünge über 1 Stufe – je Stufe ein Band
+            {
+                int n = spec.Core - spec.Entry; float step = spec.CoreAt * 2f / n;
+                for (int k = 1; k <= n; k++) m.BandEdges.Add(size * step * k);
+                for (int lv = spec.Entry; lv <= spec.Core; lv++) m.BandLevels.Add(lv);
+            }
+            else { m.BandEdges.Add(size * spec.CoreAt); m.BandLevels.AddRange(new[] { spec.Entry, spec.Core }); }
             m.HubSafeRadius = 0f; m.WaypointSafeRadius = 25f;
             foreach (var r in regions)
             {

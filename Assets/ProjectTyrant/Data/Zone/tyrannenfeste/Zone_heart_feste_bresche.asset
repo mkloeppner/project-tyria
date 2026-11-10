@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Entsch\xE4rfe Siegelfallen, l\xF6sche Br\xE4nde mit dem Eimer und verbinde verwundete Pioniere."
   Position: {x: -120, y: 3.446093, z: -200}
   Radius: 26
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0

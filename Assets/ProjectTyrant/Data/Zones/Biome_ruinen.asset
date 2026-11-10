@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c8853922032dd4aa0a2a32765460ec, type: 3}
+  m_Name: Biome_ruinen
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.BiomeProfile
+  Id: ruinen
+  DisplayName: Versunkene Ruinen
+  Amplitude: 10
+  Frequency: 0.0045
+  Octaves: 4
+  Terrace: 3
+  CanyonDepth: 0
+  CanyonFrequency: 0.006
+  BaseHeight: 2.5
+  WaterLevel: 1
+  EdgeMountainHeight: 45
+  GroundLow: {r: 0.22745098, g: 0.22745098, b: 0.24313726, a: 1}
+  GroundMid: {r: 0.2901961, g: 0.27450982, b: 0.3137255, a: 1}
+  GroundHigh: {r: 0.3529412, g: 0.32941177, b: 0.3764706, a: 1}
+  Cliff: {r: 0.16470589, g: 0.15686275, b: 0.1882353, a: 1}
+  Shore: {r: 0.3529412, g: 0.3137255, b: 0.28235295, a: 1}
+  Water: {r: 0.2, g: 0.3, b: 0.32, a: 0.9}
+  FogColor: {r: 0.2901961, g: 0.2901961, b: 0.3529412, a: 1}
+  FogDensity: 0.009
+  SkyTop: {r: 0.1254902, g: 0.1254902, b: 0.18039216, a: 1}
+  SkyHorizon: {r: 0.41568628, g: 0.3529412, b: 0.47843137, a: 1}
+  SkyBottom: {r: 0.1254902, g: 0.1254902, b: 0.14117648, a: 1}
+  SunColor: {r: 0.78431374, g: 0.72156864, b: 0.8784314, a: 1}
+  SunIntensity: 0.7
+  Saturation: -8
+  SplitShadows: {r: 0.22745098, g: 0.16470589, b: 0.3529412, a: 1}
+  SplitHighlights: {r: 0.6039216, g: 0.5411765, b: 0.627451, a: 1}
+  TreeDensity: 0.08
+  RockDensity: 0.7
+  TreeColor: {r: 0.22745098, g: 0.22745098, b: 0.22745098, a: 1}
+  TrunkColor: {r: 0.16470589, g: 0.14117648, b: 0.1254902, a: 1}
+  Conifers: 0
+  DeadTrees: 1
+  Weather: 2
+  Ambient: 1

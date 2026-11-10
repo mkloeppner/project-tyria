@@ -24,6 +24,26 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 139f8f79b720a1d489ca398e64642033, type: 2}
   - {fileID: 11400000, guid: 11610e7897a6f0a4c8a78153ebf5065e, type: 2}
   - {fileID: 11400000, guid: 8e4f5f8a6b9ea26458fb966606d00d4c, type: 2}
+  - {fileID: 11400000, guid: 475ab6ab13044634aa2e41c04b814685, type: 2}
+  - {fileID: 11400000, guid: b065bb02c218d6a40b2aa92d9d774249, type: 2}
+  - {fileID: 11400000, guid: fed95996702fb684699dc83809e83f23, type: 2}
+  - {fileID: 11400000, guid: 94567a1b676a8e940b4184290d67ad96, type: 2}
+  - {fileID: 11400000, guid: 350662ce19b5220498a77a234d6b65b0, type: 2}
+  - {fileID: 11400000, guid: 5d26a99efced9a14488b05d352079571, type: 2}
+  - {fileID: 11400000, guid: c5b78001db2a6414aabf1a8f0bb950ce, type: 2}
+  - {fileID: 11400000, guid: e0227303b138f114da7a21f38e24686e, type: 2}
+  - {fileID: 11400000, guid: b0ee7c44ec19e0d44a532c94f16550de, type: 2}
+  - {fileID: 11400000, guid: 32a2df0839c425b4ab6c50ef3c5fe4ee, type: 2}
+  - {fileID: 11400000, guid: 916a71720fdbdf44cad8f88faf490690, type: 2}
+  - {fileID: 11400000, guid: a435a141161ec4044a112e8b8ad66d96, type: 2}
+  - {fileID: 11400000, guid: 328023e8ef0fb164eb9c922f4985933d, type: 2}
+  - {fileID: 11400000, guid: d0dbb370e462c9342bada91a859fb1e0, type: 2}
+  - {fileID: 11400000, guid: c90c72100787d864bb312221dcdd98c2, type: 2}
+  - {fileID: 11400000, guid: 2c18ff1051cf035478ec9f3584da7687, type: 2}
+  - {fileID: 11400000, guid: 113cd1cc2c01eaa419bed9ece2aae7d1, type: 2}
+  - {fileID: 11400000, guid: c24d0d440564e0245882e0e99678262f, type: 2}
+  - {fileID: 11400000, guid: 7ecb9e678d1f4964a83018e165776418, type: 2}
+  - {fileID: 11400000, guid: cbff61e2a46311d4dacfc3da06046be2, type: 2}
   Tips:
   - "Mit M \xF6ffnest du die Karte \u2013 weiter herauszoomen zeigt den Kontinent."
   - Wegmarken anderer Zonen kosten einen Aufschlag.

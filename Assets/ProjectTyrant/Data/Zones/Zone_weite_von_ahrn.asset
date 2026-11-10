@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_weite_von_ahrn
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: weite_von_ahrn
+  DisplayName: Weite von Ahrn
+  Description: Offene Steppe, Nomadenzelte und wandernde Herden bis zum Horizont.
+  SceneName: PT_Zone_Weite_von_ahrn
+  Seed: 55014
+  Size: 1200
+  LevelMin: 30
+  LevelMax: 40
+  Biome: {fileID: 11400000, guid: fc3edb1e729bedd4195e883f4ec1cd9d, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: weite_von_ahrn_frostkamm_k
+    Position: {x: 284.5798, y: 4.753346, z: 415.96912}
+    Yaw: -145.62253
+    TargetZone: frostkamm
+    TargetPortal: frostkamm_weite_von_ahrn_k
+  - Id: weite_von_ahrn_nebelkamm
+    Position: {x: 499.79904, y: 1.6, z: -64.937645}
+    Yaw: -82.59717
+    TargetZone: nebelkamm
+    TargetPortal: nebelkamm_weite_von_ahrn
+  DefaultSpawn: {x: 0, y: 4.651695, z: -456}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0
+    y: 0.29
+    width: 0.05
+    height: 0.05
+  ContinentColor: {r: 0.78431374, g: 0.7529412, b: 0.4392157, a: 1}
+  Waypoints:
+  - Id: wp_weite_von_ahrn_ankunft
+    Name: Wegmarke Weite von Ahrn
+    Position: {x: 12, y: 4.578936, z: -438}
+  - Id: wp_weite_von_ahrn_lager_der_ahrn
+    Name: Wegmarke Lager der Ahrn
+    Position: {x: 431.18732, y: 1.6, z: -310.68738}
+  - Id: wp_weite_von_ahrn_hirtenfurt
+    Name: Wegmarke Hirtenfurt
+    Position: {x: 391.2426, y: 1.6142915, z: 36.159153}
+  - Id: wp_weite_von_ahrn_windsaeulen
+    Name: "Wegmarke Winds\xE4ulen"
+    Position: {x: -314.09122, y: 4.88911, z: 9.486923}
+  - Id: wp_weite_von_ahrn_grasmeer
+    Name: Wegmarke Grasmeer
+    Position: {x: -376.40225, y: 2.8650506, z: 219.85526}
+  - Id: wp_weite_von_ahrn_ankunft_frostkamm_k
+    Name: Portal-Wegmarke Frostkamm
+    Position: {x: 289.19196, y: 4.753346, z: 411.0171}
+  - Id: wp_weite_von_ahrn_ankunft_nebelkamm
+    Name: Portal-Wegmarke Nebelkamm
+    Position: {x: 500.77725, y: 1.5999999, z: -60.164574}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 4.651695, z: -456}
+    WaypointId: wp_weite_von_ahrn_ankunft
+  - Entrance: portal:weite_von_ahrn_frostkamm_k
+    Position: {x: 281.19196, y: 4.753346, z: 411.0171}
+    WaypointId: wp_weite_von_ahrn_ankunft_frostkamm_k
+  - Entrance: portal:weite_von_ahrn_nebelkamm
+    Position: {x: 493.84906, y: 1.6, z: -64.16457}
+    WaypointId: wp_weite_von_ahrn_ankunft_nebelkamm
+  Tips:
+  - "Wandernde Herden ziehen \xFCber die Weite \u2013 folge ihnen zu den Wasserstellen."
+  - 'Signatur: Herden-Events, Reittier-Weiten'
+  LoadingImage: {fileID: 0}
+  Regions:
+  - Name: Grasmeer
+    Center: {x: 236.72655, y: -480}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 31
+  - Name: "Ahnenh\xFCgel"
+    Center: {x: 184.12975, y: -144.18274}
+    Radius: 110
+    LevelMin: 32
+    LevelMax: 34
+  - Name: Herdenpfad
+    Center: {x: 281.1791, y: -146.08916}
+    Radius: 110
+    LevelMin: 32
+    LevelMax: 34
+  - Name: Wolkenrast
+    Center: {x: -73.96255, y: 150.74902}
+    Radius: 110
+    LevelMin: 36
+    LevelMax: 38
+  - Name: Steppentor
+    Center: {x: 132.79262, y: 478.74167}
+    Radius: 110
+    LevelMin: 39
+    LevelMax: 40
+  TimerLabel: 
+  TimerPeriod: 0
+  TimerOffset: 0
+  TimerPosition: {x: 0, y: 0, z: 0}
+  TimerEventId: 
+  DangerMap:
+    ZoneId: 
+    Size: 1000
+    Anchors: []
+    Waypoints: []
+    BandEdges: []
+    BandLevels: 
+    Areas: []
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 30
+    WaypointSafeRadius: 25
+  CompletionIds:
+  - wp_weite_von_ahrn_ankunft
+  - wp_weite_von_ahrn_lager_der_ahrn
+  - wp_weite_von_ahrn_hirtenfurt
+  - wp_weite_von_ahrn_windsaeulen
+  - wp_weite_von_ahrn_grasmeer
+  - poi_weite_von_ahrn_grasmeer
+  - poi_weite_von_ahrn_ahnenhuegel
+  - poi_weite_von_ahrn_herdenpfad
+  - poi_weite_von_ahrn_wolkenrast
+  - poi_weite_von_ahrn_steppentor
+  - vista_weite_von_ahrn_0
+  - vista_weite_von_ahrn_1
+  - vista_weite_von_ahrn_2
+  - hc_weite_von_ahrn_0
+  - hc_weite_von_ahrn_1
+  - hc_weite_von_ahrn_2
+  - hc_weite_von_ahrn_3
+  - heart_weite_von_ahrn_0
+  - heart_weite_von_ahrn_1
+  - heart_weite_von_ahrn_2
+  - heart_weite_von_ahrn_3
+  Region: 0
+  IsHub: 0

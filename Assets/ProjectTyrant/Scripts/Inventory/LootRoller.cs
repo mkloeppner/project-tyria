@@ -71,6 +71,9 @@ namespace ProjectTyrant
                 if (d.RequiredLevel > level + 2) continue;
                 pool.Add(d);
             }
+            // Lauf 11: Beute auf Zonen-Level – bevorzugt Items der letzten 10 Stufen, sonst alles bis Level + 2
+            var near = pool.FindAll(d => d.RequiredLevel >= level - 10 || d.Stackable);
+            if (near.Count > 0) pool = near;
             if (pool.Count == 0)
                 foreach (var d in db.Items) if (d != null && d.Rarity == rarity && (cat == ItemCategory.Any || d.Category == cat)) pool.Add(d);
             return pool.Count == 0 ? null : pool[rng.Next(pool.Count)];

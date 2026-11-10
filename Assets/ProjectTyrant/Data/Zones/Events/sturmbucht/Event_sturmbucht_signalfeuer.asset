@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_sturmbucht_signalfeuer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: sturmbucht_signalfeuer
+  Title: 'Leuchtturm Ost: Signalfeuer'
+  Description: "Entz\xFCnde die Signalfeuer von Leuchtturm Ost, bevor die Nacht hereinbricht."
+  ChainId: 
+  Objective: 8
+  Center: {x: -257.47736, y: 2.6343868, z: 32.132282}
+  Radius: 30
+  Duration: 210
+  TargetCount: 4
+  Triggers:
+  - Type: 1
+    Delay: 20
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 480
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 240
+  GoldContribution: 4693.5483
+  Experience: 1877
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: sturmbucht_sturmbucht_signalfeuer
+  Path: []
+  DeliverPoint: {x: -257.47736, y: 2.6343868, z: 32.132282}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: a78e89321c185e145b5d05fc9b36c9d5, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 0}
+  Sites:
+  - {x: -247.34569, y: 2.5, z: 36.415882}
+  - {x: -261.76096, y: 3.8440413, z: 42.263954}
+  - {x: -267.60904, y: 2.5371788, z: 27.848679}
+  - {x: -253.19376, y: 2.58066, z: 22.000612}
+  SiteChannel: 2.5
+  SiteLabel: "Feuer entz\xFCnden"
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0
+  Tier: 2
+  TierSet: 0
+  BalanceBaseTargets: 0

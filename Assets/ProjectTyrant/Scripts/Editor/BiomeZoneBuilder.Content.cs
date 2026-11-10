@@ -147,7 +147,7 @@ namespace ProjectTyrant.EditorTools
         }
 
         /// <summary>Belohnungen wachsen mit der Gebietsstufe wie die EP-Kurve (Stufe 8 = Faktor 1).</summary>
-        static float RewardScale(int level) => (400f + 120f * (level - 1)) / (400f + 120f * 7f);
+        static float RewardScale(int level) => LevelCurves.RewardScale(level);   // Lauf 11: 80er-Kurve
 
         static partial void PopulateZone(ZoneDefinition z, BiomeTerrain t, Transform env, ZoneRoot root)
         {
@@ -169,7 +169,7 @@ namespace ProjectTyrant.EditorTools
                 Transform first = null; float firstD = float.MaxValue;
                 foreach (var w in l.Waypoints)
                 {
-                    var def = Def(z, w.Id, MapMarkerKind.Waypoint, w.Name, w.Desc, G(w.Pos), ZoneContent.WaypointDiscoverRadius, Mathf.RoundToInt(120 * RewardScale(w.Level)));
+                    var def = Def(z, w.Id, MapMarkerKind.Waypoint, w.Name, w.Desc, G(w.Pos), ZoneContent.WaypointDiscoverRadius, Mathf.RoundToInt(XpRewards.Waypoint * RewardScale(w.Level)));
                     var go = Child(content, "Waypoint_" + w.Id, G(w.Pos));
                     ZoneContentBuilder.BuildMonument(go.transform, stone, crystal);
                     var wp = go.AddComponent<Waypoint>(); wp.Definition = def; wp.PromptText = "Reisen"; wp.Range = 3.5f;
@@ -185,7 +185,7 @@ namespace ProjectTyrant.EditorTools
                 int pi = 0;
                 foreach (var p in l.Pois)
                 {
-                    var def = Def(z, p.Id, MapMarkerKind.PointOfInterest, p.Name, p.Desc, G(p.Pos, 1f), ZoneContent.PoiRadius, Mathf.RoundToInt(150 * RewardScale(p.Level)));
+                    var def = Def(z, p.Id, MapMarkerKind.PointOfInterest, p.Name, p.Desc, G(p.Pos, 1f), ZoneContent.PoiRadius, Mathf.RoundToInt(XpRewards.Poi * RewardScale(p.Level)));
                     var go = Child(content, "POI_" + p.Id, G(p.Pos, 1f));
                     go.AddComponent<PointOfInterest>().Definition = def;
                     Landmark(content, z, t, p, pi++);
@@ -201,7 +201,7 @@ namespace ProjectTyrant.EditorTools
                     var toC = (-v.Pos).normalized; if (toC.sqrMagnitude < 0.1f) toC = Vector2.up;
                     var spot = new ZoneContent.VistaSpot { Id = v.Id, Name = v.Name, Pos = v.Pos, StairDir = toC, Height = 9f };
                     var top = ZoneContent.PlatformTop(spot);
-                    var def = Def(z, v.Id, MapMarkerKind.Vista, v.Name, "Erklimme die Treppe und genieße die Aussicht.", top, 3f, Mathf.RoundToInt(250 * RewardScale(v.Level)));
+                    var def = Def(z, v.Id, MapMarkerKind.Vista, v.Name, "Erklimme die Treppe und genieße die Aussicht.", top, 3f, Mathf.RoundToInt(XpRewards.Vista * RewardScale(v.Level)));
                     var vr = Child(content, "Vista_" + v.Id, Vector3.zero).transform;
                     float ground = t.Height(v.Pos.x, v.Pos.y);
                     float h = spot.Height + 1.5f;
@@ -234,7 +234,7 @@ namespace ProjectTyrant.EditorTools
                 foreach (var c in l.Challenges)
                 {
                     var top = G(c.Pos);
-                    var def = Def(z, c.Id, MapMarkerKind.HeroChallenge, c.Name, c.Desc, top, 3f, Mathf.RoundToInt(200 * RewardScale(c.Level)), 0, 0, ZoneContent.ChallengeHeroPoints);
+                    var def = Def(z, c.Id, MapMarkerKind.HeroChallenge, c.Name, c.Desc, top, 3f, Mathf.RoundToInt(XpRewards.Challenge * RewardScale(c.Level)), 0, 0, ZoneContent.ChallengeHeroPoints);
                     var shrine = Child(content, "Challenge_" + c.Id, top).transform;
                     switch (c.Kind)
                     {
@@ -262,7 +262,7 @@ namespace ProjectTyrant.EditorTools
                 foreach (var s in l.Insights)
                 {
                     var pos = G(s.Pos);
-                    var def = Def(z, s.Id, MapMarkerKind.Insight, s.Name, s.Desc, pos, 3f, Mathf.RoundToInt(100 * RewardScale(s.Level)));
+                    var def = Def(z, s.Id, MapMarkerKind.Insight, s.Name, s.Desc, pos, 3f, Mathf.RoundToInt(XpRewards.Insight * RewardScale(s.Level)));
                     var go = Child(content, "Insight_" + s.Id, pos).transform;
                     Part(go, PrimitiveType.Cylinder, new Vector3(0, 0.2f, 0), new Vector3(1.4f, 0.2f, 1.4f), sstone, "Base", null, true);
                     var cr = Part(go, PrimitiveType.Cube, new Vector3(0, 1.4f, 0), new Vector3(0.45f, 1.1f, 0.45f), insightMat, "Crystal", new Vector3(0, 45, 20));
@@ -343,7 +343,7 @@ namespace ProjectTyrant.EditorTools
             foreach (var h in l.Hearts)
             {
                 float sc = RewardScale(h.Level);
-                var def = Def(z, h.Id, MapMarkerKind.Heart, h.Name, h.Task, G(h.Center), h.Radius, Mathf.RoundToInt(400 * sc), Mathf.RoundToInt(250 * sc), Mathf.RoundToInt(120 * sc));
+                var def = Def(z, h.Id, MapMarkerKind.Heart, h.Name, h.Task, G(h.Center), h.Radius, Mathf.RoundToInt(XpRewards.Heart * sc), Mathf.RoundToInt(250 * sc), Mathf.RoundToInt(120 * sc));
                 def.HeartTask = h.Task; def.KillValue = h.KillValue; def.TaskValue = h.TaskValue;
                 var npc = Child(content, "Heart_" + h.Id, G(h.NpcPos)).transform;
                 CharacterRigs.Npc(npc, robe.GetColor("_BaseColor"), h.Id);

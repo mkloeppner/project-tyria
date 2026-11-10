@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Entz\xFCnde die Laternen, sammle Lichtmoos und versorge Verletzte."
   Position: {x: -140, y: 1.1695151, z: -230}
   Radius: 30
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0

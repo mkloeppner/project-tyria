@@ -18,22 +18,32 @@ MonoBehaviour:
   SceneName: PT_Zone_Tyrannenfeste
   Seed: 30106
   Size: 900
-  LevelMin: 30
-  LevelMax: 30
+  LevelMin: 80
+  LevelMax: 80
   Biome: {fileID: 11400000, guid: 4d8258cdef8047a4d87ec9a60a06f945, type: 2}
   LegacyLayout: 0
   Portals:
   - Id: tyrannenfeste_gluetoede
-    Position: {x: -30, y: 0, z: -430}
+    Position: {x: -30, y: 27.334362, z: -430}
     Yaw: 3.9909134
     TargetZone: gluetoede
     TargetPortal: gluetoede_tyrannenfeste
   - Id: tyrannenfeste_silbermund
-    Position: {x: 14, y: 0, z: -390}
+    Position: {x: 14, y: 1.7, z: -390}
     Yaw: -2.055889
     TargetZone: silberkueste
     TargetPortal: plaza_tyrannenfeste
-  DefaultSpawn: {x: 0, y: 0, z: -400}
+  - Id: tyrannenfeste_schaedelkueste_k
+    Position: {x: -68.857285, y: 5.1769547, z: 371.6755}
+    Yaw: 169.50427
+    TargetZone: schaedelkueste
+    TargetPortal: schaedelkueste_tyrannenfeste_k
+  - Id: tyrannenfeste_sonnentor_portal
+    Position: {x: -259.97565, y: 4.439773, z: -274.40237}
+    Yaw: 43.45355
+    TargetZone: sonnentor
+    TargetPortal: sonnentor_tyrannenfeste_portal
+  DefaultSpawn: {x: 0, y: 1.7, z: -400}
   ContinentRect:
     serializedVersion: 2
     x: 0.82
@@ -41,7 +51,28 @@ MonoBehaviour:
     width: 0.16
     height: 0.22
   ContinentColor: {r: 0.3529412, g: 0.16470589, b: 0.22745098, a: 1}
-  Waypoints: []
+  Waypoints:
+  - Id: wp_feste_lager
+    Name: Wegmarke Belagerungslager
+    Position: {x: 10, y: 1.7, z: -380}
+  - Id: wp_feste_tore
+    Name: Wegmarke Torvorfeld
+    Position: {x: 0, y: 1.7, z: -260}
+  - Id: wp_feste_hof
+    Name: Wegmarke Innerer Hof
+    Position: {x: 0, y: 4.902551, z: 20}
+  - Id: wp_feste_thron
+    Name: Wegmarke Thronstiege
+    Position: {x: 0, y: 4.5541325, z: 200}
+  - Id: wp_tyrannenfeste_ankunft_gluetoede
+    Name: "Portal-Wegmarke Glut\xF6de"
+    Position: {x: -36.510612, y: 27.334362, z: -428.01456}
+  - Id: wp_tyrannenfeste_ankunft_schaedelkueste_k
+    Name: "Portal-Wegmarke Sch\xE4delk\xFCste"
+    Position: {x: -59.764313, y: 5.160443, z: 365.77594}
+  - Id: wp_tyrannenfeste_ankunft_sonnentor_portal
+    Name: Portal-Wegmarke Sonnentor
+    Position: {x: -247.84904, y: 4.5612197, z: -270.0468}
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 1.7, z: -400}
@@ -52,6 +83,12 @@ MonoBehaviour:
   - Entrance: portal:tyrannenfeste_silbermund
     Position: {x: 13.784754, y: 1.7, z: -384.00388}
     WaypointId: wp_feste_lager
+  - Entrance: portal:tyrannenfeste_schaedelkueste_k
+    Position: {x: -67.76431, y: 5.1769547, z: 365.7759}
+    WaypointId: wp_tyrannenfeste_ankunft_schaedelkueste_k
+  - Entrance: portal:tyrannenfeste_sonnentor_portal
+    Position: {x: -255.84904, y: 4.439773, z: -270.04678}
+    WaypointId: wp_tyrannenfeste_ankunft_sonnentor_portal
   Tips:
   - 'Die Belagerung der Feste: drei Tore, der Hof, der Thronsaal.'
   - "Die Feste \xF6ffnet sich erst mit Kapitel 10 der Pers\xF6nlichen Geschichte."
@@ -60,28 +97,28 @@ MonoBehaviour:
   - Name: Belagerungslager
     Center: {x: -40, y: -360}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 80
+    LevelMax: 80
   - Name: Die drei Tore
     Center: {x: 0, y: -300}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 80
+    LevelMax: 80
   - Name: Innerer Hof
     Center: {x: 0, y: 0}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 80
+    LevelMax: 80
   - Name: Siegelkammern
     Center: {x: -200, y: 120}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 80
+    LevelMax: 80
   - Name: Thronsaal
     Center: {x: 0, y: 260}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 80
+    LevelMax: 80
   TimerLabel: Belagerung der Feste
   TimerPeriod: 1500
   TimerOffset: 180
@@ -160,3 +197,5 @@ MonoBehaviour:
   - heart_feste_tore
   - heart_feste_kammern
   - heart_feste_bresche
+  Region: 0
+  IsHub: 0

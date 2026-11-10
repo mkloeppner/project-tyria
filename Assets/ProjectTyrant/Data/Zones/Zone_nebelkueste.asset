@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_nebelkueste
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: nebelkueste
+  DisplayName: "Nebelk\xFCste"
+  Description: "Zerkl\xFCftete K\xFCste im Nebel, \xFCbers\xE4t mit Drachenknochen."
+  SceneName: PT_Zone_Nebelkueste
+  Seed: 44897
+  Size: 1100
+  LevelMin: 80
+  LevelMax: 80
+  Biome: {fileID: 11400000, guid: 43b00d85d022cc34aa270308f631d6be, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: nebelkueste_gruene_flut
+    Position: {x: -317.74802, y: 0, z: -335.3807}
+    Yaw: 43.45355
+    TargetZone: gruene_flut
+    TargetPortal: gruene_flut_nebelkueste
+  - Id: nebelkueste_herz_der_flut
+    Position: {x: 458.14914, y: 0, z: -59.52618}
+    Yaw: -82.59717
+    TargetZone: herz_der_flut
+    TargetPortal: herz_der_flut_nebelkueste
+  DefaultSpawn: {x: 0, y: 0, z: -418}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.62
+    y: 0.66
+    width: 0.34
+    height: 0.3
+  ContinentColor: {r: 0.4392157, g: 0.5019608, b: 0.5647059, a: 1}
+  Waypoints: []
+  Arrivals: []
+  Tips:
+  - "Im Nebel lauern Piraten \u2013 und eine gewaltige Schlange."
+  - "Signatur: Story-Kapitel 4\u20136, Weltboss Nebelschlange"
+  LoadingImage: {fileID: 0}
+  Regions: []
+  TimerLabel: 
+  TimerPeriod: 0
+  TimerOffset: 0
+  TimerPosition: {x: 0, y: 0, z: 0}
+  TimerEventId: 
+  DangerMap:
+    ZoneId: 
+    Size: 1000
+    Anchors: []
+    Waypoints: []
+    BandEdges: []
+    BandLevels: 
+    Areas: []
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 30
+    WaypointSafeRadius: 25
+  CompletionIds: []
+  Region: 2
+  IsHub: 0

@@ -29,11 +29,11 @@ MonoBehaviour:
   Prefix: Aasfresser
   Attributes:
   - Attr: 5
-    Value: 15
+    Value: 4
   - Attr: 0
-    Value: 8
+    Value: 2
   - Attr: 3
-    Value: 8
+    Value: 2
   MaxStack: 1
   VendorValue: 193
   Binding: 2

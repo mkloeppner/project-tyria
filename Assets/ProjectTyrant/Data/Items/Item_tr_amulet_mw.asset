@@ -29,11 +29,11 @@ MonoBehaviour:
   Prefix: Berserker
   Attributes:
   - Attr: 0
-    Value: 10
+    Value: 3
   - Attr: 1
-    Value: 5
+    Value: 2
   - Attr: 4
-    Value: 5
+    Value: 2
   MaxStack: 1
   VendorValue: 111
   Binding: 0

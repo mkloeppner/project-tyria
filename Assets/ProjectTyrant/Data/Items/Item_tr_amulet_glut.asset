@@ -29,23 +29,23 @@ MonoBehaviour:
   Prefix: Himmlisch
   Attributes:
   - Attr: 0
-    Value: 22
+    Value: 7
   - Attr: 1
-    Value: 22
+    Value: 7
   - Attr: 2
-    Value: 22
+    Value: 7
   - Attr: 3
-    Value: 22
+    Value: 7
   - Attr: 4
-    Value: 22
+    Value: 7
   - Attr: 5
-    Value: 22
+    Value: 7
   - Attr: 6
-    Value: 22
+    Value: 7
   - Attr: 7
-    Value: 22
+    Value: 7
   - Attr: 8
-    Value: 22
+    Value: 7
   MaxStack: 1
   VendorValue: 561
   Binding: 2

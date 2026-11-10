@@ -25,7 +25,7 @@ MonoBehaviour:
   Trinket: 0
   WeaponStrengthMin: 0
   WeaponStrengthMax: 0
-  Defense: 18
+  Defense: 8
   Prefix: Ritter
   Attributes:
   - Attr: 2

@@ -101,6 +101,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\IconPainter.Story.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\MasteryBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\StoryBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldBuilder.Lauf11.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\TraitBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\BalanceBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldEnemyBuilder.Balance.cs" />
@@ -125,11 +126,13 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.Weaver.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldEnemyBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\CharacterSelectBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldEnemyBuilder.Lauf11.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldBuilder.Lauf6.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\StoryFigureBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ArrivalWaypointBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClipBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\AnimGalleryBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ZoneEventBuilder.Lauf11.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ProjectTyrant\Scripts\Editor\ProjectTyrant.Editor.asmdef" />

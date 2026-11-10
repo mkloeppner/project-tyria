@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_zarathis
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: zarathis
+  DisplayName: Zarathis
+  Description: Die Verlorene Stadt hinter einer Knochenmauer.
+  SceneName: PT_Zone_Zarathis
+  Seed: 70918
+  Size: 1300
+  LevelMin: 80
+  LevelMax: 80
+  Biome: {fileID: 11400000, guid: 4d8258cdef8047a4d87ec9a60a06f945, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: zarathis_glutkessel
+    Position: {x: -375.5204, y: 0, z: -396.359}
+    Yaw: 43.45355
+    TargetZone: glutkessel
+    TargetPortal: glutkessel_zarathis
+  DefaultSpawn: {x: 0, y: 0, z: -494}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.06
+    y: 0.7
+    width: 0.34
+    height: 0.28
+  ContinentColor: {r: 0.47843137, g: 0.22745098, b: 0.16470589, a: 1}
+  Waypoints: []
+  Arrivals: []
+  Tips:
+  - "H\xF6chste Gefahrenstufe: Rufer holen Verst\xE4rkung, Flieger werden vom Himmel geholt."
+  - 'Signatur: Finale-Meta Fall von Zarathis, Rennstrecke 2'
+  LoadingImage: {fileID: 0}
+  Regions: []
+  TimerLabel: 
+  TimerPeriod: 0
+  TimerOffset: 0
+  TimerPosition: {x: 0, y: 0, z: 0}
+  TimerEventId: 
+  DangerMap:
+    ZoneId: 
+    Size: 1000
+    Anchors: []
+    Waypoints: []
+    BandEdges: []
+    BandLevels: 
+    Areas: []
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 30
+    WaypointSafeRadius: 25
+  CompletionIds: []
+  Region: 1
+  IsHub: 0

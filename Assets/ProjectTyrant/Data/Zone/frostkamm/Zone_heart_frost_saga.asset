@@ -18,9 +18,9 @@ MonoBehaviour:
   Description: Stimme die Windglocken neu und sammle Eisblumen.
   Position: {x: -200, y: 12.671652, z: 185}
   Radius: 30
-  Experience: 1213
-  Karma: 758
-  Copper: 364
+  Experience: 3755
+  Karma: 782
+  Copper: 375
   HeroPoints: 0
   Requires: 0
   HeartTask: Stimme die Windglocken neu und sammle Eisblumen.

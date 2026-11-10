@@ -256,6 +256,20 @@ namespace ProjectTyrant.Procedural
         };
 
         public static BzLayout[] All => new[] { Nebelmoor, Frostkamm, Gluetoede, Silberkueste, Daemmerwald, Duenenmeer, Kristalltiefe, Himmelsspitzen, Tyrannenfeste };   // Lauf 6: Eigenschaft (Teil-Klassen-Initialisierung)
-        public static BzLayout For(string zoneId) { foreach (var l in All) if (l.ZoneId == zoneId) return l; return null; }
+        public static BzLayout For(string zoneId) { foreach (var l in All) if (l.ZoneId == zoneId) { Relevel(l); return l; } return RegionZones.Layout(zoneId); }   // Lauf 11: Regions-Zonen aus Spezifikation
+
+        static readonly HashSet<BzLayout> _releveled = new HashSet<BzLayout>();
+
+        /// <summary>Lauf 11: Inhalts-Level einmalig vom alten ins neue Level-Band übertragen (<see cref="LevelBands"/>); Abstand ab der ersten Wegmarke.</summary>
+        public static void Relevel(BzLayout l)
+        {
+            if (l == null || !_releveled.Add(l)) return;
+            Vector2 entry = l.Waypoints != null && l.Waypoints.Length > 0 ? l.Waypoints[0].Pos : Vector2.zero;
+            float max = 1f;
+            foreach (var sp in l.AllSpots()) max = Mathf.Max(max, Vector2.Distance(sp.Pos, entry));
+            if (l.Hearts != null) foreach (var h in l.Hearts) max = Mathf.Max(max, Vector2.Distance(h.Center, entry));
+            foreach (var sp in l.AllSpots()) sp.Level = LevelBands.Map(l.ZoneId, sp.Level, Vector2.Distance(sp.Pos, entry) / max);
+            if (l.Hearts != null) foreach (var h in l.Hearts) h.Level = LevelBands.Map(l.ZoneId, h.Level, Vector2.Distance(h.Center, entry) / max);
+        }
     }
 }

@@ -132,3 +132,26 @@ Ausgangslage: Lauf 6 M30–M34 nur teilweise geprüft (Rebuild Everything vor B1
 | 5 | Kristalltiefe, L30 | 27,2 s | 29,6 s | 21,4 s | 62,3 s |
 
 Befund Baseline-Kurve: Stufe 0–3 deutlich zu tödlich (Zeit-bis-Tod 4–10 s statt 16–30 s), Stufe 5 dagegen **zu leicht** (27 s gegen 3 Trash, Korridor ≥ 9 s, praktisch 9–13 s) und zu zäh (Trash 21 s statt 7–9 s). Die Kurve muss den Einstieg entschärfen und das Spätspiel gefährlicher, aber schneller machen.
+
+
+## Lauf 10 – Greif komplett, Himmelsschuppe, Reittier-Auswahl, Admin-Menü (Start 2026-11-10 18:40)
+Befund vor Beginn: Greif aus Lauf 6 als Gleit-/Sturzmodell (`GriffonFlight`, 2 Beherrschungsränge, Sink über `MaxFallSpeed`), Radialmenü und `SelectedMount` vorhanden, Admin-Funktionen nur als lose „Welt:“/„Story:“-Befehle im Debug-Panel (F9), Story-„Schritt abschließen“ ohne Reise/Auto-Wahl/Kennzeichnung, keine Flugregeln, kein Icon für den Greif.
+
+| Meilenstein | Status | Ende | Nachweis |
+|---|---|---|---|
+| M54 Admin + Auswahl | fertig | 18:36 | `AdminCommands` (Reittiere/Beherrschungen/alles mit Kennzeichnung, /flight, Story weiter/Kapitel/Sprung/Reset/Instanz-Ziel, Szenen-/Auto-Wahl-/Reise-Schalter), `StoryDirector.Admin` über `FinishStep`; `MountSelectionModel` + `MountPrefsDto` auf Account-Ebene, X-Logik Standard/Zuletzt, Radial-Regel, Direkttasten, HUD-Symbol, Reittier-Tab 3 × 2 mit Einstellungen |
+| M55 FlightMotor + Regeln | fertig | 18:36 | `FlightMotor` kinematisch, `PlayerController.FlightVelocity`, `FlightRules` (Decken 150/400/80, 5 Verbote), Aufwinde für beide Flieger |
+| M56 Greif komplett | fertig | 18:36 | Auftrieb 3/5, Gleiten 1,6× 6:1, Sturz 4×/4,6×, Abfangen 60/85 %, Strömungsabriss < 0,6×, Sturzangriff nach Tempo, 4 Ränge |
+| M57 Himmelsschuppe | fertig | 18:36 | `MountKind.Skyscale`, Daten/Modell/Icon, Ausdauer 100/150, Wandhaften, Feuerstoß, Linie mit 4 Rängen, Sammlung 3 Schritte (`SkyscaleCollection`, `Lauf10Builder`) |
+| M58 Validator + Doku | fertig | 18:41 | `FlightReach` (Zwei-Wege-Regel, Builder-Bericht), MOUNTS.md, ADMIN.md; Rebuild Everything 353 s (Himmelsspitzen: Ei auf 99 m, Greif über Aufwind bis 129 m erreichbar, Himmelsschuppe mit 2 Rasten), 407/407 EditMode (+64 Lauf-10-Tests), 0 eigene Warnungen. Live (Play Mode, Sonnfurt): Admin-Freischaltung 5 Reittiere, Greif gleitet 11,2 m/s bei 1,87 m/s Sinken (6 : 1), Luftwechsel Himmelsschuppe → Greif bei 39 m ohne Höhenverlust |
+
+
+## Lauf 11 – Große Erweiterung: Level 80, 20 Zonen, Glutwüste, Dracheninseln (Start 2026-11-10 18:42)
+Befund vor Beginn (Abweichung vom erwarteten Ist-Stand, Details KNOWN_ISSUES 67): Läufe 7–9 fehlen im Projekt – keine sechs Hauptstädte (nur Silbermund), keine Völker, kein Weltboss-Fahrplan (Zonen-Timer je Zone), kein Abnahme-/Autopilot-System außer den B1-Bots, Ausrüstung bis Exotisch (Aufgestiegen/Legendär nur als Enum). Level-Kurven waren linear bis 30 (AttributeSet, Waffenstärke, Gegner-HP, XP).
+
+| Meilenstein | Status | Ende | Nachweis |
+|---|---|---|---|
+| M59 Level-80-Fundament | Code fertig, Rebuild läuft | | `LevelCurves` (Attribute 37→1.000 mit Stützstellen, Fraktion für HP/Waffenstärke/Gegner, XP 1–30 unverändert und ab 30 konstant 3.880, Heldenpunkte 4/Stufe bis 30 + 1 bis 80, Beute-Seltenheit nach Level), Cap 80, Re-Leveling (`LevelBands`, Layouts und Ereignisse ins neue Band), Story-Gates 1/5/12/20/30/40/50/60/70/80, Elite ab 80 (Bestandsschutz), Speicherstand v5 mit Sicherungskopie, Gefahrenstufe 6 „Drachenland“ (inkl. Zug aus der Luft), Fahrplan 12 Bosse + 2 Metas, Ausrüstung 40–80 (+ Aufgestiegen 80), Admin `/level`, Fahrplan; 452/453 EditMode (Rest: Datenkorrektur, behoben) |
+| M60/M61 Kernland I+II | Daten + Builder fertig, Rebuild läuft | | 8 Zonen aus `RegionZones` (je 5 Wegmarken, 5 POIs, 3 Aussichtspunkte, 4 Herausforderungen, 3 Einblicke, 4 Herzen, 10 Lager, 4 Tiergruppen, 3 Späher, Sprungrätsel, 6 Ereignisse mit Kette), 9 neue Gegnertypen, Weltbosse Gletscherwächter/Tempelwächter, Metas Vulkanausbruch/Tempel |
+| M62 Glutwüste Welt | Daten + Builder fertig | | 6 Zonen, Fraktionen Sandgeister/Flammenkult/Knochenkonstrukte, Salzkoloss, Metas Flammentempel und Fall von Zarathis, Portal Tyrannenfeste + Schiff Silbermund |
+| M64 Dracheninseln Welt | Daten + Builder fertig | | 6 Zonen, Jade-Konstrukte/Geisterwesen/Abtrünnige/Jade-Piraten, Nebelschlange, Meta Erwachen des Meeresdrachen, Schiffe Silbermund/Sonnentor |

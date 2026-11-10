@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Ein Tafelberg \u2013 nur mit dem Springer erreichbar."
   Position: {x: 230, y: 33.65346, z: 120}
   Radius: 12
-  Experience: 440
+  Experience: 469
   Karma: 0
   Copper: 0
   HeroPoints: 0

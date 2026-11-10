@@ -103,7 +103,12 @@ namespace ProjectTyrant.Balance
                     GameEventBus.Notify(_self.DisplayName + " springt durch die Schatten!", new Color(0.8f, 0.6f, 1f));
                 }
                 var mc = MountController.Local;
-                if (mc != null && mc.Motor.IsMounted && d < 4f && _b.ControlAllowed(ControlKinds.Dismount))
+                if (mc != null && mc.Flight != null && mc.Flight.Airborne)   // Lauf 11: Stufe 6 – Zug aus der Luft
+                {
+                    var flat = p.transform.position - transform.position; flat.y = 0f;
+                    if (flat.magnitude < 25f && _b.ControlAllowed(ControlKinds.AirPull)) { mc.PullFromSky(3f); GameEventBus.Notify(_self.DisplayName + " holt dich vom Himmel!", new Color(1f, 0.5f, 0.4f)); }
+                }
+                else if (mc != null && mc.Motor.IsMounted && d < 4f && _b.ControlAllowed(ControlKinds.Dismount))
                 {
                     mc.ApplyDismount();
                     p.Effects.Apply(new EffectApplication(EffectType.Cripple, 1, 2f), _self);

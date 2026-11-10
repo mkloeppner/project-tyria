@@ -94,15 +94,15 @@ namespace ProjectTyrant.Tests
         }
 
         [Test]
-        public void Elite_OnlyOneActive_OccupiesThirdSlot_UnlockAtLevel30()
+        public void Elite_OnlyOneActive_OccupiesThirdSlot_UnlockAtCap()   // Lauf 11: Cap 80 (bis Lauf 10: 30)
         {
             var a = Core("a"); var b = Core("b"); var c = Core("c"); var x = El("x"); var y = El("y");
             var m = new TraitModel(); m.SetSpecializations(new SpecializationDefinition[] { a, b, c, x, y });
-            var p = new ProgressionModel(); p.SetLevel(29);
+            var p = new ProgressionModel(); p.SetLevel(EliteSpecDefinition.RequiredLevel - 1);
             var lx = m.Get("x"); var ly = m.Get("y");
-            Assert.IsFalse(m.CanUnlockTier(lx, p, out var why)); StringAssert.Contains("30", why);
+            Assert.IsFalse(m.CanUnlockTier(lx, p, out var why)); StringAssert.Contains(EliteSpecDefinition.RequiredLevel.ToString(), why); Assert.AreEqual(80, EliteSpecDefinition.RequiredLevel);
             Assert.IsFalse(m.SetActiveElite("x", out _), "erst freischalten");
-            p.SetLevel(30); int hp = p.AvailableHeroPoints;
+            p.SetLevel(EliteSpecDefinition.RequiredLevel); int hp = p.AvailableHeroPoints;
             Assert.IsTrue(m.UnlockTier(lx, p, out _)); Assert.AreEqual(hp - EliteSpecDefinition.StepCost, p.AvailableHeroPoints, "Schritt kostet 10");
             Assert.IsTrue(m.UnlockMajor(lx, 1, 2, p, out _)); Assert.AreEqual(hp - EliteSpecDefinition.StepCost, p.AvailableHeroPoints, "Haupteigenschaft im Schritt enthalten");
             Assert.IsTrue(m.UnlockTier(m.Get("c"), p, out _));
@@ -135,7 +135,7 @@ namespace ProjectTyrant.Tests
         {
             var a = Core("a"); var b = Core("b"); var c = Core("c"); var x = El("x");
             var st = new ProfileState(); st.Traits.SetSpecializations(new SpecializationDefinition[] { a, b, c, x });
-            st.Progression.SetLevel(30); st.Traits.UnlockTier(st.Traits.Get("x"), st.Progression, out _); st.Traits.SetActiveElite("x", out _);
+            st.Progression.SetLevel(EliteSpecDefinition.RequiredLevel); st.Traits.UnlockTier(st.Traits.Get("x"), st.Progression, out _); st.Traits.SetActiveElite("x", out _);
             var dto = st.ToDto(); Assert.AreEqual("x", dto.EliteSpec);
             var json = JsonUtility.ToJson(dto); var back = JsonUtility.FromJson<SaveGameDto>(json);
             var st2 = new ProfileState(); st2.LoadDto(back, null, new List<SkillDefinition>());

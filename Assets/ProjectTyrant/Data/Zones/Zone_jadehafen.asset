@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_jadehafen
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: jadehafen
+  DisplayName: Jadehafen
+  Description: "Die Vertikalstadt in drei Ebenen mit Aufz\xFCgen und Jade-Technik."
+  SceneName: PT_Zone_Jadehafen
+  Seed: 67204
+  Size: 800
+  LevelMin: 80
+  LevelMax: 80
+  Biome: {fileID: 11400000, guid: e416f66ff454aad40b9ffc87db629e68, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: jadehafen_gruene_flut
+    Position: {x: 189.71988, y: 0, z: 277.31277}
+    Yaw: -145.62253
+    TargetZone: gruene_flut
+    TargetPortal: gruene_flut_jadehafen
+  - Id: jadehafen_fluesterhain
+    Position: {x: 333.19937, y: 0, z: -43.291767}
+    Yaw: -82.59717
+    TargetZone: fluesterhain
+    TargetPortal: fluesterhain_jadehafen
+  - Id: jadehafen_silberkueste_schiff
+    Position: {x: -61.20648, y: 0, z: 330.3782}
+    Yaw: 169.50427
+    TargetZone: silberkueste
+    TargetPortal: silberkueste_jadehafen_schiff
+  - Id: jadehafen_sonnentor_schiff
+    Position: {x: 266.67245, y: 0, z: 204.40598}
+    Yaw: -127.470375
+    TargetZone: sonnentor
+    TargetPortal: sonnentor_jadehafen_schiff
+  DefaultSpawn: {x: 0, y: 0, z: -304}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.4
+    y: 0.4
+    width: 0.2
+    height: 0.2
+  ContinentColor: {r: 0.3529412, g: 0.78431374, b: 0.627451, a: 1}
+  Waypoints: []
+  Arrivals: []
+  Tips:
+  - "Aufz\xFCge verbinden Hafen, Mittelstadt und Oberstadt."
+  - 'Signatur: Hub, Jadegeist-Werkstatt, Anglerverband, Bootswerft'
+  LoadingImage: {fileID: 0}
+  Regions: []
+  TimerLabel: 
+  TimerPeriod: 0
+  TimerOffset: 0
+  TimerPosition: {x: 0, y: 0, z: 0}
+  TimerEventId: 
+  DangerMap:
+    ZoneId: 
+    Size: 1000
+    Anchors: []
+    Waypoints: []
+    BandEdges: []
+    BandLevels: 
+    Areas: []
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 30
+    WaypointSafeRadius: 25
+  CompletionIds: []
+  Region: 2
+  IsHub: 1

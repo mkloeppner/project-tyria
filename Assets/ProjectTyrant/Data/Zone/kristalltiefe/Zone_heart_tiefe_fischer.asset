@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: Birg Reusen aus dem See und verbinde gebissene Fischer.
   Position: {x: -140, y: 1.7, z: -60}
   Radius: 30
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0

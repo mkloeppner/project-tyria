@@ -71,6 +71,10 @@ namespace ProjectTyrant
         [Tooltip("Gefahrenkarte (Gebiete, Bänder, Sicherheitszonen) – vom Builder gebacken")] public Balance.ZoneDangerMap DangerMap = new Balance.ZoneDangerMap();
         [Tooltip("Ids aller Zonenabschluss-Ziele (vom Builder) – für den Prozentwert auf der Kontinentkarte")] public List<string> CompletionIds = new List<string>();
 
+        [Header("Lauf 11")]
+        [Tooltip("Region der Kontinentkarte (Reiter)")] public WorldRegion Region = WorldRegion.Kernland;
+        [Tooltip("Hauptstadt/Hub der Region (Gefahrenstufe 0)")] public bool IsHub;
+
         public string LevelText => LevelMin == LevelMax ? LevelMin.ToString() : LevelMin + "–" + LevelMax;
         public PortalDef Portal(string id) => Portals.Find(p => p.Id == id);
 

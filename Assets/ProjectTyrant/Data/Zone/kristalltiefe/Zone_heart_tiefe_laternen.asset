@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Trag Laternen in die dunklen Stollen und entsch\xE4rfe alte Sprengfallen."
   Position: {x: 60, y: 0, z: -200}
   Radius: 24
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0

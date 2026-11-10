@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Rufe einen Frosth\xFCter herbei \u2013 greife ihn von der Seite an."
   Position: {x: -60, y: 14.28836, z: 60}
   Radius: 3
-  Experience: 568
+  Experience: 606
   Karma: 0
   Copper: 0
   HeroPoints: 10

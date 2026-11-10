@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_sturmbucht
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: sturmbucht
+  DisplayName: Sturmbucht
+  Description: "Klippen, Fischerd\xF6rfer und Piratenbuchten im ewigen Wind."
+  SceneName: PT_Zone_Sturmbucht
+  Seed: 51809
+  Size: 1000
+  LevelMin: 40
+  LevelMax: 50
+  Biome: {fileID: 11400000, guid: dc1d53a611228af47bb74f6e8e54b077, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: sturmbucht_silberkueste_k
+    Position: {x: 237.14984, y: 3.7780907, z: 346.64096}
+    Yaw: -145.62253
+    TargetZone: silberkueste
+    TargetPortal: silberkueste_sturmbucht_k
+  - Id: sturmbucht_aschenkessel
+    Position: {x: 416.49924, y: 1.8000001, z: -54.114708}
+    Yaw: -82.59717
+    TargetZone: aschenkessel
+    TargetPortal: aschenkessel_sturmbucht
+  DefaultSpawn: {x: 0, y: 3.4091587, z: -380}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0
+    y: 0.58
+    width: 0.04
+    height: 0.14
+  ContinentColor: {r: 0.49803922, g: 0.6901961, b: 0.78431374, a: 1}
+  Waypoints:
+  - Id: wp_sturmbucht_ankunft
+    Name: Wegmarke Sturmbucht
+    Position: {x: 12, y: 4.967015, z: -362}
+  - Id: wp_sturmbucht_hafen_weisswasser
+    Name: "Wegmarke Hafen Wei\xDFwasser"
+    Position: {x: 258.3615, y: 1.8000001, z: -201.69002}
+  - Id: wp_sturmbucht_wrackbucht
+    Name: Wegmarke Wrackbucht
+    Position: {x: -135.71902, y: 2.3944492, z: -155.39708}
+  - Id: wp_sturmbucht_moewenklippe
+    Name: "Wegmarke M\xF6wenklippe"
+    Position: {x: -232.47736, y: 2.2820907, z: 17.132282}
+  - Id: wp_sturmbucht_piratennest
+    Name: Wegmarke Piratennest
+    Position: {x: 319.45776, y: 2.5, z: 272.50284}
+  - Id: wp_sturmbucht_ankunft_silberkueste_k
+    Name: "Portal-Wegmarke Silberk\xFCste"
+    Position: {x: 241.762, y: 3.7780907, z: 341.68893}
+  - Id: wp_sturmbucht_ankunft_aschenkessel
+    Name: Portal-Wegmarke Aschenkessel
+    Position: {x: 417.47745, y: 1.8000001, z: -49.34164}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 3.4091587, z: -380}
+    WaypointId: wp_sturmbucht_ankunft
+  - Entrance: portal:sturmbucht_silberkueste_k
+    Position: {x: 233.762, y: 3.7780907, z: 341.68893}
+    WaypointId: wp_sturmbucht_ankunft_silberkueste_k
+  - Entrance: portal:sturmbucht_aschenkessel
+    Position: {x: 410.54926, y: 1.8000001, z: -53.34164}
+    WaypointId: wp_sturmbucht_ankunft_aschenkessel
+  Tips:
+  - "Die Piraten belagern regelm\xE4\xDFig den Hafen."
+  - 'Signatur: Schiffswracks, Belagerung des Hafens'
+  LoadingImage: {fileID: 0}
+  Regions:
+  - Name: Piratennest
+    Center: {x: -100.19446, y: -320.3212}
+    Radius: 110
+    LevelMin: 40
+    LevelMax: 42
+  - Name: Leuchtturm Ost
+    Center: {x: 266.78647, y: -109.1281}
+    Radius: 110
+    LevelMin: 43
+    LevelMax: 45
+  - Name: Salzpfanne
+    Center: {x: 32.38595, y: -71.278145}
+    Radius: 110
+    LevelMin: 43
+    LevelMax: 45
+  - Name: Schmugglergrotte
+    Center: {x: -390.1246, y: 106.71167}
+    Radius: 110
+    LevelMin: 45
+    LevelMax: 47
+  - Name: Sturmkap
+    Center: {x: -2.387833, y: 400}
+    Radius: 110
+    LevelMin: 49
+    LevelMax: 50
+  TimerLabel: 
+  TimerPeriod: 0
+  TimerOffset: 0
+  TimerPosition: {x: 0, y: 0, z: 0}
+  TimerEventId: 
+  DangerMap:
+    ZoneId: 
+    Size: 1000
+    Anchors: []
+    Waypoints: []
+    BandEdges: []
+    BandLevels: 
+    Areas: []
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 30
+    WaypointSafeRadius: 25
+  CompletionIds:
+  - wp_sturmbucht_ankunft
+  - wp_sturmbucht_hafen_weisswasser
+  - wp_sturmbucht_wrackbucht
+  - wp_sturmbucht_moewenklippe
+  - wp_sturmbucht_piratennest
+  - poi_sturmbucht_piratennest
+  - poi_sturmbucht_leuchtturm_ost
+  - poi_sturmbucht_salzpfanne
+  - poi_sturmbucht_schmugglergrotte
+  - poi_sturmbucht_sturmkap
+  - vista_sturmbucht_0
+  - vista_sturmbucht_1
+  - vista_sturmbucht_2
+  - hc_sturmbucht_0
+  - hc_sturmbucht_1
+  - hc_sturmbucht_2
+  - hc_sturmbucht_3
+  - heart_sturmbucht_0
+  - heart_sturmbucht_1
+  - heart_sturmbucht_2
+  - heart_sturmbucht_3
+  Region: 0
+  IsHub: 0

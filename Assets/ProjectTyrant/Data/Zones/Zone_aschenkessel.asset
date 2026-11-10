@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_aschenkessel
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: aschenkessel
+  DisplayName: Aschenkessel
+  Description: Lavafelder, Obsidianklippen und Schwefelseen unter einem rauchenden Gipfel.
+  SceneName: PT_Zone_Aschenkessel
+  Seed: 66929
+  Size: 1100
+  LevelMin: 50
+  LevelMax: 60
+  Biome: {fileID: 11400000, guid: 22ef9fad1082962418bc2bfbd2bec883, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: aschenkessel_daemmerwald_k
+    Position: {x: 260.86484, y: 9.688608, z: 381.30505}
+    Yaw: -145.62253
+    TargetZone: daemmerwald
+    TargetPortal: daemmerwald_aschenkessel_k
+  - Id: aschenkessel_sturmbucht
+    Position: {x: -443.023, y: 1.6, z: 131.05194}
+    Yaw: 106.4789
+    TargetZone: sturmbucht
+    TargetPortal: sturmbucht_aschenkessel
+  DefaultSpawn: {x: 0, y: 5.0803, z: -418}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.62
+    y: 0.26
+    width: 0.04
+    height: 0.08
+  ContinentColor: {r: 0.6901961, g: 0.3529412, b: 0.22745098, a: 1}
+  Waypoints:
+  - Id: wp_aschenkessel_ankunft
+    Name: Wegmarke Aschenkessel
+    Position: {x: 12, y: 4.4050612, z: -400}
+  - Id: wp_aschenkessel_obsidianwerk
+    Name: Wegmarke Obsidianwerk
+    Position: {x: -411.8558, y: 1.6, z: -377.93024}
+  - Id: wp_aschenkessel_schwefelsee
+    Name: Wegmarke Schwefelsee
+    Position: {x: -369.54514, y: 1.6, z: -138.74689}
+  - Id: wp_aschenkessel_rauchschlot
+    Name: Wegmarke Rauchschlot
+    Position: {x: 145.36566, y: 1.6, z: 148.09386}
+  - Id: wp_aschenkessel_glutpass
+    Name: Wegmarke Glutpass
+    Position: {x: 156.26501, y: 7.632351, z: 384.96393}
+  - Id: wp_aschenkessel_ankunft_daemmerwald_k
+    Name: "Portal-Wegmarke D\xE4mmerwald"
+    Position: {x: 265.477, y: 9.688608, z: 376.35303}
+  - Id: wp_aschenkessel_ankunft_sturmbucht
+    Name: Portal-Wegmarke Sturmbucht
+    Position: {x: -429.26947, y: 1.0790882, z: 129.34996}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 5.0803, z: -418}
+    WaypointId: wp_aschenkessel_ankunft
+  - Entrance: portal:aschenkessel_daemmerwald_k
+    Position: {x: 257.477, y: 9.688608, z: 376.35303}
+    WaypointId: wp_aschenkessel_ankunft_daemmerwald_k
+  - Entrance: portal:aschenkessel_sturmbucht
+    Position: {x: -437.26947, y: 1.6, z: 129.34996}
+    WaypointId: wp_aschenkessel_ankunft_sturmbucht
+  Tips:
+  - Wenn der Gipfel grollt, beginnt der Vulkanausbruch.
+  - 'Signatur: Glutschritt-Beherrschung, Vulkanausbruch-Meta'
+  LoadingImage: {fileID: 0}
+  Regions:
+  - Name: Glutpass
+    Center: {x: 355.8862, y: -307.74146}
+    Radius: 110
+    LevelMin: 51
+    LevelMax: 53
+  - Name: Basaltterrassen
+    Center: {x: 118.29677, y: -360.27026}
+    Radius: 110
+    LevelMin: 50
+    LevelMax: 52
+  - Name: Kraterrand
+    Center: {x: 78.70282, y: -31.061104}
+    Radius: 110
+    LevelMin: 54
+    LevelMax: 56
+  - Name: Aschenhof
+    Center: {x: 378.6706, y: 88.96934}
+    Radius: 110
+    LevelMin: 55
+    LevelMax: 57
+  - Name: Schlackenhalde
+    Center: {x: 44.146233, y: 431.0893}
+    Radius: 110
+    LevelMin: 59
+    LevelMax: 60
+  TimerLabel: Vulkanausbruch
+  TimerPeriod: 1800
+  TimerOffset: 300
+  TimerPosition: {x: -240.36633, y: 0, z: -405.79202}
+  TimerEventId: aschenkessel_ausbruch
+  DangerMap:
+    ZoneId: 
+    Size: 1000
+    Anchors: []
+    Waypoints: []
+    BandEdges: []
+    BandLevels: 
+    Areas: []
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 30
+    WaypointSafeRadius: 25
+  CompletionIds:
+  - wp_aschenkessel_ankunft
+  - wp_aschenkessel_obsidianwerk
+  - wp_aschenkessel_schwefelsee
+  - wp_aschenkessel_rauchschlot
+  - wp_aschenkessel_glutpass
+  - poi_aschenkessel_glutpass
+  - poi_aschenkessel_basaltterrassen
+  - poi_aschenkessel_kraterrand
+  - poi_aschenkessel_aschenhof
+  - poi_aschenkessel_schlackenhalde
+  - vista_aschenkessel_0
+  - vista_aschenkessel_1
+  - vista_aschenkessel_2
+  - hc_aschenkessel_0
+  - hc_aschenkessel_1
+  - hc_aschenkessel_2
+  - hc_aschenkessel_3
+  - heart_aschenkessel_0
+  - heart_aschenkessel_1
+  - heart_aschenkessel_2
+  - heart_aschenkessel_3
+  Region: 0
+  IsHub: 0

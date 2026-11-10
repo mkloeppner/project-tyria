@@ -29,11 +29,11 @@ MonoBehaviour:
   Prefix: Ritter
   Attributes:
   - Attr: 2
-    Value: 22
+    Value: 6
   - Attr: 0
-    Value: 11
+    Value: 3
   - Attr: 1
-    Value: 11
+    Value: 3
   MaxStack: 1
   VendorValue: 414
   Binding: 2

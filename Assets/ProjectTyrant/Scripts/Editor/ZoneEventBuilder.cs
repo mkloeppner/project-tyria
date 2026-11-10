@@ -14,7 +14,7 @@ namespace ProjectTyrant.EditorTools
         static System.Func<float, float, float> _h;
         static ZoneDefinition _z;
         static List<EventDefinition> _list;
-        static float Scale(int lvl) => (400f + 120f * (lvl - 1)) / (400f + 120f * 7f);
+        static float Scale(int lvl) => LevelCurves.RewardScale(lvl);   // Lauf 11: 80er-Kurve
         static EnemyArchetype A(string id) => DataBuilder.Archetype(id);
         static Vector3 V(float x, float z) => new Vector3(x, _h(x, z), z);
 
@@ -26,8 +26,11 @@ namespace ProjectTyrant.EditorTools
             if (d == null) { d = ScriptableObject.CreateInstance<EventDefinition>(); AssetDatabase.CreateAsset(d, path); }
             d.Id = id; d.Title = title; d.Description = desc; d.Objective = obj; d.Center = V(x, z); d.Radius = radius; d.Duration = duration; d.TargetCount = target;
             d.ChainId = chain; d.Triggers = new List<EventTrigger>(); d.SuccessNext = d.FailNext = null; d.Cooldown = 240f;
+            if (_z != null && LevelBands.TryGet(_z.Id, out _))   // Lauf 11: Event-Level ins neue Band (Abstand vom Zoneneingang)
+                level = LevelBands.Map(_z.Id, level, Mathf.Clamp01(Vector2.Distance(new Vector2(x, z), new Vector2(_z.DefaultSpawn.x, _z.DefaultSpawn.z)) / (_z.Size * 0.6f)));
+
             float s = Scale(level);
-            d.Experience = Mathf.RoundToInt(500 * s); d.Karma = Mathf.RoundToInt(150 * s); d.Coins = Mathf.RoundToInt(80 * s); d.GoldContribution = 1500f * s; d.GoldItemRoll = true;
+            d.Experience = Mathf.RoundToInt(XpRewards.Event * s); d.Karma = Mathf.RoundToInt(150 * s); d.Coins = Mathf.RoundToInt(80 * s); d.GoldContribution = 1500f * s; d.GoldItemRoll = true;
             d.SetFlagOnSuccess = d.SetFlagOnFail = d.ClearFlagOnSuccess = d.ClearFlagOnFail = null; d.FlagDuration = 0f;
             d.WorldHook = _z.Id + "_" + id; d.Path = new Vector3[0]; d.DeliverPoint = d.Center; d.CaptureRadius = 8f; d.CaptureTime = 8f;
             d.WaveSize = 2; d.WaveInterval = 18f; d.Trash = d.Veteran = d.Boss = null;
@@ -60,7 +63,7 @@ namespace ProjectTyrant.EditorTools
                 case "nebelmoor": Moor(defendCrates); break;
                 case "frostkamm": Frost(); break;
                 case "gluetoede": Glut(defendCrates); break;
-                default: Lauf6Events(z.Id, defendCrates); break;   // Lauf 6: neue Zonen
+                default: if (!Lauf11Events(z.Id, defendCrates)) Lauf6Events(z.Id, defendCrates); break;   // Lauf 6/11: neue Zonen
             }
             EditorUtility.SetDirty(z);
             return _list.ToArray();

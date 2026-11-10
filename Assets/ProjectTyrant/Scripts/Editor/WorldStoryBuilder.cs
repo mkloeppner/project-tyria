@@ -59,6 +59,17 @@ namespace ProjectTyrant.EditorTools
                         break;
                 }
             }
+            var rs = RegionZones.Get(z.Id);   // Lauf 11: je Regions-Zone drei Späher an den Wegmarken
+            if (rs != null)
+            {
+                var lay = RegionZones.Layout(z.Id);
+                for (int i = 1; i <= 3 && i < lay.Waypoints.Length; i++)
+                {
+                    var w = lay.Waypoints[i];
+                    var r = new Row { Zone = z.Id, Type = "Scout", Id = "scout_" + z.Id + "_" + i, Name = "Späher von " + rs.Places[i], Npc = "scout", X = w.Pos.x + 8f, Z = w.Pos.y - 6f, Radius = 160f };
+                    BuildScout(root, r, G(r.X, r.Z), r.Name); scouts++;
+                }
+            }
             Debug.Log("[ProjectTyrant] Story-Welt " + z.Id + ": " + scouts + " Späher, " + hearts + " neue Herzen");
         }
 
@@ -80,14 +91,14 @@ namespace ProjectTyrant.EditorTools
         static void BuildHeart(ZoneDefinition z, Transform root, Row r, Func<float, float, Vector3> G, string npcName)
         {
             int level = r.Extra.TryGetValue("level", out var lv) ? Mathf.RoundToInt(F(lv)) : z.LevelMin;
-            float sc = (400f + 120f * (level - 1)) / (400f + 120f * 7f);
+            float sc = LevelCurves.RewardScale(level);   // Lauf 11
             string dir = DataDir + "/Zone/" + z.Id; EnsureFolder(dir);
             string path = dir + "/Zone_" + r.Id + ".asset";
             var def = AssetDatabase.LoadAssetAtPath<ZoneObjectDefinition>(path);
             if (def == null) { def = ScriptableObject.CreateInstance<ZoneObjectDefinition>(); AssetDatabase.CreateAsset(def, path); }
             var center = G(r.X, r.Z);
             def.Id = r.Id; def.Kind = MapMarkerKind.Heart; def.DisplayName = r.Name; def.Description = r.Extra.TryGetValue("task", out var task) ? task : r.Name;
-            def.Position = center; def.Radius = r.Radius > 0f ? r.Radius : 25f; def.Experience = Mathf.RoundToInt(400 * sc); def.Karma = Mathf.RoundToInt(250 * sc); def.Copper = Mathf.RoundToInt(120 * sc); def.HeroPoints = 0;
+            def.Position = center; def.Radius = r.Radius > 0f ? r.Radius : 25f; def.Experience = Mathf.RoundToInt(XpRewards.Heart * sc); def.Karma = Mathf.RoundToInt(250 * sc); def.Copper = Mathf.RoundToInt(120 * sc); def.HeroPoints = 0;
             def.HeartTask = def.Description; def.KillValue = r.Extra.TryGetValue("kill", out var kv) ? F(kv) : 0.04f; def.TaskValue = r.Extra.TryGetValue("value", out var tv) ? F(tv) : 0.1f; def.Requires = Traversal.None;
             EditorUtility.SetDirty(def);
             if (z.CompletionIds == null) z.CompletionIds = new List<string>();

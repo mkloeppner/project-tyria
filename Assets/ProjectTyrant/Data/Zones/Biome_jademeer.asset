@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c8853922032dd4aa0a2a32765460ec, type: 3}
+  m_Name: Biome_jademeer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.BiomeProfile
+  Id: jademeer
+  DisplayName: Jade-Meer
+  Amplitude: 5
+  Frequency: 0.003
+  Octaves: 3
+  Terrace: 0
+  CanyonDepth: 0
+  CanyonFrequency: 0.006
+  BaseHeight: 1.2
+  WaterLevel: 1.4
+  EdgeMountainHeight: 36
+  GroundLow: {r: 0.2901961, g: 0.6901961, b: 0.5411765, a: 1}
+  GroundMid: {r: 0.3529412, g: 0.7529412, b: 0.6039216, a: 1}
+  GroundHigh: {r: 0.6039216, g: 0.84705883, b: 0.72156864, a: 1}
+  Cliff: {r: 0.22745098, g: 0.47843137, b: 0.41568628, a: 1}
+  Shore: {r: 0.78431374, g: 0.9098039, b: 0.8156863, a: 1}
+  Water: {r: 0.2, g: 0.7, b: 0.55, a: 0.75}
+  FogColor: {r: 0.72156864, g: 0.9411765, b: 0.84705883, a: 1}
+  FogDensity: 0.0035
+  SkyTop: {r: 0.22745098, g: 0.5647059, b: 0.8156863, a: 1}
+  SkyHorizon: {r: 0.84705883, g: 1, b: 0.9411765, a: 1}
+  SkyBottom: {r: 0.5019608, g: 0.7529412, b: 0.65882355, a: 1}
+  SunColor: {r: 0.9411765, g: 1, b: 0.9411765, a: 1}
+  SunIntensity: 1.25
+  Saturation: 14
+  SplitShadows: {r: 0.16470589, g: 0.47843137, b: 0.47843137, a: 1}
+  SplitHighlights: {r: 0.8156863, g: 1, b: 0.8156863, a: 1}
+  TreeDensity: 0.05
+  RockDensity: 0.3
+  TreeColor: {r: 0.2901961, g: 0.6039216, b: 0.41568628, a: 1}
+  TrunkColor: {r: 0.2901961, g: 0.2901961, b: 0.22745098, a: 1}
+  Conifers: 0
+  DeadTrees: 0
+  Weather: 0
+  Ambient: 2

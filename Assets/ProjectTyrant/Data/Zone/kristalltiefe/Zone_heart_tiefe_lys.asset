@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Sammle Pilzproben und repariere die Messger\xE4te."
   Position: {x: 210, y: 1.7, z: -130}
   Radius: 30
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0

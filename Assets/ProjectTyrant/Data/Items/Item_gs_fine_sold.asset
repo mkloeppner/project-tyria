@@ -23,17 +23,17 @@ MonoBehaviour:
   Weapon: 1
   Armor: 0
   Trinket: 0
-  WeaponStrengthMin: 108
-  WeaponStrengthMax: 120
+  WeaponStrengthMin: 62
+  WeaponStrengthMax: 69
   Defense: 0
   Prefix: Soldat
   Attributes:
   - Attr: 0
-    Value: 8
+    Value: 4
   - Attr: 2
-    Value: 4
+    Value: 2
   - Attr: 3
-    Value: 4
+    Value: 2
   MaxStack: 1
   VendorValue: 59
   Binding: 0

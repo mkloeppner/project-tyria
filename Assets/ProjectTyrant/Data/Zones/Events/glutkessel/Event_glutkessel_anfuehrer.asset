@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_glutkessel_anfuehrer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: glutkessel_anfuehrer
+  Title: "Anf\xFChrer der Flammenkult"
+  Description: "Ihr Anf\xFChrer zeigt sich \u2013 brich seine Trotzleiste."
+  ChainId: glutkessel_angriff
+  Objective: 5
+  Center: {x: 355.99948, y: 4.693504, z: -195.94737}
+  Radius: 36
+  Duration: 300
+  TargetCount: 1
+  Triggers:
+  - Type: 2
+    Delay: 0
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 300
+  GoldContribution: 4693.5483
+  Experience: 1877
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: glutkessel_glutkessel_anfuehrer
+  Path: []
+  DeliverPoint: {x: 355.99948, y: 4.693504, z: -195.94737}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: c5a8653225005fb4aae9e5a7c3dbbc78, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 11400000, guid: 3dbf0733d9e981e4791c11c5460d0ce2, type: 2}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0
+  Tier: 2
+  TierSet: 0
+  BalanceBaseTargets: 0

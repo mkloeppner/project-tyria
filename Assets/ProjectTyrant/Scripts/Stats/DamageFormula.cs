@@ -13,7 +13,7 @@ namespace ProjectTyrant
     /// <summary>GW2-Schadensformeln. Direkt = Waffenstärke × Kraft × Koeffizient / Rüstung.</summary>
     public static class DamageFormula
     {
-        public static float WeaponStrength(int level) => Mathf.Lerp(55f, 1000f, (Mathf.Clamp(level, 1, AttributeSet.MaxLevel) - 1) / (float)(AttributeSet.MaxLevel - 1));
+        public static float WeaponStrength(int level) => Mathf.Lerp(55f, 1000f, LevelCurves.Fraction(level));
 
         public static float Direct(float weaponStrength, float power, float coefficient, float targetArmor)
             => Mathf.Max(0f, weaponStrength * power * coefficient / Mathf.Max(1f, targetArmor));

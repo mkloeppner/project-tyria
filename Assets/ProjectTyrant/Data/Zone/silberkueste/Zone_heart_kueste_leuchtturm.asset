@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Repariere die Linsen, sammle Treibholz f\xFCr das Feuer und halte die Harpyien fern."
   Position: {x: 270, y: 1.8000001, z: 170}
   Radius: 30
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0

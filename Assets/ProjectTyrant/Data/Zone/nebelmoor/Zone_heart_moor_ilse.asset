@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: Sammle Sumpfkraut, repariere die Bohlenstege und vertreibe Moorschleicher.
   Position: {x: -40, y: 2.2804024, z: -250}
   Radius: 30
-  Experience: 710
+  Experience: 2129
   Karma: 444
   Copper: 213
   HeroPoints: 0

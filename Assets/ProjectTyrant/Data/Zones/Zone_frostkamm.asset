@@ -19,31 +19,36 @@ MonoBehaviour:
   Seed: 25030
   Size: 1100
   LevelMin: 25
-  LevelMax: 30
+  LevelMax: 35
   Biome: {fileID: 11400000, guid: d621af870013bd14ab85bca9578801a2, type: 2}
   LegacyLayout: 0
   Portals:
   - Id: frostkamm_nebelmoor
-    Position: {x: -20, y: 0, z: -470}
+    Position: {x: -20, y: 14, z: -470}
     Yaw: 2.4366481
     TargetZone: nebelmoor
     TargetPortal: nebelmoor_frostkamm
   - Id: frostkamm_gluetoede
-    Position: {x: 460, y: 0, z: 40}
+    Position: {x: 460, y: -4.1458035, z: 40}
     Yaw: -94.96974
     TargetZone: gluetoede
     TargetPortal: gluetoede_frostkamm
   - Id: frostkamm_himmelsspitzen
-    Position: {x: -80, y: 0, z: 480}
+    Position: {x: -80, y: 16.50742, z: 480}
     Yaw: 170.53767
     TargetZone: himmelsspitzen
     TargetPortal: himmelsspitzen_frostkamm
   - Id: frostkamm_silbermund
-    Position: {x: 14, y: 0, z: -430}
+    Position: {x: 14, y: 11.246904, z: -430}
     Yaw: -1.8647853
     TargetZone: silberkueste
     TargetPortal: plaza_frostkamm
-  DefaultSpawn: {x: 0, y: 0, z: -440}
+  - Id: frostkamm_weite_von_ahrn_k
+    Position: {x: 416.80334, y: 21.167612, z: -199.29619}
+    Yaw: -64.44502
+    TargetZone: weite_von_ahrn
+    TargetPortal: weite_von_ahrn_frostkamm_k
+  DefaultSpawn: {x: 0, y: 13.989325, z: -440}
   ContinentRect:
     serializedVersion: 2
     x: 0.3
@@ -51,7 +56,34 @@ MonoBehaviour:
     width: 0.32
     height: 0.32
   ContinentColor: {r: 0.7254902, g: 0.79607844, b: 0.84705883, a: 1}
-  Waypoints: []
+  Waypoints:
+  - Id: wp_frost_ankunft
+    Name: Wegmarke Firnpforte
+    Position: {x: 24, y: 7.009785, z: -410}
+  - Id: wp_frost_lager
+    Name: Wegmarke Bergsteigerlager
+    Position: {x: -260, y: 6.010132, z: -220}
+  - Id: wp_frost_pass
+    Name: Wegmarke Kammpass
+    Position: {x: 120, y: 21, z: -60}
+  - Id: wp_frost_mine
+    Name: Wegmarke Kristallmine
+    Position: {x: 380, y: 28, z: -260}
+  - Id: wp_frost_tempel
+    Name: Wegmarke Eiswind
+    Position: {x: -180, y: 7.0328674, z: 240}
+  - Id: wp_frostkamm_ankunft
+    Name: Ankunfts-Wegmarke Frostkamm
+    Position: {x: 8, y: 12.40919, z: -440}
+  - Id: wp_frostkamm_ankunft_gluetoede
+    Name: "Portal-Wegmarke Glut\xF6de"
+    Position: {x: 460.95074, y: -4.1458035, z: 43.48022}
+  - Id: wp_frostkamm_ankunft_himmelsspitzen
+    Name: Portal-Wegmarke Himmelsspitzen
+    Position: {x: -71.0136, y: 16.49491, z: 474.08167}
+  - Id: wp_frostkamm_ankunft_weite_von_ahrn_k
+    Name: Portal-Wegmarke Weite von Ahrn
+    Position: {x: 419.39032, y: 21.167612, z: -196.70793}
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 13.989325, z: -440}
@@ -68,6 +100,9 @@ MonoBehaviour:
   - Entrance: portal:frostkamm_silbermund
     Position: {x: 13.804754, y: 11.246904, z: -424.00317}
     WaypointId: wp_frostkamm_ankunft
+  - Entrance: portal:frostkamm_weite_von_ahrn_k
+    Position: {x: 411.39032, y: 21.167612, z: -196.70793}
+    WaypointId: wp_frostkamm_ankunft_weite_von_ahrn_k
   Tips:
   - "Der Springer \xFCberwindet die Terrassen des Frostkamms mit einem Satz."
   - Der Weltboss Frostschlund erscheint alle 15 Minuten.
@@ -81,23 +116,23 @@ MonoBehaviour:
   - Name: Adlerhorst
     Center: {x: 230, y: 120}
     Radius: 110
-    LevelMin: 27
-    LevelMax: 29
+    LevelMin: 30
+    LevelMax: 32
   - Name: Kristallmine
     Center: {x: 360, y: -200}
     Radius: 110
-    LevelMin: 25
-    LevelMax: 27
+    LevelMin: 26
+    LevelMax: 28
   - Name: Eiswindtempel
     Center: {x: -260, y: 160}
     Radius: 110
-    LevelMin: 28
-    LevelMax: 30
+    LevelMin: 32
+    LevelMax: 34
   - Name: Schlund des Frostes
     Center: {x: 40, y: 330}
     Radius: 110
-    LevelMin: 29
-    LevelMax: 30
+    LevelMin: 34
+    LevelMax: 35
   TimerLabel: Frostschlund
   TimerPeriod: 900
   TimerOffset: 120
@@ -182,3 +217,5 @@ MonoBehaviour:
   - heart_frost_bodo
   - heart_frost_saga
   - heart_frost_elva
+  Region: 0
+  IsHub: 0

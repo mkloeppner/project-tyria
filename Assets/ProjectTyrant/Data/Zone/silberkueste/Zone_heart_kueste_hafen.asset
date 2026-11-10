@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: Belade die Schiffe, flicke Netze und versorge verletzte Hafenarbeiter.
   Position: {x: 90, y: 3.2663043, z: -30}
   Radius: 30
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0

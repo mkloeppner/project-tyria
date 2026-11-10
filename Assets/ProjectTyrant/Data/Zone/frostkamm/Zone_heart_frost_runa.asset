@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Sammle Brennholz, versorge erfrorene Bergsteiger und halte Eisw\xF6lfe fern."
   Position: {x: -215, y: 6.89869, z: -200}
   Radius: 30
-  Experience: 1058
+  Experience: 3174
   Karma: 661
   Copper: 317
   HeroPoints: 0

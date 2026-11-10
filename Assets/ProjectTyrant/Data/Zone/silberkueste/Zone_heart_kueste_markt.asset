@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Sammle verlorene Waren ein, repariere die St\xE4nde und vertreibe Hafenratten."
   Position: {x: -40, y: 1.8000001, z: 10}
   Radius: 30
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0

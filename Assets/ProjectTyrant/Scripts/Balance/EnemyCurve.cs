@@ -16,7 +16,7 @@ namespace ProjectTyrant.Balance
         [Tooltip("Kraft durch Ausrüstung als Anteil der Primärbasis")] public float GearPower = 0.35f;
         [Tooltip("Koeffizient je Sekunde (Auto-Angriff + 2 Skills), aus der Trainingspuppen-Messung (B2: 0,9 → 1,85, Zeit-bis-Kill war halb so lang wie geplant)")] public float CoefPerSecond = 1.85f;
 
-        public float Health(int level) => Mathf.Lerp(AttributeSet.ClassBaseHealthL1, AttributeSet.ClassBaseHealthL80, (Mathf.Clamp(level, 1, AttributeSet.MaxLevel) - 1) / (float)(AttributeSet.MaxLevel - 1))
+        public float Health(int level) => Mathf.Lerp(AttributeSet.ClassBaseHealthL1, AttributeSet.ClassBaseHealthL80, LevelCurves.Fraction(level))
                                          + AttributeSet.PrimaryBase(level) * (1f + GearVitality) * 10f;
         public float Armor(int level) => AttributeSet.PrimaryBase(level) * (1f + GearDefense);
         public float Power(int level) => AttributeSet.PrimaryBase(level) * (1f + GearPower);

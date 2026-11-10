@@ -18,9 +18,9 @@ MonoBehaviour:
   Description: "St\xFCtze die Stollen ab und birg Kristallerz."
   Position: {x: 330, y: 17.41693, z: -160}
   Radius: 30
-  Experience: 1097
-  Karma: 685
-  Copper: 329
+  Experience: 3406
+  Karma: 710
+  Copper: 341
   HeroPoints: 0
   Requires: 0
   HeartTask: "St\xFCtze die Stollen ab und birg Kristallerz."

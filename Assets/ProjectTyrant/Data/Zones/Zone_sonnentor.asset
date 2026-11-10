@@ -1,0 +1,180 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_sonnentor
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: sonnentor
+  DisplayName: Sonnentor
+  Description: Die Oasenstadt mit Basaren, Karawanserei, Rennbahn und Hafen.
+  SceneName: PT_Zone_Sonnentor
+  Seed: 56436
+  Size: 800
+  LevelMin: 80
+  LevelMax: 80
+  Biome: {fileID: 11400000, guid: c4fcc250f09924c48ac4a0dd3150ec06, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: sonnentor_grosse_leere
+    Position: {x: 189.71988, y: 6.338492, z: 277.31277}
+    Yaw: -145.62253
+    TargetZone: grosse_leere
+    TargetPortal: grosse_leere_sonnentor
+  - Id: sonnentor_spiegel_der_sonne
+    Position: {x: 333.19937, y: 3.4043348, z: -43.291767}
+    Yaw: -82.59717
+    TargetZone: spiegel_der_sonne
+    TargetPortal: spiegel_der_sonne_sonnentor
+  - Id: sonnentor_tyrannenfeste_portal
+    Position: {x: -61.20648, y: 4.9037037, z: 330.3782}
+    Yaw: 169.50427
+    TargetZone: tyrannenfeste
+    TargetPortal: tyrannenfeste_sonnentor_portal
+  - Id: sonnentor_silberkueste_schiff
+    Position: {x: 266.67245, y: 1.5, z: 204.40598}
+    Yaw: -127.470375
+    TargetZone: silberkueste
+    TargetPortal: silberkueste_sonnentor_schiff
+  - Id: sonnentor_jadehafen_schiff
+    Position: {x: -322.19855, y: 1.5, z: 95.3105}
+    Yaw: 106.4789
+    TargetZone: jadehafen
+    TargetPortal: jadehafen_sonnentor_schiff
+  DefaultSpawn: {x: 0, y: 1.5, z: -304}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.38
+    y: 0.12
+    width: 0.22
+    height: 0.2
+  ContinentColor: {r: 0.9098039, g: 0.78431374, b: 0.5647059, a: 1}
+  Waypoints:
+  - Id: wp_sonnentor_ankunft
+    Name: Wegmarke Sonnentor
+    Position: {x: 12, y: 1.5, z: -286}
+  - Id: wp_sonnentor_grosser_basar
+    Name: "Wegmarke Gro\xDFer Basar"
+    Position: {x: -198.1263, y: 1.5, z: -232.03444}
+  - Id: wp_sonnentor_karawanserei
+    Name: Wegmarke Karawanserei
+    Position: {x: -49.029305, y: 3.514513, z: 15.352745}
+  - Id: wp_sonnentor_rennbahn
+    Name: Wegmarke Rennbahn
+    Position: {x: 227.52174, y: 4.7321596, z: 9.174347}
+  - Id: wp_sonnentor_oasenhafen
+    Name: Wegmarke Oasenhafen
+    Position: {x: 2.0064871, y: 5.866318, z: 177.17392}
+  - Id: wp_sonnentor_ankunft_grosse_leere
+    Name: "Portal-Wegmarke Gro\xDFe Leere"
+    Position: {x: 194.33203, y: 6.338492, z: 272.36075}
+  - Id: wp_sonnentor_ankunft_spiegel_der_sonne
+    Name: Portal-Wegmarke Spiegel der Sonne
+    Position: {x: 334.17758, y: 3.404335, z: -38.5187}
+  - Id: wp_sonnentor_ankunft_tyrannenfeste_portal
+    Name: Portal-Wegmarke Tyrannenfeste
+    Position: {x: -52.113506, y: 4.9400764, z: 324.4786}
+  - Id: wp_sonnentor_ankunft_silberkueste_schiff
+    Name: "Portal-Wegmarke Silberk\xFCste"
+    Position: {x: 269.91046, y: 1.5, z: 200.75587}
+  - Id: wp_sonnentor_ankunft_jadehafen_schiff
+    Name: Portal-Wegmarke Jadehafen
+    Position: {x: -308.445, y: 1.5, z: 93.60853}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 1.5, z: -304}
+    WaypointId: wp_sonnentor_ankunft
+  - Entrance: portal:sonnentor_grosse_leere
+    Position: {x: 186.33203, y: 6.338492, z: 272.36075}
+    WaypointId: wp_sonnentor_ankunft_grosse_leere
+  - Entrance: portal:sonnentor_spiegel_der_sonne
+    Position: {x: 327.2494, y: 3.4043348, z: -42.5187}
+    WaypointId: wp_sonnentor_ankunft_spiegel_der_sonne
+  - Entrance: portal:sonnentor_tyrannenfeste_portal
+    Position: {x: -60.113506, y: 4.9037037, z: 324.4786}
+    WaypointId: wp_sonnentor_ankunft_tyrannenfeste_portal
+  - Entrance: portal:sonnentor_silberkueste_schiff
+    Position: {x: 261.91046, y: 1.5, z: 200.75587}
+    WaypointId: wp_sonnentor_ankunft_silberkueste_schiff
+  - Entrance: portal:sonnentor_jadehafen_schiff
+    Position: {x: -316.445, y: 1.5, z: 93.60853}
+    WaypointId: wp_sonnentor_ankunft_jadehafen_schiff
+  Tips:
+  - "Kopfgeldtafel, Rennleitung und Stallmeister \u2013 alles am Gro\xDFen Basar."
+  - "Signatur: Hub, Kopfgeldtafel, Stallmeister D\xFCnenl\xE4ufer"
+  LoadingImage: {fileID: 0}
+  Regions:
+  - Name: Oasenhafen
+    Center: {x: -249.18336, y: -320}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Kopfgeldhalle
+    Center: {x: 235.35544, y: -178.8202}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Palmenhain
+    Center: {x: 61.368187, y: 27.01809}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Sonnenturm
+    Center: {x: -142.48402, y: 103.29502}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Stallhof
+    Center: {x: 69.97447, y: 302.41714}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  TimerLabel: 
+  TimerPeriod: 0
+  TimerOffset: 0
+  TimerPosition: {x: 0, y: 0, z: 0}
+  TimerEventId: 
+  DangerMap:
+    ZoneId: 
+    Size: 1000
+    Anchors: []
+    Waypoints: []
+    BandEdges: []
+    BandLevels: 
+    Areas: []
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 30
+    WaypointSafeRadius: 25
+  CompletionIds:
+  - wp_sonnentor_ankunft
+  - wp_sonnentor_grosser_basar
+  - wp_sonnentor_karawanserei
+  - wp_sonnentor_rennbahn
+  - wp_sonnentor_oasenhafen
+  - poi_sonnentor_oasenhafen
+  - poi_sonnentor_kopfgeldhalle
+  - poi_sonnentor_palmenhain
+  - poi_sonnentor_sonnenturm
+  - poi_sonnentor_stallhof
+  - vista_sonnentor_0
+  - vista_sonnentor_1
+  - vista_sonnentor_2
+  - hc_sonnentor_0
+  - hc_sonnentor_1
+  - hc_sonnentor_2
+  - hc_sonnentor_3
+  - heart_sonnentor_0
+  - heart_sonnentor_1
+  - heart_sonnentor_2
+  - heart_sonnentor_3
+  Region: 1
+  IsHub: 1

@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_aschenkessel_ausbruch_p3
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: aschenkessel_ausbruch_p3
+  Title: 'Vulkanausbruch: Das Herz des Vulkans'
+  Description: "Das Herz des Vulkans \u2013 Phase 3 von 3."
+  ChainId: aschenkessel_ausbruch
+  Objective: 9
+  Center: {x: -298.37424, y: 0, z: -361.1245}
+  Radius: 48
+  Duration: 600
+  TargetCount: 1
+  Triggers:
+  - Type: 2
+    Delay: 0
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 60
+  GoldContribution: 4693.5483
+  Experience: 7508
+  Karma: 1876
+  Coins: 1250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: aschenkessel_aschenkessel_ausbruch_p3
+  Path: []
+  DeliverPoint: {x: -298.37424, y: 0, z: -361.1245}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: ab1f7244f4640334f8430c0f2ff0c7d4, type: 2}
+  Veteran: {fileID: 11400000, guid: 3de62761c8a7b744b8ef2a569d7ede01, type: 2}
+  Boss: {fileID: 11400000, guid: 921973f3a980b6d42bd33194e7e261a8, type: 2}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds:
+  - 0.66
+  - 0.33
+  MasteryPoints: 2
+  MetaId: aschenkessel_ausbruch
+  MetaPhase: 3
+  Tier: 2
+  TierSet: 0
+  BalanceBaseTargets: 0

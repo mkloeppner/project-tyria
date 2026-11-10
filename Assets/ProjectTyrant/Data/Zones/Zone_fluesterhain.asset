@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_fluesterhain
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: fluesterhain
+  DisplayName: "Fl\xFCsterhain"
+  Description: "Bambus- und Riesenbaumwald mit Kl\xF6stern und Geisterwegen."
+  SceneName: PT_Zone_Fluesterhain
+  Seed: 43514
+  Size: 1100
+  LevelMin: 80
+  LevelMax: 80
+  Biome: {fileID: 11400000, guid: f1d6dce0dbe8f1243b7463e0377da89c, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: fluesterhain_jadehafen
+    Position: {x: -317.74802, y: 0, z: -335.3807}
+    Yaw: 43.45355
+    TargetZone: jadehafen
+    TargetPortal: jadehafen_fluesterhain
+  - Id: fluesterhain_sonnenstufen
+    Position: {x: 458.14914, y: 0, z: -59.52618}
+    Yaw: -82.59717
+    TargetZone: sonnenstufen
+    TargetPortal: sonnenstufen_fluesterhain
+  DefaultSpawn: {x: 0, y: 0, z: -418}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.62
+    y: 0.04
+    width: 0.34
+    height: 0.3
+  ContinentColor: {r: 0.22745098, g: 0.47843137, b: 0.3529412, a: 1}
+  Waypoints: []
+  Arrivals: []
+  Tips:
+  - Geisterwege sind nur nachts oder mit dem Jadegeist sichtbar.
+  - "Signatur: Kloster-Herzen, Geister-Jagd, Sprungr\xE4tsel im Wald"
+  LoadingImage: {fileID: 0}
+  Regions: []
+  TimerLabel: 
+  TimerPeriod: 0
+  TimerOffset: 0
+  TimerPosition: {x: 0, y: 0, z: 0}
+  TimerEventId: 
+  DangerMap:
+    ZoneId: 
+    Size: 1000
+    Anchors: []
+    Waypoints: []
+    BandEdges: []
+    BandLevels: 
+    Areas: []
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 30
+    WaypointSafeRadius: 25
+  CompletionIds: []
+  Region: 2
+  IsHub: 0

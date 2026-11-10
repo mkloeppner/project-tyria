@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: Verbinde Verwundete, sammle Verbandszeug und flicke die Zelte des Lagers.
   Position: {x: -60, y: 1.7, z: -340}
   Radius: 30
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0

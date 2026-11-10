@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Grab Scherben aus und st\xFCtze die einsturzgef\xE4hrdeten S\xE4ulen."
   Position: {x: 220, y: 7.42365, z: 150}
   Radius: 30
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0

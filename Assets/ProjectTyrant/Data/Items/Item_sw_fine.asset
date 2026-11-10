@@ -23,17 +23,17 @@ MonoBehaviour:
   Weapon: 13
   Armor: 0
   Trinket: 0
-  WeaponStrengthMin: 138
-  WeaponStrengthMax: 152
+  WeaponStrengthMin: 68
+  WeaponStrengthMax: 75
   Defense: 0
   Prefix: Aasfresser
   Attributes:
   - Attr: 5
-    Value: 10
+    Value: 4
   - Attr: 0
-    Value: 5
+    Value: 2
   - Attr: 3
-    Value: 5
+    Value: 2
   MaxStack: 1
   VendorValue: 67
   Binding: 0

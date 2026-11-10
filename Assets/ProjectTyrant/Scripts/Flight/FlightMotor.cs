@@ -104,7 +104,7 @@ namespace ProjectTyrant.Flight
             }
             if (i.InUpdraft) { Charges = P.Charges; Vertical = Mathf.Max(Vertical, 8f); }
             if (P.AirChargeRegen > 0f && State == FlightState.Glide && Charges < P.Charges) { _chargeT += dt; if (_chargeT >= P.AirChargeRegen) { _chargeT = 0f; Charges++; } }   // Luftakrobatik
-            if (i.Jump && Charges > 0 && State != FlightState.Dive) { Charges--; Vertical = Mathf.Max(Vertical, 0f) + P.FlapImpulse; }
+            if (i.Jump && Charges > 0 && State != FlightState.Dive && !i.Dive) { Charges--; Vertical = Mathf.Max(Vertical, 0f) + P.FlapImpulse; }
             if (i.Dive)
             {
                 if (State != FlightState.Dive) { State = FlightState.Dive; _diveStartAlt = Altitude; }

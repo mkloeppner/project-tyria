@@ -39,10 +39,10 @@ MonoBehaviour:
   SuccessNext: 
   FailNext: 
   Cooldown: 360
-  GoldContribution: 4403.226
-  Experience: 1468
-  Karma: 440
-  Coins: 235
+  GoldContribution: 4693.5483
+  Experience: 1877
+  Karma: 469
+  Coins: 250
   GoldItemRoll: 1
   SetFlagOnSuccess: 
   SetFlagOnFail: 

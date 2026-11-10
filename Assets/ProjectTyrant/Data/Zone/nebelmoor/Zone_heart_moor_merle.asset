@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: Bandagiere verletzte Fischer, birg Reusen und halte Spucker fern.
   Position: {x: 300, y: 2.1, z: -95}
   Radius: 30
-  Experience: 826
+  Experience: 2477
   Karma: 516
   Copper: 248
   HeroPoints: 0

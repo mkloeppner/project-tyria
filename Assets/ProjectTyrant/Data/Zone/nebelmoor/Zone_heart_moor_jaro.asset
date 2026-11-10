@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Entsch\xE4rfe die Fallen der Wilderer, versorge verletzte Reiher und brich Treibgut-Sperren mit der Harpune auf."
   Position: {x: -215, y: 0.37983742, z: -110}
   Radius: 28
-  Experience: 787
+  Experience: 2361
   Karma: 492
   Copper: 236
   HeroPoints: 0

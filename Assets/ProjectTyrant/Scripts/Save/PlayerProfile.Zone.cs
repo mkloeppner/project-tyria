@@ -88,7 +88,7 @@ namespace ProjectTyrant
             ZoneCompleted?.Invoke(State.CurrentZone);
             var chest = Items != null ? Items.Get("box_zone") : null;
             if (chest != null) State.Inventory.TryAdd(chest, 1, true);
-            GrantXp(1500, "Zonenabschluss");
+            GrantXp(Mathf.RoundToInt(XpRewards.ZoneCompletion * LevelCurves.RewardScale(GameManager.Instance != null && GameManager.Instance.CurrentZone != null ? GameManager.Instance.CurrentZone.LevelMax : 15)), "Zonenabschluss");   // Lauf 11: nach Zonen-Level
             GameEventBus.RaiseBanner("Zone abgeschlossen", ZoneRoot.ZoneName + " · Belohnungstruhe im Inventar", Gold);
             RequestSave("Zone abgeschlossen");
         }

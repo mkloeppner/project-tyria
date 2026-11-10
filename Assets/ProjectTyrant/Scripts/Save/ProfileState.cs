@@ -44,6 +44,9 @@ namespace ProjectTyrant
         public readonly List<string> PetPair = new List<string>();
         public StoryState Story = StoryState.NewCharacter(Origin.Hof, Trait.Wuerde, Lodestar.Raetsel);   // Lauf 6
 
+        /// <summary>Lauf 11: Version des geladenen Standes, falls er migriert wurde (0 = aktuell).</summary>
+        public int MigratedFromVersion { get; private set; }
+
         public SaveGameDto ToDto()
         {
             var d = new SaveGameDto
@@ -68,7 +71,8 @@ namespace ProjectTyrant
         {
             if (d == null) return;
             Story = d.Version < 4 || d.Story == null ? StoryState.Migrated() : d.Story;   // Lauf 6: alte Stände → Kapitel 1, Tutorial übersprungen
-            Progression.Level = Mathf.Clamp(d.Level, 1, AttributeSet.MaxLevel);
+            Progression.Level = Mathf.Clamp(d.Level, 1, AttributeSet.MaxLevel);   // Lauf 11: Level bleibt (30 bleibt 30 auf der 80er-Kurve)
+            MigratedFromVersion = d.Version < SaveGameDto.Level80Version ? d.Version : 0;
             Progression.Xp = Mathf.Max(0, d.Xp);
             Progression.HeroPoints = d.HeroPoints; Progression.HeroPointsSpent = d.HeroPointsSpent;
             // Migration (M10): ältere Stände bekamen 1 statt 4 Punkte je Stufe.

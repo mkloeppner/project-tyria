@@ -17,12 +17,13 @@ namespace ProjectTyrant.Tests
         static PortalDef P(string id, string zone, string target) => new PortalDef { Id = id, TargetZone = zone, TargetPortal = target };
 
         [Test]
-        public void LevelCap_Is30_And30EqualsFullAttributes()
+        public void LevelCap_Is80_And80EqualsFullAttributes()   // Lauf 11: Cap 80 (bis Lauf 10: 30 = volle Attribute)
         {
-            Assert.AreEqual(30, AttributeSet.MaxLevel);
-            Assert.AreEqual(1000f, AttributeSet.PrimaryBase(30), 0.01f);
+            Assert.AreEqual(80, AttributeSet.MaxLevel);
+            Assert.AreEqual(1000f, AttributeSet.PrimaryBase(80), 0.01f);
+            Assert.AreEqual(300f, AttributeSet.PrimaryBase(30), 0.01f, "Stufe 30 liegt jetzt auf der 80er-Kurve");
             Assert.AreEqual(37f, AttributeSet.PrimaryBase(1), 0.01f);
-            Assert.AreEqual(1000f, AttributeSet.PrimaryBase(80), 0.01f, "Über dem Cap wird geklemmt");
+            Assert.AreEqual(1000f, AttributeSet.PrimaryBase(120), 0.01f, "Über dem Cap wird geklemmt");
         }
 
         [Test]
@@ -42,7 +43,7 @@ namespace ProjectTyrant.Tests
             Assert.AreEqual(1f, WorldModel.XpFactor(20, 16));
             Assert.AreEqual(1f, WorldModel.ItemScale(10, 16), "Niedrigere Items werden nicht verstärkt");
             float s = WorldModel.ItemScale(30, 16);
-            Assert.AreEqual(AttributeSet.PrimaryBase(16) / 1000f, s, 1e-4f);
+            Assert.AreEqual(AttributeSet.PrimaryBase(16) / AttributeSet.PrimaryBase(30), s, 1e-4f);   // Lauf 11: Item-Level 30 auf der 80er-Kurve
             Assert.Less(s, 1f);
         }
 

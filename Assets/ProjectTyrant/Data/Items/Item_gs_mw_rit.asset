@@ -23,17 +23,17 @@ MonoBehaviour:
   Weapon: 1
   Armor: 0
   Trinket: 0
-  WeaponStrengthMin: 207
-  WeaponStrengthMax: 229
+  WeaponStrengthMin: 85
+  WeaponStrengthMax: 94
   Defense: 0
   Prefix: Ritter
   Attributes:
   - Attr: 2
-    Value: 20
+    Value: 7
   - Attr: 0
-    Value: 10
+    Value: 4
   - Attr: 1
-    Value: 10
+    Value: 4
   MaxStack: 1
   VendorValue: 111
   Binding: 0

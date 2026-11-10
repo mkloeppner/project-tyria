@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_schilfmuendung_anfuehrer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: schilfmuendung_anfuehrer
+  Title: "Anf\xFChrer der Mangrovenschrecken"
+  Description: "Ihr Anf\xFChrer zeigt sich \u2013 brich seine Trotzleiste."
+  ChainId: schilfmuendung_angriff
+  Objective: 5
+  Center: {x: 141.96912, y: 1.8432803, z: -100.747025}
+  Radius: 36
+  Duration: 300
+  TargetCount: 1
+  Triggers:
+  - Type: 2
+    Delay: 0
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 300
+  GoldContribution: 4693.5483
+  Experience: 1877
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: schilfmuendung_schilfmuendung_anfuehrer
+  Path: []
+  DeliverPoint: {x: 141.96912, y: 1.8432803, z: -100.747025}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 058929bfe9e31af48844687cacb7fbb5, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 11400000, guid: f9e72776539be414984b12b4ca20ed84, type: 2}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0
+  Tier: 2
+  TierSet: 0
+  BalanceBaseTargets: 0

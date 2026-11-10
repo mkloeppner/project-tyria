@@ -18,22 +18,27 @@ MonoBehaviour:
   SceneName: PT_Zone_Duenenmeer
   Seed: 30103
   Size: 1100
-  LevelMin: 30
-  LevelMax: 30
+  LevelMin: 60
+  LevelMax: 70
   Biome: {fileID: 11400000, guid: c4fcc250f09924c48ac4a0dd3150ec06, type: 2}
   LegacyLayout: 0
   Portals:
   - Id: duenenmeer_gluetoede
-    Position: {x: -520, y: 0, z: -40}
+    Position: {x: -520, y: 20.889448, z: -40}
     Yaw: 85.601295
     TargetZone: gluetoede
     TargetPortal: gluetoede_duenenmeer
   - Id: duenenmeer_silbermund
-    Position: {x: -456, y: 0, z: 10}
+    Position: {x: -456, y: 5.0169783, z: 10}
     Yaw: 91.25629
     TargetZone: silberkueste
     TargetPortal: plaza_duenenmeer
-  DefaultSpawn: {x: -470, y: 0, z: 0}
+  - Id: duenenmeer_schilfmuendung_k
+    Position: {x: -84.158905, y: 6.305473, z: 454.27005}
+    Yaw: 169.50427
+    TargetZone: schilfmuendung
+    TargetPortal: schilfmuendung_duenenmeer_k
+  DefaultSpawn: {x: -470, y: 5.057181, z: 0}
   ContinentRect:
     serializedVersion: 2
     x: 0.62
@@ -41,7 +46,28 @@ MonoBehaviour:
     width: 0.34
     height: 0.3
   ContinentColor: {r: 0.89411765, g: 0.76862746, b: 0.5411765, a: 1}
-  Waypoints: []
+  Waypoints:
+  - Id: wp_duene_ankunft
+    Name: Wegmarke Glutpass
+    Position: {x: -440, y: 1.5, z: -20}
+  - Id: wp_duene_oase
+    Name: Wegmarke Oase Sahim
+    Position: {x: -190, y: 1.5, z: -80}
+  - Id: wp_duene_qasir
+    Name: Wegmarke Qasir
+    Position: {x: 230, y: 6.5274305, z: 180}
+  - Id: wp_duene_schlucht
+    Name: Wegmarke Drei Schluchten
+    Position: {x: 20, y: 6.541973, z: -60}
+  - Id: wp_duene_glas
+    Name: Wegmarke Glasebene
+    Position: {x: 300, y: 1.5, z: -280}
+  - Id: wp_duenenmeer_ankunft_gluetoede
+    Name: "Portal-Wegmarke Glut\xF6de"
+    Position: {x: -510.0177, y: 20.133766, z: -32.611618}
+  - Id: wp_duenenmeer_ankunft_schilfmuendung_k
+    Name: "Portal-Wegmarke Schilfm\xFCndung"
+    Position: {x: -75.06593, y: 6.285588, z: 448.37042}
   Arrivals:
   - Entrance: spawn
     Position: {x: -470, y: 5.057181, z: 0}
@@ -52,6 +78,9 @@ MonoBehaviour:
   - Entrance: portal:duenenmeer_silbermund
     Position: {x: -450.00143, y: 5.0169783, z: 9.868452}
     WaypointId: wp_duene_ankunft
+  - Entrance: portal:duenenmeer_schilfmuendung_k
+    Position: {x: -83.06593, y: 6.305473, z: 448.37045}
+    WaypointId: wp_duenenmeer_ankunft_schilfmuendung_k
   Tips:
   - "Alle 12 Minuten zieht ein Sandsturm auf \u2013 Sp\xE4her-Zelte bieten Schutz."
   - "Der Raptor springt \xFCber die Schluchten."
@@ -60,28 +89,28 @@ MonoBehaviour:
   - Name: Oase Sahim
     Center: {x: -210, y: -110}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 62
+    LevelMax: 64
   - Name: Ruinen von Qasir
     Center: {x: 260, y: 210}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 68
+    LevelMax: 70
   - Name: Drei Schluchten
     Center: {x: 60, y: -20}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 65
+    LevelMax: 67
   - Name: Glasebene
     Center: {x: 320, y: -250}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 69
+    LevelMax: 70
   - Name: Wurmgrube
     Center: {x: -60, y: 300}
     Radius: 110
-    LevelMin: 30
-    LevelMax: 30
+    LevelMin: 65
+    LevelMax: 67
   TimerLabel: Sandsturm
   TimerPeriod: 720
   TimerOffset: 600
@@ -162,3 +191,5 @@ MonoBehaviour:
   - heart_duene_qasir
   - heart_duene_glas
   - heart_duene_oase
+  Region: 0
+  IsHub: 0

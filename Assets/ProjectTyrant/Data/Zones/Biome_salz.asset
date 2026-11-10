@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c8853922032dd4aa0a2a32765460ec, type: 3}
+  m_Name: Biome_salz
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.BiomeProfile
+  Id: salz
+  DisplayName: Salzsee
+  Amplitude: 3
+  Frequency: 0.002
+  Octaves: 2
+  Terrace: 0
+  CanyonDepth: 0
+  CanyonFrequency: 0.006
+  BaseHeight: 2
+  WaterLevel: 1.6
+  EdgeMountainHeight: 38
+  GroundLow: {r: 0.9098039, g: 0.89411765, b: 0.84705883, a: 1}
+  GroundMid: {r: 0.9411765, g: 0.9254902, b: 0.8784314, a: 1}
+  GroundHigh: {r: 0.972549, g: 0.95686275, b: 0.91764706, a: 1}
+  Cliff: {r: 0.78431374, g: 0.72156864, b: 0.627451, a: 1}
+  Shore: {r: 1, g: 1, b: 1, a: 1}
+  Water: {r: 0.7, g: 0.85, b: 0.9, a: 0.6}
+  FogColor: {r: 0.972549, g: 0.9411765, b: 0.8784314, a: 1}
+  FogDensity: 0.0025
+  SkyTop: {r: 0.22745098, g: 0.5019608, b: 0.8784314, a: 1}
+  SkyHorizon: {r: 1, g: 0.972549, b: 0.9098039, a: 1}
+  SkyBottom: {r: 0.9098039, g: 0.8784314, b: 0.8156863, a: 1}
+  SunColor: {r: 1, g: 1, b: 1, a: 1}
+  SunIntensity: 1.45
+  Saturation: 4
+  SplitShadows: {r: 0.41568628, g: 0.47843137, b: 0.6901961, a: 1}
+  SplitHighlights: {r: 1, g: 0.9411765, b: 0.7529412, a: 1}
+  TreeDensity: 0
+  RockDensity: 0.12
+  TreeColor: {r: 0.5411765, g: 0.5411765, b: 0.3529412, a: 1}
+  TrunkColor: {r: 0.41568628, g: 0.3529412, b: 0.2901961, a: 1}
+  Conifers: 0
+  DeadTrees: 1
+  Weather: 0
+  Ambient: 2

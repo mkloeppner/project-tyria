@@ -32,6 +32,22 @@ namespace ProjectTyrant.EditorTools
                 case "kristalltiefe": root.gameObject.AddComponent<DarknessDirector>(); Crystals(root); JumpPuzzle(root, "kristallsaeulen", "Kristallsäulen", new Vector3(-60f, 0f, 120f), 12, 2.2f, 1.1f, false); break;
                 case "himmelsspitzen": Islands(root); JumpPuzzle(root, "wolkensteine", "Wolkensteine", new Vector3(-120f, 0f, -200f), 16, 2.4f, 1.3f, false); break;
                 case "tyrannenfeste": Fortress(root); break;
+                default: RegionExtras(z, root); break;   // Lauf 11
+            }
+        }
+
+        /// <summary>Lauf 11: Regions-Zonen – Sprungrätsel je Zone, Signatur-Umwelt (Sandsturm, Verderbnis, Dunkelheit) nach Biom.</summary>
+        static void RegionExtras(ZoneDefinition z, Transform root)
+        {
+            var s = RegionZones.Get(z.Id); if (s == null) return;
+            var l = RegionZones.Layout(z.Id);
+            var anchor = l.Pois[l.Pois.Length - 1].Pos + new Vector2(25f, 20f);
+            JumpPuzzle(root, z.Id + "_raetsel", "Sprungrätsel: " + s.Places[6], new Vector3(anchor.x, 0f, anchor.y), 12 + (z.Seed % 5), 1.8f, 1.1f, z.Seed % 2 == 0);
+            switch (s.Biome)
+            {
+                case "duenen": case "salz": case "zarathis": root.gameObject.AddComponent<SandstormDirector>(); Shelters(root); break;
+                case "ruinen": Corruption(root); break;
+                case "eis": root.gameObject.AddComponent<SandstormDirector>(); Shelters(root); break;   // Schneesturm-Zyklus (gleiche Mechanik)
             }
         }
 

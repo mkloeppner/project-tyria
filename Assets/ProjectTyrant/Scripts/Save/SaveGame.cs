@@ -18,7 +18,8 @@ namespace ProjectTyrant
     [Serializable]
     public class SaveGameDto
     {
-        public const int CurrentVersion = 4;   // Lauf 6: Story-Zustand je Charakter
+        public const int CurrentVersion = 5;   // Lauf 11: Level-80-Kurve (4 = Lauf 6: Story-Zustand je Charakter)
+        public const int Level80Version = 5;
         public int Version;
         // Lauf 5 / M25: Charakter-Ebene (Account-Felder liegen in account.json; Version 2 = Lauf 4, wird als Charakter 1 migriert)
         public string ClassId;
@@ -93,6 +94,19 @@ namespace ProjectTyrant
         }
 
         public static bool Exists(string path = null) => File.Exists(path ?? CurrentPath);
+
+        /// <summary>Lauf 11: Sicherungskopie vor einer Migration (`…json.v4.bak`); vorhandene Sicherungen werden nie überschrieben. Rückgabe: Pfad oder null.</summary>
+        public static string BackupBeforeMigration(string path, int fromVersion)
+        {
+            if (string.IsNullOrEmpty(path) || !File.Exists(path)) return null;
+            string bak = path + ".v" + fromVersion + ".bak";
+            if (File.Exists(bak)) return bak;
+            File.Copy(path, bak);
+            return bak;
+        }
+
+        /// <summary>Lauf 11: braucht der Stand die Level-80-Migration?</summary>
+        public static bool NeedsLevel80Migration(SaveGameDto d) => d != null && d.Version < SaveGameDto.Level80Version;
 
         public static void Delete(string path = null)
         {

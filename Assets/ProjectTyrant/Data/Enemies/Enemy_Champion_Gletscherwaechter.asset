@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a9756ba196e784f8aead94cb329eb1, type: 3}
+  m_Name: Enemy_Champion_Gletscherwaechter
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EnemyArchetype
+  DisplayName: "Gletscherw\xE4chter"
+  Tier: 3
+  Team: 2
+  Prefab: {fileID: 6754031981184211284, guid: cca8b9ee47f479446819291d5ca747fe, type: 3}
+  FixedLevel: 75
+  AttributeFactor: 1
+  ArmorFactor: 1.6
+  HealthFactor: 60
+  MaxHealth: 0
+  AttackCoefficient: 7
+  AttackRange: 3
+  AttackInterval: 2.6
+  AttackWindup: 0.75
+  Palette: 9
+  MoveSpeed: 3.4
+  AggroRange: 20
+  LeashRange: 45
+  Scale: 3.6
+  OnHitDebuff:
+    Type: 17
+    Stacks: 2
+    Duration: 3
+  HasTelegraph: 1
+  TelegraphRadius: 8
+  TelegraphDelay: 1.5
+  TelegraphCoefficient: 22
+  TelegraphInterval: 10
+  Behavior: 3
+  BehaviorRadius: 6
+  BehaviorInterval: 10
+  BehaviorCoefficient: 8
+  BehaviorEffect:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  SummonArchetype: {fileID: 11400000, guid: 17e029eccd1a917419c4328a4548e598, type: 2}
+  ProjectileColor: {r: 0.5, g: 0.9, b: 0.3, a: 1}
+  Defiance: 1500
+  Role: 0
+  CurveExempt: 0
+  PursuitExempt: 0
+  NeutralCreature: 0
+  ContributionValue: 120
+  Experience: 800
+  Loot: {fileID: 11400000, guid: dc6a13d1d2861534682109619d361169, type: 2}

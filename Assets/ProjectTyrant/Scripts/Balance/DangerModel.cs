@@ -8,7 +8,7 @@ namespace ProjectTyrant.Balance
     public enum PackMode { None, Partner, Group, Ambush, Caller }
 
     /// <summary>Balance B1: Kontroll-Effekte („Fesseln“), die Gegner einer Stufe einsetzen dürfen.</summary>
-    [Flags] public enum ControlKinds { None = 0, Cripple = 1, Chill = 2, Immobilize = 4, Pull = 8, Daze = 16, Dismount = 32 }
+    [Flags] public enum ControlKinds { None = 0, Cripple = 1, Chill = 2, Immobilize = 4, Pull = 8, Daze = 16, Dismount = 32, AirPull = 64 }   // Lauf 11: AirPull = Zug aus der Luft (Stufe 6)
 
     /// <summary>
     /// Balance B1: Werte einer Gefahrenstufe (eine Zeile der Tabelle „Zielbild A“). Reichweiten in GW2-Einheiten (wie im Auftrag),
@@ -58,8 +58,8 @@ namespace ProjectTyrant.Balance
     /// <summary>Balance B1: die sechs Gefahrenstufen 0–5 aus „Zielbild A/B/D“ als Standardwerte (Builder schreibt daraus die DangerProfile-Assets).</summary>
     public static class DangerTable
     {
-        public const int MaxLevel = 5;
-        public static readonly string[] Names = { "Dorfrand", "Umland", "Wildnis", "Grenzland", "Feindland", "Verderbt" };
+        public const int MaxLevel = 6;   // Lauf 11: Stufe 6 „Drachenland“
+        public static readonly string[] Names = { "Dorfrand", "Umland", "Wildnis", "Grenzland", "Feindland", "Verderbt", "Drachenland" };
 
         public static DangerSettings Default(int level)
         {
@@ -96,6 +96,12 @@ namespace ProjectTyrant.Balance
                     s.MountGiveUp = 0; s.MinTelegraph = 0.75f; s.HitShare = 0.15f; s.TelegraphHitShare = 0.30f;
                     s.TtkTrashMin = 6; s.TtkTrashMax = 8; s.TtdThreeTrash = 12; s.TtdVeteran = 12; s.TtkVeteranMin = 35; s.TtkVeteranMax = 45;
                     s.DownedMode = 3; s.Ambushes = true; s.HastePhases = true; s.MinEventTier = 3; s.MaxEventTier = 4;
+                    break;
+                case 6:   // Lauf 11: Drachenland (Zarathis, Drachenende, Inneres der Schädelküste)
+                    Set(s, 0.00f, 1100, 4000, 1.20f, 90, 8, 0f, 0.90f, ControlKinds.Cripple | ControlKinds.Chill | ControlKinds.Immobilize | ControlKinds.Pull | ControlKinds.Daze | ControlKinds.Dismount | ControlKinds.AirPull, PackMode.Caller, 400, 10, 25, 1.8f, 5);
+                    s.MountGiveUp = 0; s.MinTelegraph = 0.75f; s.HitShare = 0.20f; s.TelegraphHitShare = 0.45f;
+                    s.TtkTrashMin = 8; s.TtkTrashMax = 10; s.TtdThreeTrash = 7; s.TtdVeteran = 8; s.TtkVeteranMin = 45; s.TtkVeteranMax = 55;
+                    s.DownedMode = 3; s.Ambushes = true; s.Callers = true; s.HastePhases = true; s.MinEventTier = 3; s.MaxEventTier = 4;
                     break;
                 default:
                     Set(s, 0.00f, 1000, 2500, 1.15f, 60, 6, 0f, 0.80f, ControlKinds.Cripple | ControlKinds.Chill | ControlKinds.Immobilize | ControlKinds.Pull | ControlKinds.Daze | ControlKinds.Dismount, PackMode.Caller, 300, 8, 30, 1.6f, 5);

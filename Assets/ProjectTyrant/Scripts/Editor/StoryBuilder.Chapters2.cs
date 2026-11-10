@@ -36,7 +36,7 @@ namespace ProjectTyrant.EditorTools
 
         static void Chapter6()
         {
-            Ch(6, "Der Hafen der hundert Segel", "silberkueste", 30, "Ankunft in Silbermund, Portalplatz und die Politik der Bündnisse. Jedes Bündnis hat einen eigenen Auftrag.",
+            Ch(6, "Der Hafen der hundert Segel", "silberkueste", 40, "Ankunft in Silbermund, Portalplatz und die Politik der Bündnisse. Jedes Bündnis hat einen eigenen Auftrag.",
                 "Kontinentreise", "Hub-Dienste (Bank, Bündnis-Händler)", "Herzen in der Stadt", "Sprungrätsel");
             St("K06_S01", StepType.Travel, "Silbermund", "silberkueste", V(0, 2, 40), "Reise nach Silbermund und finde den Portalplatz.").Npc("gorran")
                 .Obj(O(ObjectiveKind.Reach, "K06_S01", 1, "Erreiche den Portalplatz von Silbermund"), O(ObjectiveKind.Waypoint, "wp_kueste", 1, "Entdecke die Wegmarke Silbermund", "waypoint"))
@@ -65,7 +65,7 @@ namespace ProjectTyrant.EditorTools
 
         static void Chapter7()
         {
-            Ch(7, "Wurzeln der Finsternis", "daemmerwald", 30, "Die Verderbnis des Tyrannen frisst den Dämmerwald. Ein Dorf wird evakuiert, und der Leitstern des Helden kehrt zurück.",
+            Ch(7, "Wurzeln der Finsternis", "daemmerwald", 50, "Die Verderbnis des Tyrannen frisst den Dämmerwald. Ein Dorf wird evakuiert, und der Leitstern des Helden kehrt zurück.",
                 "Verderbnis-Zonen", "Eskorte", "Auto-Angriffs-Ketten", "Unterbrechen");
             St("K07_S01", StepType.OpenWorld, "Violettes Licht", "daemmerwald", V(-150, 3, -200), "Hilf Ältestem Fenn, die Verderbnis an den Wächtersteinen zurückzudrängen.").Npc("fenn")
                 .Obj(O(ObjectiveKind.Event, "wald_", 1, "Dränge die Verderbnis zurück (Ereignis)", "event"), O(ObjectiveKind.Interrupt, "*", 2, "Unterbrich zwei Schattenpriester", "interrupt"))
@@ -83,7 +83,7 @@ namespace ProjectTyrant.EditorTools
 
         static void Chapter8()
         {
-            Ch(8, "Das Lied der Dünen", "duenenmeer", 30, "Die Jagd nach dem Siegelschlüssel führt durch Sandstürme. Der Herold stellt eine Falle und entkommt.",
+            Ch(8, "Das Lied der Dünen", "duenenmeer", 60, "Die Jagd nach dem Siegelschlüssel führt durch Sandstürme. Der Herold stellt eine Falle und entkommt.",
                 "Raptor-Weitsprung", "Rennen (optional)", "Mehrphasen-Boss", "Gefährten");
             St("K08_S01", StepType.Travel, "Drei Schluchten", "duenenmeer", V(-200, 4, -100), "Reite mit Karawanenführerin Nadira zu den Ruinen von Qasir.").Npc("nadira")
                 .Obj(O(ObjectiveKind.Talk, "nadira", 1, "Sprich mit Nadira an der Oase"), O(ObjectiveKind.Mount, "Raptor", 1, "Steig auf einen Raptor", "mount"), O(ObjectiveKind.Reach, "K08_S01", 1, "Erreiche die Ruinen von Qasir"))
@@ -102,7 +102,7 @@ namespace ProjectTyrant.EditorTools
 
         static void Chapter9()
         {
-            Ch(9, "Unter Kristall, über Wolken", "kristalltiefe", 30, "Zwei Hälften des Schlüssels: in der Tiefe eine Vision des Tyrannen, in den Spitzen der Greif als Vertrauensbeweis.",
+            Ch(9, "Unter Kristall, über Wolken", "kristalltiefe", 70, "Zwei Hälften des Schlüssels: in der Tiefe eine Vision des Tyrannen, in den Spitzen der Greif als Vertrauensbeweis.",
                 "Dunkelheit und Licht", "Aufwinde", "Greif", "Einblicke");
             St("K09_S01", StepType.Instance, "Die Stimme in der Tiefe", "kristalltiefe", V(150, 2, 150), "Trag Licht in die Kristalltiefe und hol die erste Hälfte des Schlüssels.").Mate("pact")
                 .Obj(O(ObjectiveKind.Bundle, "laterne", 1, "Nimm eine Laterne auf", "bundle").At(-4, 0),
@@ -126,7 +126,7 @@ namespace ProjectTyrant.EditorTools
 
         static void Chapter10()
         {
-            Ch(10, "Der Tyrann erwacht", "tyrannenfeste", 30, "Finale in drei Instanzen: Sturm auf die Feste, der Herold, Vareths Versiegelung. Epilog in Silbermund an Brennars Grab.",
+            Ch(10, "Der Tyrann erwacht", "tyrannenfeste", 80, "Finale in drei Instanzen: Sturm auf die Feste, der Herold, Vareths Versiegelung. Epilog in Silbermund an Brennars Grab.",
                 "Reittier-Wechsel", "Gleiten", "Trotzleiste", "Meta-Finale", "Gefährte");
             St("K10_S01", StepType.Instance, "Drei Tore", "tyrannenfeste", V(0, 6, -300), "Stürme mit den Bündnissen die drei Tore der Feste.").Mate("pact")
                 .Obj(O(ObjectiveKind.Kill, Guard, 6, "Erstes Tor: Herolds-Garde").At(-8, 6).L("Herolds-Garde"),

@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Repariere die Windglocken, sammle Federn und versorge verletzte W\xE4chter."
   Position: {x: 20, y: 47.9631, z: 200}
   Radius: 30
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0

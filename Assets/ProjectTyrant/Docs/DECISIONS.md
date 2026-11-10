@@ -358,3 +358,15 @@ Format: Was · Warum · verworfene Alternative.
 - **Fessel auf Treffer nach Stufe (`ApplyStageFetter`) und Ausholen im Laufen ab Stufe 4** · Gegner ohne eigenen Zustand setzten nie Fesseln ein; in Stufe 4–5 gelang jede Flucht (Gegner blieben zum Ausholen stehen und stießen nach 8–13 s an die Leine). Verkrüppelung/Kühle/Immobilisierung je nach Stufe über Quote und 6-s-Abklingzeit; Stufe-4–5-Verfolger holen im Laufen aus. · Leine verlängern (widerspricht der Tabelle).
 - **„Dornwacht gefallen“ erst beim Scheitern von „Zurückerobern“ (Stufe 2)** · Der Meta-Zustand (Hub-Angriff) bleibt erreichbar, aber nicht mehr nach dem ersten Stufe-1-Event; der Lauf-3-Test wurde auf die neue Regel umgestellt (gleich streng). · Meta-Zustand ganz entfernen.
 - **Messplatz in Biom-Zonen neben dem nächsten Welt-Lager der Stufe, Boden vom NavMesh** · Feste Koordinaten lagen in Lava (Glutöde) bzw. unter der Höhlendecke (Kristalltiefe) → Rettung zur Wegmarke = Sicherheitszone → Gegner gaben sofort auf (ungültige Messung). · Koordinaten von Hand suchen.
+
+
+## Lauf 10
+- **Flug kinematisch über den CharacterController** · deterministisch testbar, kein Physik-Jitter, Kollisionen bleiben die des Spielers · verworfen: Rigidbody-Flug (nicht deterministisch, kollidiert mit dem bestehenden Controller).
+- **Höhendecke relativ zum Boden** · Zonen haben stark unterschiedliche Grundhöhen (Himmelsspitzen-Inseln), eine absolute Decke wäre je Zone neu zu eichen · verworfen: absolute Weltkoordinate.
+- **Greif-Sturzflug auf V (Ausweichen) statt Leertaste halten** · Leertaste ist jetzt Flügelschlag (Auftrieb-Ladung); Halten und Tippen auf derselben Taste wären nicht unterscheidbar · verworfen: Leertaste halten (Lauf 6).
+- **Abfangen = Anteil der verlorenen Höhe (60/85 %)** · direkt aus der Vorgabe ablesbar und prüfbar; Tempo bleibt zu 70 % erhalten, damit der Sturz-Rhythmus schneller voranbringt · verworfen: Energieerhaltung aus Tempo (Ergebnis hing vom Startwinkel ab, Vorgabe nicht prüfbar).
+- **Luftakrobatik = Auftrieb lädt im Gleiten nach (1 / 4 s)** · eine Ausweichrolle in der Luft hätte mit V (Sturzflug) kollidiert · verworfen: Luft-Ausweichrolle.
+- **Flugverbot im Bosskampf dynamisch (Champion mit Ziel im 40-m-Umkreis)** · kein Umbau der Arenen nötig, gilt auch für Weltbosse und Event-Champions · verworfen: platzierte Verbotszonen je Arena.
+- **Admin-Story über den echten FinishStep** · Endszenen, Flags, Briefe, Belohnung und Instanz-Abschluss laufen wie im Spiel; der Admin-Schalter wirkt nur während des Ablaufs · verworfen: Zähler setzen + Kapitel springen (überspringt Flags/Briefe, Lauf-6-Debug).
+- **Reittier-Einstellungen auf Account-Ebene** · Vorgabe; Besitz liegt schon dort · verworfen: je Charakter.
+- **Himmelsschuppen-Sammlung in 3 Schritten (Ei, Ausbrüten, Sattel)** · erlaubte Kürzung der Vorgabe (6 → 3), zeitlich vertretbar und vollständig spielbar · verworfen: 6 Schritte mit Futter-/Spielzeug-Etappen.

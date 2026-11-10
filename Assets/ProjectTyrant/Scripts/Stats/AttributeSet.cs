@@ -39,8 +39,8 @@ namespace ProjectTyrant
     /// </summary>
     public class AttributeSet
     {
-        /// <summary>Level-Cap (Lauf 4): GW2-Stufe 80 auf 30 komprimiert – Stufe 30 entspricht den GW2-Werten für 80.</summary>
-        public const int MaxLevel = 30;
+        /// <summary>Level-Cap (Lauf 11): 80 wie GW2; die Werte, die bis Lauf 10 Stufe 30 hatte, gehören jetzt Stufe 80 (<see cref="LevelCurves"/>).</summary>
+        public const int MaxLevel = LevelCurves.Cap;
         public const float ClassBaseHealthL1 = 1300f;
         public const float ClassBaseHealthL80 = 9212f;
 
@@ -57,7 +57,7 @@ namespace ProjectTyrant
 
         public event Action Changed;
 
-        public static float PrimaryBase(int level) => Mathf.Lerp(37f, 1000f, (Mathf.Clamp(level, 1, MaxLevel) - 1) / (float)(MaxLevel - 1));
+        public static float PrimaryBase(int level) => LevelCurves.Primary(level);
         /// <summary>Skalierungsfaktor 0..1 relativ zu Level 80 (für level-abhängige Basiswerte).</summary>
         public static float LevelScale(int level) => PrimaryBase(level) / 1000f;
 
@@ -106,7 +106,7 @@ namespace ProjectTyrant
             get
             {
                 Recalculate();
-                float baseHp = Mathf.Lerp(ClassBaseHealthL1, ClassBaseHealthL80, (_level - 1) / (float)(MaxLevel - 1));
+                float baseHp = Mathf.Lerp(ClassBaseHealthL1, ClassBaseHealthL80, LevelCurves.Fraction(_level));
                 return (baseHp + Get(Attr.Vitality) * 10f) * (1f + _acc.HealthPercent);
             }
         }

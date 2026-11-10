@@ -26,8 +26,8 @@ namespace ProjectTyrant.EditorTools
             var cfgPath = Dir + "/BalanceConfig.asset";
             var cfg = AssetDatabase.LoadAssetAtPath<BalanceConfig>(cfgPath);
             if (cfg == null) { cfg = ScriptableObject.CreateInstance<BalanceConfig>(); AssetDatabase.CreateAsset(cfg, cfgPath); }
-            cfg.Levels = new DangerProfile[6];
-            for (int i = 0; i <= 5; i++)
+            cfg.Levels = new DangerProfile[DangerTable.MaxLevel + 1];
+            for (int i = 0; i <= DangerTable.MaxLevel; i++)
             {
                 var p = Dir + "/DangerProfile_" + i + ".asset";
                 var a = AssetDatabase.LoadAssetAtPath<DangerProfile>(p);
@@ -194,7 +194,7 @@ namespace ProjectTyrant.EditorTools
             }
             // ---- Neutral-Quote je Stufe (ganze Gruppen; Tiere zuerst) ----
             foreach (var b in brains) b.Neutral = false;
-            for (int lvl = 0; lvl <= 5; lvl++)
+            for (int lvl = 0; lvl <= DangerTable.MaxLevel; lvl++)
             {
                 var inLvl = brains.Where(b => map.At(b.transform.position) == lvl).ToList();
                 if (inLvl.Count == 0) continue;
@@ -243,7 +243,7 @@ namespace ProjectTyrant.EditorTools
             var spawns = brains.Select(b => new SpawnInfo { Id = b.name + "@" + b.transform.position.ToString("F0"), Pos = new Vector2(b.transform.position.x, b.transform.position.z), Tier = b.Archetype.Tier, Neutral = b.Neutral }).ToList();
             var errs = BalanceValidator.Validate(map, spawns, events);
             LastErrors.AddRange(errs);
-            int[] perLvl = new int[6]; foreach (var b in brains) perLvl[map.At(b.transform.position)]++;
+            int[] perLvl = new int[DangerTable.MaxLevel + 1]; foreach (var b in brains) perLvl[map.At(b.transform.position)]++;
             LastReport.Add(z.Id + ": " + brains.Count + " Spawns (Stufen " + string.Join("/", perLvl) + "), " + brains.Count(b => b.Neutral) + " neutral, " + moved + " verschoben, " + added + " Tiere/Wachen, " + roles + " Rollen, " + events.Count + " Events, " + errs.Count + " Verstöße");
             Lauf10Builder.ApplyZone(z, root);   // Lauf 10: Himmelsschuppen-Sammlung (Himmelsspitzen)
             EditorSceneManager.MarkSceneDirty(scene);

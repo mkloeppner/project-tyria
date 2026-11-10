@@ -89,7 +89,7 @@ namespace ProjectTyrant.Balance
             // 2) Stufe 0 um Hub und Ankunft (Startzone)
             if (m.IsStartZone) foreach (var a in m.Anchors) if (m.At(a) != 0) err.Add(z + "Hub/Ankunft " + a + " nicht Stufe 0");
             // 3) Spawns
-            var perLevel = new int[6]; var neutralPerLevel = new int[6];
+            var perLevel = new int[DangerTable.MaxLevel + 1]; var neutralPerLevel = new int[DangerTable.MaxLevel + 1];
             foreach (var s in spawns)
             {
                 int l = m.At(s.Pos);
@@ -100,7 +100,7 @@ namespace ProjectTyrant.Balance
                 if (s.Story) continue;
                 perLevel[l]++; if (s.Neutral) neutralPerLevel[l]++;
             }
-            for (int l = 0; l < 6; l++)
+            for (int l = 0; l <= DangerTable.MaxLevel; l++)
             {
                 if (perLevel[l] < 4) continue;
                 float share = neutralPerLevel[l] / (float)perLevel[l], want = DangerTable.Default(l).NeutralShare;

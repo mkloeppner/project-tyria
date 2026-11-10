@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: Am Eingang der Kristallmine.
   Position: {x: 380, y: 28, z: -260}
   Radius: 10
-  Experience: 329
+  Experience: 341
   Karma: 0
   Copper: 0
   HeroPoints: 0

@@ -138,7 +138,7 @@ namespace ProjectTyrant
                 if (!Player.IsDead && !Player.IsDowned) Player.SetHealth(Player.MaxHealth);
                 GameEventBus.RaiseLevelUp(Player, level);
             }
-            GameEventBus.RaiseBanner("Stufe " + level, "+" + ProgressionModel.HeroPointsPerLevel + " Heldenpunkte · Attribute gestiegen", new Color(1f, 0.85f, 0.35f));
+            GameEventBus.RaiseBanner("Stufe " + level, "+" + LevelCurves.HeroPointsGainedAt(level) + " Heldenpunkte · Attribute gestiegen", new Color(1f, 0.85f, 0.35f));
             RequestSave("Stufenaufstieg");
         }
 
@@ -195,8 +195,14 @@ namespace ProjectTyrant
         public bool Load()
         {
             EnsureAccount();
-            var dto = SaveSystem.Read(AccountStore.CharacterPath(ActiveSlot));
+            string charPath = AccountStore.CharacterPath(ActiveSlot);
+            var dto = SaveSystem.Read(charPath);
             if (dto == null) return false;
+            if (SaveSystem.NeedsLevel80Migration(dto))   // Lauf 11: vor der Migration sichern
+            {
+                var bak = SaveSystem.BackupBeforeMigration(charPath, dto.Version);
+                Debug.Log("[ProjectTyrant] Level-80-Migration von Version " + dto.Version + (bak != null ? " – Sicherung: " + bak : ""));
+            }
             AccountModel.ApplyAccount(Account, dto);
             UnhookState();
             State = new ProfileState();

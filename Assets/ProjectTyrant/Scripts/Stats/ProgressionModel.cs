@@ -16,7 +16,7 @@ namespace ProjectTyrant
         public event Action<int> LeveledUp;
         public event Action Changed;
 
-        public static int XpToNext(int level) => level >= AttributeSet.MaxLevel ? int.MaxValue : 400 + 120 * (level - 1);
+        public static int XpToNext(int level) => LevelCurves.XpToNext(level);   // Lauf 11: 1–30 wie bisher, ab 30 konstant
 
         public static int TotalXpForLevel(int level)
         {
@@ -38,7 +38,7 @@ namespace ProjectTyrant
             {
                 Xp -= XpToNext(Level);
                 Level++;
-                HeroPoints += HeroPointsPerLevel;
+                HeroPoints += LevelCurves.HeroPointsGainedAt(Level);
                 ups++;
                 LeveledUp?.Invoke(Level);
             }
@@ -50,13 +50,13 @@ namespace ProjectTyrant
         public void SetLevel(int level)
         {
             int target = Math.Max(1, Math.Min(AttributeSet.MaxLevel, level));
-            while (Level < target) { Level++; HeroPoints += HeroPointsPerLevel; LeveledUp?.Invoke(Level); }
+            while (Level < target) { Level++; HeroPoints += LevelCurves.HeroPointsGainedAt(Level); LeveledUp?.Invoke(Level); }
             if (target < Level) Level = target;
             Xp = 0;
             Changed?.Invoke();
         }
 
-        public static int HeroPointsForLevel(int level) => HeroPointsPerLevel * level;
+        public static int HeroPointsForLevel(int level) => LevelCurves.HeroPointsForLevel(level);   // Lauf 11: 4 je Stufe bis 30, danach 1
 
         public void GrantHeroPoints(int n) { HeroPoints += n; Changed?.Invoke(); }
 

@@ -23,17 +23,17 @@ MonoBehaviour:
   Weapon: 2
   Armor: 0
   Trinket: 0
-  WeaponStrengthMin: 851
-  WeaponStrengthMax: 941
+  WeaponStrengthMin: 268
+  WeaponStrengthMax: 296
   Defense: 0
   Prefix: "W\xFCterich"
   Attributes:
   - Attr: 1
-    Value: 108
+    Value: 32
   - Attr: 0
-    Value: 54
+    Value: 16
   - Attr: 5
-    Value: 54
+    Value: 16
   MaxStack: 1
   VendorValue: 414
   Binding: 0

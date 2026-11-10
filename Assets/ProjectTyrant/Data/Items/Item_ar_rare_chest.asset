@@ -25,15 +25,15 @@ MonoBehaviour:
   Trinket: 0
   WeaponStrengthMin: 0
   WeaponStrengthMax: 0
-  Defense: 133
+  Defense: 40
   Prefix: Berserker
   Attributes:
   - Attr: 0
-    Value: 22
+    Value: 7
   - Attr: 1
-    Value: 11
+    Value: 3
   - Attr: 4
-    Value: 11
+    Value: 3
   MaxStack: 1
   VendorValue: 207
   Binding: 0

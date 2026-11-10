@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c8853922032dd4aa0a2a32765460ec, type: 3}
+  m_Name: Biome_hochmoor
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.BiomeProfile
+  Id: hochmoor
+  DisplayName: Hochmoor
+  Amplitude: 9
+  Frequency: 0.004
+  Octaves: 4
+  Terrace: 2
+  CanyonDepth: 0
+  CanyonFrequency: 0.006
+  BaseHeight: 5
+  WaterLevel: 1.2
+  EdgeMountainHeight: 40
+  GroundLow: {r: 0.3529412, g: 0.41568628, b: 0.2901961, a: 1}
+  GroundMid: {r: 0.43137255, g: 0.47843137, b: 0.3372549, a: 1}
+  GroundHigh: {r: 0.5411765, g: 0.5411765, b: 0.41568628, a: 1}
+  Cliff: {r: 0.41568628, g: 0.4, b: 0.3764706, a: 1}
+  Shore: {r: 0.2901961, g: 0.2901961, b: 0.21960784, a: 1}
+  Water: {r: 0.22, g: 0.28, b: 0.24, a: 0.9}
+  FogColor: {r: 0.65882355, g: 0.6901961, b: 0.65882355, a: 1}
+  FogDensity: 0.008
+  SkyTop: {r: 0.3529412, g: 0.41568628, b: 0.5019608, a: 1}
+  SkyHorizon: {r: 0.72156864, g: 0.7529412, b: 0.7529412, a: 1}
+  SkyBottom: {r: 0.3529412, g: 0.3764706, b: 0.3137255, a: 1}
+  SunColor: {r: 0.9098039, g: 0.9098039, b: 0.84705883, a: 1}
+  SunIntensity: 0.85
+  Saturation: -4
+  SplitShadows: {r: 0.2901961, g: 0.3529412, b: 0.41568628, a: 1}
+  SplitHighlights: {r: 0.78431374, g: 0.7529412, b: 0.627451, a: 1}
+  TreeDensity: 0.1
+  RockDensity: 0.45
+  TreeColor: {r: 0.2901961, g: 0.3529412, b: 0.22745098, a: 1}
+  TrunkColor: {r: 0.22745098, g: 0.1882353, b: 0.15686275, a: 1}
+  Conifers: 0
+  DeadTrees: 1
+  Weather: 2
+  Ambient: 1

@@ -9,7 +9,7 @@ namespace ProjectTyrant.Balance
     public static class BalanceWorld
     {
         static BalanceConfig _config;
-        static readonly DangerSettings[] _defaults = new DangerSettings[6];
+        static readonly DangerSettings[] _defaults = new DangerSettings[DangerTable.MaxLevel + 1];
         public static BalanceConfig Config { get => _config; set { _config = value; if (value != null) EnemyCurve.Player = value.Player; } }
         /// <summary>Admin: /danger set &lt;Gebiet&gt; &lt;Stufe&gt; (Laufzeit, nicht gespeichert).</summary>
         public static readonly Dictionary<string, int> RegionOverride = new Dictionary<string, int>();

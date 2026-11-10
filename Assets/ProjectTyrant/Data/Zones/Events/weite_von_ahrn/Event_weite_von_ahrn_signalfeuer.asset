@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_weite_von_ahrn_signalfeuer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: weite_von_ahrn_signalfeuer
+  Title: "Ahnenh\xFCgel: Signalfeuer"
+  Description: "Entz\xFCnde die Signalfeuer von Ahnenh\xFCgel, bevor die Nacht hereinbricht."
+  ChainId: 
+  Objective: 8
+  Center: {x: -339.09122, y: 5.07498, z: 24.486923}
+  Radius: 30
+  Duration: 210
+  TargetCount: 4
+  Triggers:
+  - Type: 1
+    Delay: 20
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 480
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 240
+  GoldContribution: 4693.5483
+  Experience: 1877
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: weite_von_ahrn_weite_von_ahrn_signalfeuer
+  Path: []
+  DeliverPoint: {x: -339.09122, y: 5.07498, z: 24.486923}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 5e48cf968f4bc9c49b4ebdc768610ba6, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 0}
+  Sites:
+  - {x: -328.95953, y: 5.039583, z: 28.770525}
+  - {x: -343.37482, y: 5.1266613, z: 34.618595}
+  - {x: -349.2229, y: 5.1606474, z: 20.20332}
+  - {x: -334.80762, y: 5.0529814, z: 14.355252}
+  SiteChannel: 2.5
+  SiteLabel: "Feuer entz\xFCnden"
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0
+  Tier: 2
+  TierSet: 0
+  BalanceBaseTargets: 0

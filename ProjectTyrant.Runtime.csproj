@@ -108,6 +108,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Core\EventDebugCommands.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Zone\HeroChallenge.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Animation\ClipData.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Regions\WorldBossSchedule.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\BalanceProbe.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\TooltipBuilder.Traits.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\ZoneDanger.cs" />
@@ -125,6 +126,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Save\ProfileState.Mastery.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Items\ItemDefinition.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Zone\MasteryInsight.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Regions\RegionZones.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\TrackerHud.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Stats\ProgressionModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Effects\VfxPool.cs" />
@@ -205,6 +207,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Progression\TraitModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\DangerProfile.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Inventory\LootRoller.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Regions\LevelBands.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Progression\SpecializationDefinition.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\NavMeshDataLoader.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Save\PlayerProfile.Skills.cs" />
@@ -359,6 +362,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Zone\Vista.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Audio\MusicComposer.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\ReachabilityModel.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Stats\LevelCurves.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\BalanceWorld.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Lauf6\JumpPuzzleChest.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Lauf6\CorruptionWard.cs" />

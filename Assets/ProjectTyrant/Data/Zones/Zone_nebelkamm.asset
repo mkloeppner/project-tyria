@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_nebelkamm
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: nebelkamm
+  DisplayName: Nebelkamm
+  Description: Ein Hochplateau mit Mooren, Steinkreisen und Geisterlichtern bei Nacht.
+  SceneName: PT_Zone_Nebelkamm
+  Seed: 66840
+  Size: 1100
+  LevelMin: 30
+  LevelMax: 40
+  Biome: {fileID: 11400000, guid: 22100a7e17548c84b95b6726b3a97fec, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: nebelkamm_gluetoede_k
+    Position: {x: 260.86484, y: 5.862262, z: 381.30505}
+    Yaw: -145.62253
+    TargetZone: gluetoede
+    TargetPortal: gluetoede_nebelkamm_k
+  - Id: nebelkamm_weite_von_ahrn
+    Position: {x: -443.023, y: 5.1941004, z: 131.05194}
+    Yaw: 106.4789
+    TargetZone: weite_von_ahrn
+    TargetPortal: weite_von_ahrn_nebelkamm
+  DefaultSpawn: {x: 0, y: 2.4, z: -418}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.28
+    y: 0
+    width: 0.3
+    height: 0.05
+  ContinentColor: {r: 0.47843137, g: 0.5411765, b: 0.44705883, a: 1}
+  Waypoints:
+  - Id: wp_nebelkamm_ankunft
+    Name: Wegmarke Nebelkamm
+    Position: {x: 12, y: 2.4, z: -400}
+  - Id: wp_nebelkamm_steinkreis_von_ulm
+    Name: Wegmarke Steinkreis von Ulm
+    Position: {x: 367.59808, y: 2.4, z: -222.65295}
+  - Id: wp_nebelkamm_torfdorf
+    Name: Wegmarke Torfdorf
+    Position: {x: -366.39545, y: 2.4, z: -203.40569}
+  - Id: wp_nebelkamm_grauer_kamm
+    Name: Wegmarke Grauer Kamm
+    Position: {x: 341.68945, y: 5.601043, z: 91.96677}
+  - Id: wp_nebelkamm_irrlichtsenke
+    Name: Wegmarke Irrlichtsenke
+    Position: {x: -415.65744, y: 4.1020827, z: 114.833725}
+  - Id: wp_nebelkamm_ankunft_gluetoede_k
+    Name: "Portal-Wegmarke Glut\xF6de"
+    Position: {x: 265.477, y: 5.862262, z: 376.35303}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 2.4, z: -418}
+    WaypointId: wp_nebelkamm_ankunft
+  - Entrance: portal:nebelkamm_gluetoede_k
+    Position: {x: 257.477, y: 5.862262, z: 376.35303}
+    WaypointId: wp_nebelkamm_ankunft_gluetoede_k
+  - Entrance: portal:nebelkamm_weite_von_ahrn
+    Position: {x: -437.26947, y: 5.1941004, z: 129.34996}
+    WaypointId: wp_nebelkamm_irrlichtsenke
+  Tips:
+  - Nachts erwachen die Geister der Steinkreise.
+  - 'Signatur: Geister-Events bei Nacht, Einblicke auf Steinkreisen'
+  LoadingImage: {fileID: 0}
+  Regions:
+  - Name: Irrlichtsenke
+    Center: {x: 85.42236, y: -440}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 31
+  - Name: Alte Warte
+    Center: {x: -69.66915, y: -262.9987}
+    Radius: 110
+    LevelMin: 31
+    LevelMax: 33
+  - Name: "Moorbr\xFCcke"
+    Center: {x: -148.09593, y: 111.32132}
+    Radius: 110
+    LevelMin: 35
+    LevelMax: 37
+  - Name: Nebelsee
+    Center: {x: 220.32329, y: 270.0865}
+    Radius: 110
+    LevelMin: 37
+    LevelMax: 39
+  - Name: "H\xFCgelgrab"
+    Center: {x: -361.74014, y: 305.03586}
+    Radius: 110
+    LevelMin: 37
+    LevelMax: 39
+  TimerLabel: 
+  TimerPeriod: 0
+  TimerOffset: 0
+  TimerPosition: {x: 0, y: 0, z: 0}
+  TimerEventId: 
+  DangerMap:
+    ZoneId: 
+    Size: 1000
+    Anchors: []
+    Waypoints: []
+    BandEdges: []
+    BandLevels: 
+    Areas: []
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 30
+    WaypointSafeRadius: 25
+  CompletionIds:
+  - wp_nebelkamm_ankunft
+  - wp_nebelkamm_steinkreis_von_ulm
+  - wp_nebelkamm_torfdorf
+  - wp_nebelkamm_grauer_kamm
+  - wp_nebelkamm_irrlichtsenke
+  - poi_nebelkamm_irrlichtsenke
+  - poi_nebelkamm_alte_warte
+  - poi_nebelkamm_moorbruecke
+  - poi_nebelkamm_nebelsee
+  - poi_nebelkamm_huegelgrab
+  - vista_nebelkamm_0
+  - vista_nebelkamm_1
+  - vista_nebelkamm_2
+  - hc_nebelkamm_0
+  - hc_nebelkamm_1
+  - hc_nebelkamm_2
+  - hc_nebelkamm_3
+  - heart_nebelkamm_0
+  - heart_nebelkamm_1
+  - heart_nebelkamm_2
+  - heart_nebelkamm_3
+  Region: 0
+  IsHub: 0

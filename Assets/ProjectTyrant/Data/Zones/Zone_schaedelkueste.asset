@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_schaedelkueste
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: schaedelkueste
+  DisplayName: "Sch\xE4delk\xFCste"
+  Description: Eine versunkene Ruinenstadt, in die die Verderbnis sickert.
+  SceneName: PT_Zone_Schaedelkueste
+  Seed: 65856
+  Size: 1100
+  LevelMin: 75
+  LevelMax: 80
+  Biome: {fileID: 11400000, guid: f673670403d8f2d4e873af1934f1089f, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: schaedelkueste_tyrannenfeste_k
+    Position: {x: 260.86484, y: 2.2, z: 381.30505}
+    Yaw: -145.62253
+    TargetZone: tyrannenfeste
+    TargetPortal: tyrannenfeste_schaedelkueste_k
+  - Id: schaedelkueste_weisse_stille
+    Position: {x: -443.023, y: 3.0842307, z: 131.05194}
+    Yaw: 106.4789
+    TargetZone: weisse_stille
+    TargetPortal: weisse_stille_schaedelkueste
+  DefaultSpawn: {x: 0, y: 3, z: -418}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.84
+    y: 0.26
+    width: 0.12
+    height: 0.04
+  ContinentColor: {r: 0.3529412, g: 0.2901961, b: 0.41568628, a: 1}
+  Waypoints:
+  - Id: wp_schaedelkueste_ankunft
+    Name: "Wegmarke Sch\xE4delk\xFCste"
+    Position: {x: 12, y: 2.9379792, z: -400}
+  - Id: wp_schaedelkueste_versunkener_tempel
+    Name: Wegmarke Versunkener Tempel
+    Position: {x: -269.45126, y: 2.3220155, z: -243.13777}
+  - Id: wp_schaedelkueste_schaedelhafen
+    Name: "Wegmarke Sch\xE4delhafen"
+    Position: {x: -390.89792, y: 2.2, z: -143.09393}
+  - Id: wp_schaedelkueste_knochenstrand
+    Name: Wegmarke Knochenstrand
+    Position: {x: 416.10068, y: 3, z: 11.280661}
+  - Id: wp_schaedelkueste_ertrunkene_gasse
+    Name: Wegmarke Ertrunkene Gasse
+    Position: {x: -114.21551, y: 2.2, z: 149.3943}
+  - Id: wp_schaedelkueste_ankunft_tyrannenfeste_k
+    Name: Portal-Wegmarke Tyrannenfeste
+    Position: {x: 265.477, y: 2.2, z: 376.35303}
+  - Id: wp_schaedelkueste_ankunft_weisse_stille
+    Name: "Portal-Wegmarke Wei\xDFe Stille"
+    Position: {x: -429.26947, y: 2.9228904, z: 129.34996}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 3, z: -418}
+    WaypointId: wp_schaedelkueste_ankunft
+  - Entrance: portal:schaedelkueste_tyrannenfeste_k
+    Position: {x: 257.477, y: 2.2, z: 376.35303}
+    WaypointId: wp_schaedelkueste_ankunft_tyrannenfeste_k
+  - Entrance: portal:schaedelkueste_weisse_stille
+    Position: {x: -437.26947, y: 3.0842307, z: 129.34996}
+    WaypointId: wp_schaedelkueste_ankunft_weisse_stille
+  Tips:
+  - "Verderbnis-Widerstand sch\xFCtzt im Inneren der Ruinen."
+  - "Signatur: Verderbnis-Widerstand, Tempel-Meta, Weltboss Tempelw\xE4chter"
+  LoadingImage: {fileID: 0}
+  Regions:
+  - Name: Ertrunkene Gasse
+    Center: {x: 216.4719, y: -440}
+    Radius: 110
+    LevelMin: 75
+    LevelMax: 76
+  - Name: Verderbter Brunnen
+    Center: {x: -87.53869, y: -247.846}
+    Radius: 110
+    LevelMin: 75
+    LevelMax: 77
+  - Name: "Grabstra\xDFe"
+    Center: {x: -18.908302, y: -52.56318}
+    Radius: 110
+    LevelMin: 76
+    LevelMax: 78
+  - Name: Gezeitentor
+    Center: {x: 150.50601, y: 75.02238}
+    Radius: 110
+    LevelMin: 77
+    LevelMax: 79
+  - Name: Riff der Toten
+    Center: {x: -370.19193, y: 416.75967}
+    Radius: 110
+    LevelMin: 79
+    LevelMax: 80
+  TimerLabel: "Tempel der Sch\xE4delk\xFCste"
+  TimerPeriod: 1800
+  TimerOffset: 300
+  TimerPosition: {x: -397.90445, y: 0, z: -346.31943}
+  TimerEventId: schaedelkueste_tempel
+  DangerMap:
+    ZoneId: 
+    Size: 1000
+    Anchors: []
+    Waypoints: []
+    BandEdges: []
+    BandLevels: 
+    Areas: []
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 30
+    WaypointSafeRadius: 25
+  CompletionIds:
+  - wp_schaedelkueste_ankunft
+  - wp_schaedelkueste_versunkener_tempel
+  - wp_schaedelkueste_schaedelhafen
+  - wp_schaedelkueste_knochenstrand
+  - wp_schaedelkueste_ertrunkene_gasse
+  - poi_schaedelkueste_ertrunkene_gasse
+  - poi_schaedelkueste_verderbter_brunnen
+  - poi_schaedelkueste_grabstrasse
+  - poi_schaedelkueste_gezeitentor
+  - poi_schaedelkueste_riff_der_toten
+  - vista_schaedelkueste_0
+  - vista_schaedelkueste_1
+  - vista_schaedelkueste_2
+  - hc_schaedelkueste_0
+  - hc_schaedelkueste_1
+  - hc_schaedelkueste_2
+  - hc_schaedelkueste_3
+  - heart_schaedelkueste_0
+  - heart_schaedelkueste_1
+  - heart_schaedelkueste_2
+  - heart_schaedelkueste_3
+  Region: 0
+  IsHub: 0

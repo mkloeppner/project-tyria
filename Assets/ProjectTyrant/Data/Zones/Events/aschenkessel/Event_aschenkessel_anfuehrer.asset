@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_aschenkessel_anfuehrer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: aschenkessel_anfuehrer
+  Title: "Anf\xFChrer der Magmabrut"
+  Description: "Ihr Anf\xFChrer zeigt sich \u2013 brich seine Trotzleiste."
+  ChainId: aschenkessel_angriff
+  Objective: 5
+  Center: {x: 181.4924, y: 7, z: -190.89763}
+  Radius: 36
+  Duration: 300
+  TargetCount: 1
+  Triggers:
+  - Type: 2
+    Delay: 0
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 300
+  GoldContribution: 4693.5483
+  Experience: 1877
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: aschenkessel_aschenkessel_anfuehrer
+  Path: []
+  DeliverPoint: {x: 181.4924, y: 7, z: -190.89763}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: ab1f7244f4640334f8430c0f2ff0c7d4, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 11400000, guid: bb168f08156abf1468f46dd9dbc5d796, type: 2}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0
+  Tier: 2
+  TierSet: 0
+  BalanceBaseTargets: 0

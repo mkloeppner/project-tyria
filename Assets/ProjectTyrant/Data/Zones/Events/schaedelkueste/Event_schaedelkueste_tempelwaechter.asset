@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_schaedelkueste_tempelwaechter
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: schaedelkueste_tempelwaechter
+  Title: "Tempelw\xE4chter"
+  Description: "Tempelw\xE4chter erscheint \u2013 brich die Trotzleiste und weiche den Mustern aus."
+  ChainId: tempelwaechter
+  Objective: 9
+  Center: {x: 266.30493, y: 8.215645, z: 510}
+  Radius: 45
+  Duration: 480
+  TargetCount: 1
+  Triggers:
+  - Type: 6
+    Delay: 5400
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 7200
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 60
+  GoldContribution: 4693.5483
+  Experience: 5631
+  Karma: 1407
+  Coins: 1000
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: schaedelkueste_schaedelkueste_tempelwaechter
+  Path: []
+  DeliverPoint: {x: 266.30493, y: 8.215645, z: 510}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 1cb2573ad42dd0e47b7abf70c8106ac5, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 11400000, guid: 7283c09540215d547957df8eb8664415, type: 2}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds:
+  - 0.5
+  MasteryPoints: 1
+  MetaId: 
+  MetaPhase: 0
+  Tier: 2
+  TierSet: 0
+  BalanceBaseTargets: 0

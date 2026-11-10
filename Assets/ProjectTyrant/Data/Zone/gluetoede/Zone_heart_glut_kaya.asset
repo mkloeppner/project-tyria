@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: "Sammle Glutkristalle und versorge verletzte Sp\xE4her."
   Position: {x: -330, y: 1.6, z: -40}
   Radius: 30
-  Experience: 1252
+  Experience: 3755
   Karma: 782
   Copper: 375
   HeroPoints: 0
