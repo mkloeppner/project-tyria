@@ -217,6 +217,8 @@ namespace ProjectTyrant.EditorTools
             if (z == null) { BuildZones(); z = Zone(id); }
             BiomeZoneBuilder.LastReachReport.Clear(); BiomeZoneBuilder.LastReachErrors = 0;
             if (z.LegacyLayout) ZoneBuilder.BuildZone(); else BiomeZoneBuilder.Build(z);
+            BalanceBuilder.LastErrors.Clear(); BalanceBuilder.ApplyZone(z);
+            if (BalanceBuilder.LastErrors.Count > 0) Debug.LogError("[ProjectTyrant] Balance-Validator " + z.Id + ":\n" + string.Join("\n", BalanceBuilder.LastErrors));
             UpdateBuildSettings();
             AssetDatabase.SaveAssets();
             OpenCoreWithZone(z.LegacyLayout ? ZoneBuilder.ZonePath : BiomeZoneBuilder.ScenePath(z));
@@ -254,6 +256,7 @@ namespace ProjectTyrant.EditorTools
             var ids = new List<string>();
             foreach (var z in LoadWorld().Zones) if (!z.LegacyLayout) ids.Add(z.Id);
             foreach (var id in ids) { BiomeZoneBuilder.Build(Zone(id)); lap("Zone " + id); }
+            int balanceErrors = BalanceBuilder.ApplyAll(); lap("Balance B1 (Gefahrenstufen, Spawns, Event-Stufen, Validator)");
             LoadingImageBuilder.BuildAll(); lap("Ladebilder");
             StoryBuilder.BuildAll(true); lap("Geschichte + Sprache (Lauf 6)");
             BuildCore(); lap("Core");
@@ -265,6 +268,7 @@ namespace ProjectTyrant.EditorTools
             var sb = new System.Text.StringBuilder("[ProjectTyrant] Rebuild Everything: ");
             foreach (var kv in LastTimings) sb.Append(kv.Key).Append(' ').Append(kv.Value.ToString("0.0")).Append(" s · ");
             Debug.Log(sb.ToString());
+            if (balanceErrors > 0) throw new System.Exception("[ProjectTyrant] Rebuild Everything abgebrochen: Balance-Validator meldet " + balanceErrors + " Verstöße (siehe Konsole).");
         }
     }
 }

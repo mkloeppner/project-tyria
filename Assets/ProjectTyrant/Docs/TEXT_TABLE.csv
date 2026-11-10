@@ -32,6 +32,12 @@ K01_S02E_L02;mira;Amuesiert;blase;Spalte eins: unerwartet nützlich. Spalte zwei
 K01_S03_L01;mira;Besorgt;rechts;Die Spuren führen zum alten Steinbruch. Da haben sie ihr Lager.;11;K01_S03_L01
 K01_S03_L02;held;Entschlossen;links;Du bleibst hier und zählst, wer herauskommt.;7;K01_S03_L02
 K01_S03_L03;mira;Zornig;rechts;Ich zähle auch, wer nicht herauskommt. Sieh zu, dass du nicht dabei bist.;13;K01_S03_L03
+K01_S03_C2_A;held;Amuesiert;links;Zähl langsam. Ich brauche vielleicht etwas länger.;7;K01_S03_C2_A
+K01_S03_C2_B;held;Entschlossen;links;Ich bringe alle zurück. Das ist ein Versprechen.;8;K01_S03_C2_B
+K01_S03_C2_C;held;Zornig;links;Die werden sich wünschen, sie wären im Bett geblieben.;9;K01_S03_C2_C
+K01_S03_R1;mira;Amuesiert;rechts;Ich zähle so langsam, wie du willst. Bis drei. Dann komme ich nach.;13;K01_S03_R1
+K01_S03_R2;mira;Besorgt;rechts;Versprechen schreibe ich auf. Mit Tinte. Die geht nicht weg.;10;K01_S03_R2
+K01_S03_R3;mira;Neutral;rechts;Die meisten wünschen sich das schon, seit sie dich kennen.;10;K01_S03_R3
 K01_S03E_L01;brennar;Neutral;total;Sauber. Unordentlich, aber sauber.;4;K01_S03E_L01
 K01_S03E_L02;held;Besorgt;nah;Wer seid Ihr?;3;K01_S03E_L02
 K01_S03E_L03;brennar;Neutral;nah;Brennar Feld. Hauptmann der Dornwacht. Ich jage diese Bande seit drei Wochen.;12;K01_S03E_L03
@@ -59,6 +65,10 @@ K02_S01_R1;brennar;Amuesiert;rechts;Mira hat mich gewarnt. Sie hat eine Liste.;8
 K02_S01_R2;brennar;Entschlossen;rechts;Sag das nicht. Halt es einfach.;6;K02_S01_R2
 K02_S01_R3;brennar;Neutral;rechts;Erst die Palisade. Dann die Jagd. In dieser Reihenfolge.;9;K02_S01_R3
 K02_S01_L05;brennar;Neutral;rechts;Kämpf mit den anderen. Feuer auf dem Boden, Klinge hindurch. So wird aus zwei Schlägen einer.;16;K02_S01_L05
+K02_S01_C2_A;held;Amuesiert;links;Bekomme ich auch so einen Mantel?;6;K02_S01_C2_A
+K02_S01_C2_B;held;Neutral;links;Was erwartet die Wacht von mir?;6;K02_S01_C2_B
+K02_S01_R4;brennar;Amuesiert;rechts;Den Mantel verdient man sich. Die Löcher darin auch.;9;K02_S01_R4
+K02_S01_R5;brennar;Neutral;rechts;Pünktlichkeit. Mut ist billig, Pünktlichkeit selten.;6;K02_S01_R5
 K02_S02E_L01;brennar;Neutral;blase;Die Palisade steht. Du hast den anderen Platz gelassen. Das lernt hier kaum einer.;14;K02_S02E_L01
 K02_S03_L01;mira;Entschlossen;rechts;Ich komme mit. Keine Diskussion. Ich habe Verbände und eine sehr laute Stimme.;13;K02_S03_L01
 K02_S03_L02;held;Besorgt;links;Grolmoks Lager ist kein Weiler, Mira.;6;K02_S03_L02
@@ -85,6 +95,10 @@ K03_S01E_L01;merle;Neutral;blase;Neu im Moor? Bleib auf den Stegen. Was daneben 
 K03_S02_L01;merle;Besorgt;rechts;Der Giftnebel kriecht zum Fischerdorf. Ohne Boot kommt da keiner hin.;11;K03_S02_L01
 K03_S02_L02;held;Neutral;links;Ich habe gehört, ihr vermietet Skimmer.;6;K03_S02_L02
 K03_S02_L03;merle;Amuesiert;rechts;Vermieten ist ein großes Wort. Wir leihen sie Leuten, die zurückkommen.;11;K03_S02_L03
+K03_S02_C1_A;held;Amuesiert;links;Ich komme immer zurück. Meistens sogar mit dem Boot.;9;K03_S02_C1_A
+K03_S02_C1_B;held;Neutral;links;Ich bringe ihn heil zurück. Mein Wort.;7;K03_S02_C1_B
+K03_S02_R1;merle;Amuesiert;rechts;Meistens. Das schreibe ich auf deinen Leihschein.;7;K03_S02_R1
+K03_S02_R2;merle;Neutral;rechts;Worte schwimmen nicht. Aber gut. Hilf erst meinen Fischern.;9;K03_S02_R2
 K03_S02E_L01;merle;Neutral;blase;Du bist zurückgekommen. Das Boot auch. Ich mag dich.;9;K03_S02E_L01
 K03_S03_L01;tovin;Besorgt;rechts;Nicht stehen bleiben! Da, wo du stehst, war gerade eine sehr wichtige Spur.;13;K03_S03_L01
 K03_S03_L02;held;Amuesiert;links;Du bist Tovin.;3;K03_S03_L02
@@ -100,6 +114,12 @@ K03_S03_R3;tovin;Neutral;rechts;Der Herold. Aber er bricht sie nicht selbst. Er 
 K03_S03_L06;tovin;Neutral;rechts;Das Gift im Nebel kommt aus dem gebrochenen Stein. Reinige dich, sonst denkst du bald in Pilzen.;17;K03_S03_L06
 K03_S04_L01;held;Entschlossen;links;Das Dorf zuerst. Dann reden wir über Könige.;8;K03_S04_L01
 K03_S04_L02;tovin;Amuesiert;rechts;Einverstanden. Ich halte die Laterne. Das ist meine Kernkompetenz.;9;K03_S04_L02
+K03_S04_C1_A;held;Entschlossen;links;Die Kinder zuerst. Dann die Alten. Dann ich.;8;K03_S04_C1_A
+K03_S04_C1_B;held;Amuesiert;links;Halt die Laterne hoch, Tovin. Ich will sehen, wohin ich renne.;11;K03_S04_C1_B
+K03_S04_C1_C;held;Zornig;links;Wer den Nebel gemacht hat, schuldet mir eine Erklärung.;9;K03_S04_C1_C
+K03_S04_R1;tovin;Neutral;rechts;Vernünftig. Ich notiere: Held vernünftig. Erster Eintrag dieser Art.;9;K03_S04_R1
+K03_S04_R2;tovin;Amuesiert;rechts;Höher geht nicht. Ich bin nicht besonders groß.;8;K03_S04_R2
+K03_S04_R3;tovin;Besorgt;rechts;Der Herold erklärt nichts. Er hinterlässt nur Fußnoten.;8;K03_S04_R3
 K03_S04E_L01;tovin;Neutral;rechts;Alle draußen. Und das Siegel … ist nicht ganz tot. Es atmet noch.;13;K03_S04E_L01
 K03_S04E_L02;merle;Entschlossen;links;Dann hat das Moor heute zwei Mal Glück gehabt.;9;K03_S04E_L02
 K03_S04E_L03;tovin;Besorgt;rechts;Der nächste Stein liegt im Frostkamm. Auf dem Pass. Wer ihn bricht, weckt etwas Großes.;15;K03_S04E_L03
@@ -109,12 +129,20 @@ K04_S01E_L01;runa;Neutral;blase;Der Pass ist offen, aber nicht freundlich. Nutz 
 K04_S02_L01;brennar;Entschlossen;rechts;Der Herold ist auf dem Pass. Er will das Siegel unter dem Frostschlund brechen.;14;K04_S02_L01
 K04_S02_L02;held;Besorgt;links;Und der Frostschlund?;3;K04_S02_L02
 K04_S02_L03;brennar;Neutral;rechts;Schläft noch. Wenn das Siegel fällt, wacht er auf. Wir halten die Kristalle klein.;14;K04_S02_L03
+K04_S02_C1_A;held;Amuesiert;links;Klein halten. Wie Miras Ausgaben.;5;K04_S02_C1_A
+K04_S02_C1_B;held;Neutral;links;Sag mir, wo ich stehen soll.;6;K04_S02_C1_B
+K04_S02_R1;brennar;Amuesiert;rechts;Sag ihr das nicht. Sie führt auch über mich Buch.;10;K04_S02_R1
+K04_S02_R2;brennar;Neutral;rechts;Neben mir. Wie immer.;4;K04_S02_R2
 K04_S03_L01;herold;Neutral;total;Hauptmann Feld. Du bist alt geworden. Ich nicht.;8;K04_S03_L01
 K04_S03_L02;brennar;Zornig;rechts;Du warst einer von uns. Du hast die Feste bewacht.;10;K04_S03_L02
 K04_S03_L03;herold;Neutral;links;Ich habe sie bewacht. Darum weiß ich, was in ihr wartet. Ordnung. Endlich Ordnung.;14;K04_S03_L03
 K04_S03_L04;held;Zornig;nah;Ordnung brennt keine Dörfer nieder.;5;K04_S03_L04
 K04_S03_L05;herold;Amuesiert;links;Nein. Das tut der Weg dorthin.;6;K04_S03_L05
 K04_S03_L06;brennar;Entschlossen;rechts;Brich seine Haltung. Erst dann trifft ihn auch irgendetwas.;9;K04_S03_L06
+K04_S03_C2_A;held;Entschlossen;links;Dann brechen wir sie zusammen.;5;K04_S03_C2_A
+K04_S03_C2_B;held;Zornig;links;Ich breche ihm mehr als die Haltung.;7;K04_S03_C2_B
+K04_S03_R1;brennar;Entschlossen;rechts;Zusammen. So war es immer gedacht.;6;K04_S03_R1
+K04_S03_R2;herold;Amuesiert;links;Versuch es. Viele haben es versucht.;6;K04_S03_R2
 K04_S03E_L01;herold;Neutral;links;Gut gekämpft. Aber der Stein ist schon gesprungen.;8;K04_S03E_L01
 K04_S03E_L02;brennar;Entschlossen;rechts;Lauf. Bring die anderen über den Pass. Ich halte ihn hier.;11;K04_S03E_L02
 K04_S03E_L03;held;Besorgt;nah;Nicht allein. Nicht jetzt.;4;K04_S03E_L03
@@ -131,6 +159,238 @@ K04_S04_R2;mira;Besorgt;rechts;Pass auf, dass du dabei nicht wie er wirst. Der H
 K04_S04_R3;mira;Trauernd;rechts;Er hat mir Lesen beigebracht. Mit Dienstplänen. Ich habe sie gehasst.;11;K04_S04_R3
 K04_S04_L04;mira;Entschlossen;rechts;Die Glutöde. Dort sammeln sich alle, die noch kämpfen wollen. Dorthin gehen wir.;13;K04_S04_L04
 K04_J;held;Trauernd;;Auf dem Pass haben wir den Herold gestellt. Brennar hat die Linie gehalten, damit wir entkommen. Er ist nicht zurückgekommen.;20;
+K05_S01_L01;mira;Neutral;rechts;Glutschmiede. Hier riecht alles nach Eisen und schlechter Laune. Drei Leute wollen dich sprechen. Gleichzeitig.;15;K05_S01_L01
+K05_S01_L02;haldis;Entschlossen;rechts;Kommandantin Haldis, die Wacht. Brennar hat mir von dir geschrieben. Drei Seiten. Er schrieb nie drei Seiten.;17;K05_S01_L02
+K05_S01_L03;held;Trauernd;links;Er hat mir nie gesagt, dass er schreibt.;8;K05_S01_L03
+K05_S01_L04;haldis;Neutral;rechts;Er hat auch nie gesagt, dass er stirbt. Er hat es einfach getan. Ordentlich.;14;K05_S01_L04
+K05_S01_L05;tovin;Amuesiert;rechts;Und ich bin immer noch Tovin. Mit neuen Notizen. Die alten habe ich verbrannt. Versehentlich. Hier ist alles heiß.;19;K05_S01_L05
+K05_S01_L06;veyra;Neutral;rechts;Veyra. Der Schleier schickt mich nicht. Ich bin trotzdem hier.;10;K05_S01_L06
+K05_S01_L07;held;Neutral;links;Und was will der Schleier, der dich nicht schickt?;9;K05_S01_L07
+K05_S01_L08;veyra;Amuesiert;rechts;Den Herold. Lebend wäre nett. Tot ginge auch.;8;K05_S01_L08
+K05_S01_C1_A;held;Amuesiert;links;Drei Werber, ein Held. Ich hoffe, ihr habt Kuchen mitgebracht.;10;K05_S01_C1_A
+K05_S01_C1_B;held;Neutral;links;Ich höre euch alle an. Danach entscheide ich.;8;K05_S01_C1_B
+K05_S01_C1_C;held;Zornig;links;Wer mir den Herold bringt, hat mich.;7;K05_S01_C1_C
+K05_S01_R1;haldis;Zornig;rechts;Die Wacht bringt Rationen. Kuchen ist keine Verteidigungsstrategie.;8;K05_S01_R1
+K05_S01_R2;tovin;Neutral;rechts;Vernünftig. Ich notiere: vernünftig. Das kommt selten vor.;8;K05_S01_R2
+K05_S01_R3;veyra;Amuesiert;rechts;Ehrlich. Gefällt mir. Gefährlich, aber gefällt mir.;7;K05_S01_R3
+K05_S01_L09;haldis;Entschlossen;rechts;Erst der Sturm über der Glutöde. Wer dort besteht, darf mitreden.;11;K05_S01_L09
+K05_S02_L01;haldis;Entschlossen;blase;Die Aschkrallen greifen in Wellen an. Halte die Glutschmiede, bis der Sturm bricht!;13;K05_S02_L01
+K05_S02E_L01;tovin;Amuesiert;blase;Erstaunlich. Ich habe mitgezählt. Du hast öfter ausgewichen als ich geatmet habe.;12;K05_S02E_L01
+K05_S02E_L02;veyra;Neutral;blase;Der Herold war hier. Er hat die Schmiede beobachtet. Er beobachtet dich.;12;K05_S02E_L02
+K05_S03_L01;haldis;Entschlossen;rechts;Die Aschwacht am Kraterrand. Dort lagern die Aschkrallen ihre Siegelsplitter.;10;K05_S03_L01
+K05_S03_L02;held;Neutral;links;Siegelsplitter? Vom Pass?;3;K05_S03_L02
+K05_S03_L03;tovin;Besorgt;rechts;Vom Pass. Und von zwei anderen Siegeln, von denen ich nichts wusste. Das ist unangenehm.;15;K05_S03_L03
+K05_S03_L04;veyra;Neutral;rechts;Wir nehmen sie ihnen weg. Leise oder laut. Du suchst es aus.;12;K05_S03_L04
+K05_S03_C2_A;held;Neutral;links;Laut. Sie sollen wissen, wer kommt.;6;K05_S03_C2_A
+K05_S03_C2_B;held;Neutral;links;Leise. Wir holen die Splitter, ohne dass jemand stirbt.;9;K05_S03_C2_B
+K05_S03_R1;haldis;Amuesiert;rechts;Endlich jemand, der Trommeln mag.;5;K05_S03_R1
+K05_S03_R2;veyra;Amuesiert;rechts;Ich wusste, ich mag dich.;5;K05_S03_R2
+K05_S03E_L01;held;Entschlossen;nah;Drei Splitter. Drei Siegel. Und das vierte liegt unter seiner Feste.;11;K05_S03E_L01
+K05_S03E_L02;tovin;Besorgt;rechts;Die Tyrannenfeste. Wenn das vierte Siegel bricht, wacht er auf. Vareth.;11;K05_S03E_L02
+K05_S03E_L03;haldis;Zornig;rechts;Dann halten wir das vierte. Mit allem, was wir haben.;10;K05_S03E_L03
+K05_S03E_L03@Wacht;haldis;Entschlossen;rechts;Dann halten wir das vierte. Mit dir an der Spitze.;10;K05_S03E_L03_v_Wacht
+K05_S04_L01;mira;Neutral;rechts;Du musst dich entscheiden. Alle drei wollen dich. Ich will nur, dass du zurückkommst.;14;K05_S04_L01
+K05_S04_L02;haldis;Entschlossen;rechts;Die Wacht stürmt. Wir stellen eine Linie, und wir halten sie. Wie Brennar.;13;K05_S04_L02
+K05_S04_L03;tovin;Neutral;rechts;Das Archiv versteht. Wer Vareth war, warum er schläft, wie man ihn wieder einschläfert.;14;K05_S04_L03
+K05_S04_L04;veyra;Neutral;rechts;Der Schleier ist schon drin. In jedem Lager, jeder Hafenkneipe. Wir finden den Herold, bevor er uns findet.;18;K05_S04_L04
+K05_S04_L05;held;Neutral;links;Ich habe mich entschieden.;4;K05_S04_L05
+K05_S04_C3_A;held;Entschlossen;links;Die Wacht. Brennar hat mir gezeigt, wie man eine Linie hält.;11;K05_S04_C3_A
+K05_S04_C3_B;held;Neutral;links;Das Archiv. Wer seinen Feind versteht, muss ihn nur einmal schlagen.;11;K05_S04_C3_B
+K05_S04_C3_C;held;Amuesiert;links;Der Schleier. Der Herold soll mich erst sehen, wenn es zu spät ist.;13;K05_S04_C3_C
+K05_S04_RW;haldis;Entschlossen;rechts;Willkommen in der Wacht. Du schläfst in Stiefeln ab heute.;10;K05_S04_RW
+K05_S04_RA;tovin;Amuesiert;rechts;Großartig! Ich habe einen Schreibtisch für dich. Er ist unter den Büchern.;12;K05_S04_RA
+K05_S04_RS;veyra;Amuesiert;rechts;Gut. Dann vergiss, dass du mich je gesehen hast. Bis morgen.;11;K05_S04_RS
+K05_S04_L06;mira;Neutral;rechts;Silbermund. Dort sitzen alle drei Bündnisse. Und ich habe schon ein Zimmer reserviert.;13;K05_S04_L06
+K05_J;held;Entschlossen;;In der Glutöde warben drei Bündnisse um mich. Wir nahmen den Aschkrallen die Siegelsplitter ab. Das vierte Siegel liegt unter der Tyrannenfeste.;22;
+K05_J@Wacht;held;Entschlossen;;In der Glutöde warben drei Bündnisse um mich. Ich schwor auf die Wacht, wie Brennar. Das vierte Siegel liegt unter der Tyrannenfeste.;22;
+K05_J@Archiv;held;Entschlossen;;In der Glutöde warben drei Bündnisse um mich. Ich ging zum Archiv, zu Tovin. Das vierte Siegel liegt unter der Tyrannenfeste.;21;
+K05_J@Schleier;held;Entschlossen;;In der Glutöde warben drei Bündnisse um mich. Ich folgte Veyra in den Schleier. Das vierte Siegel liegt unter der Tyrannenfeste.;21;
+K06_S01E_L01;gorran;Amuesiert;blase;Willkommen in Silbermund! Hundert Segel, tausend Schulden, ein Portalplatz. Bitte nicht auf die Möwen treten.;15;K06_S01E_L01
+K06_S02_L01;haldis;Entschlossen;rechts;Schmuggler bringen Siegelsplitter über die Grotte an der Steilküste. Wir räumen sie aus. Heute.;14;K06_S02_L01
+K06_S02_L02;held;Neutral;links;Wie viele?;2;K06_S02_L02
+K06_S02_L03;haldis;Amuesiert;rechts;Genug, dass es sich lohnt. Zu wenige, dass es spannend wird. Ich hoffe auf mehr.;15;K06_S02_L03
+K06_S02_L04;tovin;Besorgt;rechts;Im Archiv fehlt ein Buch. Das einzige über Vareths Krönung. Jemand hat es gestohlen. Aus meinem Archiv!;17;K06_S02_L04
+K06_S02_L05;held;Neutral;links;Und wer hat einen Schlüssel?;5;K06_S02_L05
+K06_S02_L06;tovin;Zornig;rechts;Ich. Und der Kurator. Und, wie sich herausstellt, ein Fenster im zweiten Stock.;13;K06_S02_L06
+K06_S02_L07;veyra;Neutral;rechts;Im Hafen sitzt ein Mann, der für beide Seiten arbeitet. Für uns und für den Herold.;16;K06_S02_L07
+K06_S02_L08;held;Neutral;links;Und für wen arbeitet er wirklich?;6;K06_S02_L08
+K06_S02_L09;veyra;Amuesiert;rechts;Für den, der zuletzt bezahlt. Heute Abend sind wir das. Mit falschen Münzen.;13;K06_S02_L09
+K06_S02_L10;mira;Neutral;rechts;Ich halte Silbermund warm. Und eine Liste, wer dir was schuldet.;11;K06_S02_L10
+K06_S02_C1_A;held;Amuesiert;links;Klingt nach einem schönen Abend.;5;K06_S02_C1_A
+K06_S02_C1_B;held;Neutral;links;Gib mir den Plan. Ich halte mich daran.;8;K06_S02_C1_B
+K06_S02_C1_C;held;Zornig;links;Ich brauche keinen Plan. Ich brauche eine Tür.;8;K06_S02_C1_C
+K06_S02_R1;mira;Amuesiert;rechts;Ich trage es als Freizeit ein.;6;K06_S02_R1
+K06_S02_R2;mira;Neutral;rechts;Endlich hält sich mal jemand an einen Plan. Ich bin gerührt.;11;K06_S02_R2
+K06_S02_R3;mira;Besorgt;rechts;Türen haben meistens Leute dahinter. Denk dran.;7;K06_S02_R3
+K06_S02W_L01;haldis;Entschlossen;total;Linie! Schilde vor! Und du: geradeaus, bis keiner mehr steht.;10;K06_S02W_L01
+K06_S02WE_L01;haldis;Amuesiert;rechts;Die Schmugglerkönigin ist entkommen. Ihre Splitter nicht. Das zählt.;9;K06_S02WE_L01
+K06_S02A_L01;tovin;Besorgt;total;Leise. Die Wächter sind Konstrukte. Sie hören keine Schritte, aber sie riechen Tinte.;13;K06_S02A_L01
+K06_S02AE_L01;tovin;Amuesiert;rechts;Das Buch! Mit Fettflecken. Wer isst beim Stehlen?;8;K06_S02AE_L01
+K06_S02S_L01;veyra;Neutral;total;Er sitzt hinten, roter Mantel. Du lenkst ab. Ich höre zu.;11;K06_S02S_L01
+K06_S02SE_L01;veyra;Neutral;rechts;Der Herold sucht einen Schlüssel im Dünenmeer. Unser Mann hat es verraten. Für falsche Münzen.;15;K06_S02SE_L01
+K06_S03_L01;gorran;Neutral;rechts;Der Rat der Bündnisse. Ich bin der Hafenmeister, ich führe nur das Protokoll. Und das Buffet.;16;K06_S03_L01
+K06_S03_L02;haldis;Entschlossen;rechts;Die Spur führt in zwei Richtungen. Der Dämmerwald stirbt, und im Dünenmeer liegt ein Schlüssel.;15;K06_S03_L02
+K06_S03_L03;tovin;Neutral;rechts;Der Wald zuerst. Die Verderbnis dort ist Vareths Atem. Wenn er stärker atmet, wacht er bald.;16;K06_S03_L03
+K06_S03_L04;veyra;Neutral;rechts;Und während wir im Wald sind, holt sich der Herold den Schlüssel. Wie immer.;14;K06_S03_L04
+K06_S03_C2_A;held;Neutral;links;Erst die Menschen im Wald. Schlüssel warten, Leute nicht.;9;K06_S03_C2_A
+K06_S03_C2_B;held;Amuesiert;links;Der Herold kann warten. Er hat Übung darin.;8;K06_S03_C2_B
+K06_S03_R1;gorran;Neutral;rechts;Ich trage ins Protokoll ein: Der Wald zuerst. Und ein zweites Brötchen für mich.;14;K06_S03_R1
+K06_S03_R2;veyra;Amuesiert;rechts;Du hast recht. Und das ärgert mich.;7;K06_S03_R2
+K06_S03_L05;mira;Entschlossen;rechts;Ich bleibe hier und organisiere. Jemand muss die Briefe schreiben, die du nicht liest.;14;K06_S03_L05
+K06_J;held;Neutral;;In Silbermund tagen die Bündnisse. Wir haben eine Spur zum Schlüssel im Dünenmeer, aber zuerst ruft der Dämmerwald.;18;
+K06_J@Wacht;held;Neutral;;Mit der Wacht stürmte ich die Schmugglergrotte an der Silberküste. Die Spur führt in den Dämmerwald und ins Dünenmeer.;19;
+K06_J@Archiv;held;Neutral;;Mit Tovin holte ich das gestohlene Krönungsbuch zurück. Die Spur führt in den Dämmerwald und ins Dünenmeer.;17;
+K06_J@Schleier;held;Neutral;;Mit Veyra legte ich einen Doppelagenten herein. Die Spur führt in den Dämmerwald und ins Dünenmeer.;16;
+K07_S01_L01;fenn;Besorgt;rechts;Ihr kommt vom Rat? Gut. Der Wald wird violett. Und violett ist keine Farbe für einen Wald.;17;K07_S01_L01
+K07_S01_L02;held;Neutral;links;Was hilft dagegen?;3;K07_S01_L02
+K07_S01_L03;fenn;Neutral;rechts;Licht. Laternen an den Wächtersteinen. Und jemand, der die Schattenpriester unterbricht, bevor sie fertig beten.;15;K07_S01_L03
+K07_S01_L04;held;Neutral;links;Unterbrechen kann ich.;3;K07_S01_L04
+K07_S01_L04@Wildheit;held;Amuesiert;links;Unterbrechen ist meine Lieblingsbeschäftigung.;4;K07_S01_L04_v_Wildheit
+K07_S01E_L01;fenn;Amuesiert;blase;Die Verderbnis weicht! Ein bisschen. Ich nehme jedes bisschen.;9;K07_S01E_L01
+K07_S02_L01;fenn;Besorgt;rechts;Das Dorf an der Lichtung muss raus. Die Alten laufen langsam, die Kinder zu schnell.;15;K07_S02_L01
+K07_S02_L02;haldis;Entschlossen;rechts;Ich geh vorne. Du hältst die Flanke. Wer zurückbleibt, wird getragen.;11;K07_S02_L02
+K07_S02_L03;tovin;Besorgt;rechts;Ich habe eine Karte gezeichnet. Sie stimmt. Ziemlich. Größtenteils.;9;K07_S02_L03
+K07_S02_L04;veyra;Neutral;rechts;Ich kenne einen Pfad, den die Dornenschrecken nicht kennen. Weil ich ihn gestern erfunden habe.;15;K07_S02_L04
+K07_S02_L05;fenn;Besorgt;rechts;Die Dornenschrecken riechen Angst. Also sagt ihnen bitte niemand, dass wir welche haben.;13;K07_S02_L05
+K07_S02_C1_A;held;Amuesiert;links;Alle festhalten. Wir machen einen Ausflug.;6;K07_S02_C1_A
+K07_S02_C1_B;held;Entschlossen;links;Niemand bleibt zurück. Niemand.;4;K07_S02_C1_B
+K07_S02_C1_C;held;Zornig;links;Wer die Leute angreift, bekommt es mit mir zu tun.;10;K07_S02_C1_C
+K07_S02_R1;fenn;Amuesiert;rechts;Ein Ausflug. Ich sage den Kindern, es gibt Picknick.;9;K07_S02_R1
+K07_S02_R2;fenn;Trauernd;rechts;Das hat man uns schon oft versprochen. Halte es.;9;K07_S02_R2
+K07_S02_R3;fenn;Besorgt;rechts;Dann bekommst du es mit vielen zu tun. Der Wald ist voll.;12;K07_S02_R3
+K07_S02E_L01;fenn;Trauernd;rechts;Alle draußen. Auch die Ziege. Ich weiß nicht, wie ich danken soll.;12;K07_S02E_L01
+K07_S02E_L02;held;Neutral;links;Bleib am Leben. Das reicht.;5;K07_S02E_L02
+K07_S03_L01;held;Besorgt;nah;Am Wächterstein wartet etwas auf mich. Ich spüre es seit der Lichtung.;12;K07_S03_L01
+K07_S03_L02;ilan;Trauernd;rechts;Du hast mich gesucht. All die Jahre. Ich habe deine Zettel an den Bäumen gesehen.;15;K07_S03_L02
+K07_S03_L03;held;Trauernd;links;Ilan. Du lebst. Warum bist du nie zurückgekommen?;8;K07_S03_L03
+K07_S03_L04;ilan;Besorgt;rechts;Weil der Wald mich festhält. Die Verderbnis. Erst wenn das Siegel hält, kann ich gehen.;15;K07_S03_L04
+K07_S03_L05;held;Besorgt;links;Die Zeichen am Stein. Ich habe sie geträumt. Seit ich ein Kind war.;13;K07_S03_L05
+K07_S03_L06;tovin;Besorgt;rechts;Das ist die Schrift der Wächter. Vor den Karten. Sie sagt: Der Schläfer zählt seine Wächter.;16;K07_S03_L06
+K07_S03_L07;held;Neutral;links;Dann bin ich einer davon. Irgendwie.;6;K07_S03_L07
+K07_S03_L08;kerrin;Zornig;rechts;Du. Du bist weggelaufen, als die Brücke brannte. Ich habe drei Wochen gelegen.;13;K07_S03_L08
+K07_S03_L09;held;Trauernd;links;Ich weiß. Ich habe es mir nie verziehen. Ich laufe nicht mehr weg.;13;K07_S03_L09
+K07_S03_L10;kerrin;Neutral;rechts;Beweis es. Halte den Stein, bis das Licht wieder brennt.;10;K07_S03_L10
+K07_S03_L11;fenn;Neutral;rechts;Der Stein leuchtet, wenn man ihm die Wahrheit sagt. Sagen die Alten.;12;K07_S03_L11
+K07_S03_C2_A;held;Entschlossen;links;Ich bringe das zu Ende. Für alle, die hier warten.;10;K07_S03_C2_A
+K07_S03_C2_B;held;Trauernd;links;Ich weiß nicht, ob ich das kann. Aber ich versuche es.;11;K07_S03_C2_B
+K07_S03_R1;fenn;Neutral;rechts;Der Stein hat es gehört. Steine vergessen nichts.;8;K07_S03_R1
+K07_S03_R2;fenn;Amuesiert;rechts;Ehrlich ist besser als mutig. Mutige gibt es hier genug, auf dem Friedhof.;13;K07_S03_R2
+K07_S03E_L01;held;Entschlossen;nah;Das Licht brennt wieder. Vareth atmet langsamer. Aber er atmet.;10;K07_S03E_L01
+K07_J;held;Besorgt;;Im Dämmerwald drängten wir die Verderbnis zurück und brachten ein Dorf in Sicherheit. Am Wächterstein holte mich die Vergangenheit ein.;20;
+K07_J@Verlorener;held;Besorgt;;Im Dämmerwald brachten wir ein Dorf in Sicherheit. Am Wächterstein fand ich Ilan wieder. Der Wald lässt ihn erst gehen, wenn das Siegel hält.;24;
+K07_J@Raetsel;held;Besorgt;;Im Dämmerwald brachten wir ein Dorf in Sicherheit. Am Wächterstein standen die Zeichen aus meinen Träumen. Der Schläfer zählt seine Wächter.;21;
+K07_J@Schuld;held;Besorgt;;Im Dämmerwald brachten wir ein Dorf in Sicherheit. Am Wächterstein wartete Kerrin. Diesmal bin ich nicht weggelaufen.;17;
+K08_S01_L01;nadira;Neutral;rechts;Nadira, Karawanenführerin. Ihr wollt zu den Ruinen von Qasir? Dann reitet. Zu Fuß frisst euch der Sand.;17;K08_S01_L01
+K08_S01_L02;held;Neutral;links;Wie weit ist es?;4;K08_S01_L02
+K08_S01_L03;nadira;Amuesiert;rechts;Drei Schluchten. Ein Raptor springt darüber. Ein Held fällt hinein. Meistens.;11;K08_S01_L03
+K08_S01_C1_A;held;Amuesiert;links;Ich bin der Typ, der springt.;6;K08_S01_C1_A
+K08_S01_C1_B;held;Neutral;links;Zeig mir den sicheren Weg.;5;K08_S01_C1_B
+K08_S01_C1_C;held;Zornig;links;Der Herold wartet nicht. Ich auch nicht.;7;K08_S01_C1_C
+K08_S01_R1;nadira;Amuesiert;rechts;Das sagen alle. Die Schlucht hat ein langes Gedächtnis.;9;K08_S01_R1
+K08_S01_R2;nadira;Neutral;rechts;Es gibt keinen sicheren Weg. Es gibt nur weniger gefährliche.;10;K08_S01_R2
+K08_S01_R3;nadira;Besorgt;rechts;Dann warte wenigstens den Sturm ab. Er wartet auf niemanden.;10;K08_S01_R3
+K08_S01E_L01;nadira;Amuesiert;blase;Drei Schluchten, null Absturz. Ich schulde einem Raptor ein Bier.;10;K08_S01E_L01
+K08_S02_L01;herold;Neutral;total;Du bist gekommen. Natürlich. Brennar kam auch immer.;8;K08_S02_L01
+K08_S02_L02;held;Zornig;links;Sprich nicht von ihm.;4;K08_S02_L02
+K08_S02_L02@Wuerde;held;Zornig;links;Du hast kein Recht auf seinen Namen.;7;K08_S02_L02_v_Wuerde
+K08_S02_L03;herold;Neutral;rechts;Ich spreche von allen, die ich bewacht habe. Er auch. Er wusste es nur nicht.;15;K08_S02_L03
+K08_S02_L04;haldis;Zornig;rechts;Genug geredet. Linie! Wir drücken ihn gegen die Säulen!;9;K08_S02_L04
+K08_S02_L05;tovin;Besorgt;rechts;Die Säulen! Sie sind Teil des Siegelschlosses. Bring ihn dazu, sie zu treffen!;13;K08_S02_L05
+K08_S02_L06;veyra;Zornig;rechts;Diesmal entkommst du nicht. Ich habe deine Ausgänge gezählt.;9;K08_S02_L06
+K08_S02_L07;herold;Amuesiert;rechts;Zählt nur. Ich habe einen mehr.;6;K08_S02_L07
+K08_S02E_L01;herold;Neutral;total;Der Schlüssel ist geteilt. Eine Hälfte in der Tiefe, eine über den Wolken. Viel Glück. Ihr braucht es.;18;K08_S02E_L01
+K08_S02E_L02;veyra;Zornig;rechts;Er ist weg. Schon wieder. Ich hasse diesen Mann.;9;K08_S02E_L02
+K08_S02E_L03;held;Entschlossen;nah;Dann holen wir die Hälften vor ihm.;7;K08_S02E_L03
+K08_S03_L01;nadira;Neutral;rechts;Ihr habt den Herold vertrieben. Das erzählt man sich an jedem Feuer. Zweimal, mit Übertreibung.;15;K08_S03_L01
+K08_S03_L02;held;Neutral;links;Der Schlüssel ist geteilt. Kristalltiefe und Himmelsspitzen.;7;K08_S03_L02
+K08_S03_L03;nadira;Besorgt;rechts;Die Tiefe ist dunkel, die Spitzen sind hoch. Ich weiß nicht, was schlimmer ist.;14;K08_S03_L03
+K08_S03_C2_A;held;Neutral;links;Erst die Tiefe. Was im Dunkeln liegt, will ich zuerst sehen.;11;K08_S03_C2_A
+K08_S03_C2_B;held;Amuesiert;links;Erst die Tiefe. Danach brauche ich frische Luft.;8;K08_S03_C2_B
+K08_S03_R1;nadira;Neutral;rechts;Nimm eine Laterne. Und noch eine. Die erste geht immer aus.;11;K08_S03_R1
+K08_S03_R2;nadira;Amuesiert;rechts;Frische Luft gibt es oben genug. Zu viel davon.;9;K08_S03_R2
+K08_J;held;Zornig;;Im Dünenmeer stellte ich den Herold in den Ruinen von Qasir. Er entkam wieder. Der Schlüssel ist geteilt: Tiefe und Wolken.;21;
+K09_S01_L01;held;Besorgt;nah;Kristalltiefe. Kein Licht außer den Kristallen. Und dieser Laterne.;9;K09_S01_L01
+K09_S01_L02;tovin;Besorgt;rechts;Die blinden Jäger hören Schritte. Geh leise. Atme leise. Denk leise, wenn du kannst.;14;K09_S01_L02
+K09_S01_L03;haldis;Entschlossen;rechts;Ich halte das Licht. Du hältst die Klinge. So einfach.;10;K09_S01_L03
+K09_S01_L04;veyra;Neutral;rechts;Im Dunkeln bin ich zu Hause. Folge meiner Stimme. Nicht der anderen.;12;K09_S01_L04
+K09_S01_L05;held;Neutral;links;Welche anderen?;2;K09_S01_L05
+K09_S01_L06;vareth;Neutral;total;Kleiner Wächter. Du trägst Licht in mein Haus.;8;K09_S01_L06
+K09_S01_L07;vareth;Neutral;total;Ich habe euch Ordnung gegeben. Ihr habt mich dafür begraben.;10;K09_S01_L07
+K09_S01_L08;held;Besorgt;nah;Du hast Dörfer verbrannt. Das steht in jedem Buch.;9;K09_S01_L08
+K09_S01_L08@Raetsel;held;Besorgt;nah;Ich kenne deine Stimme. Aus meinen Träumen. Seit ich ein Kind war.;12;K09_S01_L08_v_Raetsel
+K09_S01_L09;vareth;Amuesiert;total;Bücher schreiben die Sieger. Ich werde bald wieder schreiben.;9;K09_S01_L09
+K09_S01_C1_A;held;Zornig;links;Dann breche ich dir den Stift.;6;K09_S01_C1_A
+K09_S01_C1_B;held;Neutral;links;Nicht, solange ich stehe.;4;K09_S01_C1_B
+K09_S01_C1_C;held;Amuesiert;links;Für einen Begrabenen redest du ziemlich viel.;7;K09_S01_C1_C
+K09_S01_R1;vareth;Amuesiert;total;Mutig. Brennar war auch mutig. Wo ist er jetzt?;9;K09_S01_R1
+K09_S01_R2;vareth;Neutral;total;Dann sorge ich dafür, dass du fällst.;7;K09_S01_R2
+K09_S01_R3;vareth;Amuesiert;total;Ich hatte viel Zeit zum Üben.;6;K09_S01_R3
+K09_S01E_L01;held;Entschlossen;nah;Die erste Hälfte des Schlüssels. Und eine Stimme, die nicht schlafen will.;12;K09_S01E_L01
+K09_S02E_L01;sela;Neutral;blase;Wer den Wind nicht fürchtet, darf zum Tempel. Wer ihn fürchtet, auch. Nur langsamer.;14;K09_S02E_L01
+K09_S03_L01;sela;Neutral;rechts;Sela, Himmelswächterin. Die zweite Hälfte liegt bei uns. Sie gehört dem, dem die Greifen vertrauen.;15;K09_S03_L01
+K09_S03_L02;held;Neutral;links;Und wie gewinnt man das Vertrauen eines Greifen?;8;K09_S03_L02
+K09_S03_L03;sela;Amuesiert;rechts;Man rettet ihre Eier vor Himmelspiraten. Das wirkt fast immer.;10;K09_S03_L03
+K09_S03_C2_A;held;Amuesiert;links;Eier retten. Steht auch auf Miras Liste.;7;K09_S03_C2_A
+K09_S03_C2_B;held;Entschlossen;links;Zeig mir die Piraten.;4;K09_S03_C2_B
+K09_S03_R1;sela;Amuesiert;rechts;Mira? Die Briefe schreibt? Sie hat uns schon drei geschickt.;10;K09_S03_R1
+K09_S03_R2;sela;Neutral;rechts;Gern. Sie zeigen sich ohnehin gleich selbst.;7;K09_S03_R2
+K09_S03E_L01;sela;Neutral;rechts;Die Greifin hat entschieden. Sie fliegt mit dir. Behandle sie wie einen Freund, nicht wie ein Pferd.;17;K09_S03E_L01
+K09_S04_L01;sela;Neutral;rechts;Beide Hälften. Der Schlüssel öffnet die Siegelkammer der Feste. Und nur sie.;12;K09_S04_L01
+K09_S04_L02;held;Entschlossen;links;Dann gehen wir zur Feste.;5;K09_S04_L02
+K09_S04_L03;sela;Besorgt;rechts;Die Feste öffnet sich erst, wenn ihr bereit seid. Seid ihr es?;12;K09_S04_L03
+K09_S04_C3_A;held;Entschlossen;links;Bereit oder nicht. Er wacht so oder so.;8;K09_S04_C3_A
+K09_S04_C3_B;held;Besorgt;links;Nein. Aber das war ich noch nie.;7;K09_S04_C3_B
+K09_S04_R1;sela;Neutral;rechts;Dann fliegt. Der Wind trägt euch bis zum schwarzen Fels.;10;K09_S04_R1
+K09_S04_R2;sela;Amuesiert;rechts;Ehrliche Helden leben länger. Statistisch.;5;K09_S04_R2
+K09_J;held;Entschlossen;;In der Kristalltiefe sprach Vareth zu mir. In den Himmelsspitzen gewann ich das Vertrauen einer Greifin. Der Schlüssel ist ganz.;20;
+K10_S01_L01;mira;Entschlossen;rechts;Die Bündnisse stehen vor den Toren. Alle drei. Ich habe sie zusammengeschrieben. Mit sehr vielen Briefen.;16;K10_S01_L01
+K10_S01_L02;haldis;Entschlossen;rechts;Drei Tore. Wir nehmen sie nacheinander. Keiner bleibt liegen.;9;K10_S01_L02
+K10_S01_L03;tovin;Besorgt;rechts;Die Siegelbrecher arbeiten an den Toren. Wenn sie fertig sind, ist die Kammer offen. Für ihn.;16;K10_S01_L03
+K10_S01_L04;veyra;Neutral;rechts;Ich gehe vor. Der Herold hat Wachen, die mich kennen. Und nicht mögen.;13;K10_S01_L04
+K10_S01_C1_A;held;Entschlossen;links;Für Brennar. Für alle, die nicht mehr hier sind.;9;K10_S01_C1_A
+K10_S01_C1_B;held;Amuesiert;links;Mira, setz uns auf die Liste der Sieger.;8;K10_S01_C1_B
+K10_S01_C1_C;held;Zornig;links;Keine Gnade für die Garde.;5;K10_S01_C1_C
+K10_S01_R1;haldis;Trauernd;rechts;Für Brennar. Er hätte jetzt etwas Kurzes gesagt.;8;K10_S01_R1
+K10_S01_R2;mira;Amuesiert;rechts;Steht schon drauf. Mit Bleistift. Ich will radieren können.;9;K10_S01_R2
+K10_S01_R3;veyra;Neutral;rechts;Die Garde gibt auch keine.;5;K10_S01_R3
+K10_S01E_L01;held;Entschlossen;nah;Das dritte Tor fällt. Der Hof ist frei. Der Thronsaal wartet.;11;K10_S01E_L01
+K10_S02_L01;herold;Neutral;total;Du hast dich verändert. Brennar hätte dich gemocht.;8;K10_S02_L01
+K10_S02_L02;held;Zornig;links;Er hat mich gemocht. Bevor du ihn getötet hast.;9;K10_S02_L02
+K10_S02_L03;herold;Trauernd;rechts;Ich habe ihn nicht getötet. Der Berg hat es getan. Ich habe nur das Siegel gebrochen.;16;K10_S02_L03
+K10_S02_L04;held;Zornig;links;Das ist dasselbe.;3;K10_S02_L04
+K10_S02_L05;herold;Neutral;rechts;Ja. Ich weiß. Ich habe lange gebraucht, um es zu wissen.;11;K10_S02_L05
+K10_S02_C2_A;held;Neutral;links;Dann hör auf. Leg die Klinge nieder.;7;K10_S02_C2_A
+K10_S02_C2_B;held;Zornig;links;Zu spät für Reue. Kämpf.;5;K10_S02_C2_B
+K10_S02_R1;herold;Trauernd;rechts;Zu spät. Er hört mich schon nicht mehr. Nur noch dich.;11;K10_S02_R1
+K10_S02_R2;herold;Neutral;rechts;Endlich jemand, der ehrlich ist.;5;K10_S02_R2
+K10_S02E_L01;herold;Trauernd;total;Er hat mir Ordnung versprochen. Er hat gelogen. Halte ihn auf.;11;K10_S02E_L01
+K10_S02E_L02;held;Trauernd;nah;Das werde ich. Ruh dich aus.;6;K10_S02E_L02
+K10_S02E_L02@Wildheit;held;Neutral;nah;Ich halte ihn auf. Nicht für dich.;7;K10_S02E_L02_v_Wildheit
+K10_S03_L01;vareth;Neutral;total;Kleiner Wächter. Du hast meinen Diener gebrochen. Jetzt brich mich.;10;K10_S03_L01
+K10_S03_L02;held;Entschlossen;links;Nicht brechen. Einschließen. Für immer.;5;K10_S03_L02
+K10_S03_L03;vareth;Amuesiert;total;Für immer ist kurz. Ich habe es schon einmal erlebt.;10;K10_S03_L03
+K10_S03_L04;haldis;Entschlossen;rechts;Die Siegel! Halt die Siegel, ich halte ihn!;8;K10_S03_L04
+K10_S03_L05;tovin;Besorgt;rechts;Die Inschrift! Ich lese, du schlägst. Wenn ich mich verlese, entschuldige ich mich hinterher.;14;K10_S03_L05
+K10_S03_L06;veyra;Neutral;rechts;Er sieht mich nicht. Ich bin der Schatten an seinem Thron.;11;K10_S03_L06
+K10_S03_L07;held;Entschlossen;nah;Jetzt!;1;K10_S03_L07
+K10_S03E_L01;vareth;Neutral;total;Ich schlafe. Aber ich träume. Und im Traum zähle ich meine Wächter.;12;K10_S03E_L01
+K10_S03E_L02;held;Entschlossen;nah;Dann zähl mich mit. Ich bin der letzte, den du brauchst.;11;K10_S03E_L02
+K10_S03E_L02@Raetsel;held;Entschlossen;nah;Jetzt verstehe ich die Zeichen. Ich bin einer der Wächter. Und ich bleibe wach.;14;K10_S03E_L02_v_Raetsel
+K10_S03E_L02@Verlorener;held;Entschlossen;nah;Ilan ist frei. Der Wald lässt ihn gehen. Du hältst niemanden mehr fest.;13;K10_S03E_L02_v_Verlorener
+K10_S03E_L02@Schuld;held;Entschlossen;nah;Diesmal bin ich geblieben. Bis zum Ende.;7;K10_S03E_L02_v_Schuld
+K10_S04_L01;mira;Trauernd;rechts;Brennars Grabmal. Ich habe es selbst entworfen. Mit einer Liste. Natürlich.;11;K10_S04_L01
+K10_S04_L02;held;Trauernd;links;Was steht drauf?;3;K10_S04_L02
+K10_S04_L03;mira;Neutral;rechts;Erste Zeile: Brennar Feld. Zweite Zeile: hat die Linie gehalten. Spalte zwei: wir auch.;14;K10_S04_L03
+K10_S04_L04;haldis;Neutral;rechts;Die Wacht bleibt an der Feste. Jemand muss die Siegel bewachen. Ich delegiere das. Zum ersten Mal.;17;K10_S04_L04
+K10_S04_L05;tovin;Amuesiert;rechts;Ich schreibe ein Buch. Über dich. Kapitel eins heißt: Rauch über Sonnfurt.;12;K10_S04_L05
+K10_S04_L06;veyra;Neutral;rechts;Der Herold ist weg. Meine Rechnung ist bezahlt. Vielleicht bleibe ich trotzdem.;12;K10_S04_L06
+K10_S04_C3_A;held;Neutral;links;Und jetzt? Ich habe keine Liste für danach.;8;K10_S04_C3_A
+K10_S04_C3_B;held;Entschlossen;links;Jetzt halten wir, was wir gewonnen haben.;7;K10_S04_C3_B
+K10_S04_C3_C;held;Amuesiert;links;Jetzt essen wir. Ich habe seit Kapitel fünf nichts gegessen.;10;K10_S04_C3_C
+K10_S04_R1;mira;Amuesiert;rechts;Ich schon. Erste Zeile: Frühstück.;5;K10_S04_R1
+K10_S04_R2;mira;Entschlossen;rechts;Dann schreib ich dich in die erste Spalte. Neben ihn.;10;K10_S04_R2
+K10_S04_R3;mira;Amuesiert;rechts;Kapitel fünf? Du redest schon wie Tovin.;7;K10_S04_R3
+K10_J;held;Entschlossen;;In der Tyrannenfeste fiel der Herold. Wir haben Vareth versiegelt, nicht getötet. An Brennars Grab hat Mira eine neue Liste angefangen.;21;
 SP_sonnfurt_1_L01;sp_sonnfurt_1;Besorgt;;Die Felder um Gerstenbrunn brennen nicht mehr, aber Wilma braucht jede Hand. Plünderer schleichen noch an den Zäunen.;18;SP_sonnfurt_1_L01
 SP_sonnfurt_1_L02;sp_sonnfurt_1;Amuesiert;;Im Weiler führt Mira Buch über alles. Sag ihr, ich habe die Brunnen gezählt. Zweimal.;15;SP_sonnfurt_1_L02
 SP_sonnfurt_2_L01;sp_sonnfurt_2;Entschlossen;;Dornwacht hält die Straße, solange die Palisade steht. Kerla repariert schneller, als die Aschkrallen anzünden.;15;SP_sonnfurt_2_L01
@@ -177,3 +437,73 @@ HZ_heart_glut_kaya_L01;kaya;Entschlossen;;Glutkristalle verbrennen dir die Finge
 HZ_heart_glut_oleg_L01;oleg;Besorgt;;Die Blitzableiter liegen wieder im Sand. Stell sie auf, bevor der Himmel zuschlägt.;13;HZ_heart_glut_oleg_L01
 HZ_heart_glut_torvald_L01;torvald;Zornig;;Die Kühlrinnen lecken! Wenn die Schmiede kocht, kochen wir mit.;10;HZ_heart_glut_torvald_L01
 HZ_heart_glut_brann_L01;brann;Entschlossen;;Schlackenminen im Feld, Glutbrände am Rand. Eimer nehmen, Minen entschärfen, nichts anfassen, was klickt.;14;HZ_heart_glut_brann_L01
+SP_silberkueste_1_L01;sp_silberkueste_1;Amuesiert;;Willkommen in Silbermund! Neun Portale, ein Brunnen und mehr Möwen als Einwohner.;12;SP_silberkueste_1_L01
+SP_silberkueste_1_L02;sp_silberkueste_1;Neutral;;Das Bündnis-Viertel liegt nördlich vom Platz. Dort sitzen Wacht, Archiv und Schleier. Meistens getrennt.;14;SP_silberkueste_1_L02
+SP_silberkueste_2_L01;sp_silberkueste_2;Neutral;;Am Hafen sucht Gorran Hände für die Fracht. Er zahlt in Karma und schlechten Witzen.;15;SP_silberkueste_2_L01
+SP_silberkueste_2_L02;sp_silberkueste_2;Besorgt;;Draußen auf dem Inselfels steht ein Schrein. Ohne Skimmer kommst du da nicht hin.;14;SP_silberkueste_2_L02
+SP_silberkueste_3_L01;sp_silberkueste_3;Besorgt;;Unter der Steilküste liegen die Grotten der Schmuggler. Ihre Königin lässt sich selten blicken.;14;SP_silberkueste_3_L01
+SP_silberkueste_3_L02;sp_silberkueste_3;Neutral;;Wenn sie es doch tut, bring Freunde mit. Viele Freunde.;10;SP_silberkueste_3_L02
+SP_silberkueste_4_L01;sp_silberkueste_4;Amuesiert;;Der alte Leuchtturm hat eine Treppe außen herum. Halb eingestürzt. Oben liegt angeblich eine Truhe.;15;SP_silberkueste_4_L01
+SP_silberkueste_4_L02;sp_silberkueste_4;Neutral;;Bastian repariert die Linsen. Er redet mit ihnen. Sie antworten nicht. Noch nicht.;13;SP_silberkueste_4_L02
+SP_daemmerwald_1_L01;sp_daemmerwald_1;Besorgt;;Bleib im Licht der Laternen. Die violetten Flecken brennen, auch wenn sie hübsch aussehen.;14;SP_daemmerwald_1_L01
+SP_daemmerwald_1_L02;sp_daemmerwald_1;Neutral;;Fenn und das Dorf auf der Lichtung brauchen jede Hilfe. Folge dem Weg nach Westen.;15;SP_daemmerwald_1_L02
+SP_daemmerwald_2_L01;sp_daemmerwald_2;Besorgt;;Die Schattenpriester beten, und mit jedem Gebet wächst die Verderbnis. Unterbrich sie.;12;SP_daemmerwald_2_L01
+SP_daemmerwald_2_L02;sp_daemmerwald_2;Neutral;;Gelingt es, weicht das Violett zurück. Das sieht man sogar von hier.;12;SP_daemmerwald_2_L02
+SP_daemmerwald_3_L01;sp_daemmerwald_3;Neutral;;Der Wächterstein ist älter als jede Karte. Manche sagen, er erinnert sich an uns.;14;SP_daemmerwald_3_L01
+SP_daemmerwald_3_L02;sp_daemmerwald_3;Besorgt;;Im Alten Hain im Osten erwacht manchmal ein Baumriese. Dann rennt man. Oder kämpft.;14;SP_daemmerwald_3_L02
+SP_duenenmeer_1_L01;sp_duenenmeer_1;Neutral;;Das Dünenmeer. Alle zwölf Minuten kommt der Sandsturm. Such dir dann ein Späher-Zelt.;13;SP_duenenmeer_1_L01
+SP_duenenmeer_1_L02;sp_duenenmeer_1;Amuesiert;;Oder bleib draußen und lern, wie Sand schmeckt.;8;SP_duenenmeer_1_L02
+SP_duenenmeer_2_L01;sp_duenenmeer_2;Neutral;;An der Oase Sahim sammeln sich die Karawanen. Nadira führt die größte.;12;SP_duenenmeer_2_L01
+SP_duenenmeer_2_L02;sp_duenenmeer_2;Besorgt;;Die drei Schluchten im Osten nimmt man nur mit dem Raptor. Zu Fuß fällt man.;15;SP_duenenmeer_2_L02
+SP_duenenmeer_3_L01;sp_duenenmeer_3;Neutral;;Die Ruinen von Qasir stehen auf alten Gewölben. Was darunter liegt, weiß niemand.;13;SP_duenenmeer_3_L01
+SP_duenenmeer_3_L02;sp_duenenmeer_3;Besorgt;;Im Sturm wandert ein Riese aus Glas über die Ebene. Halte Abstand.;12;SP_duenenmeer_3_L02
+SP_kristalltiefe_1_L01;sp_kristalltiefe_1;Besorgt;;Hier unten gibt es kein Tageslicht. Bleib bei den Kristallen oder trag eine Laterne.;14;SP_kristalltiefe_1_L01
+SP_kristalltiefe_1_L02;sp_kristalltiefe_1;Neutral;;Im Dunkeln wirst du schwach. Das ist kein Aberglaube, das ist die Tiefe.;13;SP_kristalltiefe_1_L02
+SP_kristalltiefe_2_L01;sp_kristalltiefe_2;Neutral;;Der Schwarze See ist tiefer, als jemand gemessen hat. Auf der Insel steht ein Kristall.;15;SP_kristalltiefe_2_L01
+SP_kristalltiefe_2_L02;sp_kristalltiefe_2;Besorgt;;Die blinden Jäger hören deine Schritte. Geh leise, und sie gehen vorbei.;12;SP_kristalltiefe_2_L02
+SP_kristalltiefe_3_L01;sp_kristalltiefe_3;Besorgt;;In der Kammer der Stimme flüstert etwas. Ich gehe da nicht mehr rein.;13;SP_kristalltiefe_3_L01
+SP_kristalltiefe_3_L02;sp_kristalltiefe_3;Neutral;;Westlich davon stehen Kristallsäulen. Wer hinaufspringt, findet oben etwas Hübsches.;10;SP_kristalltiefe_3_L02
+SP_himmelsspitzen_1_L01;sp_himmelsspitzen_1;Amuesiert;;Willkommen über den Wolken. Schau nicht nach unten, da sind nur noch mehr Wolken.;14;SP_himmelsspitzen_1_L01
+SP_himmelsspitzen_1_L02;sp_himmelsspitzen_1;Neutral;;Die Aufwinde tragen Gleitende nach oben. Ohne sie bist du hier ein Fußgänger.;13;SP_himmelsspitzen_1_L02
+SP_himmelsspitzen_2_L01;sp_himmelsspitzen_2;Neutral;;Die Greifennester liegen an den Klippen. Die Piraten stehlen die Eier.;11;SP_himmelsspitzen_2_L01
+SP_himmelsspitzen_2_L02;sp_himmelsspitzen_2;Besorgt;;Wer den Greifen hilft, dem vertrauen sie. Irgendwann.;8;SP_himmelsspitzen_2_L02
+SP_himmelsspitzen_3_L01;sp_himmelsspitzen_3;Neutral;;Der Tempel der Himmelswächter. Sela sieht dich schon. Sie sieht alles.;11;SP_himmelsspitzen_3_L01
+SP_himmelsspitzen_3_L02;sp_himmelsspitzen_3;Besorgt;;Manchmal greift ein Wyrm aus Sturm und Wolke den Tempel an. Dann hilft jede Klinge.;15;SP_himmelsspitzen_3_L02
+SP_tyrannenfeste_1_L01;sp_tyrannenfeste_1;Entschlossen;;Das Belagerungslager der Bündnisse. Von hier aus stürmen wir die Feste. Immer wieder.;13;SP_tyrannenfeste_1_L01
+SP_tyrannenfeste_1_L02;sp_tyrannenfeste_1;Neutral;;Marit verbindet Verwundete. Sie hat viel zu tun.;8;SP_tyrannenfeste_1_L02
+SP_tyrannenfeste_2_L01;sp_tyrannenfeste_2;Besorgt;;Drei Tore: Eisen, Stein, Siegel. Erst wenn alle drei fallen, öffnet sich der Hof.;14;SP_tyrannenfeste_2_L01
+SP_tyrannenfeste_2_L02;sp_tyrannenfeste_2;Neutral;;Scheitert der Sturm, schließen sie sich wieder. Dann fangen wir von vorne an.;13;SP_tyrannenfeste_2_L02
+SP_tyrannenfeste_3_L01;sp_tyrannenfeste_3;Besorgt;;Im Hof fiel der letzte Wächter vor tausend Jahren. Der Thronsaal liegt dahinter.;13;SP_tyrannenfeste_3_L01
+SP_tyrannenfeste_3_L02;sp_tyrannenfeste_3;Neutral;;Der Thron ist leer. Ich hoffe, das bleibt so.;9;SP_tyrannenfeste_3_L02
+HZ_heart_kueste_hafen_L01;gorran;Amuesiert;;Fracht, Netze, verletzte Leute. Ein normaler Tag im Hafen. Nur mehr davon.;12;HZ_heart_kueste_hafen_L01
+HZ_heart_kueste_markt_L01;ysolde;Zornig;;Die Ratten haben meinen Stand geplündert! Hilf mir, bevor sie auch den Käse finden.;14;HZ_heart_kueste_markt_L01
+HZ_heart_kueste_leuchtturm_L01;bastian;Besorgt;;Ohne Licht laufen die Schiffe auf die Klippen. Die Linsen brauchen Pflege.;12;HZ_heart_kueste_leuchtturm_L01
+HZ_heart_kueste_fischer_L01;wenda;Amuesiert;;Reiher pflegen, Treibgut aufbrechen und beim Bootsrennen jubeln. Das Letzte ist am wichtigsten.;13;HZ_heart_kueste_fischer_L01
+HZ_heart_wald_fenn_L01;fenn;Besorgt;;Laternen anzünden, Lichtmoos sammeln, Verletzte versorgen. Das Licht hält uns am Leben.;12;HZ_heart_wald_fenn_L01
+HZ_heart_wald_hira_L01;hira;Neutral;;Meine Hochsitze sind kaputt, mein Pfeilholz ist alle. Und die Keiler sind violett.;13;HZ_heart_wald_hira_L01
+HZ_heart_wald_oda_L01;oda;Besorgt;;Die Waldläufer kommen verwundet zurück. Ich brauche Kräuter und Hände.;10;HZ_heart_wald_oda_L01
+HZ_heart_wald_laternen_L01;ivo;Entschlossen;;Fallen weg, Laternen hin. So einfach ist das. Fast.;9;HZ_heart_wald_laternen_L01
+HZ_heart_duene_nadira_L01;nadira;Neutral;;Waren liegen im Sand, Zelte sind eingerissen, Träger erschöpft. Willkommen in meiner Karawane.;13;HZ_heart_duene_nadira_L01
+HZ_heart_duene_qasir_L01;imra;Amuesiert;;Jede Scherbe erzählt eine Geschichte. Die meisten handeln von Leuten, die zu nah an Säulen standen.;16;HZ_heart_duene_qasir_L01
+HZ_heart_duene_glas_L01;faris;Neutral;;Blitzglas ist das schönste Glas der Welt. Und das heißeste. Handschuhe an.;12;HZ_heart_duene_glas_L01
+HZ_heart_duene_oase_L01;samir;Besorgt;;Die Tiere haben Durst, die Glut kriecht heran, und Räuber legen Fallen. Ich bin nur ein Brunnenhüter.;17;HZ_heart_duene_oase_L01
+HZ_heart_tiefe_brom_L01;brom;Besorgt;;Die Stollen knarren, das Licht ist knapp, und zwei Kumpel sind verschüttet. Hilf mir!;14;HZ_heart_tiefe_brom_L01
+HZ_heart_tiefe_lys_L01;lys;Amuesiert;;Pilze, Messungen, Notizen. Und ja, manche Pilze leuchten, wenn man sie anschreit.;12;HZ_heart_tiefe_lys_L01
+HZ_heart_tiefe_fischer_L01;tamo;Neutral;;Im Schwarzen See gibt es Fische ohne Augen. Sie beißen trotzdem.;11;HZ_heart_tiefe_fischer_L01
+HZ_heart_tiefe_laternen_L01;nell;Entschlossen;;Licht in jeden Stollen. Und vorher die alten Sprengfallen weg. In dieser Reihenfolge.;13;HZ_heart_tiefe_laternen_L01
+HZ_heart_himmel_sela_L01;sela;Neutral;;Die Windglocken müssen klingen, die Wächter heilen. Federn sammeln schadet auch nicht.;12;HZ_heart_himmel_sela_L01
+HZ_heart_himmel_nest_L01;aya;Besorgt;;Die Nester sind zerzaust. Die Greifen sind wütend. Ich bin auch wütend.;12;HZ_heart_himmel_nest_L01
+HZ_heart_himmel_bucht_L01;rhea;Zornig;;Piraten haben meine Segel zerschossen und meine Matrosen auch. Hilf mir flicken.;12;HZ_heart_himmel_bucht_L01
+HZ_heart_himmel_kinder_L01;pia;Amuesiert;;Küken füttern, Windschutz bauen und den Wächtern zuwinken. Sie winken nie zurück, aber sie freuen sich.;16;HZ_heart_himmel_kinder_L01
+HZ_heart_feste_lager_L01;marit;Besorgt;;Jeder Sturm bringt mir neue Verwundete. Verband her, Zelt flicken, weiter.;11;HZ_heart_feste_lager_L01
+HZ_heart_feste_tore_L01;ulf;Entschlossen;;Ohne Rammböcke kein Tor. Ohne Munition keine Rammböcke. Los!;9;HZ_heart_feste_tore_L01
+HZ_heart_feste_kammern_L01;edric;Besorgt;;Die Siegelsplitter dürfen nicht in falsche Hände. Sammle sie, bevor die Brecher es tun.;14;HZ_heart_feste_kammern_L01
+HZ_heart_feste_bresche_L01;kaja;Entschlossen;;Fallen, Brände, Verwundete. Die Bresche hält nur, wenn wir sie halten.;11;HZ_heart_feste_bresche_L01
+FP_mira_L01;mira;Amuesiert;;Ich führe jetzt Listen über ganz Silbermund. Die Stadt weiß es noch nicht.;13;FP_mira_L01
+FP_haldis_L01;haldis;Entschlossen;;Die Wacht steht. Wenn du sie brauchst, ruf. Laut.;9;FP_haldis_L01
+FP_tovin_L01;tovin;Amuesiert;;Ich habe ein neues Kapitel über dich angefangen. Es hat schon Fußnoten.;12;FP_tovin_L01
+FP_veyra_L01;veyra;Neutral;;Ich bin nicht hier. Du siehst mich nur, weil ich es will.;12;FP_veyra_L01
+FP_fenn_L01;fenn;Neutral;;Die Lichtung ist leer, aber die Laternen brennen. Danke dafür.;10;FP_fenn_L01
+FP_nadira_L01;nadira;Amuesiert;;Silbermund hat zu wenig Sand. Ich bringe welchen mit, nächstes Mal.;11;FP_nadira_L01
+FP_sela_L01;sela;Neutral;;Die Greifin fragt nach dir. Auf ihre Art. Laut.;9;FP_sela_L01
+FP_gorran_L01;gorran;Amuesiert;;Der Rat tagt wieder. Ich führe Protokoll. Und das Buffet.;10;FP_gorran_L01

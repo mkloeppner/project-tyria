@@ -1,0 +1,278 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_10
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 10
+  Title: Der Tyrann erwacht
+  Zone: tyrannenfeste
+  MinLevel: 30
+  Summary: 'Finale in drei Instanzen: Sturm auf die Feste, der Herold, Vareths Versiegelung. Epilog in Silbermund an Brennars Grab.'
+  Steps:
+  - Id: K10_S01
+    Title: Drei Tore
+    Description: "St\xFCrme mit den B\xFCndnissen die drei Tore der Feste."
+    Type: 0
+    Zone: tyrannenfeste
+    Position: {x: 0, y: 6, z: -300}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 2
+      Target: Enemy_Feste_Garde
+      Count: 6
+      Text: 'Erstes Tor: Herolds-Garde'
+      Hint: 
+      Optional: 0
+      Label: Herolds-Garde
+      Offset: {x: -8, y: 0, z: 6}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 2
+      Target: Enemy_Feste_Siegelbrecher
+      Count: 3
+      Text: 'Zweites Tor: Siegelbrecher'
+      Hint: 
+      Optional: 0
+      Label: Siegelbrecher
+      Offset: {x: 8, y: 0, z: 12}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 29
+      Target: Enemy_Feste_Ritter
+      Count: 1
+      Text: 'Drittes Tor: Verderbter Ritter'
+      Hint: 
+      Optional: 0
+      Label: Verderbter Torritter
+      Offset: {x: 0, y: 0, z: 18}
+      Scale: 3
+      Scene: 
+      Partner: 
+    SceneStart: K10_S01
+    SceneEnd: K10_S01E
+    Checkpoints:
+    - 0
+    - 1
+    - 2
+    Reward:
+      Experience: 5000
+      Karma: 400
+      Copper: 3000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 55
+    Companion: pact
+    Props:
+    - barrikade@-8,2
+    - barrikade@8,8
+    - feuer@0,4
+    - feuer@-6,14
+    - rauch@0,4
+  - Id: K10_S02
+    Title: Der Herold
+    Description: Im Hof wartet der Herold ein letztes Mal.
+    Type: 0
+    Zone: tyrannenfeste
+    Position: {x: 0, y: 8, z: 0}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 18
+      Target: Enemy_Story_Herold
+      Count: 1
+      Text: Brich die Trotzleiste des Herolds
+      Hint: defiance
+      Optional: 0
+      Label: Der Herold
+      Offset: {x: 0, y: 0, z: 8}
+      Scale: 4
+      Scene: 
+      Partner: 
+    - Kind: 2
+      Target: Enemy_Feste_Garde
+      Count: 4
+      Text: Halte seine Garde auf
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 6, y: 0, z: 4}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 29
+      Target: Enemy_Story_Herold
+      Count: 1
+      Text: Besiege den Herold
+      Hint: 
+      Optional: 0
+      Label: Der Herold
+      Offset: {x: 0, y: 0, z: 8}
+      Scale: 4
+      Scene: 
+      Partner: 
+    SceneStart: K10_S02
+    SceneEnd: K10_S02E
+    Checkpoints:
+    - 0
+    - 1
+    Reward:
+      Experience: 6000
+      Karma: 500
+      Copper: 4000
+      HeroPoints: 2
+      MasteryPoints: 0
+      Item: 
+    SetFlags:
+    - herold_gefallen
+    Letter: 
+    Radius: 45
+    Companion: pact
+    Props:
+    - feuer@-8,0
+    - feuer@8,0
+    - rauch@-8,0
+  - Id: K10_S03
+    Title: Die Versiegelung
+    Description: Versiegle Vareth im Thronsaal.
+    Type: 0
+    Zone: tyrannenfeste
+    Position: {x: 0, y: 12, z: 250}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 9
+      Target: siegel
+      Count: 3
+      Text: "Entz\xFCnde die drei Siegel"
+      Hint: 
+      Optional: 0
+      Label: "Siegel entz\xFCnden"
+      Offset: {x: 0, y: 0, z: 6}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 18
+      Target: Enemy_Story_Vareth
+      Count: 1
+      Text: Brich Vareths Trotzleiste
+      Hint: defiance
+      Optional: 0
+      Label: Vareth, der Tyrann
+      Offset: {x: 0, y: 0, z: 12}
+      Scale: 5
+      Scene: 
+      Partner: 
+    - Kind: 28
+      Target: '*'
+      Count: 25
+      Text: "Halte die Siegel, bis sie sich schlie\xDFen"
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K10_S03
+    SceneEnd: K10_S03E
+    Checkpoints:
+    - 0
+    - 1
+    Reward:
+      Experience: 8000
+      Karma: 800
+      Copper: 6000
+      HeroPoints: 3
+      MasteryPoints: 2
+      Item: 
+    SetFlags:
+    - vareth_versiegelt
+    Letter: 
+    Radius: 45
+    Companion: pact
+    Props:
+    - feuer@-10,8
+    - feuer@10,8
+  - Id: K10_S04
+    Title: Erste Zeile
+    Description: In Silbermund wartet Mira an Brennars Grab.
+    Type: 2
+    Zone: silberkueste
+    Position: {x: 40, y: 3, z: 120}
+    Npc: mira
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: mira
+      Count: 1
+      Text: Sprich mit Mira an Brennars Grab
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K10_S04
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 3000
+      Karma: 1000
+      Copper: 10000
+      HeroPoints: 0
+      MasteryPoints: 3
+      Item: 
+    SetFlags:
+    - story_abgeschlossen
+    Letter: L_K10
+    Radius: 60
+    Companion: 
+    Props: []
+  JournalLines:
+  - K10_J
+  Mechanics:
+  - Reittier-Wechsel
+  - Gleiten
+  - Trotzleiste
+  - Meta-Finale
+  - "Gef\xE4hrte"

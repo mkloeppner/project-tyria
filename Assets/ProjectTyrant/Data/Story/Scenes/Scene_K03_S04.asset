@@ -47,6 +47,23 @@ MonoBehaviour:
       Lodestar: 0
       Flag: 
       NotFlag: 
-    ChoiceIndex: -1
-  Choices: []
+    ChoiceIndex: 0
+  Choices:
+  - Prompt: 
+    Options:
+    - Line: K03_S04_C1_A
+      Tendency: 2
+      Flag: k03_kinder_zuerst
+      Reply: K03_S04_R1
+      SetPact: 0
+    - Line: K03_S04_C1_B
+      Tendency: 1
+      Flag: k03_tovin_licht
+      Reply: K03_S04_R2
+      SetPact: 0
+    - Line: K03_S04_C1_C
+      Tendency: 3
+      Flag: k03_spur
+      Reply: K03_S04_R3
+      SetPact: 0
   Cutscene: {fileID: 0}

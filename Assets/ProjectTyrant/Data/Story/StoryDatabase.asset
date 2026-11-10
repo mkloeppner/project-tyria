@@ -17,34 +17,71 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0d881fafa37295648a0dd57ae30bca91, type: 2}
   - {fileID: 11400000, guid: 5d937b9b7cd88ca469db1a5092b224fe, type: 2}
   - {fileID: 11400000, guid: 9dadb9b5c6168574babf61998536c738, type: 2}
+  - {fileID: 11400000, guid: 1686450faa2b21044bf89ae2cc88dc4c, type: 2}
+  - {fileID: 11400000, guid: f11d6dc641b631949808304cdecfade8, type: 2}
+  - {fileID: 11400000, guid: bdda51c91da7cbf40b0881ecd9af46a6, type: 2}
+  - {fileID: 11400000, guid: b1ca2d39d91b3fd499e58746d7ec5eb0, type: 2}
+  - {fileID: 11400000, guid: 00ef5cbf3a0e07145a67a33b650809ab, type: 2}
+  - {fileID: 11400000, guid: c9eaa2efc02a99c468f81664e7205386, type: 2}
   Archetypes:
   - {fileID: 11400000, guid: 442c631b16529694989b215f32bbcdf4, type: 2}
   - {fileID: 11400000, guid: 2929640770496e949b9b15779fc8cb08, type: 2}
   - {fileID: 11400000, guid: d07fe6a959054e64ea28220c5c9c0421, type: 2}
   - {fileID: 11400000, guid: d8caca86c71eb5047a995e50faac9abd, type: 2}
+  - {fileID: 11400000, guid: c7d7ced85fdee6c43a62c4771b101138, type: 2}
   - {fileID: 11400000, guid: 2f85c813b987d144080ebabf4f79fcbf, type: 2}
   - {fileID: 11400000, guid: 733bcea6c1ed56d44b7ca3b77e231e5c, type: 2}
+  - {fileID: 11400000, guid: 5f10f2d45bb3b2b40a0f7d4a4e536cd7, type: 2}
+  - {fileID: 11400000, guid: 51702cc62cf82d644b08998a1110484f, type: 2}
   - {fileID: 11400000, guid: f26a9eecee67e2c4894fa8511013fd2d, type: 2}
+  - {fileID: 11400000, guid: a27298f3dc56c164b96e4881f26e4ea7, type: 2}
   - {fileID: 11400000, guid: 238ac16e8e51a024c9e86f60d7538fc4, type: 2}
+  - {fileID: 11400000, guid: 993bc483a307a764caae41037a7a16b8, type: 2}
+  - {fileID: 11400000, guid: 8e3d3ddf0ac4ad747b149a7ace6dbed7, type: 2}
+  - {fileID: 11400000, guid: cfd80fe2645bc67408686c9b1b9f54fa, type: 2}
+  - {fileID: 11400000, guid: cf6dd521248e07e4f9de3d0d3ba68a74, type: 2}
+  - {fileID: 11400000, guid: 4292e1fc3975f9740abb81d9e8337373, type: 2}
+  - {fileID: 11400000, guid: dc07fb847df6f7749a8246447c4d3e15, type: 2}
   - {fileID: 11400000, guid: 611b933018f0a93478c771de2d6475a3, type: 2}
   - {fileID: 11400000, guid: 8a53e0919d1af7543820e6076326996d, type: 2}
   - {fileID: 11400000, guid: 3f63996bde8b0e64eaabbdc9a7dbd8c7, type: 2}
   - {fileID: 11400000, guid: 116bc23a658f8cc43a83273424903c1e, type: 2}
   - {fileID: 11400000, guid: 3de62761c8a7b744b8ef2a569d7ede01, type: 2}
   - {fileID: 11400000, guid: 3a8a6cd2e3618c14fa9fb62050d1fb73, type: 2}
+  - {fileID: 11400000, guid: 0e94ce52dbec3de4f85c73ee871173d6, type: 2}
+  - {fileID: 11400000, guid: ef10d39205789fe4391949181e8a0c24, type: 2}
+  - {fileID: 11400000, guid: 09d5d11d808a7804b93a316e3bde04be, type: 2}
+  - {fileID: 11400000, guid: c0a0a85da307649439f8b22f4baa6336, type: 2}
+  - {fileID: 11400000, guid: a78e89321c185e145b5d05fc9b36c9d5, type: 2}
+  - {fileID: 11400000, guid: bf149173a99b0004d97f6b30787f408d, type: 2}
+  - {fileID: 11400000, guid: 55eb9e0fde1f0e84fadaa3a5b926d9ba, type: 2}
+  - {fileID: 11400000, guid: bba61d408c8e7c64a9b127b0428ea54a, type: 2}
   - {fileID: 11400000, guid: 97710e423d423cf4f87dca2aa17e4f3a, type: 2}
   - {fileID: 11400000, guid: d93cb94ace8b77f41a3826ea7dec05b4, type: 2}
   - {fileID: 11400000, guid: 197a40b5c0fb02d4793660d43ea42fc5, type: 2}
   - {fileID: 11400000, guid: 2f0b2a30a79533f4f9b512832f11f5b0, type: 2}
   - {fileID: 11400000, guid: 76d0e4bdfebc07f4ca1bc97d55bd4afe, type: 2}
+  - {fileID: 11400000, guid: b640e352130f64e4ebf3e0951ab9b308, type: 2}
+  - {fileID: 11400000, guid: 1e5df45efb826bd478c1c003bb4b4a38, type: 2}
+  - {fileID: 11400000, guid: 4c8930c92807e0b40a8d016e8dcfb6be, type: 2}
+  - {fileID: 11400000, guid: 22e84a0be734e5240ad971d36bc781cd, type: 2}
   - {fileID: 11400000, guid: 53babf5c9b2da9447a1d04456d071871, type: 2}
   - {fileID: 11400000, guid: 40c3a1cad1a3142469531571570555fe, type: 2}
+  - {fileID: 11400000, guid: 6000280943baa1f4f99b5d8938eeb0e5, type: 2}
+  - {fileID: 11400000, guid: 48d8c09256b95e84da918396fa22cb13, type: 2}
+  - {fileID: 11400000, guid: d2700a718f1b191428fdab53e90136c9, type: 2}
   - {fileID: 11400000, guid: b26d745b417083c498e0d6e03fa36a20, type: 2}
   Backdrops:
+  - {fileID: 2800000, guid: 548765157ce7fde40b6a17a3da77e3e8, type: 3}
+  - {fileID: 2800000, guid: 99828af98eddf344ab257133423e33fc, type: 3}
   - {fileID: 2800000, guid: 9eba7aec5ba1b434fb8101a4596f9776, type: 3}
   - {fileID: 2800000, guid: f0a732257d776c240b7ca986d31a732e, type: 3}
+  - {fileID: 2800000, guid: fd450a2e64ec5374abfbc95477ecad8c, type: 3}
+  - {fileID: 2800000, guid: 3f80f81f5dbe8b4428d9a720a717741a, type: 3}
   - {fileID: 2800000, guid: b74a39d7c8a9fe3438bd7584385d70f4, type: 3}
+  - {fileID: 2800000, guid: b4df378ecb5ea964cbb473080e85c116, type: 3}
   - {fileID: 2800000, guid: c73d0b20076ac4e47829b6d60d5f3a92, type: 3}
+  - {fileID: 2800000, guid: c8f83bb4a7ce71f49bc058cfd5e69ed0, type: 3}
   Figures:
   - {fileID: 2033970672359969352, guid: 90737087ee2b8ea409b47e8d012d6256, type: 3}
   - {fileID: 9052422131702399332, guid: bd1fccd8e572d524f82c7181ea635559, type: 3}
@@ -61,6 +98,10 @@ MonoBehaviour:
   - {fileID: 5632692102182874313, guid: 05b96aeebae5b49439636da290e49e5b, type: 3}
   - {fileID: 3981557506170887335, guid: ab1afed6f7f66ce4aa9a37d0fe343da1, type: 3}
   - {fileID: 3604503453014588395, guid: a56f8093814a5f6469ec62a15c58031d, type: 3}
+  - {fileID: 4733968161925234284, guid: bc623de3b4bd0da499fc2f29523d2ae8, type: 3}
+  - {fileID: 2984723589936953020, guid: 33ca073faab1f944eac38d4bc383a36c, type: 3}
+  - {fileID: 318156281915755846, guid: 76a0880d472bce64ab69e4e29d0a36f8, type: 3}
+  - {fileID: 5166234009555465400, guid: 08fc8d0c7522e1c429a58d446946030e, type: 3}
   - {fileID: 5108098673515560635, guid: d76c4cf9739c3974592cf6382c196a28, type: 3}
   - {fileID: 8058675834493990886, guid: b4762b0dc91a5f04aa6907d70d800ab6, type: 3}
   Text: {fileID: 11400000, guid: ba1ba0a2cac61e347a34744d1b611919, type: 2}
@@ -88,6 +129,45 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ff8e5a06a9bbf7a429c96a306e26d8e3, type: 2}
   - {fileID: 11400000, guid: 9ecb5c11d4f1a64428573bbe46e2ba03, type: 2}
   - {fileID: 11400000, guid: 27d986efb60d08548b1ebb363829d791, type: 2}
+  - {fileID: 11400000, guid: aacc04fb62b118f458d2a2b8ddb1aaec, type: 2}
+  - {fileID: 11400000, guid: b75fa7878b211f142ac026f681850f69, type: 2}
+  - {fileID: 11400000, guid: 177cf37c1ae9a9f468866ec855cdd7c1, type: 2}
+  - {fileID: 11400000, guid: e657da72d9b6bae44a93f994032f6d4a, type: 2}
+  - {fileID: 11400000, guid: 8c4d5ab80f05dbf41bc97221c63c6a80, type: 2}
+  - {fileID: 11400000, guid: 1b88416d1bf764f4abe2a5d6b716a776, type: 2}
+  - {fileID: 11400000, guid: dd6f9957411154e4091f70ff4d1abab1, type: 2}
+  - {fileID: 11400000, guid: 6407d9945586cbd45a47c41c2d5f40e0, type: 2}
+  - {fileID: 11400000, guid: 252757fe768b84e41b3683de83f88942, type: 2}
+  - {fileID: 11400000, guid: f5e6920b8292115418745f0beac92ddc, type: 2}
+  - {fileID: 11400000, guid: c0acf709fc658264689dbcac384e08f8, type: 2}
+  - {fileID: 11400000, guid: 0f498f18d99b6b34587e5f38326725d8, type: 2}
+  - {fileID: 11400000, guid: b2618ccc41120904ab818d6b4915e3bc, type: 2}
+  - {fileID: 11400000, guid: d5f0541f569d7544ca9645be11d55d13, type: 2}
+  - {fileID: 11400000, guid: 1fe2997e11f3132489d493f4e4bdaab7, type: 2}
+  - {fileID: 11400000, guid: 25fa689e843c6e44fbdcc18eb42920ab, type: 2}
+  - {fileID: 11400000, guid: 6519e59aa1b9a6b43a9824c5a9ac82c6, type: 2}
+  - {fileID: 11400000, guid: 2d51dd173038a0c408a4cc16f21c1d88, type: 2}
+  - {fileID: 11400000, guid: 40007306f705805459d18908a17234f0, type: 2}
+  - {fileID: 11400000, guid: 94f11433c223a33489d98c054bd5063f, type: 2}
+  - {fileID: 11400000, guid: 4863f157a090e0a45a75aebe39a04517, type: 2}
+  - {fileID: 11400000, guid: ef5e01fa4b8fd994d9a532397bd7eab9, type: 2}
+  - {fileID: 11400000, guid: 8c7c86c4d537530448acb6966d4a65cf, type: 2}
+  - {fileID: 11400000, guid: 2e650821538ac244b8f7595f90e570b3, type: 2}
+  - {fileID: 11400000, guid: 3dcd3ecccae565f4897f213c4fa099d3, type: 2}
+  - {fileID: 11400000, guid: faa9d79051f773242ae2bd53bd908a71, type: 2}
+  - {fileID: 11400000, guid: ff56e1720c5784e4792c557cb7549529, type: 2}
+  - {fileID: 11400000, guid: 64e0757dea4aa19429fc63cb29c7a485, type: 2}
+  - {fileID: 11400000, guid: 4a1fa5b0ac8eca84392807068a2c797d, type: 2}
+  - {fileID: 11400000, guid: ea7c6b5e3004e5043bfe7026f0a53715, type: 2}
+  - {fileID: 11400000, guid: d81d7dc1e67db8c418c318cf4714c809, type: 2}
+  - {fileID: 11400000, guid: 9406bf93d1c11c7469341ca39d1fe33b, type: 2}
+  - {fileID: 11400000, guid: 3b72bde2f10a14a4a8aaf2e040addb6b, type: 2}
+  - {fileID: 11400000, guid: bc0a68d38fb98f14a8f42d4c0bf41f8a, type: 2}
+  - {fileID: 11400000, guid: 9a39bb2223c19fd44b004b731ddb3dc8, type: 2}
+  - {fileID: 11400000, guid: 43f0efc9f4b16244abda960ad59faf3e, type: 2}
+  - {fileID: 11400000, guid: 77db367f57878a94a9222023531a13ee, type: 2}
+  - {fileID: 11400000, guid: 786644229bbe5914a886c33be5157cb7, type: 2}
+  - {fileID: 11400000, guid: 572c22b93a8044241b84119dda07fee1, type: 2}
   - {fileID: 11400000, guid: a0675241debf0e54d800068c1c1c25a2, type: 2}
   - {fileID: 11400000, guid: 8a0398a7efd5ae04496dcebe18cc9e07, type: 2}
   - {fileID: 11400000, guid: a43ae90a4b071f4499ce520ae163697a, type: 2}
@@ -119,6 +199,57 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 035b2db24c3f729488a3f32e7e9560ad, type: 2}
   - {fileID: 11400000, guid: e54f85f911b7c13419c6f2aad65668cf, type: 2}
   - {fileID: 11400000, guid: 6257699bf5e09c44eac5584bbc487a1e, type: 2}
+  - {fileID: 11400000, guid: dbadc0fd22c287b4a8b9c78d5e4b83a3, type: 2}
+  - {fileID: 11400000, guid: e924e7021a94536439aa1b456845705d, type: 2}
+  - {fileID: 11400000, guid: 27eb7b935cf078c4d8b2ab244c26d296, type: 2}
+  - {fileID: 11400000, guid: 6e641bfaff4cf1648b33cb173a11d7d7, type: 2}
+  - {fileID: 11400000, guid: bfed1627c6e9d3c4eb0c97305150dc13, type: 2}
+  - {fileID: 11400000, guid: f81e91942643bd249aa03bece3047893, type: 2}
+  - {fileID: 11400000, guid: 392011069a04c324095c2ca687a0addc, type: 2}
+  - {fileID: 11400000, guid: 5acceedb08d7160409cb950202452abb, type: 2}
+  - {fileID: 11400000, guid: e4395acbafb700445b93786bec394f08, type: 2}
+  - {fileID: 11400000, guid: b73cb430f45b35645b1267810e5db500, type: 2}
+  - {fileID: 11400000, guid: 18425bb2e03632f44a38d416df3e48ef, type: 2}
+  - {fileID: 11400000, guid: 33c6fc1e1a189d346ba4244695d7f85e, type: 2}
+  - {fileID: 11400000, guid: db15de5b1dc4abe41836b3fdcd29f634, type: 2}
+  - {fileID: 11400000, guid: 22939c8385e3bad42b57ccb0b8715df5, type: 2}
+  - {fileID: 11400000, guid: c9ab957e96a81494e91b5bce5e16d59b, type: 2}
+  - {fileID: 11400000, guid: a723f6889c5a86d438b5b1d8a0edaa40, type: 2}
+  - {fileID: 11400000, guid: d407e7bf4afcbf846be1e141538c47b9, type: 2}
+  - {fileID: 11400000, guid: dd147e122d2b33a4fbea86e1c4c9fd6f, type: 2}
+  - {fileID: 11400000, guid: 07153122e2761954b8e2a43981d5caeb, type: 2}
+  - {fileID: 11400000, guid: 52e1393d3e252d54fba6119143adb095, type: 2}
+  - {fileID: 11400000, guid: 6bb53120621f0e74b9b3b1139453a4a2, type: 2}
+  - {fileID: 11400000, guid: f374436ba79eac041b9c5fc238aa6b93, type: 2}
+  - {fileID: 11400000, guid: 9b8439486ea8ca44e843b821c6df3dd1, type: 2}
+  - {fileID: 11400000, guid: 8e4d893189ea809469317a07f81e69ba, type: 2}
+  - {fileID: 11400000, guid: d5600d1734055bb4ab283de97f4b893f, type: 2}
+  - {fileID: 11400000, guid: 7e7b1bd72475ecb48a2f058970f9eb92, type: 2}
+  - {fileID: 11400000, guid: 2f0d242874af8aa43a6121dbc45662a4, type: 2}
+  - {fileID: 11400000, guid: 29e32c3b9d3341143b552e388f74027c, type: 2}
+  - {fileID: 11400000, guid: 00e031b677ad364469929b034cdff2ce, type: 2}
+  - {fileID: 11400000, guid: c0d113f1de1616247ad55ccc93edfe8e, type: 2}
+  - {fileID: 11400000, guid: e5db2393450b76d47aeaf691b53872d2, type: 2}
+  - {fileID: 11400000, guid: 15e5ab1974dfb484cab8541767c85ce3, type: 2}
+  - {fileID: 11400000, guid: 7ca6275404d7c7c479b082fb3849a749, type: 2}
+  - {fileID: 11400000, guid: cc04f0227177c7b4b906c14eca91ec0f, type: 2}
+  - {fileID: 11400000, guid: 32483e3004e5ee4409a7997ceb956874, type: 2}
+  - {fileID: 11400000, guid: 51474bda642e8394f9377255bae5e404, type: 2}
+  - {fileID: 11400000, guid: bdb59ae3d83900c4d8cfc4ddbd93d85d, type: 2}
+  - {fileID: 11400000, guid: ca243cf610143e94ebdf4f70eacc8979, type: 2}
+  - {fileID: 11400000, guid: a8571d969d73a4b459d633793ec01859, type: 2}
+  - {fileID: 11400000, guid: 955c3ef7ab0295a43ba7d2029ab28505, type: 2}
+  - {fileID: 11400000, guid: 95f66f49301b1c24c97657e537e0c3cc, type: 2}
+  - {fileID: 11400000, guid: 7eb209d74a0342142bd9e77c30c2b696, type: 2}
+  - {fileID: 11400000, guid: 64f734c09c5a6444d88d93dfa5154626, type: 2}
+  - {fileID: 11400000, guid: 146138b43a432a34b94b5e47be69ef51, type: 2}
+  - {fileID: 11400000, guid: 972ece2552dc46f47a9d626bfc6634b0, type: 2}
+  - {fileID: 11400000, guid: 8b1e49fb8fddf994480f9f2a18601ddf, type: 2}
+  - {fileID: 11400000, guid: a015d0c13aa6ff14d94ba8ee30857a31, type: 2}
+  - {fileID: 11400000, guid: a12a7063cd221674598079adf3e79b22, type: 2}
+  - {fileID: 11400000, guid: ce2d00bf42ce73b45963d45e1f12f5ba, type: 2}
+  - {fileID: 11400000, guid: bfd5c47303fd41345942269ea9990973, type: 2}
+  - {fileID: 11400000, guid: 5f97aa27904651c4e8c4aba56f6a693e, type: 2}
   Letters:
   - Id: L_K01
     From: mira
@@ -257,6 +388,216 @@ MonoBehaviour:
     From: Feuerwache Brann
     Subject: Das Schlackenfeld
     Body: "Das Schlackenfeld klickt nicht mehr. Die Br\xE4nde sind aus. Ich schlafe heute zum ersten Mal seit Wochen.\n\u2013 Brann"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: L_K05
+    From: mira
+    Subject: Silbermund
+    Body: "Ich bin vorgereist. Silbermund ist laut, teuer und voller M\xF6wen. Das Zimmer hat ein Fenster zum Hafen.\nDein B\xFCndnis wartet im Viertel am Rathaus. Ich habe ihnen gesagt, du kommst p\xFCnktlich. L\xFCg mich nicht an.\n\u2013 Mira"
+    Karma: 100
+    Copper: 600
+    Item: 
+  - Id: L_K06
+    From: gorran
+    Subject: Protokoll
+    Body: "Der Rat hat beschlossen: Der D\xE4mmerwald zuerst. Das Buffet war ausgezeichnet.\n\xC4ltester Fenn erwartet dich an der Lichtung im S\xFCdwesten des Waldes.\n\u2013 Gorran, Hafenmeister"
+    Karma: 100
+    Copper: 600
+    Item: 
+  - Id: L_K07
+    From: fenn
+    Subject: Danke
+    Body: "Die Lichtung ist leer, aber die Menschen leben. Wir wohnen jetzt am Waldrand, mit Laternen an jedem Zaun.\nKarawanen aus dem D\xFCnenmeer suchen dich. Frag nach Nadira an der Oase.\n\u2013 Fenn"
+    Karma: 100
+    Copper: 600
+    Item: 
+  - Id: L_K08
+    From: nadira
+    Subject: Sand im Brief
+    Body: "Entschuldige den Sand. Er ist \xFCberall, auch in der Tinte.\nDie Kristalltiefe liegt unter den H\xFCgeln \xF6stlich von Silbermund. Nimm Laternen mit. Viele.\n\u2013 Nadira"
+    Karma: 100
+    Copper: 600
+    Item: 
+  - Id: L_K09
+    From: sela
+    Subject: Der Wind
+    Body: "Die Greifin frisst aus deiner Hand und aus meiner Speisekammer. Das ist ein gutes Zeichen.\nDie Feste hat sich ge\xF6ffnet. Die B\xFCndnisse sammeln sich vor den Toren.\n\u2013 Sela"
+    Karma: 150
+    Copper: 800
+    Item: 
+  - Id: L_K10
+    From: mira
+    Subject: Neue Liste
+    Body: "Erste Zeile: Fr\xFChst\xFCck. Zweite Zeile: Brennar besuchen. Dritte Zeile: alles andere.\nDanke, dass du zur\xFCckgekommen bist. Das stand auf jeder Liste ganz oben.\n\u2013 Mira"
+    Karma: 300
+    Copper: 2000
+    Item: 
+  - Id: Dank_heart_kueste_hafen
+    From: Hafenmeister Gorran
+    Subject: Fracht verladen
+    Body: "Die Schiffe sind beladen, die Netze heil, und meine Leute stehen wieder. Ich habe dich ins Hafenbuch eingetragen. Unter \u201En\xFCtzlich\u201C.\n\u2013 Gorran"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_kueste_markt
+    From: Marktfrau Ysolde
+    Subject: "Der K\xE4se lebt"
+    Body: "Die Ratten sind fort, der Stand steht, und der K\xE4se ist gerettet. Komm vorbei, ich schneide dir ein St\xFCck ab.\n\u2013 Ysolde"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_kueste_leuchtturm
+    From: "W\xE4rter Bastian"
+    Subject: Licht
+    Body: "Der Leuchtturm brennt wieder. Gestern kamen drei Schiffe heil in den Hafen. Die Linsen lassen gr\xFC\xDFen.\n\u2013 Bastian"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_kueste_fischer
+    From: Fischerin Wenda
+    Subject: Das Rennen
+    Body: "Die Reiher fliegen, das Treibgut ist weg, und die Kinder reden nur noch von deinem Jubel. Mein Sohn hat gewonnen. Fast.\n\u2013 Wenda"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_wald_fenn
+    From: "\xC4ltester Fenn"
+    Subject: Licht im Wald
+    Body: "Die Laternen brennen, die Verletzten heilen. Der Wald ist noch dunkel, aber nicht mehr so dunkel.\n\u2013 Fenn"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_wald_hira
+    From: "J\xE4gerin Hira"
+    Subject: Hochsitze
+    Body: "Die Hochsitze stehen, die Pfeile fliegen, die Keiler sind wieder braun. Gr\xF6\xDFtenteils.\n\u2013 Hira"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_wald_oda
+    From: "Kr\xE4uterfrau Oda"
+    Subject: "Kr\xE4uter"
+    Body: "Die Waldl\xE4ufer sind wieder auf den Beinen. Hier ein S\xE4ckchen Kr\xE4uter. Nicht essen. Auflegen.\n\u2013 Oda"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_wald_laternen
+    From: "Laternentr\xE4ger Ivo"
+    Subject: Laternen
+    Body: "Alle Fallen weg, alle Laternen gesetzt. Ich trage jetzt nur noch eine. Meine eigene.\n\u2013 Ivo"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_duene_nadira
+    From: "Karawanenf\xFChrerin Nadira"
+    Subject: Die Karawane
+    Body: "Die Karawane ist vollz\xE4hlig, die Zelte stehen. Du hast einen festen Platz an unserem Feuer.\n\u2013 Nadira"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_duene_qasir
+    From: "Arch\xE4ologin Imra"
+    Subject: Scherben
+    Body: "Die S\xE4ulen stehen, die Scherben sind verzeichnet. Eine davon zeigt einen Helden. Er sieht dir \xE4hnlich.\n\u2013 Imra"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_duene_glas
+    From: "Glasbl\xE4ser Faris"
+    Subject: Blitzglas
+    Body: "Ich habe dir aus dem Blitzglas eine kleine Kugel geblasen. Sie leuchtet, wenn es gewittert.\n\u2013 Faris"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_duene_oase
+    From: "Brunnenh\xFCter Samir"
+    Subject: Die Oase
+    Body: "Die Tiere trinken, die Glut ist aus, die Fallen sind fort. Die Oase atmet wieder.\n\u2013 Samir"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_tiefe_brom
+    From: Bergmann Brom
+    Subject: Die Kumpel
+    Body: "Beide Kumpel sind frei, die Stollen halten. Wir haben auf dich angesto\xDFen. Mit Wasser. Hier unten ist Bier knapp.\n\u2013 Brom"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_tiefe_lys
+    From: Forscherin Lys
+    Subject: Messungen
+    Body: "Meine Messungen sind komplett. Ergebnis: Die Tiefe ist tief. Und du bist hilfsbereit.\n\u2013 Lys"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_tiefe_fischer
+    From: "H\xF6hlenfischer Tamo"
+    Subject: Augenlose Fische
+    Body: "Die Reusen sind geborgen, die Fischer verbunden. Ich habe dir einen Fisch aufgehoben. Er schaut dich nicht an.\n\u2013 Tamo"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_tiefe_laternen
+    From: Lampenmeisterin Nell
+    Subject: Licht in den Stollen
+    Body: "Jeder Stollen hat jetzt Licht. Die Sprengfallen sind entsch\xE4rft. Ich schlafe heute ruhig.\n\u2013 Nell"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_himmel_sela
+    From: "Himmelsw\xE4chterin Sela"
+    Subject: Die Glocken
+    Body: "Die Windglocken klingen, die W\xE4chter fliegen wieder. Der Himmel ist dir dankbar. Ich auch.\n\u2013 Sela"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_himmel_nest
+    From: Greifenpflegerin Aya
+    Subject: Die Nester
+    Body: "Die Nester sind gemacht. Die Greifen sind zufrieden. Ich bin zufrieden. Selten genug.\n\u2013 Aya"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_himmel_bucht
+    From: "Kapit\xE4nin Rhea"
+    Subject: Neue Segel
+    Body: "Meine Segel sind geflickt, meine Matrosen auch. Wenn du je mitfliegen willst, ist ein Platz frei.\n\u2013 Rhea"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_himmel_kinder
+    From: "Nestw\xE4chterin Pia"
+    Subject: "Die K\xFCken"
+    Body: "Die K\xFCken sind satt und der Wind kann kommen. Die W\xE4chter haben zur\xFCckgewinkt! Einmal.\n\u2013 Pia"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_feste_lager
+    From: Feldscherin Marit
+    Subject: Das Lager
+    Body: "Das Lager ist versorgt, die Verwundeten liegen warm. Danke. Komm heil zur\xFCck, ich habe genug zu tun.\n\u2013 Marit"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_feste_tore
+    From: Rammmeister Ulf
+    Subject: "Rammb\xF6cke"
+    Body: "Die Rammb\xF6cke stehen bereit. Das n\xE4chste Tor f\xE4llt schneller. Versprochen.\n\u2013 Ulf"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_feste_kammern
+    From: Siegelkundiger Edric
+    Subject: Splitter
+    Body: "Die Splitter sind in sicheren H\xE4nden. Meinen. Das ist das Sicherste, was ich anbieten kann.\n\u2013 Edric"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_feste_bresche
+    From: Pionierin Kaja
+    Subject: Die Bresche
+    Body: "Die Bresche h\xE4lt. Die Fallen sind weg, die Br\xE4nde aus. Ich schulde dir einen Sturmhelm.\n\u2013 Kaja"
     Karma: 60
     Copper: 300
     Item: 

@@ -126,6 +126,7 @@ namespace ProjectTyrant.EditorTools
 
             foreach (var a in new[] { lurk, spit, koloss, wolf, huter, werfer, crawl, caller, golem, cKoloss, cWolf, cBrut, wb, meta }) EditorUtility.SetDirty(a);
             BuildCritters();
+            BuildBalanceCreatures(trashLoot);   // Balance B1: neutrale Tiere der Startzone
             BuildLauf6(trashLoot, vetLoot, champBag);   // Lauf 6: Gegner der sechs neuen Zonen, Story-Gegner
             AssetDatabase.SaveAssets();
         }

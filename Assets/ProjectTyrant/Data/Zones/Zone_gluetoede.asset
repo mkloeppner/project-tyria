@@ -24,26 +24,26 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: gluetoede_frostkamm
-    Position: {x: -510, y: 0, z: -30}
+    Position: {x: -510, y: 3.5233886, z: -30}
     Yaw: 86.63354
     TargetZone: frostkamm
     TargetPortal: frostkamm_gluetoede
   - Id: gluetoede_duenenmeer
-    Position: {x: 520, y: 0, z: 60}
+    Position: {x: 520, y: 2.1251788, z: 60}
     Yaw: -96.58194
     TargetZone: duenenmeer
     TargetPortal: duenenmeer_gluetoede
   - Id: gluetoede_tyrannenfeste
-    Position: {x: 80, y: 0, z: 520}
+    Position: {x: 80, y: 3.5137358, z: 520}
     Yaw: -171.25385
     TargetZone: tyrannenfeste
     TargetPortal: tyrannenfeste_gluetoede
   - Id: gluetoede_silbermund
-    Position: {x: -456, y: 0, z: 10}
+    Position: {x: -456, y: 1.6, z: 10}
     Yaw: 91.25629
     TargetZone: silberkueste
     TargetPortal: plaza_gluetoede
-  DefaultSpawn: {x: -470, y: 0, z: 0}
+  DefaultSpawn: {x: -470, y: 1.6, z: 0}
   ContinentRect:
     serializedVersion: 2
     x: 0.66
@@ -51,7 +51,34 @@ MonoBehaviour:
     width: 0.3
     height: 0.34
   ContinentColor: {r: 0.5411765, g: 0.3529412, b: 0.27450982, a: 1}
-  Waypoints: []
+  Waypoints:
+  - Id: wp_glut_ankunft
+    Name: Wegmarke Aschentor
+    Position: {x: -436, y: 1.6, z: 30}
+  - Id: wp_glut_feld
+    Name: Wegmarke Schlackenfeld
+    Position: {x: -200, y: 3.5, z: -200}
+  - Id: wp_glut_schmiede
+    Name: Wegmarke Glutschmiede
+    Position: {x: 0, y: 10.462033, z: 60}
+  - Id: wp_glut_krater
+    Name: Wegmarke Kraterrand
+    Position: {x: 250, y: 7, z: -150}
+  - Id: wp_glut_sturm
+    Name: Wegmarke Sturmauge
+    Position: {x: 220, y: 3.4944887, z: 260}
+  - Id: wp_gluetoede_ankunft
+    Name: "Ankunfts-Wegmarke Glut\xF6de"
+    Position: {x: -462, y: 1.6, z: 0}
+  - Id: wp_gluetoede_ankunft_frostkamm
+    Name: Portal-Wegmarke Frostkamm
+    Position: {x: -496.01035, y: 3.6321397, z: -29.647667}
+  - Id: wp_gluetoede_ankunft_duenenmeer
+    Name: "Portal-Wegmarke D\xFCnenmeer"
+    Position: {x: 520.9678, y: 2.1251788, z: 63.312256}
+  - Id: wp_gluetoede_ankunft_tyrannenfeste
+    Name: Portal-Wegmarke Tyrannenfeste
+    Position: {x: 87.087654, y: 3.5127454, z: 514.06976}
   Arrivals:
   - Entrance: spawn
     Position: {x: -470, y: 1.6, z: 0}
@@ -59,6 +86,15 @@ MonoBehaviour:
   - Entrance: portal:gluetoede_frostkamm
     Position: {x: -504.01035, y: 3.5233886, z: -29.647667}
     WaypointId: wp_gluetoede_ankunft_frostkamm
+  - Entrance: portal:gluetoede_duenenmeer
+    Position: {x: 514.03955, y: 2.1251788, z: 59.312256}
+    WaypointId: wp_gluetoede_ankunft_duenenmeer
+  - Entrance: portal:gluetoede_tyrannenfeste
+    Position: {x: 79.087654, y: 3.5137358, z: 514.06976}
+    WaypointId: wp_gluetoede_ankunft_tyrannenfeste
+  - Entrance: portal:gluetoede_silbermund
+    Position: {x: -450.00143, y: 1.6, z: 9.868452}
+    WaypointId: wp_gluetoede_ankunft
   Tips:
   - "Lavarisse brennen \u2013 erst die Umwelt-Beherrschung macht sie passierbar."
   - "Das Meta-Ereignis \u201ESturm \xFCber der Glut\xF6de\u201C verl\xE4uft in vier Phasen."

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_himmel_wyrm
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: himmel_wyrm
+  Title: Der Himmelswyrm
+  Description: "Ein Wyrm aus Sturm und Wolke greift den Tempel an \u2013 brich seine Trotzleiste."
+  ChainId: wyrm
+  Objective: 9
+  Center: {x: 40, y: 36, z: 280}
+  Radius: 45
+  Duration: 480
+  TargetCount: 1
+  Triggers:
+  - Type: 6
+    Delay: 360
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 1200
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 60
+  GoldContribution: 4693.5483
+  Experience: 4695
+  Karma: 1407
+  Coins: 1000
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: himmelsspitzen_himmel_wyrm
+  Path: []
+  DeliverPoint: {x: 40, y: 36, z: 280}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: ef10d39205789fe4391949181e8a0c24, type: 2}
+  Veteran: {fileID: 11400000, guid: 09d5d11d808a7804b93a316e3bde04be, type: 2}
+  Boss: {fileID: 11400000, guid: 5f10f2d45bb3b2b40a0f7d4a4e536cd7, type: 2}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds:
+  - 0.66
+  - 0.33
+  MasteryPoints: 1
+  MetaId: 
+  MetaPhase: 0

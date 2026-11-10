@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631f4299acbe61548b68a43d14115eb0, type: 3}
+  m_Name: Zone_wp_himmelsspitzen_ankunft_frostkamm
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneObjectDefinition
+  Id: wp_himmelsspitzen_ankunft_frostkamm
+  Kind: 0
+  DisplayName: Portal-Wegmarke Frostkamm
+  Description: "Ankunfts-Wegmarke: wird beim Betreten \xFCber diesen Eingang automatisch freigeschaltet."
+  Position: {x: 37.609528, y: 32.998177, z: -454.01273}
+  Radius: 10
+  Experience: 160
+  Karma: 0
+  Copper: 0
+  HeroPoints: 0
+  Requires: 0
+  HeartTask: 
+  KillValue: 0
+  TaskValue: 0

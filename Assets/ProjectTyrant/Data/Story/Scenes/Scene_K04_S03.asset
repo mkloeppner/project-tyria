@@ -103,6 +103,18 @@ MonoBehaviour:
       Lodestar: 0
       Flag: 
       NotFlag: 
-    ChoiceIndex: -1
-  Choices: []
+    ChoiceIndex: 0
+  Choices:
+  - Prompt: 
+    Options:
+    - Line: K04_S03_C2_A
+      Tendency: 2
+      Flag: 
+      Reply: K04_S03_R1
+      SetPact: 0
+    - Line: K04_S03_C2_B
+      Tendency: 3
+      Flag: 
+      Reply: K04_S03_R2
+      SetPact: 0
   Cutscene: {fileID: 11400000, guid: 05669bd0dedcf2c4dae82875ead1a1cd, type: 2}

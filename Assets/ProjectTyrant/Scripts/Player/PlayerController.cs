@@ -35,7 +35,7 @@ namespace ProjectTyrant
 
         void Awake()
         {
-            QaMove = null; QaRmb = false;
+            QaMove = null; QaRmb = false; QaWishWorld = null;
             _cc = GetComponent<CharacterController>();
             Combatant = GetComponent<Combatant>();
             Dodge.Endurance.Fill();
@@ -69,6 +69,7 @@ namespace ProjectTyrant
             bool rmb = (input != null && input.RotateHeld) || QaRmb;
             var mv = MovementModel.Compute(mode, rmb, rig != null && rig.ActionCam, MountedControl, m, strafe, transform.eulerAngles.y, camF, dt);
             Vector3 wish = mv.Wish;
+            if (QaWishWorld.HasValue && !dead && !stunned) { wish = QaWishWorld.Value; wish.y = 0f; if (wish.sqrMagnitude > 1f) wish.Normalize(); }   // Balance B1: Bot-Steuerung in Weltrichtung
             TurnInput = mv.Turning ? m.x : 0f;
             if (mv.Turning && Mathf.Abs(m.x) > 0.1f) LearnHints.Show("ad_drehen", "A/D drehen den Charakter, Q/E gehen seitwärts; mit gehaltener rechter Maustaste werden A/D zu Seitwärts (Optionen › Steuerung).");
             if (mv.Turning && Mathf.Abs(mv.YawDelta) > 0f && !dead && !Dodge.IsDodging && !facingOverride.HasValue) { transform.rotation = Quaternion.Euler(0f, transform.eulerAngles.y + mv.YawDelta, 0f); QaYawAccum += mv.YawDelta; }
@@ -122,7 +123,7 @@ namespace ProjectTyrant
             if (facingOverride.HasValue) face = facingOverride.Value - transform.position;
             else if (Dodge.IsDodging) face = Vector3.zero;   // Lauf 6: Ausweichen dreht die Figur nicht – sie springt rückwärts/seitwärts und schaut weiter in Kamerarichtung
             else if (faceCamera) face = camF;
-            else if (mv.FaceWish && wish.sqrMagnitude > 0.01f) face = wish;
+            else if ((mv.FaceWish || QaWishWorld.HasValue) && wish.sqrMagnitude > 0.01f) face = wish;
             face.y = 0f;
             if (face.sqrMagnitude > 0.001f && !dead)
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(face), TurnSpeed * dt);
@@ -157,6 +158,8 @@ namespace ProjectTyrant
         public float TurnInput { get; private set; }
         /// <summary>QA (Fix-Lauf F1): Eingabe-Ersatz für Debug-Läufe ohne Fenster-Fokus; null = echte Eingabe.</summary>
         public static Vector2? QaMove; public static bool QaRmb; public float QaYawAccum;
+        /// <summary>Balance B1: Bot-Bewegung als Weltrichtung (null = echte Eingabe, Vector3.zero = stehen).</summary>
+        public static Vector3? QaWishWorld;
         float _voidRescueAt;
 
         void AnimateVisual(float dt, bool downed, bool dead)

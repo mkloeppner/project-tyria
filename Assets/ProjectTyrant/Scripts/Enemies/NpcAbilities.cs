@@ -57,7 +57,7 @@ namespace ProjectTyrant
             _hidden = on;
             _brain.Suspended = on;
             _self.Targetable = !on;
-            if (_brain.Visual != null) _brain.Visual.gameObject.SetActive(!on);
+            ActorVisibility.SetRenderersVisible(_brain.Visual, !on);   // kein SetActive auf geriggten Figuren (Absturz, siehe ActorVisibility)
         }
 
         void OnState(NpcState s)
@@ -124,7 +124,7 @@ namespace ProjectTyrant
         {
             Hide(false);
             _brain.ForceAggro(player);
-            player.Effects.Apply(new EffectApplication(EffectType.Immobilize, 1, 1.5f), _self);
+            if (_brain.ControlAllowed(EffectType.Immobilize)) player.Effects.Apply(new EffectApplication(EffectType.Immobilize, 1, 1.5f), _self);   // Balance B1: Fessel-Regeln
             SkillExecutor.VfxPulse(transform.position, 2.5f, new Color(0.35f, 0.5f, 0.25f));
             GameEventBus.Notify(_self.DisplayName + " bricht aus dem Moor hervor!", new Color(0.7f, 0.9f, 0.5f));
         }
@@ -132,14 +132,14 @@ namespace ProjectTyrant
         void OnAttackStarted(Combatant target)
         {
             if (A == null || target == null) return;
-            if (A.Behavior == NpcBehavior.Ranged) Bolt.Fire(_self.AimPoint, target, NpcBrain.EffectiveWindup(A), A.ProjectileColor);
+            if (A.Behavior == NpcBehavior.Ranged) Bolt.Fire(_self.AimPoint, target, _brain.Windup, A.ProjectileColor);
         }
 
         void Pull(Combatant t)
         {
             var pc = t.GetComponent<PlayerController>();
             Vector3 to = transform.position - t.transform.position; to.y = 0f;
-            if (to.magnitude < 3f) { Slam(); return; }
+            if (to.magnitude < 3f || !_brain.ControlAllowed(Balance.ControlKinds.Pull)) { Slam(); return; }   // Balance B1: Heranziehen erst ab Stufe 4
             if (pc != null) pc.AddImpulse(to.normalized * Mathf.Min(22f, to.magnitude * 3.2f), 4f);
             Bolt.Fire(_self.AimPoint, t, 0.25f, A.ProjectileColor);
             GameEventBus.Notify(_self.DisplayName + " zieht dich heran!", new Color(1f, 0.6f, 0.4f));
@@ -149,21 +149,22 @@ namespace ProjectTyrant
         void Slam()
         {
             if (_self.IsDead) return;
-            var tg = GroundTelegraph.Spawn(_self, transform.position, A.BehaviorRadius, 1.2f, 0f, A.BehaviorCoefficient);
+            var tg = GroundTelegraph.Spawn(_self, transform.position, A.BehaviorRadius, Mathf.Max(1.2f, _brain.Danger.MinTelegraph), 0f, A.BehaviorCoefficient * _brain.DamageScale);
             tg.PulseColor = A.ProjectileColor;
         }
 
         void Lob(Combatant t)
         {
-            var tg = GroundTelegraph.Spawn(_self, t.transform.position, A.BehaviorRadius, 1.4f, 0f, A.BehaviorCoefficient);
+            var tg = GroundTelegraph.Spawn(_self, t.transform.position, A.BehaviorRadius, Mathf.Max(1.4f, _brain.Danger.MinTelegraph), 0f, A.BehaviorCoefficient * _brain.DamageScale);
             tg.PulseColor = A.ProjectileColor;
             var origin = transform.position;
             var eff = A.BehaviorEffect;
+            bool knock = _brain.DangerLevel >= 3;
             tg.OnHit = v =>
             {
-                if (eff.Stacks > 0) v.Effects.Apply(eff, _self);
+                if (eff.Stacks > 0 && _brain.ControlAllowed(eff.Type)) v.Effects.Apply(eff, _self);
                 var pc = v.GetComponent<PlayerController>();
-                if (pc != null) { var d = v.transform.position - origin; d.y = 0f; pc.AddImpulse(d.normalized * 14f, 5f); }
+                if (pc != null && knock) { var d = v.transform.position - origin; d.y = 0f; pc.AddImpulse(d.normalized * 14f, 5f); }
             };
             Bolt.Fire(_self.AimPoint, null, 1.3f, A.ProjectileColor, t.transform.position);
         }
@@ -178,7 +179,7 @@ namespace ProjectTyrant
                 c.Effects.Apply(new EffectApplication(EffectType.Might, 3, 10f), _self);
                 c.Effects.Apply(new EffectApplication(EffectType.Swiftness, 1, 5f), _self);
                 var b = c.GetComponent<NpcBrain>();
-                if (b != null && b != _brain && b.State == NpcState.Idle && _brain.Target != null) b.ForceAggro(_brain.Target);
+                if (b != null && b != _brain && b.State == NpcState.Idle && _brain.Target != null && _brain.Danger.Pack != Balance.PackMode.None) b.ForceAggro(_brain.Target, true);
                 n++;
             }
             SkillExecutor.VfxPulse(transform.position, A.BehaviorRadius * 2f, new Color(0.7f, 0.85f, 1f));
@@ -217,8 +218,8 @@ namespace ProjectTyrant
             var t = _brain.Target;
             if (t != null && Flat(t.transform.position) < 2.2f)
             {
-                DamageCalculator.DealDirect(_self, t, A.BehaviorCoefficient);
-                t.Effects.Apply(new EffectApplication(EffectType.Stun, 1, 1f), _self);
+                DamageCalculator.DealDirect(_self, t, A.BehaviorCoefficient * _brain.DamageScale);
+                if (_brain.ControlAllowed(EffectType.Stun)) t.Effects.Apply(new EffectApplication(EffectType.Stun, 1, 1f), _self);
                 var pc = t.GetComponent<PlayerController>();
                 if (pc != null) pc.AddImpulse(transform.forward * 12f, 4f);
                 arrived = true;

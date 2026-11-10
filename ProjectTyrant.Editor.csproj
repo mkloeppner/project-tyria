@@ -101,6 +101,8 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\MasteryBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\StoryBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\TraitBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\BalanceBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldEnemyBuilder.Balance.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\FxTextureKit.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\VfxKitBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldEnemyBuilder.Lauf6.cs" />

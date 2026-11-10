@@ -1,0 +1,201 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_07
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 7
+  Title: Wurzeln der Finsternis
+  Zone: daemmerwald
+  MinLevel: 30
+  Summary: "Die Verderbnis des Tyrannen frisst den D\xE4mmerwald. Ein Dorf wird evakuiert, und der Leitstern des Helden kehrt zur\xFCck."
+  Steps:
+  - Id: K07_S01
+    Title: Violettes Licht
+    Description: "Hilf \xC4ltestem Fenn, die Verderbnis an den W\xE4chtersteinen zur\xFCckzudr\xE4ngen."
+    Type: 1
+    Zone: daemmerwald
+    Position: {x: -150, y: 3, z: -200}
+    Npc: fenn
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 19
+      Target: wald_
+      Count: 1
+      Text: "Dr\xE4nge die Verderbnis zur\xFCck (Ereignis)"
+      Hint: event
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 25
+      Target: '*'
+      Count: 2
+      Text: Unterbrich zwei Schattenpriester
+      Hint: interrupt
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K07_S01
+    SceneEnd: K07_S01E
+    Checkpoints: []
+    Reward:
+      Experience: 3000
+      Karma: 250
+      Copper: 1500
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K07_S02
+    Title: Die Lichtung
+    Description: Bring die Dorfbewohner der Lichtung in Sicherheit.
+    Type: 0
+    Zone: daemmerwald
+    Position: {x: -120, y: 3, z: -140}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 24
+      Target: dorfbewohner
+      Count: 1
+      Text: Geleite die Dorfbewohner zum Waldrand
+      Hint: escort
+      Optional: 0
+      Label: Dorfbewohner
+      Offset: {x: 0, y: 0, z: 4}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 2
+      Target: Enemy_Wald_Dornenschreck
+      Count: 5
+      Text: Halte die Dornenschrecken fern
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 6, y: 0, z: 10}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 2
+      Target: Enemy_Wald_Schattenpriester
+      Count: 2
+      Text: Besiege die Schattenpriester
+      Hint: 
+      Optional: 0
+      Label: Schattenpriester
+      Offset: {x: -6, y: 0, z: 14}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K07_S02
+    SceneEnd: K07_S02E
+    Checkpoints:
+    - 0
+    - 1
+    Reward:
+      Experience: 4000
+      Karma: 300
+      Copper: 2000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 50
+    Companion: pact
+    Props:
+    - feuer@6,-6
+    - rauch@6,-6
+    - kisten@-4,2
+    - zelt@-8,-4
+  - Id: K07_S03
+    Title: "Der W\xE4chterstein"
+    Description: "Am alten W\xE4chterstein wartet etwas aus deiner Vergangenheit."
+    Type: 1
+    Zone: daemmerwald
+    Position: {x: 0, y: 5, z: 300}
+    Npc: fenn
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 1
+      Target: K07_S03
+      Count: 1
+      Text: "Erreiche den W\xE4chterstein"
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 23
+      Target: laterne
+      Count: 1
+      Text: Trage eine Laterne zum Stein
+      Hint: bundle
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K07_S03
+    SceneEnd: K07_S03E
+    Checkpoints: []
+    Reward:
+      Experience: 3000
+      Karma: 300
+      Copper: 2000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags:
+    - k07_leitstern
+    Letter: L_K07
+    Radius: 60
+    Companion: 
+    Props: []
+  JournalLines:
+  - K07_J
+  Mechanics:
+  - Verderbnis-Zonen
+  - Eskorte
+  - Auto-Angriffs-Ketten
+  - Unterbrechen

@@ -37,6 +37,7 @@ namespace ProjectTyrant.EditorTools
             player.AddComponent<HitFlash>();
             player.AddComponent<TargetOutline>().OutlineMaterial = PTEditorUtil.FxMat("Outline", "ProjectTyrant/FX/Outline", Color.white);
             player.AddComponent<OutOfCombatRegen>();
+            player.AddComponent<Balance.NpcRescue>();   // Balance B1: NPC-Wiederbelebung in Stufe 0–1
             player.GetComponent<DownedController>().DownedHealthShare = 0.5f;
             player.AddComponent<MountController>();
             player.AddComponent<MasteryAbilities>();

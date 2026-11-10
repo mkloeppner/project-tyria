@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_belagerung_thron
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: belagerung_thron
+  Title: 'Belagerung: Der Herold im Thronsaal'
+  Description: 'Das Finale: Der Herold stellt sich vor dem leeren Thron.'
+  ChainId: belagerung
+  Objective: 9
+  Center: {x: 0, y: 5.0710473, z: 250}
+  Radius: 45
+  Duration: 420
+  TargetCount: 1
+  Triggers:
+  - Type: 2
+    Delay: 0
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 60
+  GoldContribution: 4693.5483
+  Experience: 4695
+  Karma: 1407
+  Coins: 1000
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: tyrannenfeste_belagerung_thron
+  Path: []
+  DeliverPoint: {x: 0, y: 5.0710473, z: 250}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: cf6dd521248e07e4f9de3d0d3ba68a74, type: 2}
+  Veteran: {fileID: 11400000, guid: 4292e1fc3975f9740abb81d9e8337373, type: 2}
+  Boss: {fileID: 11400000, guid: bba61d408c8e7c64a9b127b0428ea54a, type: 2}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds:
+  - 0.5
+  MasteryPoints: 1
+  MetaId: belagerung
+  MetaPhase: 5

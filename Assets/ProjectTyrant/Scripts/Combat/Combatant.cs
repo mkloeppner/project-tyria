@@ -246,6 +246,7 @@ namespace ProjectTyrant
             {
                 var c = All[i];
                 if (c == null || c.IsDead || !from.IsHostileTo(c)) continue;
+                if (!c.Targetable) continue;   // ausgeblendete/eingegrabene Figuren (ActorVisibility)
                 if (c.Effects.Has(EffectType.Stealth)) continue;
                 if (filter != null && !filter(c)) continue;
                 float d = (c.transform.position - pos).sqrMagnitude;

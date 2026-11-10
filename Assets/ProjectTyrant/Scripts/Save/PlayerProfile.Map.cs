@@ -15,6 +15,7 @@ namespace ProjectTyrant
             if (Player == null || gm == null || zone == null) return false;
             if (Player.IsDead || Player.IsDowned) { GameEventBus.Notify("Im Moment nicht möglich", new Color(1f, 0.6f, 0.4f)); return false; }
             if (!State.Wallet.TrySpendCopper(cost)) { GameEventBus.Notify("Nicht genug Münzen (" + WalletModel.Format(cost) + ")", new Color(1f, 0.6f, 0.4f)); return false; }
+            Balance.BalanceWorld.PlayerTravelledAt = Time.time;   // Balance B1: Aufgabe-Regel 6
             gm.ChangeZone(zone.Id, null, waypoint + new Vector3(0f, 0.3f, -2.5f));
             GameEventBus.Notify("Gereist: " + zone.DisplayName, new Color(0.6f, 0.9f, 1f));
             return true;
@@ -27,6 +28,7 @@ namespace ProjectTyrant
             if (Player.IsDead || Player.IsDowned) { GameEventBus.Notify("Im Moment nicht möglich", new Color(1f, 0.6f, 0.4f)); return false; }
             if (!State.Wallet.TrySpendCopper(cost)) { GameEventBus.Notify("Nicht genug Münzen (" + WalletModel.Format(cost) + ")", new Color(1f, 0.6f, 0.4f)); return false; }
             var ui = UIController.Instance;
+            Balance.BalanceWorld.PlayerTravelledAt = Time.time;   // Balance B1: Aufgabe-Regel 6
             System.Action go = () =>
             {
                 if (ui != null) ui.Windows.CloseAll();

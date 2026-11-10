@@ -44,6 +44,7 @@ namespace ProjectTyrant.EditorTools
             var prev = RenderTexture.active; RenderTexture.active = rt;
             var tex = new Texture2D(Width, Height, TextureFormat.RGB24, false);
             tex.ReadPixels(new Rect(0, 0, Width, Height), 0, 0); tex.Apply();
+            AutoLevels(tex);
             RenderTexture.active = prev; cam.targetTexture = null;
             Object.DestroyImmediate(go); rt.Release(); Object.DestroyImmediate(rt);
 
@@ -56,6 +57,25 @@ namespace ProjectTyrant.EditorTools
             z.LoadingImage = AssetDatabase.LoadAssetAtPath<Texture2D>(path);
             EditorUtility.SetDirty(z);
             return z.LoadingImage != null;
+        }
+
+        /// <summary>Tonwertkorrektur für dunkle Zonen (Kristalltiefe): 2-%/98-%-Perzentile der Helligkeit auf 0,06–0,9 strecken, nur wenn der Kontrast zu gering ist.</summary>
+        static void AutoLevels(Texture2D tex)
+        {
+            var px = tex.GetPixels();
+            var lum = new float[px.Length];
+            for (int i = 0; i < px.Length; i++) lum[i] = px[i].grayscale;
+            var sorted = (float[])lum.Clone(); System.Array.Sort(sorted);
+            float lo = sorted[(int)(sorted.Length * 0.02f)], hi = sorted[(int)(sorted.Length * 0.98f)];
+            if (hi - lo > 0.35f) return;   // genug Kontrast: Aufnahme unverändert
+            float scale = (0.9f - 0.06f) / Mathf.Max(0.02f, hi - lo);
+            for (int i = 0; i < px.Length; i++)
+            {
+                var c = px[i];
+                c.r = Mathf.Clamp01(0.06f + (c.r - lo) * scale); c.g = Mathf.Clamp01(0.06f + (c.g - lo) * scale); c.b = Mathf.Clamp01(0.06f + (c.b - lo) * scale);
+                px[i] = c;
+            }
+            tex.SetPixels(px); tex.Apply();
         }
 
         /// <summary>Blick vom Aussichtspunkt über die Zone: Kamera hinter und über der Stele, Blick zur Zonenmitte (ohne Aussichtspunkt: vom Startpunkt).</summary>

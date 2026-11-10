@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_tyrannenfeste
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: tyrannenfeste
+  DisplayName: Tyrannenfeste
+  Description: Die verderbte Festung des Tyrannen auf schwarzem Fels.
+  SceneName: PT_Zone_Tyrannenfeste
+  Seed: 30106
+  Size: 900
+  LevelMin: 30
+  LevelMax: 30
+  Biome: {fileID: 11400000, guid: 4d8258cdef8047a4d87ec9a60a06f945, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: tyrannenfeste_gluetoede
+    Position: {x: -30, y: 27.334362, z: -430}
+    Yaw: 3.9909134
+    TargetZone: gluetoede
+    TargetPortal: gluetoede_tyrannenfeste
+  - Id: tyrannenfeste_silbermund
+    Position: {x: 14, y: 1.7, z: -390}
+    Yaw: -2.055889
+    TargetZone: silberkueste
+    TargetPortal: plaza_tyrannenfeste
+  DefaultSpawn: {x: 0, y: 1.7, z: -400}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.82
+    y: 0.04
+    width: 0.16
+    height: 0.22
+  ContinentColor: {r: 0.3529412, g: 0.16470589, b: 0.22745098, a: 1}
+  Waypoints:
+  - Id: wp_feste_lager
+    Name: Wegmarke Belagerungslager
+    Position: {x: 10, y: 1.7, z: -380}
+  - Id: wp_feste_tore
+    Name: Wegmarke Torvorfeld
+    Position: {x: 0, y: 1.7, z: -260}
+  - Id: wp_feste_hof
+    Name: Wegmarke Innerer Hof
+    Position: {x: 0, y: 4.902551, z: 20}
+  - Id: wp_feste_thron
+    Name: Wegmarke Thronstiege
+    Position: {x: 0, y: 4.5541325, z: 200}
+  - Id: wp_tyrannenfeste_ankunft_gluetoede
+    Name: "Portal-Wegmarke Glut\xF6de"
+    Position: {x: -36.510612, y: 27.334362, z: -428.01456}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 1.7, z: -400}
+    WaypointId: wp_feste_lager
+  - Entrance: portal:tyrannenfeste_gluetoede
+    Position: {x: -29.58241, y: 27.334362, z: -424.01456}
+    WaypointId: wp_tyrannenfeste_ankunft_gluetoede
+  - Entrance: portal:tyrannenfeste_silbermund
+    Position: {x: 13.784754, y: 1.7, z: -384.00388}
+    WaypointId: wp_feste_lager
+  Tips:
+  - 'Die Belagerung der Feste: drei Tore, der Hof, der Thronsaal.'
+  - "Die Feste \xF6ffnet sich erst mit Kapitel 10 der Pers\xF6nlichen Geschichte."
+  LoadingImage: {fileID: 2800000, guid: 73e16a250d51b3b48a95641a74a527d8, type: 3}
+  Regions:
+  - Name: Belagerungslager
+    Center: {x: -40, y: -360}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Die drei Tore
+    Center: {x: 0, y: -300}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Innerer Hof
+    Center: {x: 0, y: 0}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Siegelkammern
+    Center: {x: -200, y: 120}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Thronsaal
+    Center: {x: 0, y: 260}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  TimerLabel: Belagerung der Feste
+  TimerPeriod: 1500
+  TimerOffset: 180
+  TimerPosition: {x: 0, y: 5.0710473, z: 250}
+  TimerEventId: belagerung
+  CompletionIds:
+  - wp_feste_lager
+  - wp_feste_tore
+  - wp_feste_hof
+  - wp_feste_thron
+  - poi_feste_lager
+  - poi_feste_tore
+  - poi_feste_hof
+  - poi_feste_kammern
+  - poi_feste_thron
+  - vista_feste_wehrgang
+  - vista_feste_turm
+  - vista_feste_lava
+  - hc_feste_siegel
+  - hc_feste_ritter
+  - hc_feste_thronwache
+  - hc_feste_lava
+  - heart_feste_lager
+  - heart_feste_tore
+  - heart_feste_kammern
+  - heart_feste_bresche

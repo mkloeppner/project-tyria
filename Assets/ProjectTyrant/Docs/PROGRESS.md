@@ -94,3 +94,39 @@ Blockierende Lücken aus Lauf 3–5 laut Auftrag: Dialog-fähige NPCs (bisher nu
 | M33 Kapitel 9–10 und Finale | offen | | |
 | M34 Polish, Meshy, Sprache, Build, Doku | offen | | |
 
+
+
+## Balance B1 – Sanfter Einstieg, Gefahrenstufen, Verfolgung und Flucht (Start 2026-11-10 07:52)
+Ausgangslage: Lauf 6 M30–M34 nur teilweise geprüft (Rebuild Everything vor B1 durchgelaufen, 321/329 EditMode; 6 offene Lauf-6-Tests werden in B1 mit grün gezogen). Kein TestPilot aus einem Abnahme-Lauf → minimaler Autopilot `BalanceBot` mit beiden Profilen. Kein Admin-Menü (Lauf 7 nicht gelaufen) → Befehle im Debug-Panel (F9). Startzone ist 200 m groß → Entfernungsregeln des Auftrags (300/700/100 m für 1.000-m-Zonen) skaliert (DECISIONS).
+
+| Milestone | Status | Abschluss | Verifikation (Tests · Telemetrie · Captures · Rebuild) |
+|---|---|---|---|
+| B1 Telemetrie und Baseline | in Arbeit | | |
+| B2 Gefahrenstufen und Verfolgung | offen | | |
+| B3 Startzone und Event-Stufen | offen | | |
+| B4 Mittel- und Spätspiel | offen | | |
+| B5 Messung, Feinabstimmung, Doku | offen | | |
+
+**12:10 zweiter Hänger** in derselben Messreihe (Neustart 09:46 im Safe Mode wegen CS0619 `GetInstanceID` in NpcBrain – behoben; danach CS0136 im BalanceBuilder – behoben; 333/342 EditMode, Rest braucht Rebuild). Vermutete Ursache beider Hänger: SetActive-Umschalten geriggter Gegner in `BalanceProbe` (KNOWN_ISSUES 61) – entfernt. **08:30 Editor reagiert nicht mehr** (MCP-Bridge getrennt, keine Neukompilierung seit 08:20) während der Baseline-Messreihe im Play Mode (Trainingspuppen-Messung in der Kristalltiefe, Zeitfaktor 4). Kein Neustart durch mich; Arbeit an Builder/Validator/UI läuft außerhalb des Editors weiter, Messung wird nach Rückkehr fortgesetzt.
+
+### Balance B1 – Hypothesen (Befund vor jeder Änderung)
+| # | Hypothese | Befund | Messung/Code | Folge |
+|---|---|---|---|---|
+| 1 | Auto-Start am Start: Dornwacht-Kette nach 60 s, Wellen im Startgebiet | **bestätigt** | `EventDataBuilder`: `AutoStartDelay = 60`, Timer-Auslöser; Bot-Probelauf (Stufe 0, Seed 1): nach 26 s „Dornwacht verteidigen“ gescheitert → „Dornwacht gefallen“ → „Sonnfurt unter Angriff“ im Hub, Bot 2× besiegt in 2 min | Timer entfernt, Stufe 1, kein Hub-Angriff bei Fehlschlag (B3) |
+| 2 | Keine neutralen Gegner | **bestätigt** | Alle Kampf-NPCs `Team.Enemy` mit Aggro-Radius 10–18 m; Umgebungstiere ohne Kampf; Startzone nur Plünderer/Brecher | Neutral-Flag je Spawn, Wildeber/Rothirsch, Quote je Stufe (B2) |
+| 3 | Verfolgung ohne/zu lange Leine, zu schnell, Separation drückt in den Spieler, kein Sicht-Vergessen | **teilweise** | Leine 40–45 m vom Spawn, keine Zeitgrenze, kein Sichtlinien-Vergessen (nur Tarnung) – bestätigt; Tempo: Plünderer 4,5 m/s < Spieler 7 m/s – verworfen, Wölfe 6,2 m/s; Separation schob von allen Kämpfern weg, auch vom Spieler – kein Mindestabstand | PursuitModel mit 6 Regeln, Tempo nach Stufe, Separation nur unter Gegnern + 0,8 m (B2) |
+| 4 | Rudel-Aggro überall ab Stufe 0 | **verworfen (Startzone)** | Kein Rudel-Mechanismus außer Heulen (Eiswölfe, Frostkamm); Gruppen ziehen nur über den gemeinsamen Aggro-Radius (14 m) | Rudel nach Stufe (0 keine · 1 Partner · 2+ Gruppe 300) (B2) |
+| 5 | Schaden zu hoch auf Level 1–5 (Zeit-bis-Tod 3 Trash < 15 s) | **bestätigt** | Trainingspuppe: Level 2 gegen 3 Plünderer **10,2 s** (Ziel ≥ 30), Level 4 **6,4 s** (Ziel ≥ 25), Veteran L4 12,8 s (≥ 25); Downed→Tod im Bot-Lauf in 0,2 s | Gegner-Kurve nach Stufe (B2/B4) |
+| 6 | Respawn zu kurz, Dichte zu hoch um Sonnfurt; Events spawnen in Hörweite des Hubs | **teilweise** | Respawn: verworfen – Welt-Gegner kehrten nie zurück (Respawn fehlte ganz); Events: bestätigt – Karawane startet am Hub (−54/−50), „Sonnfurt unter Angriff“ im Hub, Sammeln in Gerstenbrunn (Herz) | Respawn nach Stufe, Event-Spawns ≥ 20 m (skaliert 100 m) von Hub/Wegmarken (B2/B3) |
+| 7 | Kampfende zu spät, Aufsitzen wird unterbrochen, Wegmarke im Kampf gesperrt | **teilweise** | Kampfende nach 6 s statt 5 s – bestätigt; Aufsitzen im Kampf war **erlaubt** und Schaden unterbrach es nicht (GW2-Regel verletzt, aber kein Fluchthindernis); Wegmarken-Reise im Kampf erlaubt – verworfen | Kampfende 5 s, Aufsitzen nur außerhalb des Kampfes, Schaden unterbricht (B2) |
+| 8 | Wachen helfen nur in Events, niemand belebt wieder | **bestätigt** | Wachen nur als Dornwacht-Event-Aktoren (`ZoneRoot.Guards`); keine NPC-Wiederbelebung | Patrouillen auf den Wegen, Aggro-Übernahme, NPC-Wiederbelebung in Stufe 0–1 (B3) |
+
+### Balance B1 – Baseline (vorher, Trainingspuppe, Code-Stand vor jeder Änderung)
+| Stufe | Zone, Level | Zeit-bis-Tod 3 Trash | Zeit-bis-Tod Veteran | Zeit-bis-Kill Trash | Zeit-bis-Kill Veteran |
+|---|---|---|---|---|---|
+| 0 | Sonnfurt, L2 | 10,2 s | – | 3,7 s | – |
+| 1 | Grenzmark, L4 | 6,4 s | 12,8 s | 4,9 s | 21,6 s |
+| 2 | Dornwacht, L7 | 21,3 s | 10,4 s | 6,0 s | 29,2 s |
+| 3 | Nebelmoor, L20 | (abgebrochen) | 6,5 s | 11,5 s | 44,6 s |
+| 4 | Glutöde, L30 | 19,3 s | 30,3 s | (offen) | (offen) |
+| 5 | Kristalltiefe, L30 | (offen, Editor-Hänger) | | | |

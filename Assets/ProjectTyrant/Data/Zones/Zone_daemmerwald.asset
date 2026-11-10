@@ -24,16 +24,16 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: daemmerwald_silberkueste
-    Position: {x: -30, y: 0, z: -460}
+    Position: {x: -30, y: 6.4816146, z: -460}
     Yaw: 3.731397
     TargetZone: silberkueste
     TargetPortal: silberkueste_daemmerwald
   - Id: daemmerwald_silbermund
-    Position: {x: 14, y: 0, z: -410}
+    Position: {x: 14, y: 3.1585233, z: -410}
     Yaw: -1.9556814
     TargetZone: silberkueste
     TargetPortal: plaza_daemmerwald
-  DefaultSpawn: {x: 0, y: 0, z: -420}
+  DefaultSpawn: {x: 0, y: 2.653615, z: -420}
   ContinentRect:
     serializedVersion: 2
     x: 0.04
@@ -41,16 +41,85 @@ MonoBehaviour:
     width: 0.26
     height: 0.26
   ContinentColor: {r: 0.2901961, g: 0.2901961, b: 0.41568628, a: 1}
-  Waypoints: []
-  Arrivals: []
+  Waypoints:
+  - Id: wp_wald_ankunft
+    Name: Wegmarke Waldsaum
+    Position: {x: 10, y: 3.1874495, z: -400}
+  - Id: wp_wald_lichtung
+    Name: Wegmarke Lichtung
+    Position: {x: -160, y: 3.5061016, z: -180}
+  - Id: wp_wald_hain
+    Name: Wegmarke Alter Hain
+    Position: {x: 230, y: 2.682058, z: 120}
+  - Id: wp_wald_stein
+    Name: "Wegmarke W\xE4chterstein"
+    Position: {x: 20, y: 1.5557252, z: 280}
+  - Id: wp_daemmerwald_ankunft_silberkueste
+    Name: "Portal-Wegmarke Silberk\xFCste"
+    Position: {x: -21.609526, y: 6.3253584, z: -454.01273}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 2.653615, z: -420}
+    WaypointId: wp_wald_ankunft
+  - Entrance: portal:daemmerwald_silberkueste
+    Position: {x: -29.609526, y: 6.4816146, z: -454.01273}
+    WaypointId: wp_daemmerwald_ankunft_silberkueste
+  - Entrance: portal:daemmerwald_silbermund
+    Position: {x: 13.795241, y: 3.1585233, z: -404.0035}
+    WaypointId: wp_wald_ankunft
   Tips:
   - "Violette Verderbnis brennt \u2013 Laternen und W\xE4chtersteine sch\xFCtzen."
   - "Der Alte Hain erwacht in regelm\xE4\xDFigen Abst\xE4nden."
-  LoadingImage: {fileID: 0}
-  Regions: []
-  TimerLabel: 
-  TimerPeriod: 0
-  TimerOffset: 0
-  TimerPosition: {x: 0, y: 0, z: 0}
-  TimerEventId: 
-  CompletionIds: []
+  LoadingImage: {fileID: 2800000, guid: 717347536850a3f478a5a6a3890ab05e, type: 3}
+  Regions:
+  - Name: Dorf auf der Lichtung
+    Center: {x: -150, y: -200}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Der Alte Hain
+    Center: {x: 200, y: 150}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: "W\xE4chterstein"
+    Center: {x: 0, y: 300}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Violetter Grund
+    Center: {x: -260, y: 120}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Zerfallene Kapelle
+    Center: {x: 300, y: -220}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  TimerLabel: Der Alte Hain
+  TimerPeriod: 1080
+  TimerOffset: 240
+  TimerPosition: {x: 200, y: 4.33956, z: 150}
+  TimerEventId: hain
+  CompletionIds:
+  - wp_wald_ankunft
+  - wp_wald_lichtung
+  - wp_wald_hain
+  - wp_wald_stein
+  - poi_wald_lichtung
+  - poi_wald_hain
+  - poi_wald_stein
+  - poi_wald_sumpf
+  - poi_wald_ruine
+  - vista_wald_wipfel
+  - vista_wald_kapelle
+  - vista_wald_tafel
+  - hc_wald_quelle
+  - hc_wald_priester
+  - hc_wald_dornen
+  - hc_wald_tafel
+  - heart_wald_fenn
+  - heart_wald_hira
+  - heart_wald_oda
+  - heart_wald_laternen

@@ -61,7 +61,7 @@ namespace ProjectTyrant.Tests
         [Test]
         public void MusicStems_SameLength_LoopsBetween60And90Seconds()
         {
-            Assert.AreEqual(10, Bank.Music.Count, "4 Zonen × (Erkundung, Kampf) + Boss + Menü");
+            Assert.AreEqual(22, Bank.Music.Count, "10 Zonen × (Erkundung, Kampf) + Boss + Menü (Lauf 6: sechs neue Zonen)");
             foreach (var m in Bank.Music)
             {
                 int n = -1;
@@ -70,7 +70,7 @@ namespace ProjectTyrant.Tests
                 Assert.That(sec, Is.InRange(59f, 91f), m.Key);
                 float bar = 240f / m.Bpm; Assert.AreEqual(m.Bars * bar, sec, 0.01f, m.Key + ": ganze Takte");
             }
-            Assert.AreEqual(4 * 7, Bank.Stingers.Count);
+            Assert.AreEqual(10 * 7, Bank.Stingers.Count, "7 Stinger je Zone (10 Zonen seit Lauf 6)");
             foreach (var s in Bank.Stingers) Assert.That(s.Stats.Seconds, Is.InRange(2f, 4.2f), s.Key);
         }
 

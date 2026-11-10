@@ -1,0 +1,313 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_06
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 6
+  Title: Der Hafen der hundert Segel
+  Zone: silberkueste
+  MinLevel: 30
+  Summary: "Ankunft in Silbermund, Portalplatz und die Politik der B\xFCndnisse. Jedes B\xFCndnis hat einen eigenen Auftrag."
+  Steps:
+  - Id: K06_S01
+    Title: Silbermund
+    Description: Reise nach Silbermund und finde den Portalplatz.
+    Type: 3
+    Zone: silberkueste
+    Position: {x: 0, y: 2, z: 40}
+    Npc: gorran
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 1
+      Target: K06_S01
+      Count: 1
+      Text: Erreiche den Portalplatz von Silbermund
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 12
+      Target: wp_kueste
+      Count: 1
+      Text: Entdecke die Wegmarke Silbermund
+      Hint: waypoint
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: 
+    SceneEnd: K06_S01E
+    Checkpoints: []
+    Reward:
+      Experience: 2000
+      Karma: 150
+      Copper: 1000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K06_S02W
+    Title: Sturm auf die Grotte
+    Description: "Die Wacht r\xE4umt die Schmugglergrotte an der Steilk\xFCste."
+    Type: 0
+    Zone: silberkueste
+    Position: {x: -250, y: 2, z: -200}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 1
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 2
+      Target: Enemy_Kueste_Schmuggler
+      Count: 6
+      Text: Brich durch die Schmuggler
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 8}
+      Scale: 1
+      Scene: K06_S02W
+      Partner: 
+    - Kind: 18
+      Target: Enemy_Kueste_Schmugglerkoenigin
+      Count: 1
+      Text: "Brich die Trotzleiste der Schmugglerk\xF6nigin"
+      Hint: defiance
+      Optional: 0
+      Label: "Die Schmugglerk\xF6nigin"
+      Offset: {x: 4, y: 0, z: 14}
+      Scale: 2
+      Scene: 
+      Partner: 
+    SceneStart: K06_S02
+    SceneEnd: K06_S02WE
+    Checkpoints:
+    - 0
+    Reward:
+      Experience: 3500
+      Karma: 300
+      Copper: 2000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags:
+    - k06_grotte
+    Letter: 
+    Radius: 45
+    Companion: haldis
+    Props:
+    - kisten@-6,6
+    - kisten@6,4
+    - feuer@0,10
+    - barrikade@0,2
+  - Id: K06_S02A
+    Title: Einbruch im Archiv
+    Description: "Hol mit Tovin das gestohlene Kr\xF6nungsbuch zur\xFCck."
+    Type: 0
+    Zone: silberkueste
+    Position: {x: -80, y: 3, z: 60}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 2
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 9
+      Target: regal
+      Count: 3
+      Text: Durchsuche die Regale
+      Hint: 
+      Optional: 0
+      Label: Regal durchsuchen
+      Offset: {x: -6, y: 0, z: 4}
+      Scale: 1
+      Scene: K06_S02A
+      Partner: 
+    - Kind: 2
+      Target: Enemy_Kueste_Archivwaechter
+      Count: 3
+      Text: "Halte die Archivw\xE4chter auf"
+      Hint: 
+      Optional: 0
+      Label: "Archivw\xE4chter"
+      Offset: {x: 0, y: 0, z: 8}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 25
+      Target: '*'
+      Count: 2
+      Text: Unterbrich zwei Zauber
+      Hint: interrupt
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K06_S02
+    SceneEnd: K06_S02AE
+    Checkpoints:
+    - 0
+    - 1
+    Reward:
+      Experience: 3500
+      Karma: 300
+      Copper: 2000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags:
+    - k06_buch
+    Letter: 
+    Radius: 40
+    Companion: tovin
+    Props:
+    - kisten@-8,0
+    - kisten@8,2
+  - Id: K06_S02S
+    Title: Der Doppelagent
+    Description: Veyra stellt einem Doppelagenten im Hafen eine Falle.
+    Type: 0
+    Zone: silberkueste
+    Position: {x: 60, y: 2, z: 10}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 3
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: veyra
+      Count: 1
+      Text: Lenke den Agenten ab (sprich mit Veyra)
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: K06_S02S
+      Partner: 
+    - Kind: 9
+      Target: beweis
+      Count: 2
+      Text: Stiehl die Beweise
+      Hint: 
+      Optional: 0
+      Label: Beweis an dich nehmen
+      Offset: {x: -4, y: 0, z: 6}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 2
+      Target: Enemy_Kueste_Schmuggler
+      Count: 4
+      Text: "Schalte die Leibw\xE4chter aus"
+      Hint: 
+      Optional: 0
+      Label: "Leibw\xE4chter"
+      Offset: {x: 4, y: 0, z: -4}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K06_S02
+    SceneEnd: K06_S02SE
+    Checkpoints:
+    - 1
+    Reward:
+      Experience: 3500
+      Karma: 300
+      Copper: 2000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags:
+    - k06_agent
+    Letter: 
+    Radius: 40
+    Companion: veyra
+    Props:
+    - kisten@-6,-4
+    - zelt@6,6
+  - Id: K06_S03
+    Title: "Der Rat der B\xFCndnisse"
+    Description: "Der Rat tagt im B\xFCndnis-Viertel."
+    Type: 2
+    Zone: silberkueste
+    Position: {x: -60, y: 3, z: 80}
+    Npc: gorran
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: gorran
+      Count: 1
+      Text: Sprich mit dem Rat (Hafenmeister Gorran)
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K06_S03
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 2000
+      Karma: 300
+      Copper: 2000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: L_K06
+    Radius: 60
+    Companion: 
+    Props: []
+  JournalLines:
+  - K06_J
+  Mechanics:
+  - Kontinentreise
+  - "Hub-Dienste (Bank, B\xFCndnis-H\xE4ndler)"
+  - Herzen in der Stadt
+  - "Sprungr\xE4tsel"

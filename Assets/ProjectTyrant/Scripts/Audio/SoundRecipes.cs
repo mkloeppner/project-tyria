@@ -33,7 +33,12 @@ namespace ProjectTyrant
             if (r.Loop) b = Synth.MakeLoop(b, Math.Min(1.5f, Synth.Seconds(b) * 0.2f));
             else Synth.Fade(b, 1.5f, Math.Min(40f, Synth.Seconds(b) * 200f));
             Synth.Normalize(b, spec.TargetRmsDb, -1f);
-            if (r.Loop) Synth.SealLoop(b);
+            if (r.Loop)
+            {
+                Synth.SealLoop(b);
+                // Balance B1 (Lauf-6-Rest): dichte Hochton-Betten (Dämmerwald) – Naht bei Bedarf breiter glätten
+                for (int k = 1; k <= 3 && AudioAnalysis.LoopSeam(b) >= 0.008f; k++) Synth.SealLoop(b, 96 << k, 24 << k);
+            }
             return b;
         }
 

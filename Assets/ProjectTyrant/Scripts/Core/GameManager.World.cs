@@ -45,6 +45,7 @@ namespace ProjectTyrant
         /// <summary>Zonenwechsel über ein Portal (Zielportal-Id) oder Debug/Reise (Portal null → Position oder Spawn).</summary>
         public void ChangeZone(string zoneId, string targetPortal, Vector3? position = null)
         {
+            Balance.BalanceWorld.PlayerTravelledAt = Time.time;   // Balance B1: Portal/Zonenwechsel beendet Verfolgungen
             if (Transitioning || World == null || World.Zone(zoneId) == null) return;
             if (!ZoneGate.Allowed(zoneId, Story != null ? Story.State : null, out var why)) { GameEventBus.Notify(why, new Color(1f, 0.6f, 0.5f)); return; }   // Lauf 6: Tyrannenfeste erst mit Kapitel 10
             StartCoroutine(LoadZone(zoneId, targetPortal, false, position));

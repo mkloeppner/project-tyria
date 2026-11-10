@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_himmelsspitzen
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: himmelsspitzen
+  DisplayName: Himmelsspitzen
+  Description: "Gipfel und schwebende Inseln \xFCber den Wolken."
+  SceneName: PT_Zone_Himmelsspitzen
+  Seed: 30105
+  Size: 1000
+  LevelMin: 30
+  LevelMax: 30
+  Biome: {fileID: 11400000, guid: d77ccff4fe3a75842b4a8190926e06b7, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: himmelsspitzen_frostkamm
+    Position: {x: 30, y: 33.039047, z: -460}
+    Yaw: -3.731397
+    TargetZone: frostkamm
+    TargetPortal: frostkamm_himmelsspitzen
+  - Id: himmelsspitzen_silbermund
+    Position: {x: 14, y: 34.09133, z: -410}
+    Yaw: -1.9556814
+    TargetZone: silberkueste
+    TargetPortal: plaza_himmelsspitzen
+  DefaultSpawn: {x: 0, y: 35.983482, z: -420}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.32
+    y: 0.74
+    width: 0.28
+    height: 0.24
+  ContinentColor: {r: 0.84705883, g: 0.9098039, b: 0.972549, a: 1}
+  Waypoints:
+  - Id: wp_himmel_ankunft
+    Name: Wegmarke Wolkentor
+    Position: {x: 20, y: 33.26753, z: -400}
+  - Id: wp_himmel_nest
+    Name: Wegmarke Greifennester
+    Position: {x: -200, y: 12.172964, z: 80}
+  - Id: wp_himmel_tempel
+    Name: Wegmarke Himmelstempel
+    Position: {x: 10, y: 41.275063, z: 230}
+  - Id: wp_himmel_pirat
+    Name: Wegmarke Piratenbucht
+    Position: {x: 280, y: 23.74226, z: -120}
+  - Id: wp_himmelsspitzen_ankunft_frostkamm
+    Name: Portal-Wegmarke Frostkamm
+    Position: {x: 37.609528, y: 32.998177, z: -454.01273}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 35.983482, z: -420}
+    WaypointId: wp_himmel_ankunft
+  - Entrance: portal:himmelsspitzen_frostkamm
+    Position: {x: 29.609526, y: 33.039047, z: -454.01273}
+    WaypointId: wp_himmelsspitzen_ankunft_frostkamm
+  - Entrance: portal:himmelsspitzen_silbermund
+    Position: {x: 13.795241, y: 34.09133, z: -404.0035}
+    WaypointId: wp_himmel_ankunft
+  Tips:
+  - Aufwinde tragen Gleitende nach oben.
+  - "Wer das Vertrauen der Himmelsw\xE4chter gewinnt, fliegt mit einem Greif."
+  LoadingImage: {fileID: 2800000, guid: 296edf4851fc2e746a8cea734a59228a, type: 3}
+  Regions:
+  - Name: "Himmelsw\xE4chter-Tempel"
+    Center: {x: 0, y: 260}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Greifennester
+    Center: {x: -220, y: 110}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Piratenbucht
+    Center: {x: 300, y: -150}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: "Windbr\xFCcke"
+    Center: {x: 100, y: 0}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: "H\xF6chster Gipfel"
+    Center: {x: -300, y: 340}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  TimerLabel: Himmelswyrm
+  TimerPeriod: 1200
+  TimerOffset: 360
+  TimerPosition: {x: 40, y: 36, z: 280}
+  TimerEventId: wyrm
+  CompletionIds:
+  - wp_himmel_ankunft
+  - wp_himmel_nest
+  - wp_himmel_tempel
+  - wp_himmel_pirat
+  - poi_himmel_tempel
+  - poi_himmel_nest
+  - poi_himmel_bucht
+  - poi_himmel_windbruecke
+  - poi_himmel_gipfel
+  - vista_himmel_tempel
+  - vista_himmel_bucht
+  - vista_himmel_gipfel
+  - hc_himmel_wind
+  - hc_himmel_pirat
+  - hc_himmel_wrack
+  - hc_himmel_gipfel
+  - heart_himmel_sela
+  - heart_himmel_nest
+  - heart_himmel_bucht
+  - heart_himmel_kinder

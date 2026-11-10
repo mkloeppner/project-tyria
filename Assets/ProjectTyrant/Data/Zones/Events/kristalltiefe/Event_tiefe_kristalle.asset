@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_tiefe_kristalle
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: tiefe_kristalle
+  Title: Leuchtkristalle setzen
+  Description: Setze Leuchtkristalle in die Halterungen, damit die Bergleute den Weg finden.
+  ChainId: licht
+  Objective: 8
+  Center: {x: 0, y: 0, z: -240}
+  Radius: 30
+  Duration: 240
+  TargetCount: 4
+  Triggers:
+  - Type: 1
+    Delay: 20
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 240
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: tiefe_kammer
+  FailNext: 
+  Cooldown: 240
+  GoldContribution: 4693.5483
+  Experience: 1565
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: kristalltiefe_tiefe_kristalle
+  Path: []
+  DeliverPoint: {x: 0, y: 0, z: -240}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 4c8930c92807e0b40a8d016e8dcfb6be, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 0}
+  Sites:
+  - {x: 9.210609, y: 0, z: -236.10582}
+  - {x: -3.8941836, y: 0, z: -230.78938}
+  - {x: -9.210609, y: 0, z: -243.89418}
+  - {x: 3.8941846, y: 0, z: -249.21062}
+  SiteChannel: 2.5
+  SiteLabel: Kristall einsetzen
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0

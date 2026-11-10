@@ -20,7 +20,7 @@ namespace ProjectTyrant
 
         readonly UIController _ui;
         readonly RectTransform _view, _map, _circles, _markers;
-        readonly RawImage _mapImage, _fogImage;
+        readonly RawImage _mapImage, _fogImage, _dangerImage;
         readonly Image _player;
         readonly TextMeshProUGUI _north, _east, _south, _west, _area, _zoomText, _rotLabel;
         readonly FogTexture _fog;
@@ -47,6 +47,8 @@ namespace ProjectTyrant
             _fog = new FogTexture(128, new Color(0.08f, 0.07f, 0.09f, 0.82f));
             var fogRt = UiFactory.Rect("Fog", _map).Stretch();
             _fogImage = fogRt.gameObject.AddComponent<RawImage>(); _fogImage.texture = _fog.Texture; _fogImage.raycastTarget = false;
+            var dangerRt = UiFactory.Rect("DangerOverlay", _map).Stretch(); dangerRt.SetSiblingIndex(0);   // Balance B1: /danger show
+            _dangerImage = dangerRt.gameObject.AddComponent<RawImage>(); _dangerImage.raycastTarget = false; _dangerImage.enabled = false;
 
             _circles = UiFactory.Rect("Circles", _view).Stretch();
             _markers = UiFactory.Rect("Markers", _view).Stretch();
@@ -128,6 +130,9 @@ namespace ProjectTyrant
             }
             if (_zoomTextTimer > 0f) { _zoomTextTimer -= dt; if (_zoomTextTimer <= 0f) _zoomText.text = ""; }
 
+            bool showDanger = Balance.DangerOverlay.Visible;
+            if (_dangerImage.enabled != showDanger) _dangerImage.enabled = showDanger;
+            if (showDanger) _dangerImage.texture = Balance.DangerOverlay.Texture;
             Vector3 center = p.transform.position;
             float ppm = PixelsPerMeter, yaw = CameraYaw();
             float mapRot = Rotate ? yaw : 0f;

@@ -86,6 +86,8 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\VfxKitTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WorldTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\AnimationTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\BalanceB1DataTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\BalanceB1Tests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WorldStoryTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\MasteryTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\EventChainTests.cs" />

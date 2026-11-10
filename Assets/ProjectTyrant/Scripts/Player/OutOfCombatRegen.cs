@@ -2,17 +2,18 @@ using UnityEngine;
 
 namespace ProjectTyrant
 {
-    /// <summary>Außerhalb des Kampfes (6 s ohne Schaden) regeneriert der Spieler schnell.</summary>
+    /// <summary>Außerhalb des Kampfes (Balance B1: 5 s ohne Schaden wie GW2, vorher 6 s) regeneriert der Spieler schnell.</summary>
     [RequireComponent(typeof(Combatant))]
     public class OutOfCombatRegen : MonoBehaviour
     {
-        public float Delay = 6f;
+        public float Delay = Balance.DangerTable.CombatEndDelay;
         public float FractionPerSecond = 0.1f;
         Combatant _c; float _since = float.MaxValue / 2f;   // Start: nicht im Kampf
 
         void Awake()
         {
             _c = GetComponent<Combatant>();
+            Delay = Balance.DangerTable.CombatEndDelay;
             _c.Damaged += _ => _since = 0f;
             GameEventBus.DamageDealt += OnAnyDamage;
         }
@@ -21,7 +22,7 @@ namespace ProjectTyrant
 
         void OnAnyDamage(DamageInfo d) { if (d.Source == _c) _since = 0f; }
 
-        public bool InCombat => _since < Delay;
+        public bool InCombat => _since < (Balance.BalanceWorld.Legacy ? 6f : Delay);
 
         void Update()
         {

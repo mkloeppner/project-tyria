@@ -80,6 +80,7 @@ namespace ProjectTyrant
             Chain = root.Chain; Crates = root.Crates; HubCrates = root.HubCrates; Guards = root.Guards; CaravanVendor = root.CaravanVendor;
             Scheduler = new EventScheduler(Definitions, 20261109 + root.Id.GetHashCode()) { MaxParallel = MaxParallel };
             Scheduler.Started += OnStarted;
+            Scheduler.StartGate = d => Balance.BalanceWorld.Legacy || Balance.BalanceWorld.TierOf(d) > 1 || Player == null || !Balance.BalanceWorld.InHub(Player.transform.position);
             Scheduler.Ended += OnEnded;
             Scheduler.FlagChanged += OnFlagChanged;
             ApplyNeutralWorld();
@@ -135,6 +136,7 @@ namespace ProjectTyrant
             float dt = Time.deltaTime;
             var p = Player;
             Scheduler.Tick(dt, p != null ? p.transform.position : Vector3.one * 9999f);
+            TickAnnounced();
             for (int i = 0; i < _worlds.Count; i++) TickWorld(_worlds[i], dt);
             Scheduler.TickRunners(dt, Inputs);
             if (_chainResetTimer > 0f && (_chainResetTimer -= dt) <= 0f) ResetDornwachtWorld();
@@ -219,7 +221,33 @@ namespace ProjectTyrant
         }
 
         // ---------------- Start / Ende ----------------
+        readonly List<(EventRunner r, float at)> _announced = new List<(EventRunner, float)>();
+
+        /// <summary>Balance B1: Events der Stufe 0–1 werden 10 s vor den Gegnern angekündigt („Neues Ereignis in der Nähe“).</summary>
         void OnStarted(EventRunner r)
+        {
+            if (!Balance.BalanceWorld.Legacy && Balance.BalanceWorld.TierOf(r.Def) <= 1 && r.Def.Objective != EventObjective.WorldBoss)
+            {
+                _announced.Add((r, Time.time + Balance.EventTierRules.AnnounceLead));
+                var p = Player;
+                if (p != null && Vector3.Distance(p.transform.position, r.Def.Center) < r.Def.Radius * 3f)
+                { r.PlayerNotified = true; GameEventBus.Notify("Neues Ereignis in der Nähe: " + r.Def.Title + " (in 10 s)", new Color(1f, 0.7f, 0.3f)); }
+                return;
+            }
+            BeginWorld(r);
+        }
+
+        void TickAnnounced()
+        {
+            for (int i = _announced.Count - 1; i >= 0; i--)
+            {
+                var a = _announced[i];
+                if (a.r == null || !a.r.Active) { _announced.RemoveAt(i); continue; }
+                if (Time.time >= a.at) { _announced.RemoveAt(i); BeginWorld(a.r); }
+            }
+        }
+
+        void BeginWorld(EventRunner r)
         {
             var w = new World { R = r };
             _worlds.Add(w);

@@ -389,7 +389,11 @@ namespace ProjectTyrant
                     string tier = t.Tier == EnemyTier.Champion ? "<color=#ffb030>Champion</color> " : t.Tier == EnemyTier.Veteran ? "<color=#d0d0ff>Veteran</color> " : "";
                     int diff = t.Level - (Player != null ? Player.Level : 1);
                     string lc = diff >= 3 ? "#ff6050" : diff <= -5 ? "#a0a0a0" : "#ffffff";
-                    _targetName.text = "<color=" + lc + ">" + t.Level + "</color>  " + tier + t.DisplayName;
+                    // Balance B1: Namensfarbe wie GW2 – gelb = neutral (greift nur an, wenn angegriffen), rot = feindlich, grün = freundlich
+                    var tb = t.GetComponent<NpcBrain>();
+                    string nc = t.Team != Team.Enemy ? "#80e080" : tb != null && tb.IsYellow ? "#f2d24a" : "#ff6a55";
+                    string kind = t.Team != Team.Enemy ? "" : tb != null && tb.IsYellow ? " <size=70%><color=#f2d24a>(neutral)</color></size>" : " <size=70%><color=#ff8a75>(feindlich)</color></size>";
+                    _targetName.text = "<color=" + lc + ">" + t.Level + "</color>  " + tier + "<color=" + nc + ">" + t.DisplayName + "</color>" + kind;
                     _targetHp.Last = -1f;
                 }
             }

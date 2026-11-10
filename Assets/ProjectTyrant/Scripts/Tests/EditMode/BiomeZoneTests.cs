@@ -11,7 +11,7 @@ namespace ProjectTyrant.Tests
         [Test]
         public void EachZone_MeetsMinimumContent()
         {
-            Assert.AreEqual(3, BiomeZoneContent.All.Length);
+            Assert.AreEqual(9, BiomeZoneContent.All.Length, "3 Biom-Zonen (Lauf 4) + 6 Zonen (Lauf 6)");
             foreach (var l in BiomeZoneContent.All)
             {
                 Assert.GreaterOrEqual(l.Waypoints.Length, 4, l.ZoneId + " Wegmarken");
@@ -31,7 +31,8 @@ namespace ProjectTyrant.Tests
         public void Ids_AreUniqueAcrossAllZones_AndSpotsInsideZone()
         {
             var ids = new HashSet<string>(ZoneContentIdsStartZone());
-            var sizes = new Dictionary<string, float> { { "nebelmoor", 1000f }, { "frostkamm", 1100f }, { "gluetoede", 1200f } };
+            var sizes = new Dictionary<string, float> { { "nebelmoor", 1000f }, { "frostkamm", 1100f }, { "gluetoede", 1200f },
+                { "silberkueste", 900f }, { "daemmerwald", 1000f }, { "duenenmeer", 1100f }, { "kristalltiefe", 900f }, { "himmelsspitzen", 1000f }, { "tyrannenfeste", 900f } };
             foreach (var l in BiomeZoneContent.All)
             {
                 float lim = sizes[l.ZoneId] * 0.5f * 0.88f;   // innerhalb, vor dem Randgebirge

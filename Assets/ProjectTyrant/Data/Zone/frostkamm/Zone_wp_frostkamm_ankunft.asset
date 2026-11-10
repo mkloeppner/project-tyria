@@ -16,7 +16,7 @@ MonoBehaviour:
   Kind: 0
   DisplayName: Ankunfts-Wegmarke Frostkamm
   Description: "Ankunfts-Wegmarke: wird beim Betreten \xFCber diesen Eingang automatisch freigeschaltet."
-  Position: {x: 8, y: 13.989325, z: -440}
+  Position: {x: 8, y: 12.40919, z: -440}
   Radius: 10
   Experience: 160
   Karma: 0

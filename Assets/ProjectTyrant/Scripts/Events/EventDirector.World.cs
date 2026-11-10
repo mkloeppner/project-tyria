@@ -10,6 +10,15 @@ namespace ProjectTyrant
         NpcBrain Spawn(World w, EnemyArchetype a, Vector3 pos, Vector3? objective, Combatant preferred)
         {
             if (a == null) return null;
+            // Balance B1: Event-Stufe 0–1 – keine Veteranen (Stufe 0), begrenzte Gegnerzahl, nie Spawns nahe Hub/Wegmarke
+            int tier = w != null && !Balance.BalanceWorld.Legacy ? Balance.BalanceWorld.TierOf(w.R.Def) : 2;
+            if (tier <= 1 && w != null)
+            {
+                var tv = Balance.EventTierRules.Values((Balance.EventTier)tier);
+                if (!tv.Veterans && a.Tier == EnemyTier.Veteran && w.R.Def.Trash != null) a = w.R.Def.Trash;
+                if (AliveOf(w) >= tv.MaxTrash && a.Tier == EnemyTier.Trash) return null;
+                pos = Balance.BalanceWorld.ClearSpawn(pos);
+            }
             var rnd = Random.insideUnitCircle * 1.5f;
             var p = pos + new Vector3(rnd.x, 0, rnd.y);
             p.y = ZoneRoot.GroundHeight(p.x, p.z) + 0.1f;
@@ -18,6 +27,7 @@ namespace ProjectTyrant
             b.Objective = objective;
             b.PreferredTarget = preferred;
             b.UseLeash = objective == null;
+            if (tier == 0 && Player != null) { b.LevelOverride = Mathf.Max(1, Player.Level - 1); b.ApplyArchetype(); }   // Einführung: Spieler-Level − 1
             w?.Spawned.Add(b);
             return b;
         }
@@ -165,9 +175,9 @@ namespace ProjectTyrant
                             var d = c.transform.position - (A != null ? A.RuinsCenter.position : Vector3.zero); d.y = 0f;
                             if (d.magnitude < 20f) { var b = c.GetComponent<NpcBrain>(); if (b != null) _ruinsLocals.Add(b); }
                         }
-                        foreach (var b in _ruinsLocals) if (b != null) b.gameObject.SetActive(false);
+                        foreach (var b in _ruinsLocals) if (b != null) ActorVisibility.SetHidden(b.gameObject, true);
                     }
-                    else foreach (var b in _ruinsLocals) if (b != null) b.gameObject.SetActive(true);
+                    else foreach (var b in _ruinsLocals) if (b != null) ActorVisibility.SetHidden(b.gameObject, false);
                     GameEventBus.Notify(set ? "Elmhain ist befreit – keine Aschkrallen für 10 min." : "Aschkrallen kehren nach Elmhain zurück.", new Color(0.8f, 0.9f, 1f));
                     break;
             }

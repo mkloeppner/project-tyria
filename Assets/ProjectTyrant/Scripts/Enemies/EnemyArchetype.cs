@@ -53,6 +53,12 @@ namespace ProjectTyrant
 
         [Tooltip("Lauf 4: Trotzleiste (0 = keine)")] public float Defiance;
 
+        [Header("Balance B1")]
+        [Tooltip("Rollen-Modifikator auf die Gegner-Kurve (Fernkampf −20 % HP, Heiler −30 % Schaden, Jäger +10 % Tempo, lange Leine)")] public Balance.EnemyRole Role;
+        [Tooltip("Werte von Hand (Weltbosse, Metas, Story-Bosse): keine Kurve")] public bool CurveExempt;
+        [Tooltip("Keine Verfolgungsregeln (Weltbosse, Arena-Bosse)")] public bool PursuitExempt;
+        [Tooltip("Tier: neutral (gelb) wo die Gefahrenstufe neutrale Kreaturen vorsieht")] public bool NeutralCreature;
+
         [Header("Belohnung")]
         public float ContributionValue = 10f;
         public int Experience = 50;

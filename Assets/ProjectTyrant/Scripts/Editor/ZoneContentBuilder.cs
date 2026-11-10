@@ -195,7 +195,7 @@ namespace ProjectTyrant.EditorTools
             ItemDefinition I(string id) => db != null ? db.Get(id) : null;
             var vendorStock = new Dictionary<string, (string name, List<VendorEntry> stock)>
             {
-                { "karma_wilma", ("Bäuerin Wilma (Karma)", new List<VendorEntry> { K(I("food_stew"), 30, 5), K(I("food_pie"), 30, 5), K(I("ar_mw_chest"), 420), K(I("ar_mw_legs"), 380), K(I("bag_10"), 300) }) },
+                { "karma_wilma", ("Bäuerin Wilma (Karma)", new List<VendorEntry> { K(I("food_stew"), 30, 5), K(I("food_pie"), 30, 5), K(I("ar_fine_head"), 60), K(I("ar_fine_shoulders"), 60), K(I("ar_fine_chest"), 90), K(I("ar_fine_hands"), 60), K(I("ar_fine_legs"), 80), K(I("ar_fine_feet"), 60), K(I("ar_mw_chest"), 420), K(I("ar_mw_legs"), 380), K(I("bag_10"), 300) }) },   // Balance B1: vollständiges Edel-Set im ersten Herzen
                 { "karma_bertold", ("Archivar Bertold (Karma)", new List<VendorEntry> { K(I("st_rare_aas"), 1800), K(I("tr_ring_rare_aas"), 1400), K(I("ar_rare_head"), 900), K(I("food_soup"), 60, 5) }) },
                 { "karma_kerla", ("Hauptfrau Kerla (Karma)", new List<VendorEntry> { K(I("gs_rare_bers"), 1800), K(I("tr_acc_rare"), 1400), K(I("ar_rare_chest"), 1200), K(I("potion_big"), 50, 5) }) },
             };

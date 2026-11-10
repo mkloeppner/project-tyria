@@ -24,16 +24,16 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: kristalltiefe_silberkueste
-    Position: {x: -20, y: 0, z: -420}
+    Position: {x: -20, y: 25.39357, z: -420}
     Yaw: 2.726311
     TargetZone: silberkueste
     TargetPortal: silberkueste_kristalltiefe
   - Id: kristalltiefe_silbermund
-    Position: {x: 14, y: 0, z: -370}
+    Position: {x: 14, y: 1.7, z: -370}
     Yaw: -2.1669147
     TargetZone: silberkueste
     TargetPortal: plaza_kristalltiefe
-  DefaultSpawn: {x: 0, y: 0, z: -380}
+  DefaultSpawn: {x: 0, y: 1.7, z: -380}
   ContinentRect:
     serializedVersion: 2
     x: 0.62
@@ -41,16 +41,85 @@ MonoBehaviour:
     width: 0.18
     height: 0.22
   ContinentColor: {r: 0.2901961, g: 0.2901961, b: 0.47843137, a: 1}
-  Waypoints: []
-  Arrivals: []
+  Waypoints:
+  - Id: wp_tiefe_eingang
+    Name: "Wegmarke H\xF6hlenmund"
+    Position: {x: 10, y: 1.7, z: -360}
+  - Id: wp_tiefe_see
+    Name: Wegmarke Schwarzer See
+    Position: {x: -150, y: 1.7, z: -40}
+  - Id: wp_tiefe_pilze
+    Name: Wegmarke Pilzwald
+    Position: {x: 200, y: 1.7, z: -120}
+  - Id: wp_tiefe_herz
+    Name: Wegmarke Kristallherz
+    Position: {x: 120, y: 1.7, z: 200}
+  - Id: wp_kristalltiefe_ankunft_silberkueste
+    Name: "Portal-Wegmarke Silberk\xFCste"
+    Position: {x: -26.64281, y: 25.3794, z: -418.00684}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 1.7, z: -380}
+    WaypointId: wp_tiefe_eingang
+  - Entrance: portal:kristalltiefe_silberkueste
+    Position: {x: -19.71461, y: 25.39357, z: -414.0068}
+    WaypointId: wp_kristalltiefe_ankunft_silberkueste
+  - Entrance: portal:kristalltiefe_silbermund
+    Position: {x: 13.773135, y: 1.7, z: -364.0043}
+    WaypointId: wp_tiefe_eingang
   Tips:
   - "Ohne Licht siehst du wenig \u2013 trag eine Laterne oder bleib nahe an den Kristallen."
   - "Blinde J\xE4ger h\xF6ren Schritte."
-  LoadingImage: {fileID: 0}
-  Regions: []
+  LoadingImage: {fileID: 2800000, guid: 81085d38494f851449873a0edccfdf11, type: 3}
+  Regions:
+  - Name: Schwarzer See
+    Center: {x: -180, y: -10}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Pilzwald
+    Center: {x: 230, y: -150}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: "Kristallbr\xFCcke"
+    Center: {x: 0, y: 80}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Kammer der Stimme
+    Center: {x: 150, y: 150}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
+  - Name: Verlassene Zwergenmine
+    Center: {x: -280, y: 250}
+    Radius: 110
+    LevelMin: 30
+    LevelMax: 30
   TimerLabel: 
   TimerPeriod: 0
   TimerOffset: 0
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
-  CompletionIds: []
+  CompletionIds:
+  - wp_tiefe_eingang
+  - wp_tiefe_see
+  - wp_tiefe_pilze
+  - wp_tiefe_herz
+  - poi_tiefe_see
+  - poi_tiefe_pilze
+  - poi_tiefe_bruecke
+  - poi_tiefe_kammer
+  - poi_tiefe_mine
+  - vista_tiefe_kuppel
+  - vista_tiefe_mine
+  - vista_tiefe_insel
+  - hc_tiefe_echo
+  - hc_tiefe_jaeger
+  - hc_tiefe_lore
+  - hc_tiefe_insel
+  - heart_tiefe_brom
+  - heart_tiefe_lys
+  - heart_tiefe_fischer
+  - heart_tiefe_laternen

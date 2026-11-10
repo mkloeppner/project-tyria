@@ -176,6 +176,9 @@ namespace ProjectTyrant
             return false;
         }
 
+        /// <summary>Balance B1: zusätzliche Startbedingung für Auslöser (Ketten-Glieder und Debug-Starts sind ausgenommen).</summary>
+        public Func<EventDefinition, bool> StartGate;
+
         public void Tick(float dt, Vector3 playerPos)
         {
             Now += dt;
@@ -190,6 +193,7 @@ namespace ProjectTyrant
                 s.Timer += dt;
                 if (s.Def.IsChainMember || ChainBusy(s.Def)) continue;
                 if (RunningCount >= MaxParallel) continue;
+                if (StartGate != null && !StartGate(s.Def)) continue;   // Balance B1: kein Start in Stufe 0–1, während der Spieler im Hub steht
                 if (TriggerSatisfied(s, playerPos)) Start(s);
             }
             _heartTriggers.Clear();

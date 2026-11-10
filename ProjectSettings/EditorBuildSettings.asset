@@ -23,6 +23,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Gluetoede.unity
     guid: c831a65e3f2a8b3409cb4d7b1590c903
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Silberkueste.unity
+    guid: 79ea794ddc9d1984894d4c80df7aea9b
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Daemmerwald.unity
+    guid: 4dacef605105b5c449d00ce422f70f91
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Duenenmeer.unity
+    guid: 024a5efe39d3ec14eb39c5be3f6ea9cc
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Kristalltiefe.unity
+    guid: 255f000fc8430754985a1df48323d320
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Himmelsspitzen.unity
+    guid: 41db69ef413a73249a249cd840664e2a
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Tyrannenfeste.unity
+    guid: 74ac45aa55938df41a8f525b5adc2d1b
   - enabled: 0
     path: Assets/ProjectTyrant/Scenes/PT_Sandbox.unity
     guid: 9464bea2a3f80cb4db0b0ec5bd543bb8

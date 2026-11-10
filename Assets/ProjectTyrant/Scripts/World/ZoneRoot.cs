@@ -20,8 +20,9 @@ namespace ProjectTyrant
         public Combatant[] HubCrates = new Combatant[0];
         public NpcBrain[] Guards = new NpcBrain[0];
         public VendorNpc CaravanVendor;
+        [Header("Balance B1")] public Balance.BalanceConfig BalanceConfig;
 
-        void Awake() { Current = this; }
+        void Awake() { Current = this; if (BalanceConfig != null) Balance.BalanceWorld.Config = BalanceConfig; }
         void OnDestroy() { if (Current == this) Current = null; }
 
         public string Id => Definition != null ? Definition.Id : gameObject.scene.name;

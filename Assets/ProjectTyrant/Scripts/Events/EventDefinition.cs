@@ -58,6 +58,10 @@ namespace ProjectTyrant
         [Tooltip("Beherrschungspunkt bei Erfolg (Weltboss/Meta-Finale)")] public int MasteryPoints;
         public string MetaId;
         public int MetaPhase;
+        [Header("Balance B1")]
+        [Tooltip("Event-Stufe 0 Einführung … 4 Meta (Validator prüft gegen die Gefahrenstufe)")] public Balance.EventTier Tier = Balance.EventTier.Standard;
+        public bool TierSet;
+        [HideInInspector] public int BalanceBaseTargets;
 
         /// <summary>Skalierungs-Hook (GW2: mehr Spieler → mehr Gegner/HP). Im Prototyp konstant 1.</summary>
         public static float EventScale(int playerCount) => 1f;

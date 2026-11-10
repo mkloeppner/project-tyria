@@ -67,6 +67,8 @@ namespace ProjectTyrant
         public float TimerPeriod, TimerOffset;
         public Vector3 TimerPosition;
         public string TimerEventId;
+        [Header("Balance B1")]
+        [Tooltip("Gefahrenkarte (Gebiete, Bänder, Sicherheitszonen) – vom Builder gebacken")] public Balance.ZoneDangerMap DangerMap = new Balance.ZoneDangerMap();
         [Tooltip("Ids aller Zonenabschluss-Ziele (vom Builder) – für den Prozentwert auf der Kontinentkarte")] public List<string> CompletionIds = new List<string>();
 
         public string LevelText => LevelMin == LevelMax ? LevelMin.ToString() : LevelMin + "–" + LevelMax;

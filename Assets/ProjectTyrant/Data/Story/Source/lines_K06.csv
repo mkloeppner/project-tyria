@@ -31,6 +31,12 @@ K06_S03_C2_B;held;amuesiert;links;Der Herold kann warten. Er hat Übung darin.;o
 K06_S03_R1;gorran;neutral;rechts;Ich trage ins Protokoll ein: Der Wald zuerst. Und ein zweites Brötchen für mich.;reply
 K06_S03_R2;veyra;amuesiert;rechts;Du hast recht. Und das ärgert mich.;reply
 K06_S03_L05;mira;entschlossen;rechts;Ich bleibe hier und organisiere. Jemand muss die Briefe schreiben, die du nicht liest.;
+K06_S03_C3_A;held;amuesiert;links;Ich lese jeden einzelnen. Irgendwann. Versprochen.;opt:3|tend:Charme|reply:K06_S03_R3
+K06_S03_C3_B;held;neutral;links;Schreib mir nur, wenn es brennt. Dann komme ich sofort.;opt:3|tend:Wuerde|reply:K06_S03_R4
+K06_S03_C3_C;held;zornig;links;Schreib lieber dem Herold. Sag ihm, dass ich komme.;opt:3|tend:Wildheit|reply:K06_S03_R5
+K06_S03_R3;mira;amuesiert;rechts;Irgendwann. Ich rahme mir das ein.;reply
+K06_S03_R4;mira;besorgt;rechts;Hier brennt ständig etwas. Ich wähle aus.;reply
+K06_S03_R5;mira;entschlossen;rechts;Mit Vergnügen. Ich nehme die gute Tinte.;reply
 K06_J;held;neutral;;In Silbermund tagen die Bündnisse. Wir haben eine Spur zum Schlüssel im Dünenmeer, aber zuerst ruft der Dämmerwald.;journal
 K06_J@Wacht;held;neutral;;Mit der Wacht stürmte ich die Schmugglergrotte an der Silberküste. Die Spur führt in den Dämmerwald und ins Dünenmeer.;journal
 K06_J@Archiv;held;neutral;;Mit Tovin holte ich das gestohlene Krönungsbuch zurück. Die Spur führt in den Dämmerwald und ins Dünenmeer.;journal

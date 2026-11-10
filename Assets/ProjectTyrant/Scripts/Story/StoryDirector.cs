@@ -398,10 +398,10 @@ namespace ProjectTyrant
                     // nur Gegner ausblenden: Verbündete/Ereignis-Figuren mit Rig + Navmesh-Agent hängen beim Reaktivieren (Editor-Freeze im M29-Test)
                     if (c == null || c == Player || c.Team != Team.Enemy || _instanceEnemies.Contains(c) || c.GetComponentInParent<StoryCompanion>() != null || c.GetComponentInParent<StoryObject>() != null) continue;
                     if (Flat(c.transform.position - st.Position) > r) continue;
-                    c.gameObject.SetActive(false); _quieted.Add(c.gameObject);
+                    ActorVisibility.SetHidden(c.gameObject, true); _quieted.Add(c.gameObject);
                 }
             }
-            else { foreach (var g in _quieted) if (g != null) g.SetActive(true); _quieted.Clear(); }
+            else { foreach (var g in _quieted) if (g != null) ActorVisibility.SetHidden(g, false); _quieted.Clear(); }
         }
 
         void KeepInBoundary(StoryStep st)

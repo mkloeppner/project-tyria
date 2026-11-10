@@ -41,6 +41,7 @@ namespace ProjectTyrant
             _caster = GetComponent<SkillCaster>();
             Local = this;
             _self.AbsorbDamage = Absorb;
+            _self.Damaged += d => { if (!Balance.BalanceWorld.Legacy && Motor.IsChanneling && d.Amount > 0f) { Motor.CancelChannel(); GameEventBus.Notify("Aufsitzen unterbrochen", new Color(1f, 0.7f, 0.4f)); } };   // Balance B1
             _self.InvulnerabilitySources.Add(_dodgeInvuln);
             _baseFallHeight = _pc.FallDamageHeight;
             _pc.FallDamageHandler = OnFall;
@@ -143,6 +144,8 @@ namespace ProjectTyrant
                 GameEventBus.Notify(prof.State.Mounts.Count == 0 ? "Noch kein Reittier – der Stallmeister in Sonnfurt verkauft den Raptor" : "Reittier nicht freigeschaltet", new Color(1f, 0.7f, 0.4f));
                 return false;
             }
+            var regen = GetComponent<OutOfCombatRegen>();
+            if (!Balance.BalanceWorld.Legacy && regen != null && regen.InCombat && !Motor.IsMounted) { GameEventBus.Notify("Im Kampf kein Aufsitzen – erst 5 s ohne Schaden", new Color(1f, 0.7f, 0.4f)); return false; }   // Balance B1: GW2-Regel
             if (InDeepWater && k != MountKind.Skimmer) { GameEventBus.Notify("Im tiefen Wasser nur mit dem Skimmer", new Color(1f, 0.7f, 0.4f)); return false; }
             if (!Motor.BeginMount(StatsFor(k), _pc.IsGrounded || _pc.IsHovering, true))
             {

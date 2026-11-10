@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_duene_saeulen
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: duene_saeulen
+  Title: "S\xE4ulen von Qasir st\xFCtzen"
+  Description: "St\xFCtze die S\xE4ulen, bevor die Ruinen einst\xFCrzen."
+  ChainId: qasir
+  Objective: 6
+  Center: {x: 260, y: 6.133659, z: 210}
+  Radius: 32
+  Duration: 240
+  TargetCount: 4
+  Triggers:
+  - Type: 1
+    Delay: 20
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 300
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: duene_oase
+  FailNext: 
+  Cooldown: 240
+  GoldContribution: 4693.5483
+  Experience: 1565
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: duenenmeer_duene_saeulen
+  Path: []
+  DeliverPoint: {x: 260, y: 6.133659, z: 210}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 8e3d3ddf0ac4ad747b149a7ace6dbed7, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 0}
+  Sites:
+  - {x: 270.13168, y: 6.0670147, z: 214.2836}
+  - {x: 255.7164, y: 6.134458, z: 220.13167}
+  - {x: 249.86833, y: 6.139445, z: 205.7164}
+  - {x: 264.2836, y: 6.174538, z: 199.86833}
+  SiteChannel: 3
+  SiteLabel: "S\xE4ule st\xFCtzen"
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0

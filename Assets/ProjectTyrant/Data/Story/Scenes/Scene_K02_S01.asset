@@ -89,7 +89,7 @@ MonoBehaviour:
       Lodestar: 0
       Flag: 
       NotFlag: 
-    ChoiceIndex: -1
+    ChoiceIndex: 1
   Choices:
   - Prompt: 
     Options:
@@ -107,5 +107,17 @@ MonoBehaviour:
       Tendency: 3
       Flag: 
       Reply: K02_S01_R3
+      SetPact: 0
+  - Prompt: 
+    Options:
+    - Line: K02_S01_C2_A
+      Tendency: 1
+      Flag: 
+      Reply: K02_S01_R4
+      SetPact: 0
+    - Line: K02_S01_C2_B
+      Tendency: 2
+      Flag: 
+      Reply: K02_S01_R5
       SetPact: 0
   Cutscene: {fileID: 0}
