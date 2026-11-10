@@ -78,3 +78,10 @@ Jedes Objekt mit `PlaceholderMarker`-Komponente ist hier gelistet. Austausch: Me
 | Waffenmodelle Langbogen, Axt+Fackel, Schwert+Kriegshorn, Stab, Zepter+Fokus, Dolche, Schwert+Pistole, Kurzbogen | CharacterBuilder (Primitive) | prozedurale Primitive mit Vertex-Farben | modellierte Waffen (Meshy M27) |
 | Klassen-Rüstungen | PlayerVisuals | Wächter-Rig mit umgefärbten Vertex-Farben | eigene Rüstungs-Silhouetten je Gewichtsklasse |
 | Kulisse der Charakterauswahl | Scenes/PT_CharacterSelect | Primitive (Wiese, Steinplatz, Bäume, Felsen) | gestaltete Kulisse |
+
+### Lauf 5 / M26 – Elite-Spezialisierungen
+| Objekt | Ort | Platzhalter | Ziel |
+|---|---|---|---|
+| 10 neue Waffenmodelle (Hammer, Gewehr, Dolch+Horn, Zepter+Horn, Degen+Fokus, Zepter+Dolch, Zepter+Pistole, Axt+Dolch, Schwert+Schild, Zepter+Fackel) | CharacterBuilder (Primitive) | Primitive mit Materialfarben | modellierte Waffen |
+| Signatur-Effekte (16 Paletten) | Prefabs/Vfx/<Palette> | Baukasten-Formen in eigener Farbe | handgestaltete Signatur-Effekte |
+| Sound-Motive (16) | Procedural/Audio | prozedurale Synth-Familien | gestaltete Klangfamilien |

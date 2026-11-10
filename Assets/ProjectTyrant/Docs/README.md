@@ -22,13 +22,18 @@
 | + / − | Minimap-Zoom (5 Stufen) |
 | Alt + Ziehen | Stapel teilen · Shift (gehalten) = Item-Vergleich · Rechtsklick = Kontextmenü · Doppelklick = benutzen/anlegen |
 | F1–F4 | Klassenmechanik: Wildhüter Gefährte (Angriff, Familien-Skill, passiv, Tausch) · Elementarweber Einstimmung Feuer/Wasser/Luft/Erde · Schattenklinge F1 Stehlen / gestohlenen Skill einsetzen |
-| F5 | Elite-Mechanik (ab M26) |
+| F5 | Elite-Mechanik der aktiven Spezialisierung (Hainform, Verschmelzen, Entfesseln, Markieren, Überladen, Elementarkern, Erdbruch, Knien, Ausweich-Skill wählen, Schattenschleier, Rückruf, Urteil, Festung, Sturmzorn, Dornenhaut) |
 | Esc | Spielmenü (Fortsetzen, Optionen, Charakterauswahl, Beenden) |
 | F9 | Debug-Panel (Editor/Development Build) · F10 Hilfe |
 
 ## Charakterauswahl
 - Startszene `PT_CharacterSelect`: ↑/↓ (←/→) wählt einen der 5 Plätze, **Spielen** lädt den Charakter, **Erstellen** (Klasse, Name, Farben, Signatur-Vorschau), **Löschen** (Name eintippen). Geldbörse, Reittiere, Beherrschungen und Optionen gelten für den ganzen Account.
 - Klassen: **Wächter** (schwer, Großschwert/Stab), **Wildhüter** (mittel, Gefährte; Langbogen, Axt+Fackel, Schwert+Kriegshorn), **Elementarweber** (leicht, Einstimmungen; Stab, Zepter+Fokus, Dolch+Dolch), **Schattenklinge** (mittel, 12 Initiative, Stehlen, Heimlichkeit; Dolch+Dolch, Schwert+Pistole, Kurzbogen).
+
+## Elite-Spezialisierungen
+- Ab Stufe 30: Held (H) → Eigenschaften → Spalte 3, Reiter der Spezialisierung → 3 Schritte à 10 Heldenpunkte (Linie, Waffe, Skilltyp) → „Aktivieren“ (nur außerhalb des Kampfes; belegt Platz 3). Nur eine gleichzeitig.
+- Wildhüter: Hainwächter (Stab), Bestienbund (Dolch & Horn), Dornenwächter (Hammer), Sturmfalke (Gewehr) · Elementarweber: Sturmrufer (Zepter & Horn), Weber (Degen & Fokus), Katalysator (Hammer), Glutbinder (Zepter & Dolch) · Schattenklinge: Wegelagerer (Gewehr), Phantomtänzer (Stab), Schattenhüter (Zepter & Pistole), Klingenwirbel (Axt & Dolch) · Wächter: Glutrichter (Langbogen), Bollwerkmeister (Schwert & Schild), Sturmherold (Hammer), Dornenschild (Zepter & Fackel).
+- Schnelltest: F9 → „Elite aktivieren (Id)“, z. B. `hainwaechter` (setzt Stufe 30, schaltet frei, legt die Waffe an).
 
 ## Fenster
 - **Inventar (I):** Rucksack 20 + 4 Taschenplätze, Ziehen/Tauschen/Zusammenführen, Aufräumen, Plunder verkaufen, Geldbörse (g/s/k) und Karma.
@@ -54,7 +59,7 @@
 JSON unter `Application.persistentDataPath/ProjectTyrant/save.json` (DTOs, atomar). Autosave alle 60 s, bei Stufenaufstieg, Zonenabschluss, Reise und Fensteränderungen; Laden beim Szenenstart. Version 2 (Lauf-3-Stände werden migriert). Enthält aktuelle Zone, Nebel je Zone, Reittiere/Auswahl, Beherrschungen (EP, Punkte, Ränge, Auswahl), Stufe/EP, Heldenpunkte, Fertigkeiten/Eigenschaften, Leiste, Inventar/Taschen/Ausrüstung/Nahrung, Geldbörse/Karma, Zonenabschluss, Herzen, Truhe, Nebel, Position.
 
 ## Debug-Panel (F9)
-Stufe setzen, +EP, +Heldenpunkte, +Gold, +Karma, Gott-Modus, Effekt-Tests, Speichern/Laden/Neues Spiel/Löschen, Item geben (Name/Id), Champion-Beutel, Build zurückerstatten, Zone abschließen/Stand, Event starten/Status. Lauf 4: Zone wechseln (Id), nächste Zone, Level-Cap setzen, Reittier freischalten, Beherrschungspunkte/-EP, alle Beherrschungen, letzte Ladezeit. Lauf 5: Klasse wechseln (Id, Testmodus ohne Speichern), alle Skills freischalten, Klasse: Status, Duell (alle Klassen je 180 s gegen Veteranen, Bericht im Log).
+Stufe setzen, +EP, +Heldenpunkte, +Gold, +Karma, Gott-Modus, Effekt-Tests, Speichern/Laden/Neues Spiel/Löschen, Item geben (Name/Id), Champion-Beutel, Build zurückerstatten, Zone abschließen/Stand, Event starten/Status. Lauf 4: Zone wechseln (Id), nächste Zone, Level-Cap setzen, Reittier freischalten, Beherrschungspunkte/-EP, alle Beherrschungen, letzte Ladezeit. Lauf 5: Klasse wechseln (Id, Testmodus ohne Speichern), alle Skills freischalten, Klasse: Status, Duell (alle Klassen je 180 s gegen Veteranen, Bericht im Log), Elite aktivieren (Id) / ablegen.
 
 ## Architektur
 - **Daten (ScriptableObjects, `Data/`):** Skills, Effekte, Items + Datenbank, Beutetabellen, Händler, Spezialisierungen/Eigenschaften, Ereignisse, Zonen-Objekte, Gegner-Archetypen, Combo-Tabelle.

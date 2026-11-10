@@ -36,3 +36,8 @@
 | 31 | Klassen-Silhouetten unterscheiden sich nur über Farben und Waffen, nicht über Rüstungsformen. | offen (M27, Meshy) |
 | 32 | Klassen-Duell (ohne Spezialisierungen): Schattenklinge 125 DPS und Elementarweber 223 DPS liegen deutlich unter Wächter (396) und Wildhüter (435); Ziel ±15 %. | offen → M27 Balancing |
 | 33 | Ein Debug-Klassentest vor M25-Abschluss hatte Klasse/Waffen des migrierten Wächters überschrieben; aus `save.json` wiederhergestellt, Debug-Wechsel speichern seitdem nicht. | behoben (M25) |
+| 34 | Klassen-/Spezialisierungs-Schaden streut stark (Duell, gleiches Gear: Sturmrufer 327 bis Dornenwächter 1357 DPS; Wildhüter-Schaden kommt großteils vom Gefährten). Ziel ±15 % zum Wächter. | offen → M27 Balancing |
+| 35 | Zauber-Posen der Spezialisierungen nutzen die vorhandenen Clips (Cast1H/Cast2H/CastChannel/Schuss je Waffenstil) – keine eigenen Clips je Spezialisierung. | bewusst (Lauf 5) |
+| 36 | Glutbinder-„Elementar-Diener“ sind ortsfeste Felder mit Treffer-Takt, keine beweglichen beschworenen Begleiter. | bewusst (Lauf 5) |
+| 37 | Haupt- und Nebenhand sind keine getrennten Ausrüstungsplätze: Elite-Waffen kommen als ganze Sets (z. B. Zepter & Kriegshorn); beim Elementarweber übernehmen sie die Zepter-Plätze 1–3. | bewusst (Lauf 5, ggf. Lauf 8) |
+| 38 | Duell-Bot: in Einzelläufen entstand ein Gegner an unerreichbarer Stelle (DPS 0, kein Schaden erlitten); Wiederholung lieferte normale Werte. Stellungskorrektur über Sichtlinie ist eingebaut, ein Gegner-Neuplatzieren noch nicht. | offen (QA-Werkzeug) |
