@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c8853922032dd4aa0a2a32765460ec, type: 3}
+  m_Name: Biome_wueste
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.BiomeProfile
+  Id: wueste
+  DisplayName: "D\xFCnenmeer"
+  Amplitude: 16
+  Frequency: 0.0028
+  Octaves: 3
+  Terrace: 0
+  CanyonDepth: 12
+  CanyonFrequency: 0.0035
+  BaseHeight: 4
+  WaterLevel: 0.3
+  EdgeMountainHeight: 42
+  GroundLow: {r: 0.84705883, g: 0.70980394, b: 0.47058824, a: 1}
+  GroundMid: {r: 0.89411765, g: 0.76862746, b: 0.5411765, a: 1}
+  GroundHigh: {r: 0.9372549, g: 0.8392157, b: 0.63529414, a: 1}
+  Cliff: {r: 0.69803923, g: 0.47058824, b: 0.2901961, a: 1}
+  Shore: {r: 0.7882353, g: 0.654902, b: 0.41568628, a: 1}
+  Water: {r: 0.25, g: 0.6, b: 0.62, a: 0.85}
+  FogColor: {r: 0.9098039, g: 0.8117647, b: 0.627451, a: 1}
+  FogDensity: 0.0035
+  SkyTop: {r: 0.30980393, g: 0.56078434, b: 0.8156863, a: 1}
+  SkyHorizon: {r: 0.95686275, g: 0.8745098, b: 0.7137255, a: 1}
+  SkyBottom: {r: 0.78431374, g: 0.65882355, b: 0.47058824, a: 1}
+  SunColor: {r: 1, g: 0.9411765, b: 0.78431374, a: 1}
+  SunIntensity: 1.35
+  Saturation: 8
+  SplitShadows: {r: 0.47843137, g: 0.3529412, b: 0.5411765, a: 1}
+  SplitHighlights: {r: 0.9411765, g: 0.7529412, b: 0.4392157, a: 1}
+  TreeDensity: 0.04
+  RockDensity: 0.35
+  TreeColor: {r: 0.47843137, g: 0.5411765, b: 0.22745098, a: 1}
+  TrunkColor: {r: 0.41568628, g: 0.2901961, b: 0.16470589, a: 1}
+  Conifers: 0
+  DeadTrees: 1
+  Weather: 4
+  Ambient: 2

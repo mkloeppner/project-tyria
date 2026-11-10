@@ -28,7 +28,12 @@ MonoBehaviour:
     Yaw: 170.83765
     TargetZone: nebelmoor
     TargetPortal: nebelmoor_sonnfurt
-  DefaultSpawn: {x: -54, y: 1, z: -51}
+  - Id: sonnfurt_silbermund
+    Position: {x: -26, y: 0.4402016, z: -42}
+    Yaw: 31.759481
+    TargetZone: silberkueste
+    TargetPortal: plaza_sonnfurt
+  DefaultSpawn: {x: -56, y: 0, z: -52}
   ContinentRect:
     serializedVersion: 2
     x: 0.06
@@ -39,19 +44,7 @@ MonoBehaviour:
   Waypoints:
   - Id: wp_sonnfurt
     Name: Wegmarke Sonnfurt
-    Position: {x: -54, y: 1, z: -54}
-  - Id: wp_gerstenbrunn
-    Name: Wegmarke Gerstenbrunn
-    Position: {x: -8, y: 1.047716, z: -44}
-  - Id: wp_dornwacht
-    Name: Wegmarke Dornwacht
-    Position: {x: -15, y: 1.0631161, z: -3}
-  - Id: wp_elmhain
-    Name: Wegmarke Elmhain
-    Position: {x: 40, y: 1.1482588, z: -50}
-  - Id: wp_spiegelsee
-    Name: Wegmarke Spiegelsee
-    Position: {x: -25, y: 0.35889173, z: 52}
+    Position: {x: -56, y: 0, z: -52}
   Arrivals:
   - Entrance: spawn
     Position: {x: -54, y: 1, z: -51}

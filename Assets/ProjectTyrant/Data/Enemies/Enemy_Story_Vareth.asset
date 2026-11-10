@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a9756ba196e784f8aead94cb329eb1, type: 3}
+  m_Name: Enemy_Story_Vareth
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EnemyArchetype
+  DisplayName: Vareth, der Tyrann
+  Tier: 3
+  Team: 2
+  Prefab: {fileID: 6212826958942609016, guid: 38059a80c5200214cae606f30f9c173e, type: 3}
+  FixedLevel: 30
+  AttributeFactor: 1.25
+  ArmorFactor: 1.6
+  HealthFactor: 70
+  MaxHealth: 0
+  AttackCoefficient: 8
+  AttackRange: 4.5
+  AttackInterval: 2.8
+  AttackWindup: 0.85
+  Palette: 21
+  MoveSpeed: 3.2
+  AggroRange: 26
+  LeashRange: 45
+  Scale: 2.7
+  OnHitDebuff:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  HasTelegraph: 1
+  TelegraphRadius: 8
+  TelegraphDelay: 1.7
+  TelegraphCoefficient: 20
+  TelegraphInterval: 10
+  Behavior: 3
+  BehaviorRadius: 7
+  BehaviorInterval: 9
+  BehaviorCoefficient: 9
+  BehaviorEffect:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  SummonArchetype: {fileID: 11400000, guid: cf6dd521248e07e4f9de3d0d3ba68a74, type: 2}
+  ProjectileColor: {r: 0.9, g: 0.4, b: 0.2, a: 1}
+  Defiance: 1800
+  ContributionValue: 400
+  Experience: 3000
+  Loot: {fileID: 0}

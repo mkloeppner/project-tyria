@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a9756ba196e784f8aead94cb329eb1, type: 3}
+  m_Name: Enemy_Duene_Sandwurm
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EnemyArchetype
+  DisplayName: Sandwurm
+  Tier: 1
+  Team: 2
+  Prefab: {fileID: 3035768595561056858, guid: 5f0bc0d32a893d343b3c3b2cdf7a6664, type: 3}
+  FixedLevel: 0
+  AttributeFactor: 1
+  ArmorFactor: 1.6
+  HealthFactor: 1
+  MaxHealth: 0
+  AttackCoefficient: 3.4
+  AttackRange: 3
+  AttackInterval: 2
+  AttackWindup: 0.7
+  Palette: 20
+  MoveSpeed: 4.6
+  AggroRange: 14
+  LeashRange: 45
+  Scale: 1.4
+  OnHitDebuff:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  HasTelegraph: 0
+  TelegraphRadius: 5
+  TelegraphDelay: 1.5
+  TelegraphCoefficient: 25
+  TelegraphInterval: 9
+  Behavior: 1
+  BehaviorRadius: 7
+  BehaviorInterval: 8
+  BehaviorCoefficient: 4
+  BehaviorEffect:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  SummonArchetype: {fileID: 0}
+  ProjectileColor: {r: 0.5, g: 0.9, b: 0.3, a: 1}
+  Defiance: 0
+  ContributionValue: 10
+  Experience: 60
+  Loot: {fileID: 11400000, guid: acfccf0fe09174d42bb05a8032a5cf0c, type: 2}

@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_kristalltiefe
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: kristalltiefe
+  DisplayName: Kristalltiefe
+  Description: "H\xF6hlen unter den H\xFCgeln, erleuchtet nur von Kristallen."
+  SceneName: PT_Zone_Kristalltiefe
+  Seed: 30104
+  Size: 900
+  LevelMin: 30
+  LevelMax: 30
+  Biome: {fileID: 11400000, guid: 2cba07233dee48344a86540722a177e2, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: kristalltiefe_silberkueste
+    Position: {x: -20, y: 0, z: -420}
+    Yaw: 2.726311
+    TargetZone: silberkueste
+    TargetPortal: silberkueste_kristalltiefe
+  - Id: kristalltiefe_silbermund
+    Position: {x: 14, y: 0, z: -370}
+    Yaw: -2.1669147
+    TargetZone: silberkueste
+    TargetPortal: plaza_kristalltiefe
+  DefaultSpawn: {x: 0, y: 0, z: -380}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.62
+    y: 0.04
+    width: 0.18
+    height: 0.22
+  ContinentColor: {r: 0.2901961, g: 0.2901961, b: 0.47843137, a: 1}
+  Waypoints: []
+  Arrivals: []
+  Tips:
+  - "Ohne Licht siehst du wenig \u2013 trag eine Laterne oder bleib nahe an den Kristallen."
+  - "Blinde J\xE4ger h\xF6ren Schritte."
+  LoadingImage: {fileID: 0}
+  Regions: []
+  TimerLabel: 
+  TimerPeriod: 0
+  TimerOffset: 0
+  TimerPosition: {x: 0, y: 0, z: 0}
+  TimerEventId: 
+  CompletionIds: []

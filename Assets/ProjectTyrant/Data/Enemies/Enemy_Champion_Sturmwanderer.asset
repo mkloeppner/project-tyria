@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a9756ba196e784f8aead94cb329eb1, type: 3}
+  m_Name: Enemy_Champion_Sturmwanderer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EnemyArchetype
+  DisplayName: Der Sturmwanderer
+  Tier: 3
+  Team: 2
+  Prefab: {fileID: 4234302787731664693, guid: 7aa3cc3d3cc7a9f4bb218381f708535e, type: 3}
+  FixedLevel: 0
+  AttributeFactor: 1
+  ArmorFactor: 1.6
+  HealthFactor: 16
+  MaxHealth: 0
+  AttackCoefficient: 7
+  AttackRange: 11
+  AttackInterval: 2.6
+  AttackWindup: 0.75
+  Palette: 20
+  MoveSpeed: 3.4
+  AggroRange: 20
+  LeashRange: 45
+  Scale: 2.4
+  OnHitDebuff:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  HasTelegraph: 1
+  TelegraphRadius: 6
+  TelegraphDelay: 1.5
+  TelegraphCoefficient: 18
+  TelegraphInterval: 11
+  Behavior: 9
+  BehaviorRadius: 6
+  BehaviorInterval: 10
+  BehaviorCoefficient: 8
+  BehaviorEffect:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  SummonArchetype: {fileID: 11400000, guid: 993bc483a307a764caae41037a7a16b8, type: 2}
+  ProjectileColor: {r: 0.8, g: 1, b: 1, a: 1}
+  Defiance: 700
+  ContributionValue: 120
+  Experience: 800
+  Loot: {fileID: 11400000, guid: dc6a13d1d2861534682109619d361169, type: 2}

@@ -8419,6 +8419,102 @@ MonoBehaviour:
       LoopSeam: 0.0028625578
       CentroidHz: 1889.4138
       Seconds: 8.5
+  - Id: Amb/silberkueste
+    Category: 5
+    Group: 2
+    Loop: 1
+    Spatial: 0
+    VolumeDb: 0
+    Priority: 1
+    Clips:
+    - {fileID: 8300000, guid: 7919f0aa56fb9804ea6ba2c534eaf845, type: 3}
+    Stats:
+    - PeakDb: -3.1919289
+      RmsDb: -16.000341
+      Dc: 0.00000020205233
+      LoopSeam: 0.005480908
+      CentroidHz: 1397.8037
+      Seconds: 8.5
+  - Id: Amb/daemmerwald
+    Category: 5
+    Group: 2
+    Loop: 1
+    Spatial: 0
+    VolumeDb: 0
+    Priority: 1
+    Clips:
+    - {fileID: 8300000, guid: 95588e539e15bc44f8b0350099cbaced, type: 3}
+    Stats:
+    - PeakDb: -1.0005057
+      RmsDb: -16.01624
+      Dc: -0.0000010065003
+      LoopSeam: 0.015417591
+      CentroidHz: 2631.8745
+      Seconds: 8.5
+  - Id: Amb/duenenmeer
+    Category: 5
+    Group: 2
+    Loop: 1
+    Spatial: 0
+    VolumeDb: 0
+    Priority: 1
+    Clips:
+    - {fileID: 8300000, guid: 5b71f7894104e7d42a738c07cfe3e274, type: 3}
+    Stats:
+    - PeakDb: -2.313982
+      RmsDb: -16.000288
+      Dc: 0.0000011705132
+      LoopSeam: 0.0026022382
+      CentroidHz: 1864.9683
+      Seconds: 8.5
+  - Id: Amb/kristalltiefe
+    Category: 5
+    Group: 2
+    Loop: 1
+    Spatial: 0
+    VolumeDb: 0
+    Priority: 1
+    Clips:
+    - {fileID: 8300000, guid: cf682c55b33fcab4e9c5d9765b1bdff2, type: 3}
+    Stats:
+    - PeakDb: -1.0000898
+      RmsDb: -16.002367
+      Dc: -0.00000016579784
+      LoopSeam: 0.0010344125
+      CentroidHz: 1530.1965
+      Seconds: 8.5
+  - Id: Amb/himmelsspitzen
+    Category: 5
+    Group: 2
+    Loop: 1
+    Spatial: 0
+    VolumeDb: 0
+    Priority: 1
+    Clips:
+    - {fileID: 8300000, guid: f5c5bbbf01e05a943b0103617e5feec5, type: 3}
+    Stats:
+    - PeakDb: -3.058998
+      RmsDb: -16.000565
+      Dc: -0.000000017032027
+      LoopSeam: 0.0018032882
+      CentroidHz: 2242.4434
+      Seconds: 8.5
+  - Id: Amb/tyrannenfeste
+    Category: 5
+    Group: 2
+    Loop: 1
+    Spatial: 0
+    VolumeDb: 0
+    Priority: 1
+    Clips:
+    - {fileID: 8300000, guid: 0a6ba0ec88b12eb41bce068292234aaa, type: 3}
+    Stats:
+    - PeakDb: -1.486137
+      RmsDb: -16.00037
+      Dc: 0.0000018957651
+      LoopSeam: 0.0023550764
+      CentroidHz: 1968.8501
+      Seconds: 8.5
   - Id: Amb/Water
     Category: 5
     Group: 2
@@ -9586,6 +9682,486 @@ MonoBehaviour:
       LoopSeam: 0.00076093833
       CentroidHz: 6385.7383
       Seconds: 62.608685
+  - Key: silberkueste/Explore
+    Bpm: 92
+    Bars: 24
+    Stems:
+    - {fileID: 8300000, guid: 7a3cb1c889e9f6d4c8391af8db24c262, type: 3}
+    - {fileID: 8300000, guid: 85403bb54fd877b4e96584862f1c56cc, type: 3}
+    - {fileID: 8300000, guid: 9dca54aab98512648a83d7942717ddb8, type: 3}
+    - {fileID: 8300000, guid: 330fccb85a3597a4dbefc95a6e926276, type: 3}
+    - {fileID: 8300000, guid: 689e85fbd0922d04b81ba4a222019595, type: 3}
+    Stats:
+    - PeakDb: -3.636003
+      RmsDb: -17.498383
+      Dc: 1.07729846e-10
+      LoopSeam: 0.0015861809
+      CentroidHz: 1104.7012
+      Seconds: 62.608685
+    - PeakDb: -5.173251
+      RmsDb: -18.969082
+      Dc: -3.8266074e-10
+      LoopSeam: 0.000024594789
+      CentroidHz: 1347.3046
+      Seconds: 62.608685
+    - PeakDb: -6.797292
+      RmsDb: -15.059972
+      Dc: -0.0000000013812024
+      LoopSeam: 0.000015203899
+      CentroidHz: 140.51596
+      Seconds: 62.608685
+    - PeakDb: -9.403397
+      RmsDb: -28.34281
+      Dc: -1.3758795e-10
+      LoopSeam: 0.0007448853
+      CentroidHz: 973.5811
+      Seconds: 62.608685
+    - PeakDb: -17.473085
+      RmsDb: -38.57532
+      Dc: 1.673526e-12
+      LoopSeam: 0.0015045775
+      CentroidHz: 7204.4224
+      Seconds: 62.608685
+  - Key: silberkueste/Combat
+    Bpm: 130
+    Bars: 36
+    Stems:
+    - {fileID: 8300000, guid: 2f660b67da26f28438c963b419847349, type: 3}
+    - {fileID: 8300000, guid: f1fb4cf1a6e06e44d81fd4b70f1de2fd, type: 3}
+    - {fileID: 8300000, guid: f291b9a25333fd94a9b0f3bd16ea7715, type: 3}
+    - {fileID: 8300000, guid: 3e4e5dc650fdea542872d4ec8ad9e690, type: 3}
+    - {fileID: 8300000, guid: 0dac74dfd6d914646a8a3c01767549b6, type: 3}
+    Stats:
+    - PeakDb: -4.1457996
+      RmsDb: -17.157627
+      Dc: 0.0000000013942014
+      LoopSeam: 0.003071002
+      CentroidHz: 1138.7927
+      Seconds: 66.46154
+    - PeakDb: -12.493406
+      RmsDb: -25.081108
+      Dc: 7.391081e-10
+      LoopSeam: 0.00027957605
+      CentroidHz: 1463.2511
+      Seconds: 66.46154
+    - PeakDb: -6.8935914
+      RmsDb: -16.160433
+      Dc: -5.823669e-10
+      LoopSeam: 0.0000032615185
+      CentroidHz: 144.52405
+      Seconds: 66.46154
+    - PeakDb: -1.9415019
+      RmsDb: -18.549755
+      Dc: -0.00000003024873
+      LoopSeam: 0.004491782
+      CentroidHz: 4739.6846
+      Seconds: 66.46154
+    - PeakDb: -15.202827
+      RmsDb: -36.252167
+      Dc: -1.0432375e-10
+      LoopSeam: 0.0013001909
+      CentroidHz: 7083.8545
+      Seconds: 66.46154
+  - Key: daemmerwald/Explore
+    Bpm: 66
+    Bars: 24
+    Stems:
+    - {fileID: 8300000, guid: 1f3a3b406d4dbd2478ec7e24ff43b976, type: 3}
+    - {fileID: 8300000, guid: 5cd88999b881b9645b932a40205de2ca, type: 3}
+    - {fileID: 8300000, guid: 083203892487b574096b16ebef48c77b, type: 3}
+    - {fileID: 8300000, guid: 8f06395d4cb890a469a2dcfb55527a38, type: 3}
+    - {fileID: 8300000, guid: fefce6b77a63c3b4fa4893413d67102e, type: 3}
+    Stats:
+    - PeakDb: -8.763545
+      RmsDb: -22.760147
+      Dc: -9.846173e-11
+      LoopSeam: 0.0009802729
+      CentroidHz: 1185.6526
+      Seconds: 87.27272
+    - PeakDb: -10.544467
+      RmsDb: -23.464136
+      Dc: 4.669505e-10
+      LoopSeam: 0.000026381225
+      CentroidHz: 1383.8395
+      Seconds: 87.27272
+    - PeakDb: -4.4971867
+      RmsDb: -12.846096
+      Dc: -0.0000000031142533
+      LoopSeam: 0.00000070282476
+      CentroidHz: 85.02369
+      Seconds: 87.27272
+    - PeakDb: -6.955566
+      RmsDb: -27.55375
+      Dc: 1.365773e-10
+      LoopSeam: 0.00096433866
+      CentroidHz: 1527.786
+      Seconds: 87.27272
+    - PeakDb: -13.859911
+      RmsDb: -33.918587
+      Dc: -6.387445e-11
+      LoopSeam: 0.0009665099
+      CentroidHz: 6710.7695
+      Seconds: 87.27272
+  - Key: daemmerwald/Combat
+    Bpm: 124
+    Bars: 32
+    Stems:
+    - {fileID: 8300000, guid: 5103ea88f7182a2489644108b945429c, type: 3}
+    - {fileID: 8300000, guid: 9a7089e43e4e0434bab3e65b07c21ca7, type: 3}
+    - {fileID: 8300000, guid: e283d3c777ea6294eaadf13beef5b4ec, type: 3}
+    - {fileID: 8300000, guid: ecb3e62a89af56743be37af07e0ded1d, type: 3}
+    - {fileID: 8300000, guid: e81abdd5847cfdb469bcb075e0acb166, type: 3}
+    Stats:
+    - PeakDb: -10.0530615
+      RmsDb: -23.770527
+      Dc: 2.0849723e-10
+      LoopSeam: 0.002860412
+      CentroidHz: 1174.8955
+      Seconds: 61.935486
+    - PeakDb: -11.548714
+      RmsDb: -24.825094
+      Dc: -3.715022e-12
+      LoopSeam: 0.00087415846
+      CentroidHz: 1311.173
+      Seconds: 61.935486
+    - PeakDb: -5.244399
+      RmsDb: -14.595193
+      Dc: -0.0000000019005992
+      LoopSeam: 0.000013516576
+      CentroidHz: 95.2033
+      Seconds: 61.935486
+    - PeakDb: -1.1930108
+      RmsDb: -17.20309
+      Dc: -0.000004418125
+      LoopSeam: 0.004378587
+      CentroidHz: 3180.9404
+      Seconds: 61.935486
+    - PeakDb: -13.49016
+      RmsDb: -31.24361
+      Dc: 5.7823777e-11
+      LoopSeam: 0.0009814325
+      CentroidHz: 5216.6885
+      Seconds: 61.935486
+  - Key: duenenmeer/Explore
+    Bpm: 88
+    Bars: 24
+    Stems:
+    - {fileID: 8300000, guid: 6c558451ad810d543aa823d415258fda, type: 3}
+    - {fileID: 8300000, guid: d87e0ba93e4eac44b99a477a47c24840, type: 3}
+    - {fileID: 8300000, guid: 76d59dc062f242144b7972d1ebf06932, type: 3}
+    - {fileID: 8300000, guid: c57a88d9fba796d44ac221b70301c1ef, type: 3}
+    - {fileID: 8300000, guid: 85283bf14bfa9ce47850bd0ee311abeb, type: 3}
+    Stats:
+    - PeakDb: -5.8963957
+      RmsDb: -20.836735
+      Dc: -4.7263155e-10
+      LoopSeam: 0.0018993616
+      CentroidHz: 1090.3783
+      Seconds: 65.45454
+    - PeakDb: -7.6903176
+      RmsDb: -27.289427
+      Dc: -1.10956924e-10
+      LoopSeam: 0.002694197
+      CentroidHz: 6778.3125
+      Seconds: 65.45454
+    - PeakDb: -4.6909957
+      RmsDb: -13.022991
+      Dc: -0.0000000035733525
+      LoopSeam: 0.00002169441
+      CentroidHz: 83.62172
+      Seconds: 65.45454
+    - PeakDb: -7.350478
+      RmsDb: -26.4973
+      Dc: 1.2012159e-11
+      LoopSeam: 0.0009559146
+      CentroidHz: 856.7491
+      Seconds: 65.45454
+    - PeakDb: -10.775308
+      RmsDb: -32.939342
+      Dc: -7.893265e-11
+      LoopSeam: 0.0012238808
+      CentroidHz: 6769.5376
+      Seconds: 65.45454
+  - Key: duenenmeer/Combat
+    Bpm: 134
+    Bars: 36
+    Stems:
+    - {fileID: 8300000, guid: dc747fd6c7fa6ea4dadac926401f0f2a, type: 3}
+    - {fileID: 8300000, guid: bab2b88c22e9df74c8eba613caf634fc, type: 3}
+    - {fileID: 8300000, guid: 771bc8e70a943604dbbab71f95e8c76b, type: 3}
+    - {fileID: 8300000, guid: 89b824105ac9a9e46b56dd04c8145393, type: 3}
+    - {fileID: 8300000, guid: 2fc0cc13062ebf9468918e465dfbdf0c, type: 3}
+    Stats:
+    - PeakDb: -7.396394
+      RmsDb: -20.851215
+      Dc: -0.0000000013906077
+      LoopSeam: 0.0003495277
+      CentroidHz: 1134.9237
+      Seconds: 64.477615
+    - PeakDb: -10.991781
+      RmsDb: -24.642918
+      Dc: -3.9833067e-10
+      LoopSeam: 0.0017535165
+      CentroidHz: 1311.0681
+      Seconds: 64.477615
+    - PeakDb: -5.3574376
+      RmsDb: -14.40598
+      Dc: 0.0000000010562224
+      LoopSeam: 0.000011686585
+      CentroidHz: 95.52698
+      Seconds: 64.477615
+    - PeakDb: -1.1247576
+      RmsDb: -16.850157
+      Dc: -0.0000069011644
+      LoopSeam: 0.006253088
+      CentroidHz: 4549.5225
+      Seconds: 64.477615
+    - PeakDb: -10.516835
+      RmsDb: -29.612522
+      Dc: -1.13060755e-10
+      LoopSeam: 0.0013846355
+      CentroidHz: 5997.591
+      Seconds: 64.477615
+  - Key: kristalltiefe/Explore
+    Bpm: 60
+    Bars: 16
+    Stems:
+    - {fileID: 8300000, guid: e83c0a9e0d84d9046a20c519bc146afe, type: 3}
+    - {fileID: 8300000, guid: d98f2cae569b38d41b9a2b76d68f728f, type: 3}
+    - {fileID: 8300000, guid: e46fc1328db0d8948a376b2869f613c3, type: 3}
+    - {fileID: 8300000, guid: 270df72146a8d1c4d8c67955f6b55ac6, type: 3}
+    - {fileID: 8300000, guid: 10aeb32157383b84d82920ec621f47d0, type: 3}
+    Stats:
+    - PeakDb: -10.095188
+      RmsDb: -25.388945
+      Dc: -2.1797645e-11
+      LoopSeam: 0.0014516879
+      CentroidHz: 1371.5173
+      Seconds: 64
+    - PeakDb: -7.5300665
+      RmsDb: -23.056868
+      Dc: 2.791164e-10
+      LoopSeam: 0.0007900952
+      CentroidHz: 1957.6415
+      Seconds: 64
+    - PeakDb: -4.508185
+      RmsDb: -12.762705
+      Dc: 0.0000000037533345
+      LoopSeam: 0.000017425773
+      CentroidHz: 114.50089
+      Seconds: 64
+    - PeakDb: -7.092366
+      RmsDb: -27.908957
+      Dc: -6.880587e-11
+      LoopSeam: 0.0008382313
+      CentroidHz: 1219.3021
+      Seconds: 64
+    - PeakDb: -14.687108
+      RmsDb: -36.41156
+      Dc: -4.287443e-11
+      LoopSeam: 0.0020950534
+      CentroidHz: 5263.588
+      Seconds: 64
+  - Key: kristalltiefe/Combat
+    Bpm: 120
+    Bars: 32
+    Stems:
+    - {fileID: 8300000, guid: 7f63416ae3452054390369486c497a4d, type: 3}
+    - {fileID: 8300000, guid: 44ada8b0b3059f6469de1081116c5566, type: 3}
+    - {fileID: 8300000, guid: f158b573d30c3b445bba4160298ec6e8, type: 3}
+    - {fileID: 8300000, guid: 7eadcd5aa630ecb43a9d9492f9ce1d6b, type: 3}
+    - {fileID: 8300000, guid: 8b561067c1b0f5a4894c8c4e825e3e5c, type: 3}
+    Stats:
+    - PeakDb: -12.270662
+      RmsDb: -25.680088
+      Dc: -1.3089074e-10
+      LoopSeam: 0.00033973035
+      CentroidHz: 1330.437
+      Seconds: 64
+    - PeakDb: -10.545903
+      RmsDb: -23.331755
+      Dc: 2.0072796e-10
+      LoopSeam: 0.0006845612
+      CentroidHz: 1384.0204
+      Seconds: 64
+    - PeakDb: -4.985341
+      RmsDb: -14.207321
+      Dc: 1.1971163e-10
+      LoopSeam: 0.000008564646
+      CentroidHz: 117.31359
+      Seconds: 64
+    - PeakDb: -1.0571226
+      RmsDb: -16.944263
+      Dc: -0.000011612285
+      LoopSeam: 0.007188974
+      CentroidHz: 3247.826
+      Seconds: 64
+    - PeakDb: -11.591207
+      RmsDb: -32.003777
+      Dc: 1.0081587e-10
+      LoopSeam: 0.0018484236
+      CentroidHz: 5475.2744
+      Seconds: 64
+  - Key: himmelsspitzen/Explore
+    Bpm: 78
+    Bars: 24
+    Stems:
+    - {fileID: 8300000, guid: 6ddf4fbbdc496c6409e0c8b09b2382c9, type: 3}
+    - {fileID: 8300000, guid: 99bfa1ecd70306e4aa990b6b4cf12764, type: 3}
+    - {fileID: 8300000, guid: b63f0bf44c674b5448bf695aee275d55, type: 3}
+    - {fileID: 8300000, guid: ff4d73b32179a4046b02ac813882a083, type: 3}
+    - {fileID: 8300000, guid: d14fc307509fd924fb703caa19165728, type: 3}
+    Stats:
+    - PeakDb: -8.083285
+      RmsDb: -24.086397
+      Dc: -5.3070826e-11
+      LoopSeam: 0.001683194
+      CentroidHz: 1430.5314
+      Seconds: 73.846146
+    - PeakDb: -7.2290087
+      RmsDb: -17.817614
+      Dc: -0.0000000013281809
+      LoopSeam: 0.000027027476
+      CentroidHz: 1359.1165
+      Seconds: 73.846146
+    - PeakDb: -5.625088
+      RmsDb: -13.89203
+      Dc: -0.0000000022805908
+      LoopSeam: 0.000022023858
+      CentroidHz: 137.45708
+      Seconds: 73.846146
+    - PeakDb: -7.9649286
+      RmsDb: -27.890966
+      Dc: -1.4758497e-10
+      LoopSeam: 0.00081523997
+      CentroidHz: 802.8361
+      Seconds: 73.846146
+    - PeakDb: -14.865648
+      RmsDb: -35.55779
+      Dc: -7.580843e-11
+      LoopSeam: 0.001432044
+      CentroidHz: 7338.286
+      Seconds: 73.846146
+  - Key: himmelsspitzen/Combat
+    Bpm: 128
+    Bars: 32
+    Stems:
+    - {fileID: 8300000, guid: 322cd550e3394e34f847a6ce76456098, type: 3}
+    - {fileID: 8300000, guid: ba88daee80728fc44ad68e68bf6f46c1, type: 3}
+    - {fileID: 8300000, guid: 89bb45b0b2889a14aba22f1869a479b3, type: 3}
+    - {fileID: 8300000, guid: 311550a541a0f194484e924f65d482a2, type: 3}
+    - {fileID: 8300000, guid: 5bfd397a20dbb344ab5282057ec5f512, type: 3}
+    Stats:
+    - PeakDb: -9.690557
+      RmsDb: -23.54494
+      Dc: 5.524737e-10
+      LoopSeam: 0.0032983553
+      CentroidHz: 1369.8129
+      Seconds: 60
+    - PeakDb: -12.623124
+      RmsDb: -24.320705
+      Dc: 6.930173e-10
+      LoopSeam: 0.00046287506
+      CentroidHz: 1553.4149
+      Seconds: 60
+    - PeakDb: -5.4986234
+      RmsDb: -14.7613
+      Dc: -5.284335e-10
+      LoopSeam: 0.0000026506368
+      CentroidHz: 143.36131
+      Seconds: 60
+    - PeakDb: -1.1271712
+      RmsDb: -17.114622
+      Dc: -0.0000034281047
+      LoopSeam: 0.004106693
+      CentroidHz: 3127.001
+      Seconds: 60
+    - PeakDb: -12.649306
+      RmsDb: -32.46438
+      Dc: -1.3303582e-10
+      LoopSeam: 0.0017545491
+      CentroidHz: 5449.1377
+      Seconds: 60
+  - Key: tyrannenfeste/Explore
+    Bpm: 70
+    Bars: 24
+    Stems:
+    - {fileID: 8300000, guid: 0e410a3b3764d8242bdb68a544d62d6e, type: 3}
+    - {fileID: 8300000, guid: 970a06de70f777f4d898dd3d25d790fc, type: 3}
+    - {fileID: 8300000, guid: 9123a2becbc50214e915f33f1f89eb7b, type: 3}
+    - {fileID: 8300000, guid: e919a35ef3f0f8848ac12b2b8770e5d8, type: 3}
+    - {fileID: 8300000, guid: 5adc59851ed38aa4f816a524b56788ea, type: 3}
+    Stats:
+    - PeakDb: -7.172407
+      RmsDb: -20.447071
+      Dc: -0.0000000012501157
+      LoopSeam: 0.0009402111
+      CentroidHz: 808.58405
+      Seconds: 82.28571
+    - PeakDb: -7.510772
+      RmsDb: -20.478977
+      Dc: 2.4598754e-10
+      LoopSeam: 0.00003878647
+      CentroidHz: 897.2791
+      Seconds: 82.28571
+    - PeakDb: -5.2384443
+      RmsDb: -13.636511
+      Dc: -8.774035e-10
+      LoopSeam: 0.000009856354
+      CentroidHz: 59.737522
+      Seconds: 82.28571
+    - PeakDb: -7.7995944
+      RmsDb: -28.042141
+      Dc: -1.4953663e-10
+      LoopSeam: 0.0007747528
+      CentroidHz: 659.49585
+      Seconds: 82.28571
+    - PeakDb: -12.928589
+      RmsDb: -33.511192
+      Dc: -1.2847329e-10
+      LoopSeam: 0.0032073238
+      CentroidHz: 6263.857
+      Seconds: 82.28571
+  - Key: tyrannenfeste/Combat
+    Bpm: 142
+    Bars: 36
+    Stems:
+    - {fileID: 8300000, guid: 13812fd9893535e4fa961febd0cef04e, type: 3}
+    - {fileID: 8300000, guid: 9d2e3f098ceaf8f41a3344e86aec5e0e, type: 3}
+    - {fileID: 8300000, guid: fd7e2d52ba9935c4faebb193e1d6aef1, type: 3}
+    - {fileID: 8300000, guid: 4de4fd981db8484409782f9c72a823d6, type: 3}
+    - {fileID: 8300000, guid: 8858af9ad54f3e549bea3f4073b63655, type: 3}
+    Stats:
+    - PeakDb: -8.701133
+      RmsDb: -21.098488
+      Dc: -8.7041196e-10
+      LoopSeam: 0.00076383725
+      CentroidHz: 843.96454
+      Seconds: 60.845078
+    - PeakDb: -11.949264
+      RmsDb: -24.938305
+      Dc: 5.19363e-11
+      LoopSeam: 0.00057635456
+      CentroidHz: 1072.8472
+      Seconds: 60.845078
+    - PeakDb: -5.796861
+      RmsDb: -15.050938
+      Dc: 3.778903e-10
+      LoopSeam: 0.000017549377
+      CentroidHz: 68.58023
+      Seconds: 60.845078
+    - PeakDb: -1.3124957
+      RmsDb: -17.12803
+      Dc: -0.0000010044621
+      LoopSeam: 0.0036323816
+      CentroidHz: 4653.7812
+      Seconds: 60.845078
+    - PeakDb: -11.750006
+      RmsDb: -28.818014
+      Dc: 4.1430695e-10
+      LoopSeam: 0.002859256
+      CentroidHz: 5711.005
+      Seconds: 60.845078
   - Key: boss/Boss
     Bpm: 140
     Bars: 36
@@ -9918,4 +10494,382 @@ MonoBehaviour:
       Dc: -0.0000000017512096
       LoopSeam: 0.000006391958
       CentroidHz: 1659.841
+      Seconds: 2.4
+  - Key: silberkueste/Victory
+    Clip: {fileID: 8300000, guid: 247b634ea235e384ba0301d31a27d7e1, type: 3}
+    Stats:
+      PeakDb: -1.0643469
+      RmsDb: -12.019306
+      Dc: 0.0000000014997233
+      LoopSeam: 0.00007617334
+      CentroidHz: 3764.4277
+      Seconds: 3.2
+  - Key: silberkueste/Defeat
+    Clip: {fileID: 8300000, guid: be72bad34e18b42429e0990c9d38fb7e, type: 3}
+    Stats:
+      PeakDb: -1.0098188
+      RmsDb: -12.036623
+      Dc: -0.0000000010972521
+      LoopSeam: 0.000079616904
+      CentroidHz: 4503.6562
+      Seconds: 3.2
+  - Key: silberkueste/LevelUp
+    Clip: {fileID: 8300000, guid: 743605785ce30d84081a6fb9503742f6, type: 3}
+    Stats:
+      PeakDb: -1.1052203
+      RmsDb: -12.008859
+      Dc: -0.0000000027906883
+      LoopSeam: 0.00010089576
+      CentroidHz: 3178.6125
+      Seconds: 3.2
+  - Key: silberkueste/Discovery
+    Clip: {fileID: 8300000, guid: 2d18ff473eb435544b898861e77e0ed9, type: 3}
+    Stats:
+      PeakDb: -1.2543101
+      RmsDb: -12.003191
+      Dc: 0.0000000023673
+      LoopSeam: 0.000022960961
+      CentroidHz: 3397.2407
+      Seconds: 3.2
+  - Key: silberkueste/Mastery
+    Clip: {fileID: 8300000, guid: 02c1d47613d86ba4e8045c05412f337a, type: 3}
+    Stats:
+      PeakDb: -1.0598589
+      RmsDb: -12.014457
+      Dc: 0.0000000025738165
+      LoopSeam: 0.000012855977
+      CentroidHz: 3477.9177
+      Seconds: 3.2
+  - Key: silberkueste/Death
+    Clip: {fileID: 8300000, guid: c29dcf06a4e405348b8e8b17d3504643, type: 3}
+    Stats:
+      PeakDb: -1.0025572
+      RmsDb: -12.064572
+      Dc: -1.5222534e-10
+      LoopSeam: 0.000029571354
+      CentroidHz: 3021.387
+      Seconds: 3.8
+  - Key: silberkueste/Travel
+    Clip: {fileID: 8300000, guid: 6238dc5463108b9498ef9d0bebdb4124, type: 3}
+    Stats:
+      PeakDb: -1.124347
+      RmsDb: -12.005534
+      Dc: -0.000000002774618
+      LoopSeam: 0.000029783987
+      CentroidHz: 3232.9678
+      Seconds: 2.4
+  - Key: daemmerwald/Victory
+    Clip: {fileID: 8300000, guid: 18f2d70e4423ec3478c55a6b9da1f592, type: 3}
+    Stats:
+      PeakDb: -1.0001636
+      RmsDb: -12.033938
+      Dc: -9.422017e-10
+      LoopSeam: 0.00005786121
+      CentroidHz: 3729.8643
+      Seconds: 3.2
+  - Key: daemmerwald/Defeat
+    Clip: {fileID: 8300000, guid: 56ae5964bbafe15458a75a946a9a56b0, type: 3}
+    Stats:
+      PeakDb: -1.0003842
+      RmsDb: -12.025691
+      Dc: -4.3205609e-10
+      LoopSeam: 0.000034916215
+      CentroidHz: 4652.8994
+      Seconds: 3.2
+  - Key: daemmerwald/LevelUp
+    Clip: {fileID: 8300000, guid: 31096a654d5b615488beab574e4baa57, type: 3}
+    Stats:
+      PeakDb: -1.0053751
+      RmsDb: -12.016011
+      Dc: 7.248793e-10
+      LoopSeam: 0.00003225729
+      CentroidHz: 3203.3882
+      Seconds: 3.2
+  - Key: daemmerwald/Discovery
+    Clip: {fileID: 8300000, guid: db93c441f30a0f848a20ded803433854, type: 3}
+    Stats:
+      PeakDb: -1.0006903
+      RmsDb: -12.066163
+      Dc: -4.073236e-10
+      LoopSeam: 0.000022569024
+      CentroidHz: 2661.1272
+      Seconds: 3.2
+  - Key: daemmerwald/Mastery
+    Clip: {fileID: 8300000, guid: 6f5729d069d957443a5650194be86070, type: 3}
+    Stats:
+      PeakDb: -1.0016397
+      RmsDb: -12.02467
+      Dc: 3.8172057e-10
+      LoopSeam: 0.000060331076
+      CentroidHz: 3379.7388
+      Seconds: 3.2
+  - Key: daemmerwald/Death
+    Clip: {fileID: 8300000, guid: c8376dea6ccf2f046b748ba72fbc1c3b, type: 3}
+    Stats:
+      PeakDb: -1.0023968
+      RmsDb: -12.048346
+      Dc: -0.0000000012734516
+      LoopSeam: 0.000004976988
+      CentroidHz: 2983.974
+      Seconds: 3.8
+  - Key: daemmerwald/Travel
+    Clip: {fileID: 8300000, guid: ed20d99e72c0e0e47850baabac299818, type: 3}
+    Stats:
+      PeakDb: -1.0148786
+      RmsDb: -12.074509
+      Dc: -2.8077798e-10
+      LoopSeam: 0.000023894594
+      CentroidHz: 2431.9866
+      Seconds: 2.4
+  - Key: duenenmeer/Victory
+    Clip: {fileID: 8300000, guid: 8ce0590fa35007e46ac52fd395c5efe3, type: 3}
+    Stats:
+      PeakDb: -1.0895251
+      RmsDb: -12.006943
+      Dc: -0.0000000037322545
+      LoopSeam: 0.000096552074
+      CentroidHz: 3464.7263
+      Seconds: 3.2
+  - Key: duenenmeer/Defeat
+    Clip: {fileID: 8300000, guid: 304c942a01011b546a4c65b882b11fee, type: 3}
+    Stats:
+      PeakDb: -1.0057652
+      RmsDb: -12.015933
+      Dc: -0.0000000013847361
+      LoopSeam: 0.00006387383
+      CentroidHz: 4811.2915
+      Seconds: 3.2
+  - Key: duenenmeer/LevelUp
+    Clip: {fileID: 8300000, guid: 94691ca9946ed734c9eff8eb069609b3, type: 3}
+    Stats:
+      PeakDb: -1.0187559
+      RmsDb: -12.024553
+      Dc: 0.0000000043471466
+      LoopSeam: 0.000011257827
+      CentroidHz: 2790.0762
+      Seconds: 3.2
+  - Key: duenenmeer/Discovery
+    Clip: {fileID: 8300000, guid: 6a722b09592985348a5253a6338f0461, type: 3}
+    Stats:
+      PeakDb: -1.0598238
+      RmsDb: -12.014807
+      Dc: 5.246341e-11
+      LoopSeam: 0.000027573895
+      CentroidHz: 2621.775
+      Seconds: 3.2
+  - Key: duenenmeer/Mastery
+    Clip: {fileID: 8300000, guid: c9140db68b9571546a3aee620c5ec807, type: 3}
+    Stats:
+      PeakDb: -1.0062983
+      RmsDb: -12.0200405
+      Dc: 0.000000002755232
+      LoopSeam: 0.00012404658
+      CentroidHz: 3249.8906
+      Seconds: 3.2
+  - Key: duenenmeer/Death
+    Clip: {fileID: 8300000, guid: ff7ad31831b46544c9c4b39a2c172a74, type: 3}
+    Stats:
+      PeakDb: -1.0135543
+      RmsDb: -12.033432
+      Dc: -0.0000000029936025
+      LoopSeam: 0.00005493313
+      CentroidHz: 2871.613
+      Seconds: 3.8
+  - Key: duenenmeer/Travel
+    Clip: {fileID: 8300000, guid: 117b5f2a0193d2a41ad6367609e2a5a5, type: 3}
+    Stats:
+      PeakDb: -1.0086907
+      RmsDb: -12.073313
+      Dc: 1.9096265e-10
+      LoopSeam: 0.000024961395
+      CentroidHz: 2421.2893
+      Seconds: 2.4
+  - Key: kristalltiefe/Victory
+    Clip: {fileID: 8300000, guid: d905a1d51eaeb1342867ccd72ff440a6, type: 3}
+    Stats:
+      PeakDb: -1.0018076
+      RmsDb: -12.029977
+      Dc: -1.271808e-10
+      LoopSeam: 0.00019505061
+      CentroidHz: 4227.1753
+      Seconds: 3.2
+  - Key: kristalltiefe/Defeat
+    Clip: {fileID: 8300000, guid: dbb5922fb27f96f49bc7f571ef700c90, type: 3}
+    Stats:
+      PeakDb: -1.0035281
+      RmsDb: -12.020447
+      Dc: 6.260468e-10
+      LoopSeam: 0.00013903342
+      CentroidHz: 4817.9346
+      Seconds: 3.2
+  - Key: kristalltiefe/LevelUp
+    Clip: {fileID: 8300000, guid: 9bf3aaf3ab758db47be5805ce6144410, type: 3}
+    Stats:
+      PeakDb: -1.0118568
+      RmsDb: -12.011234
+      Dc: -0.0000000015616576
+      LoopSeam: 0.000013902783
+      CentroidHz: 3453.6416
+      Seconds: 3.2
+  - Key: kristalltiefe/Discovery
+    Clip: {fileID: 8300000, guid: 2bd465c221160bd41a2e6f838c6aa2cc, type: 3}
+    Stats:
+      PeakDb: -1.0042535
+      RmsDb: -12.041959
+      Dc: 0.0000000015470017
+      LoopSeam: 0.000032451542
+      CentroidHz: 3563.3809
+      Seconds: 3.2
+  - Key: kristalltiefe/Mastery
+    Clip: {fileID: 8300000, guid: df036cf66d556454a839e5fa88a93840, type: 3}
+    Stats:
+      PeakDb: -1.0086907
+      RmsDb: -12.039736
+      Dc: 4.9609282e-11
+      LoopSeam: 0.00006169826
+      CentroidHz: 3664.302
+      Seconds: 3.2
+  - Key: kristalltiefe/Death
+    Clip: {fileID: 8300000, guid: db629b626dc9f924e97f80147bd40e65, type: 3}
+    Stats:
+      PeakDb: -1.0048323
+      RmsDb: -12.024999
+      Dc: 0.0000000015115027
+      LoopSeam: 0.00012317672
+      CentroidHz: 3069.8455
+      Seconds: 3.8
+  - Key: kristalltiefe/Travel
+    Clip: {fileID: 8300000, guid: 167b5b322b8b7314ab8fa75172f82bde, type: 3}
+    Stats:
+      PeakDb: -1.0008496
+      RmsDb: -12.115635
+      Dc: 2.5832916e-10
+      LoopSeam: 0.000027190894
+      CentroidHz: 3243.9805
+      Seconds: 2.4
+  - Key: himmelsspitzen/Victory
+    Clip: {fileID: 8300000, guid: c6543f04dd0105c428633c48910aedbd, type: 3}
+    Stats:
+      PeakDb: -1.0094931
+      RmsDb: -12.013336
+      Dc: -0.0000000017361883
+      LoopSeam: 0.00014474988
+      CentroidHz: 4557.1978
+      Seconds: 3.2
+  - Key: himmelsspitzen/Defeat
+    Clip: {fileID: 8300000, guid: 7c0aa7a4ed41d3d4f84fd23edf0d34d9, type: 3}
+    Stats:
+      PeakDb: -1.0127724
+      RmsDb: -12.014399
+      Dc: -0.0000000014166737
+      LoopSeam: 0.000047512352
+      CentroidHz: 4608.8643
+      Seconds: 3.2
+  - Key: himmelsspitzen/LevelUp
+    Clip: {fileID: 8300000, guid: f409d731c63c21d4d8e9ce7bfdb1fb64, type: 3}
+    Stats:
+      PeakDb: -1.0456841
+      RmsDb: -12.005124
+      Dc: -0.0000000030087726
+      LoopSeam: 0.000050485134
+      CentroidHz: 3643.4329
+      Seconds: 3.2
+  - Key: himmelsspitzen/Discovery
+    Clip: {fileID: 8300000, guid: 9a8739f62ad299843ac9e51ac0cd718d, type: 3}
+    Stats:
+      PeakDb: -1.0026757
+      RmsDb: -12.059382
+      Dc: -5.349476e-11
+      LoopSeam: 0.000025479021
+      CentroidHz: 4626.177
+      Seconds: 3.2
+  - Key: himmelsspitzen/Mastery
+    Clip: {fileID: 8300000, guid: cf80808a295198e49b50c53ce9f2a615, type: 3}
+    Stats:
+      PeakDb: -1.004089
+      RmsDb: -12.022388
+      Dc: 7.3559137e-10
+      LoopSeam: 0.0000043027103
+      CentroidHz: 4281.2026
+      Seconds: 3.2
+  - Key: himmelsspitzen/Death
+    Clip: {fileID: 8300000, guid: b9a804ccc25cbc44f87e9f512c50ab89, type: 3}
+    Stats:
+      PeakDb: -1.0315778
+      RmsDb: -12.0090685
+      Dc: -0.0000000012054799
+      LoopSeam: 0.000117108226
+      CentroidHz: 3029.8164
+      Seconds: 3.8
+  - Key: himmelsspitzen/Travel
+    Clip: {fileID: 8300000, guid: ef9417798957cf24aa0f1570384742ca, type: 3}
+    Stats:
+      PeakDb: -1.0006272
+      RmsDb: -12.156939
+      Dc: -2.0643124e-11
+      LoopSeam: 0.000018866092
+      CentroidHz: 3899.5632
+      Seconds: 2.4
+  - Key: tyrannenfeste/Victory
+    Clip: {fileID: 8300000, guid: 890ed11d44d246b4da64e8039bce0e7b, type: 3}
+    Stats:
+      PeakDb: -1.0086901
+      RmsDb: -12.061865
+      Dc: -0.0000000011574199
+      LoopSeam: 0.000024579465
+      CentroidHz: 3737.6985
+      Seconds: 3.2
+  - Key: tyrannenfeste/Defeat
+    Clip: {fileID: 8300000, guid: e0f34d0fc8f9d414982d83135e0a1843, type: 3}
+    Stats:
+      PeakDb: -1.0609838
+      RmsDb: -12.010522
+      Dc: 6.834653e-10
+      LoopSeam: 0.000024676323
+      CentroidHz: 4850.0034
+      Seconds: 3.2
+  - Key: tyrannenfeste/LevelUp
+    Clip: {fileID: 8300000, guid: 4ff9c37aff3669c4ba9a614698f3a6a5, type: 3}
+    Stats:
+      PeakDb: -1.0005952
+      RmsDb: -12.036444
+      Dc: 8.3635365e-10
+      LoopSeam: 0.000103615224
+      CentroidHz: 3017.7932
+      Seconds: 3.2
+  - Key: tyrannenfeste/Discovery
+    Clip: {fileID: 8300000, guid: 01939a2cf11057643b1524fc4d783d5a, type: 3}
+    Stats:
+      PeakDb: -1.0144672
+      RmsDb: -12.0426655
+      Dc: -6.7328226e-10
+      LoopSeam: 0.00002099447
+      CentroidHz: 1841.4125
+      Seconds: 3.2
+  - Key: tyrannenfeste/Mastery
+    Clip: {fileID: 8300000, guid: fbbd769a2bb5d994a800cd9351f67c6e, type: 3}
+    Stats:
+      PeakDb: -1.0086901
+      RmsDb: -12.037424
+      Dc: -0.000000003363877
+      LoopSeam: 0.00012845173
+      CentroidHz: 3001.1794
+      Seconds: 3.2
+  - Key: tyrannenfeste/Death
+    Clip: {fileID: 8300000, guid: abe59755040443b468407da7e58ffb03, type: 3}
+    Stats:
+      PeakDb: -1.0239829
+      RmsDb: -12.014868
+      Dc: 0.0000000033289989
+      LoopSeam: 0.00012376904
+      CentroidHz: 3202.9812
+      Seconds: 3.8
+  - Key: tyrannenfeste/Travel
+    Clip: {fileID: 8300000, guid: adebb0535816f3247aee38be24218284, type: 3}
+    Stats:
+      PeakDb: -1.0086907
+      RmsDb: -12.103267
+      Dc: 1.7375347e-10
+      LoopSeam: 0.000025797868
+      CentroidHz: 1672.4772
       Seconds: 2.4

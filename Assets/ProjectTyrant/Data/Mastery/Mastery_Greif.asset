@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69ab7e33496bbb498dbb59b14be3f4a, type: 3}
+  m_Name: Mastery_Greif
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.MasteryLineDefinition
+  Line: 4
+  DisplayName: Greif
+  Description: "Der Greif der Himmelsw\xE4chter (Pers\xF6nliche Geschichte, Kapitel 9)."
+  Icon: mount_griffon
+  Color: {r: 0.98, g: 0.9, b: 0.6, a: 1}
+  Ranks:
+  - Name: Sturzflug
+    Effect: "In der Luft Leertaste halten: Sturzflug mit Beschleunigung, Loslassen f\xE4ngt ab"
+    Xp: 8000
+    Points: 1
+  - Name: "Ausdauer der L\xFCfte"
+    Effect: Greif sinkt beim Gleiten langsamer (1,6 m/s)
+    Xp: 16000
+    Points: 2

@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_daemmerwald
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: daemmerwald
+  DisplayName: "D\xE4mmerwald"
+  Description: Ein alter Wald, in den violettes Licht kriecht.
+  SceneName: PT_Zone_Daemmerwald
+  Seed: 30102
+  Size: 1000
+  LevelMin: 30
+  LevelMax: 30
+  Biome: {fileID: 11400000, guid: 1a048c2e2dcbdef4fa46855b7af52378, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: daemmerwald_silberkueste
+    Position: {x: -30, y: 0, z: -460}
+    Yaw: 3.731397
+    TargetZone: silberkueste
+    TargetPortal: silberkueste_daemmerwald
+  - Id: daemmerwald_silbermund
+    Position: {x: 14, y: 0, z: -410}
+    Yaw: -1.9556814
+    TargetZone: silberkueste
+    TargetPortal: plaza_daemmerwald
+  DefaultSpawn: {x: 0, y: 0, z: -420}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.04
+    y: 0.6
+    width: 0.26
+    height: 0.26
+  ContinentColor: {r: 0.2901961, g: 0.2901961, b: 0.41568628, a: 1}
+  Waypoints: []
+  Arrivals: []
+  Tips:
+  - "Violette Verderbnis brennt \u2013 Laternen und W\xE4chtersteine sch\xFCtzen."
+  - "Der Alte Hain erwacht in regelm\xE4\xDFigen Abst\xE4nden."
+  LoadingImage: {fileID: 0}
+  Regions: []
+  TimerLabel: 
+  TimerPeriod: 0
+  TimerOffset: 0
+  TimerPosition: {x: 0, y: 0, z: 0}
+  TimerEventId: 
+  CompletionIds: []

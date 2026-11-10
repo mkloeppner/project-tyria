@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a9756ba196e784f8aead94cb329eb1, type: 3}
+  m_Name: Enemy_Wald_Schattenpriester
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EnemyArchetype
+  DisplayName: Schattenpriester
+  Tier: 2
+  Team: 2
+  Prefab: {fileID: 4459871227921332327, guid: 24c5300bcbe7aca45924e5334c777cc2, type: 3}
+  FixedLevel: 0
+  AttributeFactor: 1.1
+  ArmorFactor: 1.6
+  HealthFactor: 3
+  MaxHealth: 0
+  AttackCoefficient: 3.4
+  AttackRange: 11
+  AttackInterval: 2.3
+  AttackWindup: 0.8
+  Palette: 16
+  MoveSpeed: 3.6
+  AggroRange: 15
+  LeashRange: 45
+  Scale: 1.2
+  OnHitDebuff:
+    Type: 18
+    Stacks: 1
+    Duration: 3
+  HasTelegraph: 0
+  TelegraphRadius: 5
+  TelegraphDelay: 1.5
+  TelegraphCoefficient: 25
+  TelegraphInterval: 9
+  Behavior: 8
+  BehaviorRadius: 6
+  BehaviorInterval: 13
+  BehaviorCoefficient: 4
+  BehaviorEffect:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  SummonArchetype: {fileID: 11400000, guid: 6000280943baa1f4f99b5d8938eeb0e5, type: 2}
+  ProjectileColor: {r: 0.6, g: 0.3, b: 1, a: 1}
+  Defiance: 0
+  ContributionValue: 32
+  Experience: 190
+  Loot: {fileID: 11400000, guid: 47202ee697ef1654dbeac5785cfaa47e, type: 2}

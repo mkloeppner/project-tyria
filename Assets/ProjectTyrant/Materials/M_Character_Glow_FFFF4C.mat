@@ -47,7 +47,7 @@ Material:
     - _WorldUVScale: 0.15
     m_Colors:
     - _BaseColor: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColor: {r: 1.4, g: 1.1, b: 0.3, a: 1}
+    - _EmissionColor: {r: 1.8, g: 1.4, b: 0.3, a: 1}
     - _GradientBottom: {r: 0.75, g: 0.7, b: 0.9, a: 1}
     - _RimColor: {r: 1, g: 0.88, b: 0.65, a: 1}
     - _ShadowColor: {r: 0.5, g: 0.55, b: 0.85, a: 1}

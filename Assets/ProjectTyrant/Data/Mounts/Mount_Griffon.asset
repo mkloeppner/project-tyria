@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3868e70530e3f342978ac4b9e687eca, type: 3}
+  m_Name: Mount_Griffon
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.MountDefinition
+  Kind: 4
+  DisplayName: Greif
+  Description: "Der Greif der Himmelsw\xE4chter \u2013 gleitet weit und st\xFCrzt sich aus gro\xDFer H\xF6he herab. Nur \xFCber die Pers\xF6nliche Geschichte (Kapitel 9)."
+  AbilityText: 'Abheben (Leertaste), in der Luft halten: Sturzflug, loslassen: Abfangen'
+  EngageText: "Sturzangriff: Schaden, Bet\xE4ubung, Verwundbarkeit"
+  Stats:
+    Kind: 4
+    Speed: 10.5
+    WaterSpeed: 3.5
+    MaxHealth: 5500
+    LeapSpeed: 0
+    LeapTime: 0
+    LeapUp: 0
+    ChargeTime: 0
+    MinJump: 0
+    MaxJump: 0
+    HopHeight: 9
+    EngageCoefficient: 4
+    EngageRadius: 5
+    EngageRange: 14
+    DodgeDistance: 6
+    DodgeCooldown: 3
+  PriceCopper: 0
+  RequiredHeart: 
+  VendorZone: himmelsspitzen
+  Icon: mount_griffon
+  Prefab: {fileID: 5562503922280406044, guid: daa3a8f141658b74a89ebbb012887b7b, type: 3}
+  SeatHeight: 1.6

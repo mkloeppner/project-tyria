@@ -24,16 +24,26 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: frostkamm_nebelmoor
-    Position: {x: -20, y: 14, z: -470}
+    Position: {x: -20, y: 0, z: -470}
     Yaw: 2.4366481
     TargetZone: nebelmoor
     TargetPortal: nebelmoor_frostkamm
   - Id: frostkamm_gluetoede
-    Position: {x: 460, y: -4.1458035, z: 40}
+    Position: {x: 460, y: 0, z: 40}
     Yaw: -94.96974
     TargetZone: gluetoede
     TargetPortal: gluetoede_frostkamm
-  DefaultSpawn: {x: 0, y: 13.989325, z: -440}
+  - Id: frostkamm_himmelsspitzen
+    Position: {x: -80, y: 0, z: 480}
+    Yaw: 170.53767
+    TargetZone: himmelsspitzen
+    TargetPortal: himmelsspitzen_frostkamm
+  - Id: frostkamm_silbermund
+    Position: {x: 14, y: 0, z: -430}
+    Yaw: -1.8647853
+    TargetZone: silberkueste
+    TargetPortal: plaza_frostkamm
+  DefaultSpawn: {x: 0, y: 0, z: -440}
   ContinentRect:
     serializedVersion: 2
     x: 0.3
@@ -41,28 +51,7 @@ MonoBehaviour:
     width: 0.32
     height: 0.32
   ContinentColor: {r: 0.7254902, g: 0.79607844, b: 0.84705883, a: 1}
-  Waypoints:
-  - Id: wp_frost_ankunft
-    Name: Wegmarke Firnpforte
-    Position: {x: 24, y: 7.009785, z: -410}
-  - Id: wp_frost_lager
-    Name: Wegmarke Bergsteigerlager
-    Position: {x: -260, y: 6.010132, z: -220}
-  - Id: wp_frost_pass
-    Name: Wegmarke Kammpass
-    Position: {x: 120, y: 21, z: -60}
-  - Id: wp_frost_mine
-    Name: Wegmarke Kristallmine
-    Position: {x: 380, y: 28, z: -260}
-  - Id: wp_frost_tempel
-    Name: Wegmarke Eiswind
-    Position: {x: -180, y: 7.0328674, z: 240}
-  - Id: wp_frostkamm_ankunft
-    Name: Ankunfts-Wegmarke Frostkamm
-    Position: {x: 8, y: 13.989325, z: -440}
-  - Id: wp_frostkamm_ankunft_gluetoede
-    Name: "Portal-Wegmarke Glut\xF6de"
-    Position: {x: 460.95074, y: -4.1458035, z: 43.48022}
+  Waypoints: []
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 13.989325, z: -440}

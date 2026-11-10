@@ -18,6 +18,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dbb4d79f86193a742945097764f87a29, type: 2}
   - {fileID: 11400000, guid: 3131b0a346c92944a90f1ed149ce5abb, type: 2}
   - {fileID: 11400000, guid: cce5b21fdebc50c47afc6cf0ab359c4e, type: 2}
+  - {fileID: 11400000, guid: 352ed103f7ebdcc4b8798b2863387bc7, type: 2}
+  - {fileID: 11400000, guid: 3e5548079a875da46955cce6818a865c, type: 2}
+  - {fileID: 11400000, guid: bde8af0ef2dc30649a13cc46f8f04769, type: 2}
+  - {fileID: 11400000, guid: 139f8f79b720a1d489ca398e64642033, type: 2}
+  - {fileID: 11400000, guid: 11610e7897a6f0a4c8a78153ebf5065e, type: 2}
+  - {fileID: 11400000, guid: 8e4f5f8a6b9ea26458fb966606d00d4c, type: 2}
   Tips:
   - "Mit M \xF6ffnest du die Karte \u2013 weiter herauszoomen zeigt den Kontinent."
   - Wegmarken anderer Zonen kosten einen Aufschlag.

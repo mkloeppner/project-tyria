@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a9756ba196e784f8aead94cb329eb1, type: 3}
+  m_Name: Enemy_Feste_Siegelbrecher
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EnemyArchetype
+  DisplayName: Siegelbrecher
+  Tier: 1
+  Team: 2
+  Prefab: {fileID: 2543540036057462935, guid: b544ab0292e4ddd4486091e1dd6b4cc7, type: 3}
+  FixedLevel: 0
+  AttributeFactor: 1
+  ArmorFactor: 1.6
+  HealthFactor: 0.9
+  MaxHealth: 0
+  AttackCoefficient: 3
+  AttackRange: 10
+  AttackInterval: 2.2
+  AttackWindup: 0.75
+  Palette: 21
+  MoveSpeed: 4.2
+  AggroRange: 14
+  LeashRange: 45
+  Scale: 1.1
+  OnHitDebuff:
+    Type: 14
+    Stacks: 1
+    Duration: 3
+  HasTelegraph: 0
+  TelegraphRadius: 5
+  TelegraphDelay: 1.5
+  TelegraphCoefficient: 25
+  TelegraphInterval: 9
+  Behavior: 8
+  BehaviorRadius: 6
+  BehaviorInterval: 16
+  BehaviorCoefficient: 4
+  BehaviorEffect:
+    Type: 0
+    Stacks: 0
+    Duration: 0
+  SummonArchetype: {fileID: 11400000, guid: cf6dd521248e07e4f9de3d0d3ba68a74, type: 2}
+  ProjectileColor: {r: 1, g: 0.5, b: 0.2, a: 1}
+  Defiance: 0
+  ContributionValue: 10
+  Experience: 60
+  Loot: {fileID: 11400000, guid: acfccf0fe09174d42bb05a8032a5cf0c, type: 2}

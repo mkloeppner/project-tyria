@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4405081a13d74924cbcc9e48b8ebf09a, type: 3}
+  m_Name: Zone_duenenmeer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneDefinition
+  Id: duenenmeer
+  DisplayName: "D\xFCnenmeer"
+  Description: "Goldene D\xFCnen, Oasen und versunkene Ruinen."
+  SceneName: PT_Zone_Duenenmeer
+  Seed: 30103
+  Size: 1100
+  LevelMin: 30
+  LevelMax: 30
+  Biome: {fileID: 11400000, guid: c4fcc250f09924c48ac4a0dd3150ec06, type: 2}
+  LegacyLayout: 0
+  Portals:
+  - Id: duenenmeer_gluetoede
+    Position: {x: -520, y: 0, z: -40}
+    Yaw: 85.601295
+    TargetZone: gluetoede
+    TargetPortal: gluetoede_duenenmeer
+  - Id: duenenmeer_silbermund
+    Position: {x: -456, y: 0, z: 10}
+    Yaw: 91.25629
+    TargetZone: silberkueste
+    TargetPortal: plaza_duenenmeer
+  DefaultSpawn: {x: -470, y: 0, z: 0}
+  ContinentRect:
+    serializedVersion: 2
+    x: 0.62
+    y: 0.66
+    width: 0.34
+    height: 0.3
+  ContinentColor: {r: 0.89411765, g: 0.76862746, b: 0.5411765, a: 1}
+  Waypoints: []
+  Arrivals: []
+  Tips:
+  - "Alle 12 Minuten zieht ein Sandsturm auf \u2013 Sp\xE4her-Zelte bieten Schutz."
+  - "Der Raptor springt \xFCber die Schluchten."
+  LoadingImage: {fileID: 0}
+  Regions: []
+  TimerLabel: 
+  TimerPeriod: 0
+  TimerOffset: 0
+  TimerPosition: {x: 0, y: 0, z: 0}
+  TimerEventId: 
+  CompletionIds: []
