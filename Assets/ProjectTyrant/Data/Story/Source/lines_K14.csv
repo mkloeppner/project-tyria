@@ -1,0 +1,21 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K14_S01_L01;nadira;neutral;rechts;Dünenläufer. Schneller als jeder Raptor, und sie springen durch den Sand wie Gedanken.;
+K14_S01_L02;nadira;amuesiert;rechts;Sie mögen niemanden. Das macht sie ehrlich.;
+K14_S01_L03;held;neutral;links;Wie zähmt man so etwas?;
+K14_S01_L04;nadira;entschlossen;rechts;Man zähmt sie nicht. Man läuft mit ihnen, bis sie entscheiden, dass du schnell genug bist.;
+K14_S01_Q1;nadira;neutral;rechts;Hast du Angst vor den Läufern?;
+K14_S01_C1_A;held;entschlossen;links;Respekt, keine Angst.;opt:1|tend:Wuerde|flag:k14_respekt
+K14_S01_C1_B;held;zornig;links;Sie sollten Angst vor mir haben.;opt:1|tend:Wildheit
+K14_S01_Q2;nadira;neutral;rechts;Läufst du mit, auch wenn du fällst?;
+K14_S01_C2_A;held;entschlossen;links;Ich stehe jedes Mal wieder auf.;opt:2|tend:Wuerde|flag:k14_demut
+K14_S01_C2_B;held;zornig;links;Ich falle nicht.;opt:2|tend:Wildheit
+K14_S02E_L01;nadira;amuesiert;rechts;Er hat dich gewählt. Schau dir seine Augen an – Sand und Stolz.;
+K14_S02E_L02;nadira;neutral;rechts;Leertaste: ein Blinkschritt. Und wo der Sand golden flimmert, liegt ein Portal. Nur er findet hindurch.;
+K14_S02E_L03;held;besorgt;links;Was ist das am Horizont?;
+K14_S02E_L04;nadira;besorgt;rechts;Ein Sandsturm. Reite. Jetzt!;
+K14_S02E_Q1;nadira;neutral;rechts;Wie willst du ihn nennen?;
+K14_S02E_C1_A;held;entschlossen;links;Sandatem.;opt:1|tend:Wuerde|flag:k14_sandatem
+K14_S02E_C1_B;held;zornig;links;Blitz.;opt:1|tend:Wildheit
+K14_S03E_L01;nadira;erleichtert;nah;Wir leben. Der Sturm frisst Spuren – auch die des Ordens. Er zog Richtung Salzsee.;
+K14_S03E_L02;nadira;neutral;nah;Dort wohnt ein Priester, der mehr über den Orden weiß, als ihm guttut.;
+K14_J;held;entschlossen;;Ein Dünenläufer hat mich gewählt. Wir sind gemeinsam vor einem Sandsturm davongelaufen.;journal

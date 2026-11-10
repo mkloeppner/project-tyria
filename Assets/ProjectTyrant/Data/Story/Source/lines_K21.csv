@@ -1,0 +1,16 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K21_S01_L01;linsao;neutral;rechts;Das Jade-Meer. Erstarrt, aber nicht tot. Ruf dein Boot am Ufer – die Werft hat dir eins geliehen.;
+K21_S01_L02;linsao;amuesiert;rechts;Und wirf eine Angel aus. Die Fischer reden mehr, wenn man ihnen Fisch bringt.;
+K21_S01_Q1;linsao;neutral;rechts;Kannst du überhaupt angeln?;
+K21_S01_C1_A;held;entschlossen;links;Zeig es mir.;opt:1|tend:Wuerde|flag:k21_lernen
+K21_S01_C1_B;held;zornig;links;Wie schwer kann das sein?;opt:1|tend:Wildheit
+K21_S01_Q2;linsao;neutral;rechts;Soll ich das Boot rot oder grün anstreichen?;
+K21_S01_C2_A;held;entschlossen;links;Grün wie Jade.;opt:2|tend:Wuerde|flag:k21_gruen
+K21_S01_C2_B;held;zornig;links;Rot wie Glut.;opt:2|tend:Wildheit
+K21_S02E_L01;linsao;besorgt;nah;Die Fische fliehen alle in dieselbe Richtung. Weg vom Herzen des Meeres.;
+K21_S03E_L01;linsao;besorgt;rechts;Die Piraten haben Jade-Kerne aus der Mine gestohlen. Kerne, die angeblich Kraft aus der Tiefe ziehen.;
+K21_S03E_L02;linsao;besorgt;rechts;Aus der Tiefe … oder aus etwas, das dort gefangen ist. Frag im Kloster der Stille nach.;
+K21_S03E_Q1;linsao;neutral;rechts;Was machen wir mit gefangenen Piraten?;
+K21_S03E_C1_A;held;entschlossen;links;Der Kaiserin übergeben.;opt:1|tend:Wuerde|flag:k21_gesetz
+K21_S03E_C1_B;held;zornig;links;Laufen lassen – mit Warnung.;opt:1|tend:Wildheit
+K21_J;held;entschlossen;;Mit Boot und Angel im Jade-Meer: Die Fische fliehen vor etwas in der Tiefe.;journal

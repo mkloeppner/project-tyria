@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69ab7e33496bbb498dbb59b14be3f4a, type: 3}
+  m_Name: Mastery_Duenenlaeufer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.MasteryLineDefinition
+  Line: 6
+  DisplayName: "D\xFCnenl\xE4ufer"
+  Description: "Der Sprinter der Glutw\xFCste: Blinkschritt und Sandportale."
+  Icon: mount_dunerunner
+  Color: {r: 0.95, g: 0.75, b: 0.4, a: 1}
+  Ranks:
+  - Name: Dritte Ladung
+    Effect: Blinkschritt mit 3 statt 2 Ladungen
+    Xp: 20000
+    Points: 2
+  - Name: Portalmeister
+    Effect: Sandportale lassen sich aus 4 m statt 2,5 m nutzen
+    Xp: 26000
+    Points: 2
+  - Name: Sandgleiten
+    Effect: Blinkschritt auch in der Luft
+    Xp: 32000
+    Points: 3

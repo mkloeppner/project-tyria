@@ -134,6 +134,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Effects\VfxPool.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Classes\IClassMechanic.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Mastery\BounceMushroom.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\UI\UiScroll.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\StoryObject.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Audio\AmbienceDirector.cs" />
@@ -141,6 +142,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\World\WorldDefinition.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Lauf6\SiegeDirector.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\StoryDirector.World.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\UI\UiToastStack.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\WorldHelp.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Classes\ClassModels.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Dialogue\ConversationStage.cs" />

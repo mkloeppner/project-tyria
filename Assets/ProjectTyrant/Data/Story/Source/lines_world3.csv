@@ -1,0 +1,121 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+SP_scout_weite_von_ahrn_1_L01;scout;neutral;nah;Willkommen bei Lager der Ahrn. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_weite_von_ahrn_1
+SP_scout_weite_von_ahrn_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Steppenräuber seltener.;scene:SP_scout_weite_von_ahrn_1
+SP_scout_weite_von_ahrn_2_L01;scout;neutral;nah;Willkommen bei Hirtenfurt. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_weite_von_ahrn_2
+SP_scout_weite_von_ahrn_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Windsäulen. Merk dir die Wegmarken.;scene:SP_scout_weite_von_ahrn_2
+SP_scout_weite_von_ahrn_3_L01;scout;neutral;nah;Willkommen bei Windsäulen. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_weite_von_ahrn_3
+SP_scout_weite_von_ahrn_3_L02;scout;neutral;nah;Die Steppenräuber schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_weite_von_ahrn_3
+SP_scout_nebelkamm_1_L01;scout;neutral;nah;Willkommen bei Steinkreis von Ulm. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_nebelkamm_1
+SP_scout_nebelkamm_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Steingeister seltener.;scene:SP_scout_nebelkamm_1
+SP_scout_nebelkamm_2_L01;scout;neutral;nah;Willkommen bei Torfdorf. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_nebelkamm_2
+SP_scout_nebelkamm_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Grauer Kamm. Merk dir die Wegmarken.;scene:SP_scout_nebelkamm_2
+SP_scout_nebelkamm_3_L01;scout;neutral;nah;Willkommen bei Grauer Kamm. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_nebelkamm_3
+SP_scout_nebelkamm_3_L02;scout;neutral;nah;Die Steingeister schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_nebelkamm_3
+SP_scout_sturmbucht_1_L01;scout;neutral;nah;Willkommen bei Hafen Weißwasser. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_sturmbucht_1
+SP_scout_sturmbucht_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Piraten seltener.;scene:SP_scout_sturmbucht_1
+SP_scout_sturmbucht_2_L01;scout;neutral;nah;Willkommen bei Wrackbucht. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_sturmbucht_2
+SP_scout_sturmbucht_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Möwenklippe. Merk dir die Wegmarken.;scene:SP_scout_sturmbucht_2
+SP_scout_sturmbucht_3_L01;scout;neutral;nah;Willkommen bei Möwenklippe. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_sturmbucht_3
+SP_scout_sturmbucht_3_L02;scout;neutral;nah;Die Piraten schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_sturmbucht_3
+SP_scout_aschenkessel_1_L01;scout;neutral;nah;Willkommen bei Obsidianwerk. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_aschenkessel_1
+SP_scout_aschenkessel_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Magmabrut seltener.;scene:SP_scout_aschenkessel_1
+SP_scout_aschenkessel_2_L01;scout;neutral;nah;Willkommen bei Schwefelsee. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_aschenkessel_2
+SP_scout_aschenkessel_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Rauchschlot. Merk dir die Wegmarken.;scene:SP_scout_aschenkessel_2
+SP_scout_aschenkessel_3_L01;scout;neutral;nah;Willkommen bei Rauchschlot. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_aschenkessel_3
+SP_scout_aschenkessel_3_L02;scout;neutral;nah;Die Magmabrut schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_aschenkessel_3
+SP_scout_gruener_schlund_1_L01;scout;neutral;nah;Willkommen bei Kronendorf. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_gruener_schlund_1
+SP_scout_gruener_schlund_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Dschungelpirscher seltener.;scene:SP_scout_gruener_schlund_1
+SP_scout_gruener_schlund_2_L01;scout;neutral;nah;Willkommen bei Lianenbrücke. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_gruener_schlund_2
+SP_scout_gruener_schlund_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Wurzeltempel. Merk dir die Wegmarken.;scene:SP_scout_gruener_schlund_2
+SP_scout_gruener_schlund_3_L01;scout;neutral;nah;Willkommen bei Wurzeltempel. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_gruener_schlund_3
+SP_scout_gruener_schlund_3_L02;scout;neutral;nah;Die Dschungelpirscher schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_gruener_schlund_3
+SP_scout_schilfmuendung_1_L01;scout;neutral;nah;Willkommen bei Flößerhafen. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_schilfmuendung_1
+SP_scout_schilfmuendung_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Mangrovenschrecken seltener.;scene:SP_scout_schilfmuendung_1
+SP_scout_schilfmuendung_2_L01;scout;neutral;nah;Willkommen bei Mangrovengürtel. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_schilfmuendung_2
+SP_scout_schilfmuendung_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Schilfinseln. Merk dir die Wegmarken.;scene:SP_scout_schilfmuendung_2
+SP_scout_schilfmuendung_3_L01;scout;neutral;nah;Willkommen bei Schilfinseln. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_schilfmuendung_3
+SP_scout_schilfmuendung_3_L02;scout;neutral;nah;Die Mangrovenschrecken schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_schilfmuendung_3
+SP_scout_weisse_stille_1_L01;scout;neutral;nah;Willkommen bei Heiligtum der Urskai. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_weisse_stille_1
+SP_scout_weisse_stille_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Frostriesen seltener.;scene:SP_scout_weisse_stille_1
+SP_scout_weisse_stille_2_L01;scout;neutral;nah;Willkommen bei Gletscherzunge. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_weisse_stille_2
+SP_scout_weisse_stille_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Eishöhle. Merk dir die Wegmarken.;scene:SP_scout_weisse_stille_2
+SP_scout_weisse_stille_3_L01;scout;neutral;nah;Willkommen bei Eishöhle. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_weisse_stille_3
+SP_scout_weisse_stille_3_L02;scout;neutral;nah;Die Frostriesen schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_weisse_stille_3
+SP_scout_schaedelkueste_1_L01;scout;neutral;nah;Willkommen bei Versunkener Tempel. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_schaedelkueste_1
+SP_scout_schaedelkueste_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Ertrunkenen seltener.;scene:SP_scout_schaedelkueste_1
+SP_scout_schaedelkueste_2_L01;scout;neutral;nah;Willkommen bei Schädelhafen. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_schaedelkueste_2
+SP_scout_schaedelkueste_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Knochenstrand. Merk dir die Wegmarken.;scene:SP_scout_schaedelkueste_2
+SP_scout_schaedelkueste_3_L01;scout;neutral;nah;Willkommen bei Knochenstrand. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_schaedelkueste_3
+SP_scout_schaedelkueste_3_L02;scout;neutral;nah;Die Ertrunkenen schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_schaedelkueste_3
+SP_scout_sonnentor_1_L01;scout;neutral;nah;Willkommen bei Großer Basar. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_sonnentor_1
+SP_scout_sonnentor_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Sandgeister seltener.;scene:SP_scout_sonnentor_1
+SP_scout_sonnentor_2_L01;scout;neutral;nah;Willkommen bei Karawanserei. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_sonnentor_2
+SP_scout_sonnentor_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Rennbahn. Merk dir die Wegmarken.;scene:SP_scout_sonnentor_2
+SP_scout_sonnentor_3_L01;scout;neutral;nah;Willkommen bei Rennbahn. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_sonnentor_3
+SP_scout_sonnentor_3_L02;scout;neutral;nah;Die Sandgeister schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_sonnentor_3
+SP_scout_grosse_leere_1_L01;scout;neutral;nah;Willkommen bei Riesenrippe. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_grosse_leere_1
+SP_scout_grosse_leere_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Sandgeister seltener.;scene:SP_scout_grosse_leere_1
+SP_scout_grosse_leere_2_L01;scout;neutral;nah;Willkommen bei Dünenlager. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_grosse_leere_2
+SP_scout_grosse_leere_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Sturmauge. Merk dir die Wegmarken.;scene:SP_scout_grosse_leere_2
+SP_scout_grosse_leere_3_L01;scout;neutral;nah;Willkommen bei Sturmauge. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_grosse_leere_3
+SP_scout_grosse_leere_3_L02;scout;neutral;nah;Die Sandgeister schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_grosse_leere_3
+SP_scout_klingenschlucht_1_L01;scout;neutral;nah;Willkommen bei Felsbrücke. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_klingenschlucht_1
+SP_scout_klingenschlucht_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Kultisten seltener.;scene:SP_scout_klingenschlucht_1
+SP_scout_klingenschlucht_2_L01;scout;neutral;nah;Willkommen bei Klingenkamm. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_klingenschlucht_2
+SP_scout_klingenschlucht_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Hochplateau Ras. Merk dir die Wegmarken.;scene:SP_scout_klingenschlucht_2
+SP_scout_klingenschlucht_3_L01;scout;neutral;nah;Willkommen bei Hochplateau Ras. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_klingenschlucht_3
+SP_scout_klingenschlucht_3_L02;scout;neutral;nah;Die Kultisten schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_klingenschlucht_3
+SP_scout_spiegel_der_sonne_1_L01;scout;neutral;nah;Willkommen bei Salzspiegel. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_spiegel_der_sonne_1
+SP_scout_spiegel_der_sonne_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Glaselementare seltener.;scene:SP_scout_spiegel_der_sonne_1
+SP_scout_spiegel_der_sonne_2_L01;scout;neutral;nah;Willkommen bei Archiv des Ordens. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_spiegel_der_sonne_2
+SP_scout_spiegel_der_sonne_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Trugstadt. Merk dir die Wegmarken.;scene:SP_scout_spiegel_der_sonne_2
+SP_scout_spiegel_der_sonne_3_L01;scout;neutral;nah;Willkommen bei Trugstadt. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_spiegel_der_sonne_3
+SP_scout_spiegel_der_sonne_3_L02;scout;neutral;nah;Die Glaselementare schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_spiegel_der_sonne_3
+SP_scout_glutkessel_1_L01;scout;neutral;nah;Willkommen bei Flammentempel. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_glutkessel_1
+SP_scout_glutkessel_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Kultisten seltener.;scene:SP_scout_glutkessel_1
+SP_scout_glutkessel_2_L01;scout;neutral;nah;Willkommen bei Lavaschlucht. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_glutkessel_2
+SP_scout_glutkessel_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Kultbasar. Merk dir die Wegmarken.;scene:SP_scout_glutkessel_2
+SP_scout_glutkessel_3_L01;scout;neutral;nah;Willkommen bei Kultbasar. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_glutkessel_3
+SP_scout_glutkessel_3_L02;scout;neutral;nah;Die Kultisten schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_glutkessel_3
+SP_scout_zarathis_1_L01;scout;neutral;nah;Willkommen bei Knochenmauer. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_zarathis_1
+SP_scout_zarathis_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Priester des Flammenkönigs seltener.;scene:SP_scout_zarathis_1
+SP_scout_zarathis_2_L01;scout;neutral;nah;Willkommen bei Thronviertel. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_zarathis_2
+SP_scout_zarathis_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Händlerviertel. Merk dir die Wegmarken.;scene:SP_scout_zarathis_2
+SP_scout_zarathis_3_L01;scout;neutral;nah;Willkommen bei Händlerviertel. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_zarathis_3
+SP_scout_zarathis_3_L02;scout;neutral;nah;Die Priester des Flammenkönigs schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_zarathis_3
+SP_scout_jadehafen_1_L01;scout;neutral;nah;Willkommen bei Hafenebene. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_jadehafen_1
+SP_scout_jadehafen_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Jade-Piraten seltener.;scene:SP_scout_jadehafen_1
+SP_scout_jadehafen_2_L01;scout;neutral;nah;Willkommen bei Mittelstadt. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_jadehafen_2
+SP_scout_jadehafen_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Oberstadt. Merk dir die Wegmarken.;scene:SP_scout_jadehafen_2
+SP_scout_jadehafen_3_L01;scout;neutral;nah;Willkommen bei Oberstadt. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_jadehafen_3
+SP_scout_jadehafen_3_L02;scout;neutral;nah;Die Jade-Piraten schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_jadehafen_3
+SP_scout_gruene_flut_1_L01;scout;neutral;nah;Willkommen bei Jade-Mine. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_gruene_flut_1
+SP_scout_gruene_flut_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Jade-Piraten seltener.;scene:SP_scout_gruene_flut_1
+SP_scout_gruene_flut_2_L01;scout;neutral;nah;Willkommen bei Wrackfeld. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_gruene_flut_2
+SP_scout_gruene_flut_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Kranichinsel. Merk dir die Wegmarken.;scene:SP_scout_gruene_flut_2
+SP_scout_gruene_flut_3_L01;scout;neutral;nah;Willkommen bei Kranichinsel. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_gruene_flut_3
+SP_scout_gruene_flut_3_L02;scout;neutral;nah;Die Jade-Piraten schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_gruene_flut_3
+SP_scout_fluesterhain_1_L01;scout;neutral;nah;Willkommen bei Kloster der Stille. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_fluesterhain_1
+SP_scout_fluesterhain_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Geisterwesen seltener.;scene:SP_scout_fluesterhain_1
+SP_scout_fluesterhain_2_L01;scout;neutral;nah;Willkommen bei Geisterweg. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_fluesterhain_2
+SP_scout_fluesterhain_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Bambusmeer. Merk dir die Wegmarken.;scene:SP_scout_fluesterhain_2
+SP_scout_fluesterhain_3_L01;scout;neutral;nah;Willkommen bei Bambusmeer. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_fluesterhain_3
+SP_scout_fluesterhain_3_L02;scout;neutral;nah;Die Geisterwesen schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_fluesterhain_3
+SP_scout_sonnenstufen_1_L01;scout;neutral;nah;Willkommen bei Kaiserliche Festung. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_sonnenstufen_1
+SP_scout_sonnenstufen_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Abtrünnigen seltener.;scene:SP_scout_sonnenstufen_1
+SP_scout_sonnenstufen_2_L01;scout;neutral;nah;Willkommen bei Terrassendorf. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_sonnenstufen_2
+SP_scout_sonnenstufen_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Festwiese. Merk dir die Wegmarken.;scene:SP_scout_sonnenstufen_2
+SP_scout_sonnenstufen_3_L01;scout;neutral;nah;Willkommen bei Festwiese. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_sonnenstufen_3
+SP_scout_sonnenstufen_3_L02;scout;neutral;nah;Die Abtrünnigen schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_sonnenstufen_3
+SP_scout_nebelkueste_1_L01;scout;neutral;nah;Willkommen bei Drachenrippe. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_nebelkueste_1
+SP_scout_nebelkueste_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Piraten seltener.;scene:SP_scout_nebelkueste_1
+SP_scout_nebelkueste_2_L01;scout;neutral;nah;Willkommen bei Nebelhafen. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_nebelkueste_2
+SP_scout_nebelkueste_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Piratenfeste. Merk dir die Wegmarken.;scene:SP_scout_nebelkueste_2
+SP_scout_nebelkueste_3_L01;scout;neutral;nah;Willkommen bei Piratenfeste. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_nebelkueste_3
+SP_scout_nebelkueste_3_L02;scout;neutral;nah;Die Piraten schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_nebelkueste_3
+SP_scout_herz_der_flut_1_L01;scout;neutral;nah;Willkommen bei Plattform Nord. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_herz_der_flut_1
+SP_scout_herz_der_flut_1_L02;scout;neutral;nah;Halt dich an die Wege, da sind die Konstrukte seltener.;scene:SP_scout_herz_der_flut_1
+SP_scout_herz_der_flut_2_L01;scout;neutral;nah;Willkommen bei Plattform Ost. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_herz_der_flut_2
+SP_scout_herz_der_flut_2_L02;scout;neutral;nah;Von hier oben siehst du alles bis Plattform Süd. Merk dir die Wegmarken.;scene:SP_scout_herz_der_flut_2
+SP_scout_herz_der_flut_3_L01;scout;neutral;nah;Willkommen bei Plattform Süd. Ich habe dir die Gegend auf der Karte markiert.;scene:SP_scout_herz_der_flut_3
+SP_scout_herz_der_flut_3_L02;scout;neutral;nah;Die Konstrukte schlagen nachts zu. Tagsüber kommst du sicherer durch.;scene:SP_scout_herz_der_flut_3

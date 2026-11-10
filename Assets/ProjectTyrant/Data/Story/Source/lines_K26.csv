@@ -1,0 +1,26 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K26_S01_L01;linsao;entschlossen;rechts;Kael ist im Herz der Flut. Er ruft den Drachen mit den letzten Kernen. Wir brauchen die Plattformen und die Flotte.;
+K26_S01_L02;held;entschlossen;links;Dann holen wir ihn da raus.;
+K26_S01_Q1;linsao;neutral;rechts;Wer führt die Flotte?;
+K26_S01_C1_A;held;entschlossen;links;Du – du kennst die Stadt.;opt:1|tend:Wuerde|flag:k26_linsao
+K26_S01_C1_B;held;zornig;links;Ich.;opt:1|tend:Wildheit
+K26_S02_L01;kael;zornig;rechts;Zu spät! Hörst du ihn? Das Meer atmet!;
+K26_S02_L02;held;besorgt;links;Der Drache …;
+K26_S02_L03;kael;amuesiert;rechts;Er gehört mir!;
+K26_S02_L04;held;entschlossen;links;Er gehört niemandem. Am wenigsten dir.;if:Flag=drache_frei
+K26_S02_L05;held;entschlossen;links;Dann binden wir ihn – zum letzten Mal, und ohne dich.;if:Flag=stadt_gesichert
+K26_S02E_L01;held;staunend;nah;Der Drache steigt aus dem Meer. Jade fällt von seinen Schuppen wie Regen.;if:Flag=drache_frei
+K26_S02E_L02;held;erleichtert;nah;Das Siegel schließt sich. Der Drache sinkt zurück in den Schlaf, und Kael mit ihm in die Tiefe.;if:Flag=stadt_gesichert
+K26_S02E_L03;held;neutral;nah;Es ist vorbei. Vareth, Zarath, Kael. Drei Feuer, gelöscht.;
+K26_S03_L01;linsao;amuesiert;rechts;Die Lichter flackern. Wir werden Kerzen benutzen. Wie Barbaren.;if:Flag=drache_frei
+K26_S03_L02;linsao;amuesiert;rechts;Die Lichter brennen heller als je zuvor. Die Kaiserin hat sogar gelächelt. Fast.;if:Flag=stadt_gesichert
+K26_S03_L03;linsao;neutral;rechts;Ein Brief aus Silbermund. Er riecht nach Tinte und Heimweh.;
+K26_S03_L04;held;amuesiert;links;Mira. Sie hat eine neue Liste.;
+K26_S03_L05;linsao;amuesiert;rechts;Natürlich hat sie das. Bleib eine Weile. Der Jadegeist mag dich zu sehr, um dich gehen zu lassen.;
+K26_S03_Q1;linsao;neutral;rechts;Kommst du wieder?;
+K26_S03_C1_A;held;entschlossen;links;Immer.;opt:1|tend:Wuerde|flag:k26_wiederkehr
+K26_S03_C1_B;held;zornig;links;Wenn die Welt mich lässt.;opt:1|tend:Wildheit
+K26_S03_Q2;linsao;neutral;rechts;Was schreibst du Mira?;
+K26_S03_C2_A;held;entschlossen;links;Dass ich heimkomme.;opt:2|tend:Wuerde|flag:k26_heim
+K26_S03_C2_B;held;zornig;links;Dass die Liste noch nicht fertig ist.;opt:2|tend:Wildheit
+K26_J;held;entschlossen;;Der Meeresdrache erwachte. Kael ist fort. Mira hat eine neue Liste – mit einer leeren Spalte.;journal

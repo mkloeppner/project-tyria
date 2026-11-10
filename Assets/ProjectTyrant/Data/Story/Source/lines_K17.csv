@@ -1,0 +1,21 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K17_S01_L01;nadira;entschlossen;rechts;Die Mauer ist hoch, aber Mauern brechen. Mein Stamm reitet direkt hindurch. Ein Sturm aus Hufen.;
+K17_S01_L02;ilyas;neutral;links;Oder wir gehen durch das Tor der Priester. Ich kenne das Losungswort – noch.;
+K17_S01_L03;held;neutral;links;Sturm oder List.;
+K17_S01_C1_A;held;entschlossen;links;Wir stürmen. Zarath soll uns kommen hören.;opt:1|flag:weg_sturm|reply:K17_S01_R1
+K17_S01_C1_B;held;nachdenklich;links;Wir gehen durch das Tor. Leise ist schneller.;opt:1|flag:weg_list|reply:K17_S01_R2
+K17_S01_R1;nadira;amuesiert;rechts;Dann sattle deinen Läufer!;reply:1
+K17_S01_R2;ilyas;neutral;links;Dann zieh dir eine Kutte über.;reply:1
+K17_S02A_L01;nadira;zornig;rechts;Für jede Karawane, die sie verbrannt haben – REITET!;
+K17_S02A_L02;held;entschlossen;links;Die Mauer bricht!;
+K17_S02A_Q1;nadira;neutral;rechts;Reitest du an meiner Seite?;
+K17_S02A_C1_A;held;entschlossen;links;Bis zur Mauer und weiter.;opt:1|tend:Wuerde|flag:k17_seite
+K17_S02A_C1_B;held;zornig;links;Vor dir.;opt:1|tend:Wildheit
+K17_S02B_L01;ilyas;neutral;rechts;„Asche zu Asche, Glut zur Krone.“ Das Tor öffnet sich. Und jetzt: ganz ruhig.;
+K17_S02B_L02;held;besorgt;links;Die Wachen sehen uns an.;
+K17_S02B_L03;ilyas;besorgt;rechts;Lächle. Priester lächeln immer, wenn sie lügen.;
+K17_S02B_Q1;ilyas;neutral;rechts;Und wenn sie die Losung geändert haben?;
+K17_S02B_C1_A;held;entschlossen;links;Dann improvisieren wir.;opt:1|tend:Wuerde|flag:k17_improvisieren
+K17_S02B_C1_B;held;zornig;links;Dann schlagen wir uns durch.;opt:1|tend:Wildheit
+K17_S03E_L01;held;staunend;nah;Zarathis. Von oben sieht sie aus wie ein Feuer, das jemand vergessen hat zu löschen.;
+K17_J;held;entschlossen;;Die Knochenmauer ist gefallen – durch Sturm oder List. Vor uns liegt die Verlorene Stadt.;journal

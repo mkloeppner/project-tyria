@@ -1,0 +1,27 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K11_S01_L01;mira;besorgt;rechts;Du siehst müde aus. Gut. Dann bist du wenigstens nicht der Einzige, der nicht schläft.;
+K11_S01_L02;held;neutral;links;Vareth ist versiegelt. Was hält dich wach?;
+K11_S01_L03;mira;besorgt;rechts;Fischer aus der Schädelküste. Ihre Netze kommen schwarz zurück. Das Wasser riecht nach Asche.;
+K11_S01_L04;mira;entschlossen;rechts;Ich habe eine Liste mit Dingen, die nach einem Sieg nicht passieren sollten. Das hier steht ganz oben.;
+K11_S01_L05;held;entschlossen;links;Dann sehe ich mir die Küste an.;
+K11_S01_L06;mira;neutral;rechts;Nimm Salz mit. Und komm zurück. Beides ist wichtig, in dieser Reihenfolge.;
+K11_S01_Q1;mira;neutral;rechts;Was sagst du den Fischern, wenn sie fragen, ob es sicher ist?;
+K11_S01_C1_A;held;entschlossen;links;Dass ich nachsehe und zurückkomme.;opt:1|tend:Wuerde|flag:k11_trost
+K11_S01_C1_B;held;zornig;links;Dass niemand vor mir hinausfährt.;opt:1|tend:Wildheit
+K11_S02E_L01;held;besorgt;nah;Die Toten stehen wieder auf. Und das Wasser … es leuchtet violett.;
+K11_S02E_L02;held;entschlossen;nah;Das ist dieselbe Verderbnis wie in der Feste. Das Siegel blutet.;
+K11_S03_L01;held;besorgt;nah;Ein Altar unter Wasser. Jemand hat ihn erst kürzlich benutzt.;
+K11_S03_L02;tovin;neutral;rechts;Bleib vom Wasser weg, solange du keinen Schutz trägst. Verderbnis kriecht durch die Haut.;
+K11_S03_L03;tovin;besorgt;rechts;Diese Zeichen kenne ich. Sie stehen in den ältesten Rollen meines Turms – neben einem Wort: Glut.;
+K11_S03_L04;held;neutral;links;Der Herold?;
+K11_S03_L05;tovin;entschlossen;rechts;Älter. Viel älter. Brich den Altar, dann reden wir.;
+K11_S03_Q1;tovin;neutral;rechts;Willst du wissen, was die Zeichen bedeuten, bevor wir den Altar brechen?;
+K11_S03_C1_A;held;entschlossen;links;Erzähl es mir – ich höre zu.;opt:1|tend:Wuerde|flag:k11_geduld
+K11_S03_C1_B;held;zornig;links;Erst brechen, dann reden.;opt:1|tend:Wildheit
+K11_S03E_L01;tovin;neutral;rechts;Der Altar ist still. Für heute. Das Siegel hält, aber es wird von außen gefüttert.;
+K11_S03E_L02;held;zornig;links;Von wem?;
+K11_S03E_L03;tovin;besorgt;rechts;Von denen, die Vareth erschaffen haben. Ich muss in mein Archiv. Komm nach Silbermund.;
+K11_S03E_Q1;tovin;neutral;rechts;Soll ich Mira von den Toten erzählen?;
+K11_S03E_C1_A;held;entschlossen;links;Ja. Sie verdient die Wahrheit.;opt:1|tend:Wuerde|flag:k11_ehrlich
+K11_S03E_C1_B;held;zornig;links;Nein. Sie hat genug Listen.;opt:1|tend:Wildheit
+K11_J;held;entschlossen;;Die Schädelküste blutet Verderbnis. Ein versunkener Altar fütterte das Siegel von außen – mit einem Zeichen: Glut.;journal

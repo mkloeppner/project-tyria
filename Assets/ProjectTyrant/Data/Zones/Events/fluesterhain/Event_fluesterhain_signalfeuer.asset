@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_fluesterhain_signalfeuer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: fluesterhain_signalfeuer
+  Title: 'Glockenhang: Signalfeuer'
+  Description: "Entz\xFCnde die Signalfeuer von Glockenhang, bevor die Nacht hereinbricht."
+  ChainId: 
+  Objective: 8
+  Center: {x: 183.80812, y: 2.8901527, z: 147.71112}
+  Radius: 30
+  Duration: 210
+  TargetCount: 4
+  Triggers:
+  - Type: 1
+    Delay: 20
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 480
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 240
+  GoldContribution: 4693.5483
+  Experience: 1877
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: fluesterhain_fluesterhain_signalfeuer
+  Path: []
+  DeliverPoint: {x: 183.80812, y: 2.8901527, z: 147.71112}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 6000280943baa1f4f99b5d8938eeb0e5, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 0}
+  Sites:
+  - {x: 193.93979, y: 2.9686584, z: 151.99472}
+  - {x: 179.52452, y: 2.8188128, z: 157.84279}
+  - {x: 173.67645, y: 0.07176515, z: 143.42752}
+  - {x: 188.09172, y: 2.9943595, z: 137.57945}
+  SiteChannel: 2.5
+  SiteLabel: "Feuer entz\xFCnden"
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0
+  Tier: 3
+  TierSet: 1
+  BalanceBaseTargets: 0

@@ -1,0 +1,25 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K25_S01_L01;linsao;besorgt;rechts;Die Kernkammer. Das Herz der Stadt. Wenn Kael die Kerne einsetzt, erwacht der Drache – und ist frei, oder wütend, oder beides.;
+K25_S01_L02;linsao;entschlossen;rechts;Die Jade-Kanonen! Lade sie, ich halte die Leitungen!;
+K25_S01_Q1;linsao;neutral;rechts;Vertraust du meinen Leitungen?;
+K25_S01_C1_A;held;entschlossen;links;Mit meinem Leben.;opt:1|tend:Wuerde|flag:k25_vertrauen
+K25_S01_C1_B;held;zornig;links;Habe ich eine Wahl?;opt:1|tend:Wildheit
+K25_S01_Q2;linsao;neutral;rechts;Fürchtest du den Drachen?;
+K25_S01_C2_A;held;entschlossen;links;Ich fürchte, was man ihm angetan hat.;opt:2|tend:Wuerde|flag:k25_mitleid
+K25_S01_C2_B;held;zornig;links;Er sollte mich fürchten.;opt:2|tend:Wildheit
+K25_S02_L01;yuen;besorgt;rechts;Kael ist geflohen. Die Kerne liegen vor euch. Ihr könnt das Siegel erneuern – oder den Drachen gehen lassen.;
+K25_S02_L02;mei;traurig;links;Er hat genug geschlafen. Ein Vertrag, der nur eine Seite bindet, ist keiner.;
+K25_S02_L03;linsao;besorgt;rechts;Ohne seine Kraft wird die Stadt dunkel. Für Jahre.;
+K25_S02_L04;held;nachdenklich;links;Die Entscheidung liegt bei mir.;
+K25_S02_C1_A;held;entschlossen;links;Ich befreie den Drachen.;opt:1|flag:drache_frei|reply:K25_S02_R1
+K25_S02_C1_B;held;entschlossen;links;Ich sichere die Stadt und erneuere das Siegel.;opt:1|flag:stadt_gesichert|reply:K25_S02_R2
+K25_S02_R1;mei;erleichtert;links;Dann wird er dir zuhören, wenn er erwacht.;reply:1
+K25_S02_R2;yuen;neutral;rechts;Dann bleibt Jadehafen hell. Und ihr bleibt mein Gast.;reply:1
+K25_S03_L01;linsao;besorgt;rechts;Die Lichter flackern schon. Er spürt, dass sich etwas verändert hat.;
+K25_S03_L02;linsao;entschlossen;rechts;Wenn er frei ist, will ich ihm in die Augen sehen. Nicht durch eine Leitung.;if:Flag=drache_frei
+K25_S03_L03;linsao;nachdenklich;rechts;Das Siegel hält – vorerst. Aber er träumt laut. Ich höre ihn in jedem Kern.;if:Flag=stadt_gesichert
+K25_S03_L04;held;entschlossen;links;Dann sind wir da, wenn er erwacht.;
+K25_S03_Q1;linsao;neutral;rechts;Und wenn du dich irrst?;
+K25_S03_C1_A;held;entschlossen;links;Dann trage ich die Folgen mit euch.;opt:1|tend:Wuerde|flag:k25_verantwortung
+K25_S03_C1_B;held;zornig;links;Ich irre mich nicht.;opt:1|tend:Wildheit
+K25_J;held;entschlossen;;In der Kernkammer habe ich über den Drachen entschieden.;journal

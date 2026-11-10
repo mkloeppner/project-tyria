@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3868e70530e3f342978ac4b9e687eca, type: 3}
+  m_Name: Mount_Skiff
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.MountDefinition
+  Kind: 7
+  DisplayName: Boot
+  Description: "Ein wendiges Jade-Boot der Werft von Jadehafen \u2013 nur auf Wasser."
+  AbilityText: Anker (Leertaste), Jade-Schub (V, Beherrschung)
+  EngageText: "\u2013"
+  Stats:
+    Kind: 7
+    Speed: 2
+    WaterSpeed: 14
+    MaxHealth: 8000
+    LeapSpeed: 0
+    LeapTime: 0
+    LeapUp: 0
+    ChargeTime: 0
+    MinJump: 0
+    MaxJump: 0
+    HopHeight: 0
+    EngageCoefficient: 0
+    EngageRadius: 0
+    EngageRange: 0
+    DodgeDistance: 0
+    DodgeCooldown: 99
+  PriceCopper: 50000
+  RequiredHeart: heart_jadehafen_3
+  VendorZone: jadehafen
+  Icon: mount_skiff
+  Prefab: {fileID: 2612713143104836655, guid: 51987d4a215055d42b8e2f80ac678940, type: 3}
+  SeatHeight: 0.9

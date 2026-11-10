@@ -18,13 +18,12 @@ namespace ProjectTyrant
         {
             StoryPage = AddTab("Geschichte");
             _storyIndex = _tabs.Count - 1;
-            _chapterList = UiFactory.Rect("Chapters", StoryPage).Place(new Vector2(0, 0), new Vector2(0, 1), new Vector2(0, 0.5f), new Vector2(8, 0), new Vector2(300, -10));
-            var v = _chapterList.gameObject.AddComponent<VerticalLayoutGroup>(); v.spacing = 3; v.childControlHeight = true; v.childControlWidth = true; v.childForceExpandHeight = false;
-            _stepText = UiFactory.Text("Step", StoryPage, "", 16, TextAlignmentOptions.TopLeft, Color.white); _stepText.rectTransform.Place(new Vector2(0, 1), new Vector2(1, 1), new Vector2(0, 1), new Vector2(320, -6), new Vector2(-640, 230));
-            _journalText = UiFactory.Text("Journal", StoryPage, "", 15, TextAlignmentOptions.TopLeft, new Color(0.88f, 0.85f, 0.78f)); _journalText.rectTransform.Place(new Vector2(0, 0), new Vector2(1, 1), new Vector2(0, 0), new Vector2(320, 8), new Vector2(-640, -250));
-            _journalText.enableAutoSizing = true; _journalText.fontSizeMin = 10; _journalText.fontSizeMax = 15;
-            _galleryList = UiFactory.Rect("Gallery", StoryPage).Place(new Vector2(1, 0), new Vector2(1, 1), new Vector2(1, 0.5f), new Vector2(-8, 0), new Vector2(300, -10));
-            var g = _galleryList.gameObject.AddComponent<VerticalLayoutGroup>(); g.spacing = 4; g.childControlHeight = true; g.childControlWidth = true; g.childForceExpandHeight = false;
+            // Drei scrollbare Spalten: Kapitel · aktueller Schritt + Tagebuch · Figuren (26 Kapitel passen nicht mehr auf eine Seite)
+            UiScroll.List("Chapters", StoryPage, out _chapterList, 3, 2).Place(new Vector2(0, 0), new Vector2(0, 1), new Vector2(0, 0.5f), new Vector2(8, 0), new Vector2(300, -10));
+            UiScroll.List("StepAndJournal", StoryPage, out var middle, 10, 8).Stretch(320, 320, 5, 5);
+            _stepText = UiScroll.ListText("Step", middle, "", 16, Color.white);
+            _journalText = UiScroll.ListText("Journal", middle, "", 15, new Color(0.88f, 0.85f, 0.78f));
+            UiScroll.List("Gallery", StoryPage, out _galleryList, 4, 4).Place(new Vector2(1, 0), new Vector2(1, 1), new Vector2(1, 0.5f), new Vector2(-8, 0), new Vector2(300, -10));
         }
 
         public void SelectStory() { if (_storyIndex >= 0) Select(_storyIndex); }
@@ -67,7 +66,6 @@ namespace ProjectTyrant
             {
                 if (sp.Id == "held" || sp.UnlockChapter > maxCh || sp.UnlockChapter <= 0) continue;
                 var t = UiFactory.Text("Fig_" + sp.Id, _galleryList, "<color=#" + ColorUtility.ToHtmlStringRGB(sp.Color) + "><b>" + sp.DisplayName + "</b></color> <size=12>– " + sp.Role + "</size>\n<size=12>" + sp.Bio + "</size>", 14, TextAlignmentOptions.TopLeft, new Color(0.9f, 0.9f, 0.9f));
-                UiFactory.Layout(t, 74);
             }
         }
 

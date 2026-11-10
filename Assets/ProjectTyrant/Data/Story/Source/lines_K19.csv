@@ -1,0 +1,24 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K19_S01_L01;zarath;neutral;rechts;Du hast meine Stadt eingenommen, meine Priester verjagt und meinen Orden beerdigt.;
+K19_S01_L02;zarath;amuesiert;rechts;Was bleibt? Ein Thron, eine Flamme und ein Wächter, der zu müde ist.;
+K19_S01_Q1;zarath;neutral;rechts;Kniest du vor der Flamme, Wächter?;
+K19_S01_C1_A;held;entschlossen;links;Ich knie vor niemandem – aber ich höre dich an.;opt:1|tend:Wuerde|flag:k19_anhoeren
+K19_S01_C1_B;held;zornig;links;Nur, um dich zu Fall zu bringen.;opt:1|tend:Wildheit
+K19_S01_L03;held;entschlossen;links;Ich bin nicht müde. Ich bin nur fertig mit dir.;
+K19_S01_L04;zarath;zornig;rechts;Dann brenn!;
+K19_S01E_L01;held;erleichtert;nah;Die Flamme ist aus. Der Thron ist nur noch Stein.;
+K19_S02_L01;nadira;amuesiert;rechts;Sonnentor feiert drei Tage. Die Händler nennen ihre Datteln nach dir. Sehr klebrig.;
+K19_S02_L02;nadira;neutral;rechts;Bleib, wenn du willst. Die Wüste vergisst schnell, aber mein Stamm nicht.;
+K19_S02_L03;held;neutral;links;Ein Brief aus Silbermund. Mira schreibt von einem Schiff aus dem Osten.;
+K19_S02_L04;nadira;staunend;rechts;Jadeschiffe. Die Dracheninseln. Natürlich. Helden bleiben nie, wo es warm ist.;
+K19_S02_Q1;nadira;neutral;rechts;Bleibst du in Sonnentor?;
+K19_S02_C1_A;held;entschlossen;links;Eine Weile – für die Datteln.;opt:1|tend:Wuerde|flag:k19_bleiben
+K19_S02_C1_B;held;zornig;links;Nein. Der Osten ruft.;opt:1|tend:Wildheit
+K19_S02_Q2;nadira;neutral;rechts;Soll mein Stamm dir einen Namen geben?;
+K19_S02_C2_A;held;entschlossen;links;Ich wäre geehrt.;opt:2|tend:Wuerde|flag:k19_name
+K19_S02_C2_B;held;zornig;links;Ich habe schon einen.;opt:2|tend:Wildheit
+K19_S03_L01;nadira;neutral;rechts;Das Schiff legt bei Sonnenaufgang ab. Mein Stamm reitet dich bis zum Kai – das ist bei uns eine Ehre, keine Begleitung.;
+K19_S03_L02;ilyas;erleichtert;links;Ich bleibe und baue das Archiv neu. Diesmal mit Fenstern.;if:Flag=weg_list
+K19_S03_L03;held;neutral;links;Pass auf die Läufer auf.;
+K19_S03_L04;nadira;amuesiert;rechts;Pass du auf dich auf. Im Osten gibt es keine Dünen, nur Wasser. Viel zu viel Wasser.;
+K19_J;held;entschlossen;;Zarath ist besiegt, der Thron nur noch Stein. Sonnentor feiert, und aus dem Osten kommt ein Jadeschiff.;journal

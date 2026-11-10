@@ -1,0 +1,223 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_17
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 17
+  Title: Knochenmauer
+  Zone: klingenschlucht
+  MinLevel: 80
+  Summary: "Der Weg nach Zarathis: Nadiras Sturm oder Ilyas\u2019 List \u2013 jede Wahl mit eigener Instanz."
+  Steps:
+  - Id: K17_S01
+    Title: Sturm oder List
+    Description: "Entscheide, wie ihr die Knochenmauer \xFCberwindet."
+    Type: 2
+    Zone: klingenschlucht
+    Position: {x: -40, y: 6, z: -280}
+    Npc: nadira
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: nadira
+      Count: 1
+      Text: Berate dich mit Nadira und Ilyas
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K17_S01
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 4000
+      Karma: 200
+      Copper: 2000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K17_S02A
+    Title: Sturm auf die Mauer
+    Description: Reite mit Nadiras Stamm gegen die Knochenmauer.
+    Type: 0
+    Zone: klingenschlucht
+    Position: {x: 20, y: 6, z: 0}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: weg_sturm
+      NotFlag: 
+    Objectives:
+    - Kind: 2
+      Target: Enemy_Wueste_Knochenkonstrukt
+      Count: 3
+      Text: "Brich die Mauerw\xE4chter"
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 10}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 2
+      Target: Enemy_Wueste_Flammenkultist
+      Count: 6
+      Text: Treib den Kult von der Mauer
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 6, y: 0, z: 16}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K17_S02A
+    SceneEnd: 
+    Checkpoints:
+    - 0
+    Reward:
+      Experience: 8000
+      Karma: 500
+      Copper: 5000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 55
+    Companion: nadira
+    Props: []
+  - Id: K17_S02B
+    Title: Das Tor der Priester
+    Description: Schleich mit Ilyas durch das Tor der Priester.
+    Type: 0
+    Zone: klingenschlucht
+    Position: {x: -20, y: 6, z: 20}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: weg_list
+      NotFlag: 
+    Objectives:
+    - Kind: 9
+      Target: losung
+      Count: 2
+      Text: Gib die Losung an den Toren
+      Hint: 
+      Optional: 0
+      Label: Tor
+      Offset: {x: 0, y: 0, z: 8}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 2
+      Target: Enemy_Wueste_Flammenpriester
+      Count: 1
+      Text: Schalte den Torpriester aus
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 16}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K17_S02B
+    SceneEnd: 
+    Checkpoints:
+    - 0
+    Reward:
+      Experience: 8000
+      Karma: 500
+      Copper: 5000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 55
+    Companion: ilyas
+    Props: []
+  - Id: K17_S03
+    Title: "\xDCber die Schlucht"
+    Description: "Flieg \xFCber die Schlucht zur Stadt."
+    Type: 3
+    Zone: klingenschlucht
+    Position: {x: 60, y: 30, z: 300}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 1
+      Target: K17_S03
+      Count: 1
+      Text: Erreiche den Blick auf Zarathis
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 17
+      Target: '*'
+      Count: 1
+      Text: "Gleite oder fliege \xFCber die Schlucht"
+      Hint: 
+      Optional: 1
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: 
+    SceneEnd: K17_S03E
+    Checkpoints: []
+    Reward:
+      Experience: 6000
+      Karma: 400
+      Copper: 4000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: L_K17
+    Radius: 60
+    Companion: 
+    Props: []
+  JournalLines:
+  - K17_J
+  Mechanics:
+  - Greif- und Himmelsschuppen-Route

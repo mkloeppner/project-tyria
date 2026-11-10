@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_nebelkueste_angriff
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: nebelkueste_angriff
+  Title: "Piraten der Nebelk\xFCste zur\xFCckschlagen"
+  Description: "Die Piraten der Nebelk\xFCste r\xFCcken auf Knochenbucht vor \u2013 schlage sie zur\xFCck."
+  ChainId: nebelkueste_angriff
+  Objective: 0
+  Center: {x: -330.70468, y: -0.10705924, z: -45.5168}
+  Radius: 36
+  Duration: 240
+  TargetCount: 8
+  Triggers:
+  - Type: 1
+    Delay: 20
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 1.4
+    Period: 0
+  - Type: 0
+    Delay: 420
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: nebelkueste_anfuehrer
+  FailNext: 
+  Cooldown: 240
+  GoldContribution: 4693.5483
+  Experience: 1877
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: nebelkueste_nebelkueste_angriff
+  Path: []
+  DeliverPoint: {x: -330.70468, y: -0.10705924, z: -45.5168}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 1d73a38fc7f18a743a97d59b19c79892, type: 2}
+  Veteran: {fileID: 11400000, guid: 09d5d11d808a7804b93a316e3bde04be, type: 2}
+  Boss: {fileID: 0}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0
+  Tier: 3
+  TierSet: 1
+  BalanceBaseTargets: 0

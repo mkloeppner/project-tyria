@@ -1,0 +1,201 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_23
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 23
+  Title: Sonnenstufen
+  Zone: sonnenstufen
+  MinLevel: 80
+  Summary: "Kaiserliche Festung: mit der Kaiserin oder mit den Abtr\xFCnnigen des Hauptmanns Daro."
+  Steps:
+  - Id: K23_S01
+    Title: Zwei Stimmen
+    Description: Kaiserin und Hauptmann fordern deine Hilfe.
+    Type: 2
+    Zone: sonnenstufen
+    Position: {x: -40, y: 8, z: -280}
+    Npc: yuen
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: yuen
+      Count: 1
+      Text: Entscheide dich
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K23_S01
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 4000
+      Karma: 200
+      Copper: 2000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K23_S02A
+    Title: Der Reisspeicher
+    Description: "Hol den Reisspeicher f\xFCr die Kaiserin zur\xFCck."
+    Type: 0
+    Zone: sonnenstufen
+    Position: {x: 20, y: 8, z: 0}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: pakt_kaiserin
+      NotFlag: 
+    Objectives:
+    - Kind: 2
+      Target: Enemy_Jade_Abtruenniger
+      Count: 6
+      Text: Vertreibe Daros Leute
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 10}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K23_S02A
+    SceneEnd: 
+    Checkpoints:
+    - 0
+    Reward:
+      Experience: 8000
+      Karma: 500
+      Copper: 5000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 45
+    Companion: pact
+    Props: []
+  - Id: K23_S02B
+    Title: Die Festung bei Nacht
+    Description: Hol mit Daro die gestohlenen Kerne aus der Festung.
+    Type: 0
+    Zone: sonnenstufen
+    Position: {x: -20, y: 8, z: 30}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: pakt_daro
+      NotFlag: 
+    Objectives:
+    - Kind: 2
+      Target: Enemy_Jade_Konstrukt
+      Count: 2
+      Text: Schalte die Festungskonstrukte aus
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 10}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 9
+      Target: kerne
+      Count: 3
+      Text: Nimm die Kerne
+      Hint: 
+      Optional: 0
+      Label: Jade-Kern
+      Offset: {x: 4, y: 0, z: 16}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K23_S02B
+    SceneEnd: 
+    Checkpoints:
+    - 0
+    Reward:
+      Experience: 8000
+      Karma: 500
+      Copper: 5000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 45
+    Companion: pact
+    Props: []
+  - Id: K23_S03
+    Title: Die Spur der Kerne
+    Description: Lin Sao wertet die Kerne aus.
+    Type: 2
+    Zone: sonnenstufen
+    Position: {x: 60, y: 8, z: 120}
+    Npc: linsao
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: linsao
+      Count: 1
+      Text: Sprich mit Lin Sao
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K23_S03
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 5000
+      Karma: 300
+      Copper: 3000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: L_K23
+    Radius: 60
+    Companion: 
+    Props: []
+  JournalLines:
+  - K23_J
+  Mechanics:
+  - Kaiserliche Patrouillen

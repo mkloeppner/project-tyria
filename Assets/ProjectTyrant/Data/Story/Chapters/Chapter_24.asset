@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_24
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 24
+  Title: "Nebelk\xFCste"
+  Zone: nebelkueste
+  MinLevel: 80
+  Summary: "Kael, Sch\xFCler des Herolds, sabotiert die Jade-Kerne; der Drache regt sich."
+  Steps:
+  - Id: K24_S01
+    Title: Kael
+    Description: Eine Gestalt im Nebel erwartet dich.
+    Type: 2
+    Zone: nebelkueste
+    Position: {x: -80, y: 4, z: -260}
+    Npc: kael
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: kael
+      Count: 1
+      Text: Stell Kael zur Rede
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K24_S01
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 4000
+      Karma: 200
+      Copper: 2000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K24_S02
+    Title: Die Schlange im Nebel
+    Description: Stell dich der Nebelschlange.
+    Type: 1
+    Zone: nebelkueste
+    Position: {x: 0, y: 4, z: 0}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 19
+      Target: nebelkueste_nebelschlange
+      Count: 1
+      Text: Besiege die Nebelschlange (Weltboss)
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: 
+    SceneEnd: K24_S02E
+    Checkpoints: []
+    Reward:
+      Experience: 9000
+      Karma: 700
+      Copper: 7000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K24_S03
+    Title: Sabotierte Kerne
+    Description: "Sichere Kaels zur\xFCckgelassene Kerne."
+    Type: 0
+    Zone: nebelkueste
+    Position: {x: 80, y: 4, z: 160}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 2
+      Target: Enemy_Jade_Pirat
+      Count: 6
+      Text: "Besiege Kaels S\xF6ldner"
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 8}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 9
+      Target: kern
+      Count: 3
+      Text: Sichere die Kerne
+      Hint: 
+      Optional: 0
+      Label: Sabotierter Kern
+      Offset: {x: 0, y: 0, z: 16}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: 
+    SceneEnd: K24_S03E
+    Checkpoints:
+    - 0
+    Reward:
+      Experience: 8000
+      Karma: 500
+      Copper: 5000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: L_K24
+    Radius: 45
+    Companion: pact
+    Props: []
+  JournalLines:
+  - K24_J
+  Mechanics:
+  - Weltboss als Story-Schritt

@@ -22,6 +22,8 @@ namespace ProjectTyrant
         public RectTransform HudLayer { get; private set; }
         public RectTransform WindowLayer { get; private set; }
         public RectTransform OverlayLayer { get; private set; }
+        /// <summary>Meldungen als Toasts über allen Fenstern (GameEventBus.Notify).</summary>
+        public UiToastStack Toasts { get; private set; }
         public WindowManager Windows { get; private set; }
         public UiTooltip Tooltip { get; private set; }
         public UiDialog Dialog { get; private set; }
@@ -91,6 +93,7 @@ namespace ProjectTyrant
             OverlayLayer = UiFactory.Rect("Overlay", Root).Stretch();
             Windows = new WindowManager(WindowLayer);
             Windows.WindowClosed += OnWindowClosed;
+            Toasts = new UiToastStack(OverlayLayer);
             Tooltip = new UiTooltip(OverlayLayer);
             var dialogMgr = new WindowManager(OverlayLayer);
             _dialogManager = dialogMgr;

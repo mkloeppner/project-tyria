@@ -1,0 +1,21 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K20_S01E_L01;held;staunend;nah;Jadehafen. Eine Stadt, die nach oben wächst, weil unten kein Platz mehr ist.;
+K20_S01E_L02;linsao;amuesiert;rechts;Du stehst im Weg. Und du starrst. Neu hier. Werkstattmeisterin Lin Sao – dein Kapitän hat dich angekündigt.;
+K20_S01E_Q1;linsao;neutral;rechts;Gefällt dir meine Stadt?;
+K20_S01E_C1_A;held;entschlossen;links;Sie ist atemberaubend.;opt:1|tend:Wuerde|flag:k20_staunen
+K20_S01E_C1_B;held;zornig;links;Sie ist sehr hoch.;opt:1|tend:Wildheit
+K20_S02_L01;linsao;entschlossen;rechts;Jeder, der hier überleben will, braucht einen Jadegeist. Kleiner Helfer, großes Herz – aus Jade, natürlich.;
+K20_S02_L02;linsao;neutral;rechts;Er holt dich zurück, wenn du fällst. Einmal alle zehn Minuten. Danach musst du selbst aufstehen.;
+K20_S02_L03;held;amuesiert;links;Er schwebt um meinen Kopf.;
+K20_S02_L04;linsao;amuesiert;rechts;Er mag dich. Er mag fast niemanden. Jetzt geh zur Kaiserin – sie wartet nicht gern.;
+K20_S02_Q1;linsao;neutral;rechts;Was soll dein Jadegeist zuerst lernen?;
+K20_S02_C1_A;held;entschlossen;links;Zu helfen.;opt:1|tend:Wuerde|flag:k20_helfen
+K20_S02_C1_B;held;zornig;links;Zu kämpfen.;opt:1|tend:Wildheit
+K20_S03_L01;yuen;neutral;rechts;Ein Held aus dem Westen. Ihr bringt Ruhm mit und Ärger hinterher.;
+K20_S03_L02;yuen;besorgt;rechts;Die Fischer berichten von Beben im Jade-Meer. Wenn ihr nützlich sein wollt, findet heraus, warum.;
+K20_S03_L03;held;neutral;links;Und wenn ich es herausfinde?;
+K20_S03_L04;yuen;neutral;rechts;Dann entscheide ich, ob ihr es weitererzählt.;
+K20_S03_Q1;yuen;neutral;rechts;Wem dient ihr, Held?;
+K20_S03_C1_A;held;entschlossen;links;Den Menschen, die Hilfe brauchen.;opt:1|tend:Wuerde|flag:k20_dienen
+K20_S03_C1_B;held;zornig;links;Niemandem.;opt:1|tend:Wildheit
+K20_J;held;entschlossen;;Jadehafen wächst in den Himmel. Lin Sao gab mir einen Jadegeist, die Kaiserin ihr Misstrauen.;journal

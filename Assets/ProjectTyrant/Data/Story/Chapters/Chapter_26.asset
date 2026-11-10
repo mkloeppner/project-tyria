@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_26
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 26
+  Title: Herz der Flut
+  Zone: herz_der_flut
+  MinLevel: 80
+  Summary: 'Finale: der Meeresdrache erwacht; je nach Wahl Bindung oder Befreiung. Epilog mit Lin Sao, Mira per Brief.'
+  Steps:
+  - Id: K26_S01
+    Title: Die Plattformen
+    Description: Nimm am Erwachen des Meeresdrachen teil.
+    Type: 1
+    Zone: herz_der_flut
+    Position: {x: -60, y: 2, z: -280}
+    Npc: linsao
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 19
+      Target: herz_der_flut_drachenende_p1
+      Count: 1
+      Text: Sichere die vier Plattformen (Meta, Phase 1)
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K26_S01
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 9000
+      Karma: 600
+      Copper: 6000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K26_S02
+    Title: Der Meeresdrache
+    Description: Stell dich Kael und dem Drachen.
+    Type: 0
+    Zone: herz_der_flut
+    Position: {x: 0, y: 2, z: 200}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 18
+      Target: Enemy_Champion_Meeresdrache
+      Count: 1
+      Text: Brich die Trotzleiste des Drachen
+      Hint: defiance
+      Optional: 0
+      Label: Der Meeresdrache
+      Offset: {x: 0, y: 0, z: 12}
+      Scale: 5
+      Scene: 
+      Partner: 
+    - Kind: 9
+      Target: kanone
+      Count: 2
+      Text: Feuere die Jade-Kanonen
+      Hint: 
+      Optional: 0
+      Label: Jade-Kanone
+      Offset: {x: 6, y: 0, z: 6}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 28
+      Target: '*'
+      Count: 25
+      Text: Halte der Flut stand
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K26_S02
+    SceneEnd: K26_S02E
+    Checkpoints:
+    - 0
+    - 1
+    Reward:
+      Experience: 14000
+      Karma: 1000
+      Copper: 10000
+      HeroPoints: 3
+      MasteryPoints: 3
+      Item: 
+    SetFlags:
+    - drache_finale
+    Letter: 
+    Radius: 55
+    Companion: linsao
+    Props: []
+  - Id: K26_S03
+    Title: Lichter
+    Description: Lin Sao wartet in der Werkstatt.
+    Type: 2
+    Zone: jadehafen
+    Position: {x: 40, y: 10, z: -120}
+    Npc: linsao
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: linsao
+      Count: 1
+      Text: Sprich mit Lin Sao
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K26_S03
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 8000
+      Karma: 1500
+      Copper: 15000
+      HeroPoints: 0
+      MasteryPoints: 3
+      Item: 
+    SetFlags:
+    - jade_abgeschlossen
+    Letter: L_K26
+    Radius: 60
+    Companion: 
+    Props: []
+  JournalLines:
+  - K26_J
+  Mechanics:
+  - Finale-Meta
+  - Boot-Anfahrt

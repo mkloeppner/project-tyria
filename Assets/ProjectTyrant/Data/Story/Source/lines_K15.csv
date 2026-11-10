@@ -1,0 +1,22 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K15_S01_L01;ilyas;neutral;rechts;Ein Fremder mit Sand in den Stiefeln und Fragen im Blick. Ich bin Ilyas, Priester der Sonne.;
+K15_S01_L02;ilyas;besorgt;rechts;Ich diente dem Orden, bevor ich verstand, wem er dient. Ihr Archiv liegt hier – hinter Luftspiegelungen.;
+K15_S01_L03;held;neutral;links;Wie finde ich es?;
+K15_S01_L04;ilyas;entschlossen;rechts;Die Spiegelungen zeigen den Weg nur aus dem richtigen Winkel. Stell dich an die Lichtsteine und schau.;
+K15_S01_Q1;ilyas;neutral;rechts;Vertraust du einem Priester, der seinem Orden den Rücken kehrte?;
+K15_S01_C1_A;held;entschlossen;links;Jeder verdient eine zweite Chance.;opt:1|tend:Wuerde|flag:k15_vertrauen
+K15_S01_C1_B;held;zornig;links;Ich behalte dich im Auge.;opt:1|tend:Wildheit
+K15_S02E_L01;ilyas;staunend;nah;Da. Eine Kuppel, die eben noch nicht da war. Die Spiegelung lügt nicht – sie verrät nur ungern.;
+K15_S03_L01;ilyas;besorgt;rechts;Das Archiv. Konstrukte bewachen es noch immer. Sie erkennen keine Abtrünnigen.;
+K15_S03_L02;held;entschlossen;links;Dann erkennen sie gleich gar nichts mehr.;
+K15_S03_Q1;ilyas;neutral;rechts;Sollen wir die Konstrukte verschonen, wenn sie still bleiben?;
+K15_S03_C1_A;held;entschlossen;links;Ja, wenn sie uns lassen.;opt:1|tend:Wuerde|flag:k15_gnade
+K15_S03_C1_B;held;zornig;links;Nein, sie sind Werkzeuge des Ordens.;opt:1|tend:Wildheit
+K15_S03E_L01;ilyas;besorgt;rechts;Hier steht es. Zarath, Hohepriester des Ordens, hat sich zum Flammenkönig gekrönt.;
+K15_S03E_L02;ilyas;besorgt;rechts;Er will Vareths Macht aus dem Siegel ziehen und selbst tragen. Der Glutkessel ist sein Tempel.;
+K15_S03E_L03;held;zornig;links;Dann gehe ich dorthin.;
+K15_S03E_L04;ilyas;entschlossen;rechts;Wir gehen. Ich habe ihm lange genug gedient. Lass mich ihm einmal widersprechen.;
+K15_S03E_Q1;ilyas;neutral;rechts;Bereust du, mitgekommen zu sein?;
+K15_S03E_C1_A;held;entschlossen;links;Nie. Du hast mich hergebracht.;opt:1|tend:Wuerde|flag:k15_dank
+K15_S03E_C1_B;held;zornig;links;Frag mich nach Zarath.;opt:1|tend:Wildheit
+K15_J;held;entschlossen;;Ilyas führte mich durch Luftspiegelungen ins Archiv: Zarath krönte sich zum Flammenkönig.;journal

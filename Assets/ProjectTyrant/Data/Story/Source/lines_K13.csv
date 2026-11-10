@@ -1,0 +1,21 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K13_S01E_L01;held;neutral;nah;Sonnentor. Eine Oase so groß wie eine Stadt – oder eine Stadt, die sich als Oase verkleidet.;
+K13_S01E_L02;nadira;amuesiert;rechts;Du schon wieder! Der Held aus dem Dünenmeer. Ich dachte, Helden bleiben, wo die Lieder sind.;
+K13_S01E_L03;held;amuesiert;links;Nadira. Die Lieder sind mir gefolgt.;
+K13_S01E_L04;nadira;besorgt;rechts;Dann hoffentlich auch dein Schwert. Der Orden der Glut brennt Karawanen nieder. Meine eingeschlossen.;
+K13_S01E_Q1;nadira;neutral;rechts;Erinnerst du dich an meine Karawane im Dünenmeer?;
+K13_S01E_C1_A;held;entschlossen;links;Wie könnte ich sie vergessen?;opt:1|tend:Wuerde|flag:k13_erinnerung
+K13_S01E_C1_B;held;zornig;links;Ich erinnere mich an die Räuber.;opt:1|tend:Wildheit
+K13_S02_L01;nadira;entschlossen;rechts;Am Basar hängt die Kopfgeldtafel. Jeder Name dort hat eine Karawane auf dem Gewissen.;
+K13_S02_L02;nadira;neutral;rechts;Nimm einen Auftrag an. Die Spur führt dich hin. Die Gesuchten sind … unberechenbar.;
+K13_S02_L03;held;neutral;links;Unberechenbar?;
+K13_S02_L04;nadira;besorgt;rechts;Der Orden gibt ihnen Glut ins Blut. Mal heilen sie sich, mal spiegeln sie sich. Lies die Zeichen.;
+K13_S02_Q1;nadira;neutral;rechts;Jagst du für Gold oder für Gerechtigkeit?;
+K13_S02_C1_A;held;entschlossen;links;Für die Karawanen.;opt:1|tend:Wuerde|flag:k13_gerechtigkeit
+K13_S02_C1_B;held;zornig;links;Für das Gold – Gerechtigkeit zahlt keine Sättel.;opt:1|tend:Wildheit
+K13_S03E_L01;nadira;amuesiert;rechts;Ein Gesuchter weniger. Die Händler werden dich lieben. Die Kultisten weniger.;
+K13_S03E_L02;nadira;entschlossen;rechts;Komm in die Große Leere. Mein Stamm hat etwas, das du brauchst, wenn du den Orden jagen willst.;
+K13_S03E_Q1;nadira;neutral;rechts;Soll ich den Händlern sagen, wer sie gerettet hat?;
+K13_S03E_C1_A;held;entschlossen;links;Sag ihnen, es war Sonnentor selbst.;opt:1|tend:Wuerde|flag:k13_bescheiden
+K13_S03E_C1_B;held;zornig;links;Sag ihnen meinen Namen.;opt:1|tend:Wildheit
+K13_J;held;entschlossen;;Sonnentor. Nadira ist wieder da, der Orden brennt Karawanen nieder, und die Kopfgeldtafel kennt seine Namen.;journal

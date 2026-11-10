@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_18
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 18
+  Title: Die Verlorene Stadt
+  Zone: zarathis
+  MinLevel: 80
+  Summary: "Die Stadt einnehmen. Im Ordens-Archiv: Vareth war Zaraths Vorg\xE4nger. Ilyas opfert sich oder wird gerettet."
+  Steps:
+  - Id: K18_S01
+    Title: Vier Viertel
+    Description: Nimm am Fall von Zarathis teil.
+    Type: 1
+    Zone: zarathis
+    Position: {x: -80, y: 6, z: -300}
+    Npc: nadira
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 19
+      Target: zarathis_zarathis_p1
+      Count: 1
+      Text: Durchbrich die Knochenmauer (Meta, Phase 1)
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K18_S01
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 9000
+      Karma: 600
+      Copper: 6000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K18_S02
+    Title: "Das Archiv der Gef\xE4\xDFe"
+    Description: Durchsuche das Archiv des Ordens.
+    Type: 0
+    Zone: zarathis
+    Position: {x: 40, y: 6, z: 60}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 9
+      Target: gefaesse
+      Count: 1
+      Text: "Lies die Liste der Gef\xE4\xDFe"
+      Hint: 
+      Optional: 0
+      Label: Liste
+      Offset: {x: 0, y: 0, z: 10}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 28
+      Target: '*'
+      Count: 20
+      Text: "Entkomme dem einst\xFCrzenden Archiv"
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K18_S02
+    SceneEnd: K18_S02E
+    Checkpoints:
+    - 0
+    Reward:
+      Experience: 9000
+      Karma: 600
+      Copper: 6000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 45
+    Companion: ilyas
+    Props: []
+  - Id: K18_S03
+    Title: Der Gedenkstein
+    Description: "Nadira wartet am eingest\xFCrzten Archiv."
+    Type: 2
+    Zone: zarathis
+    Position: {x: 60, y: 6, z: 80}
+    Npc: nadira
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: nadira
+      Count: 1
+      Text: Sprich mit Nadira am Gedenkstein
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K18_S03
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 5000
+      Karma: 400
+      Copper: 4000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: L_K18
+    Radius: 60
+    Companion: 
+    Props: []
+  JournalLines:
+  - K18_J
+  Mechanics:
+  - Finale-Meta

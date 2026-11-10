@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3868e70530e3f342978ac4b9e687eca, type: 3}
+  m_Name: Mount_DuneRunner
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.MountDefinition
+  Kind: 6
+  DisplayName: "D\xFCnenl\xE4ufer"
+  Description: "Schakalartiger Sprinter der Glutw\xFCste \u2013 Blinkschritt durch den Sand, nutzt Sandportale."
+  AbilityText: "Blinkschritt 15 m (2\u20133 Ladungen, laden am Boden)"
+  EngageText: "Sandsturm: Fl\xE4che, Blindheit, Trotzschaden 200"
+  Stats:
+    Kind: 6
+    Speed: 12.5
+    WaterSpeed: 3.5
+    MaxHealth: 5000
+    LeapSpeed: 0
+    LeapTime: 0
+    LeapUp: 0
+    ChargeTime: 0
+    MinJump: 0
+    MaxJump: 0
+    HopHeight: 1.6
+    EngageCoefficient: 3
+    EngageRadius: 6
+    EngageRange: 12
+    DodgeDistance: 6
+    DodgeCooldown: 3
+  PriceCopper: 100000
+  RequiredHeart: heart_sonnentor_1
+  VendorZone: sonnentor
+  Icon: mount_dunerunner
+  Prefab: {fileID: 3743536087076662221, guid: eedeb05f77b70ed489e3177c8f4ff5f5, type: 3}
+  SeatHeight: 1.45

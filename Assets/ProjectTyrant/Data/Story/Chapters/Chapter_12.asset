@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_12
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 12
+  Title: Der Orden der Glut
+  Zone: silberkueste
+  MinLevel: 80
+  Summary: Tovin entdeckt, dass der Herold dem Orden der Glut diente. Mira organisiert eine Expedition nach Sonnentor.
+  Steps:
+  - Id: K12_S01
+    Title: "Rollen aus dem S\xFCden"
+    Description: Tovin wartet im Archiv von Silbermund.
+    Type: 2
+    Zone: silberkueste
+    Position: {x: -60, y: 3, z: 80}
+    Npc: tovin
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: tovin
+      Count: 1
+      Text: Sprich mit Tovin
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K12_S01
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 4000
+      Karma: 200
+      Copper: 2000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K12_S02
+    Title: Das Portal im Vorland
+    Description: Sieh dir das Portal im Vorland der Tyrannenfeste an.
+    Type: 3
+    Zone: tyrannenfeste
+    Position: {x: 0, y: 6, z: -380}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 1
+      Target: K12_S02
+      Count: 1
+      Text: "Erreiche das W\xFCstenportal"
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 12
+      Target: '*'
+      Count: 1
+      Text: Nutze eine Wegmarke
+      Hint: region_travel
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: 
+    SceneEnd: K12_S02E
+    Checkpoints: []
+    Reward:
+      Experience: 4000
+      Karma: 200
+      Copper: 2000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K12_S03
+    Title: Abreise
+    Description: Mira wartet am Hafen.
+    Type: 2
+    Zone: silberkueste
+    Position: {x: 80, y: 2, z: -40}
+    Npc: mira
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: mira
+      Count: 1
+      Text: Verabschiede dich von Mira
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K12_S03
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 6000
+      Karma: 500
+      Copper: 5000
+      HeroPoints: 1
+      MasteryPoints: 1
+      Item: 
+    SetFlags:
+    - expedition
+    Letter: L_K12
+    Radius: 60
+    Companion: 
+    Props: []
+  JournalLines:
+  - K12_J
+  Mechanics:
+  - Regionen-Reise
+  - Schiffe

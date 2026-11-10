@@ -1,0 +1,24 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K18_S01_L01;nadira;entschlossen;rechts;Vier Viertel, vier Lager des Kults. Wir nehmen sie eins nach dem anderen.;
+K18_S01_L02;held;entschlossen;links;Und dann den Palast.;
+K18_S01_Q1;nadira;neutral;rechts;Welches Viertel zuerst?;
+K18_S01_C1_A;held;entschlossen;links;Das Händlerviertel – dort leben noch Menschen.;opt:1|tend:Wuerde|flag:k18_menschen
+K18_S01_C1_B;held;zornig;links;Das Thronviertel – der Kopf zuerst.;opt:1|tend:Wildheit
+K18_S01_Q2;nadira;neutral;rechts;Und wenn Zarath verhandeln will?;
+K18_S01_C2_A;held;entschlossen;links;Hören wir zu – und handeln dann.;opt:2|tend:Wuerde|flag:k18_zuhoeren
+K18_S01_C2_B;held;zornig;links;Er hatte seine Chance.;opt:2|tend:Wildheit
+K18_S02_L01;ilyas;staunend;rechts;Das Archiv des Ordens. Hier wurde Vareth erdacht. Siehst du die Liste der Gefäße? Zarath stand nach ihm.;
+K18_S02_L02;ilyas;besorgt;rechts;Er war Vareths Nachfolger, lange bevor er König war.;
+K18_S02_L03;held;besorgt;links;Der Boden bebt – das Archiv stürzt ein!;
+K18_S02_L04;ilyas;entschlossen;rechts;Lauf! Ich halte die Decke!;if:Flag=weg_sturm
+K18_S02_L05;ilyas;erleichtert;rechts;Die Priester kennen mich noch – sie halten die Decke für uns!;if:Flag=weg_list
+K18_S02E_L01;nadira;traurig;rechts;Ilyas ist geblieben. Unter den Steinen. Er hat gelächelt, als die Decke fiel.;if:Flag=weg_sturm
+K18_S02E_L02;ilyas;erleichtert;rechts;Ich lebe. Mit Staub in der Lunge und einem schlechten Gewissen weniger.;if:Flag=weg_list
+K18_S02E_L03;held;entschlossen;links;Zarath sitzt auf dem Thron. Das endet heute.;
+K18_S03_L01;nadira;traurig;rechts;Wir setzen einen Stein am Archiv. Für Ilyas – und für alle, die unter den Mauern liegen.;if:Flag=weg_sturm
+K18_S03_L02;ilyas;neutral;rechts;Wir setzen einen Stein für die Gefallenen. Mein Name steht nicht darauf. Noch nicht.;if:Flag=weg_list
+K18_S03_L03;nadira;entschlossen;rechts;Danach der Palast. Zarath wartet nicht ewig, und ich auch nicht.;
+K18_S03_Q1;nadira;neutral;rechts;Was schreiben wir auf den Gedenkstein?;
+K18_S03_C1_A;held;entschlossen;links;Sie standen, als es zählte.;opt:1|tend:Wuerde|flag:k18_stein
+K18_S03_C1_B;held;zornig;links;Sie haben ihren Preis bezahlt.;opt:1|tend:Wildheit
+K18_J;held;entschlossen;;Zarathis gehört uns. Im Archiv der Gefäße stand Zarath direkt nach Vareth.;journal

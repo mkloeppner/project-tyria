@@ -1,0 +1,22 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K16_S01_L01;nadira;besorgt;rechts;Der Kult belagert den Flammentempel. Ganze Stämme haben sich ihm angeschlossen – aus Angst.;
+K16_S01_L02;nadira;entschlossen;rechts;Wenn wir die Belagerung brechen, sehen sie, dass man Nein sagen kann.;
+K16_S01_L03;held;entschlossen;links;Dann brechen wir sie.;
+K16_S01_Q1;nadira;neutral;rechts;Was sagst du den Stämmen, die dem Kult folgen?;
+K16_S01_C1_A;held;entschlossen;links;Dass Angst kein Herr ist.;opt:1|tend:Wuerde|flag:k16_hoffnung
+K16_S01_C1_B;held;zornig;links;Dass sie wählen müssen.;opt:1|tend:Wildheit
+K16_S01_Q2;nadira;neutral;rechts;Kämpfst du an der Front oder an den Flanken?;
+K16_S01_C2_A;held;entschlossen;links;Wo man mich braucht.;opt:2|tend:Wuerde|flag:k16_flanke
+K16_S01_C2_B;held;zornig;links;Vorne. Immer.;opt:2|tend:Wildheit
+K16_S02E_L01;ilyas;erleichtert;nah;Die Tore stehen. Die Stämme jubeln. Und tief im Tempel … lacht jemand.;
+K16_S03_L01;zarath;amuesiert;rechts;Der kleine Wächter, der meinen Vorgänger in einen Stein gesperrt hat. Willkommen in meinem Haus.;
+K16_S03_L02;held;zornig;links;Zarath. Der Orden ist am Ende.;
+K16_S03_L03;zarath;neutral;rechts;Der Orden war nie mehr als eine Schmiede. Vareth war das Eisen. Ich bin die Flamme.;
+K16_S03_L04;zarath;zornig;rechts;Und Flammen fragen nicht, ob sie brennen dürfen.;
+K16_S03_L05;ilyas;besorgt;links;Er ist zu stark hier! Halt durch, bis der Tempel einstürzt!;
+K16_S03E_L01;ilyas;besorgt;rechts;Er ist geflohen – nach Zarathis, der Verlorenen Stadt. Hinter der Knochenmauer.;
+K16_S03E_L02;held;entschlossen;links;Dann bauen wir eine Leiter aus Knochen.;
+K16_S03E_Q1;ilyas;neutral;rechts;Hättest du ihn angreifen sollen?;
+K16_S03E_C1_A;held;entschlossen;links;Nein. Wir leben, das zählt.;opt:1|tend:Wuerde|flag:k16_vorsicht
+K16_S03E_C1_B;held;zornig;links;Ja. Beim nächsten Mal tue ich es.;opt:1|tend:Wildheit
+K16_J;held;entschlossen;;Wir brachen die Belagerung des Flammentempels. Zarath floh nach Zarathis.;journal

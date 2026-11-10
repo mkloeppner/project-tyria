@@ -1,0 +1,25 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K12_S01_L01;tovin;neutral;rechts;Hier. Eine Abschrift aus der Wüste jenseits der Feste. Der Orden der Glut.;
+K12_S01_L02;tovin;besorgt;rechts;Sie formten aus einem Hauptmann einen Tyrannen. Vareth war ihr Werk – und ihr Gefäß.;
+K12_S01_L03;held;besorgt;links;Und der Herold diente ihnen?;
+K12_S01_L04;tovin;entschlossen;rechts;Bis zuletzt. Sein Siegelring trägt ihr Zeichen. Der Orden lebt, im Süden, in einer Stadt namens Sonnentor.;
+K12_S01_L05;held;entschlossen;links;Dann gehe ich nach Sonnentor.;
+K12_S01_L06;tovin;neutral;rechts;Nicht allein. Mira organisiert schon eine Expedition. Sie hat dafür eine eigene Liste angelegt.;
+K12_S01_Q1;tovin;neutral;rechts;Schreckt dich ein Orden, der Tyrannen erschafft?;
+K12_S01_C1_A;held;entschlossen;links;Mich schreckt nur, was ich nicht kenne.;opt:1|tend:Wuerde|flag:k12_mut
+K12_S01_C1_B;held;zornig;links;Nein. Er sollte vor mir erschrecken.;opt:1|tend:Wildheit
+K12_S02E_L01;held;neutral;nah;Das Portal im Vorland der Feste. Dahinter: Hitze und Sand.;
+K12_S02E_L02;held;entschlossen;nah;Erst zurück zum Hafen. Mira wartet nicht gern.;
+K12_S03_L01;mira;entschlossen;rechts;Schiff, Vorräte, Karten, Salz. Und ein Kapitän, der behauptet, die Wüste habe einen Hafen.;
+K12_S03_L02;held;amuesiert;links;Du kommst nicht mit?;
+K12_S03_L03;mira;traurig;rechts;Silbermund braucht jemanden, der die Listen führt. Ich schreibe dir. Jede Woche.;
+K12_S03_L04;mira;neutral;rechts;Wegmarken in einer anderen Region kosten mehr. Und Schiffe brauchen länger als Portale. Merk dir das.;
+K12_S03_L05;held;neutral;links;Ich merke mir alles, was auf deinen Listen steht.;
+K12_S03_L06;mira;amuesiert;rechts;Lügner. Geh.;
+K12_S03_Q1;mira;neutral;rechts;Soll ich dir eine Liste mitgeben?;
+K12_S03_C1_A;held;entschlossen;links;Immer. Deine Listen haben mich gerettet.;opt:1|tend:Wuerde|flag:k12_liste
+K12_S03_C1_B;held;zornig;links;Nur eine kurze.;opt:1|tend:Wildheit
+K12_S03_Q2;mira;neutral;rechts;Versprichst du, zu schreiben?;
+K12_S03_C2_A;held;entschlossen;links;Jede Woche, auf Ehre.;opt:2|tend:Wuerde|flag:k12_versprechen
+K12_S03_C2_B;held;zornig;links;Wenn ich Zeit habe.;opt:2|tend:Wildheit
+K12_J;held;entschlossen;;Der Orden der Glut schuf Vareth. Er lebt im Süden. Mira schickt mich mit einem Schiff und einer Liste.;journal

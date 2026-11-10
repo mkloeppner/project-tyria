@@ -1,0 +1,19 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K23_S01_L01;yuen;entschlossen;rechts;Der Vertrag ist Staatsgeheimnis. Ihr wisst zu viel. Also helft mir – oder geht.;
+K23_S01_L02;daro;zornig;links;Sie belügt euch! Die Kaiserin presst den Drachen aus, damit Jadehafen glänzt. Wir Abtrünnigen wollen das beenden.;
+K23_S01_L03;held;nachdenklich;links;Kaiserin oder Hauptmann.;
+K23_S01_C1_A;held;entschlossen;links;Ich helfe der Kaiserin. Ordnung zuerst.;opt:1|flag:pakt_kaiserin|reply:K23_S01_R1
+K23_S01_C1_B;held;entschlossen;links;Ich helfe Daro. Die Wahrheit zuerst.;opt:1|flag:pakt_daro|reply:K23_S01_R2
+K23_S01_R1;yuen;neutral;rechts;Eine kluge Wahl. Selten, aber klug.;reply:1
+K23_S01_R2;daro;entschlossen;links;Dann zeig ich dir, was sie versteckt.;reply:1
+K23_S02A_L01;yuen;entschlossen;rechts;Daros Leute haben den Reisspeicher besetzt. Holt ihn zurück – ohne Tote, wenn möglich.;
+K23_S02A_Q1;yuen;neutral;rechts;Ohne Tote, wenn möglich – könnt ihr das?;
+K23_S02A_C1_A;held;entschlossen;links;Ich werde es versuchen.;opt:1|tend:Wuerde|flag:k23_schonen
+K23_S02A_C1_B;held;zornig;links;Sie haben es sich ausgesucht.;opt:1|tend:Wildheit
+K23_S02B_L01;daro;zornig;rechts;Die kaiserliche Festung lagert gestohlene Jade-Kerne. Wir holen sie. Heute Nacht.;
+K23_S03_L01;linsao;besorgt;rechts;Ganz gleich, wem du geholfen hast – die Kerne zeigen alle dieselbe Spur. Zur Nebelküste.;
+K23_S03_L02;linsao;besorgt;rechts;Und ein Name taucht immer wieder auf: Kael.;
+K23_S03_Q1;linsao;neutral;rechts;War es die richtige Wahl?;
+K23_S03_C1_A;held;entschlossen;links;Ich hoffe es.;opt:1|tend:Wuerde|flag:k23_hoffnung
+K23_S03_C1_B;held;zornig;links;Es gibt keine richtigen Wahlen, nur getroffene.;opt:1|tend:Wildheit
+K23_J;held;entschlossen;;Kaiserin oder Hauptmann – ich habe gewählt. Die Spur der Kerne führt zur Nebelküste.;journal

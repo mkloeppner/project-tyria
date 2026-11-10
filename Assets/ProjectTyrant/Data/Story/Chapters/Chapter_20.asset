@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_20
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 20
+  Title: Jadehafen
+  Zone: jadehafen
+  MinLevel: 80
+  Summary: "Ankunft per Schiff. Lin Sao baut den Jadegeist; Kaiserin Yuen empf\xE4ngt den Helden misstrauisch."
+  Steps:
+  - Id: K20_S01
+    Title: Ankunft
+    Description: Reise mit dem Schiff nach Jadehafen.
+    Type: 3
+    Zone: jadehafen
+    Position: {x: 0, y: 3, z: -250}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 1
+      Target: K20_S01
+      Count: 1
+      Text: Erreiche die Hafenebene
+      Hint: region_travel
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: 
+    SceneEnd: K20_S01E
+    Checkpoints: []
+    Reward:
+      Experience: 5000
+      Karma: 300
+      Copper: 3000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K20_S02
+    Title: Die Werkstatt
+    Description: Lin Sao baut dir einen Jadegeist.
+    Type: 2
+    Zone: jadehafen
+    Position: {x: 40, y: 10, z: -120}
+    Npc: linsao
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: linsao
+      Count: 1
+      Text: Sprich mit Lin Sao
+      Hint: jadebot
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K20_S02
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 6000
+      Karma: 300
+      Copper: 3000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags:
+    - jadegeist
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K20_S03
+    Title: Die Kaiserin
+    Description: "Kaiserin Yuen empf\xE4ngt dich in der Oberstadt."
+    Type: 2
+    Zone: jadehafen
+    Position: {x: 0, y: 30, z: 160}
+    Npc: yuen
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: yuen
+      Count: 1
+      Text: Sprich mit der Kaiserin
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K20_S03
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 6000
+      Karma: 400
+      Copper: 4000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: L_K20
+    Radius: 60
+    Companion: 
+    Props: []
+  JournalLines:
+  - K20_J
+  Mechanics:
+  - Jadegeist
+  - Vertikalstadt

@@ -1,0 +1,20 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K22_S01_L01;mei;neutral;rechts;Die Glocken haben dich angekündigt. Ich bin Schwester Mei.;
+K22_S01_L02;mei;besorgt;rechts;Es gibt einen alten Vertrag. Die Kaiser versprachen einem Drachen Schlaf – und nahmen seine Kraft.;
+K22_S01_L03;held;besorgt;links;Ein gefangener Drache unter dem Meer.;
+K22_S01_L04;mei;entschlossen;rechts;Folge den Geisterwegen. Dein Jadegeist macht sie sichtbar. Am Ende liegt der Vertrag.;
+K22_S01_Q1;mei;neutral;rechts;Glaubst du an alte Verträge?;
+K22_S01_C1_A;held;entschlossen;links;Wenn beide Seiten zustimmten.;opt:1|tend:Wuerde|flag:k22_vertrag
+K22_S01_C1_B;held;zornig;links;Verträge binden die Schwachen.;opt:1|tend:Wildheit
+K22_S02E_L01;mei;staunend;nah;Die Geister weichen. Sie erkennen den Jadegeist – oder das, was in ihm schläft.;
+K22_S03_L01;mei;besorgt;rechts;Das Kloster ist besetzt. Geisterwesen – unruhig, weil der Drache sich regt.;
+K22_S03_L02;held;entschlossen;links;Dann beruhigen wir sie.;
+K22_S03_Q1;mei;neutral;rechts;Sollen wir die Geister zur Ruhe singen?;
+K22_S03_C1_A;held;entschlossen;links;Ja. Sie sind nur unruhig.;opt:1|tend:Wuerde|flag:k22_singen
+K22_S03_C1_B;held;zornig;links;Wir haben keine Zeit für Lieder.;opt:1|tend:Wildheit
+K22_S03E_L01;mei;traurig;rechts;Der Vertrag. Jedes Jahr ein Siegel aus Jade, damit der Drache weiterschläft. Die letzten fehlen.;
+K22_S03E_L02;mei;besorgt;rechts;Jemand hat aufgehört, sie zu erneuern. Oder angefangen, sie zu brechen.;
+K22_S03E_Q1;mei;neutral;rechts;Wem sagst du, was im Vertrag steht?;
+K22_S03E_C1_A;held;entschlossen;links;Der Kaiserin – sie muss es wissen.;opt:1|tend:Wuerde|flag:k22_offen
+K22_S03E_C1_B;held;zornig;links;Niemandem, bis ich mehr weiß.;opt:1|tend:Wildheit
+K22_J;held;entschlossen;;Schwester Mei zeigte mir den alten Vertrag: Ein Drache schläft, damit die Stadt leuchtet.;journal

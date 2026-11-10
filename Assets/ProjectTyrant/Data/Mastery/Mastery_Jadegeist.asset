@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69ab7e33496bbb498dbb59b14be3f4a, type: 3}
+  m_Name: Mastery_Jadegeist
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.MasteryLineDefinition
+  Line: 7
+  DisplayName: Jadegeist
+  Description: Dein schwebender Begleiter aus Jade (Werkstatt in Jadehafen).
+  Icon: mastery_jade
+  Color: {r: 0.4, g: 0.9, b: 0.7, a: 1}
+  Ranks:
+  - Name: Rettungsprotokoll
+    Effect: "Belebt dich einmal je 10 Minuten aus dem Kampfunf\xE4hig-Zustand (50 % HP)"
+    Xp: 18000
+    Points: 1
+  - Name: "Gleitverst\xE4rkung"
+    Effect: Gleiter-Ausdauer +50 %, Jade-Aufwinde
+    Xp: 24000
+    Points: 2
+  - Name: Jadebatterien
+    Effect: "Treibt Jade-Ger\xE4te an: Aufz\xFCge, Br\xFCcken, Kanonen, Truhen"
+    Xp: 30000
+    Points: 2
+  - Name: Jadeband
+    Effect: Sammelt Beute im Umkreis von 20 m, markiert Angelstellen und Einblicke
+    Xp: 36000
+    Points: 3

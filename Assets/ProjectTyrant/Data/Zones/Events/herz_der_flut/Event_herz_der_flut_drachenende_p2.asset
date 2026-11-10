@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_herz_der_flut_drachenende_p2
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: herz_der_flut_drachenende_p2
+  Title: 'Erwachen des Meeresdrachen: Boot-Anfahrt durch den Sturm'
+  Description: "Boot-Anfahrt durch den Sturm \u2013 Phase 2 von 4."
+  ChainId: herz_der_flut_drachenende
+  Objective: 1
+  Center: {x: 428.25565, y: 2.012378, z: -291.4027}
+  Radius: 40
+  Duration: 300
+  TargetCount: 10
+  Triggers:
+  - Type: 2
+    Delay: 0
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: herz_der_flut_drachenende_p3
+  FailNext: 
+  Cooldown: 60
+  GoldContribution: 4693.5483
+  Experience: 1877
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: herz_der_flut_herz_der_flut_drachenende_p2
+  Path: []
+  DeliverPoint: {x: 428.25565, y: 2.012378, z: -291.4027}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: c80eb2c614841db419ec66a88c71d418, type: 2}
+  Veteran: {fileID: 11400000, guid: 4660c01b0cd3b824c8bfba27b79fb622, type: 2}
+  Boss: {fileID: 0}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: herz_der_flut_drachenende
+  MetaPhase: 2
+  Tier: 4
+  TierSet: 1
+  BalanceBaseTargets: 0

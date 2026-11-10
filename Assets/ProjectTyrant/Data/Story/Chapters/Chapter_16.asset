@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_16
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 16
+  Title: "Der Flammenk\xF6nig"
+  Zone: glutkessel
+  MinLevel: 80
+  Summary: "Zarath, der sich zum Flammenk\xF6nig kr\xF6nte, will Vareths Macht tragen. Erste Konfrontation im Flammentempel."
+  Steps:
+  - Id: K16_S01
+    Title: Die Belagerung
+    Description: Nadira wartet vor dem Flammentempel.
+    Type: 2
+    Zone: glutkessel
+    Position: {x: -60, y: 4, z: -300}
+    Npc: nadira
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: nadira
+      Count: 1
+      Text: Sprich mit Nadira
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K16_S01
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 4000
+      Karma: 200
+      Copper: 2000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K16_S02
+    Title: Die Tore halten
+    Description: Nimm an der Belagerung des Flammentempels teil.
+    Type: 1
+    Zone: glutkessel
+    Position: {x: 0, y: 4, z: -100}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 19
+      Target: glutkessel_flammentempel_p1
+      Count: 1
+      Text: "Schlie\xDFe die erste Phase der Belagerung ab"
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: 
+    SceneEnd: K16_S02E
+    Checkpoints: []
+    Reward:
+      Experience: 8000
+      Karma: 600
+      Copper: 6000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K16_S03
+    Title: Im Haus der Flamme
+    Description: Stell dich Zarath im Tempel.
+    Type: 0
+    Zone: glutkessel
+    Position: {x: 40, y: 4, z: 120}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 2
+      Target: Enemy_Wueste_Flammenkultist
+      Count: 5
+      Text: Besiege die Tempelwache
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 8}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 28
+      Target: '*'
+      Count: 25
+      Text: "Halte durch, bis der Tempel einst\xFCrzt"
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K16_S03
+    SceneEnd: K16_S03E
+    Checkpoints:
+    - 0
+    Reward:
+      Experience: 8000
+      Karma: 500
+      Copper: 5000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags:
+    - zarath_geflohen
+    Letter: L_K16
+    Radius: 45
+    Companion: ilyas
+    Props: []
+  JournalLines:
+  - K16_J
+  Mechanics:
+  - Meta-Teilnahme

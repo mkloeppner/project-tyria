@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_14
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 14
+  Title: "Der Sandl\xE4ufer"
+  Zone: grosse_leere
+  MinLevel: 80
+  Summary: "Nadiras Stamm z\xE4hmt D\xFCnenl\xE4ufer. Flucht vor einem Sandsturm."
+  Steps:
+  - Id: K14_S01
+    Title: Der Stamm
+    Description: Nadiras Stamm lagert an der Riesenrippe.
+    Type: 2
+    Zone: grosse_leere
+    Position: {x: -100, y: 4, z: -300}
+    Npc: nadira
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: nadira
+      Count: 1
+      Text: Sprich mit Nadira
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K14_S01
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 4000
+      Karma: 200
+      Copper: 2000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K14_S02
+    Title: "Mit den L\xE4ufern"
+    Description: "Lauf mit den D\xFCnenl\xE4ufern, bis einer dich w\xE4hlt."
+    Type: 0
+    Zone: grosse_leere
+    Position: {x: -60, y: 4, z: -200}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 9
+      Target: laeufer
+      Count: 3
+      Text: "Fange die L\xE4ufer ein"
+      Hint: 
+      Optional: 0
+      Label: "D\xFCnenl\xE4ufer"
+      Offset: {x: 0, y: 0, z: 10}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 16
+      Target: DuneRunner
+      Count: 1
+      Text: "Sitz auf deinem D\xFCnenl\xE4ufer auf"
+      Hint: dunerunner
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: 
+    SceneEnd: K14_S02E
+    Checkpoints:
+    - 0
+    Reward:
+      Experience: 7000
+      Karma: 400
+      Copper: 4000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags:
+    - duenenlaeufer
+    Letter: 
+    Radius: 55
+    Companion: nadira
+    Props: []
+  - Id: K14_S03
+    Title: Vor dem Sturm
+    Description: Reite vor dem Sandsturm davon.
+    Type: 1
+    Zone: grosse_leere
+    Position: {x: 80, y: 4, z: 0}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 1
+      Target: K14_S03
+      Count: 1
+      Text: Erreiche den Nomadenbrunnen
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 28
+      Target: '*'
+      Count: 30
+      Text: "\xDCberstehe den Sturm"
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: 
+    SceneEnd: K14_S03E
+    Checkpoints: []
+    Reward:
+      Experience: 6000
+      Karma: 400
+      Copper: 4000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: L_K14
+    Radius: 60
+    Companion: 
+    Props: []
+  JournalLines:
+  - K14_J
+  Mechanics:
+  - "D\xFCnenl\xE4ufer"
+  - Sandportale
+  - Sandsturm

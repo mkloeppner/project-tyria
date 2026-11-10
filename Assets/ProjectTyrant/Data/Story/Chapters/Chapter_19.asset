@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_19
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 19
+  Title: Thron der Glut
+  Zone: zarathis
+  MinLevel: 80
+  Summary: "Zarath auf dem Thron: drei Fenster-Leisten, Muster des Flammenk\xF6nigs. Epilog in Sonnentor mit Nadira."
+  Steps:
+  - Id: K19_S01
+    Title: Der Thron
+    Description: Stell dich Zarath auf dem Thron.
+    Type: 0
+    Zone: zarathis
+    Position: {x: 0, y: 8, z: 300}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 18
+      Target: Enemy_Champion_Flammenkoenig
+      Count: 1
+      Text: Brich Zaraths Trotzleiste
+      Hint: defiance
+      Optional: 0
+      Label: "Zarath, der Flammenk\xF6nig"
+      Offset: {x: 0, y: 0, z: 10}
+      Scale: 4
+      Scene: 
+      Partner: 
+    - Kind: 2
+      Target: Enemy_Wueste_Flammenpriester
+      Count: 2
+      Text: Besiege seine Priester
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 6, y: 0, z: 6}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 29
+      Target: Enemy_Champion_Flammenkoenig
+      Count: 1
+      Text: Besiege Zarath
+      Hint: 
+      Optional: 0
+      Label: "Zarath, der Flammenk\xF6nig"
+      Offset: {x: 0, y: 0, z: 10}
+      Scale: 4
+      Scene: 
+      Partner: 
+    SceneStart: K19_S01
+    SceneEnd: K19_S01E
+    Checkpoints:
+    - 0
+    - 1
+    Reward:
+      Experience: 12000
+      Karma: 800
+      Copper: 8000
+      HeroPoints: 2
+      MasteryPoints: 2
+      Item: 
+    SetFlags:
+    - zarath_besiegt
+    Letter: 
+    Radius: 50
+    Companion: nadira
+    Props: []
+  - Id: K19_S02
+    Title: Datteln und Briefe
+    Description: Sonnentor feiert.
+    Type: 2
+    Zone: sonnentor
+    Position: {x: 20, y: 3, z: -200}
+    Npc: nadira
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: nadira
+      Count: 1
+      Text: Sprich mit Nadira
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K19_S02
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 6000
+      Karma: 600
+      Copper: 6000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K19_S03
+    Title: Das Schiff nach Osten
+    Description: Nadira begleitet dich zum Kai.
+    Type: 2
+    Zone: sonnentor
+    Position: {x: -40, y: 2, z: -260}
+    Npc: nadira
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: nadira
+      Count: 1
+      Text: Verabschiede dich am Kai
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K19_S03
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 4000
+      Karma: 400
+      Copper: 4000
+      HeroPoints: 0
+      MasteryPoints: 2
+      Item: 
+    SetFlags:
+    - glut_abgeschlossen
+    Letter: L_K19
+    Radius: 60
+    Companion: 
+    Props: []
+  JournalLines:
+  - K19_J
+  Mechanics: []

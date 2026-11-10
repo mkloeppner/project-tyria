@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_21
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 21
+  Title: "Gr\xFCne Flut"
+  Zone: gruene_flut
+  MinLevel: 80
+  Summary: Die Jade-Technik bezieht Kraft aus einem gefangenen Meeresdrachen; Fischer berichten von Beben.
+  Steps:
+  - Id: K21_S01
+    Title: Am Ufer
+    Description: "Lin Sao erkl\xE4rt Boot und Angel."
+    Type: 2
+    Zone: gruene_flut
+    Position: {x: -120, y: 2, z: -300}
+    Npc: linsao
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: linsao
+      Count: 1
+      Text: Sprich mit Lin Sao
+      Hint: boat
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K21_S01
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 4000
+      Karma: 200
+      Copper: 2000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K21_S02
+    Title: Fang und Flucht
+    Description: Ruf dein Boot und wirf die Angel aus.
+    Type: 1
+    Zone: gruene_flut
+    Position: {x: -40, y: 2, z: -150}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 9
+      Target: boot
+      Count: 1
+      Text: Ruf dein Boot
+      Hint: boat
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 9
+      Target: angelstelle
+      Count: 3
+      Text: "Fange Fische an den Schw\xE4rmen"
+      Hint: fishing
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: 
+    SceneEnd: K21_S02E
+    Checkpoints: []
+    Reward:
+      Experience: 6000
+      Karma: 400
+      Copper: 4000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K21_S03
+    Title: Gestohlene Kerne
+    Description: "Hol die gestohlenen Jade-Kerne von den Piraten zur\xFCck."
+    Type: 1
+    Zone: gruene_flut
+    Position: {x: 80, y: 2, z: 40}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 2
+      Target: Enemy_Jade_Pirat
+      Count: 6
+      Text: Besiege die Jade-Piraten
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 19
+      Target: gruene_flut_angriff
+      Count: 1
+      Text: "Schlage den Piratenangriff zur\xFCck"
+      Hint: 
+      Optional: 1
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: 
+    SceneEnd: K21_S03E
+    Checkpoints: []
+    Reward:
+      Experience: 7000
+      Karma: 500
+      Copper: 5000
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: L_K21
+    Radius: 60
+    Companion: 
+    Props: []
+  JournalLines:
+  - K21_J
+  Mechanics:
+  - Boot
+  - Angeln

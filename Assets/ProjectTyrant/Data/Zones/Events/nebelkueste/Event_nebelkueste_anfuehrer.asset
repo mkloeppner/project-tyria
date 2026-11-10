@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_nebelkueste_anfuehrer
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: nebelkueste_anfuehrer
+  Title: "Anf\xFChrer der Piraten der Nebelk\xFCste"
+  Description: "Ihr Anf\xFChrer zeigt sich \u2013 brich seine Trotzleiste."
+  ChainId: nebelkueste_angriff
+  Objective: 5
+  Center: {x: -310.70468, y: 0, z: -25.5168}
+  Radius: 36
+  Duration: 300
+  TargetCount: 1
+  Triggers:
+  - Type: 2
+    Delay: 0
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 0
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 300
+  GoldContribution: 4693.5483
+  Experience: 1877
+  Karma: 469
+  Coins: 250
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: nebelkueste_nebelkueste_anfuehrer
+  Path: []
+  DeliverPoint: {x: -310.70468, y: 0, z: -25.5168}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 1d73a38fc7f18a743a97d59b19c79892, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 11400000, guid: fdccf7dd9c63bc441978b9f43270fc20, type: 2}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds: []
+  MasteryPoints: 0
+  MetaId: 
+  MetaPhase: 0
+  Tier: 3
+  TierSet: 1
+  BalanceBaseTargets: 0

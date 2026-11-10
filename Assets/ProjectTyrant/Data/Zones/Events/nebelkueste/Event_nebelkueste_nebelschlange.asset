@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3880e55970b254592d5ac15568f023, type: 3}
+  m_Name: Event_nebelkueste_nebelschlange
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.EventDefinition
+  Id: nebelkueste_nebelschlange
+  Title: Nebelschlange
+  Description: "Nebelschlange erscheint \u2013 brich die Trotzleiste und weiche den Mustern aus."
+  ChainId: nebelschlange
+  Objective: 9
+  Center: {x: -263.2653, y: 12, z: 491.87738}
+  Radius: 45
+  Duration: 480
+  TargetCount: 1
+  Triggers:
+  - Type: 6
+    Delay: 6600
+    Min: 0
+    Max: 0
+    Param: 
+    ProximityFactor: 0.75
+    Period: 7200
+  SuccessNext: 
+  FailNext: 
+  Cooldown: 60
+  GoldContribution: 4693.5483
+  Experience: 5631
+  Karma: 1407
+  Coins: 1000
+  GoldItemRoll: 1
+  SetFlagOnSuccess: 
+  SetFlagOnFail: 
+  ClearFlagOnSuccess: 
+  ClearFlagOnFail: 
+  FlagDuration: 0
+  WorldHook: nebelkueste_nebelkueste_nebelschlange
+  Path: []
+  DeliverPoint: {x: -263.2653, y: 12, z: 491.87738}
+  CaptureRadius: 8
+  CaptureTime: 8
+  WaveSize: 2
+  WaveInterval: 18
+  Trash: {fileID: 11400000, guid: 09d5d11d808a7804b93a316e3bde04be, type: 2}
+  Veteran: {fileID: 0}
+  Boss: {fileID: 11400000, guid: 6d8530e5cdd63ac4199186d201445943, type: 2}
+  Sites: []
+  SiteChannel: 3
+  SiteLabel: Reparieren
+  PhaseThresholds:
+  - 0.5
+  MasteryPoints: 1
+  MetaId: 
+  MetaPhase: 0
+  Tier: 4
+  TierSet: 1
+  BalanceBaseTargets: 0

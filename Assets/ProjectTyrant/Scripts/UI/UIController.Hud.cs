@@ -15,13 +15,13 @@ namespace ProjectTyrant
 
         Bar _end, _xp, _cast, _downedBar, _targetHp, _eventBar, _channel;
         readonly Slot[] _slots = new Slot[SkillCaster.SlotCount];
-        TextMeshProUGUI _swapText, _targetName, _notify, _crosshair, _help, _rewards, _evTitle, _evDesc, _evTimer, _evMedal, _downedHint, _comboHint;
+        TextMeshProUGUI _swapText, _targetName, _crosshair, _help, _rewards, _evTitle, _evDesc, _evTimer, _evMedal, _downedHint, _comboHint;
         int _lastRealLevel = -1;
         TextMeshProUGUI _orbLevel, _orbHp, _prompt, _bannerTitle, _bannerSub, _areaText, _xpText;
         Image _orbFill;
         GameObject _targetRoot, _eventRoot, _bannerRoot, _areaRoot, _promptRoot;
         EffectBar _playerBoons, _playerConds, _targetBoons, _targetConds;
-        float _notifyTimer, _comboTimer, _bannerTimer, _areaTimer;
+        float _comboTimer, _bannerTimer, _areaTimer;
         readonly Queue<BannerItem> _banners = new Queue<BannerItem>();
         readonly List<Floating> _floating = new List<Floating>();
         readonly Queue<TextMeshProUGUI> _floatPool = new Queue<TextMeshProUGUI>();
@@ -123,8 +123,6 @@ namespace ProjectTyrant
             _eventRoot.SetActive(false);
 
             // ---- Meldungen, Banner, Gebietsname ----
-            _notify = UiFactory.Text("Notify", hud, "", 26, TextAlignmentOptions.Center);
-            _notify.rectTransform.Place(new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0, 150), new Vector2(1200, 44));
             _comboHint = UiFactory.Text("Combo", hud, "", 20, TextAlignmentOptions.Center);
             _comboHint.rectTransform.Place(new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0, 110), new Vector2(900, 34));
             _bannerRoot = UiFactory.Rect("Banner", hud).Place(new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0, 250), new Vector2(1000, 110)).gameObject;
@@ -456,7 +454,7 @@ namespace ProjectTyrant
         void OnNotification(string msg, Color color)
         {
             if (msg.StartsWith("Combo:")) { _comboHint.text = msg; _comboHint.color = color; _comboTimer = 2.5f; return; }
-            _notify.text = msg; _notify.color = color; _notifyTimer = 3f;
+            Toasts?.Show(msg, color);   // Toast mit eigenem Hintergrund statt Text über Text
         }
 
         void OnBanner(string title, string sub, Color c) { _banners.Enqueue(new BannerItem { Title = title, Sub = sub, Color = c }); }
@@ -474,7 +472,7 @@ namespace ProjectTyrant
         void UpdateNotify()
         {
             float dt = Time.unscaledDeltaTime;
-            if (_notifyTimer > 0f) { _notifyTimer -= dt; var c = _notify.color; c.a = Mathf.Clamp01(_notifyTimer); _notify.color = c; }
+            Toasts?.Tick(dt);
             if (_comboTimer > 0f) { _comboTimer -= dt; var cc = _comboHint.color; cc.a = Mathf.Clamp01(_comboTimer); _comboHint.color = cc; }
             if (_bannerTimer > 0f)
             {

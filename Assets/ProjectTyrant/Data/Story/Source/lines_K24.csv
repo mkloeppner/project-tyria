@@ -1,0 +1,18 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K24_S01_L01;kael;amuesiert;rechts;Der Mann, der den Herold begraben hat. Ich war sein Schüler. Und ich habe besser zugehört.;
+K24_S01_L02;kael;neutral;rechts;Vareth war ein Gefäß, Zarath eine Flamme. Ich will mehr. Einen Drachen.;
+K24_S01_L03;held;zornig;links;Du brichst die Siegel.;
+K24_S01_L04;kael;amuesiert;rechts;Ich öffne eine Tür. Die Schlange im Nebel wird dich beschäftigen.;
+K24_S01_Q1;kael;neutral;rechts;Schließt du dich mir an? Zusammen könnten wir einen Drachen reiten.;
+K24_S01_C1_A;held;entschlossen;links;Niemand sollte einen Drachen reiten.;opt:1|tend:Wuerde|flag:k24_ablehnen
+K24_S01_C1_B;held;zornig;links;Nur, um dich herunterzuwerfen.;opt:1|tend:Wildheit
+K24_S01_Q2;kael;neutral;rechts;Was weißt du überhaupt vom Herold?;
+K24_S01_C2_A;held;entschlossen;links;Genug, um um ihn zu trauern.;opt:2|tend:Wuerde|flag:k24_trauer
+K24_S01_C2_B;held;zornig;links;Genug, um ihn begraben zu haben.;opt:2|tend:Wildheit
+K24_S02E_L01;held;erleichtert;nah;Die Nebelschlange flieht. Kael ist fort – aber seine Kerne liegen noch hier.;
+K24_S03E_L01;linsao;besorgt;rechts;Sabotierte Kerne. Jeder davon schwächt das Siegel des Drachen. Kael bringt die letzten in die Kernkammer – unter Jadehafen.;
+K24_S03E_L02;held;entschlossen;links;Dann halten wir ihn dort auf.;
+K24_S03E_Q1;linsao;neutral;rechts;Zerstören wir die sabotierten Kerne?;
+K24_S03E_C1_A;held;entschlossen;links;Nein, wir reparieren sie.;opt:1|tend:Wuerde|flag:k24_reparieren
+K24_S03E_C1_B;held;zornig;links;Ja, sofort.;opt:1|tend:Wildheit
+K24_J;held;entschlossen;;Kael, Schüler des Herolds, will einen Drachen. Die Nebelschlange ist besiegt, seine Kerne gesichert.;journal
