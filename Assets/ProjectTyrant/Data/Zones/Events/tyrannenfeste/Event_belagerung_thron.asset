@@ -60,3 +60,6 @@ MonoBehaviour:
   MasteryPoints: 1
   MetaId: belagerung
   MetaPhase: 5
+  Tier: 4
+  TierSet: 1
+  BalanceBaseTargets: 0

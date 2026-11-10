@@ -161,6 +161,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\TooltipBuilder.Items.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Audio\GameAudio.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Stats\AttributeSet.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Balance\BalanceLoadout.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Save\ProfileState.World.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UIController.Dialogue.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Map\MapProjection.cs" />

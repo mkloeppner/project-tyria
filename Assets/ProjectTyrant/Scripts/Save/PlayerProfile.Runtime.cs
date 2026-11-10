@@ -87,7 +87,7 @@ namespace ProjectTyrant
             float ws = State.Equipment.WeaponStrength(set);
             var w = State.Equipment.Get(set == 1 ? EquipSlot.Weapon2 : EquipSlot.Weapon1);
             if (w != null && w.Def != null && EffectiveLevel < w.Def.ItemLevel) ws *= DamageFormula.WeaponStrength(EffectiveLevel) / DamageFormula.WeaponStrength(w.Def.ItemLevel);
-            Player.WeaponStrengthOverride = ws;
+            Player.WeaponStrengthOverride = Balance.BalanceLoadout.Override(ws);   // Balance B1: erwartete Ausrüstung während Messungen
         }
 
         void FixedUpdate() { State.Food.Tick(Time.fixedDeltaTime); }

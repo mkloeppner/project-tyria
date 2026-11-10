@@ -63,3 +63,6 @@ MonoBehaviour:
   MasteryPoints: 0
   MetaId: sturm
   MetaPhase: 2
+  Tier: 4
+  TierSet: 1
+  BalanceBaseTargets: 0

@@ -8446,10 +8446,10 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 95588e539e15bc44f8b0350099cbaced, type: 3}
     Stats:
     - PeakDb: -1.0005057
-      RmsDb: -16.01624
-      Dc: -0.0000010065003
-      LoopSeam: 0.015417591
-      CentroidHz: 2631.8745
+      RmsDb: -16.01852
+      Dc: -0.00000029909557
+      LoopSeam: 0.0029172804
+      CentroidHz: 2631.9375
       Seconds: 8.5
   - Id: Amb/duenenmeer
     Category: 5

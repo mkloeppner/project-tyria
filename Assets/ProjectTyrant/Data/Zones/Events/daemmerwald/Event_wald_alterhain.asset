@@ -60,3 +60,6 @@ MonoBehaviour:
   MasteryPoints: 1
   MetaId: 
   MetaPhase: 0
+  Tier: 4
+  TierSet: 1
+  BalanceBaseTargets: 0

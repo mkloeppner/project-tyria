@@ -77,6 +77,66 @@ MonoBehaviour:
   TimerOffset: 0
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
+  DangerMap:
+    ZoneId: sonnfurt
+    Size: 200
+    Anchors:
+    - {x: -60, y: -60}
+    - {x: -54, y: -51}
+    - {x: -9.044605, y: 56.076553}
+    - {x: -22.841871, y: -36.898407}
+    Waypoints:
+    - {x: -54, y: -54}
+    - {x: -8, y: -44}
+    - {x: -15, y: -3}
+    - {x: 40, y: -50}
+    - {x: -25, y: 52}
+    BandEdges:
+    - 45
+    - 120
+    BandLevels: 000000000100000002000000i
+    Areas:
+    - Name: Weiler Sonnfurt
+      Center: {x: -60, y: -60}
+      Radius: 34
+      Level: 0
+      City: 0
+      NoLeash: 0
+    - Name: Hof Gerstenbrunn
+      Center: {x: -8, y: -60}
+      Radius: 24
+      Level: 0
+      City: 0
+      NoLeash: 0
+    - Name: Ruinen von Elmhain
+      Center: {x: 58, y: -55}
+      Radius: 32
+      Level: 2
+      City: 0
+      NoLeash: 0
+    - Name: Grenzposten Dornwacht
+      Center: {x: 5, y: 5}
+      Radius: 26
+      Level: 2
+      City: 0
+      NoLeash: 0
+    - Name: Rabenschanze
+      Center: {x: 58, y: 58}
+      Radius: 30
+      Level: 2
+      City: 0
+      NoLeash: 0
+    - Name: Spiegelsee
+      Center: {x: -45, y: 40}
+      Radius: 30
+      Level: 1
+      City: 0
+      NoLeash: 0
+    IsStartZone: 1
+    MinorAnchorFrom: 2
+    MinorAnchorScale: 0.33333334
+    HubSafeRadius: 30
+    WaypointSafeRadius: 12
   CompletionIds:
   - hc_herausforderer
   - hc_relikt_elmhain

@@ -116,6 +116,61 @@ MonoBehaviour:
   TimerOffset: 0
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
+  DangerMap:
+    ZoneId: nebelmoor
+    Size: 1000
+    Anchors:
+    - {x: 0, y: -380}
+    - {x: -29.572517, y: -414.01526}
+    - {x: 19.71461, y: 414.0068}
+    - {x: 13.773135, y: -364.0043}
+    Waypoints:
+    - {x: 14, y: -352}
+    - {x: -250, y: -150}
+    - {x: 60, y: 20}
+    - {x: 300, y: -150}
+    - {x: -120, y: 300}
+    - {x: -21.572517, y: -414.01526}
+    - {x: 27.71461, y: 414.00684}
+    BandEdges:
+    - 330
+    BandLevels: 0200000003000000i
+    Areas:
+    - Name: Torfstecher-Siedlung
+      Center: {x: -70, y: -300}
+      Radius: 110
+      Level: 2
+      City: 0
+      NoLeash: 0
+    - Name: Versunkener Wachturm
+      Center: {x: -300, y: 40}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Insel der Irrlichter
+      Center: {x: 190, y: 170}
+      Radius: 110
+      Level: 2
+      City: 0
+      NoLeash: 0
+    - Name: "Kr\xF6tenfurt"
+      Center: {x: 340, y: -60}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: "H\xE4ngende Weiden"
+      Center: {x: -60, y: 360}
+      Radius: 110
+      Level: 2
+      City: 0
+      NoLeash: 0
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 0
+    WaypointSafeRadius: 25
   CompletionIds:
   - wp_moor_torfsteg
   - wp_moor_schilf

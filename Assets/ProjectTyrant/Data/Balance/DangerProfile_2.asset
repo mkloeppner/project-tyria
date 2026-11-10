@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db8f5bf92c0f8345b91f8eda7add6d6, type: 3}
+  m_Name: DangerProfile_2
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Balance.DangerProfile
+  Settings:
+    Level: 2
+    NeutralShare: 0.4
+    AggroRange: 650
+    Leash: 1400
+    PursuitSpeed: 1
+    MaxPursuit: 18
+    LosForget: 3
+    Hesitation: 0
+    ControlChance: 0.25
+    Controls: 3
+    Pack: 2
+    PackRadius: 300
+    MaxGroupSize: 3
+    Respawn: 75
+    Density: 1
+    VeteranRule: 2
+    MercyDistance: 0
+    MountGiveUp: 400
+    MinTelegraph: 1
+    HitShare: 0.1
+    TelegraphHitShare: 0.1
+    TtkTrashMin: 5
+    TtkTrashMax: 6
+    TtdThreeTrash: 20
+    TtdVeteran: 20
+    TtkVeteranMin: 25
+    TtkVeteranMax: 35
+    NpcRevive: 0
+    GuardsHelp: 1
+    GiveUpHint: 0
+    DownedMode: 2
+    Ambushes: 0
+    Callers: 0
+    HastePhases: 0
+    MaxEventTier: 2
+    MinEventTier: 1

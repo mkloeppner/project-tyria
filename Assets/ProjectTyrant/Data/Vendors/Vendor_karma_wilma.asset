@@ -24,6 +24,30 @@ MonoBehaviour:
     PriceCopper: 0
     PriceKarma: 30
     Count: 5
+  - Item: {fileID: 11400000, guid: fbd5153b3d294b749bbe779c8fddedcf, type: 2}
+    PriceCopper: 0
+    PriceKarma: 60
+    Count: 1
+  - Item: {fileID: 11400000, guid: c0080ad0a7c750541888a527359d96da, type: 2}
+    PriceCopper: 0
+    PriceKarma: 60
+    Count: 1
+  - Item: {fileID: 11400000, guid: e979fc9ba38e1444a9e769003ec37e6d, type: 2}
+    PriceCopper: 0
+    PriceKarma: 90
+    Count: 1
+  - Item: {fileID: 11400000, guid: 079917cac94beb141a2d83080d97eb38, type: 2}
+    PriceCopper: 0
+    PriceKarma: 60
+    Count: 1
+  - Item: {fileID: 11400000, guid: 43bb56b38c11f8046aab690f077ffd9a, type: 2}
+    PriceCopper: 0
+    PriceKarma: 80
+    Count: 1
+  - Item: {fileID: 11400000, guid: f81ff210695d751448dd5f042cbea309, type: 2}
+    PriceCopper: 0
+    PriceKarma: 60
+    Count: 1
   - Item: {fileID: 11400000, guid: f48400f43ec60524286374c9228e4069, type: 2}
     PriceCopper: 0
     PriceKarma: 420

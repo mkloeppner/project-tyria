@@ -108,3 +108,11 @@ Stufe setzen, +EP, +Heldenpunkte, +Gold, +Karma, Gott-Modus, Effekt-Tests, Speic
 - **Editor-Builder:** `DataBuilder`, `ItemBuilder`, `TraitBuilder`, `EventDefinitionBuilder`, `ZoneBuilder`, `ZoneContentBuilder`, `MapBaker`, `IconPainter`, `AudioSynth`, `MeshyIntegrator`; Lauf 4: `WorldBuilder`, `BiomeZoneBuilder` (+ Content), `WorldEnemyBuilder`, `CreatureBuilder`, `MountBuilder`, `MasteryBuilder`, `ZoneEventBuilder`.
 
 Weitere Doku: WORLD · DECISIONS · PROGRESS · KNOWN_ISSUES · GW2_ABGLEICH · ASSET_QUEUE · PLACEHOLDERS.
+
+
+## Balance B1 – Gefahrenstufen, Flucht, neutrale Gegner
+- **Gefahr lesen:** Namensfarbe auf der Zielplakette (gelb = neutral, greift nur an, wenn angegriffen · rot = feindlich), Level und Rang (Veteran, Champion) davor; Gebietsbanner „Gebiet · Stufe 5–8 · Wildnis“; einmalige Warnung „Dieses Gebiet ist gefährlich für deine Stufe“, wenn das Gebiet ≥ 3 Level über dir liegt.
+- **Flucht:** Gegner geben auf (Leine, Zeitlimit, Sichtlinie, Fluchtgnade, Reittier, Wegmarke/Portal/Sicherheitszone) und kehren geheilt zurück. Rund um Sonnfurt geben sie nach wenigen Sekunden auf, im Spätspiel verfolgen Jäger auch Berittene. Kampfende nach 5 s ohne Schaden; Aufsitzen nur außerhalb des Kampfes.
+- **Hilfe:** Wachen patrouillieren die Wege der Startzone und lenken Verfolger ab; in Stufe 0–1 belebt dich ein Dorfbewohner oder eine Wache wieder („Hilfe ist unterwegs“).
+- **Debug-Panel (F9), Parameterfeld + Knopf:** „Balance: Stufe hier / Overlay“ (/danger show, Stufen auf der Minimap) · „Stufe setzen (Gebiet Stufe)“ · „Verfolgungsprofil (Stufe)“ · „Neutral (all/none/data)“ · „Telemetrie (start/stop)“ · „Heatmaps (deaths/escapes)“ · „Bot (beginner|experienced Stufe Minuten Seed)“ · „Event-Stufe (Id Stufe)“ · „Zielwerte auswerten“ · „TTD-Messung (Stufe Anzahl)“.
+- Details: MECHANICS.md (Verfolgung), BALANCE.md (Stufen, Kurve, Zielwerte), WORLD.md (Stufen je Gebiet).

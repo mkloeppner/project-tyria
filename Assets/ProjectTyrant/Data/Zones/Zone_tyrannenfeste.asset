@@ -102,6 +102,58 @@ MonoBehaviour:
   TimerOffset: 180
   TimerPosition: {x: 0, y: 5.0710473, z: 250}
   TimerEventId: belagerung
+  DangerMap:
+    ZoneId: tyrannenfeste
+    Size: 900
+    Anchors:
+    - {x: 0, y: -400}
+    - {x: -29.58241, y: -424.01456}
+    - {x: 13.784754, y: -384.00388}
+    Waypoints:
+    - {x: 10, y: -380}
+    - {x: 0, y: -260}
+    - {x: 0, y: 20}
+    - {x: 0, y: 200}
+    - {x: -36.510612, y: -428.01456}
+    BandEdges:
+    - 297
+    BandLevels: 0500000005000000i
+    Areas:
+    - Name: Belagerungslager
+      Center: {x: -40, y: -360}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Die drei Tore
+      Center: {x: 0, y: -300}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Innerer Hof
+      Center: {x: 0, y: 0}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 1
+    - Name: Siegelkammern
+      Center: {x: -200, y: 120}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 1
+    - Name: Thronsaal
+      Center: {x: 0, y: 260}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 1
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 0
+    WaypointSafeRadius: 25
   CompletionIds:
   - wp_feste_lager
   - wp_feste_tore

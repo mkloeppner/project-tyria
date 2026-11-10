@@ -77,6 +77,7 @@ namespace ProjectTyrant.Balance
             }
             Time.timeScale = 1f;
             try { Directory.CreateDirectory("Temp/PT_QA/balance"); File.WriteAllText("Temp/PT_QA/balance/probes_" + Label + ".json", JsonUtility.ToJson(Log, true)); } catch { }
+            BalanceLoadout.Remove();
             if (prof != null) { prof.SaveSuspended = false; DebugCommands.Load(); }
             var sb = new System.Text.StringBuilder();
             foreach (var r in Log.Results) sb.AppendLine(r.Mode + " Stufe " + r.Danger + " (" + r.Zone + ", L" + r.Level + ", " + r.Count + "× " + r.Archetype + "): " + r.Seconds.ToString("0.0") + " s");
@@ -89,9 +90,24 @@ namespace ProjectTyrant.Balance
             var gm = GameManager.Instance; var p = gm.Player; if (p == null) yield break;
             var pc = p.GetComponent<PlayerController>(); var caster = p.GetComponent<SkillCaster>(); var downed = p.GetComponent<DownedController>();
             DebugCommands.SetLevel(j.Level);
+            BalanceLoadout.Apply(p, j.Level);
             // freien Platz suchen: Startpunkt, Sicherheitszone vermeiden (sonst geben Gegner sofort auf)
             Vector3 spot = j.Spot;
             for (int i = 0; i < 12 && BalanceWorld.InSafezone(spot); i++) spot += new Vector3(9f, 0f, 6f);
+            // Biom-Zonen: Messplatz neben dem Welt-Lager der Stufe, das dem Wunschpunkt am nächsten liegt (sicherer Boden, keine Lava/Höhlendecke)
+            if (ZoneRoot.Current != null && ZoneRoot.Current.Definition != null && !ZoneRoot.Current.Definition.LegacyLayout)
+            {
+                NpcBrain camp = null; float bd = float.MaxValue;
+                foreach (var nb in UnityEngine.Object.FindObjectsByType<NpcBrain>())
+                {
+                    if (!nb.WorldSpawn || nb.DangerLevel != j.Danger || nb.Self == null || nb.Self.Team != Team.Enemy) continue;
+                    float d = Vector3.Distance(nb.HomePosition, j.Spot);
+                    if (d < bd) { bd = d; camp = nb; }
+                }
+                if (camp != null) spot = camp.HomePosition + new Vector3(12f, 0f, 0f);
+            }
+            // Bodenpunkt vom NavMesh (Raycast von oben träfe in Höhlen die Decke; falsche Höhe → Rettung zur Wegmarke = Sicherheitszone)
+            if (UnityEngine.AI.NavMesh.SamplePosition(spot, out var hit, 40f, UnityEngine.AI.NavMesh.AllAreas)) spot = hit.position;
             pc.Teleport(spot + Vector3.up * 0.3f, Quaternion.identity);
             if (p.IsDead) p.Revive(1f); if (downed != null) downed.ResetState();
             p.SetHealth(p.MaxHealth); p.Effects.ClearConditions();
@@ -108,6 +124,7 @@ namespace ProjectTyrant.Balance
                 b.LevelOverride = j.Level; b.DangerOverride = j.Danger; b.ApplyArchetype(); b.HomePosition = b.transform.position; b.UseLeash = false;
                 spawned.Add(b);
             }
+            if (j.Mode == "flee") { yield return Flee(j, spawned, spot); yield break; }
             bool ttk = j.Mode.StartsWith("ttk");
             caster.AutoAttack = ttk;
             Time.timeScale = TimeScale;
@@ -152,6 +169,34 @@ namespace ProjectTyrant.Balance
         /// Gegner in der Nähe ruhigstellen (Suspended + unsichtbar + nicht anvisierbar). Kein SetActive: das Ab-/Anschalten geriggter Figuren
         /// fror den Editor ein (KNOWN_ISSUES 58, Animation Rigging) – vermutlich Auslöser der Hänger am 10.11. um 08:30 und 12:10.
         /// </summary>
+        /// <summary>Flucht-Probe: Gegner provozieren, 2 s kämpfen lassen, dann geradeaus weglaufen; Ergebnis = Sekunden bis zur Aufgabe (−1 = gestorben/verfolgt).</summary>
+        IEnumerator Flee(Job j, List<NpcBrain> spawned, Vector3 spot)
+        {
+            var p = GameManager.Instance.Player; var pc = p.GetComponent<PlayerController>(); var downed = p.GetComponent<DownedController>();
+            Time.timeScale = TimeScale;
+            foreach (var b in spawned) { b.UseLeash = true; b.ForceAggro(p); }
+            float t = 0f; while (t < 2f) { t += Time.deltaTime; PlayerController.QaWishWorld = Vector3.zero; yield return null; }
+            var dir = spawned.Count > 0 ? (p.transform.position - spawned[0].transform.position) : Vector3.forward; dir.y = 0f; dir = dir.sqrMagnitude > 0.01f ? dir.normalized : Vector3.forward;
+            float run = 0f, result = -1f;
+            while (run < 60f)
+            {
+                run += Time.deltaTime;
+                PlayerController.QaWishWorld = dir;
+                if (p.IsDowned || p.IsDead) break;
+                bool chased = false; foreach (var b in spawned) if (b != null && !b.Self.IsDead && b.Target == p && b.State != NpcState.Reset) chased = true;
+                if (!chased) { result = run; break; }
+                yield return null;
+            }
+            Time.timeScale = 1f; PlayerController.QaWishWorld = null;
+            foreach (var b in spawned) if (b != null) Destroy(b.gameObject);
+            Restore();
+            if (downed != null && p.IsDowned) downed.Rally("Messung beendet");
+            if (p.IsDead) p.Revive(1f);
+            p.SetHealth(p.MaxHealth);
+            Log.Results.Add(new ProbeResult { Mode = "flee", Zone = ZoneRoot.Current != null ? ZoneRoot.Current.Id : "", Archetype = j.Archetype, Danger = j.Danger, Level = j.Level, Count = j.Count, Seconds = result, Label = Label });
+            yield return new WaitForSecondsRealtime(0.3f);
+        }
+
         static void ClearAround(Vector3 c, float r)
         {
             foreach (var x in new List<Combatant>(Combatant.All))

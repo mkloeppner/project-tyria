@@ -157,9 +157,15 @@ namespace ProjectTyrant.Tests
             Assert.AreEqual(6, triggers.Count, "alle 6 Auslöser-Typen");
             var defend = defs.Find(d => d.Id == "dornwacht_defend");
             Assert.AreEqual("dornwacht_assault", defend.SuccessNext); Assert.AreEqual("dornwacht_recapture", defend.FailNext);
-            Assert.AreEqual(EventDirector.FlagDornwachtFallen, defend.SetFlagOnFail, "Meta: Fehlschlag → Dornwacht gefallen");
+            // Balance B1 (DECISIONS): Die Verteidigung ist ein Stufe-1-Event – ihr Fehlschlag setzt „Dornwacht gefallen“ nicht mehr (kein Hub-Angriff für neue Spieler);
+            // der Meta-Zustand entsteht erst, wenn auch „Zurückerobern“ (Stufe 2) scheitert, und „Sonnfurt unter Angriff“ hängt weiter am Flag.
+            Assert.IsTrue(string.IsNullOrEmpty(defend.SetFlagOnFail), "Stufe 1: keine große Welt-Folge bei Fehlschlag");
+            Assert.AreEqual(Balance.EventTier.Easy, defend.Tier);
             var meta = defs.Find(d => d.Id == "sonnfurt_defense");
             Assert.IsTrue(meta.Triggers.Exists(t => t.Type == EventTriggerType.WorldState && t.Param == EventDirector.FlagDornwachtFallen));
+            var recapture = defs.Find(d => d.Id == "dornwacht_recapture");
+            Assert.AreEqual(EventDirector.FlagDornwachtFallen, recapture.SetFlagOnFail, "Meta: Zurückerobern scheitert → Dornwacht gefallen");
+            Assert.AreEqual(EventDirector.FlagDornwachtFallen, recapture.ClearFlagOnSuccess, "Zurückerobern hebt den Meta-Zustand auf");
         }
     }
 }

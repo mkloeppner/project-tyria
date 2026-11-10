@@ -102,6 +102,58 @@ MonoBehaviour:
   TimerOffset: 0
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
+  DangerMap:
+    ZoneId: kristalltiefe
+    Size: 900
+    Anchors:
+    - {x: 0, y: -380}
+    - {x: -19.71461, y: -414.0068}
+    - {x: 13.773135, y: -364.0043}
+    Waypoints:
+    - {x: 10, y: -360}
+    - {x: -150, y: -40}
+    - {x: 200, y: -120}
+    - {x: 120, y: 200}
+    - {x: -26.64281, y: -418.00684}
+    BandEdges:
+    - 297
+    BandLevels: 0500000005000000i
+    Areas:
+    - Name: Schwarzer See
+      Center: {x: -180, y: -10}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Pilzwald
+      Center: {x: 230, y: -150}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: "Kristallbr\xFCcke"
+      Center: {x: 0, y: 80}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Kammer der Stimme
+      Center: {x: 150, y: 150}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Verlassene Zwergenmine
+      Center: {x: -280, y: 250}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 0
+    WaypointSafeRadius: 25
   CompletionIds:
   - wp_tiefe_eingang
   - wp_tiefe_see

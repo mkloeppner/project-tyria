@@ -180,6 +180,69 @@ MonoBehaviour:
   TimerOffset: 0
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
+  DangerMap:
+    ZoneId: silberkueste
+    Size: 900
+    Anchors:
+    - {x: 0, y: 22}
+    - {x: -19.700375, y: 394.00748}
+    - {x: 394.0298, y: -39.402977}
+    - {x: 7.5244436, y: 60.673237}
+    - {x: 19.052559, y: 51}
+    - {x: 21.66577, y: 36.17974}
+    - {x: 14.141328, y: 23.147024}
+    - {x: -0.0000019233012, y: 18}
+    - {x: -14.141331, y: 23.147024}
+    - {x: -21.665771, y: 36.17974}
+    - {x: -19.05256, y: 51}
+    - {x: -7.524441, y: 60.67324}
+    Waypoints:
+    - {x: 0, y: 22}
+    - {x: 90, y: -50}
+    - {x: 260, y: 160}
+    - {x: -230, y: -170}
+    - {x: -30, y: 360}
+    - {x: 400.958, y: -35.402977}
+    - {x: 15.524445, y: 60.673237}
+    BandEdges:
+    - 297
+    BandLevels: 0300000003000000i
+    Areas:
+    - Name: Portalplatz
+      Center: {x: 0, y: 40}
+      Radius: 110
+      Level: 0
+      City: 1
+      NoLeash: 0
+    - Name: "B\xFCndnis-Viertel"
+      Center: {x: -60, y: 80}
+      Radius: 110
+      Level: 0
+      City: 1
+      NoLeash: 0
+    - Name: Markt der hundert Segel
+      Center: {x: -40, y: 10}
+      Radius: 110
+      Level: 0
+      City: 1
+      NoLeash: 0
+    - Name: Schmugglergrotte
+      Center: {x: -260, y: -210}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Alter Leuchtturm
+      Center: {x: 280, y: 190}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 0
+    WaypointSafeRadius: 25
   CompletionIds:
   - wp_kueste_silbermund
   - wp_kueste_hafen

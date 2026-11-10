@@ -127,6 +127,63 @@ MonoBehaviour:
   TimerOffset: 120
   TimerPosition: {x: 40, y: 13.279403, z: 330}
   TimerEventId: frostschlund
+  DangerMap:
+    ZoneId: frostkamm
+    Size: 1100
+    Anchors:
+    - {x: 0, y: -440}
+    - {x: -19.744911, y: -464.00543}
+    - {x: 454.02255, y: 39.48022}
+    - {x: -79.0136, y: 474.08163}
+    - {x: 13.804754, y: -424.00317}
+    Waypoints:
+    - {x: 24, y: -410}
+    - {x: -260, y: -220}
+    - {x: 120, y: -60}
+    - {x: 380, y: -260}
+    - {x: -180, y: 240}
+    - {x: 8, y: -440}
+    - {x: 460.95074, y: 43.48022}
+    - {x: -71.0136, y: 474.08167}
+    BandEdges:
+    - 363
+    BandLevels: 0300000004000000i
+    Areas:
+    - Name: Bergsteigerlager
+      Center: {x: -240, y: -270}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Adlerhorst
+      Center: {x: 230, y: 120}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Kristallmine
+      Center: {x: 360, y: -200}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Eiswindtempel
+      Center: {x: -260, y: 160}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Schlund des Frostes
+      Center: {x: 40, y: 330}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 0
+    WaypointSafeRadius: 25
   CompletionIds:
   - wp_frost_ankunft
   - wp_frost_lager

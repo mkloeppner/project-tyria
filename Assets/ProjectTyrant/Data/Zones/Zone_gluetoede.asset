@@ -130,6 +130,64 @@ MonoBehaviour:
   TimerOffset: 300
   TimerPosition: {x: 250, y: 1.6, z: 345}
   TimerEventId: sturm
+  DangerMap:
+    ZoneId: gluetoede
+    Size: 1200
+    Anchors:
+    - {x: -470, y: 0}
+    - {x: -504.01035, y: -29.647667}
+    - {x: 514.03955, y: 59.312256}
+    - {x: 79.087654, y: 514.06976}
+    - {x: -450.00143, y: 9.868452}
+    Waypoints:
+    - {x: -436, y: 30}
+    - {x: -200, y: -200}
+    - {x: 0, y: 60}
+    - {x: 250, y: -150}
+    - {x: 220, y: 260}
+    - {x: -462, y: 0}
+    - {x: -496.01035, y: -29.647667}
+    - {x: 520.9678, y: 63.312256}
+    - {x: 87.087654, y: 514.06976}
+    BandEdges:
+    - 396.00003
+    BandLevels: 0400000004000000i
+    Areas:
+    - Name: Lager der Sturmreiter
+      Center: {x: -380, y: -80}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Verlassene Esse
+      Center: {x: -60, y: -280}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Obsidianfeld
+      Center: {x: 40, y: 170}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Glutkrater
+      Center: {x: 310, y: -220}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Auge des Sturms
+      Center: {x: 250, y: 340}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 0
+    WaypointSafeRadius: 25
   CompletionIds:
   - wp_glut_ankunft
   - wp_glut_feld

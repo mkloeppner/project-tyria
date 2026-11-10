@@ -149,13 +149,13 @@ namespace ProjectTyrant
         void Slam()
         {
             if (_self.IsDead) return;
-            var tg = GroundTelegraph.Spawn(_self, transform.position, A.BehaviorRadius, Mathf.Max(1.2f, _brain.Danger.MinTelegraph), 0f, A.BehaviorCoefficient * _brain.DamageScale);
+            var tg = GroundTelegraph.Spawn(_self, transform.position, A.BehaviorRadius, Mathf.Max(1.2f, _brain.Danger.MinTelegraph), 0f, _brain.AbilityCoefficient(A.BehaviorCoefficient));
             tg.PulseColor = A.ProjectileColor;
         }
 
         void Lob(Combatant t)
         {
-            var tg = GroundTelegraph.Spawn(_self, t.transform.position, A.BehaviorRadius, Mathf.Max(1.4f, _brain.Danger.MinTelegraph), 0f, A.BehaviorCoefficient * _brain.DamageScale);
+            var tg = GroundTelegraph.Spawn(_self, t.transform.position, A.BehaviorRadius, Mathf.Max(1.4f, _brain.Danger.MinTelegraph), 0f, _brain.AbilityCoefficient(A.BehaviorCoefficient));
             tg.PulseColor = A.ProjectileColor;
             var origin = transform.position;
             var eff = A.BehaviorEffect;
@@ -218,7 +218,7 @@ namespace ProjectTyrant
             var t = _brain.Target;
             if (t != null && Flat(t.transform.position) < 2.2f)
             {
-                DamageCalculator.DealDirect(_self, t, A.BehaviorCoefficient * _brain.DamageScale);
+                DamageCalculator.DealDirect(_self, t, _brain.AbilityCoefficient(A.BehaviorCoefficient));
                 if (_brain.ControlAllowed(EffectType.Stun)) t.Effects.Apply(new EffectApplication(EffectType.Stun, 1, 1f), _self);
                 var pc = t.GetComponent<PlayerController>();
                 if (pc != null) pc.AddImpulse(transform.forward * 12f, 4f);

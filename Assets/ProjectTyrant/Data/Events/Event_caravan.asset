@@ -29,13 +29,6 @@ MonoBehaviour:
     Param: 
     ProximityFactor: 0.6
     Period: 0
-  - Type: 0
-    Delay: 200
-    Min: 0
-    Max: 0
-    Param: 
-    ProximityFactor: 0.75
-    Period: 0
   SuccessNext: 
   FailNext: 
   Cooldown: 300
@@ -70,3 +63,6 @@ MonoBehaviour:
   MasteryPoints: 0
   MetaId: 
   MetaPhase: 0
+  Tier: 0
+  TierSet: 1
+  BalanceBaseTargets: 0

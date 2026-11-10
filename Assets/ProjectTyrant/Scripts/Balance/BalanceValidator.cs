@@ -112,7 +112,7 @@ namespace ProjectTyrant.Balance
                 int l = m.At(e.Center);
                 if (e.Meta) { if (e.Tier != EventTier.Meta) err.Add(z + "Meta-Event " + e.Id + " nicht Stufe 4"); continue; }
                 if (!EventTierRules.AllowedIn(e.Tier, l)) err.Add(z + "Event " + e.Id + " Stufe " + (int)e.Tier + " in Gefahrenstufe " + l);
-                if (m.IsStartZone && e.Tier > EventTierRules.StartZoneMax(m.BandAt(e.Center))) err.Add(z + "Event " + e.Id + " zu schwer für die Entfernung vom Hub");
+                if (m.IsStartZone && e.Tier > EventTierRules.StartZoneMax(m.BandAt(e.Center)) && !(l >= 2 && e.Tier <= EventTier.Standard)) err.Add(z + "Event " + e.Id + " zu schwer für die Entfernung vom Hub");
                 if (e.Tier <= EventTier.Easy && e.MinTimer > 0f && e.MinTimer < EventTierRules.MinAutoTimer) err.Add(z + "Auto-Start < 8 min: " + e.Id);
                 if (e.SpawnPoints != null && e.Tier <= EventTier.Easy)
                     foreach (var p in e.SpawnPoints)

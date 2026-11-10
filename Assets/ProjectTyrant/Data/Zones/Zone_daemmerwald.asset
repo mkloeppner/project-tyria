@@ -102,6 +102,58 @@ MonoBehaviour:
   TimerOffset: 240
   TimerPosition: {x: 200, y: 4.33956, z: 150}
   TimerEventId: hain
+  DangerMap:
+    ZoneId: daemmerwald
+    Size: 1000
+    Anchors:
+    - {x: 0, y: -420}
+    - {x: -29.609526, y: -454.01273}
+    - {x: 13.795241, y: -404.0035}
+    Waypoints:
+    - {x: 10, y: -400}
+    - {x: -160, y: -180}
+    - {x: 230, y: 120}
+    - {x: 20, y: 280}
+    - {x: -21.609526, y: -454.01273}
+    BandEdges:
+    - 350
+    BandLevels: 0400000005000000i
+    Areas:
+    - Name: Dorf auf der Lichtung
+      Center: {x: -150, y: -200}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Der Alte Hain
+      Center: {x: 200, y: 150}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: "W\xE4chterstein"
+      Center: {x: 0, y: 300}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Violetter Grund
+      Center: {x: -260, y: 120}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Zerfallene Kapelle
+      Center: {x: 300, y: -220}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 0
+    WaypointSafeRadius: 25
   CompletionIds:
   - wp_wald_ankunft
   - wp_wald_lichtung

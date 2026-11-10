@@ -937,6 +937,10 @@ MonoBehaviour:
   DestroyOnDeath: 0
   WanderRadius: 1.5
   PreferredTarget: {fileID: 0}
+  Neutral: 0
+  SpawnGroup: 
+  WorldSpawn: 0
+  RoleOverride: 0
   LevelOverride: 0
 --- !u!114 &1218650273159133800
 MonoBehaviour:

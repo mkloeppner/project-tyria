@@ -33,6 +33,7 @@ namespace ProjectTyrant.Balance
     public static class TargetTable
     {
         public const int MinSeeds = 3;
+        public const float MinSessionSeconds = 1500f;
 
         public static Corridor Get(BotProfileKind p, Metric m, int danger)
         {
@@ -69,7 +70,7 @@ namespace ProjectTyrant.Balance
             var cells = new Dictionary<(BotProfileKind, Metric, int), List<float>>();
             foreach (var s in sessions)
             {
-                if (s == null || s.Danger < 0) continue;
+                if (s == null || s.Danger < 0 || s.Seconds < MinSessionSeconds) continue;   // nur volle Sessions (30 min)
                 if (!System.Enum.TryParse(s.Profile, out BotProfileKind p)) continue;
                 foreach (Metric m in System.Enum.GetValues(typeof(Metric)))
                 {

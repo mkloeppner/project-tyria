@@ -102,6 +102,58 @@ MonoBehaviour:
   TimerOffset: 360
   TimerPosition: {x: 40, y: 36, z: 280}
   TimerEventId: wyrm
+  DangerMap:
+    ZoneId: himmelsspitzen
+    Size: 1000
+    Anchors:
+    - {x: 0, y: -420}
+    - {x: 29.609526, y: -454.01273}
+    - {x: 13.795241, y: -404.0035}
+    Waypoints:
+    - {x: 20, y: -400}
+    - {x: -200, y: 80}
+    - {x: 10, y: 230}
+    - {x: 280, y: -120}
+    - {x: 37.609528, y: -454.01273}
+    BandEdges:
+    - 330
+    BandLevels: 0400000004000000i
+    Areas:
+    - Name: "Himmelsw\xE4chter-Tempel"
+      Center: {x: 0, y: 260}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Greifennester
+      Center: {x: -220, y: 110}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Piratenbucht
+      Center: {x: 300, y: -150}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: "Windbr\xFCcke"
+      Center: {x: 100, y: 0}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: "H\xF6chster Gipfel"
+      Center: {x: -300, y: 340}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    IsStartZone: 0
+    MinorAnchorFrom: 99
+    MinorAnchorScale: 1
+    HubSafeRadius: 0
+    WaypointSafeRadius: 25
   CompletionIds:
   - wp_himmel_ankunft
   - wp_himmel_nest

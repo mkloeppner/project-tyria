@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8403676012953509851
+--- !u!114 &-8816580446676215538
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,12 +41,12 @@ MonoBehaviour:
   m_Name: PT_Post_frostkamm
   m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.VolumeProfile
   components:
-  - {fileID: 5400232025164949945}
-  - {fileID: -8403676012953509851}
-  - {fileID: 8873740627987025332}
-  - {fileID: 7149633407749127293}
-  - {fileID: 6041677292937804747}
---- !u!114 &5400232025164949945
+  - {fileID: 1488331349489677581}
+  - {fileID: -8816580446676215538}
+  - {fileID: 4871041480082223971}
+  - {fileID: 3656594740569049987}
+  - {fileID: 1512928970712960657}
+--- !u!114 &1488331349489677581
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   dirtIntensity:
     m_OverrideState: 1
     m_Value: 0
---- !u!114 &6041677292937804747
+--- !u!114 &1512928970712960657
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
   balance:
     m_OverrideState: 1
     m_Value: -10
---- !u!114 &7149633407749127293
+--- !u!114 &3656594740569049987
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,7 +146,7 @@ MonoBehaviour:
   rounded:
     m_OverrideState: 1
     m_Value: 0
---- !u!114 &8873740627987025332
+--- !u!114 &4871041480082223971
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}

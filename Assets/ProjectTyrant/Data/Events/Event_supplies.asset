@@ -20,7 +20,7 @@ MonoBehaviour:
   Center: {x: -8, y: 1.2, z: -60}
   Radius: 22
   Duration: 180
-  TargetCount: 6
+  TargetCount: 3
   Triggers:
   - Type: 1
     Delay: 30
@@ -28,13 +28,6 @@ MonoBehaviour:
     Max: 0
     Param: 
     ProximityFactor: 0.8
-    Period: 0
-  - Type: 0
-    Delay: 320
-    Min: 0
-    Max: 0
-    Param: 
-    ProximityFactor: 0.75
     Period: 0
   SuccessNext: 
   FailNext: 
@@ -45,7 +38,7 @@ MonoBehaviour:
   Coins: 80
   GoldItemRoll: 1
   SetFlagOnSuccess: 
-  SetFlagOnFail: vorraete_knapp
+  SetFlagOnFail: 
   ClearFlagOnSuccess: 
   ClearFlagOnFail: 
   FlagDuration: 600
@@ -66,3 +59,6 @@ MonoBehaviour:
   MasteryPoints: 0
   MetaId: 
   MetaPhase: 0
+  Tier: 0
+  TierSet: 1
+  BalanceBaseTargets: 6

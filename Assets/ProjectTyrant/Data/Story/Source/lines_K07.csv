@@ -33,6 +33,12 @@ K07_S03_C2_A;held;entschlossen;links;Ich bringe das zu Ende. Für alle, die hier
 K07_S03_C2_B;held;trauernd;links;Ich weiß nicht, ob ich das kann. Aber ich versuche es.;opt:2|tend:Charme|flag:k07_leitstern_ehrlich|reply:K07_S03_R2
 K07_S03_R1;fenn;neutral;rechts;Der Stein hat es gehört. Steine vergessen nichts.;reply
 K07_S03_R2;fenn;amuesiert;rechts;Ehrlich ist besser als mutig. Mutige gibt es hier genug, auf dem Friedhof.;reply
+K07_S03_C3_A;held;neutral;links;Wenn der Wald frei ist, komme ich zurück und höre zu.;opt:3|tend:Wuerde|reply:K07_S03_R3
+K07_S03_C3_B;held;amuesiert;links;Sag den Steinen, sie sollen mich gut aussehen lassen.;opt:3|tend:Charme|reply:K07_S03_R4
+K07_S03_C3_C;held;zornig;links;Genug geredet. Vareth wartet nicht auf Geschichten.;opt:3|tend:Wildheit|reply:K07_S03_R5
+K07_S03_R3;fenn;neutral;rechts;Dann stelle ich dir einen Stuhl ans Feuer.;reply
+K07_S03_R4;fenn;amuesiert;rechts;Steine lügen nicht. Ich versuche es trotzdem.;reply
+K07_S03_R5;fenn;besorgt;rechts;Dann geh. Aber geh nicht allein.;reply
 K07_S03E_L01;held;entschlossen;nah;Das Licht brennt wieder. Vareth atmet langsamer. Aber er atmet.;
 K07_J;held;besorgt;;Im Dämmerwald drängten wir die Verderbnis zurück und brachten ein Dorf in Sicherheit. Am Wächterstein holte mich die Vergangenheit ein.;journal
 K07_J@Verlorener;held;besorgt;;Im Dämmerwald brachten wir ein Dorf in Sicherheit. Am Wächterstein fand ich Ilan wieder. Der Wald lässt ihn erst gehen, wenn das Siegel hält.;journal

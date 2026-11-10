@@ -87,8 +87,10 @@ namespace ProjectTyrant.EditorTools
         {
             LastReport.Clear(); LastErrors.Clear();
             var cfg = BuildData();
-            var w = WorldBuilder.LoadWorld();
-            foreach (var z in w.Zones) ApplyZone(z, cfg);
+            // Ids zuerst sammeln: OpenScene(Single) entlädt unbenutzte Assets (Welt-/Zonen-Definitionen würden ungültig)
+            var ids = new List<string>();
+            foreach (var z in WorldBuilder.LoadWorld().Zones) if (z != null) ids.Add(z.Id);
+            foreach (var id in ids) ApplyZone(WorldBuilder.Zone(id), cfg);
             AssetDatabase.SaveAssets();
             Debug.Log("[ProjectTyrant] Balance B1: " + string.Join(" · ", LastReport));
             if (LastErrors.Count > 0) Debug.LogError("[ProjectTyrant] Balance-Validator: " + LastErrors.Count + " Verstöße\n" + string.Join("\n", LastErrors));
@@ -100,7 +102,10 @@ namespace ProjectTyrant.EditorTools
             cfg = cfg ?? BuildData();
             string path = z.LegacyLayout ? ZoneBuilder.ZonePath : BiomeZoneBuilder.ScenePath(z);
             if (AssetDatabase.LoadAssetAtPath<SceneAsset>(path) == null) return;
+            string zid = z.Id;
             var scene = EditorSceneManager.OpenScene(path, OpenSceneMode.Single);
+            z = WorldBuilder.Zone(zid);                                        // nach dem Szenenwechsel neu laden
+            cfg = AssetDatabase.LoadAssetAtPath<BalanceConfig>(Dir + "/BalanceConfig.asset") ?? cfg;
             var root = Object.FindAnyObjectByType<ZoneRoot>();
             if (root == null) return;
             var map = BalanceWorld.BuildMap(z);
@@ -109,7 +114,8 @@ namespace ProjectTyrant.EditorTools
             var rng = new System.Random(z.Seed * 977 + 13);
 
             // ---- Spawns sammeln ----
-            var brains = root.GetComponentsInChildren<NpcBrain>(true).Where(b => b.Archetype != null && b.Archetype.Team == Team.Enemy && !b.Archetype.PursuitExempt).ToList();
+            // ganze Szene (Startzone: NPCs liegen nicht unter der ZoneRoot)
+            var brains = scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<NpcBrain>(true)).Where(b => b.Archetype != null && b.Archetype.Team == Team.Enemy && !b.Archetype.PursuitExempt).ToList();
             int moved = 0, added = 0;
             // Startzone: höchstens 3 Feinde in Stufe 0 (Rand des ersten Herzens), Rest nach Stufe 1 umverteilen
             if (map.IsStartZone)
@@ -152,7 +158,7 @@ namespace ProjectTyrant.EditorTools
             // Startzone: Wachen-Patrouillen auf den Wegen (Stufe 0–2) – greifen Verfolger an, beleben wieder
             if (map.IsStartZone)
             {
-                foreach (var old in root.GetComponentsInChildren<GuardPatrol>(true)) Object.DestroyImmediate(old.gameObject);
+                foreach (var old in scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<GuardPatrol>(true)).ToList()) Object.DestroyImmediate(old.gameObject);
                 var guard = DataBuilder.Archetype("Ally_Dornwacht_Waechter");
                 var parent = brains.Count > 0 ? brains[0].transform.parent : root.transform;
                 if (guard != null && guard.Prefab != null)
@@ -198,15 +204,21 @@ namespace ProjectTyrant.EditorTools
                 foreach (var g in groups)
                 {
                     if (have >= want) break;
-                    bool beasts = g.All(b => b.Archetype.NeutralCreature);
-                    if (!beasts && have + g.Count() > want + 1) continue;   // Humanoide nur, wenn die Quote sonst nicht erreichbar ist
+                    if (have + g.Count() > want + 1) continue;   // nicht über die Quote hinaus (Tiere zuerst, Humanoide nur bei Bedarf)
                     foreach (var b in g) { b.Neutral = true; have++; }
                 }
-                if (have < want) foreach (var g in groups) { if (have >= want) break; if (g.First().Neutral) continue; foreach (var b in g) { b.Neutral = true; have++; } }
+                // Rest nur, wenn die Quote dadurch näher am Ziel liegt (ganze Lager)
+                if (have < want) foreach (var g in groups)
+                {
+                    if (have >= want) break; if (g.First().Neutral) continue;
+                    float cur = Mathf.Abs(have / (float)inLvl.Count - share), next = Mathf.Abs((have + g.Count()) / (float)inLvl.Count - share);
+                    if (next >= cur) continue;
+                    foreach (var b in g) { b.Neutral = true; have++; }
+                }
             }
             // ---- Spätspiel-Rollen (Stufe 4–5): Lauerer und Rufer je Lager, Jäger in jedem zweiten Lager ----
             int roles = 0;
-            foreach (var old in root.GetComponentsInChildren<RoleBehaviour>(true)) Object.DestroyImmediate(old);
+            foreach (var old in scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<RoleBehaviour>(true)).ToList()) Object.DestroyImmediate(old);
             foreach (var b in brains) b.RoleOverride = EnemyRole.Standard;
             int gix = 0;
             foreach (var g in brains.Where(b => !b.Neutral).GroupBy(b => b.SpawnGroup).OrderBy(g => g.Key))
@@ -310,6 +322,8 @@ namespace ProjectTyrant.EditorTools
                 if (t == EventTier.Intro) { e.SetFlagOnFail = null; e.FailNext = null; }
                 if (e.Id == "dornwacht_defend") { e.SetFlagOnFail = null; e.WaveInterval = (e.Duration - 12f) / 2f; e.WaveSize = 3; }   // 2 Wellen, kein „Dornwacht gefallen“ mehr bei Fehlschlag
             }
+            // Meta-Zustand „Dornwacht gefallen“ erst, wenn auch das Zurückerobern (Stufe 2) scheitert
+            if (e.Id == "dornwacht_recapture") { e.SetFlagOnFail = EventDirector.FlagDornwachtFallen; e.FlagDuration = 600f; }
             EditorUtility.SetDirty(e);
         }
     }

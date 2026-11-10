@@ -50,6 +50,10 @@ MonoBehaviour:
   SummonArchetype: {fileID: 11400000, guid: 6000280943baa1f4f99b5d8938eeb0e5, type: 2}
   ProjectileColor: {r: 0.6, g: 0.3, b: 1, a: 1}
   Defiance: 0
+  Role: 1
+  CurveExempt: 0
+  PursuitExempt: 0
+  NeutralCreature: 0
   ContributionValue: 32
   Experience: 190
   Loot: {fileID: 11400000, guid: 47202ee697ef1654dbeac5785cfaa47e, type: 2}

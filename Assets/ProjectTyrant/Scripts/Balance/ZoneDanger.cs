@@ -30,6 +30,9 @@ namespace ProjectTyrant.Balance
         public List<int> BandLevels = new List<int>();               // Stufe je Band; letzter Eintrag gilt dahinter
         public List<DangerArea> Areas = new List<DangerArea>();
         public bool IsStartZone;
+        /// <summary>Anker ab diesem Index (weitere Ankunfts-Wegmarken, z. B. Portale) nutzen verkleinerte Bänder (Startzone: Stufe 0 nur 15 m um die Wegmarke).</summary>
+        public int MinorAnchorFrom = 99;
+        public float MinorAnchorScale = 1f;
         public float HubSafeRadius = 30f, WaypointSafeRadius = 25f;
 
         public static float Scale(float size) => Mathf.Clamp(size / 1000f, 0.2f, 1.2f);
@@ -49,9 +52,16 @@ namespace ProjectTyrant.Balance
         public int BandAt(Vector2 p)
         {
             if (BandLevels.Count == 0) return 0;
-            float d = AnchorDistance(p);
-            for (int i = 0; i < BandEdges.Count && i < BandLevels.Count; i++) if (d <= BandEdges[i]) return BandLevels[i];
-            return BandLevels[BandLevels.Count - 1];
+            if (Anchors.Count == 0) return BandLevels[0];
+            int best = int.MaxValue;
+            for (int a = 0; a < Anchors.Count; a++)
+            {
+                float d = Vector2.Distance(Anchors[a], p), s = a >= MinorAnchorFrom ? MinorAnchorScale : 1f;
+                int lvl = BandLevels[BandLevels.Count - 1];
+                for (int i = 0; i < BandEdges.Count && i < BandLevels.Count; i++) if (d <= BandEdges[i] * s) { lvl = BandLevels[i]; break; }
+                best = Mathf.Min(best, lvl);
+            }
+            return best;
         }
 
         public DangerArea AreaAt(Vector2 p)
@@ -138,6 +148,7 @@ namespace ProjectTyrant.Balance
             {
                 m.BandEdges.AddRange(StartBands); m.BandLevels.AddRange(new[] { 0, 1, 2 });
                 m.HubSafeRadius = 30f; m.WaypointSafeRadius = 12f;
+                m.MinorAnchorFrom = 2; m.MinorAnchorScale = 1f / 3f;   // Portal-Ankünfte: 15 m Stufe 0, 40 m Stufe 1 (sonst Sprung 0→2 am Grenzposten)
                 foreach (var r in regions) { int l = StartRegionLevel(r.name); if (l >= 0) m.Areas.Add(new DangerArea { Name = r.name, Center = r.center, Radius = StartRegionRadius(r.name, r.radius), Level = l }); }
                 return m;
             }

@@ -31,7 +31,7 @@ MonoBehaviour:
     Period: 0
   SuccessNext: 
   FailNext: 
-  Cooldown: 60
+  Cooldown: 180
   GoldContribution: 4000
   Experience: 600
   Karma: 200
@@ -63,3 +63,6 @@ MonoBehaviour:
   MasteryPoints: 0
   MetaId: 
   MetaPhase: 0
+  Tier: 1
+  TierSet: 1
+  BalanceBaseTargets: 0

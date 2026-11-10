@@ -1,4 +1,4 @@
-# Klang-Analyse (AudioBuilder) – 1086 WAV, Rendern 9,7 s, gesamt 56,5 s
+# Klang-Analyse (AudioBuilder) – 1086 WAV, Rendern 9,5 s, gesamt 23,4 s
 SFX_Feuer_Charge_0	SkillEffect	0.70 s · Spitze -1.0 dBFS · RMS -10.2 dBFS · DC 0.0000 · Naht 0.0000 · Schwerpunkt 2342 Hz
 SFX_Feuer_Charge_1	SkillEffect	0.75 s · Spitze -1.0 dBFS · RMS -10.3 dBFS · DC 0.0000 · Naht 0.0000 · Schwerpunkt 2450 Hz
 SFX_Feuer_Charge_2	SkillEffect	0.76 s · Spitze -1.0 dBFS · RMS -10.3 dBFS · DC 0.0000 · Naht 0.0000 · Schwerpunkt 2270 Hz
@@ -819,7 +819,7 @@ SFX_Amb_nebelmoor_0	Ambience	8.50 s · Spitze -2.4 dBFS · RMS -16.0 dBFS · DC 
 SFX_Amb_frostkamm_0	Ambience	8.50 s · Spitze -2.0 dBFS · RMS -16.0 dBFS · DC 0.0000 · Naht 0.0036 · Schwerpunkt 2947 Hz
 SFX_Amb_gluetoede_0	Ambience	8.50 s · Spitze -1.3 dBFS · RMS -16.0 dBFS · DC 0.0000 · Naht 0.0029 · Schwerpunkt 1889 Hz
 SFX_Amb_silberkueste_0	Ambience	8.50 s · Spitze -3.2 dBFS · RMS -16.0 dBFS · DC 0.0000 · Naht 0.0055 · Schwerpunkt 1398 Hz
-SFX_Amb_daemmerwald_0	Ambience	8.50 s · Spitze -1.0 dBFS · RMS -16.0 dBFS · DC 0.0000 · Naht 0.0154 · Schwerpunkt 2632 Hz
+SFX_Amb_daemmerwald_0	Ambience	8.50 s · Spitze -1.0 dBFS · RMS -16.0 dBFS · DC 0.0000 · Naht 0.0029 · Schwerpunkt 2632 Hz
 SFX_Amb_duenenmeer_0	Ambience	8.50 s · Spitze -2.3 dBFS · RMS -16.0 dBFS · DC 0.0000 · Naht 0.0026 · Schwerpunkt 1865 Hz
 SFX_Amb_kristalltiefe_0	Ambience	8.50 s · Spitze -1.0 dBFS · RMS -16.0 dBFS · DC 0.0000 · Naht 0.0010 · Schwerpunkt 1530 Hz
 SFX_Amb_himmelsspitzen_0	Ambience	8.50 s · Spitze -3.1 dBFS · RMS -16.0 dBFS · DC 0.0000 · Naht 0.0018 · Schwerpunkt 2242 Hz

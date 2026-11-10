@@ -19,16 +19,9 @@ MonoBehaviour:
   Objective: 1
   Center: {x: 5, y: 1.5, z: 5}
   Radius: 32
-  Duration: 90
-  TargetCount: 8
+  Duration: 150
+  TargetCount: 6
   Triggers:
-  - Type: 0
-    Delay: 60
-    Min: 0
-    Max: 0
-    Param: 
-    ProximityFactor: 0.75
-    Period: 0
   - Type: 1
     Delay: 5
     Min: 0
@@ -38,14 +31,14 @@ MonoBehaviour:
     Period: 0
   SuccessNext: dornwacht_assault
   FailNext: dornwacht_recapture
-  Cooldown: 60
+  Cooldown: 180
   GoldContribution: 9000
   Experience: 400
   Karma: 120
   Coins: 40
   GoldItemRoll: 1
   SetFlagOnSuccess: 
-  SetFlagOnFail: dornwacht_fallen
+  SetFlagOnFail: 
   ClearFlagOnSuccess: 
   ClearFlagOnFail: 
   FlagDuration: 600
@@ -55,7 +48,7 @@ MonoBehaviour:
   CaptureRadius: 11.2
   CaptureTime: 6
   WaveSize: 3
-  WaveInterval: 15
+  WaveInterval: 69
   Trash: {fileID: 11400000, guid: 53babf5c9b2da9447a1d04456d071871, type: 2}
   Veteran: {fileID: 11400000, guid: 40c3a1cad1a3142469531571570555fe, type: 2}
   Boss: {fileID: 11400000, guid: 733bcea6c1ed56d44b7ca3b77e231e5c, type: 2}
@@ -66,3 +59,6 @@ MonoBehaviour:
   MasteryPoints: 0
   MetaId: 
   MetaPhase: 0
+  Tier: 1
+  TierSet: 1
+  BalanceBaseTargets: 8

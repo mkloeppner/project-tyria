@@ -113,3 +113,13 @@ Feature → GW2-Verhalten → Umsetzung im Prototyp → Abweichung und Grund.
 | Flächeneffekte | Optionen für eigene/verbündete Effekte | Fläche+Effekt / Nur Effekt; Verbündete Voll/Nur Effekt/Reduziert/Aus | Gegner-Telegraphen abschaltbar nur mit Warnung |
 | Auto-Angriffs-Ketten | 3 Glieder, letztes stärker | 3 Glieder, Glied 3 × 1,4 + Waffenbonus, Reset nach 2 s | Werte eigene |
 
+
+
+## Balance B1
+| GW2 | Project Tyrant | Abweichung |
+|---|---|---|
+| Neutrale (gelbe) Kreaturen greifen nur nach Angriff an | `NpcBrain.Neutral`, Plakette gelb, Quote je Gefahrenstufe (80 % … 0 %), Wildeber/Rothirsch in der Startzone | Quote je Lager statt je Kreatur |
+| Leine mit Rückkehr und Vollheilung, Gegner unverwundbar beim Zurücklaufen | `PursuitModel` + Reset (unverwundbar, Heilung) | zusätzlich Zeitlimit, Sichtlinie, Fluchtgnade (Projekt-Regeln für den Lern-Einstieg) |
+| Kampfende nach ~5 s ohne Schaden, Aufsitzen nur außerhalb des Kampfes | 5 s, Aufsitzen im Kampf gesperrt, Schaden unterbricht | – |
+| Wachen auf Straßen, NPCs beleben besiegte Spieler | Patrouillen auf den Wegen der Startzone, Aggro-Übernahme; NPC-Wiederbelebung in Stufe 0–1 | NPC-Wiederbelebung nur in Stufe 0–1 |
+| Gefährlichkeit über Ort/Level, kein Schwierigkeitsregler | Gefahrenstufen 0–5 je Gebiet, Event-Stufen, Gegner-Kurve | Stufen als Daten sichtbar im Banner (GW2: nur Level) |

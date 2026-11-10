@@ -237,6 +237,12 @@ K06_S03_C2_B;held;Amuesiert;links;Der Herold kann warten. Er hat Übung darin.;8
 K06_S03_R1;gorran;Neutral;rechts;Ich trage ins Protokoll ein: Der Wald zuerst. Und ein zweites Brötchen für mich.;14;K06_S03_R1
 K06_S03_R2;veyra;Amuesiert;rechts;Du hast recht. Und das ärgert mich.;7;K06_S03_R2
 K06_S03_L05;mira;Entschlossen;rechts;Ich bleibe hier und organisiere. Jemand muss die Briefe schreiben, die du nicht liest.;14;K06_S03_L05
+K06_S03_C3_A;held;Amuesiert;links;Ich lese jeden einzelnen. Irgendwann. Versprochen.;6;K06_S03_C3_A
+K06_S03_C3_B;held;Neutral;links;Schreib mir nur, wenn es brennt. Dann komme ich sofort.;10;K06_S03_C3_B
+K06_S03_C3_C;held;Zornig;links;Schreib lieber dem Herold. Sag ihm, dass ich komme.;9;K06_S03_C3_C
+K06_S03_R3;mira;Amuesiert;rechts;Irgendwann. Ich rahme mir das ein.;6;K06_S03_R3
+K06_S03_R4;mira;Besorgt;rechts;Hier brennt ständig etwas. Ich wähle aus.;7;K06_S03_R4
+K06_S03_R5;mira;Entschlossen;rechts;Mit Vergnügen. Ich nehme die gute Tinte.;7;K06_S03_R5
 K06_J;held;Neutral;;In Silbermund tagen die Bündnisse. Wir haben eine Spur zum Schlüssel im Dünenmeer, aber zuerst ruft der Dämmerwald.;18;
 K06_J@Wacht;held;Neutral;;Mit der Wacht stürmte ich die Schmugglergrotte an der Silberküste. Die Spur führt in den Dämmerwald und ins Dünenmeer.;19;
 K06_J@Archiv;held;Neutral;;Mit Tovin holte ich das gestohlene Krönungsbuch zurück. Die Spur führt in den Dämmerwald und ins Dünenmeer.;17;
@@ -275,6 +281,12 @@ K07_S03_C2_A;held;Entschlossen;links;Ich bringe das zu Ende. Für alle, die hier
 K07_S03_C2_B;held;Trauernd;links;Ich weiß nicht, ob ich das kann. Aber ich versuche es.;11;K07_S03_C2_B
 K07_S03_R1;fenn;Neutral;rechts;Der Stein hat es gehört. Steine vergessen nichts.;8;K07_S03_R1
 K07_S03_R2;fenn;Amuesiert;rechts;Ehrlich ist besser als mutig. Mutige gibt es hier genug, auf dem Friedhof.;13;K07_S03_R2
+K07_S03_C3_A;held;Neutral;links;Wenn der Wald frei ist, komme ich zurück und höre zu.;11;K07_S03_C3_A
+K07_S03_C3_B;held;Amuesiert;links;Sag den Steinen, sie sollen mich gut aussehen lassen.;9;K07_S03_C3_B
+K07_S03_C3_C;held;Zornig;links;Genug geredet. Vareth wartet nicht auf Geschichten.;7;K07_S03_C3_C
+K07_S03_R3;fenn;Neutral;rechts;Dann stelle ich dir einen Stuhl ans Feuer.;8;K07_S03_R3
+K07_S03_R4;fenn;Amuesiert;rechts;Steine lügen nicht. Ich versuche es trotzdem.;7;K07_S03_R4
+K07_S03_R5;fenn;Besorgt;rechts;Dann geh. Aber geh nicht allein.;6;K07_S03_R5
 K07_S03E_L01;held;Entschlossen;nah;Das Licht brennt wieder. Vareth atmet langsamer. Aber er atmet.;10;K07_S03E_L01
 K07_J;held;Besorgt;;Im Dämmerwald drängten wir die Verderbnis zurück und brachten ein Dorf in Sicherheit. Am Wächterstein holte mich die Vergangenheit ein.;20;
 K07_J@Verlorener;held;Besorgt;;Im Dämmerwald brachten wir ein Dorf in Sicherheit. Am Wächterstein fand ich Ilan wieder. Der Wald lässt ihn erst gehen, wenn das Siegel hält.;24;
@@ -308,6 +320,12 @@ K08_S03_C2_A;held;Neutral;links;Erst die Tiefe. Was im Dunkeln liegt, will ich z
 K08_S03_C2_B;held;Amuesiert;links;Erst die Tiefe. Danach brauche ich frische Luft.;8;K08_S03_C2_B
 K08_S03_R1;nadira;Neutral;rechts;Nimm eine Laterne. Und noch eine. Die erste geht immer aus.;11;K08_S03_R1
 K08_S03_R2;nadira;Amuesiert;rechts;Frische Luft gibt es oben genug. Zu viel davon.;9;K08_S03_R2
+K08_S03_C3_A;held;Neutral;links;Pass auf das Lager auf, bis wir zurück sind.;9;K08_S03_C3_A
+K08_S03_C3_B;held;Amuesiert;links;Erzähl die Geschichte ruhig dreimal. Mit mehr Drachen.;8;K08_S03_C3_B
+K08_S03_C3_C;held;Zornig;links;Beim nächsten Mal entkommt er mir nicht.;7;K08_S03_C3_C
+K08_S03_R3;nadira;Entschlossen;rechts;Das Lager steht. Kommt nur wieder.;6;K08_S03_R3
+K08_S03_R4;nadira;Amuesiert;rechts;Drachen? Gut. Die Leute lieben Drachen.;6;K08_S03_R4
+K08_S03_R5;nadira;Besorgt;rechts;Zorn ist ein schlechter Kompass. Nimm lieber eine Karte.;9;K08_S03_R5
 K08_J;held;Zornig;;Im Dünenmeer stellte ich den Herold in den Ruinen von Qasir. Er entkam wieder. Der Schlüssel ist geteilt: Tiefe und Wolken.;21;
 K09_S01_L01;held;Besorgt;nah;Kristalltiefe. Kein Licht außer den Kristallen. Und dieser Laterne.;9;K09_S01_L01
 K09_S01_L02;tovin;Besorgt;rechts;Die blinden Jäger hören Schritte. Geh leise. Atme leise. Denk leise, wenn du kannst.;14;K09_S01_L02

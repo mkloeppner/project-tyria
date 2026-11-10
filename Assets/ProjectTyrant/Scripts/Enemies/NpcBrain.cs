@@ -45,6 +45,12 @@ namespace ProjectTyrant
         public PursuitModel Pursuit => _pursuit;
         /// <summary>Faktor Kurve/Archetyp für Sonderangriffe (NpcAbilities).</summary>
         public float DamageScale => _dmgScale;
+        /// <summary>Sonderangriffe (Stampfer, Wurf, Sturmangriff): Kurven-Faktor, gedeckelt durch den Telegraph-Anteil der Gefahrenstufe.</summary>
+        public float AbilityCoefficient(float raw)
+        {
+            if (BalanceWorld.Legacy || Archetype == null || Archetype.CurveExempt || Self.Team != Team.Enemy || _danger == null) return raw;
+            return Mathf.Min(raw * _dmgScale, EnemyCurve.TelegraphCoefficient(Self.Level, _danger, Archetype.AttributeFactor));
+        }
         bool UsePursuit => _pursuit != null && !BalanceWorld.LegacyPursuit && Self.Team == Team.Enemy && (Archetype == null || !Archetype.PursuitExempt);
         static float Now => Time.time;
 
@@ -226,6 +232,20 @@ namespace ProjectTyrant
             if (k == ControlKinds.None) return true;
             if (_ctrl == null || _danger == null || BalanceWorld.LegacyPursuit) return true;
             return _ctrl.TryUse(_danger, k, Now);
+        }
+
+        /// <summary>
+        /// Balance B1: Fessel-Einsatz der Gefahrenstufe auf Treffer (Quote und 6-s-Abklingzeit über <see cref="ControlAllowed(ControlKinds)"/>):
+        /// Stufe 1 Verkrüppelung, 2 +Kühle, ab 3 Immobilisierung (1 s) – so werden Verfolger im Spätspiel „klebrig“.
+        /// </summary>
+        void ApplyStageFetter(Combatant t)
+        {
+            if (BalanceWorld.Legacy || _danger == null || _danger.Controls == ControlKinds.None || Archetype == null || Archetype.CurveExempt) return;
+            ControlKinds k = DangerTable.Allows(_danger, ControlKinds.Immobilize) && Mathf.Repeat(Now * 0.37f, 1f) < 0.35f ? ControlKinds.Immobilize
+                           : DangerTable.Allows(_danger, ControlKinds.Chill) && Mathf.Repeat(Now * 0.53f, 1f) < 0.5f ? ControlKinds.Chill : ControlKinds.Cripple;
+            if (!DangerTable.Allows(_danger, k) || !ControlAllowed(k)) return;
+            var type = k == ControlKinds.Immobilize ? EffectType.Immobilize : k == ControlKinds.Chill ? EffectType.Chill : EffectType.Cripple;
+            t.Effects.Apply(new EffectApplication(type, 1, k == ControlKinds.Immobilize ? 1f : 2.5f), Self);
         }
 
         /// <summary>Balance B1: Verfolgung aufgeben (GW2-Reset: unverwundbar, Rückkehr, volle Heilung).</summary>
@@ -416,6 +436,9 @@ namespace ProjectTyrant
             if (dist > Archetype.AttackRange * 1.3f && !_windingUp) { SetState(NpcState.Aggro); return; }
 
             _attackTimer -= dt;
+            // Balance B1: Feindland/Verderbt (Stufe 4–5) – Verfolger holen im Laufen aus und bleiben am fliehenden Spieler „kleben“
+            if (_windingUp && UsePursuit && _danger.HastePhases && Target.Team == Team.Player && dist > Archetype.AttackRange * 0.8f)
+                MoveTowards(Target.transform.position, _pursuit.ChaseSpeed(PlayerChaseBase, Now, true) * EnemyCurve.RoleSpeed(EffectiveRole), dt, Archetype.AttackRange * 0.8f);
             if (_windingUp)
             {
                 _windup -= dt;
@@ -429,6 +452,7 @@ namespace ProjectTyrant
                         if (!BalanceWorld.Legacy && Target.IsDowned && _danger != null && _danger.DownedMode >= 3 && Archetype.Tier >= EnemyTier.Veteran) coef *= 2f;
                         float dealt = DamageCalculator.DealDirect(Self, Target, coef);
                         if (dealt > 0f && Archetype.OnHitDebuff.Stacks > 0 && ControlAllowed(Archetype.OnHitDebuff.Type)) Target.Effects.Apply(Archetype.OnHitDebuff, Self);
+                        else if (dealt > 0f && Target.Team == Team.Player) ApplyStageFetter(Target);
                         if (dealt > 0f) AttackLanded?.Invoke(Target);
                     }
                 }

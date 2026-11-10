@@ -101,10 +101,10 @@ Ausgangslage: Lauf 6 M30–M34 nur teilweise geprüft (Rebuild Everything vor B1
 
 | Milestone | Status | Abschluss | Verifikation (Tests · Telemetrie · Captures · Rebuild) |
 |---|---|---|---|
-| B1 Telemetrie und Baseline | in Arbeit | | |
-| B2 Gefahrenstufen und Verfolgung | offen | | |
-| B3 Startzone und Event-Stufen | offen | | |
-| B4 Mittel- und Spätspiel | offen | | |
+| B1 Telemetrie und Baseline | erledigt | 2026-11-10 16:30 | Telemetrie/Heatmap/Bots/Zielwert-Auswertung; Baseline 36 Sessions (2 Profile × 6 Stufen × 3 Seeds × 30 min, alte Szenen, Messschalter „vorher“), Trainingspuppe je Stufe, Heatmaps `Temp/PT_QA/balance/heat_*_vorher.png`; Hypothesen 1–8 mit Befund |
+| B2 Gefahrenstufen und Verfolgung | Abnahme läuft | | Rebuild Everything 299 s, Validator 0 Verstöße, 342/342 EditMode (+55 B1-Tests). Live: Flucht Stufe 0 15/15 (Aufgabe nach 1–3 s), 30 gelbe/24 rote Gegner in der Startzone, 0 Rig-Fehler; Nachher-Bots laufen |
+| B3 Startzone und Event-Stufen | Abnahme läuft | | 54 Spawns Startzone (Stufe 0/1/2: 6/26/22), 30 neutral, 4 Patrouillen; Event-Stufen für alle 57 Events; Dornwacht Stufe 1 ohne Auto-Start; Trainingspuppe Stufe 0 46 s / Stufe 1 38 s / Stufe 2 28 s |
+| B4 Mittel- und Spätspiel | Abnahme läuft | | Kurve geeicht (1,85); Trainingspuppe Stufe 3 17 s / 4 14,5 s / 5 12,3 s (Korridor), Veteran 22/15/9,6 s; 89 Rollen (Jäger/Rufer/Lauerer); Flucht Stufe 4–5 zunächst 20/20 → Fessel auf Treffer + Ausholen im Laufen |
 | B5 Messung, Feinabstimmung, Doku | offen | | |
 
 **12:10 zweiter Hänger** in derselben Messreihe (Neustart 09:46 im Safe Mode wegen CS0619 `GetInstanceID` in NpcBrain – behoben; danach CS0136 im BalanceBuilder – behoben; 333/342 EditMode, Rest braucht Rebuild). Vermutete Ursache beider Hänger: SetActive-Umschalten geriggter Gegner in `BalanceProbe` (KNOWN_ISSUES 61) – entfernt. **08:30 Editor reagiert nicht mehr** (MCP-Bridge getrennt, keine Neukompilierung seit 08:20) während der Baseline-Messreihe im Play Mode (Trainingspuppen-Messung in der Kristalltiefe, Zeitfaktor 4). Kein Neustart durch mich; Arbeit an Builder/Validator/UI läuft außerhalb des Editors weiter, Messung wird nach Rückkehr fortgesetzt.
@@ -127,6 +127,8 @@ Ausgangslage: Lauf 6 M30–M34 nur teilweise geprüft (Rebuild Everything vor B1
 | 0 | Sonnfurt, L2 | 10,2 s | – | 3,7 s | – |
 | 1 | Grenzmark, L4 | 6,4 s | 12,8 s | 4,9 s | 21,6 s |
 | 2 | Dornwacht, L7 | 21,3 s | 10,4 s | 6,0 s | 29,2 s |
-| 3 | Nebelmoor, L20 | (abgebrochen) | 6,5 s | 11,5 s | 44,6 s |
-| 4 | Glutöde, L30 | 19,3 s | 30,3 s | (offen) | (offen) |
-| 5 | Kristalltiefe, L30 | (offen, Editor-Hänger) | | | |
+| 3 | Nebelmoor, L20 | 4,3 s | 6,5 s | 11,5 s | 44,6 s |
+| 4 | Glutöde, L30 | 19,3 s | 30,3 s | – (Messung ungültig: Ziel außer Reichweite, 180 s) | – (ungültig) |
+| 5 | Kristalltiefe, L30 | 27,2 s | 29,6 s | 21,4 s | 62,3 s |
+
+Befund Baseline-Kurve: Stufe 0–3 deutlich zu tödlich (Zeit-bis-Tod 4–10 s statt 16–30 s), Stufe 5 dagegen **zu leicht** (27 s gegen 3 Trash, Korridor ≥ 9 s, praktisch 9–13 s) und zu zäh (Trash 21 s statt 7–9 s). Die Kurve muss den Einstieg entschärfen und das Spätspiel gefährlicher, aber schneller machen.

@@ -66,6 +66,7 @@ namespace ProjectTyrant.Balance
             var prof = PlayerProfile.Instance;
             if (prof != null) { if (!_savedLevel.HasValue) _savedLevel = prof.Progression.Level; prof.SaveSuspended = true; }
             if (Level > 0) DebugCommands.SetLevel(Level);
+            BalanceLoadout.Apply(_p, Level > 0 ? Level : _p.Level);
             var start = StartPos ?? (ZoneRoot.Current != null && ZoneRoot.Current.Definition != null ? ZoneRoot.Current.Definition.DefaultSpawn : _p.transform.position);
             Respawn(start);
             Random.InitState(Seed);
@@ -86,6 +87,7 @@ namespace ProjectTyrant.Balance
         void EndPlan()
         {
             Time.timeScale = 1f; PlayerController.QaWishWorld = null;
+            BalanceLoadout.Remove();
             var prof = PlayerProfile.Instance;
             if (prof != null) { prof.SaveSuspended = false; DebugCommands.Load(); }   // Spielstand unverändert: vom Datenträger neu laden
             _savedLevel = null;

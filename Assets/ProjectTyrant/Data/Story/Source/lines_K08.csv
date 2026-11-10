@@ -27,4 +27,10 @@ K08_S03_C2_A;held;neutral;links;Erst die Tiefe. Was im Dunkeln liegt, will ich z
 K08_S03_C2_B;held;amuesiert;links;Erst die Tiefe. Danach brauche ich frische Luft.;opt:2|tend:Charme|flag:k08_tiefe|reply:K08_S03_R2
 K08_S03_R1;nadira;neutral;rechts;Nimm eine Laterne. Und noch eine. Die erste geht immer aus.;reply
 K08_S03_R2;nadira;amuesiert;rechts;Frische Luft gibt es oben genug. Zu viel davon.;reply
+K08_S03_C3_A;held;neutral;links;Pass auf das Lager auf, bis wir zurück sind.;opt:3|tend:Wuerde|reply:K08_S03_R3
+K08_S03_C3_B;held;amuesiert;links;Erzähl die Geschichte ruhig dreimal. Mit mehr Drachen.;opt:3|tend:Charme|reply:K08_S03_R4
+K08_S03_C3_C;held;zornig;links;Beim nächsten Mal entkommt er mir nicht.;opt:3|tend:Wildheit|reply:K08_S03_R5
+K08_S03_R3;nadira;entschlossen;rechts;Das Lager steht. Kommt nur wieder.;reply
+K08_S03_R4;nadira;amuesiert;rechts;Drachen? Gut. Die Leute lieben Drachen.;reply
+K08_S03_R5;nadira;besorgt;rechts;Zorn ist ein schlechter Kompass. Nimm lieber eine Karte.;reply
 K08_J;held;zornig;;Im Dünenmeer stellte ich den Herold in den Ruinen von Qasir. Er entkam wieder. Der Schlüssel ist geteilt: Tiefe und Wolken.;journal

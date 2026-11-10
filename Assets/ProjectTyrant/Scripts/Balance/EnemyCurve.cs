@@ -14,7 +14,7 @@ namespace ProjectTyrant.Balance
         [Tooltip("Vitalität durch Ausrüstung als Anteil der Primärbasis")] public float GearVitality = 0.15f;
         [Tooltip("Rüstung (Verteidigung) durch Ausrüstung als Anteil der Primärbasis")] public float GearDefense = 0.9f;
         [Tooltip("Kraft durch Ausrüstung als Anteil der Primärbasis")] public float GearPower = 0.35f;
-        [Tooltip("Koeffizient je Sekunde (Auto-Angriff + 2 Skills), aus Messung")] public float CoefPerSecond = 0.9f;
+        [Tooltip("Koeffizient je Sekunde (Auto-Angriff + 2 Skills), aus der Trainingspuppen-Messung (B2: 0,9 → 1,85, Zeit-bis-Kill war halb so lang wie geplant)")] public float CoefPerSecond = 1.85f;
 
         public float Health(int level) => Mathf.Lerp(AttributeSet.ClassBaseHealthL1, AttributeSet.ClassBaseHealthL80, (Mathf.Clamp(level, 1, AttributeSet.MaxLevel) - 1) / (float)(AttributeSet.MaxLevel - 1))
                                          + AttributeSet.PrimaryBase(level) * (1f + GearVitality) * 10f;
@@ -37,7 +37,9 @@ namespace ProjectTyrant.Balance
         /// <summary>Sicherheitsabstand auf die Zeit-bis-Tod-Ziele (Krit, Zustände, Überlappung): Stufe 0–2 großzügig, Stufe 3–5 knapp (Korridore).</summary>
         public static float TtdMargin(int danger) => danger <= 2 ? 1.3f : 1.1f;
         /// <summary>Champion: Lebenspunkte und Schaden relativ zum Veteranen.</summary>
-        public const float ChampionHp = 4f, ChampionDamage = 1.5f;
+        /// <summary>Veteranen haben Sonderangriffe (Stampfer, Zug, Wurf) zusätzlich zum Auto-Angriff – Messung Stufe 3: 13 s statt ≥ 16 s.</summary>
+        public const float VeteranAbilityMargin = 1.4f;
+        public const float ChampionHp = 4f, ChampionDamage = 1.3f;   // Grolmok: Zeit-bis-Tod eines untätigen Spielers ≥ 20 s
 
         public static float RoleHealth(EnemyRole r) => r == EnemyRole.Ranged ? 0.8f : r == EnemyRole.Netter ? 0.85f : 1f;
         public static float RoleDamage(EnemyRole r) => r == EnemyRole.Healer ? 0.7f : r == EnemyRole.Caller ? 0.8f : 1f;
@@ -65,7 +67,7 @@ namespace ProjectTyrant.Balance
             float trash = Mathf.Min(s.HitShare, interval / (3f * (s.TtdThreeTrash + interval) * TtdMargin(s.Level)));   // + interval: Treffer fallen diskret
             if (tier == EnemyTier.Trash || tier == EnemyTier.None) return trash;
             float ttdVet = s.TtdVeteran > 0f ? s.TtdVeteran : s.TtdThreeTrash;
-            float vet = Mathf.Min(s.HitShare * 1.5f, interval / ((ttdVet + interval) * TtdMargin(s.Level)));
+            float vet = Mathf.Min(s.HitShare * 1.5f, interval / ((ttdVet + interval) * TtdMargin(s.Level) * VeteranAbilityMargin));
             return tier == EnemyTier.Veteran ? vet : Mathf.Min(s.TelegraphHitShare * 1.5f, vet * ChampionDamage);
         }
 

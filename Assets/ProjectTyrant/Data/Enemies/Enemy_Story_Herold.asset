@@ -16,7 +16,7 @@ MonoBehaviour:
   Tier: 3
   Team: 2
   Prefab: {fileID: 4720331895774961529, guid: 6fa7c7c2f97429441b62ee72c770f7ae, type: 3}
-  FixedLevel: 15
+  FixedLevel: 13
   AttributeFactor: 1.2
   ArmorFactor: 1.6
   HealthFactor: 22
@@ -50,6 +50,10 @@ MonoBehaviour:
   SummonArchetype: {fileID: 0}
   ProjectileColor: {r: 0.5, g: 0.9, b: 0.3, a: 1}
   Defiance: 900
+  Role: 0
+  CurveExempt: 1
+  PursuitExempt: 1
+  NeutralCreature: 0
   ContributionValue: 120
   Experience: 800
   Loot: {fileID: 0}
