@@ -195,6 +195,14 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: 5b42d0f6873c1434d8e3ccfd75ebdcb7, type: 3}
   - Id: mount_skyscale
     Sprite: {fileID: 21300000, guid: e80319210f353044d8065a1b348bd7f1, type: 3}
+  - Id: mount_dunerunner
+    Sprite: {fileID: 21300000, guid: 13e2063509be51e469d5d9867da56284, type: 3}
+  - Id: mount_skiff
+    Sprite: {fileID: 21300000, guid: 2392049191796c34d81aca95a0a97d33, type: 3}
+  - Id: mastery_jade
+    Sprite: {fileID: 21300000, guid: ea8df5adf83cb7e4480ed8df46c83f50, type: 3}
+  - Id: mastery_boat
+    Sprite: {fileID: 21300000, guid: 4236fce282e90274ba6d7ba790cee04f, type: 3}
   - Id: mastery_glide
     Sprite: {fileID: 21300000, guid: 17501c9352aba1e43a10264aae226020, type: 3}
   - Id: mastery_env

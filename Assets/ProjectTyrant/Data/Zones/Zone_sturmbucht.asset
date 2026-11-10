@@ -76,7 +76,7 @@ MonoBehaviour:
   Tips:
   - "Die Piraten belagern regelm\xE4\xDFig den Hafen."
   - 'Signatur: Schiffswracks, Belagerung des Hafens'
-  LoadingImage: {fileID: 0}
+  LoadingImage: {fileID: 2800000, guid: 25ce6a92068b45e49a80197842890aa7, type: 3}
   Regions:
   - Name: Piratennest
     Center: {x: -100.19446, y: -320.3212}
@@ -109,17 +109,58 @@ MonoBehaviour:
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
   DangerMap:
-    ZoneId: 
+    ZoneId: sturmbucht
     Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    Anchors:
+    - {x: 0, y: -380}
+    - {x: 233.762, y: 341.68893}
+    - {x: 410.54926, y: -53.34164}
+    Waypoints:
+    - {x: 12, y: -362}
+    - {x: 258.3615, y: -201.69002}
+    - {x: -135.71902, y: -155.39708}
+    - {x: -232.47736, y: 17.132282}
+    - {x: 319.45776, y: 272.50284}
+    - {x: 241.762, y: 341.68893}
+    - {x: 417.47745, y: -49.34164}
+    BandEdges:
+    - 300
+    BandLevels: 0300000004000000i
+    Areas:
+    - Name: Piratennest
+      Center: {x: -100.19446, y: -320.3212}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Leuchtturm Ost
+      Center: {x: 266.78647, y: -109.1281}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Salzpfanne
+      Center: {x: 32.38595, y: -71.278145}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Schmugglergrotte
+      Center: {x: -390.1246, y: 106.71167}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Sturmkap
+      Center: {x: -2.387833, y: 400}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
   CompletionIds:
   - wp_sturmbucht_ankunft

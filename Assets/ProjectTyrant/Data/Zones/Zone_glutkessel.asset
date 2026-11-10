@@ -76,7 +76,7 @@ MonoBehaviour:
   Tips:
   - Der Kult belagert den Flammentempel in drei Phasen.
   - "Signatur: Story-Kapitel 4\u20136, Meta Belagerung des Flammentempels"
-  LoadingImage: {fileID: 0}
+  LoadingImage: {fileID: 2800000, guid: 5d401fa11e3f5c44eab827d798b8845d, type: 3}
   Regions:
   - Name: Aschentreppe
     Center: {x: 186.22585, y: -296.3413}
@@ -109,17 +109,58 @@ MonoBehaviour:
   TimerPosition: {x: -158.13745, y: 0, z: -440}
   TimerEventId: glutkessel_flammentempel
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: glutkessel
+    Size: 1100
+    Anchors:
+    - {x: 0, y: -418}
+    - {x: -313.62143, y: -331.02512}
+    - {x: 452.19916, y: -58.753113}
+    Waypoints:
+    - {x: 12, y: -400}
+    - {x: -350.02762, y: -247.48802}
+    - {x: 317.99606, y: 49.921013}
+    - {x: 74.74041, y: 130.42522}
+    - {x: 191.39467, y: 221.91733}
+    - {x: -305.62143, y: -331.02512}
+    - {x: 459.12738, y: -54.753113}
+    BandEdges:
+    - 330
+    BandLevels: 0400000005000000i
+    Areas:
+    - Name: Aschentreppe
+      Center: {x: 186.22585, y: -296.3413}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: "Glutbr\xFCcke"
+      Center: {x: -374.48804, y: -337.607}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Opferplatz
+      Center: {x: 423.08734, y: 31.081533}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: "Schwarze S\xE4ulen"
+      Center: {x: 332.35062, y: 297.0346}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Feuerquelle
+      Center: {x: 359.2774, y: 440}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
   CompletionIds:
   - wp_glutkessel_ankunft

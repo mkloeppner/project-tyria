@@ -8,6 +8,7 @@ namespace ProjectTyrant
         public readonly HashSet<string> Mounts = new HashSet<string>();
         public MountKind SelectedMount = MountKind.None;
         public MountPrefsDto MountPrefs = new MountPrefsDto();          // Lauf 10
+        public readonly AchievementModel Achievements = new AchievementModel();   // Lauf 11: Erfolgs-Tab (gespeichert als „ach:Id=n“ in den Flags)
         public readonly List<string> AdminMarks = new List<string>();   // Lauf 10: „mount:Skyscale“, „mastery:Greif“, „story:…“
 
         /// <summary>Lauf 10: reines Auswahlmodell aus Besitz + Einstellungen.</summary>
@@ -39,6 +40,8 @@ namespace ProjectTyrant
             d.Mounts.AddRange(Mounts);
             d.SelectedMount = SelectedMount == MountKind.None ? null : SelectedMount.ToString();
             d.MountPrefs = MountPrefs.Clone(); d.AdminMarks = new List<string>(AdminMarks);
+            d.Flags.RemoveAll(f => f.StartsWith("ach:"));
+            foreach (var kv in Achievements.Progress) d.Flags.Add("ach:" + kv.Key + "=" + kv.Value);
             WriteMastery(d);
         }
 
@@ -49,6 +52,9 @@ namespace ProjectTyrant
             SelectedMount = !string.IsNullOrEmpty(d.SelectedMount) && System.Enum.TryParse<MountKind>(d.SelectedMount, out var sel) && Mounts.Contains(sel.ToString()) ? sel : MountKind.None;
             MountPrefs = d.MountPrefs != null ? d.MountPrefs.Clone() : new MountPrefsDto();
             AdminMarks.Clear(); if (d.AdminMarks != null) AdminMarks.AddRange(d.AdminMarks);
+            Achievements.Progress.Clear(); Achievements.Done.Clear();
+            if (d.Flags != null) foreach (var f in d.Flags) if (f.StartsWith("ach:")) { var kv = f.Substring(4).Split('='); if (kv.Length == 2 && int.TryParse(kv[1], out int n)) Achievements.Add(kv[0], n); }
+            Flags.RemoveAll(f => f.StartsWith("ach:"));
             ReadMastery(d);
         }
 

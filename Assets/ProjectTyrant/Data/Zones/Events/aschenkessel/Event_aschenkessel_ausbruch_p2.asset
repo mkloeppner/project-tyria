@@ -59,6 +59,6 @@ MonoBehaviour:
   MasteryPoints: 0
   MetaId: aschenkessel_ausbruch
   MetaPhase: 2
-  Tier: 2
-  TierSet: 0
+  Tier: 4
+  TierSet: 1
   BalanceBaseTargets: 0

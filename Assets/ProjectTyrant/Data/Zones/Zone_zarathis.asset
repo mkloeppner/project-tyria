@@ -24,11 +24,11 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: zarathis_glutkessel
-    Position: {x: -375.5204, y: 0, z: -396.359}
+    Position: {x: -375.5204, y: 2.7735183, z: -396.359}
     Yaw: 43.45355
     TargetZone: glutkessel
     TargetPortal: glutkessel_zarathis
-  DefaultSpawn: {x: 0, y: 0, z: -494}
+  DefaultSpawn: {x: 0, y: 1.7, z: -494}
   ContinentRect:
     serializedVersion: 2
     x: 0.06
@@ -36,31 +36,141 @@ MonoBehaviour:
     width: 0.34
     height: 0.28
   ContinentColor: {r: 0.47843137, g: 0.22745098, b: 0.16470589, a: 1}
-  Waypoints: []
-  Arrivals: []
+  Waypoints:
+  - Id: wp_zarathis_ankunft
+    Name: Wegmarke Zarathis
+    Position: {x: 12, y: 1.7, z: -476}
+  - Id: wp_zarathis_knochenmauer
+    Name: Wegmarke Knochenmauer
+    Position: {x: 4.0689483, y: 9.984023, z: -276.2074}
+  - Id: wp_zarathis_thronviertel
+    Name: Wegmarke Thronviertel
+    Position: {x: 149.28069, y: 4.6437798, z: -41.49179}
+  - Id: wp_zarathis_haendlerviertel
+    Name: "Wegmarke H\xE4ndlerviertel"
+    Position: {x: 412.52295, y: 3.6816711, z: -8.509951}
+  - Id: wp_zarathis_tempelviertel
+    Name: Wegmarke Tempelviertel
+    Position: {x: -141.39107, y: 1.7, z: 391.53757}
+  - Id: wp_zarathis_ankunft_glutkessel
+    Name: Portal-Wegmarke Glutkessel
+    Position: {x: -363.3938, y: 1.205662, z: -392.00342}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 1.7, z: -494}
+    WaypointId: wp_zarathis_ankunft
+  - Entrance: portal:zarathis_glutkessel
+    Position: {x: -371.3938, y: 2.7735183, z: -392.00342}
+    WaypointId: wp_zarathis_ankunft_glutkessel
   Tips:
   - "H\xF6chste Gefahrenstufe: Rufer holen Verst\xE4rkung, Flieger werden vom Himmel geholt."
   - 'Signatur: Finale-Meta Fall von Zarathis, Rennstrecke 2'
-  LoadingImage: {fileID: 0}
-  Regions: []
-  TimerLabel: 
-  TimerPeriod: 0
-  TimerOffset: 0
-  TimerPosition: {x: 0, y: 0, z: 0}
-  TimerEventId: 
+  LoadingImage: {fileID: 2800000, guid: 240e2af89b6a1ce40b5de4ccca32103a, type: 3}
+  Regions:
+  - Name: Tempelviertel
+    Center: {x: -338.68854, y: -429.9148}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Hafenviertel
+    Center: {x: 450.0051, y: -337.5863}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Palast des Zarath
+    Center: {x: 315.42194, y: 31.640526}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Gefallene Kuppel
+    Center: {x: -408.07196, y: 400.83398}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Renntor
+    Center: {x: -405.14026, y: 503.5618}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  TimerLabel: Fall von Zarathis
+  TimerPeriod: 7200
+  TimerOffset: 1800
+  TimerPosition: {x: -368.1594, y: 0, z: -271.1941}
+  TimerEventId: zarathis_zarathis
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: zarathis
+    Size: 1300
+    Anchors:
+    - {x: 0, y: -494}
+    - {x: -371.3938, y: -392.00342}
+    Waypoints:
+    - {x: 12, y: -476}
+    - {x: 4.0689483, y: -276.2074}
+    - {x: 149.28069, y: -41.49179}
+    - {x: 412.52295, y: -8.509951}
+    - {x: -141.39107, y: 391.53757}
+    - {x: -363.3938, y: -392.00342}
+    BandEdges:
+    - 390.00003
+    - 780.00006
+    BandLevels: 040000000500000006000000i
+    Areas:
+    - Name: Tempelviertel
+      Center: {x: -338.68854, y: -429.9148}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Hafenviertel
+      Center: {x: 450.0051, y: -337.5863}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Palast des Zarath
+      Center: {x: 315.42194, y: 31.640526}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 1
+    - Name: Gefallene Kuppel
+      Center: {x: -408.07196, y: 400.83398}
+      Radius: 110
+      Level: 6
+      City: 0
+      NoLeash: 0
+    - Name: Renntor
+      Center: {x: -405.14026, y: 503.5618}
+      Radius: 110
+      Level: 6
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
-  CompletionIds: []
+  CompletionIds:
+  - wp_zarathis_ankunft
+  - wp_zarathis_knochenmauer
+  - wp_zarathis_thronviertel
+  - wp_zarathis_haendlerviertel
+  - wp_zarathis_tempelviertel
+  - poi_zarathis_tempelviertel
+  - poi_zarathis_hafenviertel
+  - poi_zarathis_palast_des_zarath
+  - poi_zarathis_gefallene_kuppel
+  - poi_zarathis_renntor
+  - vista_zarathis_0
+  - vista_zarathis_1
+  - vista_zarathis_2
+  - hc_zarathis_0
+  - hc_zarathis_1
+  - hc_zarathis_2
+  - hc_zarathis_3
+  - heart_zarathis_0
+  - heart_zarathis_1
+  - heart_zarathis_2
+  - heart_zarathis_3
   Region: 1
   IsHub: 0

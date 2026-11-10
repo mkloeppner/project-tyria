@@ -50,7 +50,7 @@ MonoBehaviour:
   SummonArchetype: {fileID: 0}
   ProjectileColor: {r: 0.9, g: 0.8, b: 0.5, a: 1}
   Defiance: 0
-  Role: 0
+  Role: 1
   CurveExempt: 0
   PursuitExempt: 0
   NeutralCreature: 0

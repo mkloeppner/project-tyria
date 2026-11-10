@@ -11,7 +11,7 @@ namespace ProjectTyrant.EditorTools
             Crawler = "Enemy_Tiefe_Kristallkrabbler", BlindHunter = "Enemy_Tiefe_BlinderJaeger", SkyPirate = "Enemy_Himmel_Pirat",
             Guard = "Enemy_Feste_Garde", Knight = "Enemy_Feste_Ritter", Breaker = "Enemy_Feste_Siegelbrecher", Vareth = "Enemy_Story_Vareth";
 
-        static partial void ChaptersLater() { Chapter5(); Chapter6(); Chapter7(); Chapter8(); Chapter9(); Chapter10(); }
+        static partial void ChaptersLater() { Chapter5(); Chapter6(); Chapter7(); Chapter8(); Chapter9(); Chapter10(); ChaptersExpansions(); }   // Lauf 11: Kapitel 11–26
 
         static void Chapter5()
         {

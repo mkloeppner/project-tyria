@@ -65,7 +65,7 @@ MonoBehaviour:
   Tips:
   - Luftspiegelungen zeigen Wege, die nur aus bestimmten Winkeln sichtbar sind.
   - 'Signatur: Skimmer-Gleiten, Luftspiegelungen, Weltboss Salzkoloss'
-  LoadingImage: {fileID: 0}
+  LoadingImage: {fileID: 2800000, guid: ac0076ad5a243bb42aa67cad998a6e79, type: 3}
   Regions:
   - Name: Kristallkruste
     Center: {x: -223.27452, y: -372.92117}
@@ -98,17 +98,56 @@ MonoBehaviour:
   TimerPosition: {x: 451.84662, y: 1.4403197, z: 540}
   TimerEventId: salzkoloss
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: spiegel_der_sonne
+    Size: 1200
+    Anchors:
+    - {x: 0, y: -456}
+    - {x: -342.5076, y: -361.51422}
+    Waypoints:
+    - {x: 12, y: -438}
+    - {x: 61.700184, y: -296.9715}
+    - {x: 296.4324, y: 29.512367}
+    - {x: 438.6825, y: 166.88559}
+    - {x: 291.0974, y: 207.60985}
+    - {x: -334.5076, y: -361.51422}
+    BandEdges:
+    - 360
+    BandLevels: 0400000005000000i
+    Areas:
+    - Name: Kristallkruste
+      Center: {x: -223.27452, y: -372.92117}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Salzsiederei
+      Center: {x: 198.82016, y: -286.03806}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Sonnenuhr
+      Center: {x: 208.45506, y: -114.283844}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: "Gl\xE4serner Steg"
+      Center: {x: -346.46786, y: 99.2165}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: "Wei\xDFe Kuppel"
+      Center: {x: 265.9671, y: 480}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
   CompletionIds:
   - wp_spiegel_der_sonne_ankunft

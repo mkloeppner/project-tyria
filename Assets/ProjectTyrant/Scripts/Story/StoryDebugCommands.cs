@@ -16,7 +16,7 @@ namespace ProjectTyrant
                 var d = D; if (d == null) return "Kein Story-Direktor";
                 var p = (a ?? "").Split(' '); int k = 1, s = 0;
                 if (p.Length > 0) int.TryParse(p[0], out k); if (p.Length > 1) int.TryParse(p[1], out s);
-                return d.DebugSetChapter(Mathf.Clamp(k, 1, 10), Mathf.Max(0, s));
+                return d.DebugSetChapter(Mathf.Max(1, k), Mathf.Max(0, s));
             }));
             DebugCommands.Extra.Add(("Story: Schritt abschließen", a => D != null ? D.DebugCompleteStep() : "Kein Story-Direktor"));
             DebugCommands.Extra.Add(("Story: Szene abspielen", a =>

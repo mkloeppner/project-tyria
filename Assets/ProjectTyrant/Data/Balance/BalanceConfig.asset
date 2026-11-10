@@ -19,6 +19,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e43b61d8809395a41ae8608c22b4624a, type: 2}
   - {fileID: 11400000, guid: 88208b098dc80b74ab4bf0231e3247e2, type: 2}
   - {fileID: 11400000, guid: 876c6b84abe8d61439f9d285c4841508, type: 2}
+  - {fileID: 11400000, guid: a9d9a63153f05124fbc8da66b88722c6, type: 2}
   Player:
     GearVitality: 0.15
     GearDefense: 0.9

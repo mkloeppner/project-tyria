@@ -15,7 +15,7 @@ MonoBehaviour:
   Number: 9
   Title: "Unter Kristall, \xFCber Wolken"
   Zone: kristalltiefe
-  MinLevel: 30
+  MinLevel: 70
   Summary: "Zwei H\xE4lften des Schl\xFCssels: in der Tiefe eine Vision des Tyrannen, in den Spitzen der Greif als Vertrauensbeweis."
   Steps:
   - Id: K09_S01

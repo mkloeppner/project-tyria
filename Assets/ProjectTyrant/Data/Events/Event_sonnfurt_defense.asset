@@ -19,8 +19,8 @@ MonoBehaviour:
   Objective: 1
   Center: {x: -60, y: 1, z: -60}
   Radius: 30
-  Duration: 120
-  TargetCount: 8
+  Duration: 180
+  TargetCount: 4
   Triggers:
   - Type: 3
     Delay: 20

@@ -26,3 +26,13 @@ bundle;Bündel;Aufgehobene Gegenstände ersetzen deine Fertigkeiten 1–5. Mit 5
 emote;Emotes;Mit Enter öffnest du den Chat. /winken, /jubeln, /tanzen, /verbeugen und /sitzen sind Emotes.;Enter
 interrupt;Unterbrechen;Wer einen Zauber vorbereitet, lässt sich mit Kontrolle unterbrechen.;
 escort;Eskorte;Bleib bei den Leuten, die du begleitest – sie folgen dir.;
+region_travel;Regionen-Reise;Wegmarken in einer anderen Region kosten einen Aufschlag. Schiffe und Portale verbinden die Regionen – auf der Karte wechselst du über die Reiter.;M
+corruption_res;Verderbnis-Widerstand;Im Inneren der Schädelküste brennt Verderbnis. Halte dich an Schutzfeuer und Salz, bis du Widerstand trägst.;
+bounty;Kopfgeldjagd;An der Kopfgeldtafel nimmst du einen Auftrag an. Der Spürsinn-Kreis zeigt das Gebiet; das Ziel erscheint mit instabilen Eigenschaften. 10 Minuten Zeit.;F
+dunerunner;Dünenläufer;Leertaste: Blinkschritt (15 m, Ladungen laden am Boden). Golden flimmernde Sandportale nutzt nur der Dünenläufer.;Leertaste
+race;Reittier-Rennen;Am Rennleiter startest du ein Rennen: Checkpoints in Reihenfolge, Boost-Pads, Bestzeit je Reittier. Sandportale sind Abkürzungen für Dünenläufer.;F
+mirage;Luftspiegelungen;Manche Wege zeigen sich nur aus dem richtigen Winkel. Stell dich an die Lichtsteine und schau zum Horizont.;
+jadebot;Jadegeist;Dein Jadegeist belebt dich einmal alle 10 Minuten aus dem Kampfunfähig-Zustand. Mit Beherrschung treibt er Jade-Geräte an.;
+boat;Boot;Am Ufer rufst du dein Boot (X halten, Radialmenü). Leertaste: Anker. Vom Boot angelt es sich besser.;X
+fishing;Angeln;Leertaste halten: Wurf. Beißt ein Fisch, halte die Spannung im grünen Bereich – einholen erhöht sie, loslassen senkt sie.;Leertaste
+spiritpath;Geisterwege;Geisterwege sind nur nachts oder mit dem Jadegeist sichtbar.;

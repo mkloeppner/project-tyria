@@ -73,6 +73,7 @@ namespace ProjectTyrant
             Story = d.Version < 4 || d.Story == null ? StoryState.Migrated() : d.Story;   // Lauf 6: alte Stände → Kapitel 1, Tutorial übersprungen
             Progression.Level = Mathf.Clamp(d.Level, 1, AttributeSet.MaxLevel);   // Lauf 11: Level bleibt (30 bleibt 30 auf der 80er-Kurve)
             MigratedFromVersion = d.Version < SaveGameDto.Level80Version ? d.Version : 0;
+            if (MigratedFromVersion > 0 && Story != null && Story.Finished) { Story.Finished = false; Story.Chapter = Mathf.Max(Story.Chapter, 11); Story.Step = 0; }   // Lauf 11: nach Kapitel 10 geht es mit dem Zwischenspiel weiter
             Progression.Xp = Mathf.Max(0, d.Xp);
             Progression.HeroPoints = d.HeroPoints; Progression.HeroPointsSpent = d.HeroPointsSpent;
             // Migration (M10): ältere Stände bekamen 1 statt 4 Punkte je Stufe.

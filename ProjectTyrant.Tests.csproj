@@ -84,6 +84,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\DodgeTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ZoneTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf11FoundationTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf11StoryTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\MapTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\StoryPathTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf10FlightTests.cs" />
@@ -100,6 +101,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\MountTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WaypointSafetyTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ComboTableTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf11SystemsTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ItemTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\AudioTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf10SelectionTests.cs" />

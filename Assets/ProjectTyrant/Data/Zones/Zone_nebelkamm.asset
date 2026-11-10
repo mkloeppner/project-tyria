@@ -73,7 +73,7 @@ MonoBehaviour:
   Tips:
   - Nachts erwachen die Geister der Steinkreise.
   - 'Signatur: Geister-Events bei Nacht, Einblicke auf Steinkreisen'
-  LoadingImage: {fileID: 0}
+  LoadingImage: {fileID: 2800000, guid: 72468299ed8c37d4eade8b2af193f301, type: 3}
   Regions:
   - Name: Irrlichtsenke
     Center: {x: 85.42236, y: -440}
@@ -106,17 +106,57 @@ MonoBehaviour:
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: nebelkamm
+    Size: 1100
+    Anchors:
+    - {x: 0, y: -418}
+    - {x: 257.477, y: 376.35303}
+    - {x: -437.26947, y: 129.34996}
+    Waypoints:
+    - {x: 12, y: -400}
+    - {x: 367.59808, y: -222.65295}
+    - {x: -366.39545, y: -203.40569}
+    - {x: 341.68945, y: 91.96677}
+    - {x: -415.65744, y: 114.833725}
+    - {x: 265.477, y: 376.35303}
+    BandEdges:
+    - 330
+    BandLevels: 0300000003000000i
+    Areas:
+    - Name: Irrlichtsenke
+      Center: {x: 85.42236, y: -440}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Alte Warte
+      Center: {x: -69.66915, y: -262.9987}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: "Moorbr\xFCcke"
+      Center: {x: -148.09593, y: 111.32132}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Nebelsee
+      Center: {x: 220.32329, y: 270.0865}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: "H\xFCgelgrab"
+      Center: {x: -361.74014, y: 305.03586}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
   CompletionIds:
   - wp_nebelkamm_ankunft

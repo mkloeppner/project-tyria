@@ -41,6 +41,66 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Tyrannenfeste.unity
     guid: 74ac45aa55938df41a8f525b5adc2d1b
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Weite_von_ahrn.unity
+    guid: 35affefef420452408a128f8b627c065
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Nebelkamm.unity
+    guid: 05dc41a5db48b744b9e20d3b50d8409d
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Sturmbucht.unity
+    guid: 1b126f19816c28c4eb275a06eda28411
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Aschenkessel.unity
+    guid: eed73ed715be0b144b9492aee7322b22
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Gruener_schlund.unity
+    guid: 9a105ad4881d8e446b4c3e4b644b041e
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Schilfmuendung.unity
+    guid: 514a7d7cb16454e468f2ac65836550a7
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Weisse_stille.unity
+    guid: 3e56cd82b69fc8a419ace88244e1a554
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Schaedelkueste.unity
+    guid: 8a9cf99f1dbc1604c88397a58ec35af9
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Sonnentor.unity
+    guid: 4d64260d945b61246a6652b3ef8f23ee
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Grosse_leere.unity
+    guid: cbaafd119b069cf4c880db6a92b261f1
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Klingenschlucht.unity
+    guid: e6ba2f1ab4a88294c897e781ae441c1d
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Spiegel_der_sonne.unity
+    guid: d584ae0fcb7bb41499baad235d60ba06
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Glutkessel.unity
+    guid: 3a2c1f057c844fa4590042fef738e4af
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Zarathis.unity
+    guid: 97e26eca3a5384646a49bd432f80e0de
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Jadehafen.unity
+    guid: 72a3ddccc5301364f9961d1e30d8def1
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Gruene_flut.unity
+    guid: c1574f9a3ccb76947bd5424f163790ba
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Fluesterhain.unity
+    guid: b6bbbecf7aad8264c877507e6db7c33c
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Sonnenstufen.unity
+    guid: ee37ebe1d0aa4254a8fc27c0949f382d
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Nebelkueste.unity
+    guid: e2bf10fd1e3d7824e92e0cb7b39a0f4c
+  - enabled: 1
+    path: Assets/ProjectTyrant/Scenes/Zones/PT_Zone_Herz_der_flut.unity
+    guid: c238314d0c89cb749b86183565065246
   - enabled: 0
     path: Assets/ProjectTyrant/Scenes/PT_Sandbox.unity
     guid: 9464bea2a3f80cb4db0b0ec5bd543bb8

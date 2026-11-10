@@ -24,11 +24,11 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: sonnenstufen_fluesterhain
-    Position: {x: -346.6342, y: 0, z: -365.8698}
+    Position: {x: -346.6342, y: 1.8000001, z: -365.8698}
     Yaw: 43.45355
     TargetZone: fluesterhain
     TargetPortal: fluesterhain_sonnenstufen
-  DefaultSpawn: {x: 0, y: 0, z: -456}
+  DefaultSpawn: {x: 0, y: 2.9795594, z: -456}
   ContinentRect:
     serializedVersion: 2
     x: 0.04
@@ -36,31 +36,140 @@ MonoBehaviour:
     width: 0.34
     height: 0.3
   ContinentColor: {r: 0.5647059, g: 0.7529412, b: 0.3764706, a: 1}
-  Waypoints: []
-  Arrivals: []
+  Waypoints:
+  - Id: wp_sonnenstufen_ankunft
+    Name: Wegmarke Sonnenstufen
+    Position: {x: 12, y: 3.0924342, z: -438}
+  - Id: wp_sonnenstufen_kaiserliche_festung
+    Name: Wegmarke Kaiserliche Festung
+    Position: {x: 347.37012, y: 5.564127, z: -307.10675}
+  - Id: wp_sonnenstufen_terrassendorf
+    Name: Wegmarke Terrassendorf
+    Position: {x: -2.8345597, y: 1.8000001, z: -125.99502}
+  - Id: wp_sonnenstufen_festwiese
+    Name: Wegmarke Festwiese
+    Position: {x: 371.88998, y: 3.0765085, z: 246.70944}
+  - Id: wp_sonnenstufen_wasserrad
+    Name: Wegmarke Wasserrad
+    Position: {x: -151.01418, y: 8.859614, z: 136.13995}
+  - Id: wp_sonnenstufen_ankunft_fluesterhain
+    Name: "Portal-Wegmarke Fl\xFCsterhain"
+    Position: {x: -334.5076, y: 0.803669, z: -361.51422}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 2.9795594, z: -456}
+    WaypointId: wp_sonnenstufen_ankunft
+  - Entrance: portal:sonnenstufen_fluesterhain
+    Position: {x: -342.5076, y: 1.8000001, z: -361.51422}
+    WaypointId: wp_sonnenstufen_ankunft_fluesterhain
   Tips:
   - Kaiserliche Patrouillen kontrollieren die Wege.
   - 'Signatur: Kaiserliche Patrouillen, Festival-Events, Angeln in Reisfeldern'
-  LoadingImage: {fileID: 0}
-  Regions: []
+  LoadingImage: {fileID: 2800000, guid: 1e20a5101fe057b42aa2de75b566b578, type: 3}
+  Regions:
+  - Name: Wasserrad
+    Center: {x: -115.757065, y: -478.4732}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Pagode
+    Center: {x: -269.10458, y: -98.44534}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Reisspeicher
+    Center: {x: -163.38542, y: -149.64032}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Kirschhang
+    Center: {x: -395.157, y: 129.94829}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Wachturm
+    Center: {x: 419.96063, y: 480}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
   TimerLabel: 
   TimerPeriod: 0
   TimerOffset: 0
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: sonnenstufen
+    Size: 1200
+    Anchors:
+    - {x: 0, y: -456}
+    - {x: -342.5076, y: -361.51422}
+    Waypoints:
+    - {x: 12, y: -438}
+    - {x: 347.37012, y: -307.10675}
+    - {x: -2.8345597, y: -125.99502}
+    - {x: 371.88998, y: 246.70944}
+    - {x: -151.01418, y: 136.13995}
+    - {x: -334.5076, y: -361.51422}
+    BandEdges:
+    - 360
+    BandLevels: 0400000005000000i
+    Areas:
+    - Name: Wasserrad
+      Center: {x: -115.757065, y: -478.4732}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Pagode
+      Center: {x: -269.10458, y: -98.44534}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Reisspeicher
+      Center: {x: -163.38542, y: -149.64032}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Kirschhang
+      Center: {x: -395.157, y: 129.94829}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Wachturm
+      Center: {x: 419.96063, y: 480}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
-  CompletionIds: []
+  CompletionIds:
+  - wp_sonnenstufen_ankunft
+  - wp_sonnenstufen_kaiserliche_festung
+  - wp_sonnenstufen_terrassendorf
+  - wp_sonnenstufen_festwiese
+  - wp_sonnenstufen_wasserrad
+  - poi_sonnenstufen_wasserrad
+  - poi_sonnenstufen_pagode
+  - poi_sonnenstufen_reisspeicher
+  - poi_sonnenstufen_kirschhang
+  - poi_sonnenstufen_wachturm
+  - vista_sonnenstufen_0
+  - vista_sonnenstufen_1
+  - vista_sonnenstufen_2
+  - hc_sonnenstufen_0
+  - hc_sonnenstufen_1
+  - hc_sonnenstufen_2
+  - hc_sonnenstufen_3
+  - heart_sonnenstufen_0
+  - heart_sonnenstufen_1
+  - heart_sonnenstufen_2
+  - heart_sonnenstufen_3
   Region: 2
   IsHub: 0

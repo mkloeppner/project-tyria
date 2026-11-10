@@ -86,6 +86,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Audio\MixerModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\CharacterSelectController.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Core\ItemDebugCommands.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Bounties\BountyTarget.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Map\FogModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\WorldBanner.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Core\QaDelayedCapture.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Zone\HeroChallenge.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Animation\ClipData.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Regions\WorldBossSchedule.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Fishing\FishingModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\BalanceProbe.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\TooltipBuilder.Traits.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\ZoneDanger.cs" />
@@ -166,6 +168,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Effects\VfxGalleryLooper.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\TooltipBuilder.Items.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Audio\GameAudio.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Regions\AchievementModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Stats\AttributeSet.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\BalanceLoadout.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Save\ProfileState.World.cs" />
@@ -181,6 +184,8 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Save\PlayerProfile.Account.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\TelemetryProbe.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\FirstFifteen.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Bounties\BountyBoard.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Races\RaceModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\Heatmap.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\BalanceDebugCommands.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Procedural\MeshKit.cs" />
@@ -188,6 +193,8 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Effects\VfxInstance.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UIController.Defiance.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Core\WorldDebugCommands.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Boats\BoatModel.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Bounties\BountyModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Save\PlayerProfile.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\RoleBehaviour.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Zone\ZoneObjectDefinition.cs" />
@@ -208,6 +215,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\DangerProfile.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Inventory\LootRoller.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Regions\LevelBands.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Races\RaceStarter.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Progression\SpecializationDefinition.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\NavMeshDataLoader.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Save\PlayerProfile.Skills.cs" />
@@ -227,6 +235,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\DangerModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\BundleObject.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Dialogue\StoryActor.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Boats\JadeElevator.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\EnemyCurve.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Effects\AreaDisplay.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UIController.Hud.cs" />
@@ -240,9 +249,11 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Core\GameManager.Story.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UIController.Mounts.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Skills\SkillCaster.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Regions\SandPortal.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Animation\VillagerRoutine.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\Windows\InventoryWindow.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Combat\Combatant.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Mounts\DuneRunnerModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\EffectBar.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Lauf6\FigurePlaza.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\Windows\DebugPanel.cs" />
@@ -277,6 +288,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Zone\ZoneRules.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\StoryProps.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Events\EventChain.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Regions\JadeBotController.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Items\ItemDatabase.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\BundleTarget.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Save\PlayerProfile.Mastery.cs" />
@@ -349,6 +361,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Mounts\MountController.Flight.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Core\InputManager.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Mastery\MasteryAbilities.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Fishing\FishingSpot.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Audio\AudioAnalysis.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Items\WalletModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\BalancePlan.cs" />

@@ -76,7 +76,7 @@ MonoBehaviour:
   Tips:
   - "Der Schneesturm kehrt in Zyklen zur\xFCck \u2013 Feuerschalen w\xE4rmen."
   - "Signatur: Schneesturm-Zyklus, Weltboss Gletscherw\xE4chter"
-  LoadingImage: {fileID: 0}
+  LoadingImage: {fileID: 2800000, guid: d8d36b57d8563f04bac1bab0e4b6cf6f, type: 3}
   Regions:
   - Name: Polarlichtgrat
     Center: {x: -441.36414, y: -373.43875}
@@ -109,17 +109,59 @@ MonoBehaviour:
   TimerPosition: {x: 423.49023, y: -5, z: 350.28586}
   TimerEventId: gletscherwaechter
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: weisse_stille
+    Size: 1200
+    Anchors:
+    - {x: 0, y: -456}
+    - {x: 281.19196, y: 411.0171}
+    - {x: 493.84906, y: -64.16457}
+    Waypoints:
+    - {x: 12, y: -438}
+    - {x: 376.2989, y: -263.43234}
+    - {x: 80.24894, y: 36.12093}
+    - {x: 422.34625, y: 161.23564}
+    - {x: 226.58359, y: 277.52368}
+    - {x: 289.19196, y: 411.0171}
+    - {x: 500.77725, y: -60.164574}
+    BandEdges:
+    - 360
+    - 720
+    BandLevels: 030000000400000005000000i
+    Areas:
+    - Name: Polarlichtgrat
+      Center: {x: -441.36414, y: -373.43875}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Frostgrab
+      Center: {x: 205.93161, y: -321.57297}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Schneefeldlager
+      Center: {x: -430.6068, y: 162.42479}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Kristallbruch
+      Center: {x: 268.90472, y: 393.28387}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Stiller See
+      Center: {x: -338.98727, y: 480}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
   CompletionIds:
   - wp_weisse_stille_ankunft

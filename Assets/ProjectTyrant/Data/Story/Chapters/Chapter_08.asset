@@ -15,7 +15,7 @@ MonoBehaviour:
   Number: 8
   Title: "Das Lied der D\xFCnen"
   Zone: duenenmeer
-  MinLevel: 30
+  MinLevel: 60
   Summary: "Die Jagd nach dem Siegelschl\xFCssel f\xFChrt durch Sandst\xFCrme. Der Herold stellt eine Falle und entkommt."
   Steps:
   - Id: K08_S01

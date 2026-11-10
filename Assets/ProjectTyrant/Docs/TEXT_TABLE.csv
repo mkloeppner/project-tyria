@@ -409,6 +409,342 @@ K10_S04_R1;mira;Amuesiert;rechts;Ich schon. Erste Zeile: Frühstück.;5;K10_S04_
 K10_S04_R2;mira;Entschlossen;rechts;Dann schreib ich dich in die erste Spalte. Neben ihn.;10;K10_S04_R2
 K10_S04_R3;mira;Amuesiert;rechts;Kapitel fünf? Du redest schon wie Tovin.;7;K10_S04_R3
 K10_J;held;Entschlossen;;In der Tyrannenfeste fiel der Herold. Wir haben Vareth versiegelt, nicht getötet. An Brennars Grab hat Mira eine neue Liste angefangen.;21;
+K11_S01_L01;mira;Besorgt;rechts;Du siehst müde aus. Gut. Dann bist du wenigstens nicht der Einzige, der nicht schläft.;15;K11_S01_L01
+K11_S01_L02;held;Neutral;links;Vareth ist versiegelt. Was hält dich wach?;7;K11_S01_L02
+K11_S01_L03;mira;Besorgt;rechts;Fischer aus der Schädelküste. Ihre Netze kommen schwarz zurück. Das Wasser riecht nach Asche.;14;K11_S01_L03
+K11_S01_L04;mira;Entschlossen;rechts;Ich habe eine Liste mit Dingen, die nach einem Sieg nicht passieren sollten. Das hier steht ganz oben.;18;K11_S01_L04
+K11_S01_L05;held;Entschlossen;links;Dann sehe ich mir die Küste an.;7;K11_S01_L05
+K11_S01_L06;mira;Neutral;rechts;Nimm Salz mit. Und komm zurück. Beides ist wichtig, in dieser Reihenfolge.;12;K11_S01_L06
+K11_S01_Q1;mira;Neutral;rechts;Was sagst du den Fischern, wenn sie fragen, ob es sicher ist?;12;K11_S01_Q1
+K11_S01_C1_A;held;Entschlossen;links;Dass ich nachsehe und zurückkomme.;5;K11_S01_C1_A
+K11_S01_C1_B;held;Zornig;links;Dass niemand vor mir hinausfährt.;5;K11_S01_C1_B
+K11_S02E_L01;held;Besorgt;nah;Die Toten stehen wieder auf. Und das Wasser … es leuchtet violett.;12;K11_S02E_L01
+K11_S02E_L02;held;Entschlossen;nah;Das ist dieselbe Verderbnis wie in der Feste. Das Siegel blutet.;11;K11_S02E_L02
+K11_S03_L01;held;Besorgt;nah;Ein Altar unter Wasser. Jemand hat ihn erst kürzlich benutzt.;10;K11_S03_L01
+K11_S03_L02;tovin;Neutral;rechts;Bleib vom Wasser weg, solange du keinen Schutz trägst. Verderbnis kriecht durch die Haut.;14;K11_S03_L02
+K11_S03_L03;tovin;Besorgt;rechts;Diese Zeichen kenne ich. Sie stehen in den ältesten Rollen meines Turms – neben einem Wort: Glut.;17;K11_S03_L03
+K11_S03_L04;held;Neutral;links;Der Herold?;2;K11_S03_L04
+K11_S03_L05;tovin;Entschlossen;rechts;Älter. Viel älter. Brich den Altar, dann reden wir.;9;K11_S03_L05
+K11_S03_Q1;tovin;Neutral;rechts;Willst du wissen, was die Zeichen bedeuten, bevor wir den Altar brechen?;12;K11_S03_Q1
+K11_S03_C1_A;held;Entschlossen;links;Erzähl es mir – ich höre zu.;7;K11_S03_C1_A
+K11_S03_C1_B;held;Zornig;links;Erst brechen, dann reden.;4;K11_S03_C1_B
+K11_S03E_L01;tovin;Neutral;rechts;Der Altar ist still. Für heute. Das Siegel hält, aber es wird von außen gefüttert.;15;K11_S03E_L01
+K11_S03E_L02;held;Zornig;links;Von wem?;2;K11_S03E_L02
+K11_S03E_L03;tovin;Besorgt;rechts;Von denen, die Vareth erschaffen haben. Ich muss in mein Archiv. Komm nach Silbermund.;14;K11_S03E_L03
+K11_S03E_Q1;tovin;Neutral;rechts;Soll ich Mira von den Toten erzählen?;7;K11_S03E_Q1
+K11_S03E_C1_A;held;Entschlossen;links;Ja. Sie verdient die Wahrheit.;5;K11_S03E_C1_A
+K11_S03E_C1_B;held;Zornig;links;Nein. Sie hat genug Listen.;5;K11_S03E_C1_B
+K11_J;held;Entschlossen;;Die Schädelküste blutet Verderbnis. Ein versunkener Altar fütterte das Siegel von außen – mit einem Zeichen: Glut.;17;
+K12_S01_L01;tovin;Neutral;rechts;Hier. Eine Abschrift aus der Wüste jenseits der Feste. Der Orden der Glut.;13;K12_S01_L01
+K12_S01_L02;tovin;Besorgt;rechts;Sie formten aus einem Hauptmann einen Tyrannen. Vareth war ihr Werk – und ihr Gefäß.;15;K12_S01_L02
+K12_S01_L03;held;Besorgt;links;Und der Herold diente ihnen?;5;K12_S01_L03
+K12_S01_L04;tovin;Entschlossen;rechts;Bis zuletzt. Sein Siegelring trägt ihr Zeichen. Der Orden lebt, im Süden, in einer Stadt namens Sonnentor.;17;K12_S01_L04
+K12_S01_L05;held;Entschlossen;links;Dann gehe ich nach Sonnentor.;5;K12_S01_L05
+K12_S01_L06;tovin;Neutral;rechts;Nicht allein. Mira organisiert schon eine Expedition. Sie hat dafür eine eigene Liste angelegt.;14;K12_S01_L06
+K12_S01_Q1;tovin;Neutral;rechts;Schreckt dich ein Orden, der Tyrannen erschafft?;7;K12_S01_Q1
+K12_S01_C1_A;held;Entschlossen;links;Mich schreckt nur, was ich nicht kenne.;7;K12_S01_C1_A
+K12_S01_C1_B;held;Zornig;links;Nein. Er sollte vor mir erschrecken.;6;K12_S01_C1_B
+K12_S02E_L01;held;Neutral;nah;Das Portal im Vorland der Feste. Dahinter: Hitze und Sand.;10;K12_S02E_L01
+K12_S02E_L02;held;Entschlossen;nah;Erst zurück zum Hafen. Mira wartet nicht gern.;8;K12_S02E_L02
+K12_S03_L01;mira;Entschlossen;rechts;Schiff, Vorräte, Karten, Salz. Und ein Kapitän, der behauptet, die Wüste habe einen Hafen.;14;K12_S03_L01
+K12_S03_L02;held;Amuesiert;links;Du kommst nicht mit?;4;K12_S03_L02
+K12_S03_L03;mira;Neutral;rechts;Silbermund braucht jemanden, der die Listen führt. Ich schreibe dir. Jede Woche.;12;K12_S03_L03
+K12_S03_L04;mira;Neutral;rechts;Wegmarken in einer anderen Region kosten mehr. Und Schiffe brauchen länger als Portale. Merk dir das.;16;K12_S03_L04
+K12_S03_L05;held;Neutral;links;Ich merke mir alles, was auf deinen Listen steht.;9;K12_S03_L05
+K12_S03_L06;mira;Amuesiert;rechts;Lügner. Geh.;2;K12_S03_L06
+K12_S03_Q1;mira;Neutral;rechts;Soll ich dir eine Liste mitgeben?;6;K12_S03_Q1
+K12_S03_C1_A;held;Entschlossen;links;Immer. Deine Listen haben mich gerettet.;6;K12_S03_C1_A
+K12_S03_C1_B;held;Zornig;links;Nur eine kurze.;3;K12_S03_C1_B
+K12_S03_Q2;mira;Neutral;rechts;Versprichst du, zu schreiben?;4;K12_S03_Q2
+K12_S03_C2_A;held;Entschlossen;links;Jede Woche, auf Ehre.;4;K12_S03_C2_A
+K12_S03_C2_B;held;Zornig;links;Wenn ich Zeit habe.;4;K12_S03_C2_B
+K12_J;held;Entschlossen;;Der Orden der Glut schuf Vareth. Er lebt im Süden. Mira schickt mich mit einem Schiff und einer Liste.;19;
+K13_S01E_L01;held;Neutral;nah;Sonnentor. Eine Oase so groß wie eine Stadt – oder eine Stadt, die sich als Oase verkleidet.;17;K13_S01E_L01
+K13_S01E_L02;nadira;Amuesiert;rechts;Du schon wieder! Der Held aus dem Dünenmeer. Ich dachte, Helden bleiben, wo die Lieder sind.;16;K13_S01E_L02
+K13_S01E_L03;held;Amuesiert;links;Nadira. Die Lieder sind mir gefolgt.;6;K13_S01E_L03
+K13_S01E_L04;nadira;Besorgt;rechts;Dann hoffentlich auch dein Schwert. Der Orden der Glut brennt Karawanen nieder. Meine eingeschlossen.;14;K13_S01E_L04
+K13_S01E_Q1;nadira;Neutral;rechts;Erinnerst du dich an meine Karawane im Dünenmeer?;8;K13_S01E_Q1
+K13_S01E_C1_A;held;Entschlossen;links;Wie könnte ich sie vergessen?;5;K13_S01E_C1_A
+K13_S01E_C1_B;held;Zornig;links;Ich erinnere mich an die Räuber.;6;K13_S01E_C1_B
+K13_S02_L01;nadira;Entschlossen;rechts;Am Basar hängt die Kopfgeldtafel. Jeder Name dort hat eine Karawane auf dem Gewissen.;14;K13_S02_L01
+K13_S02_L02;nadira;Neutral;rechts;Nimm einen Auftrag an. Die Spur führt dich hin. Die Gesuchten sind … unberechenbar.;14;K13_S02_L02
+K13_S02_L03;held;Neutral;links;Unberechenbar?;1;K13_S02_L03
+K13_S02_L04;nadira;Besorgt;rechts;Der Orden gibt ihnen Glut ins Blut. Mal heilen sie sich, mal spiegeln sie sich. Lies die Zeichen.;18;K13_S02_L04
+K13_S02_Q1;nadira;Neutral;rechts;Jagst du für Gold oder für Gerechtigkeit?;7;K13_S02_Q1
+K13_S02_C1_A;held;Entschlossen;links;Für die Karawanen.;3;K13_S02_C1_A
+K13_S02_C1_B;held;Zornig;links;Für das Gold – Gerechtigkeit zahlt keine Sättel.;8;K13_S02_C1_B
+K13_S03E_L01;nadira;Amuesiert;rechts;Ein Gesuchter weniger. Die Händler werden dich lieben. Die Kultisten weniger.;11;K13_S03E_L01
+K13_S03E_L02;nadira;Entschlossen;rechts;Komm in die Große Leere. Mein Stamm hat etwas, das du brauchst, wenn du den Orden jagen willst.;18;K13_S03E_L02
+K13_S03E_Q1;nadira;Neutral;rechts;Soll ich den Händlern sagen, wer sie gerettet hat?;9;K13_S03E_Q1
+K13_S03E_C1_A;held;Entschlossen;links;Sag ihnen, es war Sonnentor selbst.;6;K13_S03E_C1_A
+K13_S03E_C1_B;held;Zornig;links;Sag ihnen meinen Namen.;4;K13_S03E_C1_B
+K13_J;held;Entschlossen;;Sonnentor. Nadira ist wieder da, der Orden brennt Karawanen nieder, und die Kopfgeldtafel kennt seine Namen.;16;
+K14_S01_L01;nadira;Neutral;rechts;Dünenläufer. Schneller als jeder Raptor, und sie springen durch den Sand wie Gedanken.;13;K14_S01_L01
+K14_S01_L02;nadira;Amuesiert;rechts;Sie mögen niemanden. Das macht sie ehrlich.;7;K14_S01_L02
+K14_S01_L03;held;Neutral;links;Wie zähmt man so etwas?;5;K14_S01_L03
+K14_S01_L04;nadira;Entschlossen;rechts;Man zähmt sie nicht. Man läuft mit ihnen, bis sie entscheiden, dass du schnell genug bist.;16;K14_S01_L04
+K14_S01_Q1;nadira;Neutral;rechts;Hast du Angst vor den Läufern?;6;K14_S01_Q1
+K14_S01_C1_A;held;Entschlossen;links;Respekt, keine Angst.;3;K14_S01_C1_A
+K14_S01_C1_B;held;Zornig;links;Sie sollten Angst vor mir haben.;6;K14_S01_C1_B
+K14_S01_Q2;nadira;Neutral;rechts;Läufst du mit, auch wenn du fällst?;7;K14_S01_Q2
+K14_S01_C2_A;held;Entschlossen;links;Ich stehe jedes Mal wieder auf.;6;K14_S01_C2_A
+K14_S01_C2_B;held;Zornig;links;Ich falle nicht.;3;K14_S01_C2_B
+K14_S02E_L01;nadira;Amuesiert;rechts;Er hat dich gewählt. Schau dir seine Augen an – Sand und Stolz.;13;K14_S02E_L01
+K14_S02E_L02;nadira;Neutral;rechts;Leertaste: ein Blinkschritt. Und wo der Sand golden flimmert, liegt ein Portal. Nur er findet hindurch.;16;K14_S02E_L02
+K14_S02E_L03;held;Besorgt;links;Was ist das am Horizont?;5;K14_S02E_L03
+K14_S02E_L04;nadira;Besorgt;rechts;Ein Sandsturm. Reite. Jetzt!;4;K14_S02E_L04
+K14_S02E_Q1;nadira;Neutral;rechts;Wie willst du ihn nennen?;5;K14_S02E_Q1
+K14_S02E_C1_A;held;Entschlossen;links;Sandatem.;1;K14_S02E_C1_A
+K14_S02E_C1_B;held;Zornig;links;Blitz.;1;K14_S02E_C1_B
+K14_S03E_L01;nadira;Neutral;nah;Wir leben. Der Sturm frisst Spuren – auch die des Ordens. Er zog Richtung Salzsee.;15;K14_S03E_L01
+K14_S03E_L02;nadira;Neutral;nah;Dort wohnt ein Priester, der mehr über den Orden weiß, als ihm guttut.;13;K14_S03E_L02
+K14_J;held;Entschlossen;;Ein Dünenläufer hat mich gewählt. Wir sind gemeinsam vor einem Sandsturm davongelaufen.;12;
+K15_S01_L01;ilyas;Neutral;rechts;Ein Fremder mit Sand in den Stiefeln und Fragen im Blick. Ich bin Ilyas, Priester der Sonne.;17;K15_S01_L01
+K15_S01_L02;ilyas;Besorgt;rechts;Ich diente dem Orden, bevor ich verstand, wem er dient. Ihr Archiv liegt hier – hinter Luftspiegelungen.;17;K15_S01_L02
+K15_S01_L03;held;Neutral;links;Wie finde ich es?;4;K15_S01_L03
+K15_S01_L04;ilyas;Entschlossen;rechts;Die Spiegelungen zeigen den Weg nur aus dem richtigen Winkel. Stell dich an die Lichtsteine und schau.;17;K15_S01_L04
+K15_S01_Q1;ilyas;Neutral;rechts;Vertraust du einem Priester, der seinem Orden den Rücken kehrte?;10;K15_S01_Q1
+K15_S01_C1_A;held;Entschlossen;links;Jeder verdient eine zweite Chance.;5;K15_S01_C1_A
+K15_S01_C1_B;held;Zornig;links;Ich behalte dich im Auge.;5;K15_S01_C1_B
+K15_S02E_L01;ilyas;Neutral;nah;Da. Eine Kuppel, die eben noch nicht da war. Die Spiegelung lügt nicht – sie verrät nur ungern.;18;K15_S02E_L01
+K15_S03_L01;ilyas;Besorgt;rechts;Das Archiv. Konstrukte bewachen es noch immer. Sie erkennen keine Abtrünnigen.;11;K15_S03_L01
+K15_S03_L02;held;Entschlossen;links;Dann erkennen sie gleich gar nichts mehr.;7;K15_S03_L02
+K15_S03_Q1;ilyas;Neutral;rechts;Sollen wir die Konstrukte verschonen, wenn sie still bleiben?;9;K15_S03_Q1
+K15_S03_C1_A;held;Entschlossen;links;Ja, wenn sie uns lassen.;5;K15_S03_C1_A
+K15_S03_C1_B;held;Zornig;links;Nein, sie sind Werkzeuge des Ordens.;6;K15_S03_C1_B
+K15_S03E_L01;ilyas;Besorgt;rechts;Hier steht es. Zarath, Hohepriester des Ordens, hat sich zum Flammenkönig gekrönt.;12;K15_S03E_L01
+K15_S03E_L02;ilyas;Besorgt;rechts;Er will Vareths Macht aus dem Siegel ziehen und selbst tragen. Der Glutkessel ist sein Tempel.;16;K15_S03E_L02
+K15_S03E_L03;held;Zornig;links;Dann gehe ich dorthin.;4;K15_S03E_L03
+K15_S03E_L04;ilyas;Entschlossen;rechts;Wir gehen. Ich habe ihm lange genug gedient. Lass mich ihm einmal widersprechen.;13;K15_S03E_L04
+K15_S03E_Q1;ilyas;Neutral;rechts;Bereust du, mitgekommen zu sein?;5;K15_S03E_Q1
+K15_S03E_C1_A;held;Entschlossen;links;Nie. Du hast mich hergebracht.;5;K15_S03E_C1_A
+K15_S03E_C1_B;held;Zornig;links;Frag mich nach Zarath.;4;K15_S03E_C1_B
+K15_J;held;Entschlossen;;Ilyas führte mich durch Luftspiegelungen ins Archiv: Zarath krönte sich zum Flammenkönig.;12;
+K16_S01_L01;nadira;Besorgt;rechts;Der Kult belagert den Flammentempel. Ganze Stämme haben sich ihm angeschlossen – aus Angst.;14;K16_S01_L01
+K16_S01_L02;nadira;Entschlossen;rechts;Wenn wir die Belagerung brechen, sehen sie, dass man Nein sagen kann.;12;K16_S01_L02
+K16_S01_L03;held;Entschlossen;links;Dann brechen wir sie.;4;K16_S01_L03
+K16_S01_Q1;nadira;Neutral;rechts;Was sagst du den Stämmen, die dem Kult folgen?;9;K16_S01_Q1
+K16_S01_C1_A;held;Entschlossen;links;Dass Angst kein Herr ist.;5;K16_S01_C1_A
+K16_S01_C1_B;held;Zornig;links;Dass sie wählen müssen.;4;K16_S01_C1_B
+K16_S01_Q2;nadira;Neutral;rechts;Kämpfst du an der Front oder an den Flanken?;9;K16_S01_Q2
+K16_S01_C2_A;held;Entschlossen;links;Wo man mich braucht.;4;K16_S01_C2_A
+K16_S01_C2_B;held;Zornig;links;Vorne. Immer.;2;K16_S01_C2_B
+K16_S02E_L01;ilyas;Neutral;nah;Die Tore stehen. Die Stämme jubeln. Und tief im Tempel … lacht jemand.;13;K16_S02E_L01
+K16_S03_L01;zarath;Amuesiert;rechts;Der kleine Wächter, der meinen Vorgänger in einen Stein gesperrt hat. Willkommen in meinem Haus.;15;K16_S03_L01
+K16_S03_L02;held;Zornig;links;Zarath. Der Orden ist am Ende.;6;K16_S03_L02
+K16_S03_L03;zarath;Neutral;rechts;Der Orden war nie mehr als eine Schmiede. Vareth war das Eisen. Ich bin die Flamme.;16;K16_S03_L03
+K16_S03_L04;zarath;Zornig;rechts;Und Flammen fragen nicht, ob sie brennen dürfen.;8;K16_S03_L04
+K16_S03_L05;ilyas;Besorgt;links;Er ist zu stark hier! Halt durch, bis der Tempel einstürzt!;11;K16_S03_L05
+K16_S03E_L01;ilyas;Besorgt;rechts;Er ist geflohen – nach Zarathis, der Verlorenen Stadt. Hinter der Knochenmauer.;12;K16_S03E_L01
+K16_S03E_L02;held;Entschlossen;links;Dann bauen wir eine Leiter aus Knochen.;7;K16_S03E_L02
+K16_S03E_Q1;ilyas;Neutral;rechts;Hättest du ihn angreifen sollen?;5;K16_S03E_Q1
+K16_S03E_C1_A;held;Entschlossen;links;Nein. Wir leben, das zählt.;5;K16_S03E_C1_A
+K16_S03E_C1_B;held;Zornig;links;Ja. Beim nächsten Mal tue ich es.;7;K16_S03E_C1_B
+K16_J;held;Entschlossen;;Wir brachen die Belagerung des Flammentempels. Zarath floh nach Zarathis.;10;
+K17_S01_L01;nadira;Entschlossen;rechts;Die Mauer ist hoch, aber Mauern brechen. Mein Stamm reitet direkt hindurch. Ein Sturm aus Hufen.;16;K17_S01_L01
+K17_S01_L02;ilyas;Neutral;links;Oder wir gehen durch das Tor der Priester. Ich kenne das Losungswort – noch.;14;K17_S01_L02
+K17_S01_L03;held;Neutral;links;Sturm oder List.;3;K17_S01_L03
+K17_S01_C1_A;held;Entschlossen;links;Wir stürmen. Zarath soll uns kommen hören.;7;K17_S01_C1_A
+K17_S01_C1_B;held;Neutral;links;Wir gehen durch das Tor. Leise ist schneller.;8;K17_S01_C1_B
+K17_S01_R1;nadira;Amuesiert;rechts;Dann sattle deinen Läufer!;4;K17_S01_R1
+K17_S01_R2;ilyas;Neutral;links;Dann zieh dir eine Kutte über.;6;K17_S01_R2
+K17_S02A_L01;nadira;Zornig;rechts;Für jede Karawane, die sie verbrannt haben – REITET!;9;K17_S02A_L01
+K17_S02A_L02;held;Entschlossen;links;Die Mauer bricht!;3;K17_S02A_L02
+K17_S02A_Q1;nadira;Neutral;rechts;Reitest du an meiner Seite?;5;K17_S02A_Q1
+K17_S02A_C1_A;held;Entschlossen;links;Bis zur Mauer und weiter.;5;K17_S02A_C1_A
+K17_S02A_C1_B;held;Zornig;links;Vor dir.;2;K17_S02A_C1_B
+K17_S02B_L01;ilyas;Neutral;rechts;„Asche zu Asche, Glut zur Krone.“ Das Tor öffnet sich. Und jetzt: ganz ruhig.;14;K17_S02B_L01
+K17_S02B_L02;held;Besorgt;links;Die Wachen sehen uns an.;5;K17_S02B_L02
+K17_S02B_L03;ilyas;Besorgt;rechts;Lächle. Priester lächeln immer, wenn sie lügen.;7;K17_S02B_L03
+K17_S02B_Q1;ilyas;Neutral;rechts;Und wenn sie die Losung geändert haben?;7;K17_S02B_Q1
+K17_S02B_C1_A;held;Entschlossen;links;Dann improvisieren wir.;3;K17_S02B_C1_A
+K17_S02B_C1_B;held;Zornig;links;Dann schlagen wir uns durch.;5;K17_S02B_C1_B
+K17_S03E_L01;held;Neutral;nah;Zarathis. Von oben sieht sie aus wie ein Feuer, das jemand vergessen hat zu löschen.;15;K17_S03E_L01
+K17_J;held;Entschlossen;;Die Knochenmauer ist gefallen – durch Sturm oder List. Vor uns liegt die Verlorene Stadt.;15;
+K18_S01_L01;nadira;Entschlossen;rechts;Vier Viertel, vier Lager des Kults. Wir nehmen sie eins nach dem anderen.;13;K18_S01_L01
+K18_S01_L02;held;Entschlossen;links;Und dann den Palast.;4;K18_S01_L02
+K18_S01_Q1;nadira;Neutral;rechts;Welches Viertel zuerst?;3;K18_S01_Q1
+K18_S01_C1_A;held;Entschlossen;links;Das Händlerviertel – dort leben noch Menschen.;7;K18_S01_C1_A
+K18_S01_C1_B;held;Zornig;links;Das Thronviertel – der Kopf zuerst.;6;K18_S01_C1_B
+K18_S01_Q2;nadira;Neutral;rechts;Und wenn Zarath verhandeln will?;5;K18_S01_Q2
+K18_S01_C2_A;held;Entschlossen;links;Hören wir zu – und handeln dann.;7;K18_S01_C2_A
+K18_S01_C2_B;held;Zornig;links;Er hatte seine Chance.;4;K18_S01_C2_B
+K18_S02_L01;ilyas;Neutral;rechts;Das Archiv des Ordens. Hier wurde Vareth erdacht. Siehst du die Liste der Gefäße? Zarath stand nach ihm.;18;K18_S02_L01
+K18_S02_L02;ilyas;Besorgt;rechts;Er war Vareths Nachfolger, lange bevor er König war.;9;K18_S02_L02
+K18_S02_L03;held;Besorgt;links;Der Boden bebt – das Archiv stürzt ein!;8;K18_S02_L03
+K18_S02_L04;ilyas;Entschlossen;rechts;Lauf! Ich halte die Decke!;5;K18_S02_L04
+K18_S02_L05;ilyas;Neutral;rechts;Die Priester kennen mich noch – sie halten die Decke für uns!;12;K18_S02_L05
+K18_S02E_L01;nadira;Neutral;rechts;Ilyas ist geblieben. Unter den Steinen. Er hat gelächelt, als die Decke fiel.;13;K18_S02E_L01
+K18_S02E_L02;ilyas;Neutral;rechts;Ich lebe. Mit Staub in der Lunge und einem schlechten Gewissen weniger.;12;K18_S02E_L02
+K18_S02E_L03;held;Entschlossen;links;Zarath sitzt auf dem Thron. Das endet heute.;8;K18_S02E_L03
+K18_S03_L01;nadira;Neutral;rechts;Wir setzen einen Stein am Archiv. Für Ilyas – und für alle, die unter den Mauern liegen.;17;K18_S03_L01
+K18_S03_L02;ilyas;Neutral;rechts;Wir setzen einen Stein für die Gefallenen. Mein Name steht nicht darauf. Noch nicht.;14;K18_S03_L02
+K18_S03_L03;nadira;Entschlossen;rechts;Danach der Palast. Zarath wartet nicht ewig, und ich auch nicht.;11;K18_S03_L03
+K18_S03_Q1;nadira;Neutral;rechts;Was schreiben wir auf den Gedenkstein?;6;K18_S03_Q1
+K18_S03_C1_A;held;Entschlossen;links;Sie standen, als es zählte.;5;K18_S03_C1_A
+K18_S03_C1_B;held;Zornig;links;Sie haben ihren Preis bezahlt.;5;K18_S03_C1_B
+K18_J;held;Entschlossen;;Zarathis gehört uns. Im Archiv der Gefäße stand Zarath direkt nach Vareth.;12;
+K19_S01_L01;zarath;Neutral;rechts;Du hast meine Stadt eingenommen, meine Priester verjagt und meinen Orden beerdigt.;12;K19_S01_L01
+K19_S01_L02;zarath;Amuesiert;rechts;Was bleibt? Ein Thron, eine Flamme und ein Wächter, der zu müde ist.;13;K19_S01_L02
+K19_S01_Q1;zarath;Neutral;rechts;Kniest du vor der Flamme, Wächter?;6;K19_S01_Q1
+K19_S01_C1_A;held;Entschlossen;links;Ich knie vor niemandem – aber ich höre dich an.;10;K19_S01_C1_A
+K19_S01_C1_B;held;Zornig;links;Nur, um dich zu Fall zu bringen.;7;K19_S01_C1_B
+K19_S01_L03;held;Entschlossen;links;Ich bin nicht müde. Ich bin nur fertig mit dir.;10;K19_S01_L03
+K19_S01_L04;zarath;Zornig;rechts;Dann brenn!;2;K19_S01_L04
+K19_S01E_L01;held;Neutral;nah;Die Flamme ist aus. Der Thron ist nur noch Stein.;10;K19_S01E_L01
+K19_S02_L01;nadira;Amuesiert;rechts;Sonnentor feiert drei Tage. Die Händler nennen ihre Datteln nach dir. Sehr klebrig.;13;K19_S02_L01
+K19_S02_L02;nadira;Neutral;rechts;Bleib, wenn du willst. Die Wüste vergisst schnell, aber mein Stamm nicht.;12;K19_S02_L02
+K19_S02_L03;held;Neutral;links;Ein Brief aus Silbermund. Mira schreibt von einem Schiff aus dem Osten.;12;K19_S02_L03
+K19_S02_L04;nadira;Neutral;rechts;Jadeschiffe. Die Dracheninseln. Natürlich. Helden bleiben nie, wo es warm ist.;11;K19_S02_L04
+K19_S02_Q1;nadira;Neutral;rechts;Bleibst du in Sonnentor?;4;K19_S02_Q1
+K19_S02_C1_A;held;Entschlossen;links;Eine Weile – für die Datteln.;6;K19_S02_C1_A
+K19_S02_C1_B;held;Zornig;links;Nein. Der Osten ruft.;4;K19_S02_C1_B
+K19_S02_Q2;nadira;Neutral;rechts;Soll mein Stamm dir einen Namen geben?;7;K19_S02_Q2
+K19_S02_C2_A;held;Entschlossen;links;Ich wäre geehrt.;3;K19_S02_C2_A
+K19_S02_C2_B;held;Zornig;links;Ich habe schon einen.;4;K19_S02_C2_B
+K19_S03_L01;nadira;Neutral;rechts;Das Schiff legt bei Sonnenaufgang ab. Mein Stamm reitet dich bis zum Kai – das ist bei uns eine Ehre, keine Begleitung.;22;K19_S03_L01
+K19_S03_L02;ilyas;Neutral;links;Ich bleibe und baue das Archiv neu. Diesmal mit Fenstern.;10;K19_S03_L02
+K19_S03_L03;held;Neutral;links;Pass auf die Läufer auf.;5;K19_S03_L03
+K19_S03_L04;nadira;Amuesiert;rechts;Pass du auf dich auf. Im Osten gibt es keine Dünen, nur Wasser. Viel zu viel Wasser.;17;K19_S03_L04
+K19_J;held;Entschlossen;;Zarath ist besiegt, der Thron nur noch Stein. Sonnentor feiert, und aus dem Osten kommt ein Jadeschiff.;17;
+K20_S01E_L01;held;Neutral;nah;Jadehafen. Eine Stadt, die nach oben wächst, weil unten kein Platz mehr ist.;13;K20_S01E_L01
+K20_S01E_L02;linsao;Amuesiert;rechts;Du stehst im Weg. Und du starrst. Neu hier. Werkstattmeisterin Lin Sao – dein Kapitän hat dich angekündigt.;18;K20_S01E_L02
+K20_S01E_Q1;linsao;Neutral;rechts;Gefällt dir meine Stadt?;4;K20_S01E_Q1
+K20_S01E_C1_A;held;Entschlossen;links;Sie ist atemberaubend.;3;K20_S01E_C1_A
+K20_S01E_C1_B;held;Zornig;links;Sie ist sehr hoch.;4;K20_S01E_C1_B
+K20_S02_L01;linsao;Entschlossen;rechts;Jeder, der hier überleben will, braucht einen Jadegeist. Kleiner Helfer, großes Herz – aus Jade, natürlich.;16;K20_S02_L01
+K20_S02_L02;linsao;Neutral;rechts;Er holt dich zurück, wenn du fällst. Einmal alle zehn Minuten. Danach musst du selbst aufstehen.;16;K20_S02_L02
+K20_S02_L03;held;Amuesiert;links;Er schwebt um meinen Kopf.;5;K20_S02_L03
+K20_S02_L04;linsao;Amuesiert;rechts;Er mag dich. Er mag fast niemanden. Jetzt geh zur Kaiserin – sie wartet nicht gern.;16;K20_S02_L04
+K20_S02_Q1;linsao;Neutral;rechts;Was soll dein Jadegeist zuerst lernen?;6;K20_S02_Q1
+K20_S02_C1_A;held;Entschlossen;links;Zu helfen.;2;K20_S02_C1_A
+K20_S02_C1_B;held;Zornig;links;Zu kämpfen.;2;K20_S02_C1_B
+K20_S03_L01;yuen;Neutral;rechts;Ein Held aus dem Westen. Ihr bringt Ruhm mit und Ärger hinterher.;12;K20_S03_L01
+K20_S03_L02;yuen;Besorgt;rechts;Die Fischer berichten von Beben im Jade-Meer. Wenn ihr nützlich sein wollt, findet heraus, warum.;15;K20_S03_L02
+K20_S03_L03;held;Neutral;links;Und wenn ich es herausfinde?;5;K20_S03_L03
+K20_S03_L04;yuen;Neutral;rechts;Dann entscheide ich, ob ihr es weitererzählt.;7;K20_S03_L04
+K20_S03_Q1;yuen;Neutral;rechts;Wem dient ihr, Held?;4;K20_S03_Q1
+K20_S03_C1_A;held;Entschlossen;links;Den Menschen, die Hilfe brauchen.;5;K20_S03_C1_A
+K20_S03_C1_B;held;Zornig;links;Niemandem.;1;K20_S03_C1_B
+K20_J;held;Entschlossen;;Jadehafen wächst in den Himmel. Lin Sao gab mir einen Jadegeist, die Kaiserin ihr Misstrauen.;15;
+K21_S01_L01;linsao;Neutral;rechts;Das Jade-Meer. Erstarrt, aber nicht tot. Ruf dein Boot am Ufer – die Werft hat dir eins geliehen.;18;K21_S01_L01
+K21_S01_L02;linsao;Amuesiert;rechts;Und wirf eine Angel aus. Die Fischer reden mehr, wenn man ihnen Fisch bringt.;14;K21_S01_L02
+K21_S01_Q1;linsao;Neutral;rechts;Kannst du überhaupt angeln?;4;K21_S01_Q1
+K21_S01_C1_A;held;Entschlossen;links;Zeig es mir.;3;K21_S01_C1_A
+K21_S01_C1_B;held;Zornig;links;Wie schwer kann das sein?;5;K21_S01_C1_B
+K21_S01_Q2;linsao;Neutral;rechts;Soll ich das Boot rot oder grün anstreichen?;8;K21_S01_Q2
+K21_S01_C2_A;held;Entschlossen;links;Grün wie Jade.;3;K21_S01_C2_A
+K21_S01_C2_B;held;Zornig;links;Rot wie Glut.;3;K21_S01_C2_B
+K21_S02E_L01;linsao;Besorgt;nah;Die Fische fliehen alle in dieselbe Richtung. Weg vom Herzen des Meeres.;12;K21_S02E_L01
+K21_S03E_L01;linsao;Besorgt;rechts;Die Piraten haben Jade-Kerne aus der Mine gestohlen. Kerne, die angeblich Kraft aus der Tiefe ziehen.;16;K21_S03E_L01
+K21_S03E_L02;linsao;Besorgt;rechts;Aus der Tiefe … oder aus etwas, das dort gefangen ist. Frag im Kloster der Stille nach.;17;K21_S03E_L02
+K21_S03E_Q1;linsao;Neutral;rechts;Was machen wir mit gefangenen Piraten?;6;K21_S03E_Q1
+K21_S03E_C1_A;held;Entschlossen;links;Der Kaiserin übergeben.;3;K21_S03E_C1_A
+K21_S03E_C1_B;held;Zornig;links;Laufen lassen – mit Warnung.;5;K21_S03E_C1_B
+K21_J;held;Entschlossen;;Mit Boot und Angel im Jade-Meer: Die Fische fliehen vor etwas in der Tiefe.;14;
+K22_S01_L01;mei;Neutral;rechts;Die Glocken haben dich angekündigt. Ich bin Schwester Mei.;9;K22_S01_L01
+K22_S01_L02;mei;Besorgt;rechts;Es gibt einen alten Vertrag. Die Kaiser versprachen einem Drachen Schlaf – und nahmen seine Kraft.;16;K22_S01_L02
+K22_S01_L03;held;Besorgt;links;Ein gefangener Drache unter dem Meer.;6;K22_S01_L03
+K22_S01_L04;mei;Entschlossen;rechts;Folge den Geisterwegen. Dein Jadegeist macht sie sichtbar. Am Ende liegt der Vertrag.;13;K22_S01_L04
+K22_S01_Q1;mei;Neutral;rechts;Glaubst du an alte Verträge?;5;K22_S01_Q1
+K22_S01_C1_A;held;Entschlossen;links;Wenn beide Seiten zustimmten.;4;K22_S01_C1_A
+K22_S01_C1_B;held;Zornig;links;Verträge binden die Schwachen.;4;K22_S01_C1_B
+K22_S02E_L01;mei;Neutral;nah;Die Geister weichen. Sie erkennen den Jadegeist – oder das, was in ihm schläft.;14;K22_S02E_L01
+K22_S03_L01;mei;Besorgt;rechts;Das Kloster ist besetzt. Geisterwesen – unruhig, weil der Drache sich regt.;12;K22_S03_L01
+K22_S03_L02;held;Entschlossen;links;Dann beruhigen wir sie.;4;K22_S03_L02
+K22_S03_Q1;mei;Neutral;rechts;Sollen wir die Geister zur Ruhe singen?;7;K22_S03_Q1
+K22_S03_C1_A;held;Entschlossen;links;Ja. Sie sind nur unruhig.;5;K22_S03_C1_A
+K22_S03_C1_B;held;Zornig;links;Wir haben keine Zeit für Lieder.;6;K22_S03_C1_B
+K22_S03E_L01;mei;Neutral;rechts;Der Vertrag. Jedes Jahr ein Siegel aus Jade, damit der Drache weiterschläft. Die letzten fehlen.;15;K22_S03E_L01
+K22_S03E_L02;mei;Besorgt;rechts;Jemand hat aufgehört, sie zu erneuern. Oder angefangen, sie zu brechen.;11;K22_S03E_L02
+K22_S03E_Q1;mei;Neutral;rechts;Wem sagst du, was im Vertrag steht?;7;K22_S03E_Q1
+K22_S03E_C1_A;held;Entschlossen;links;Der Kaiserin – sie muss es wissen.;7;K22_S03E_C1_A
+K22_S03E_C1_B;held;Zornig;links;Niemandem, bis ich mehr weiß.;5;K22_S03E_C1_B
+K22_J;held;Entschlossen;;Schwester Mei zeigte mir den alten Vertrag: Ein Drache schläft, damit die Stadt leuchtet.;14;
+K23_S01_L01;yuen;Entschlossen;rechts;Der Vertrag ist Staatsgeheimnis. Ihr wisst zu viel. Also helft mir – oder geht.;14;K23_S01_L01
+K23_S01_L02;daro;Zornig;links;Sie belügt euch! Die Kaiserin presst den Drachen aus, damit Jadehafen glänzt. Wir Abtrünnigen wollen das beenden.;17;K23_S01_L02
+K23_S01_L03;held;Neutral;links;Kaiserin oder Hauptmann.;3;K23_S01_L03
+K23_S01_C1_A;held;Entschlossen;links;Ich helfe der Kaiserin. Ordnung zuerst.;6;K23_S01_C1_A
+K23_S01_C1_B;held;Entschlossen;links;Ich helfe Daro. Die Wahrheit zuerst.;6;K23_S01_C1_B
+K23_S01_R1;yuen;Neutral;rechts;Eine kluge Wahl. Selten, aber klug.;6;K23_S01_R1
+K23_S01_R2;daro;Entschlossen;links;Dann zeig ich dir, was sie versteckt.;7;K23_S01_R2
+K23_S02A_L01;yuen;Entschlossen;rechts;Daros Leute haben den Reisspeicher besetzt. Holt ihn zurück – ohne Tote, wenn möglich.;14;K23_S02A_L01
+K23_S02A_Q1;yuen;Neutral;rechts;Ohne Tote, wenn möglich – könnt ihr das?;8;K23_S02A_Q1
+K23_S02A_C1_A;held;Entschlossen;links;Ich werde es versuchen.;4;K23_S02A_C1_A
+K23_S02A_C1_B;held;Zornig;links;Sie haben es sich ausgesucht.;5;K23_S02A_C1_B
+K23_S02B_L01;daro;Zornig;rechts;Die kaiserliche Festung lagert gestohlene Jade-Kerne. Wir holen sie. Heute Nacht.;11;K23_S02B_L01
+K23_S03_L01;linsao;Besorgt;rechts;Ganz gleich, wem du geholfen hast – die Kerne zeigen alle dieselbe Spur. Zur Nebelküste.;15;K23_S03_L01
+K23_S03_L02;linsao;Besorgt;rechts;Und ein Name taucht immer wieder auf: Kael.;8;K23_S03_L02
+K23_S03_Q1;linsao;Neutral;rechts;War es die richtige Wahl?;5;K23_S03_Q1
+K23_S03_C1_A;held;Entschlossen;links;Ich hoffe es.;3;K23_S03_C1_A
+K23_S03_C1_B;held;Zornig;links;Es gibt keine richtigen Wahlen, nur getroffene.;7;K23_S03_C1_B
+K23_J;held;Entschlossen;;Kaiserin oder Hauptmann – ich habe gewählt. Die Spur der Kerne führt zur Nebelküste.;14;
+K24_S01_L01;kael;Amuesiert;rechts;Der Mann, der den Herold begraben hat. Ich war sein Schüler. Und ich habe besser zugehört.;16;K24_S01_L01
+K24_S01_L02;kael;Neutral;rechts;Vareth war ein Gefäß, Zarath eine Flamme. Ich will mehr. Einen Drachen.;12;K24_S01_L02
+K24_S01_L03;held;Zornig;links;Du brichst die Siegel.;4;K24_S01_L03
+K24_S01_L04;kael;Amuesiert;rechts;Ich öffne eine Tür. Die Schlange im Nebel wird dich beschäftigen.;11;K24_S01_L04
+K24_S01_Q1;kael;Neutral;rechts;Schließt du dich mir an? Zusammen könnten wir einen Drachen reiten.;11;K24_S01_Q1
+K24_S01_C1_A;held;Entschlossen;links;Niemand sollte einen Drachen reiten.;5;K24_S01_C1_A
+K24_S01_C1_B;held;Zornig;links;Nur, um dich herunterzuwerfen.;4;K24_S01_C1_B
+K24_S01_Q2;kael;Neutral;rechts;Was weißt du überhaupt vom Herold?;6;K24_S01_Q2
+K24_S01_C2_A;held;Entschlossen;links;Genug, um um ihn zu trauern.;6;K24_S01_C2_A
+K24_S01_C2_B;held;Zornig;links;Genug, um ihn begraben zu haben.;6;K24_S01_C2_B
+K24_S02E_L01;held;Neutral;nah;Die Nebelschlange flieht. Kael ist fort – aber seine Kerne liegen noch hier.;13;K24_S02E_L01
+K24_S03E_L01;linsao;Besorgt;rechts;Sabotierte Kerne. Jeder davon schwächt das Siegel des Drachen. Kael bringt die letzten in die Kernkammer – unter Jadehafen.;19;K24_S03E_L01
+K24_S03E_L02;held;Entschlossen;links;Dann halten wir ihn dort auf.;6;K24_S03E_L02
+K24_S03E_Q1;linsao;Neutral;rechts;Zerstören wir die sabotierten Kerne?;5;K24_S03E_Q1
+K24_S03E_C1_A;held;Entschlossen;links;Nein, wir reparieren sie.;4;K24_S03E_C1_A
+K24_S03E_C1_B;held;Zornig;links;Ja, sofort.;2;K24_S03E_C1_B
+K24_J;held;Entschlossen;;Kael, Schüler des Herolds, will einen Drachen. Die Nebelschlange ist besiegt, seine Kerne gesichert.;14;
+K25_S01_L01;linsao;Besorgt;rechts;Die Kernkammer. Das Herz der Stadt. Wenn Kael die Kerne einsetzt, erwacht der Drache – und ist frei, oder wütend, oder beides.;22;K25_S01_L01
+K25_S01_L02;linsao;Entschlossen;rechts;Die Jade-Kanonen! Lade sie, ich halte die Leitungen!;8;K25_S01_L02
+K25_S01_Q1;linsao;Neutral;rechts;Vertraust du meinen Leitungen?;4;K25_S01_Q1
+K25_S01_C1_A;held;Entschlossen;links;Mit meinem Leben.;3;K25_S01_C1_A
+K25_S01_C1_B;held;Zornig;links;Habe ich eine Wahl?;4;K25_S01_C1_B
+K25_S01_Q2;linsao;Neutral;rechts;Fürchtest du den Drachen?;4;K25_S01_Q2
+K25_S01_C2_A;held;Entschlossen;links;Ich fürchte, was man ihm angetan hat.;7;K25_S01_C2_A
+K25_S01_C2_B;held;Zornig;links;Er sollte mich fürchten.;4;K25_S01_C2_B
+K25_S02_L01;yuen;Besorgt;rechts;Kael ist geflohen. Die Kerne liegen vor euch. Ihr könnt das Siegel erneuern – oder den Drachen gehen lassen.;19;K25_S02_L01
+K25_S02_L02;mei;Neutral;links;Er hat genug geschlafen. Ein Vertrag, der nur eine Seite bindet, ist keiner.;13;K25_S02_L02
+K25_S02_L03;linsao;Besorgt;rechts;Ohne seine Kraft wird die Stadt dunkel. Für Jahre.;9;K25_S02_L03
+K25_S02_L04;held;Neutral;links;Die Entscheidung liegt bei mir.;5;K25_S02_L04
+K25_S02_C1_A;held;Entschlossen;links;Ich befreie den Drachen.;4;K25_S02_C1_A
+K25_S02_C1_B;held;Entschlossen;links;Ich sichere die Stadt und erneuere das Siegel.;8;K25_S02_C1_B
+K25_S02_R1;mei;Neutral;links;Dann wird er dir zuhören, wenn er erwacht.;8;K25_S02_R1
+K25_S02_R2;yuen;Neutral;rechts;Dann bleibt Jadehafen hell. Und ihr bleibt mein Gast.;9;K25_S02_R2
+K25_S03_L01;linsao;Besorgt;rechts;Die Lichter flackern schon. Er spürt, dass sich etwas verändert hat.;11;K25_S03_L01
+K25_S03_L02;linsao;Entschlossen;rechts;Wenn er frei ist, will ich ihm in die Augen sehen. Nicht durch eine Leitung.;15;K25_S03_L02
+K25_S03_L03;linsao;Neutral;rechts;Das Siegel hält – vorerst. Aber er träumt laut. Ich höre ihn in jedem Kern.;15;K25_S03_L03
+K25_S03_L04;held;Entschlossen;links;Dann sind wir da, wenn er erwacht.;7;K25_S03_L04
+K25_S03_Q1;linsao;Neutral;rechts;Und wenn du dich irrst?;5;K25_S03_Q1
+K25_S03_C1_A;held;Entschlossen;links;Dann trage ich die Folgen mit euch.;7;K25_S03_C1_A
+K25_S03_C1_B;held;Zornig;links;Ich irre mich nicht.;4;K25_S03_C1_B
+K25_J;held;Entschlossen;;In der Kernkammer habe ich über den Drachen entschieden.;9;
+K26_S01_L01;linsao;Entschlossen;rechts;Kael ist im Herz der Flut. Er ruft den Drachen mit den letzten Kernen. Wir brauchen die Plattformen und die Flotte.;21;K26_S01_L01
+K26_S01_L02;held;Entschlossen;links;Dann holen wir ihn da raus.;6;K26_S01_L02
+K26_S01_Q1;linsao;Neutral;rechts;Wer führt die Flotte?;4;K26_S01_Q1
+K26_S01_C1_A;held;Entschlossen;links;Du – du kennst die Stadt.;6;K26_S01_C1_A
+K26_S01_C1_B;held;Zornig;links;Ich.;1;K26_S01_C1_B
+K26_S02_L01;kael;Zornig;rechts;Zu spät! Hörst du ihn? Das Meer atmet!;8;K26_S02_L01
+K26_S02_L02;held;Besorgt;links;Der Drache …;3;K26_S02_L02
+K26_S02_L03;kael;Amuesiert;rechts;Er gehört mir!;3;K26_S02_L03
+K26_S02_L04;held;Entschlossen;links;Er gehört niemandem. Am wenigsten dir.;6;K26_S02_L04
+K26_S02_L05;held;Entschlossen;links;Dann binden wir ihn – zum letzten Mal, und ohne dich.;11;K26_S02_L05
+K26_S02E_L01;held;Neutral;nah;Der Drache steigt aus dem Meer. Jade fällt von seinen Schuppen wie Regen.;13;K26_S02E_L01
+K26_S02E_L02;held;Neutral;nah;Das Siegel schließt sich. Der Drache sinkt zurück in den Schlaf, und Kael mit ihm in die Tiefe.;18;K26_S02E_L02
+K26_S02E_L03;held;Neutral;nah;Es ist vorbei. Vareth, Zarath, Kael. Drei Feuer, gelöscht.;9;K26_S02E_L03
+K26_S03_L01;linsao;Amuesiert;rechts;Die Lichter flackern. Wir werden Kerzen benutzen. Wie Barbaren.;9;K26_S03_L01
+K26_S03_L02;linsao;Amuesiert;rechts;Die Lichter brennen heller als je zuvor. Die Kaiserin hat sogar gelächelt. Fast.;13;K26_S03_L02
+K26_S03_L03;linsao;Neutral;rechts;Ein Brief aus Silbermund. Er riecht nach Tinte und Heimweh.;10;K26_S03_L03
+K26_S03_L04;held;Amuesiert;links;Mira. Sie hat eine neue Liste.;6;K26_S03_L04
+K26_S03_L05;linsao;Amuesiert;rechts;Natürlich hat sie das. Bleib eine Weile. Der Jadegeist mag dich zu sehr, um dich gehen zu lassen.;18;K26_S03_L05
+K26_S03_Q1;linsao;Neutral;rechts;Kommst du wieder?;3;K26_S03_Q1
+K26_S03_C1_A;held;Entschlossen;links;Immer.;1;K26_S03_C1_A
+K26_S03_C1_B;held;Zornig;links;Wenn die Welt mich lässt.;5;K26_S03_C1_B
+K26_S03_Q2;linsao;Neutral;rechts;Was schreibst du Mira?;4;K26_S03_Q2
+K26_S03_C2_A;held;Entschlossen;links;Dass ich heimkomme.;3;K26_S03_C2_A
+K26_S03_C2_B;held;Zornig;links;Dass die Liste noch nicht fertig ist.;7;K26_S03_C2_B
+K26_J;held;Entschlossen;;Der Meeresdrache erwachte. Kael ist fort. Mira hat eine neue Liste – mit einer leeren Spalte.;16;
 SP_sonnfurt_1_L01;sp_sonnfurt_1;Besorgt;;Die Felder um Gerstenbrunn brennen nicht mehr, aber Wilma braucht jede Hand. Plünderer schleichen noch an den Zäunen.;18;SP_sonnfurt_1_L01
 SP_sonnfurt_1_L02;sp_sonnfurt_1;Amuesiert;;Im Weiler führt Mira Buch über alles. Sag ihr, ich habe die Brunnen gezählt. Zweimal.;15;SP_sonnfurt_1_L02
 SP_sonnfurt_2_L01;sp_sonnfurt_2;Entschlossen;;Dornwacht hält die Straße, solange die Palisade steht. Kerla repariert schneller, als die Aschkrallen anzünden.;15;SP_sonnfurt_2_L01
@@ -525,3 +861,123 @@ FP_fenn_L01;fenn;Neutral;;Die Lichtung ist leer, aber die Laternen brennen. Dank
 FP_nadira_L01;nadira;Amuesiert;;Silbermund hat zu wenig Sand. Ich bringe welchen mit, nächstes Mal.;11;FP_nadira_L01
 FP_sela_L01;sela;Neutral;;Die Greifin fragt nach dir. Auf ihre Art. Laut.;9;FP_sela_L01
 FP_gorran_L01;gorran;Amuesiert;;Der Rat tagt wieder. Ich führe Protokoll. Und das Buffet.;10;FP_gorran_L01
+SP_scout_weite_von_ahrn_1_L01;scout;Neutral;nah;Willkommen bei Lager der Ahrn. Ich habe dir die Gegend auf der Karte markiert.;14;SP_scout_weite_von_ahrn_1_L01
+SP_scout_weite_von_ahrn_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Steppenräuber seltener.;10;SP_scout_weite_von_ahrn_1_L02
+SP_scout_weite_von_ahrn_2_L01;scout;Neutral;nah;Willkommen bei Hirtenfurt. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_weite_von_ahrn_2_L01
+SP_scout_weite_von_ahrn_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Windsäulen. Merk dir die Wegmarken.;12;SP_scout_weite_von_ahrn_2_L02
+SP_scout_weite_von_ahrn_3_L01;scout;Neutral;nah;Willkommen bei Windsäulen. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_weite_von_ahrn_3_L01
+SP_scout_weite_von_ahrn_3_L02;scout;Neutral;nah;Die Steppenräuber schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_weite_von_ahrn_3_L02
+SP_scout_nebelkamm_1_L01;scout;Neutral;nah;Willkommen bei Steinkreis von Ulm. Ich habe dir die Gegend auf der Karte markiert.;14;SP_scout_nebelkamm_1_L01
+SP_scout_nebelkamm_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Steingeister seltener.;10;SP_scout_nebelkamm_1_L02
+SP_scout_nebelkamm_2_L01;scout;Neutral;nah;Willkommen bei Torfdorf. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_nebelkamm_2_L01
+SP_scout_nebelkamm_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Grauer Kamm. Merk dir die Wegmarken.;13;SP_scout_nebelkamm_2_L02
+SP_scout_nebelkamm_3_L01;scout;Neutral;nah;Willkommen bei Grauer Kamm. Ich habe dir die Gegend auf der Karte markiert.;13;SP_scout_nebelkamm_3_L01
+SP_scout_nebelkamm_3_L02;scout;Neutral;nah;Die Steingeister schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_nebelkamm_3_L02
+SP_scout_sturmbucht_1_L01;scout;Neutral;nah;Willkommen bei Hafen Weißwasser. Ich habe dir die Gegend auf der Karte markiert.;13;SP_scout_sturmbucht_1_L01
+SP_scout_sturmbucht_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Piraten seltener.;10;SP_scout_sturmbucht_1_L02
+SP_scout_sturmbucht_2_L01;scout;Neutral;nah;Willkommen bei Wrackbucht. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_sturmbucht_2_L01
+SP_scout_sturmbucht_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Möwenklippe. Merk dir die Wegmarken.;12;SP_scout_sturmbucht_2_L02
+SP_scout_sturmbucht_3_L01;scout;Neutral;nah;Willkommen bei Möwenklippe. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_sturmbucht_3_L01
+SP_scout_sturmbucht_3_L02;scout;Neutral;nah;Die Piraten schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_sturmbucht_3_L02
+SP_scout_aschenkessel_1_L01;scout;Neutral;nah;Willkommen bei Obsidianwerk. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_aschenkessel_1_L01
+SP_scout_aschenkessel_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Magmabrut seltener.;10;SP_scout_aschenkessel_1_L02
+SP_scout_aschenkessel_2_L01;scout;Neutral;nah;Willkommen bei Schwefelsee. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_aschenkessel_2_L01
+SP_scout_aschenkessel_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Rauchschlot. Merk dir die Wegmarken.;12;SP_scout_aschenkessel_2_L02
+SP_scout_aschenkessel_3_L01;scout;Neutral;nah;Willkommen bei Rauchschlot. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_aschenkessel_3_L01
+SP_scout_aschenkessel_3_L02;scout;Neutral;nah;Die Magmabrut schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_aschenkessel_3_L02
+SP_scout_gruener_schlund_1_L01;scout;Neutral;nah;Willkommen bei Kronendorf. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_gruener_schlund_1_L01
+SP_scout_gruener_schlund_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Dschungelpirscher seltener.;10;SP_scout_gruener_schlund_1_L02
+SP_scout_gruener_schlund_2_L01;scout;Neutral;nah;Willkommen bei Lianenbrücke. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_gruener_schlund_2_L01
+SP_scout_gruener_schlund_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Wurzeltempel. Merk dir die Wegmarken.;12;SP_scout_gruener_schlund_2_L02
+SP_scout_gruener_schlund_3_L01;scout;Neutral;nah;Willkommen bei Wurzeltempel. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_gruener_schlund_3_L01
+SP_scout_gruener_schlund_3_L02;scout;Neutral;nah;Die Dschungelpirscher schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_gruener_schlund_3_L02
+SP_scout_schilfmuendung_1_L01;scout;Neutral;nah;Willkommen bei Flößerhafen. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_schilfmuendung_1_L01
+SP_scout_schilfmuendung_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Mangrovenschrecken seltener.;10;SP_scout_schilfmuendung_1_L02
+SP_scout_schilfmuendung_2_L01;scout;Neutral;nah;Willkommen bei Mangrovengürtel. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_schilfmuendung_2_L01
+SP_scout_schilfmuendung_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Schilfinseln. Merk dir die Wegmarken.;12;SP_scout_schilfmuendung_2_L02
+SP_scout_schilfmuendung_3_L01;scout;Neutral;nah;Willkommen bei Schilfinseln. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_schilfmuendung_3_L01
+SP_scout_schilfmuendung_3_L02;scout;Neutral;nah;Die Mangrovenschrecken schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_schilfmuendung_3_L02
+SP_scout_weisse_stille_1_L01;scout;Neutral;nah;Willkommen bei Heiligtum der Urskai. Ich habe dir die Gegend auf der Karte markiert.;14;SP_scout_weisse_stille_1_L01
+SP_scout_weisse_stille_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Frostriesen seltener.;10;SP_scout_weisse_stille_1_L02
+SP_scout_weisse_stille_2_L01;scout;Neutral;nah;Willkommen bei Gletscherzunge. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_weisse_stille_2_L01
+SP_scout_weisse_stille_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Eishöhle. Merk dir die Wegmarken.;12;SP_scout_weisse_stille_2_L02
+SP_scout_weisse_stille_3_L01;scout;Neutral;nah;Willkommen bei Eishöhle. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_weisse_stille_3_L01
+SP_scout_weisse_stille_3_L02;scout;Neutral;nah;Die Frostriesen schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_weisse_stille_3_L02
+SP_scout_schaedelkueste_1_L01;scout;Neutral;nah;Willkommen bei Versunkener Tempel. Ich habe dir die Gegend auf der Karte markiert.;13;SP_scout_schaedelkueste_1_L01
+SP_scout_schaedelkueste_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Ertrunkenen seltener.;10;SP_scout_schaedelkueste_1_L02
+SP_scout_schaedelkueste_2_L01;scout;Neutral;nah;Willkommen bei Schädelhafen. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_schaedelkueste_2_L01
+SP_scout_schaedelkueste_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Knochenstrand. Merk dir die Wegmarken.;12;SP_scout_schaedelkueste_2_L02
+SP_scout_schaedelkueste_3_L01;scout;Neutral;nah;Willkommen bei Knochenstrand. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_schaedelkueste_3_L01
+SP_scout_schaedelkueste_3_L02;scout;Neutral;nah;Die Ertrunkenen schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_schaedelkueste_3_L02
+SP_scout_sonnentor_1_L01;scout;Neutral;nah;Willkommen bei Großer Basar. Ich habe dir die Gegend auf der Karte markiert.;13;SP_scout_sonnentor_1_L01
+SP_scout_sonnentor_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Sandgeister seltener.;10;SP_scout_sonnentor_1_L02
+SP_scout_sonnentor_2_L01;scout;Neutral;nah;Willkommen bei Karawanserei. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_sonnentor_2_L01
+SP_scout_sonnentor_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Rennbahn. Merk dir die Wegmarken.;12;SP_scout_sonnentor_2_L02
+SP_scout_sonnentor_3_L01;scout;Neutral;nah;Willkommen bei Rennbahn. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_sonnentor_3_L01
+SP_scout_sonnentor_3_L02;scout;Neutral;nah;Die Sandgeister schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_sonnentor_3_L02
+SP_scout_grosse_leere_1_L01;scout;Neutral;nah;Willkommen bei Riesenrippe. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_grosse_leere_1_L01
+SP_scout_grosse_leere_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Sandgeister seltener.;10;SP_scout_grosse_leere_1_L02
+SP_scout_grosse_leere_2_L01;scout;Neutral;nah;Willkommen bei Dünenlager. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_grosse_leere_2_L01
+SP_scout_grosse_leere_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Sturmauge. Merk dir die Wegmarken.;12;SP_scout_grosse_leere_2_L02
+SP_scout_grosse_leere_3_L01;scout;Neutral;nah;Willkommen bei Sturmauge. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_grosse_leere_3_L01
+SP_scout_grosse_leere_3_L02;scout;Neutral;nah;Die Sandgeister schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_grosse_leere_3_L02
+SP_scout_klingenschlucht_1_L01;scout;Neutral;nah;Willkommen bei Felsbrücke. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_klingenschlucht_1_L01
+SP_scout_klingenschlucht_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Kultisten seltener.;10;SP_scout_klingenschlucht_1_L02
+SP_scout_klingenschlucht_2_L01;scout;Neutral;nah;Willkommen bei Klingenkamm. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_klingenschlucht_2_L01
+SP_scout_klingenschlucht_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Hochplateau Ras. Merk dir die Wegmarken.;13;SP_scout_klingenschlucht_2_L02
+SP_scout_klingenschlucht_3_L01;scout;Neutral;nah;Willkommen bei Hochplateau Ras. Ich habe dir die Gegend auf der Karte markiert.;13;SP_scout_klingenschlucht_3_L01
+SP_scout_klingenschlucht_3_L02;scout;Neutral;nah;Die Kultisten schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_klingenschlucht_3_L02
+SP_scout_spiegel_der_sonne_1_L01;scout;Neutral;nah;Willkommen bei Salzspiegel. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_spiegel_der_sonne_1_L01
+SP_scout_spiegel_der_sonne_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Glaselementare seltener.;10;SP_scout_spiegel_der_sonne_1_L02
+SP_scout_spiegel_der_sonne_2_L01;scout;Neutral;nah;Willkommen bei Archiv des Ordens. Ich habe dir die Gegend auf der Karte markiert.;14;SP_scout_spiegel_der_sonne_2_L01
+SP_scout_spiegel_der_sonne_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Trugstadt. Merk dir die Wegmarken.;12;SP_scout_spiegel_der_sonne_2_L02
+SP_scout_spiegel_der_sonne_3_L01;scout;Neutral;nah;Willkommen bei Trugstadt. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_spiegel_der_sonne_3_L01
+SP_scout_spiegel_der_sonne_3_L02;scout;Neutral;nah;Die Glaselementare schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_spiegel_der_sonne_3_L02
+SP_scout_glutkessel_1_L01;scout;Neutral;nah;Willkommen bei Flammentempel. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_glutkessel_1_L01
+SP_scout_glutkessel_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Kultisten seltener.;10;SP_scout_glutkessel_1_L02
+SP_scout_glutkessel_2_L01;scout;Neutral;nah;Willkommen bei Lavaschlucht. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_glutkessel_2_L01
+SP_scout_glutkessel_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Kultbasar. Merk dir die Wegmarken.;12;SP_scout_glutkessel_2_L02
+SP_scout_glutkessel_3_L01;scout;Neutral;nah;Willkommen bei Kultbasar. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_glutkessel_3_L01
+SP_scout_glutkessel_3_L02;scout;Neutral;nah;Die Kultisten schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_glutkessel_3_L02
+SP_scout_zarathis_1_L01;scout;Neutral;nah;Willkommen bei Knochenmauer. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_zarathis_1_L01
+SP_scout_zarathis_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Priester des Flammenkönigs seltener.;12;SP_scout_zarathis_1_L02
+SP_scout_zarathis_2_L01;scout;Neutral;nah;Willkommen bei Thronviertel. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_zarathis_2_L01
+SP_scout_zarathis_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Händlerviertel. Merk dir die Wegmarken.;12;SP_scout_zarathis_2_L02
+SP_scout_zarathis_3_L01;scout;Neutral;nah;Willkommen bei Händlerviertel. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_zarathis_3_L01
+SP_scout_zarathis_3_L02;scout;Neutral;nah;Die Priester des Flammenkönigs schlagen nachts zu. Tagsüber kommst du sicherer durch.;12;SP_scout_zarathis_3_L02
+SP_scout_jadehafen_1_L01;scout;Neutral;nah;Willkommen bei Hafenebene. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_jadehafen_1_L01
+SP_scout_jadehafen_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Jade-Piraten seltener.;10;SP_scout_jadehafen_1_L02
+SP_scout_jadehafen_2_L01;scout;Neutral;nah;Willkommen bei Mittelstadt. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_jadehafen_2_L01
+SP_scout_jadehafen_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Oberstadt. Merk dir die Wegmarken.;12;SP_scout_jadehafen_2_L02
+SP_scout_jadehafen_3_L01;scout;Neutral;nah;Willkommen bei Oberstadt. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_jadehafen_3_L01
+SP_scout_jadehafen_3_L02;scout;Neutral;nah;Die Jade-Piraten schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_jadehafen_3_L02
+SP_scout_gruene_flut_1_L01;scout;Neutral;nah;Willkommen bei Jade-Mine. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_gruene_flut_1_L01
+SP_scout_gruene_flut_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Jade-Piraten seltener.;10;SP_scout_gruene_flut_1_L02
+SP_scout_gruene_flut_2_L01;scout;Neutral;nah;Willkommen bei Wrackfeld. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_gruene_flut_2_L01
+SP_scout_gruene_flut_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Kranichinsel. Merk dir die Wegmarken.;12;SP_scout_gruene_flut_2_L02
+SP_scout_gruene_flut_3_L01;scout;Neutral;nah;Willkommen bei Kranichinsel. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_gruene_flut_3_L01
+SP_scout_gruene_flut_3_L02;scout;Neutral;nah;Die Jade-Piraten schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_gruene_flut_3_L02
+SP_scout_fluesterhain_1_L01;scout;Neutral;nah;Willkommen bei Kloster der Stille. Ich habe dir die Gegend auf der Karte markiert.;14;SP_scout_fluesterhain_1_L01
+SP_scout_fluesterhain_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Geisterwesen seltener.;10;SP_scout_fluesterhain_1_L02
+SP_scout_fluesterhain_2_L01;scout;Neutral;nah;Willkommen bei Geisterweg. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_fluesterhain_2_L01
+SP_scout_fluesterhain_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Bambusmeer. Merk dir die Wegmarken.;12;SP_scout_fluesterhain_2_L02
+SP_scout_fluesterhain_3_L01;scout;Neutral;nah;Willkommen bei Bambusmeer. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_fluesterhain_3_L01
+SP_scout_fluesterhain_3_L02;scout;Neutral;nah;Die Geisterwesen schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_fluesterhain_3_L02
+SP_scout_sonnenstufen_1_L01;scout;Neutral;nah;Willkommen bei Kaiserliche Festung. Ich habe dir die Gegend auf der Karte markiert.;13;SP_scout_sonnenstufen_1_L01
+SP_scout_sonnenstufen_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Abtrünnigen seltener.;10;SP_scout_sonnenstufen_1_L02
+SP_scout_sonnenstufen_2_L01;scout;Neutral;nah;Willkommen bei Terrassendorf. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_sonnenstufen_2_L01
+SP_scout_sonnenstufen_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Festwiese. Merk dir die Wegmarken.;12;SP_scout_sonnenstufen_2_L02
+SP_scout_sonnenstufen_3_L01;scout;Neutral;nah;Willkommen bei Festwiese. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_sonnenstufen_3_L01
+SP_scout_sonnenstufen_3_L02;scout;Neutral;nah;Die Abtrünnigen schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_sonnenstufen_3_L02
+SP_scout_nebelkueste_1_L01;scout;Neutral;nah;Willkommen bei Drachenrippe. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_nebelkueste_1_L01
+SP_scout_nebelkueste_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Piraten seltener.;10;SP_scout_nebelkueste_1_L02
+SP_scout_nebelkueste_2_L01;scout;Neutral;nah;Willkommen bei Nebelhafen. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_nebelkueste_2_L01
+SP_scout_nebelkueste_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Piratenfeste. Merk dir die Wegmarken.;12;SP_scout_nebelkueste_2_L02
+SP_scout_nebelkueste_3_L01;scout;Neutral;nah;Willkommen bei Piratenfeste. Ich habe dir die Gegend auf der Karte markiert.;12;SP_scout_nebelkueste_3_L01
+SP_scout_nebelkueste_3_L02;scout;Neutral;nah;Die Piraten schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_nebelkueste_3_L02
+SP_scout_herz_der_flut_1_L01;scout;Neutral;nah;Willkommen bei Plattform Nord. Ich habe dir die Gegend auf der Karte markiert.;13;SP_scout_herz_der_flut_1_L01
+SP_scout_herz_der_flut_1_L02;scout;Neutral;nah;Halt dich an die Wege, da sind die Konstrukte seltener.;10;SP_scout_herz_der_flut_1_L02
+SP_scout_herz_der_flut_2_L01;scout;Neutral;nah;Willkommen bei Plattform Ost. Ich habe dir die Gegend auf der Karte markiert.;13;SP_scout_herz_der_flut_2_L01
+SP_scout_herz_der_flut_2_L02;scout;Neutral;nah;Von hier oben siehst du alles bis Plattform Süd. Merk dir die Wegmarken.;13;SP_scout_herz_der_flut_2_L02
+SP_scout_herz_der_flut_3_L01;scout;Neutral;nah;Willkommen bei Plattform Süd. Ich habe dir die Gegend auf der Karte markiert.;13;SP_scout_herz_der_flut_3_L01
+SP_scout_herz_der_flut_3_L02;scout;Neutral;nah;Die Konstrukte schlagen nachts zu. Tagsüber kommst du sicherer durch.;10;SP_scout_herz_der_flut_3_L02

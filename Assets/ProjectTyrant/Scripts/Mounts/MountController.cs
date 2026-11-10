@@ -14,6 +14,8 @@ namespace ProjectTyrant
         public readonly MountMotor Motor = new MountMotor();
         public readonly GriffonFlight Griffon = new GriffonFlight();   // Lauf 6 (Altmodell, nur noch Tests)
         public FlightMotor Flight { get; private set; }         // Lauf 10
+        public readonly DuneRunnerModel Dune = new DuneRunnerModel();   // Lauf 11
+        public readonly BoatModel Boat = new BoatModel();               // Lauf 11
         public FlightVerdict FlightRule { get; private set; } = FlightVerdict.Ok(FlightRules.DefaultCeiling);
         float _ruleT, _updraftT, _airT; bool _wasBanned; Vector3 _heading;
         public static MountController Local { get; private set; }
@@ -49,6 +51,7 @@ namespace ProjectTyrant
             _baseFallHeight = _pc.FallDamageHeight;
             _pc.FallDamageHandler = OnFall;
             _safePos = transform.position;
+            if (GetComponent<JadeBotController>() == null) gameObject.AddComponent<JadeBotController>();   // Lauf 11: Jadegeist (aktiv ab Story-Flag)
         }
 
         void OnDestroy() { if (Local == this) Local = null; }
@@ -194,8 +197,9 @@ namespace ProjectTyrant
             }
             var regen = GetComponent<OutOfCombatRegen>();
             if (!Balance.BalanceWorld.Legacy && regen != null && regen.InCombat && !Motor.IsMounted) { GameEventBus.Notify("Im Kampf kein Aufsitzen – erst 5 s ohne Schaden", new Color(1f, 0.7f, 0.4f)); return false; }   // Balance B1: GW2-Regel
-            if (InDeepWater && k != MountKind.Skimmer) { GameEventBus.Notify("Im tiefen Wasser nur mit dem Skimmer", new Color(1f, 0.7f, 0.4f)); return false; }
-            if (!Motor.BeginMount(StatsFor(k), _pc.IsGrounded || _pc.IsHovering, true))
+            if (k == MountKind.Skiff && !NearWater()) { GameEventBus.Notify("Das Boot lässt sich nur auf Wasser rufen", new Color(1f, 0.7f, 0.4f)); return false; }   // Lauf 11
+            if (InDeepWater && k != MountKind.Skimmer && k != MountKind.Skiff) { GameEventBus.Notify("Im tiefen Wasser nur mit dem Skimmer", new Color(1f, 0.7f, 0.4f)); return false; }
+            if (!Motor.BeginMount(StatsFor(k), _pc.IsGrounded || _pc.IsHovering || k == MountKind.Skiff, true))
             {
                 if (Motor.RemountBlock > 0f) GameEventBus.Notify("Reittier erholt sich noch", new Color(1f, 0.7f, 0.4f));
                 return false;
@@ -277,6 +281,30 @@ namespace ProjectTyrant
                 case MountKind.Skimmer:
                     if (input.JumpPressed && grounded) _pc.SetVerticalVelocity(MountMotor.JumpVelocity(Motor.Stats.HopHeight, _pc.Gravity));
                     break;
+                case MountKind.DuneRunner:   // Lauf 11: Blinkschritt (Ladungen am Boden)
+                {
+                    var pm = PlayerProfile.Instance != null ? PlayerProfile.Instance.Mastery : null;
+                    Dune.Rank = MasteryEffects.DuneRunnerRank(pm); Dune.Tick(dt, grounded);
+                    if (input.JumpPressed && Dune.TryBlink(grounded, transform.position, fwd, out var to))
+                    {
+                        var g = ZoneAnchors.GroundAt(to + Vector3.up * 3f);
+                        SkillExecutor.VfxPulse(transform.position, 1.5f, new Color(1f, 0.8f, 0.4f));
+                        _pc.Teleport(new Vector3(to.x, Mathf.Max(g.y, transform.position.y - 3f) + 0.1f, to.z), transform.rotation);
+                        _pc.ResetFallTracking();
+                    }
+                    break;
+                }
+                case MountKind.Skiff:   // Lauf 11: Boot mit Trägheit, Anker (Leertaste), Jade-Schub (V)
+                {
+                    if (!onWater && !NearWater()) { ApplyDismount(); GameEventBus.Notify("Das Boot bleibt am Ufer", new Color(0.6f, 0.85f, 1f)); break; }
+                    var pm = PlayerProfile.Instance != null ? PlayerProfile.Instance.Mastery : null;
+                    Boat.Rank = MasteryEffects.BoatRank(pm); Boat.Summoned = true;
+                    if (input.JumpPressed) { Boat.ToggleAnchor(); GameEventBus.Notify(Boat.Anchored ? "Anker geworfen" : "Anker gelichtet", new Color(0.6f, 0.85f, 1f)); }
+                    if (input.DodgePressed && Boat.Boost()) GameEventBus.Notify("Jade-Schub!", new Color(0.5f, 1f, 0.8f));
+                    Boat.Step(dt, Mathf.Clamp01(input.Move.magnitude), 0f);
+                    _pc.SpeedOverride = Boat.Anchored ? 0.01f : Mathf.Max(0.5f, Boat.Speed);
+                    return;
+                }
                 case MountKind.Griffon:
                 case MountKind.Skyscale:   // Lauf 10: kinematischer Flug (FlightMotor)
                     TickFlight(input, dt, grounded);
@@ -331,6 +359,21 @@ namespace ProjectTyrant
             if (!ok) return false;
             _updraftT = 0.25f;
             return true;
+        }
+
+        /// <summary>Lauf 11: steht der Spieler an/auf Wasser mit mindestens 1,2 m Tiefe in 4 m Umkreis?</summary>
+        bool NearWater()
+        {
+            var root = ZoneRoot.Current;
+            if (root == null || root.Definition == null || root.Definition.Biome == null || root.Definition.Biome.WaterLevel < -50f) return false;
+            float water = root.Definition.Biome.WaterLevel;
+            for (int i = 0; i < 9; i++)
+            {
+                var o = i == 0 ? Vector3.zero : Quaternion.Euler(0f, i * 45f, 0f) * Vector3.forward * 4f;
+                var q = transform.position + o;
+                if (BoatModel.CanSummon(water - ZoneRoot.GroundHeight(q.x, q.z))) return true;
+            }
+            return false;
         }
 
         static Vector3 Flat(Vector3 v) { v.y = 0f; return v.sqrMagnitude < 1e-4f ? Vector3.forward : v; }

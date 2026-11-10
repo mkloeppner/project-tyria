@@ -76,7 +76,7 @@ MonoBehaviour:
   Tips:
   - "Verderbnis-Widerstand sch\xFCtzt im Inneren der Ruinen."
   - "Signatur: Verderbnis-Widerstand, Tempel-Meta, Weltboss Tempelw\xE4chter"
-  LoadingImage: {fileID: 0}
+  LoadingImage: {fileID: 2800000, guid: c836afe87ad86e24db69b510233c3066, type: 3}
   Regions:
   - Name: Ertrunkene Gasse
     Center: {x: 216.4719, y: -440}
@@ -109,17 +109,60 @@ MonoBehaviour:
   TimerPosition: {x: -397.90445, y: 0, z: -346.31943}
   TimerEventId: schaedelkueste_tempel
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: schaedelkueste
+    Size: 1100
+    Anchors:
+    - {x: 0, y: -418}
+    - {x: 257.477, y: 376.35303}
+    - {x: -437.26947, y: 129.34996}
+    Waypoints:
+    - {x: 12, y: -400}
+    - {x: -269.45126, y: -243.13777}
+    - {x: -390.89792, y: -143.09393}
+    - {x: 416.10068, y: 11.280661}
+    - {x: -114.21551, y: 149.3943}
+    - {x: 265.477, y: 376.35303}
+    - {x: -429.26947, y: 129.34996}
+    BandEdges:
+    - 220
+    - 440
+    - 660
+    BandLevels: 03000000040000000500000006000000i
+    Areas:
+    - Name: Ertrunkene Gasse
+      Center: {x: 216.4719, y: -440}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Verderbter Brunnen
+      Center: {x: -87.53869, y: -247.846}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: "Grabstra\xDFe"
+      Center: {x: -18.908302, y: -52.56318}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 1
+    - Name: Gezeitentor
+      Center: {x: 150.50601, y: 75.02238}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Riff der Toten
+      Center: {x: -370.19193, y: 416.75967}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
   CompletionIds:
   - wp_schaedelkueste_ankunft

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using ProjectTyrant.EditorTools;
@@ -103,10 +104,14 @@ namespace ProjectTyrant.Tests
         public void World_PortalsValid_AndPlazaReachesEveryZone()
         {
             var w = WorldBuilder.LoadWorld(); Assert.IsNotNull(w);
-            Assert.AreEqual(10, w.Zones.Count, "zehn Zonen");
+            Assert.AreEqual(30, w.Zones.Count, "zehn Bestandszonen + 20 Regionen-Zonen (Lauf 11)");
             Assert.IsEmpty(WorldModel.ValidatePortals(w.Zones), string.Join(", ", WorldModel.ValidatePortals(w.Zones)));
             var kueste = w.Zone("silberkueste");
-            foreach (var z in w.Zones) if (z.Id != "silberkueste") Assert.IsTrue(kueste.Portals.Any(p => p.TargetZone == z.Id && p.Id.StartsWith("plaza_")), "Portalplatz → " + z.Id);
+            foreach (var z in w.Zones) if (z.Id != "silberkueste" && z.Region == WorldRegion.Kernland && System.Array.IndexOf(WorldBuilder.Lauf11Zones, z.Id) < 0) Assert.IsTrue(kueste.Portals.Any(p => p.TargetZone == z.Id && p.Id.StartsWith("plaza_")), "Portalplatz → " + z.Id);
+            // Lauf 11: jede Zone ist über Portale/Schiffe von Silbermund aus erreichbar
+            var seen = new HashSet<string> { "silberkueste" }; var q = new Queue<string>(); q.Enqueue("silberkueste");
+            while (q.Count > 0) { var z = w.Zone(q.Dequeue()); foreach (var p in z.Portals) if (seen.Add(p.TargetZone)) q.Enqueue(p.TargetZone); }
+            foreach (var z in w.Zones) Assert.IsTrue(seen.Contains(z.Id), "erreichbar: " + z.Id);
         }
     }
 }

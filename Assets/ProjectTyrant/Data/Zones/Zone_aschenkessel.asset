@@ -76,7 +76,7 @@ MonoBehaviour:
   Tips:
   - Wenn der Gipfel grollt, beginnt der Vulkanausbruch.
   - 'Signatur: Glutschritt-Beherrschung, Vulkanausbruch-Meta'
-  LoadingImage: {fileID: 0}
+  LoadingImage: {fileID: 2800000, guid: 216a1791e60812241b3ed56606164f50, type: 3}
   Regions:
   - Name: Glutpass
     Center: {x: 355.8862, y: -307.74146}
@@ -109,17 +109,58 @@ MonoBehaviour:
   TimerPosition: {x: -240.36633, y: 0, z: -405.79202}
   TimerEventId: aschenkessel_ausbruch
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: aschenkessel
+    Size: 1100
+    Anchors:
+    - {x: 0, y: -418}
+    - {x: 257.477, y: 376.35303}
+    - {x: -437.26947, y: 129.34996}
+    Waypoints:
+    - {x: 12, y: -400}
+    - {x: -411.8558, y: -377.93024}
+    - {x: -369.54514, y: -138.74689}
+    - {x: 145.36566, y: 148.09386}
+    - {x: 156.26501, y: 384.96393}
+    - {x: 265.477, y: 376.35303}
+    - {x: -429.26947, y: 129.34996}
+    BandEdges:
+    - 330
+    BandLevels: 0300000004000000i
+    Areas:
+    - Name: Glutpass
+      Center: {x: 355.8862, y: -307.74146}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Basaltterrassen
+      Center: {x: 118.29677, y: -360.27026}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Kraterrand
+      Center: {x: 78.70282, y: -31.061104}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Aschenhof
+      Center: {x: 378.6706, y: 88.96934}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Schlackenhalde
+      Center: {x: 44.146233, y: 431.0893}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
   CompletionIds:
   - wp_aschenkessel_ankunft

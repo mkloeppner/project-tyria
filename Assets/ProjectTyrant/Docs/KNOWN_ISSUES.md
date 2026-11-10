@@ -74,3 +74,12 @@
 
 65. **Lauf 10 – nicht live per Tastatur geprüft**: Sturzflug (V), Flügelschlag (Leertaste), Wandhaften und Direkttasten sind über Modell-Tests (64) und Code-Aufrufe im Play Mode geprüft, nicht mit echter Tastatureingabe (keine Computer-Bedienung erlaubt). Ebenso Admin-„Story weiter“ mit echten Szenen nur über den Code-Pfad (FinishStep) verifiziert.
 66. **Warnung „The referenced script (Unknown) on this Behaviour is missing!“** beim Betreten des Play Mode (Szenen-Backup). Seit der B1-Messreihe, vor Lauf 10; in geladenen Szenen und Prefabs kein Objekt mit fehlendem Skript gefunden (Suche über alle GameObjects). Vermutlich ein Objekt im Szenen-Backup der B1-Bots; offen.
+
+67. **Lauf 11 – Ist-Stand ohne Läufe 7–9**: keine sechs Hauptstädte, keine Völker, kein Autopilot/Abnahme-Matrizen außer den B1-Bots, kein Weltboss-Fahrplan vor Lauf 11. Nachgebaut: Fahrplan-Modell (12 Bosse + 2 Metas) mit Zonen-Timern der neuen Weltbosse; bestehende Bosse behalten ihre Zonen-Timer.
+68. **Lauf 11 – Telemetrie je neuer Zone nicht gemessen** (B1-Bots × 20 Zonen × 2 Profile × 30 min = 20 h). Gefahren-/Event-Stufen und Validatoren sind grün, Zielwert-Korridore ungeprüft.
+69. **Lauf 11 – Inhaltsumfang gekürzt**: Story 171 Dialogzeilen + 16 Tagebuch-Zeilen + 120 Späher-Zeilen statt ≈ 650; 16 Briefe statt 40; Hubs ohne eigene Stadtarchitektur (Biom-Gelände + Dienste-NPCs, keine Vertikalebenen außer Aufzug-Plattformen), keine Luftspiegelungs-Rätsel als Mechanik (Story nutzt „Lichtsteine“), keine Festival-Events, keine Geisterwege als Sichtbarkeitsmechanik.
+70. **Lauf 11 – Meshy-Lauf (14 Modelle), Win64-Build, Performance-Messung je Zone, Ladebildschirme der neuen Zonen (Builder-Aufnahme läuft automatisch), regionale Musik-Themen** offen.
+71. **Lauf 11 – Jadegeist-Geräte nur Aufzug**: Brücken, Kanonen, Truhen nicht als Weltobjekte gebaut; Jade-Kanonen nur als Story-Ziel (Interact).
+72. **Lauf 11 – Bounty-Eigenschaften vereinfacht**: Spiegelbilder/Orbkranz beschwören die Begleiter des Archetyps, Trotzleisten-Fenster ist nur ein Hinweis; Lösbarkeit über Druck-Budget statt Lauf-9-Simulator (nicht vorhanden).
+73. **Lauf 11 – Verwaiste Sprachdateien** `K18_S02E_Q1/C1_*`, `K25_S02_Q2/C2_*` (Wahl-Stellen verschoben); `device_bash` darf nicht löschen, die Dateien werden nicht referenziert und stören nicht.
+74. **Lauf 11 – Admin-Abschluss von Gesprächs-Schritten** spielt (wie in Lauf 10) nur die Endszene; Wahl-Flags der Einstiegsszene entstehen dabei nicht. Im echten Gespräch werden sie gesetzt (Modell-Test `StoryPathTests`).

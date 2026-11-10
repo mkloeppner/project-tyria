@@ -37,6 +37,22 @@ Alle Texte stehen in `Data/Story/Source/*.csv` (Id-Schema `K04_S02_L07`, ≤ 25 
 | 8 | Das Lied der Dünen | Dünenmeer · 30 | Drei Schluchten (Raptor) · Ruinen von Qasir (Herold 2) · Am Feuer | Raptor, Mehrphasen-Boss, Gefährte |
 | 9 | Unter Kristall, über Wolken | Kristalltiefe + Himmelsspitzen · 30 | Stimme in der Tiefe (Laterne, Vision) · Über den Wolken (Aufwind) · Greifeneier · Der Schlüssel (Greif) | Dunkelheit, Aufwinde, Greif |
 | 10 | Der Tyrann erwacht | Tyrannenfeste · 30 | Drei Tore · Der Herold · Die Versiegelung · Erste Zeile (Epilog in Silbermund) | alles zusammen |
+| 11 | Risse im Siegel | Schädelküste · 80 | Schwarze Netze · Die Toten am Strand · Der versunkene Altar | Regionen-Reise, Verderbnis-Widerstand |
+| 12 | Der Orden der Glut | Silberküste · 80 | Rollen aus dem Süden · Das Portal im Vorland · Abreise | Schiffe |
+| 13 | Sand im Getriebe | Sonnentor · 80 | Sonnentor · Nadira · Die erste Jagd | Kopfgeldtafel, Hub |
+| 14 | Der Sandläufer | Große Leere · 80 | Der Stamm · Mit den Läufern · Vor dem Sturm | Dünenläufer, Sandportale |
+| 15 | Spiegel der Sonne | Spiegel der Sonne · 80 | Ilyas · Lichtsteine · Das Archiv | Luftspiegelungen, Rennen |
+| 16 | Der Flammenkönig | Glutkessel · 80 | Die Belagerung · Die Tore halten · Im Haus der Flamme | Meta-Teilnahme |
+| 17 | Knochenmauer | Klingenschlucht · 80 | Sturm oder List · Sturm auf die Mauer **oder** Das Tor der Priester · Über die Schlucht | Verzweigung (2 Instanzen) |
+| 18 | Die Verlorene Stadt | Zarathis · 80 | Vier Viertel (Meta) · Archiv der Gefäße · Der Gedenkstein | Finale-Meta |
+| 19 | Thron der Glut | Zarathis · 80 | Der Thron · Datteln und Briefe · Das Schiff nach Osten | Finale-Instanz |
+| 20 | Jadehafen | Jadehafen · 80 | Ankunft · Die Werkstatt · Die Kaiserin | Jadegeist, Vertikalstadt |
+| 21 | Grüne Flut | Grüne Flut · 80 | Am Ufer · Fang und Flucht · Gestohlene Kerne | Boot, Angeln |
+| 22 | Flüsterhain | Flüsterhain · 80 | Schwester Mei · Geisterwege · Das besetzte Kloster | Geisterwege |
+| 23 | Sonnenstufen | Sonnenstufen · 80 | Zwei Stimmen · Der Reisspeicher **oder** Die Festung bei Nacht · Die Spur der Kerne | Verzweigung (Kaiserin/Daro) |
+| 24 | Nebelküste | Nebelküste · 80 | Kael · Die Schlange im Nebel · Sabotierte Kerne | Weltboss als Story-Schritt |
+| 25 | Das Jadeherz | Jadehafen · 80 | Die Kernkammer · Die Entscheidung · Vor dem Erwachen | Entscheidung Drache frei / Stadt gesichert |
+| 26 | Herz der Flut | Herz der Flut · 80 | Die Plattformen (Meta) · Der Meeresdrache · Lichter | Finale-Meta, Finale-Instanz, Epilog-Varianten |
 
 ## Szenen (Form)
 Gesprächsszene (zwei Figuren vor gemalter Kulisse), In-World-Cinematic (Letterbox, Verdeckungs-Schwenk) und Sprechblase. Cinematics: K01_S01, K01_S03E, K02_S03/E, K03_S04E, K04_S03/E (Brennars Tod), K05_S03E, K07_S03, K08_S02/E, K09_S01, K10_S02/E, K10_S03/E. Alle Szenen mit Untertiteln; Wahl-Stellen je Kapitel ≥ 3 (eine mit Flag), auch beim Überspringen gestellt.
@@ -45,4 +61,4 @@ Gesprächsszene (zwei Figuren vor gemalter Kulisse), In-World-Cinematic (Letterb
 `k01_eintopf/pflicht/jagd` · `k02_frueh` · `kennt_herold` · `k03_kinder_zuerst/tovin_licht/spur` · `kennt_siegel` · `brennar_gefallen` (Grabmal in Silbermund) · `k04_schwur/rache/erinnerung` · `k05_laut/leise` · `pakt_wacht/archiv/schleier` · `k06_grotte/buch/agent` · `k06_wald_zuerst` · `k07_leitstern`, `k07_leitstern_treu/ehrlich` · `k08_tiefe` · `herold_2` · `schluessel_tiefe` · `greif_vertrauen` (Greif freigeschaltet) · `schluessel_ganz`, `tyrannenfeste_offen` · `herold_gefallen` · `vareth_versiegelt` · `k10_angebot/kampf` · `epilog_frage/halten/essen` · `story_abgeschlossen` · `jp_<id>` (Sprungrätsel).
 
 ## Statistik
-Wird in M34 aus dem Builder-Bericht ergänzt (Zeilen, Sprachminuten, Instanzen, Kapitel-Dauern).
+Stand Lauf 11: 26 Kapitel · 90 Schritte · 982 Zeilen · 260 Szenen · 66 Briefe · 37 Hinweise · 1.243 Sprachdateien (Windows-Sprachsynthese „Hedda“) · 0 Builder-Warnungen.

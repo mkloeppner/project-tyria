@@ -105,7 +105,7 @@ namespace ProjectTyrant
         {
             reason = null;
             if (zoneId != FortressZone) return true;
-            if (s != null && (s.HasFlag(FortressFlag) || s.Chapter >= 10 || s.Finished)) return true;
+            if (s != null && (s.HasFlag(FortressFlag) || s.Chapter >= 10 || s.Finished)) return true;   // Lauf 11: Kapitel 11–26 liegen dahinter
             reason = "Die Tyrannenfeste ist versiegelt – sie öffnet sich mit Kapitel 10 der Persönlichen Geschichte.";
             return false;
         }

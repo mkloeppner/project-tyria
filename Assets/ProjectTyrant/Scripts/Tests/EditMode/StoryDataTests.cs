@@ -102,8 +102,8 @@ namespace ProjectTyrant.Tests
         [Test]
         public void ChapterMinimumLevels_FollowPlan()
         {
-            int[] plan = { 1, 5, 12, 20, 30, 30, 30, 30, 30, 30 };
-            foreach (var ch in Db.Chapters) Assert.AreEqual(plan[ch.Number - 1], ch.MinLevel, "Kapitel " + ch.Number);
+            int[] plan = LevelBands.ChapterGates;   // Lauf 11: 1/5/12/20/30/40/50/60/70/80, Zwischenspiel und Erweiterungen 80 (bis Lauf 10: 1/5/12/20/30 × 6)
+            foreach (var ch in Db.Chapters) Assert.AreEqual(ch.Number <= plan.Length ? plan[ch.Number - 1] : 80, ch.MinLevel, "Kapitel " + ch.Number);
         }
 
         [Test]

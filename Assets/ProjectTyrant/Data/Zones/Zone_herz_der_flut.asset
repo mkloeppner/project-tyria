@@ -24,11 +24,11 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: herz_der_flut_nebelkueste
-    Position: {x: -346.6342, y: 0, z: -365.8698}
+    Position: {x: -346.6342, y: 2.6, z: -365.8698}
     Yaw: 43.45355
     TargetZone: nebelkueste
     TargetPortal: nebelkueste_herz_der_flut
-  DefaultSpawn: {x: 0, y: 0, z: -456}
+  DefaultSpawn: {x: 0, y: 2.6, z: -456}
   ContinentRect:
     serializedVersion: 2
     x: 0.4
@@ -36,31 +36,141 @@ MonoBehaviour:
     width: 0.2
     height: 0.28
   ContinentColor: {r: 0.16470589, g: 0.41568628, b: 0.47843137, a: 1}
-  Waypoints: []
-  Arrivals: []
+  Waypoints:
+  - Id: wp_herz_der_flut_ankunft
+    Name: Wegmarke Herz der Flut
+    Position: {x: 12, y: 2.6, z: -438}
+  - Id: wp_herz_der_flut_plattform_nord
+    Name: Wegmarke Plattform Nord
+    Position: {x: 114.34607, y: 2.6, z: -329.89792}
+  - Id: wp_herz_der_flut_plattform_ost
+    Name: Wegmarke Plattform Ost
+    Position: {x: 429.9395, y: 2.6, z: -96.85372}
+  - Id: wp_herz_der_flut_plattform_sued
+    Name: "Wegmarke Plattform S\xFCd"
+    Position: {x: -465.4279, y: 2.6, z: 18.547897}
+  - Id: wp_herz_der_flut_plattform_west
+    Name: Wegmarke Plattform West
+    Position: {x: -387.53995, y: 2.6, z: 194.79659}
+  - Id: wp_herz_der_flut_ankunft_nebelkueste
+    Name: "Portal-Wegmarke Nebelk\xFCste"
+    Position: {x: -334.5076, y: 2.183143, z: -361.51422}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 2.6, z: -456}
+    WaypointId: wp_herz_der_flut_ankunft
+  - Entrance: portal:herz_der_flut_nebelkueste
+    Position: {x: -342.5076, y: 2.6, z: -361.51422}
+    WaypointId: wp_herz_der_flut_ankunft_nebelkueste
   Tips:
   - Vier Plattformen, eine Boot-Anfahrt, ein erwachender Drache.
   - 'Signatur: Finale-Meta Erwachen des Meeresdrachen'
-  LoadingImage: {fileID: 0}
-  Regions: []
-  TimerLabel: 
-  TimerPeriod: 0
-  TimerOffset: 0
-  TimerPosition: {x: 0, y: 0, z: 0}
-  TimerEventId: 
+  LoadingImage: {fileID: 2800000, guid: 09f8dd47332fab644a7bc6a6db1028b7, type: 3}
+  Regions:
+  - Name: Plattform West
+    Center: {x: -248.10477, y: -387.14514}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Sturmauge
+    Center: {x: 293.50262, y: -113.62836}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Kanonenring
+    Center: {x: 150.6547, y: -147.87721}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Drachenmaul
+    Center: {x: 389.09164, y: 404.70245}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Letzter Steg
+    Center: {x: -55.53932, y: 480}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  TimerLabel: Erwachen des Meeresdrachen
+  TimerPeriod: 7200
+  TimerOffset: 5400
+  TimerPosition: {x: 435.98633, y: 0, z: -380.9026}
+  TimerEventId: herz_der_flut_drachenende
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: herz_der_flut
+    Size: 1200
+    Anchors:
+    - {x: 0, y: -456}
+    - {x: -342.5076, y: -361.51422}
+    Waypoints:
+    - {x: 12, y: -438}
+    - {x: 114.34607, y: -329.89792}
+    - {x: 429.9395, y: -96.85372}
+    - {x: -465.4279, y: 18.547897}
+    - {x: -387.53995, y: 194.79659}
+    - {x: -334.5076, y: -361.51422}
+    BandEdges:
+    - 360
+    - 720
+    BandLevels: 040000000500000006000000i
+    Areas:
+    - Name: Plattform West
+      Center: {x: -248.10477, y: -387.14514}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Sturmauge
+      Center: {x: 293.50262, y: -113.62836}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Kanonenring
+      Center: {x: 150.6547, y: -147.87721}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 1
+    - Name: Drachenmaul
+      Center: {x: 389.09164, y: 404.70245}
+      Radius: 110
+      Level: 6
+      City: 0
+      NoLeash: 0
+    - Name: Letzter Steg
+      Center: {x: -55.53932, y: 480}
+      Radius: 110
+      Level: 6
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
-  CompletionIds: []
+  CompletionIds:
+  - wp_herz_der_flut_ankunft
+  - wp_herz_der_flut_plattform_nord
+  - wp_herz_der_flut_plattform_ost
+  - wp_herz_der_flut_plattform_sued
+  - wp_herz_der_flut_plattform_west
+  - poi_herz_der_flut_plattform_west
+  - poi_herz_der_flut_sturmauge
+  - poi_herz_der_flut_kanonenring
+  - poi_herz_der_flut_drachenmaul
+  - poi_herz_der_flut_letzter_steg
+  - vista_herz_der_flut_0
+  - vista_herz_der_flut_1
+  - vista_herz_der_flut_2
+  - hc_herz_der_flut_0
+  - hc_herz_der_flut_1
+  - hc_herz_der_flut_2
+  - hc_herz_der_flut_3
+  - heart_herz_der_flut_0
+  - heart_herz_der_flut_1
+  - heart_herz_der_flut_2
+  - heart_herz_der_flut_3
   Region: 2
   IsHub: 0

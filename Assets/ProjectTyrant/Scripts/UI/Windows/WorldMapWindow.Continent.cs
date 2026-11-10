@@ -56,7 +56,35 @@ namespace ProjectTyrant
                     t.Bg.gameObject.AddComponent<UiClickRelay>().Left = () => { if (GameManager.Instance != null && GameManager.Instance.CurrentZone == zone) ShowContinent(false); };
                     _tiles.Add(t);
                 }
+            // Lauf 11: Regionen-Reiter (Kernland, Glutwüste, Dracheninseln) mit Regionen-Abschluss
+            var tabs = UiFactory.Rect("RegionTabs", _continent);
+            tabs.Place(new Vector2(1, 1), new Vector2(1, 1), new Vector2(1, 1), new Vector2(-16, -8), new Vector2(620, 36));
+            var hl = tabs.gameObject.AddComponent<HorizontalLayoutGroup>(); hl.spacing = 8; hl.childControlWidth = true; hl.childForceExpandWidth = true; hl.childControlHeight = true;
+            _regionButtons.Clear();
+            foreach (WorldRegion reg in System.Enum.GetValues(typeof(WorldRegion)))
+            {
+                var rr = reg;
+                var b = UiFactory.Button("Tab_" + reg, tabs, RegionZones.RegionName(reg), () => { _regionTab = rr; ApplyRegionTab(); }, 16);
+                _regionButtons.Add((reg, b.GetComponentInChildren<TextMeshProUGUI>()));
+            }
             _continent.gameObject.SetActive(false);
+        }
+
+        WorldRegion _regionTab;
+        readonly List<(WorldRegion region, TextMeshProUGUI label)> _regionButtons = new List<(WorldRegion, TextMeshProUGUI)>();
+
+        /// <summary>Lauf 11: nur die Zonen der gewählten Region zeigen; Reiter mit Regionen-Abschluss (abgeschlossene Zonen / alle).</summary>
+        void ApplyRegionTab()
+        {
+            foreach (var t in _tiles) if (t.Bg != null) t.Bg.gameObject.SetActive(t.Def.Region == _regionTab);
+            var prof = PlayerProfile.Instance;
+            foreach (var (reg, label) in _regionButtons)
+            {
+                if (label == null) continue;
+                int all = 0, done = 0;
+                foreach (var t in _tiles) if (t.Def.Region == reg) { all++; if (prof != null && prof.State.Completed.Contains("zonechest:" + t.Def.Id)) done++; }
+                label.text = (reg == _regionTab ? "<b>" : "") + RegionZones.RegionName(reg) + " " + done + "/" + all + (reg == _regionTab ? "</b>" : "");
+            }
         }
 
         TooltipContent WaypointTip(ZoneDefinition z, ZoneWaypointInfo w)
@@ -82,6 +110,7 @@ namespace ProjectTyrant
             ContinentMode = on;
             _continent.gameObject.SetActive(on);
             _continentTimer = 0f;
+            if (on) { var gmz = GameManager.Instance != null ? GameManager.Instance.CurrentZone : null; if (gmz != null) _regionTab = gmz.Region; ApplyRegionTab(); }   // Lauf 11
             _ui.Tooltip.Hide();
         }
 

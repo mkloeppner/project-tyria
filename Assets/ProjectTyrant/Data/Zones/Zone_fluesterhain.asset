@@ -24,16 +24,16 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: fluesterhain_jadehafen
-    Position: {x: -317.74802, y: 0, z: -335.3807}
+    Position: {x: -317.74802, y: 5.9486904, z: -335.3807}
     Yaw: 43.45355
     TargetZone: jadehafen
     TargetPortal: jadehafen_fluesterhain
   - Id: fluesterhain_sonnenstufen
-    Position: {x: 458.14914, y: 0, z: -59.52618}
+    Position: {x: 458.14914, y: 2.2, z: -59.52618}
     Yaw: -82.59717
     TargetZone: sonnenstufen
     TargetPortal: sonnenstufen_fluesterhain
-  DefaultSpawn: {x: 0, y: 0, z: -418}
+  DefaultSpawn: {x: 0, y: 2.994931, z: -418}
   ContinentRect:
     serializedVersion: 2
     x: 0.62
@@ -41,31 +41,148 @@ MonoBehaviour:
     width: 0.34
     height: 0.3
   ContinentColor: {r: 0.22745098, g: 0.47843137, b: 0.3529412, a: 1}
-  Waypoints: []
-  Arrivals: []
+  Waypoints:
+  - Id: wp_fluesterhain_ankunft
+    Name: "Wegmarke Fl\xFCsterhain"
+    Position: {x: 12, y: 2.9027262, z: -400}
+  - Id: wp_fluesterhain_kloster_der_stille
+    Name: Wegmarke Kloster der Stille
+    Position: {x: 118.84503, y: 3.824078, z: -251.25961}
+  - Id: wp_fluesterhain_geisterweg
+    Name: Wegmarke Geisterweg
+    Position: {x: -163.81844, y: 2.2, z: -78.31637}
+  - Id: wp_fluesterhain_bambusmeer
+    Name: Wegmarke Bambusmeer
+    Position: {x: 208.80812, y: 2.9997687, z: 132.71112}
+  - Id: wp_fluesterhain_mondteich
+    Name: Wegmarke Mondteich
+    Position: {x: -344.1088, y: 2.2, z: 228.9039}
+  - Id: wp_fluesterhain_ankunft_jadehafen
+    Name: Portal-Wegmarke Jadehafen
+    Position: {x: -305.62143, y: 5.071145, z: -331.02512}
+  - Id: wp_fluesterhain_ankunft_sonnenstufen
+    Name: Portal-Wegmarke Sonnenstufen
+    Position: {x: 459.12738, y: 2.2, z: -54.753113}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 2.994931, z: -418}
+    WaypointId: wp_fluesterhain_ankunft
+  - Entrance: portal:fluesterhain_jadehafen
+    Position: {x: -313.62143, y: 5.9486904, z: -331.02512}
+    WaypointId: wp_fluesterhain_ankunft_jadehafen
+  - Entrance: portal:fluesterhain_sonnenstufen
+    Position: {x: 452.19916, y: 2.2, z: -58.753113}
+    WaypointId: wp_fluesterhain_ankunft_sonnenstufen
   Tips:
   - Geisterwege sind nur nachts oder mit dem Jadegeist sichtbar.
   - "Signatur: Kloster-Herzen, Geister-Jagd, Sprungr\xE4tsel im Wald"
-  LoadingImage: {fileID: 0}
-  Regions: []
+  LoadingImage: {fileID: 2800000, guid: d07bcd759f8bdbd4692661cdb396bf85, type: 3}
+  Regions:
+  - Name: Mondteich
+    Center: {x: 314.4226, y: -440}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Glockenhang
+    Center: {x: -59.269493, y: -202.16177}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Uralter Baum
+    Center: {x: 128.53677, y: -40.979897}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Schreinpfad
+    Center: {x: -62.38406, y: 234.01651}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Nebeltor
+    Center: {x: -27.087982, y: 309.38422}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
   TimerLabel: 
   TimerPeriod: 0
   TimerOffset: 0
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: fluesterhain
+    Size: 1100
+    Anchors:
+    - {x: 0, y: -418}
+    - {x: -313.62143, y: -331.02512}
+    - {x: 452.19916, y: -58.753113}
+    Waypoints:
+    - {x: 12, y: -400}
+    - {x: 118.84503, y: -251.25961}
+    - {x: -163.81844, y: -78.31637}
+    - {x: 208.80812, y: 132.71112}
+    - {x: -344.1088, y: 228.9039}
+    - {x: -305.62143, y: -331.02512}
+    - {x: 459.12738, y: -54.753113}
+    BandEdges:
+    - 330
+    BandLevels: 0400000005000000i
+    Areas:
+    - Name: Mondteich
+      Center: {x: 314.4226, y: -440}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Glockenhang
+      Center: {x: -59.269493, y: -202.16177}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Uralter Baum
+      Center: {x: 128.53677, y: -40.979897}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Schreinpfad
+      Center: {x: -62.38406, y: 234.01651}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Nebeltor
+      Center: {x: -27.087982, y: 309.38422}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
-  CompletionIds: []
+  CompletionIds:
+  - wp_fluesterhain_ankunft
+  - wp_fluesterhain_kloster_der_stille
+  - wp_fluesterhain_geisterweg
+  - wp_fluesterhain_bambusmeer
+  - wp_fluesterhain_mondteich
+  - poi_fluesterhain_mondteich
+  - poi_fluesterhain_glockenhang
+  - poi_fluesterhain_uralter_baum
+  - poi_fluesterhain_schreinpfad
+  - poi_fluesterhain_nebeltor
+  - vista_fluesterhain_0
+  - vista_fluesterhain_1
+  - vista_fluesterhain_2
+  - hc_fluesterhain_0
+  - hc_fluesterhain_1
+  - hc_fluesterhain_2
+  - hc_fluesterhain_3
+  - heart_fluesterhain_0
+  - heart_fluesterhain_1
+  - heart_fluesterhain_2
+  - heart_fluesterhain_3
   Region: 2
   IsHub: 0

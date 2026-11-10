@@ -80,6 +80,16 @@ namespace ProjectTyrant.EditorTools
                 .Fill(Polygon(new Vector2(48, 76), new Vector2(34, 108), new Vector2(58, 80)), new Color(0.9f, 0.85f, 0.6f))
                 .Fill(Polygon(new Vector2(62, 80), new Vector2(60, 112), new Vector2(72, 80)), new Color(0.9f, 0.85f, 0.6f))
                 .Fill(Circle(70, 66, 4), new Color(1f, 0.6f, 0.2f)));
+            // Lauf 11: Dünenläufer (Schakalkopf), Boot, Jadegeist
+            var sandC = new Color(0.9f, 0.72f, 0.42f);
+            Save("mount_dunerunner", MountBg(new Color(1f, 0.75f, 0.35f))
+                .Fill(Union(Polygon(new Vector2(30, 50), new Vector2(64, 72), new Vector2(104, 66), new Vector2(110, 56), new Vector2(70, 46)), Polygon(new Vector2(52, 72), new Vector2(46, 104), new Vector2(66, 76)), Polygon(new Vector2(68, 74), new Vector2(72, 106), new Vector2(82, 74))), sandC)
+                .Fill(Circle(86, 60, 4), ink));
+            Save("mount_skiff", MountBg(new Color(0.45f, 0.85f, 0.75f))
+                .Fill(Polygon(new Vector2(20, 50), new Vector2(108, 50), new Vector2(92, 34), new Vector2(36, 34)), new Color(0.55f, 0.38f, 0.22f))
+                .Fill(Polygon(new Vector2(64, 54), new Vector2(64, 108), new Vector2(98, 58)), new Color(0.95f, 0.92f, 0.85f)));
+            Save("mastery_jade", MountBg(new Color(0.4f, 0.9f, 0.7f)).Fill(Circle(64, 64, 26), new Color(0.35f, 0.9f, 0.65f)).Fill(Circle(56, 70, 5), ink).Fill(Circle(72, 70, 5), ink));
+            Save("mastery_boat", MountBg(new Color(0.5f, 0.8f, 0.95f)).Fill(Polygon(new Vector2(24, 54), new Vector2(104, 54), new Vector2(88, 38), new Vector2(40, 38)), new Color(0.55f, 0.38f, 0.22f)));
         }
     }
 }

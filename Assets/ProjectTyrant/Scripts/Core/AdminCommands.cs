@@ -27,7 +27,7 @@ namespace ProjectTyrant
                 var d = D; if (d == null) return "Kein Story-Direktor";
                 var p = (a ?? "").Trim().Split(' '); int k = 1, s = 1;
                 if (p.Length > 0) int.TryParse(p[0], out k); if (p.Length > 1) int.TryParse(p[1], out s);
-                return d.AdminJump(Mathf.Clamp(k, 1, 10), Mathf.Max(0, s - 1));
+                return d.AdminJump(Mathf.Max(1, k), Mathf.Max(0, s - 1));   // Lauf 11: Kapitel 1–26
             }));
             DebugCommands.Extra.Add(("Admin: Schritt zurücksetzen", a => D != null ? D.AdminResetStep() : "Kein Story-Direktor"));
             DebugCommands.Extra.Add(("Admin: Instanz-Ziel erfüllen", a => D != null ? D.AdminCompleteObjective() : "Kein Story-Direktor"));

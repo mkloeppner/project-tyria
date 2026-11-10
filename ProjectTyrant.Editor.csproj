@@ -99,7 +99,9 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\SkillTimelineBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\IconPainter.World.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\IconPainter.Story.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\Lauf11Builder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\MasteryBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\StoryBuilder.Expansions.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\StoryBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldBuilder.Lauf11.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\TraitBuilder.cs" />

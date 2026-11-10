@@ -15,7 +15,7 @@ MonoBehaviour:
   Number: 10
   Title: Der Tyrann erwacht
   Zone: tyrannenfeste
-  MinLevel: 30
+  MinLevel: 80
   Summary: 'Finale in drei Instanzen: Sturm auf die Feste, der Herold, Vareths Versiegelung. Epilog in Silbermund an Brennars Grab.'
   Steps:
   - Id: K10_S01

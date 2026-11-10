@@ -15,7 +15,7 @@ MonoBehaviour:
   Number: 7
   Title: Wurzeln der Finsternis
   Zone: daemmerwald
-  MinLevel: 30
+  MinLevel: 50
   Summary: "Die Verderbnis des Tyrannen frisst den D\xE4mmerwald. Ein Dorf wird evakuiert, und der Leitstern des Helden kehrt zur\xFCck."
   Steps:
   - Id: K07_S01

@@ -76,7 +76,7 @@ MonoBehaviour:
   Tips:
   - "Sandportale verbinden die Plateaus \u2013 nur mit dem D\xFCnenl\xE4ufer."
   - "Signatur: Springer- und Greif-Gel\xE4nde, Sandportale"
-  LoadingImage: {fileID: 0}
+  LoadingImage: {fileID: 2800000, guid: c9f3c6ca5b1b9a54c9e53303b2290f6e, type: 3}
   Regions:
   - Name: Schattenschlucht
     Center: {x: 322.92996, y: -379.34915}
@@ -109,17 +109,58 @@ MonoBehaviour:
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: klingenschlucht
+    Size: 1100
+    Anchors:
+    - {x: 0, y: -418}
+    - {x: -313.62143, y: -331.02512}
+    - {x: 452.19916, y: -58.753113}
+    Waypoints:
+    - {x: 12, y: -400}
+    - {x: -352.96875, y: -125.05855}
+    - {x: 45.06135, y: 41.10817}
+    - {x: -100.667564, y: -6.408596}
+    - {x: 288.31967, y: 282.3852}
+    - {x: -305.62143, y: -331.02512}
+    - {x: 459.12738, y: -54.753113}
+    BandEdges:
+    - 330
+    BandLevels: 0400000005000000i
+    Areas:
+    - Name: Schattenschlucht
+      Center: {x: 322.92996, y: -379.34915}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Adlerhorst
+      Center: {x: -124.15216, y: -205.94196}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Rote Wand
+      Center: {x: -190.03383, y: 55.2578}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Echokessel
+      Center: {x: 83.26477, y: 322.87613}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Kultistenlager
+      Center: {x: 201.06647, y: 295.57996}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
   CompletionIds:
   - wp_klingenschlucht_ankunft

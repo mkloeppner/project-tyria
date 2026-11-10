@@ -76,7 +76,7 @@ MonoBehaviour:
   Tips:
   - Greif und Himmelsschuppe erreichen das Kronendorf am schnellsten.
   - "Signatur: Vertikalit\xE4t, Kronen-Dorf"
-  LoadingImage: {fileID: 0}
+  LoadingImage: {fileID: 2800000, guid: 6be9d32921d46974c8e3b6cfadbd9a99, type: 3}
   Regions:
   - Name: Pilzhain
     Center: {x: -367.57315, y: -337.8876}
@@ -109,17 +109,58 @@ MonoBehaviour:
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: gruener_schlund
+    Size: 1100
+    Anchors:
+    - {x: 0, y: -418}
+    - {x: 257.477, y: 376.35303}
+    - {x: 452.19916, y: -58.753113}
+    Waypoints:
+    - {x: 12, y: -400}
+    - {x: 274.93567, y: -250.26672}
+    - {x: 206.23672, y: 24.619226}
+    - {x: 16.693466, y: 150.8726}
+    - {x: -278.31998, y: 230.49341}
+    - {x: 265.477, y: 376.35303}
+    - {x: 459.12738, y: -54.753113}
+    BandEdges:
+    - 330
+    BandLevels: 0300000004000000i
+    Areas:
+    - Name: Pilzhain
+      Center: {x: -367.57315, y: -337.8876}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Schlundfall
+      Center: {x: 363.07336, y: -219.80942}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: "Bl\xE4tterdach"
+      Center: {x: -307.72702, y: -91.713524}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Rankenpfad
+      Center: {x: 139.89317, y: 189.37491}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Smaragdteich
+      Center: {x: 199.83455, y: 317.60016}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
   CompletionIds:
   - wp_gruener_schlund_ankunft

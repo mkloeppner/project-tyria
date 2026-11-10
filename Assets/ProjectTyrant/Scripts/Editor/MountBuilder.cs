@@ -14,7 +14,7 @@ namespace ProjectTyrant.EditorTools
         const long Gold = 10000;
 
         public static MountDefinition Load(MountKind k) => AssetDatabase.LoadAssetAtPath<MountDefinition>(Dir + "/Mount_" + k + ".asset");
-        public static MountDefinition[] LoadAll() => new[] { Load(MountKind.Raptor), Load(MountKind.Springer), Load(MountKind.Skimmer), Load(MountKind.Griffon), Load(MountKind.Skyscale) };
+        public static MountDefinition[] LoadAll() => new[] { Load(MountKind.Raptor), Load(MountKind.Springer), Load(MountKind.Skimmer), Load(MountKind.Griffon), Load(MountKind.Skyscale), Load(MountKind.DuneRunner), Load(MountKind.Skiff) };
 
         public static void BuildAll()
         {
@@ -35,7 +35,27 @@ namespace ProjectTyrant.EditorTools
                 0, "", "himmelsspitzen", "mount_griffon", 1.6f, p => GriffonVisual(p), "stylized painterly fantasy griffin mount with saddle, eagle head, lion body, white and gold feathers, game-ready low poly, hand-painted texture");
             Def(MountKind.Skyscale, "Himmelsschuppe", "Junger Himmelsdrache – steigt senkrecht auf, schwebt und haftet an Felswänden. Sammlung „Himmelsschuppe“ in den Himmelsspitzen.", "Leertaste halten: steigen; loslassen: schweben; Dodge-Taste in der Luft: Sturz", "Feuerstoß: Flächenschaden, 3 Brennen, hoher Trotzschaden",
                 0, "", "himmelsspitzen", "mount_skyscale", 1.5f, p => SkyscaleVisual(p), "stylized painterly fantasy young sky dragon mount with saddle, blue scales, golden horns, membrane wings, game-ready low poly, hand-painted texture");
+            // Lauf 11: Dünenläufer (Herz in Sonnentor + 10 Gold; die Geschichte schenkt ihn in Kapitel 14) und Boot (Werft in Jadehafen, Herz + 5 Gold)
+            Def(MountKind.DuneRunner, "Dünenläufer", "Schakalartiger Sprinter der Glutwüste – Blinkschritt durch den Sand, nutzt Sandportale.", "Blinkschritt 15 m (2–3 Ladungen, laden am Boden)", "Sandsturm: Fläche, Blindheit, Trotzschaden 200",
+                10 * Gold, "heart_sonnentor_1", "sonnentor", "mount_dunerunner", 1.45f,
+                p => CreatureBuilder.Raptor(p, "MDune", new CreatureBuilder.Look { Body = new Color(0.88f, 0.7f, 0.42f), Belly = new Color(0.96f, 0.9f, 0.75f), Accent = new Color(0.95f, 0.55f, 0.2f), Eye = new Color(1.8f, 1.4f, 0.4f), Glow = 0.4f, Scale = 0.95f }, true),
+                "stylized painterly fantasy sleek desert jackal mount with sand particles and saddle, game-ready low poly, hand-painted texture");
+            Def(MountKind.Skiff, "Boot", "Ein wendiges Jade-Boot der Werft von Jadehafen – nur auf Wasser.", "Anker (Leertaste), Jade-Schub (V, Beherrschung)", "–",
+                5 * Gold, "heart_jadehafen_3", "jadehafen", "mount_skiff", 0.9f, p => SkiffVisual(p),
+                "stylized painterly fantasy small jade wooden skiff boat with sail, game-ready low poly, hand-painted texture");
             AssetDatabase.SaveAssets();
+        }
+
+        /// <summary>Lauf 11: Boot aus Primitiven (Rumpf, Mast, Segel).</summary>
+        static GameObject SkiffVisual(Transform p)
+        {
+            var root = new GameObject("MSkiff"); root.transform.SetParent(p, false);
+            var wood = Mat("SkiffWood", new Color(0.55f, 0.38f, 0.22f)); var jadeM = Mat("SkiffJade", new Color(0.35f, 0.8f, 0.6f), 0.15f, new Color(0.2f, 0.8f, 0.5f) * 0.5f);
+            Part(root.transform, PrimitiveType.Cube, new Vector3(0, 0.3f, 0), new Vector3(1.6f, 0.5f, 4f), wood, "Rumpf");
+            Part(root.transform, PrimitiveType.Cube, new Vector3(0, 0.6f, 1.8f), new Vector3(1.2f, 0.3f, 0.6f), jadeM, "Bug");
+            Part(root.transform, PrimitiveType.Cylinder, new Vector3(0, 1.8f, 0.3f), new Vector3(0.12f, 1.5f, 0.12f), wood, "Mast");
+            Part(root.transform, PrimitiveType.Cube, new Vector3(0, 2f, 0.1f), new Vector3(0.05f, 1.8f, 1.4f), Mat("SkiffSail", new Color(0.95f, 0.92f, 0.85f)), "Segel");
+            return root;
         }
 
         /// <summary>Lauf 10: Himmelsschuppe aus dem Raptor-Rig mit Schuppenfarben, Hautflügeln und Hörnern (Platzhalter).</summary>
@@ -75,8 +95,8 @@ namespace ProjectTyrant.EditorTools
             var v = visual(go.transform);
             AddPlaceholder(v, "PT_Mount_" + k, prompt);
             // Lauf 5: Meshy-Modell auf das Vierbeiner-Skelett skinnen; bei Rissen bleibt die geriggte MeshKit-Fassung (Modell → Statue)
-            float mh = k == MountKind.Raptor || k == MountKind.Griffon || k == MountKind.Skyscale ? 2.6f : k == MountKind.Springer ? 2.4f : 1.3f;
-            string prof = k == MountKind.Raptor || k == MountKind.Griffon || k == MountKind.Skyscale ? "Raptor" : k == MountKind.Springer ? "Springer" : "Ray";
+            float mh = k == MountKind.Raptor || k == MountKind.Griffon || k == MountKind.Skyscale || k == MountKind.DuneRunner ? 2.6f : k == MountKind.Springer ? 2.4f : 1.3f;
+            string prof = k == MountKind.Raptor || k == MountKind.Griffon || k == MountKind.Skyscale || k == MountKind.DuneRunner ? "Raptor" : k == MountKind.Springer ? "Springer" : "Ray";
             var skinned = CharacterRigs.TryMeshyBeast(go.transform, "PT_Meshy_Mount" + k, mh, prof, true);
             if (skinned != null) { Object.DestroyImmediate(v); v = skinned; }
             CharacterRigs.Drive(go, v, Anim.AnimDriver.Role.Mount);

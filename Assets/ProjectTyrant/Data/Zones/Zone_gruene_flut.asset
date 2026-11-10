@@ -24,16 +24,16 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: gruene_flut_jadehafen
-    Position: {x: -375.5204, y: 0, z: -396.359}
+    Position: {x: -375.5204, y: 2.6, z: -396.359}
     Yaw: 43.45355
     TargetZone: jadehafen
     TargetPortal: jadehafen_gruene_flut
   - Id: gruene_flut_nebelkueste
-    Position: {x: 541.449, y: 0, z: -70.34912}
+    Position: {x: 541.449, y: 2.6, z: -70.34912}
     Yaw: -82.59717
     TargetZone: nebelkueste
     TargetPortal: nebelkueste_gruene_flut
-  DefaultSpawn: {x: 0, y: 0, z: -494}
+  DefaultSpawn: {x: 0, y: 2.6, z: -494}
   ContinentRect:
     serializedVersion: 2
     x: 0.04
@@ -41,31 +41,148 @@ MonoBehaviour:
     width: 0.34
     height: 0.3
   ContinentColor: {r: 0.2509804, g: 0.627451, b: 0.5019608, a: 1}
-  Waypoints: []
-  Arrivals: []
+  Waypoints:
+  - Id: wp_gruene_flut_ankunft
+    Name: "Wegmarke Gr\xFCne Flut"
+    Position: {x: 12, y: 2.6, z: -476}
+  - Id: wp_gruene_flut_jade_mine
+    Name: Wegmarke Jade-Mine
+    Position: {x: 248.27423, y: 2.6, z: -151.4022}
+  - Id: wp_gruene_flut_wrackfeld
+    Name: Wegmarke Wrackfeld
+    Position: {x: -172.85933, y: 2.6, z: -223.4133}
+  - Id: wp_gruene_flut_kranichinsel
+    Name: Wegmarke Kranichinsel
+    Position: {x: 73.0994, y: 2.6, z: 146.45251}
+  - Id: wp_gruene_flut_rissfeld
+    Name: Wegmarke Rissfeld
+    Position: {x: 480.6943, y: 2.6, z: 339.1353}
+  - Id: wp_gruene_flut_ankunft_jadehafen
+    Name: Portal-Wegmarke Jadehafen
+    Position: {x: -363.3938, y: 2.6, z: -392.00342}
+  - Id: wp_gruene_flut_ankunft_nebelkueste
+    Name: "Portal-Wegmarke Nebelk\xFCste"
+    Position: {x: 542.4272, y: 2.6, z: -65.57605}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 2.6, z: -494}
+    WaypointId: wp_gruene_flut_ankunft
+  - Entrance: portal:gruene_flut_jadehafen
+    Position: {x: -371.3938, y: 2.6, z: -392.00342}
+    WaypointId: wp_gruene_flut_ankunft_jadehafen
+  - Entrance: portal:gruene_flut_nebelkueste
+    Position: {x: 535.49896, y: 2.6, z: -69.57605}
+    WaypointId: wp_gruene_flut_ankunft_nebelkueste
   Tips:
   - Mit dem Boot erreichst du die Angelstellen am besten.
   - 'Signatur: Boot-Zone, Angelstellen, Jade-Minen-Events'
-  LoadingImage: {fileID: 0}
-  Regions: []
+  LoadingImage: {fileID: 2800000, guid: 7854712a5cc65224dbdd5e1b7c225c4e, type: 3}
+  Regions:
+  - Name: Rissfeld
+    Center: {x: 497.80988, y: -520}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Laternenriff
+    Center: {x: 120.31401, y: -341.28394}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Fischerdorf Wan
+    Center: {x: -189.43597, y: 181.93958}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: "Gr\xFCner Spiegel"
+    Center: {x: 349.03586, y: 388.5193}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Strahlender Riss
+    Center: {x: 430.54877, y: 443.59747}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
   TimerLabel: 
   TimerPeriod: 0
   TimerOffset: 0
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: gruene_flut
+    Size: 1300
+    Anchors:
+    - {x: 0, y: -494}
+    - {x: -371.3938, y: -392.00342}
+    - {x: 535.49896, y: -69.57605}
+    Waypoints:
+    - {x: 12, y: -476}
+    - {x: 248.27423, y: -151.4022}
+    - {x: -172.85933, y: -223.4133}
+    - {x: 73.0994, y: 146.45251}
+    - {x: 480.6943, y: 339.1353}
+    - {x: -363.3938, y: -392.00342}
+    - {x: 542.4272, y: -65.57605}
+    BandEdges:
+    - 390.00003
+    BandLevels: 0400000004000000i
+    Areas:
+    - Name: Rissfeld
+      Center: {x: 497.80988, y: -520}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Laternenriff
+      Center: {x: 120.31401, y: -341.28394}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Fischerdorf Wan
+      Center: {x: -189.43597, y: 181.93958}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: "Gr\xFCner Spiegel"
+      Center: {x: 349.03586, y: 388.5193}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Strahlender Riss
+      Center: {x: 430.54877, y: 443.59747}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
-  CompletionIds: []
+  CompletionIds:
+  - wp_gruene_flut_ankunft
+  - wp_gruene_flut_jade_mine
+  - wp_gruene_flut_wrackfeld
+  - wp_gruene_flut_kranichinsel
+  - wp_gruene_flut_rissfeld
+  - poi_gruene_flut_rissfeld
+  - poi_gruene_flut_laternenriff
+  - poi_gruene_flut_fischerdorf_wan
+  - poi_gruene_flut_gruener_spiegel
+  - poi_gruene_flut_strahlender_riss
+  - vista_gruene_flut_0
+  - vista_gruene_flut_1
+  - vista_gruene_flut_2
+  - hc_gruene_flut_0
+  - hc_gruene_flut_1
+  - hc_gruene_flut_2
+  - hc_gruene_flut_3
+  - heart_gruene_flut_0
+  - heart_gruene_flut_1
+  - heart_gruene_flut_2
+  - heart_gruene_flut_3
   Region: 2
   IsHub: 0

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ProjectTyrant
 {
-    public enum MasteryLine { Reittiere, Gleiten, Umwelt, Kommandant, Greif, Himmelsschuppe }
+    public enum MasteryLine { Reittiere, Gleiten, Umwelt, Kommandant, Greif, Himmelsschuppe, Duenenlaeufer, Jadegeist, Boot }   // Lauf 11: Regionen-Linien
 
     /// <summary>Kosten eines Rangs: Beherrschungs-EP (Training) + Beherrschungspunkte (Freischaltung).</summary>
     [System.Serializable]
@@ -84,6 +84,9 @@ namespace ProjectTyrant
                 case MasteryLine.Umwelt: return "Umweltkunde";
                 case MasteryLine.Greif: return "Greif";
                 case MasteryLine.Himmelsschuppe: return "Himmelsschuppe";
+                case MasteryLine.Duenenlaeufer: return "Dünenläufer";
+                case MasteryLine.Jadegeist: return "Jadegeist";
+                case MasteryLine.Boot: return "Boot";
                 default: return "Kommandant";
             }
         }
@@ -114,6 +117,10 @@ namespace ProjectTyrant
         public static bool SkyscaleWallCling(MasteryModel m) => m.Has(MasteryLine.Himmelsschuppe, 1);
         public static bool SkyscaleUpdrafts(MasteryModel m) => m.Has(MasteryLine.Himmelsschuppe, 3);
         public static bool TrustBond(MasteryModel m) => m.Has(MasteryLine.Himmelsschuppe, 4);
+        // Lauf 11: Dünenläufer (3), Jadegeist (4), Boot (2)
+        public static int DuneRunnerRank(MasteryModel m) => m == null ? 0 : m.Rank(MasteryLine.Duenenlaeufer);
+        public static int JadeBotRank(MasteryModel m) => m == null ? 0 : m.Rank(MasteryLine.Jadegeist);
+        public static int BoatRank(MasteryModel m) => m == null ? 0 : m.Rank(MasteryLine.Boot);
         public static float TravelDiscount(MasteryModel m) => m.Has(MasteryLine.Kommandant, 3) ? 0.4f : m.Has(MasteryLine.Kommandant, 2) ? 0.2f : 0f;
     }
 }

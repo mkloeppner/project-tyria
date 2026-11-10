@@ -76,7 +76,7 @@ MonoBehaviour:
   Tips:
   - "Der Skimmer gleitet \xFCber die Kan\xE4le, Fl\xF6\xDFe verbinden die Inseln."
   - "Signatur: Boot-Vorbereitung (Fl\xF6\xDFe), Skimmer-Pfade"
-  LoadingImage: {fileID: 0}
+  LoadingImage: {fileID: 2800000, guid: 05cd2bd436b8c8448bbab5d79d740137, type: 3}
   Regions:
   - Name: Rohrdommelbank
     Center: {x: -130.99205, y: -440}
@@ -109,17 +109,58 @@ MonoBehaviour:
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: schilfmuendung
+    Size: 1100
+    Anchors:
+    - {x: 0, y: -418}
+    - {x: 257.477, y: 376.35303}
+    - {x: -437.26947, y: 129.34996}
+    Waypoints:
+    - {x: 12, y: -400}
+    - {x: 210.39139, y: -394.9087}
+    - {x: 230.17494, y: -72.45708}
+    - {x: -366.0076, y: 68.66849}
+    - {x: 169.05028, y: 313.3566}
+    - {x: 265.477, y: 376.35303}
+    - {x: -429.26947, y: 129.34996}
+    BandEdges:
+    - 330
+    BandLevels: 0300000004000000i
+    Areas:
+    - Name: Rohrdommelbank
+      Center: {x: -130.99205, y: -440}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Alte Schleuse
+      Center: {x: 301.03693, y: -161.7717}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Deltaturm
+      Center: {x: 25.255737, y: 32.018433}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Salzwiesen
+      Center: {x: -115.28743, y: 315.5998}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Krebsbucht
+      Center: {x: -349.03876, y: 440}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
   CompletionIds:
   - wp_schilfmuendung_ankunft

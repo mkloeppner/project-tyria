@@ -76,7 +76,7 @@ MonoBehaviour:
   Tips:
   - "Wandernde Herden ziehen \xFCber die Weite \u2013 folge ihnen zu den Wasserstellen."
   - 'Signatur: Herden-Events, Reittier-Weiten'
-  LoadingImage: {fileID: 0}
+  LoadingImage: {fileID: 2800000, guid: 64146c5d3e8fdba479b9773156a17aa6, type: 3}
   Regions:
   - Name: Grasmeer
     Center: {x: 236.72655, y: -480}
@@ -109,17 +109,58 @@ MonoBehaviour:
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: weite_von_ahrn
+    Size: 1200
+    Anchors:
+    - {x: 0, y: -456}
+    - {x: 281.19196, y: 411.0171}
+    - {x: 493.84906, y: -64.16457}
+    Waypoints:
+    - {x: 12, y: -438}
+    - {x: 431.18732, y: -310.68738}
+    - {x: 391.2426, y: 36.159153}
+    - {x: -314.09122, y: 9.486923}
+    - {x: -376.40225, y: 219.85526}
+    - {x: 289.19196, y: 411.0171}
+    - {x: 500.77725, y: -60.164574}
+    BandEdges:
+    - 360
+    BandLevels: 0300000003000000i
+    Areas:
+    - Name: Grasmeer
+      Center: {x: 236.72655, y: -480}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: "Ahnenh\xFCgel"
+      Center: {x: 184.12975, y: -144.18274}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Herdenpfad
+      Center: {x: 281.1791, y: -146.08916}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Wolkenrast
+      Center: {x: -73.96255, y: 150.74902}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
+    - Name: Steppentor
+      Center: {x: 132.79262, y: 478.74167}
+      Radius: 110
+      Level: 3
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
   CompletionIds:
   - wp_weite_von_ahrn_ankunft

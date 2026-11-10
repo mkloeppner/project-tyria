@@ -10,7 +10,7 @@ namespace ProjectTyrant.EditorTools
         public const string Dir = DataDir + "/Mastery";
 
         public static MasteryLineDefinition Load(MasteryLine l) => AssetDatabase.LoadAssetAtPath<MasteryLineDefinition>(Dir + "/Mastery_" + l + ".asset");
-        public static MasteryLineDefinition[] LoadAll() => new[] { Load(MasteryLine.Reittiere), Load(MasteryLine.Gleiten), Load(MasteryLine.Umwelt), Load(MasteryLine.Kommandant), Load(MasteryLine.Greif), Load(MasteryLine.Himmelsschuppe) };
+        public static MasteryLineDefinition[] LoadAll() => new[] { Load(MasteryLine.Reittiere), Load(MasteryLine.Gleiten), Load(MasteryLine.Umwelt), Load(MasteryLine.Kommandant), Load(MasteryLine.Greif), Load(MasteryLine.Himmelsschuppe), Load(MasteryLine.Duenenlaeufer), Load(MasteryLine.Jadegeist), Load(MasteryLine.Boot) };
 
         static MasteryRankCost R(string n, string e, long xp, int pts) => new MasteryRankCost { Name = n, Effect = e, Xp = xp, Points = pts };
 
@@ -35,6 +35,15 @@ namespace ProjectTyrant.EditorTools
             Line(MasteryLine.Himmelsschuppe, "Himmelsschuppe", "Der junge Himmelsdrache: senkrechter Flug, Schweben, Feuerstoß (Sammlung in den Himmelsspitzen).", "mount_skyscale", new Color(0.55f, 0.75f, 1f), new[] {
                 R("Wandhaften", "An steilen Wänden (≥ 60°) festhalten und Flugausdauer regenerieren (max. 20 s)", 8000, 1), R("Flugkondition", "Flugausdauer 150 statt 100, Schweben kostet 3/s statt 5/s", 14000, 2),
                 R("Aufwind-Segeln", "Aufwinde füllen die Flugausdauer sofort", 18000, 2), R("Vertrauensband", "In der Luft zwischen Greif und Himmelsschuppe wechseln; Flugausdauer regeneriert 5/s im Flug", 26000, 3) });
+            // Lauf 11: Regionen-Linien
+            Line(MasteryLine.Duenenlaeufer, "Dünenläufer", "Der Sprinter der Glutwüste: Blinkschritt und Sandportale.", "mount_dunerunner", new Color(0.95f, 0.75f, 0.4f), new[] {
+                R("Dritte Ladung", "Blinkschritt mit 3 statt 2 Ladungen", 20000, 2), R("Portalmeister", "Sandportale lassen sich aus 4 m statt 2,5 m nutzen", 26000, 2),
+                R("Sandgleiten", "Blinkschritt auch in der Luft", 32000, 3) });
+            Line(MasteryLine.Jadegeist, "Jadegeist", "Dein schwebender Begleiter aus Jade (Werkstatt in Jadehafen).", "mastery_jade", new Color(0.4f, 0.9f, 0.7f), new[] {
+                R("Rettungsprotokoll", "Belebt dich einmal je 10 Minuten aus dem Kampfunfähig-Zustand (50 % HP)", 18000, 1), R("Gleitverstärkung", "Gleiter-Ausdauer +50 %, Jade-Aufwinde", 24000, 2),
+                R("Jadebatterien", "Treibt Jade-Geräte an: Aufzüge, Brücken, Kanonen, Truhen", 30000, 2), R("Jadeband", "Sammelt Beute im Umkreis von 20 m, markiert Angelstellen und Einblicke", 36000, 3) });
+            Line(MasteryLine.Boot, "Boot", "Das Boot der Bootswerft in Jadehafen.", "mastery_boat", new Color(0.5f, 0.8f, 0.95f), new[] {
+                R("Rudermeister", "Boot +20 % Tempo", 14000, 1), R("Jade-Schub", "5 s +60 % Tempo, 20 s Abklingzeit", 22000, 2) });
             AssetDatabase.SaveAssets();
         }
 

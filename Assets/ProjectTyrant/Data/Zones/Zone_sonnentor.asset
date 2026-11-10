@@ -109,7 +109,7 @@ MonoBehaviour:
   Tips:
   - "Kopfgeldtafel, Rennleitung und Stallmeister \u2013 alles am Gro\xDFen Basar."
   - "Signatur: Hub, Kopfgeldtafel, Stallmeister D\xFCnenl\xE4ufer"
-  LoadingImage: {fileID: 0}
+  LoadingImage: {fileID: 2800000, guid: 17cc7c30dec3c5047acc17027ef4a94c, type: 3}
   Regions:
   - Name: Oasenhafen
     Center: {x: -249.18336, y: -320}
@@ -142,17 +142,65 @@ MonoBehaviour:
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: sonnentor
+    Size: 800
+    Anchors:
+    - {x: 0, y: -304}
+    - {x: 186.33203, y: 272.36075}
+    - {x: 327.2494, y: -42.5187}
+    - {x: -60.113506, y: 324.4786}
+    - {x: 261.91046, y: 200.75587}
+    - {x: -316.445, y: 93.60853}
+    Waypoints:
+    - {x: 12, y: -286}
+    - {x: -198.1263, y: -232.03444}
+    - {x: -49.029305, y: 15.352745}
+    - {x: 227.52174, y: 9.174347}
+    - {x: 2.0064871, y: 177.17392}
+    - {x: 194.33203, y: 272.36075}
+    - {x: 334.17758, y: -38.5187}
+    - {x: -52.113506, y: 324.4786}
+    - {x: 269.91046, y: 200.75587}
+    - {x: -308.445, y: 93.60853}
+    BandEdges:
+    - 240.00002
+    - 480.00003
+    BandLevels: 000000000100000002000000i
+    Areas:
+    - Name: Oasenhafen
+      Center: {x: -249.18336, y: -320}
+      Radius: 110
+      Level: 0
+      City: 1
+      NoLeash: 0
+    - Name: Kopfgeldhalle
+      Center: {x: 235.35544, y: -178.8202}
+      Radius: 110
+      Level: 0
+      City: 1
+      NoLeash: 0
+    - Name: Palmenhain
+      Center: {x: 61.368187, y: 27.01809}
+      Radius: 110
+      Level: 0
+      City: 1
+      NoLeash: 0
+    - Name: Sonnenturm
+      Center: {x: -142.48402, y: 103.29502}
+      Radius: 110
+      Level: 0
+      City: 1
+      NoLeash: 0
+    - Name: Stallhof
+      Center: {x: 69.97447, y: 302.41714}
+      Radius: 110
+      Level: 0
+      City: 1
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
   CompletionIds:
   - wp_sonnentor_ankunft

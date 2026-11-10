@@ -131,12 +131,16 @@ MonoBehaviour:
     - {x: 0, y: -420}
     - {x: -29.609526, y: -454.01273}
     - {x: 13.795241, y: -404.0035}
+    - {x: -75.41512, y: 407.07318}
+    - {x: 328.57858, y: 251.85736}
     Waypoints:
     - {x: 10, y: -400}
     - {x: -160, y: -180}
     - {x: 230, y: 120}
     - {x: 20, y: 280}
     - {x: -21.609526, y: -454.01273}
+    - {x: -67.41512, y: 407.07318}
+    - {x: 336.57858, y: 251.85736}
     BandEdges:
     - 350
     BandLevels: 0400000005000000i
@@ -150,19 +154,19 @@ MonoBehaviour:
     - Name: Der Alte Hain
       Center: {x: 200, y: 150}
       Radius: 110
-      Level: 5
+      Level: 4
       City: 0
       NoLeash: 0
     - Name: "W\xE4chterstein"
       Center: {x: 0, y: 300}
       Radius: 110
-      Level: 5
+      Level: 4
       City: 0
       NoLeash: 0
     - Name: Violetter Grund
       Center: {x: -260, y: 120}
       Radius: 110
-      Level: 5
+      Level: 4
       City: 0
       NoLeash: 0
     - Name: Zerfallene Kapelle

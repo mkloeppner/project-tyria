@@ -56,7 +56,7 @@ namespace ProjectTyrant
                 InCity = Balance.BalanceWorld.InHub(transform.position),
                 InStoryInstance = story != null && story.InInstance,
                 InCutscene = ThirdPersonCameraRig.CinematicActive || (dlg != null && dlg.IsInvulnerable),
-                StoryFinished = story != null && story.State != null && story.State.Finished,
+                StoryFinished = story != null && story.State != null && (story.State.Finished || story.State.Chapter > 10),   // Lauf 11: Tyrannen-Geschichte = Kapitel 1–10
                 UnderRoof = UnderRoof(),
                 NearBossFight = NearBossFight(),
             };

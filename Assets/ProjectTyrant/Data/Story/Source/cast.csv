@@ -86,3 +86,11 @@ sp_himmelsspitzen_3;Späher Falk;#C8D0E0;0.8;0.92;0.06;-0.3;0;0;6;world;#5A6E7A;
 sp_tyrannenfeste_1;Späherin Greta;#C8D0E0;1.06;1.00;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
 sp_tyrannenfeste_2;Späher Konrad;#C8D0E0;0.74;1.08;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
 sp_tyrannenfeste_3;Späherin Asta;#C8D0E0;1.02;0.96;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+ilyas;Ilyas;#F0C860;0.95;0.95;0.12;0.1;0;0;15;scholar;#C8A040;#F0E0A0;Sonnenpriester, Gefährte;Diente dem Orden der Glut, bis er verstand, wem er dient. Lächelt, wenn er lügt – und wenn er stirbt.
+zarath;Zarath, der Flammenkönig;#E04020;0.7;0.9;0.2;-0.5;0;1;16;tyrant;#801810;#F0A020;Antagonist der Glutwüste;Hohepriester des Ordens, Vareths Nachfolger, krönte sich selbst. Glaubt, Flammen fragen nicht.
+linsao;Lin Sao;#50C8A0;1.1;1.08;0.08;0.3;1;0;20;scholar;#2A7A5A;#E0D0A0;Werkstattmeisterin, Gefährtin;Baut Jadegeister und schimpft mit ihnen wie mit Kindern. Liebt ihre Stadt und ihre Lichter.
+yuen;Kaiserin Yuen;#C0A0F0;1.0;0.9;0.14;0.1;1;0;20;herald;#5A2A7A;#F0D080;Kaiserin der Dracheninseln;Misstrauisch, klug, einsam. Hält den alten Vertrag für die einzige Ordnung, die sie kennt.
+kael;Kael;#8090A0;0.82;1.05;0.16;-0.3;0;1;24;herald;#2A3040;#90A0C0;Antagonist der Dracheninseln;Schüler des Herolds, der besser zugehört hat. Will keinen Thron, sondern einen Drachen.
+mei;Schwester Mei;#A0D0B0;1.05;0.92;0.18;0.2;1;0;22;scholar;#6A8A6A;#E8E0C8;Klosterschwester;Hütet den alten Vertrag und hält ihn für ein Unrecht mit Glocken.
+daro;Hauptmann Daro;#C05040;0.78;1.0;0.1;-0.4;0;0;23;soldier;#7A2A20;#C0A060;Anführer der Abtrünnigen;Verließ die kaiserliche Garde, als er sah, wofür sie kämpft.
+scout;Späher;#90B0D0;1.0;1.05;0.08;0;0;0;11;world;#4A6A8A;#C0B080;Späher der Regionen;Kennt jeden Pfad und jede Gefahr seines Gebiets.

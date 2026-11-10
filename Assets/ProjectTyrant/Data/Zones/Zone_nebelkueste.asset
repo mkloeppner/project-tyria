@@ -24,16 +24,16 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: nebelkueste_gruene_flut
-    Position: {x: -317.74802, y: 0, z: -335.3807}
+    Position: {x: -317.74802, y: 2, z: -335.3807}
     Yaw: 43.45355
     TargetZone: gruene_flut
     TargetPortal: gruene_flut_nebelkueste
   - Id: nebelkueste_herz_der_flut
-    Position: {x: 458.14914, y: 0, z: -59.52618}
+    Position: {x: 458.14914, y: 3.999973, z: -59.52618}
     Yaw: -82.59717
     TargetZone: herz_der_flut
     TargetPortal: herz_der_flut_nebelkueste
-  DefaultSpawn: {x: 0, y: 0, z: -418}
+  DefaultSpawn: {x: 0, y: 2, z: -418}
   ContinentRect:
     serializedVersion: 2
     x: 0.62
@@ -41,31 +41,148 @@ MonoBehaviour:
     width: 0.34
     height: 0.3
   ContinentColor: {r: 0.4392157, g: 0.5019608, b: 0.5647059, a: 1}
-  Waypoints: []
-  Arrivals: []
+  Waypoints:
+  - Id: wp_nebelkueste_ankunft
+    Name: "Wegmarke Nebelk\xFCste"
+    Position: {x: 12, y: 2, z: -400}
+  - Id: wp_nebelkueste_drachenrippe
+    Name: Wegmarke Drachenrippe
+    Position: {x: 394.86606, y: 7.2965913, z: -245.12224}
+  - Id: wp_nebelkueste_nebelhafen
+    Name: Wegmarke Nebelhafen
+    Position: {x: 58.793728, y: 2, z: -147.26576}
+  - Id: wp_nebelkueste_piratenfeste
+    Name: Wegmarke Piratenfeste
+    Position: {x: -359.27292, y: 2, z: 83.764465}
+  - Id: wp_nebelkueste_knochenbucht
+    Name: Wegmarke Knochenbucht
+    Position: {x: -260.69125, y: 2, z: 196.98512}
+  - Id: wp_nebelkueste_ankunft_gruene_flut
+    Name: "Portal-Wegmarke Gr\xFCne Flut"
+    Position: {x: -306.69324, y: 1.6212842, z: -327.02512}
+  - Id: wp_nebelkueste_ankunft_herz_der_flut
+    Name: Portal-Wegmarke Herz der Flut
+    Position: {x: 459.12738, y: 3.999973, z: -54.753113}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 2, z: -418}
+    WaypointId: wp_nebelkueste_ankunft
+  - Entrance: portal:nebelkueste_gruene_flut
+    Position: {x: -313.62143, y: 2, z: -331.02512}
+    WaypointId: wp_nebelkueste_ankunft_gruene_flut
+  - Entrance: portal:nebelkueste_herz_der_flut
+    Position: {x: 452.19916, y: 3.999973, z: -58.753113}
+    WaypointId: wp_nebelkueste_ankunft_herz_der_flut
   Tips:
   - "Im Nebel lauern Piraten \u2013 und eine gewaltige Schlange."
   - "Signatur: Story-Kapitel 4\u20136, Weltboss Nebelschlange"
-  LoadingImage: {fileID: 0}
-  Regions: []
-  TimerLabel: 
-  TimerPeriod: 0
-  TimerOffset: 0
-  TimerPosition: {x: 0, y: 0, z: 0}
-  TimerEventId: 
+  LoadingImage: {fileID: 2800000, guid: fce54ba06e80a984b80653eb4c170d73, type: 3}
+  Regions:
+  - Name: Knochenbucht
+    Center: {x: -114.10448, y: -440}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Schwarzer Fels
+    Center: {x: -312.35788, y: -183.34596}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: "Schlangenh\xF6hle"
+    Center: {x: 202.19032, y: -59.91757}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Grauer Strand
+    Center: {x: 100.82099, y: 315.43448}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Sturmwarte
+    Center: {x: 12.236358, y: 440}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  TimerLabel: Nebelschlange
+  TimerPeriod: 7200
+  TimerOffset: 6600
+  TimerPosition: {x: -263.2653, y: 12, z: 491.87738}
+  TimerEventId: nebelschlange
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: nebelkueste
+    Size: 1100
+    Anchors:
+    - {x: 0, y: -418}
+    - {x: -313.62143, y: -331.02512}
+    - {x: 452.19916, y: -58.753113}
+    Waypoints:
+    - {x: 12, y: -400}
+    - {x: 394.86606, y: -245.12224}
+    - {x: 58.793728, y: -147.26576}
+    - {x: -359.27292, y: 83.764465}
+    - {x: -260.69125, y: 196.98512}
+    - {x: -306.69324, y: -327.02512}
+    - {x: 459.12738, y: -54.753113}
+    BandEdges:
+    - 330
+    BandLevels: 0400000005000000i
+    Areas:
+    - Name: Knochenbucht
+      Center: {x: -114.10448, y: -440}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Schwarzer Fels
+      Center: {x: -312.35788, y: -183.34596}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: "Schlangenh\xF6hle"
+      Center: {x: 202.19032, y: -59.91757}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Grauer Strand
+      Center: {x: 100.82099, y: 315.43448}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
+    - Name: Sturmwarte
+      Center: {x: 12.236358, y: 440}
+      Radius: 110
+      Level: 5
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
-  CompletionIds: []
+  CompletionIds:
+  - wp_nebelkueste_ankunft
+  - wp_nebelkueste_drachenrippe
+  - wp_nebelkueste_nebelhafen
+  - wp_nebelkueste_piratenfeste
+  - wp_nebelkueste_knochenbucht
+  - poi_nebelkueste_knochenbucht
+  - poi_nebelkueste_schwarzer_fels
+  - poi_nebelkueste_schlangenhoehle
+  - poi_nebelkueste_grauer_strand
+  - poi_nebelkueste_sturmwarte
+  - vista_nebelkueste_0
+  - vista_nebelkueste_1
+  - vista_nebelkueste_2
+  - hc_nebelkueste_0
+  - hc_nebelkueste_1
+  - hc_nebelkueste_2
+  - hc_nebelkueste_3
+  - heart_nebelkueste_0
+  - heart_nebelkueste_1
+  - heart_nebelkueste_2
+  - heart_nebelkueste_3
   Region: 2
   IsHub: 0

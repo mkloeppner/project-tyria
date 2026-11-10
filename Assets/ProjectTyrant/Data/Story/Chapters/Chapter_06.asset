@@ -15,7 +15,7 @@ MonoBehaviour:
   Number: 6
   Title: Der Hafen der hundert Segel
   Zone: silberkueste
-  MinLevel: 30
+  MinLevel: 40
   Summary: "Ankunft in Silbermund, Portalplatz und die Politik der B\xFCndnisse. Jedes B\xFCndnis hat einen eigenen Auftrag."
   Steps:
   - Id: K06_S01

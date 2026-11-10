@@ -194,6 +194,8 @@ namespace ProjectTyrant
             var ch = Chapter;
             var r = StoryModel.Complete(Database, State);
             Grant(r.Reward, st.Title);
+            if (State.HasFlag("duenenlaeufer") && PlayerProfile.Instance != null && !PlayerProfile.Instance.OwnsMount(MountKind.DuneRunner)) { PlayerProfile.Instance.UnlockMount(MountKind.DuneRunner); GameEventBus.RaiseBanner("Dünenläufer", "Neues Reittier – Leertaste: Blinkschritt", StoryGreen); }   // Lauf 11
+            if (r.ChapterDone && r.NewChapter == 11) { GameEventBus.RaiseBanner("Die Chronik des Tyrannen ist erzählt", "Zwischenspiel: Asche des Siegels", StoryGreen); PlayerProfile.Instance?.AwardMasteryPoints(3, "Chronik des Tyrannen"); }   // Lauf 11: Ende der Tyrannen-Geschichte
             if (State.HasFlag("greif_vertrauen") && PlayerProfile.Instance != null && !PlayerProfile.Instance.OwnsMount(MountKind.Griffon)) { PlayerProfile.Instance.UnlockMount(MountKind.Griffon); GameEventBus.RaiseBanner("Greif", "Neues Reittier – X halten zum Wählen", StoryGreen); }   // Lauf 6: Greif über die Geschichte
             if (!string.IsNullOrEmpty(r.Letter)) SendLetter(r.Letter);
             if (r.ChapterDone && ch != null)
@@ -472,7 +474,8 @@ namespace ProjectTyrant
         {
             var s = State; if (s == null) return "kein Profil";
             ClearPresence(); if (Instance.Active) LeaveInstance();
-            s.Chapter = Mathf.Clamp(chapter, 1, 10); s.Step = Mathf.Max(0, step); s.Finished = false; s.Counters.Clear();
+            s.Chapter = Mathf.Clamp(chapter, 1, Database != null && Database.Chapters.Count > 0 ? Database.Chapters.Count : 10);
+            s.Step = Mathf.Max(0, step); s.Finished = false; s.Counters.Clear();   // Lauf 11: Kapitel bis Datenbank-Anzahl (26)
             _presentFor = null; GameEventBus.RaiseProfileChanged();
             return "Kapitel " + s.Chapter + " Schritt " + (s.Step + 1) + ": " + (Step != null ? Step.Title : "–");
         }

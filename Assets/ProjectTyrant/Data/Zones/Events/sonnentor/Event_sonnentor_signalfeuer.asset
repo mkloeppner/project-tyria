@@ -20,7 +20,7 @@ MonoBehaviour:
   Center: {x: 202.52174, y: 4.2437477, z: 24.174347}
   Radius: 30
   Duration: 210
-  TargetCount: 4
+  TargetCount: 2
   Triggers:
   - Type: 1
     Delay: 20
@@ -70,6 +70,6 @@ MonoBehaviour:
   MasteryPoints: 0
   MetaId: 
   MetaPhase: 0
-  Tier: 2
-  TierSet: 0
-  BalanceBaseTargets: 0
+  Tier: 0
+  TierSet: 1
+  BalanceBaseTargets: 4

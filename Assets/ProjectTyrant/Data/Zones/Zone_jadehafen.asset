@@ -24,26 +24,26 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: jadehafen_gruene_flut
-    Position: {x: 189.71988, y: 0, z: 277.31277}
+    Position: {x: 189.71988, y: 2, z: 277.31277}
     Yaw: -145.62253
     TargetZone: gruene_flut
     TargetPortal: gruene_flut_jadehafen
   - Id: jadehafen_fluesterhain
-    Position: {x: 333.19937, y: 0, z: -43.291767}
+    Position: {x: 333.19937, y: 2, z: -43.291767}
     Yaw: -82.59717
     TargetZone: fluesterhain
     TargetPortal: fluesterhain_jadehafen
   - Id: jadehafen_silberkueste_schiff
-    Position: {x: -61.20648, y: 0, z: 330.3782}
+    Position: {x: -61.20648, y: 2, z: 330.3782}
     Yaw: 169.50427
     TargetZone: silberkueste
     TargetPortal: silberkueste_jadehafen_schiff
   - Id: jadehafen_sonnentor_schiff
-    Position: {x: 266.67245, y: 0, z: 204.40598}
+    Position: {x: 266.67245, y: 2, z: 204.40598}
     Yaw: -127.470375
     TargetZone: sonnentor
     TargetPortal: sonnentor_jadehafen_schiff
-  DefaultSpawn: {x: 0, y: 0, z: -304}
+  DefaultSpawn: {x: 0, y: 2, z: -304}
   ContinentRect:
     serializedVersion: 2
     x: 0.4
@@ -51,31 +51,165 @@ MonoBehaviour:
     width: 0.2
     height: 0.2
   ContinentColor: {r: 0.3529412, g: 0.78431374, b: 0.627451, a: 1}
-  Waypoints: []
-  Arrivals: []
+  Waypoints:
+  - Id: wp_jadehafen_ankunft
+    Name: Wegmarke Jadehafen
+    Position: {x: 12, y: 2, z: -286}
+  - Id: wp_jadehafen_hafenebene
+    Name: Wegmarke Hafenebene
+    Position: {x: 142.1452, y: 2, z: -125.459}
+  - Id: wp_jadehafen_mittelstadt
+    Name: Wegmarke Mittelstadt
+    Position: {x: 311.73447, y: 2, z: 15.226212}
+  - Id: wp_jadehafen_oberstadt
+    Name: Wegmarke Oberstadt
+    Position: {x: 90.10217, y: 2, z: -23.733654}
+  - Id: wp_jadehafen_jadegeist_werkstatt
+    Name: Wegmarke Jadegeist-Werkstatt
+    Position: {x: 206.38106, y: 2, z: 132.5693}
+  - Id: wp_jadehafen_ankunft_gruene_flut
+    Name: "Portal-Wegmarke Gr\xFCne Flut"
+    Position: {x: 194.33203, y: 2, z: 272.36075}
+  - Id: wp_jadehafen_ankunft_fluesterhain
+    Name: "Portal-Wegmarke Fl\xFCsterhain"
+    Position: {x: 334.17758, y: 2, z: -38.5187}
+  - Id: wp_jadehafen_ankunft_silberkueste_schiff
+    Name: "Portal-Wegmarke Silberk\xFCste"
+    Position: {x: -52.113506, y: 1.6562225, z: 324.4786}
+  - Id: wp_jadehafen_ankunft_sonnentor_schiff
+    Name: Portal-Wegmarke Sonnentor
+    Position: {x: 269.91046, y: 2, z: 200.75587}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 2, z: -304}
+    WaypointId: wp_jadehafen_ankunft
+  - Entrance: portal:jadehafen_gruene_flut
+    Position: {x: 186.33203, y: 2, z: 272.36075}
+    WaypointId: wp_jadehafen_ankunft_gruene_flut
+  - Entrance: portal:jadehafen_fluesterhain
+    Position: {x: 327.2494, y: 2, z: -42.5187}
+    WaypointId: wp_jadehafen_ankunft_fluesterhain
+  - Entrance: portal:jadehafen_silberkueste_schiff
+    Position: {x: -60.113506, y: 2, z: 324.4786}
+    WaypointId: wp_jadehafen_ankunft_silberkueste_schiff
+  - Entrance: portal:jadehafen_sonnentor_schiff
+    Position: {x: 261.91046, y: 2, z: 200.75587}
+    WaypointId: wp_jadehafen_ankunft_sonnentor_schiff
   Tips:
   - "Aufz\xFCge verbinden Hafen, Mittelstadt und Oberstadt."
   - 'Signatur: Hub, Jadegeist-Werkstatt, Anglerverband, Bootswerft'
-  LoadingImage: {fileID: 0}
-  Regions: []
+  LoadingImage: {fileID: 2800000, guid: 2c2980486f97b364fa7caafdf3a6b08e, type: 3}
+  Regions:
+  - Name: Jadegeist-Werkstatt
+    Center: {x: 130.9614, y: -320}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Anglerverband
+    Center: {x: -107.08385, y: -72.32298}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Bootswerft
+    Center: {x: -44.72164, y: 38.8237}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Kaiserlicher Garten
+    Center: {x: -299.83435, y: 253.05527}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
+  - Name: Laternenmarkt
+    Center: {x: -28.496635, y: 263.67712}
+    Radius: 110
+    LevelMin: 80
+    LevelMax: 80
   TimerLabel: 
   TimerPeriod: 0
   TimerOffset: 0
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: jadehafen
+    Size: 800
+    Anchors:
+    - {x: 0, y: -304}
+    - {x: 186.33203, y: 272.36075}
+    - {x: 327.2494, y: -42.5187}
+    - {x: -60.113506, y: 324.4786}
+    - {x: 261.91046, y: 200.75587}
+    Waypoints:
+    - {x: 12, y: -286}
+    - {x: 142.1452, y: -125.459}
+    - {x: 311.73447, y: 15.226212}
+    - {x: 90.10217, y: -23.733654}
+    - {x: 206.38106, y: 132.5693}
+    - {x: 194.33203, y: 272.36075}
+    - {x: 334.17758, y: -38.5187}
+    - {x: -52.113506, y: 324.4786}
+    - {x: 269.91046, y: 200.75587}
+    BandEdges:
+    - 240.00002
+    - 480.00003
+    BandLevels: 000000000100000002000000i
+    Areas:
+    - Name: Jadegeist-Werkstatt
+      Center: {x: 130.9614, y: -320}
+      Radius: 110
+      Level: 0
+      City: 1
+      NoLeash: 0
+    - Name: Anglerverband
+      Center: {x: -107.08385, y: -72.32298}
+      Radius: 110
+      Level: 0
+      City: 1
+      NoLeash: 0
+    - Name: Bootswerft
+      Center: {x: -44.72164, y: 38.8237}
+      Radius: 110
+      Level: 0
+      City: 1
+      NoLeash: 0
+    - Name: Kaiserlicher Garten
+      Center: {x: -299.83435, y: 253.05527}
+      Radius: 110
+      Level: 0
+      City: 1
+      NoLeash: 0
+    - Name: Laternenmarkt
+      Center: {x: -28.496635, y: 263.67712}
+      Radius: 110
+      Level: 0
+      City: 1
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
-  CompletionIds: []
+  CompletionIds:
+  - wp_jadehafen_ankunft
+  - wp_jadehafen_hafenebene
+  - wp_jadehafen_mittelstadt
+  - wp_jadehafen_oberstadt
+  - wp_jadehafen_jadegeist_werkstatt
+  - poi_jadehafen_jadegeist_werkstatt
+  - poi_jadehafen_anglerverband
+  - poi_jadehafen_bootswerft
+  - poi_jadehafen_kaiserlicher_garten
+  - poi_jadehafen_laternenmarkt
+  - vista_jadehafen_0
+  - vista_jadehafen_1
+  - vista_jadehafen_2
+  - hc_jadehafen_0
+  - hc_jadehafen_1
+  - hc_jadehafen_2
+  - hc_jadehafen_3
+  - heart_jadehafen_0
+  - heart_jadehafen_1
+  - heart_jadehafen_2
+  - heart_jadehafen_3
   Region: 2
   IsHub: 1

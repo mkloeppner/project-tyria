@@ -76,7 +76,7 @@ MonoBehaviour:
   Tips:
   - "Im Sandsturm sieht man kaum \u2013 D\xFCnenl\xE4ufer finden den Weg."
   - "Signatur: Raptor- und D\xFCnenl\xE4ufer-Weiten, Rennstrecke 1, Kopfgelder"
-  LoadingImage: {fileID: 0}
+  LoadingImage: {fileID: 2800000, guid: 27f4838c625444a4f8aff4f71a621610, type: 3}
   Regions:
   - Name: "Wanderd\xFCne"
     Center: {x: -486.12738, y: -520}
@@ -109,17 +109,58 @@ MonoBehaviour:
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
   DangerMap:
-    ZoneId: 
-    Size: 1000
-    Anchors: []
-    Waypoints: []
-    BandEdges: []
-    BandLevels: 
-    Areas: []
+    ZoneId: grosse_leere
+    Size: 1300
+    Anchors:
+    - {x: 0, y: -494}
+    - {x: -371.3938, y: -392.00342}
+    - {x: 535.49896, y: -69.57605}
+    Waypoints:
+    - {x: 12, y: -476}
+    - {x: 250.84152, y: -150.8809}
+    - {x: -185.92514, y: 44.445496}
+    - {x: 256.56085, y: -0.03930092}
+    - {x: -470.09528, y: 291.31396}
+    - {x: -363.3938, y: -392.00342}
+    - {x: 542.4272, y: -65.57605}
+    BandEdges:
+    - 390.00003
+    BandLevels: 0400000004000000i
+    Areas:
+    - Name: "Wanderd\xFCne"
+      Center: {x: -486.12738, y: -520}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Glasgrab
+      Center: {x: 69.10571, y: -353.0866}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: Nomadenbrunnen
+      Center: {x: -270.54926, y: 176.35135}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: "Sch\xE4delsenke"
+      Center: {x: 28.563389, y: 330.16037}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
+    - Name: "Leere Stra\xDFe"
+      Center: {x: 278.47293, y: 520}
+      Radius: 110
+      Level: 4
+      City: 0
+      NoLeash: 0
     IsStartZone: 0
     MinorAnchorFrom: 99
     MinorAnchorScale: 1
-    HubSafeRadius: 30
+    HubSafeRadius: 0
     WaypointSafeRadius: 25
   CompletionIds:
   - wp_grosse_leere_ankunft

@@ -1492,3 +1492,139 @@ MonoBehaviour:
     Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
     Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
     Look: world
+  - Id: ilyas
+    DisplayName: Ilyas
+    Color: {r: 0.9411765, g: 0.78431374, b: 0.3764706, a: 1}
+    Pitch: 0.95
+    Rate: 0.95
+    Reverb: 0.12
+    Formant: 0.1
+    Female: 0
+    Doubled: 0
+    Role: "Sonnenpriester, Gef\xE4hrte"
+    Bio: "Diente dem Orden der Glut, bis er verstand, wem er dient. L\xE4chelt, wenn er l\xFCgt \u2013 und wenn er stirbt."
+    UnlockChapter: 15
+    Cloth: {r: 0.78431374, g: 0.627451, b: 0.2509804, a: 1}
+    Trim: {r: 0.9411765, g: 0.8784314, b: 0.627451, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: scholar
+  - Id: zarath
+    DisplayName: "Zarath, der Flammenk\xF6nig"
+    Color: {r: 0.8784314, g: 0.2509804, b: 0.1254902, a: 1}
+    Pitch: 0.7
+    Rate: 0.9
+    Reverb: 0.2
+    Formant: -0.5
+    Female: 0
+    Doubled: 1
+    Role: "Antagonist der Glutw\xFCste"
+    Bio: "Hohepriester des Ordens, Vareths Nachfolger, kr\xF6nte sich selbst. Glaubt, Flammen fragen nicht."
+    UnlockChapter: 16
+    Cloth: {r: 0.5019608, g: 0.09411765, b: 0.0627451, a: 1}
+    Trim: {r: 0.9411765, g: 0.627451, b: 0.1254902, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: tyrant
+  - Id: linsao
+    DisplayName: Lin Sao
+    Color: {r: 0.3137255, g: 0.78431374, b: 0.627451, a: 1}
+    Pitch: 1.1
+    Rate: 1.08
+    Reverb: 0.08
+    Formant: 0.3
+    Female: 1
+    Doubled: 0
+    Role: "Werkstattmeisterin, Gef\xE4hrtin"
+    Bio: Baut Jadegeister und schimpft mit ihnen wie mit Kindern. Liebt ihre Stadt und ihre Lichter.
+    UnlockChapter: 20
+    Cloth: {r: 0.16470589, g: 0.47843137, b: 0.3529412, a: 1}
+    Trim: {r: 0.8784314, g: 0.8156863, b: 0.627451, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: scholar
+  - Id: yuen
+    DisplayName: Kaiserin Yuen
+    Color: {r: 0.7529412, g: 0.627451, b: 0.9411765, a: 1}
+    Pitch: 1
+    Rate: 0.9
+    Reverb: 0.14
+    Formant: 0.1
+    Female: 1
+    Doubled: 0
+    Role: Kaiserin der Dracheninseln
+    Bio: "Misstrauisch, klug, einsam. H\xE4lt den alten Vertrag f\xFCr die einzige Ordnung, die sie kennt."
+    UnlockChapter: 20
+    Cloth: {r: 0.3529412, g: 0.16470589, b: 0.47843137, a: 1}
+    Trim: {r: 0.9411765, g: 0.8156863, b: 0.5019608, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: herald
+  - Id: kael
+    DisplayName: Kael
+    Color: {r: 0.5019608, g: 0.5647059, b: 0.627451, a: 1}
+    Pitch: 0.82
+    Rate: 1.05
+    Reverb: 0.16
+    Formant: -0.3
+    Female: 0
+    Doubled: 1
+    Role: Antagonist der Dracheninseln
+    Bio: "Sch\xFCler des Herolds, der besser zugeh\xF6rt hat. Will keinen Thron, sondern einen Drachen."
+    UnlockChapter: 24
+    Cloth: {r: 0.16470589, g: 0.1882353, b: 0.2509804, a: 1}
+    Trim: {r: 0.5647059, g: 0.627451, b: 0.7529412, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: herald
+  - Id: mei
+    DisplayName: Schwester Mei
+    Color: {r: 0.627451, g: 0.8156863, b: 0.6901961, a: 1}
+    Pitch: 1.05
+    Rate: 0.92
+    Reverb: 0.18
+    Formant: 0.2
+    Female: 1
+    Doubled: 0
+    Role: Klosterschwester
+    Bio: "H\xFCtet den alten Vertrag und h\xE4lt ihn f\xFCr ein Unrecht mit Glocken."
+    UnlockChapter: 22
+    Cloth: {r: 0.41568628, g: 0.5411765, b: 0.41568628, a: 1}
+    Trim: {r: 0.9098039, g: 0.8784314, b: 0.78431374, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: scholar
+  - Id: daro
+    DisplayName: Hauptmann Daro
+    Color: {r: 0.7529412, g: 0.3137255, b: 0.2509804, a: 1}
+    Pitch: 0.78
+    Rate: 1
+    Reverb: 0.1
+    Formant: -0.4
+    Female: 0
+    Doubled: 0
+    Role: "Anf\xFChrer der Abtr\xFCnnigen"
+    Bio: "Verlie\xDF die kaiserliche Garde, als er sah, wof\xFCr sie k\xE4mpft."
+    UnlockChapter: 23
+    Cloth: {r: 0.47843137, g: 0.16470589, b: 0.1254902, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: soldier
+  - Id: scout
+    DisplayName: "Sp\xE4her"
+    Color: {r: 0.5647059, g: 0.6901961, b: 0.8156863, a: 1}
+    Pitch: 1
+    Rate: 1.05
+    Reverb: 0.08
+    Formant: 0
+    Female: 0
+    Doubled: 0
+    Role: "Sp\xE4her der Regionen"
+    Bio: Kennt jeden Pfad und jede Gefahr seines Gebiets.
+    UnlockChapter: 11
+    Cloth: {r: 0.2901961, g: 0.41568628, b: 0.5411765, a: 1}
+    Trim: {r: 0.7529412, g: 0.6901961, b: 0.5019608, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
