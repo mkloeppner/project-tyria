@@ -31,7 +31,7 @@ MonoBehaviour:
     Period: 0
   SuccessNext: 
   FailNext: 
-  Cooldown: 180
+  Cooldown: 60
   GoldContribution: 4000
   Experience: 600
   Karma: 200

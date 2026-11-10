@@ -107,10 +107,12 @@ namespace ProjectTyrant
             Vector3 dodgeStep = Dodge.Tick(dt);
             if (Dodge.IsDodging || dodgeStep != Vector3.zero) horizontal = dodgeStep / Mathf.Max(dt, 0.0001f);
             else horizontal = wish * speed;
+            bool flying = FlightVelocity.HasValue && !Dodge.IsDodging;   // Lauf 10: Flugreittier gibt die Geschwindigkeit vor
+            if (flying) horizontal = FlightVelocity.Value;
             LastWish = wish;
             bool grounded = _cc.isGrounded || IsHovering;
             if (_launchTime > 0f) { _launchTime -= dt; horizontal = _launchVel + wish * speed * 0.15f; _airVel = horizontal; }
-            if (!grounded && !Dodge.IsDodging && _launchTime <= 0f)
+            if (!grounded && !Dodge.IsDodging && _launchTime <= 0f && !flying)
             {
                 _airVel = Vector3.MoveTowards(_airVel, horizontal, AirAcceleration * dt);
                 horizontal = _airVel;
@@ -210,6 +212,8 @@ namespace ProjectTyrant
         /// <summary>&gt; 0: Bodengeschwindigkeit des Reittiers statt <see cref="MoveSpeed"/>.</summary>
         public float SpeedOverride { get; set; }
         public float GravityScale { get; set; } = 1f;
+        /// <summary>Lauf 10: horizontale Fluggeschwindigkeit (Greif/Himmelsschuppe); null = normale Steuerung.</summary>
+        public Vector3? FlightVelocity { get; set; }
         /// <summary>&gt; 0: maximale Fallgeschwindigkeit (Gleiter).</summary>
         public float MaxFallSpeed { get; set; }
         /// <summary>Schwebehöhe (Wasserspiegel) für den Skimmer; null = aus.</summary>

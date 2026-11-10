@@ -24,16 +24,16 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: daemmerwald_silberkueste
-    Position: {x: -30, y: 6.4816146, z: -460}
+    Position: {x: -30, y: 0, z: -460}
     Yaw: 3.731397
     TargetZone: silberkueste
     TargetPortal: silberkueste_daemmerwald
   - Id: daemmerwald_silbermund
-    Position: {x: 14, y: 3.1585233, z: -410}
+    Position: {x: 14, y: 0, z: -410}
     Yaw: -1.9556814
     TargetZone: silberkueste
     TargetPortal: plaza_daemmerwald
-  DefaultSpawn: {x: 0, y: 2.653615, z: -420}
+  DefaultSpawn: {x: 0, y: 0, z: -420}
   ContinentRect:
     serializedVersion: 2
     x: 0.04
@@ -41,22 +41,7 @@ MonoBehaviour:
     width: 0.26
     height: 0.26
   ContinentColor: {r: 0.2901961, g: 0.2901961, b: 0.41568628, a: 1}
-  Waypoints:
-  - Id: wp_wald_ankunft
-    Name: Wegmarke Waldsaum
-    Position: {x: 10, y: 3.1874495, z: -400}
-  - Id: wp_wald_lichtung
-    Name: Wegmarke Lichtung
-    Position: {x: -160, y: 3.5061016, z: -180}
-  - Id: wp_wald_hain
-    Name: Wegmarke Alter Hain
-    Position: {x: 230, y: 2.682058, z: 120}
-  - Id: wp_wald_stein
-    Name: "Wegmarke W\xE4chterstein"
-    Position: {x: 20, y: 1.5557252, z: 280}
-  - Id: wp_daemmerwald_ankunft_silberkueste
-    Name: "Portal-Wegmarke Silberk\xFCste"
-    Position: {x: -21.609526, y: 6.3253584, z: -454.01273}
+  Waypoints: []
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 2.653615, z: -420}

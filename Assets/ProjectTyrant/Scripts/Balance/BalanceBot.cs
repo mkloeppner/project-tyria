@@ -52,6 +52,9 @@ namespace ProjectTyrant.Balance
             S = BotSettings.For(e.kind); ZoneId = e.cell.Zone; Seed = e.seed; Seconds = e.seconds; Danger = e.cell.Danger; StartPos = e.cell.Start; Level = e.cell.Level;
             _rng = new System.Random(Seed * 7919 + (int)e.kind * 31);
             _t = 0f; _started = false; _zoneWait = 0f; _seenTele.Clear(); _teleCount = 0; _hasGoal = false; Stuck = 0; Teleports = 0;
+            // Zustand je Session zurücksetzen (Fehler: eine Ausweichrolle vom Ende der vorigen Session blockierte die Bewegung 30 min lang)
+            _dodgeAt = -1f; _respawnAt = -1f; _deadAt = 0f; _enemy = null; _fleeing = false; _nextThink = 0f; _goalUntil = 0f;
+            _seenWind.Clear(); _seenWindAt.Clear(); TelemetryProbe.FleeIntent = false;
             var gm = GameManager.Instance;
             if (gm != null && (ZoneRoot.Current == null || ZoneRoot.Current.Id != ZoneId)) gm.ChangeZone(ZoneId, null);
         }

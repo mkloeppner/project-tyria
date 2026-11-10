@@ -24,16 +24,16 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: duenenmeer_gluetoede
-    Position: {x: -520, y: 20.889448, z: -40}
+    Position: {x: -520, y: 0, z: -40}
     Yaw: 85.601295
     TargetZone: gluetoede
     TargetPortal: gluetoede_duenenmeer
   - Id: duenenmeer_silbermund
-    Position: {x: -456, y: 5.0169783, z: 10}
+    Position: {x: -456, y: 0, z: 10}
     Yaw: 91.25629
     TargetZone: silberkueste
     TargetPortal: plaza_duenenmeer
-  DefaultSpawn: {x: -470, y: 5.057181, z: 0}
+  DefaultSpawn: {x: -470, y: 0, z: 0}
   ContinentRect:
     serializedVersion: 2
     x: 0.62
@@ -41,25 +41,7 @@ MonoBehaviour:
     width: 0.34
     height: 0.3
   ContinentColor: {r: 0.89411765, g: 0.76862746, b: 0.5411765, a: 1}
-  Waypoints:
-  - Id: wp_duene_ankunft
-    Name: Wegmarke Glutpass
-    Position: {x: -440, y: 1.5, z: -20}
-  - Id: wp_duene_oase
-    Name: Wegmarke Oase Sahim
-    Position: {x: -190, y: 1.5, z: -80}
-  - Id: wp_duene_qasir
-    Name: Wegmarke Qasir
-    Position: {x: 230, y: 6.5274305, z: 180}
-  - Id: wp_duene_schlucht
-    Name: Wegmarke Drei Schluchten
-    Position: {x: 20, y: 6.541973, z: -60}
-  - Id: wp_duene_glas
-    Name: Wegmarke Glasebene
-    Position: {x: 300, y: 1.5, z: -280}
-  - Id: wp_duenenmeer_ankunft_gluetoede
-    Name: "Portal-Wegmarke Glut\xF6de"
-    Position: {x: -510.0177, y: 20.133766, z: -32.611618}
+  Waypoints: []
   Arrivals:
   - Entrance: spawn
     Position: {x: -470, y: 5.057181, z: 0}

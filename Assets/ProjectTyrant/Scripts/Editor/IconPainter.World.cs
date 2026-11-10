@@ -66,6 +66,20 @@ namespace ProjectTyrant.EditorTools
                 .Fill(Polygon(new Vector2(14, 64), new Vector2(64, 96), new Vector2(114, 64), new Vector2(64, 44)), teal)
                 .Fill(Segment(64, 46, 64, 14, 3.5f), teal).Fill(Circle(56, 78, 4), ink).Fill(Circle(72, 78, 4), ink)
                 .Fill(Circle(44, 64, 4), new Color(0.95f, 0.85f, 0.4f)).Fill(Circle(84, 64, 4), new Color(0.95f, 0.85f, 0.4f)));
+            // Lauf 10: Greif – Adlerkopf mit Schnabel und Flügel
+            var gold = new Color(0.95f, 0.82f, 0.45f);
+            Save("mount_griffon", MountBg(gold)
+                .Fill(Polygon(new Vector2(18, 70), new Vector2(60, 58), new Vector2(54, 98)), new Color(0.96f, 0.94f, 0.88f))
+                .Fill(Circle(72, 66, 22), new Color(0.98f, 0.96f, 0.9f))
+                .Fill(Polygon(new Vector2(88, 72), new Vector2(110, 60), new Vector2(88, 56)), gold)
+                .Fill(Circle(78, 72, 4), ink));
+            // Lauf 10: Himmelsschuppe – Drachenkopf mit Hörnern
+            var sky = new Color(0.45f, 0.65f, 0.95f);
+            Save("mount_skyscale", MountBg(new Color(0.6f, 0.8f, 1f))
+                .Fill(Union(Circle(60, 60, 22), Polygon(new Vector2(70, 50), new Vector2(110, 58), new Vector2(104, 72), new Vector2(70, 72))), sky)
+                .Fill(Polygon(new Vector2(48, 76), new Vector2(34, 108), new Vector2(58, 80)), new Color(0.9f, 0.85f, 0.6f))
+                .Fill(Polygon(new Vector2(62, 80), new Vector2(60, 112), new Vector2(72, 80)), new Color(0.9f, 0.85f, 0.6f))
+                .Fill(Circle(70, 66, 4), new Color(1f, 0.6f, 0.2f)));
         }
     }
 }

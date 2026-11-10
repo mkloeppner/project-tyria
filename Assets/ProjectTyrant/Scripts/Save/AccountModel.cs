@@ -27,6 +27,8 @@ namespace ProjectTyrant
         public long Copper, Karma;
         public List<string> Mounts = new List<string>();
         public string SelectedMount;
+        public MountPrefsDto MountPrefs = new MountPrefsDto();   // Lauf 10
+        public List<string> AdminMarks = new List<string>();     // Lauf 10
         public long MasteryXp; public int MasteryPointsEarned;
         public List<MasteryTrackDto> Masteries = new List<MasteryTrackDto>();
         public string SelectedMastery;
@@ -58,6 +60,7 @@ namespace ProjectTyrant
         {
             acc.Copper = d.Copper; acc.Karma = d.Karma;
             acc.Mounts = new List<string>(d.Mounts ?? new List<string>()); acc.SelectedMount = d.SelectedMount;
+            acc.MountPrefs = (d.MountPrefs ?? new MountPrefsDto()).Clone(); acc.AdminMarks = new List<string>(d.AdminMarks ?? new List<string>());
             acc.MasteryXp = d.MasteryXp; acc.MasteryPointsEarned = d.MasteryPointsEarned;
             acc.Masteries = new List<MasteryTrackDto>(d.Masteries ?? new List<MasteryTrackDto>()); acc.SelectedMastery = d.SelectedMastery;
         }
@@ -67,6 +70,7 @@ namespace ProjectTyrant
         {
             d.Copper = acc.Copper; d.Karma = acc.Karma;
             d.Mounts = new List<string>(acc.Mounts ?? new List<string>()); d.SelectedMount = acc.SelectedMount;
+            d.MountPrefs = (acc.MountPrefs ?? new MountPrefsDto()).Clone(); d.AdminMarks = new List<string>(acc.AdminMarks ?? new List<string>());
             d.MasteryXp = acc.MasteryXp; d.MasteryPointsEarned = acc.MasteryPointsEarned;
             d.Masteries = new List<MasteryTrackDto>(acc.Masteries ?? new List<MasteryTrackDto>()); d.SelectedMastery = acc.SelectedMastery;
         }

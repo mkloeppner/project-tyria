@@ -10,7 +10,7 @@ namespace ProjectTyrant.EditorTools
         public const string Dir = DataDir + "/Mastery";
 
         public static MasteryLineDefinition Load(MasteryLine l) => AssetDatabase.LoadAssetAtPath<MasteryLineDefinition>(Dir + "/Mastery_" + l + ".asset");
-        public static MasteryLineDefinition[] LoadAll() => new[] { Load(MasteryLine.Reittiere), Load(MasteryLine.Gleiten), Load(MasteryLine.Umwelt), Load(MasteryLine.Kommandant), Load(MasteryLine.Greif) };
+        public static MasteryLineDefinition[] LoadAll() => new[] { Load(MasteryLine.Reittiere), Load(MasteryLine.Gleiten), Load(MasteryLine.Umwelt), Load(MasteryLine.Kommandant), Load(MasteryLine.Greif), Load(MasteryLine.Himmelsschuppe) };
 
         static MasteryRankCost R(string n, string e, long xp, int pts) => new MasteryRankCost { Name = n, Effect = e, Xp = xp, Points = pts };
 
@@ -30,7 +30,11 @@ namespace ProjectTyrant.EditorTools
                 R("Auto-Beute", "Beute in 6 m wird automatisch eingesammelt", 4000, 1), R("Reisekasse", "Wegmarken-Reisen −20 %", 9000, 1),
                 R("Reisemeister", "Wegmarken-Reisen −40 %", 15000, 2) });
             Line(MasteryLine.Greif, "Greif", "Der Greif der Himmelswächter (Persönliche Geschichte, Kapitel 9).", "mount_griffon", new Color(0.98f, 0.9f, 0.6f), new[] {
-                R("Sturzflug", "In der Luft Leertaste halten: Sturzflug mit Beschleunigung, Loslassen fängt ab", 8000, 1), R("Ausdauer der Lüfte", "Greif sinkt beim Gleiten langsamer (1,6 m/s)", 16000, 2) });
+                R("Flügelkraft", "+2 Auftrieb-Ladungen (5 statt 3)", 6000, 1), R("Aufwindflug", "Aufwinde heben den Greif und füllen den Auftrieb", 12000, 1),
+                R("Sturzflug-Meister", "Abfangen wandelt 85 % statt 60 % des Sturz-Tempos in Höhe; Sturz bis 4,6× Lauftempo", 18000, 2), R("Luftakrobatik", "Ausweichrolle in der Luft (V) ohne Tempoverlust", 24000, 2) });
+            Line(MasteryLine.Himmelsschuppe, "Himmelsschuppe", "Der junge Himmelsdrache: senkrechter Flug, Schweben, Feuerstoß (Sammlung in den Himmelsspitzen).", "mount_skyscale", new Color(0.55f, 0.75f, 1f), new[] {
+                R("Wandhaften", "An steilen Wänden (≥ 60°) festhalten und Flugausdauer regenerieren (max. 20 s)", 8000, 1), R("Flugkondition", "Flugausdauer 150 statt 100, Schweben kostet 3/s statt 5/s", 14000, 2),
+                R("Aufwind-Segeln", "Aufwinde füllen die Flugausdauer sofort", 18000, 2), R("Vertrauensband", "In der Luft zwischen Greif und Himmelsschuppe wechseln; Flugausdauer regeneriert 5/s im Flug", 26000, 3) });
             AssetDatabase.SaveAssets();
         }
 

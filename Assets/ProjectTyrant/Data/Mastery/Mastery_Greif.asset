@@ -18,11 +18,19 @@ MonoBehaviour:
   Icon: mount_griffon
   Color: {r: 0.98, g: 0.9, b: 0.6, a: 1}
   Ranks:
-  - Name: Sturzflug
-    Effect: "In der Luft Leertaste halten: Sturzflug mit Beschleunigung, Loslassen f\xE4ngt ab"
-    Xp: 8000
+  - Name: "Fl\xFCgelkraft"
+    Effect: +2 Auftrieb-Ladungen (5 statt 3)
+    Xp: 6000
     Points: 1
-  - Name: "Ausdauer der L\xFCfte"
-    Effect: Greif sinkt beim Gleiten langsamer (1,6 m/s)
-    Xp: 16000
+  - Name: Aufwindflug
+    Effect: "Aufwinde heben den Greif und f\xFCllen den Auftrieb"
+    Xp: 12000
+    Points: 1
+  - Name: Sturzflug-Meister
+    Effect: "Abfangen wandelt 85 % statt 60 % des Sturz-Tempos in H\xF6he; Sturz bis 4,6\xD7 Lauftempo"
+    Xp: 18000
+    Points: 2
+  - Name: Luftakrobatik
+    Effect: Ausweichrolle in der Luft (V) ohne Tempoverlust
+    Xp: 24000
     Points: 2

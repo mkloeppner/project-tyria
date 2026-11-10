@@ -245,6 +245,7 @@ namespace ProjectTyrant.EditorTools
             LastErrors.AddRange(errs);
             int[] perLvl = new int[6]; foreach (var b in brains) perLvl[map.At(b.transform.position)]++;
             LastReport.Add(z.Id + ": " + brains.Count + " Spawns (Stufen " + string.Join("/", perLvl) + "), " + brains.Count(b => b.Neutral) + " neutral, " + moved + " verschoben, " + added + " Tiere/Wachen, " + roles + " Rollen, " + events.Count + " Events, " + errs.Count + " Verstöße");
+            Lauf10Builder.ApplyZone(z, root);   // Lauf 10: Himmelsschuppen-Sammlung (Himmelsspitzen)
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene);
         }

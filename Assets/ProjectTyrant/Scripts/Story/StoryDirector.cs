@@ -202,7 +202,8 @@ namespace ProjectTyrant
                 if (r.StoryDone) { GameEventBus.RaiseBanner("Die Geschichte ist erzählt", "Chronik des Tyrannen", StoryGreen); PlayerProfile.Instance?.AwardMasteryPoints(3, "Persönliche Geschichte"); }
             }
             PlayerProfile.Instance?.RequestSave("Geschichte");
-            if (wasInstance && UIController.Instance != null) { bool left = false; UIController.Instance.ShowStoryReward(st.Title, r.Reward, () => left = true); while (!left) yield return null; LeaveInstance(); }
+            if (wasInstance && UIController.Instance != null && !StoryAdmin.Active) { bool left = false; UIController.Instance.ShowStoryReward(st.Title, r.Reward, () => left = true); while (!left) yield return null; LeaveInstance(); }
+            else if (wasInstance) LeaveInstance();   // Lauf 10: Admin-Ablauf / ohne UI
             _presentFor = null; _finishing = false;
             GameEventBus.RaiseProfileChanged();
         }

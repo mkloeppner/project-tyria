@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3868e70530e3f342978ac4b9e687eca, type: 3}
+  m_Name: Mount_Skyscale
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.MountDefinition
+  Kind: 5
+  DisplayName: Himmelsschuppe
+  Description: "Junger Himmelsdrache \u2013 steigt senkrecht auf, schwebt und haftet an Felsw\xE4nden. Sammlung \u201EHimmelsschuppe\u201C in den Himmelsspitzen."
+  AbilityText: 'Leertaste halten: steigen; loslassen: schweben; Dodge-Taste in der Luft: Sturz'
+  EngageText: "Feuersto\xDF: Fl\xE4chenschaden, 3 Brennen, hoher Trotzschaden"
+  Stats:
+    Kind: 5
+    Speed: 9.1
+    WaterSpeed: 3.5
+    MaxHealth: 6000
+    LeapSpeed: 0
+    LeapTime: 0
+    LeapUp: 0
+    ChargeTime: 0
+    MinJump: 0
+    MaxJump: 0
+    HopHeight: 2
+    EngageCoefficient: 3
+    EngageRadius: 6
+    EngageRange: 12
+    DodgeDistance: 6
+    DodgeCooldown: 3
+  PriceCopper: 0
+  RequiredHeart: 
+  VendorZone: himmelsspitzen
+  Icon: mount_skyscale
+  Prefab: {fileID: 35739284353823810, guid: cd7b42f5ce941b849a05d2f1cfc68ea9, type: 3}
+  SeatHeight: 1.5

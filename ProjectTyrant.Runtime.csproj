@@ -71,6 +71,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\StoryPulse.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\CharacterSelectController.Bio.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UIController.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Story\StoryDirector.Admin.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\BalanceConfig.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Animation\SkinWeights.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Lauf6\SandShelter.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\World\AreaTracker.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Animation\AnimDriver.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Camera\CameraZoomModel.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Mounts\SkyscaleCollection.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UIController.Windows.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Save\PlayerProfile.Map.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UIController.Story.cs" />
@@ -143,6 +145,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\StoryNpc.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Classes\ClassDuelBot.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Map\MapMarker.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Mounts\MountSelectionModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Zone\BiomeZoneContent.Lauf6.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\Windows\VendorWindow.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\Windows\WorldMapWindow.cs" />
@@ -152,6 +155,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Classes\ClassMechanicHost.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Effects\VfxAreaLayer.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Combat\ActorVisibility.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Mounts\SkyscaleNestObject.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Audio\MusicDirector.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Core\CombatFeel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Audio\SoundRecipes.cs" />
@@ -191,6 +195,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Portal.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Player\OutOfCombatRegen.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Lauf6\SandstormDirector.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Core\AdminCommands.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Map\ZoneCompletion.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Bobber.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Zone\HeartTask.cs" />
@@ -308,6 +313,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Items\LootTable.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\StoryTextTable.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Inventory\LootSystem.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Flight\FlightRules.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Save\PlayerProfile.Mounts.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UIController.Hearts.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\Windows\HeroWindow.Skills.cs" />
@@ -337,6 +343,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\IconLibrary.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Inventory\InventoryModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Classes\ClassDefinition.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Mounts\MountController.Flight.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Core\InputManager.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Mastery\MasteryAbilities.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Audio\AudioAnalysis.cs" />
@@ -345,6 +352,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UIController.Events.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Mounts\MountDefinition.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\WorldStoryModels.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Flight\FlightMotor.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Classes\EliteSpecDefinition.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\BalanceBot.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\StoryDirector.cs" />

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69ab7e33496bbb498dbb59b14be3f4a, type: 3}
+  m_Name: Mastery_Himmelsschuppe
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.MasteryLineDefinition
+  Line: 5
+  DisplayName: Himmelsschuppe
+  Description: "Der junge Himmelsdrache: senkrechter Flug, Schweben, Feuersto\xDF (Sammlung in den Himmelsspitzen)."
+  Icon: mount_skyscale
+  Color: {r: 0.55, g: 0.75, b: 1, a: 1}
+  Ranks:
+  - Name: Wandhaften
+    Effect: "An steilen W\xE4nden (\u2265 60\xB0) festhalten und Flugausdauer regenerieren (max. 20 s)"
+    Xp: 8000
+    Points: 1
+  - Name: Flugkondition
+    Effect: Flugausdauer 150 statt 100, Schweben kostet 3/s statt 5/s
+    Xp: 14000
+    Points: 2
+  - Name: Aufwind-Segeln
+    Effect: "Aufwinde f\xFCllen die Flugausdauer sofort"
+    Xp: 18000
+    Points: 2
+  - Name: Vertrauensband
+    Effect: In der Luft zwischen Greif und Himmelsschuppe wechseln; Flugausdauer regeneriert 5/s im Flug
+    Xp: 26000
+    Points: 3

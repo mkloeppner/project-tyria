@@ -16,7 +16,7 @@ MonoBehaviour:
   Tier: 3
   Team: 2
   Prefab: {fileID: 7313980945686249322, guid: a428d276ceb57f249ad5edc0c947c391, type: 3}
-  FixedLevel: 13
+  FixedLevel: 15
   AttributeFactor: 1.2
   ArmorFactor: 1.6
   HealthFactor: 18

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ProjectTyrant
 {
-    public enum MountKind { None, Raptor, Springer, Skimmer, Griffon }
+    public enum MountKind { None, Raptor, Springer, Skimmer, Griffon, Skyscale }
 
     /// <summary>Werte eines Reittiers (aus <see cref="MountDefinition"/> oder Tests).</summary>
     [System.Serializable]
@@ -27,6 +27,7 @@ namespace ProjectTyrant
                 case MountKind.Springer: return new MountStats { Kind = k, Speed = 9.5f, WaterSpeed = 3.5f, MaxHealth = 5000, ChargeTime = 1.2f, MinJump = 3f, MaxJump = 15f, HopHeight = 3f, EngageCoefficient = 4.5f, EngageRadius = 5f, EngageRange = 12f, DodgeDistance = 5f, DodgeCooldown = 3f };
                 case MountKind.Skimmer: return new MountStats { Kind = k, Speed = 10f, WaterSpeed = 12.5f, MaxHealth = 5000, HopHeight = 1.6f, EngageCoefficient = 2.5f, EngageRadius = 4f, EngageRange = 8f, DodgeDistance = 6f, DodgeCooldown = 3f };
                 case MountKind.Griffon: return new MountStats { Kind = k, Speed = 10.5f, WaterSpeed = 3.5f, MaxHealth = 5500, HopHeight = 9f, EngageCoefficient = 4f, EngageRadius = 5f, EngageRange = 14f, DodgeDistance = 6f, DodgeCooldown = 3f };   // Lauf 6: Greif (Gleitflug, Sturzflug)
+                case MountKind.Skyscale: return new MountStats { Kind = k, Speed = 9.1f, WaterSpeed = 3.5f, MaxHealth = 6000, HopHeight = 2f, EngageCoefficient = 3f, EngageRadius = 6f, EngageRange = 12f, DodgeDistance = 6f, DodgeCooldown = 3f };   // Lauf 10: Himmelsschuppe (Laufen 1,3× – langsam am Boden)
             }
             return new MountStats { Kind = MountKind.None };
         }

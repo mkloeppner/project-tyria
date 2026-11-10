@@ -14,7 +14,7 @@ namespace ProjectTyrant.EditorTools
         const long Gold = 10000;
 
         public static MountDefinition Load(MountKind k) => AssetDatabase.LoadAssetAtPath<MountDefinition>(Dir + "/Mount_" + k + ".asset");
-        public static MountDefinition[] LoadAll() => new[] { Load(MountKind.Raptor), Load(MountKind.Springer), Load(MountKind.Skimmer), Load(MountKind.Griffon) };
+        public static MountDefinition[] LoadAll() => new[] { Load(MountKind.Raptor), Load(MountKind.Springer), Load(MountKind.Skimmer), Load(MountKind.Griffon), Load(MountKind.Skyscale) };
 
         public static void BuildAll()
         {
@@ -33,7 +33,22 @@ namespace ProjectTyrant.EditorTools
                 "stylized painterly fantasy giant rabbit mount with powerful hind legs and saddle, game-ready low poly, hand-painted texture");
             Def(MountKind.Griffon, "Greif", "Der Greif der Himmelswächter – gleitet weit und stürzt sich aus großer Höhe herab. Nur über die Persönliche Geschichte (Kapitel 9).", "Abheben (Leertaste), in der Luft halten: Sturzflug, loslassen: Abfangen", "Sturzangriff: Schaden, Betäubung, Verwundbarkeit",
                 0, "", "himmelsspitzen", "mount_griffon", 1.6f, p => GriffonVisual(p), "stylized painterly fantasy griffin mount with saddle, eagle head, lion body, white and gold feathers, game-ready low poly, hand-painted texture");
+            Def(MountKind.Skyscale, "Himmelsschuppe", "Junger Himmelsdrache – steigt senkrecht auf, schwebt und haftet an Felswänden. Sammlung „Himmelsschuppe“ in den Himmelsspitzen.", "Leertaste halten: steigen; loslassen: schweben; Dodge-Taste in der Luft: Sturz", "Feuerstoß: Flächenschaden, 3 Brennen, hoher Trotzschaden",
+                0, "", "himmelsspitzen", "mount_skyscale", 1.5f, p => SkyscaleVisual(p), "stylized painterly fantasy young sky dragon mount with saddle, blue scales, golden horns, membrane wings, game-ready low poly, hand-painted texture");
             AssetDatabase.SaveAssets();
+        }
+
+        /// <summary>Lauf 10: Himmelsschuppe aus dem Raptor-Rig mit Schuppenfarben, Hautflügeln und Hörnern (Platzhalter).</summary>
+        static GameObject SkyscaleVisual(Transform p)
+        {
+            var v = CreatureBuilder.Raptor(p, "MSkyscale", new CreatureBuilder.Look { Body = new Color(0.32f, 0.5f, 0.82f), Belly = new Color(0.85f, 0.88f, 0.95f), Accent = new Color(0.95f, 0.8f, 0.35f), Eye = new Color(1.6f, 0.7f, 0.2f), Glow = 0.3f }, true);
+            var membrane = Mat("SkyscaleWing", new Color(0.45f, 0.62f, 0.95f));
+            foreach (var side in new[] { -1f, 1f })
+            {
+                var w = Part(v.transform, PrimitiveType.Cube, new Vector3(side * 1.0f, 1.8f, -0.1f), new Vector3(1.7f, 0.05f, 1.1f), membrane, side < 0 ? "WingL" : "WingR", new Vector3(0, 0, side * -26f));
+                AddPlaceholder(w, "Skyscale_Wing", "– Platzhalter-Hautflügel");
+            }
+            return v;
         }
 
         /// <summary>Lauf 6: Greif aus dem Raptor-Rig (Läufer-Skelett) mit Federkleid-Farben und zwei Flügeln.</summary>
@@ -60,8 +75,8 @@ namespace ProjectTyrant.EditorTools
             var v = visual(go.transform);
             AddPlaceholder(v, "PT_Mount_" + k, prompt);
             // Lauf 5: Meshy-Modell auf das Vierbeiner-Skelett skinnen; bei Rissen bleibt die geriggte MeshKit-Fassung (Modell → Statue)
-            float mh = k == MountKind.Raptor || k == MountKind.Griffon ? 2.6f : k == MountKind.Springer ? 2.4f : 1.3f;
-            string prof = k == MountKind.Raptor || k == MountKind.Griffon ? "Raptor" : k == MountKind.Springer ? "Springer" : "Ray";
+            float mh = k == MountKind.Raptor || k == MountKind.Griffon || k == MountKind.Skyscale ? 2.6f : k == MountKind.Springer ? 2.4f : 1.3f;
+            string prof = k == MountKind.Raptor || k == MountKind.Griffon || k == MountKind.Skyscale ? "Raptor" : k == MountKind.Springer ? "Springer" : "Ray";
             var skinned = CharacterRigs.TryMeshyBeast(go.transform, "PT_Meshy_Mount" + k, mh, prof, true);
             if (skinned != null) { Object.DestroyImmediate(v); v = skinned; }
             CharacterRigs.Drive(go, v, Anim.AnimDriver.Role.Mount);

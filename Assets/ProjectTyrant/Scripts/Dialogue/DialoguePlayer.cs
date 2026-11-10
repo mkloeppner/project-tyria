@@ -76,6 +76,7 @@ namespace ProjectTyrant
             }
             var entries = StoryModel.Entries(sc, State);
             SetupForm(sc, entries, player);
+            if (StoryAdmin.Active && !StoryAdmin.PlayScenes) _skip = true;   // Lauf 10: Admin „Weiter“ ohne Szenen – Wahl-Stellen laufen unten trotzdem
             ui?.DialogueOpen(sc.Form, sc.Form == SceneForm.Cinematic);
             if (mixer != null && _form != SceneForm.Bubble) Debug.Log("[ProjectTyrant] Mixer während Szene " + sc.Id + ": Stimme " + mixer.GainDb(MixGroup.Voice).ToString("0.0") + " dB · Musik " + mixer.GainDb(MixGroup.Music).ToString("0.0") + " dB");
 
@@ -89,7 +90,7 @@ namespace ProjectTyrant
                     var ch = sc.Choices[e.ChoiceIndex];
                     _chosen = -1;
                     ui?.DialogueChoices(ch, Db.Text, State);
-                    while (_chosen < 0) { _skipRequested = false; yield return null; }   // Wahl-Stellen lassen sich nicht überspringen
+                    while (_chosen < 0) { _skipRequested = false; if (StoryAdmin.Active && StoryAdmin.AutoChoose) _chosen = 0; yield return null; }   // Wahl-Stellen lassen sich nicht überspringen (Admin: erste Antwort)
                     ui?.DialogueChoices(null, null, null);
                     var opt = ch.Options[Mathf.Clamp(_chosen, 0, ch.Options.Count - 1)];
                     StoryModel.Choose(State, opt); _entryIdx = i + 1;   // Wahl erledigt
@@ -109,7 +110,7 @@ namespace ProjectTyrant
                     foreach (var o in ch.Options) if (!string.IsNullOrEmpty(o.Flag) && State.HasFlag(o.Flag)) answered = true;
                     if (answered) continue;
                     _chosen = -1; ui?.DialogueChoices(ch, Db.Text, State);
-                    while (_chosen < 0) { if (ui == null) _chosen = 0; yield return null; }
+                    while (_chosen < 0) { if (ui == null || (StoryAdmin.Active && StoryAdmin.AutoChoose)) _chosen = 0; yield return null; }
                     ui?.DialogueChoices(null, null, null);
                     StoryModel.Choose(State, ch.Options[Mathf.Clamp(_chosen, 0, ch.Options.Count - 1)]);
                 }

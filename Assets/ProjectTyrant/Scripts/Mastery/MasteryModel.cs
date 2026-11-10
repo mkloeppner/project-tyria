@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ProjectTyrant
 {
-    public enum MasteryLine { Reittiere, Gleiten, Umwelt, Kommandant, Greif }
+    public enum MasteryLine { Reittiere, Gleiten, Umwelt, Kommandant, Greif, Himmelsschuppe }
 
     /// <summary>Kosten eines Rangs: Beherrschungs-EP (Training) + Beherrschungspunkte (Freischaltung).</summary>
     [System.Serializable]
@@ -83,6 +83,7 @@ namespace ProjectTyrant
                 case MasteryLine.Gleiten: return "Gleiten";
                 case MasteryLine.Umwelt: return "Umweltkunde";
                 case MasteryLine.Greif: return "Greif";
+                case MasteryLine.Himmelsschuppe: return "Himmelsschuppe";
                 default: return "Kommandant";
             }
         }
@@ -104,8 +105,15 @@ namespace ProjectTyrant
         public static float LavaFactor(MasteryModel m) => m.Has(MasteryLine.Umwelt, 3) ? 0f : 1f;
         public static bool SeesHiddenChests(MasteryModel m) => m.Has(MasteryLine.Umwelt, 4);
         public static bool AutoLoot(MasteryModel m) => m.Has(MasteryLine.Kommandant, 1);
-        public static bool GriffonDive(MasteryModel m) => m.Has(MasteryLine.Greif, 1);        // Lauf 6: Sturzflug
-        public static bool GriffonEndurance(MasteryModel m) => m.Has(MasteryLine.Greif, 2);   // Lauf 6: flacheres Gleiten
+        // Lauf 10: Greif 1 Flügelkraft (+2 Auftrieb), 2 Aufwindflug, 3 Sturzflug-Meister (85 % Abfangen), 4 Luftakrobatik (Ausweichrolle in der Luft)
+        public static int GriffonRank(MasteryModel m) => m == null ? 0 : m.Rank(MasteryLine.Greif);
+        public static bool GriffonUpdrafts(MasteryModel m) => m.Has(MasteryLine.Greif, 2);
+        public static bool GriffonAirDodge(MasteryModel m) => m.Has(MasteryLine.Greif, 4);
+        // Lauf 10: Himmelsschuppe 1 Wandhaften, 2 Flugkondition (150 Ausdauer, Schweben 3/s), 3 Aufwind-Segeln, 4 Vertrauensband (Luftwechsel + Regeneration)
+        public static int SkyscaleRank(MasteryModel m) => m == null ? 0 : m.Rank(MasteryLine.Himmelsschuppe);
+        public static bool SkyscaleWallCling(MasteryModel m) => m.Has(MasteryLine.Himmelsschuppe, 1);
+        public static bool SkyscaleUpdrafts(MasteryModel m) => m.Has(MasteryLine.Himmelsschuppe, 3);
+        public static bool TrustBond(MasteryModel m) => m.Has(MasteryLine.Himmelsschuppe, 4);
         public static float TravelDiscount(MasteryModel m) => m.Has(MasteryLine.Kommandant, 3) ? 0.4f : m.Has(MasteryLine.Kommandant, 2) ? 0.2f : 0f;
     }
 }

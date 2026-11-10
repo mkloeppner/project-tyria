@@ -24,61 +24,61 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: silberkueste_daemmerwald
-    Position: {x: -20, y: 1.8000001, z: 400}
+    Position: {x: -20, y: 0, z: 400}
     Yaw: 177.1376
     TargetZone: daemmerwald
     TargetPortal: daemmerwald_silberkueste
   - Id: silberkueste_kristalltiefe
-    Position: {x: 400, y: 2.622903, z: -40}
+    Position: {x: 400, y: 0, z: -40}
     Yaw: -84.289406
     TargetZone: kristalltiefe
     TargetPortal: kristalltiefe_silberkueste
   - Id: plaza_sonnfurt
-    Position: {x: 5.4723225, y: 1.8000001, z: 55.03508}
+    Position: {x: 5.4723225, y: 0, z: 55.03508}
     Yaw: 20.000002
     TargetZone: sonnfurt
     TargetPortal: sonnfurt_silbermund
   - Id: plaza_nebelmoor
-    Position: {x: 13.856407, y: 1.8000001, z: 48}
+    Position: {x: 13.856407, y: 0, z: 48}
     Yaw: 59.999996
     TargetZone: nebelmoor
     TargetPortal: nebelmoor_silbermund
   - Id: plaza_frostkamm
-    Position: {x: 15.756924, y: 1.8000001, z: 37.22163}
+    Position: {x: 15.756924, y: 0, z: 37.22163}
     Yaw: 99.99999
     TargetZone: frostkamm
     TargetPortal: frostkamm_silbermund
   - Id: plaza_gluetoede
-    Position: {x: 10.284602, y: 1.8000001, z: 27.74329}
+    Position: {x: 10.284602, y: 0, z: 27.74329}
     Yaw: 140
     TargetZone: gluetoede
     TargetPortal: gluetoede_silbermund
   - Id: plaza_daemmerwald
-    Position: {x: -0.0000013987644, y: 1.8000001, z: 24}
+    Position: {x: -0.0000013987644, y: 0, z: 24}
     Yaw: 180
     TargetZone: daemmerwald
     TargetPortal: daemmerwald_silbermund
   - Id: plaza_duenenmeer
-    Position: {x: -10.284604, y: 1.8000001, z: 27.74329}
+    Position: {x: -10.284604, y: 0, z: 27.74329}
     Yaw: 220.00002
     TargetZone: duenenmeer
     TargetPortal: duenenmeer_silbermund
   - Id: plaza_kristalltiefe
-    Position: {x: -15.756925, y: 1.8000001, z: 37.22163}
+    Position: {x: -15.756925, y: 0, z: 37.22163}
     Yaw: 260
     TargetZone: kristalltiefe
     TargetPortal: kristalltiefe_silbermund
   - Id: plaza_himmelsspitzen
-    Position: {x: -13.856407, y: 1.8000001, z: 48}
+    Position: {x: -13.856407, y: 0, z: 48}
     Yaw: 300
     TargetZone: himmelsspitzen
     TargetPortal: himmelsspitzen_silbermund
   - Id: plaza_tyrannenfeste
-    Position: {x: -5.4723186, y: 1.8000001, z: 55.035084}
+    Position: {x: -5.4723186, y: 0, z: 55.035084}
     Yaw: 340
     TargetZone: tyrannenfeste
     TargetPortal: tyrannenfeste_silbermund
-  DefaultSpawn: {x: 0, y: 1.8000001, z: 22}
+  DefaultSpawn: {x: 0, y: 0, z: 22}
   ContinentRect:
     serializedVersion: 2
     x: 0.04
@@ -86,28 +86,7 @@ MonoBehaviour:
     width: 0.24
     height: 0.24
   ContinentColor: {r: 0.62352943, g: 0.7529412, b: 0.84705883, a: 1}
-  Waypoints:
-  - Id: wp_kueste_silbermund
-    Name: Wegmarke Silbermund
-    Position: {x: 0, y: 1.8000001, z: 22}
-  - Id: wp_kueste_hafen
-    Name: Wegmarke Hafenmole
-    Position: {x: 90, y: 4.998977, z: -50}
-  - Id: wp_kueste_leuchtturm
-    Name: Wegmarke Leuchtturmklippe
-    Position: {x: 260, y: 1.8000001, z: 160}
-  - Id: wp_kueste_grotte
-    Name: Wegmarke Grottenpfad
-    Position: {x: -230, y: 2.5026522, z: -170}
-  - Id: wp_kueste_waldtor
-    Name: Wegmarke Waldtor
-    Position: {x: -30, y: 1.8000001, z: 360}
-  - Id: wp_silberkueste_ankunft_kristalltiefe
-    Name: Portal-Wegmarke Kristalltiefe
-    Position: {x: 400.958, y: 2.622903, z: -35.402977}
-  - Id: wp_silberkueste_ankunft_plaza_sonnfurt
-    Name: Portal-Wegmarke Grenzmark Ashveil
-    Position: {x: 15.524445, y: 1.6418428, z: 60.673237}
+  Waypoints: []
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 1.8000001, z: 22}

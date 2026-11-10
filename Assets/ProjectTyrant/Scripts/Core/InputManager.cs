@@ -31,6 +31,16 @@ namespace ProjectTyrant
         public bool MountPressed { get; private set; }
         public bool MountReleased { get; private set; }
         public bool DodgePressed { get; private set; }
+        public bool DodgeHeld { get; private set; }   // Lauf 10: Sturzflug in der Luft
+
+        /// <summary>Lauf 10: frei belegbare Taste (Reittier-Direkttasten), Name wie KeyCode/Key („F6“, „N“). Gesperrt bei Texteingabe.</summary>
+        public bool KeyDown(string name)
+        {
+            if (string.IsNullOrEmpty(name) || TextInputActive) return false;
+            if (UsingNewInputSystem)
+                return Keyboard.current != null && System.Enum.TryParse<Key>(name, out var k) && k != Key.None && Keyboard.current[k].wasPressedThisFrame;
+            return System.Enum.TryParse<KeyCode>(name, out var kc) && Input.GetKeyDown(kc);
+        }
         public bool TabPressed { get; private set; }
         public bool SwapPressed { get; private set; }
         public bool ActionCamPressed { get; private set; }
@@ -163,7 +173,7 @@ namespace ProjectTyrant
             JumpPressed = _jump.WasPressedThisFrame();
             JumpHeld = _jump.IsPressed(); JumpReleased = _jump.WasReleasedThisFrame();
             MountHeld = _mount.IsPressed(); MountPressed = _mount.WasPressedThisFrame(); MountReleased = _mount.WasReleasedThisFrame();
-            DodgePressed = _dodge.WasPressedThisFrame();
+            DodgePressed = _dodge.WasPressedThisFrame(); DodgeHeld = _dodge.IsPressed();
             TabPressed = _tab.WasPressedThisFrame();
             SwapPressed = _swap.WasPressedThisFrame();
             ActionCamPressed = _actionCam.WasPressedThisFrame();
@@ -198,7 +208,7 @@ namespace ProjectTyrant
             JumpPressed = Input.GetKeyDown(KeyCode.Space);
             JumpHeld = Input.GetKey(KeyCode.Space); JumpReleased = Input.GetKeyUp(KeyCode.Space);
             MountHeld = Input.GetKey(KeyCode.X); MountPressed = Input.GetKeyDown(KeyCode.X); MountReleased = Input.GetKeyUp(KeyCode.X);
-            DodgePressed = Input.GetKeyDown(KeyCode.V);
+            DodgePressed = Input.GetKeyDown(KeyCode.V); DodgeHeld = Input.GetKey(KeyCode.V);
             TabPressed = Input.GetKeyDown(KeyCode.Tab);
             SwapPressed = Input.GetKeyDown(KeyCode.BackQuote) || Input.GetKeyDown(KeyCode.Y);
             ActionCamPressed = Input.GetKeyDown(KeyCode.C);
@@ -221,7 +231,7 @@ namespace ProjectTyrant
 
         void SuppressGameplay()
         {
-            Move = Vector2.zero; Strafe = 0f; JumpPressed = false; DodgePressed = false; TabPressed = false; SwapPressed = false;
+            Move = Vector2.zero; Strafe = 0f; JumpPressed = false; DodgePressed = false; DodgeHeld = false; TabPressed = false; SwapPressed = false;
             JumpHeld = false; JumpReleased = false; MountHeld = false; MountPressed = false; MountReleased = false;
             ActionCamPressed = false; InteractPressed = false; InventoryPressed = false; HeroPressed = false; MapPressed = false;
             ZoomInPressed = false; ZoomOutPressed = false; SkillPressed = -1; DoubleTapDirection = Vector2.zero; PrimaryClick = false; HelpPressed = false; MechanicPressed = -1;

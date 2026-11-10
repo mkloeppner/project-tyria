@@ -191,6 +191,10 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: 680365538ea95674dbcd8489eca79e0d, type: 3}
   - Id: mount_skimmer
     Sprite: {fileID: 21300000, guid: 2bc8663177f0a25498fa7e63dd44c6fc, type: 3}
+  - Id: mount_griffon
+    Sprite: {fileID: 21300000, guid: 5b42d0f6873c1434d8e3ccfd75ebdcb7, type: 3}
+  - Id: mount_skyscale
+    Sprite: {fileID: 21300000, guid: e80319210f353044d8065a1b348bd7f1, type: 3}
   - Id: mastery_glide
     Sprite: {fileID: 21300000, guid: 17501c9352aba1e43a10264aae226020, type: 3}
   - Id: mastery_env

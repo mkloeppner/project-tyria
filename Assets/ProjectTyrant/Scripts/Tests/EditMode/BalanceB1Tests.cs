@@ -92,6 +92,16 @@ namespace ProjectTyrant.Tests
             var m = Chase(5); var i = In(1f); i.TargetTravelled = true; Assert.AreEqual(GiveUpReason.Travel, m.Tick(i));
             var s = Chase(5); var j = In(1f); j.TargetInSafezone = true; Assert.AreEqual(GiveUpReason.Safezone, s.Tick(j));
         }
+        [Test] public void Pursuit_OldTravel_DoesNotCancelNewChase()
+        {
+            // Regression: Reise bei t=5, Gegner bemerkt den Spieler bei t=100 (mit Zögern) → darf nicht wegen „Reise“ aufgeben
+            var m = new PursuitModel(PursuitProfile.From(DangerTable.Default(0)));
+            m.Engage(100f, false);
+            var i = In(100.5f); i.TargetTravelled = 5f > m.ChaseStart;
+            Assert.AreEqual(GiveUpReason.None, m.Tick(i));
+            Assert.AreEqual(100f, m.ChaseStart, 1e-4);
+        }
+
         [Test] public void Pursuit_Hesitation_Stage01()
         {
             var m = new PursuitModel(PursuitProfile.From(DangerTable.Default(0)));

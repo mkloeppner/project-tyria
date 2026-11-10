@@ -1,4 +1,5 @@
 using UnityEngine;
+using ProjectTyrant.Flight;
 
 namespace ProjectTyrant
 {
@@ -8,11 +9,13 @@ namespace ProjectTyrant
     /// V = Reittier-Ausweichen; Reittier-HP fangen Schaden ab. Zusätzlich die Gelände-Regeln der Biom-Zonen:
     /// tiefes Wasser (ohne Skimmer zurück ans Ufer) und Lava (Schaden, zurück auf sicheren Boden).
     /// </summary>
-    public class MountController : MonoBehaviour
+    public partial class MountController : MonoBehaviour
     {
         public readonly MountMotor Motor = new MountMotor();
-        public readonly GriffonFlight Griffon = new GriffonFlight();   // Lauf 6
-        bool _diveArmed;
+        public readonly GriffonFlight Griffon = new GriffonFlight();   // Lauf 6 (Altmodell, nur noch Tests)
+        public FlightMotor Flight { get; private set; }         // Lauf 10
+        public FlightVerdict FlightRule { get; private set; } = FlightVerdict.Ok(FlightRules.DefaultCeiling);
+        float _ruleT, _updraftT, _airT; bool _wasBanned; Vector3 _heading;
         public static MountController Local { get; private set; }
 
         PlayerController _pc;
@@ -118,7 +121,20 @@ namespace ProjectTyrant
             {
                 if (Motor.IsMounted) { ApplyDismount(); return; }
                 if (Motor.IsChanneling) { Motor.CancelChannel(); return; }
-                TryMount(prof.State.SelectedMount);
+                var sel = prof.State.MountSelection();   // Lauf 10: Standard- oder Zuletzt-Modus
+                var tap = sel.ForTap();
+                TryMount(tap != MountKind.None ? tap : prof.State.SelectedMount);
+            }
+            // Lauf 10: Direkttasten je Reittier (Reittier-Tab)
+            if (!_radialOpen && prof.State.MountPrefs.Keys != null && prof.State.MountPrefs.Keys.Count > 0)
+            {
+                var sel = prof.State.MountSelection();
+                foreach (var b in prof.State.MountPrefs.Keys)
+                {
+                    var parts = b.Split('='); if (parts.Length != 2 || !input.KeyDown(parts[1])) continue;
+                    var k = sel.ForKey(parts[1]); if (k != MountKind.None) SwitchOrMount(k);
+                    break;
+                }
             }
             if (Motor.IsMounted && input.InteractPressed) ApplyDismount();   // GW2: Interagieren sitzt ab
         }
@@ -130,9 +146,41 @@ namespace ProjectTyrant
             var k = UIController.Instance != null ? UIController.Instance.ShowMountRadial(false) : MountKind.None;
             if (!choose || k == MountKind.None) return;
             var prof = PlayerProfile.Instance;
-            prof.SelectMount(k);
-            if (Motor.IsMounted && Motor.Mounted != k) { ApplyDismount(); Motor.Tick(0f); }
-            if (!Motor.IsMounted) TryMount(k);
+            var sel = prof.State.MountSelection();
+            k = sel.RadialPick(k);   // Lauf 10: Radial setzt den Standard nur, wenn so eingestellt
+            if (k == MountKind.None) return;
+            prof.State.StoreMountSelection(sel); GameEventBus.RaiseProfileChanged(); prof.RequestSave("Reittier gewählt");
+            SwitchOrMount(k);
+        }
+
+        /// <summary>Lauf 10: Direktwechsel aufgesessen (am Boden immer; in der Luft Greif ↔ Himmelsschuppe mit Vertrauensband) oder Aufsitzen.</summary>
+        public void SwitchOrMount(MountKind k)
+        {
+            if (Motor.IsMounted && Motor.Mounted == k) return;
+            if (Motor.IsMounted)
+            {
+                bool air = Flight != null && Flight.Airborne;
+                var mm = PlayerProfile.Instance != null ? PlayerProfile.Instance.Mastery : null;
+                if (!MountSelectionModel.CanSwitch(Motor.Mounted, k, air, mm != null && MasteryEffects.TrustBond(mm)))
+                { GameEventBus.Notify(air ? "In der Luft nur Greif ↔ Himmelsschuppe (Beherrschung „Vertrauensband“)" : "Wechsel nicht möglich", new Color(1f, 0.7f, 0.4f)); return; }
+                if (air) { AirSwap(k); return; }
+                ApplyDismount(); Motor.Tick(0f);
+            }
+            TryMount(k);
+        }
+
+        /// <summary>Lauf 10: Luftwechsel ohne Absitzen – Höhe und Tempo bleiben erhalten.</summary>
+        void AirSwap(MountKind k)
+        {
+            var prof = PlayerProfile.Instance; if (prof == null || !prof.OwnsMount(k)) return;
+            var old = Flight;
+            ApplyDismount();
+            Motor.Tick(0f);
+            if (!Motor.BeginMount(StatsFor(k), true, true)) return;
+            for (int i = 0; i < 20 && Motor.IsChanneling; i++) Motor.Tick(0.1f);   // Luftwechsel ohne Aufsitz-Kanal
+            ApplyMount();
+            if (Flight != null && old != null) { Flight.Forward = old.Forward; Flight.Vertical = old.Vertical; Flight.Altitude = old.Altitude; Flight.LeaveGround(); }
+            GameEventBus.Notify("Luftwechsel: " + (Def(k) != null ? Def(k).DisplayName : k.ToString()), new Color(0.75f, 0.9f, 1f));
         }
 
         public bool TryMount(MountKind k)
@@ -173,6 +221,9 @@ namespace ProjectTyrant
             var rig = ThirdPersonCameraRig.Current;
             if (rig != null && rig.Orbital != null) { _orbitalRadius = rig.Orbital.Radius; rig.Orbital.Radius = _orbitalRadius * 1.3f; }
             SkillExecutor.VfxPulse(transform.position, 2.2f, new Color(1f, 0.85f, 0.5f));
+            BeginFlight(Motor.Mounted);   // Lauf 10
+            var pr = PlayerProfile.Instance;
+            if (pr != null) { var sel = pr.State.MountSelection(); sel.Used(Motor.Mounted); pr.State.StoreMountSelection(sel); }
             MountChanged?.Invoke(Motor.Mounted);
         }
 
@@ -186,6 +237,7 @@ namespace ProjectTyrant
             _pc.HoverFloor = null;
             _pc.FallDamageHeight = _baseFallHeight;
             _pc.MaxFallSpeed = 0f; Griffon.Land();   // Lauf 6
+            EndFlight();   // Lauf 10
             if (_caster != null) _caster.InputSuppressed = false;
             if (_visual != null) { Destroy(_visual); _visual = null; }
             var rig = ThirdPersonCameraRig.Current;
@@ -225,23 +277,12 @@ namespace ProjectTyrant
                 case MountKind.Skimmer:
                     if (input.JumpPressed && grounded) _pc.SetVerticalVelocity(MountMotor.JumpVelocity(Motor.Stats.HopHeight, _pc.Gravity));
                     break;
-                case MountKind.Griffon:   // Lauf 6: Leertaste am Boden = Abheben, in der Luft halten = Sturzflug, loslassen = Abfangen
-                    var mm = PlayerProfile.Instance != null ? PlayerProfile.Instance.Mastery : null;
-                    Griffon.DiveUnlocked = mm == null || MasteryEffects.GriffonDive(mm); Griffon.Endurance = mm != null && MasteryEffects.GriffonEndurance(mm);
-                    if (input.JumpPressed && grounded) { _pc.SetVerticalVelocity(MountMotor.JumpVelocity(Griffon.TakeoffHeight, _pc.Gravity)); _pc.ResetFallTracking(); _diveArmed = false; }
-                    if (input.JumpReleased) _diveArmed = true;
-                    Griffon.Tick(dt, !grounded, input.JumpHeld && _diveArmed && !grounded, out float climb);
-                    if (!grounded)
-                    {
-                        _pc.SpeedOverride = Griffon.Speed * (SpeedFactor != null ? SpeedFactor() : 1f);
-                        _pc.MaxFallSpeed = Griffon.Sink;
-                        if (climb > 0f) _pc.SetVerticalVelocity(climb);
-                        _pc.ResetFallTracking();
-                    }
-                    else _pc.MaxFallSpeed = 0f;
+                case MountKind.Griffon:
+                case MountKind.Skyscale:   // Lauf 10: kinematischer Flug (FlightMotor)
+                    TickFlight(input, dt, grounded);
                     break;
             }
-            if (input.DodgePressed && Motor.TryDodge())
+            if (input.DodgePressed && !(Flight != null && Flight.Airborne) && Motor.TryDodge())
             {
                 var dir = fwd;
                 _pc.Launch(dir * (Motor.Stats.DodgeDistance / 0.35f), 0f, 0.35f);
@@ -258,6 +299,7 @@ namespace ProjectTyrant
             var target = tsys != null && tsys.Current != null && _self.IsHostileTo(tsys.Current) ? tsys.Current : Combatant.FindNearestHostile(_self, transform.position, Motor.Stats.EngageRange);
             float dist = target != null ? Vector3.Distance(target.transform.position, transform.position) : float.MaxValue;
             var kind = Motor.Mounted;
+            float diveFactor = Flight != null ? Flight.EngageFactor : 0f;   // Lauf 10: Sturzangriff skaliert mit dem Sturz-Tempo
             if (target == null || !Motor.TryEngage(dist, out float coef, out float radius)) { GameEventBus.Notify("Kein Gegner in Reichweite für den Absitz-Angriff", new Color(1f, 0.7f, 0.4f)); return; }
             var land = target.transform.position - (target.transform.position - transform.position).normalized * 1.5f;
             if (_pc != null) _pc.Teleport(ZoneAnchors.GroundAt(land + Vector3.up * 2f) + Vector3.up * 0.1f, Quaternion.LookRotation(Flat(target.transform.position - transform.position)));
@@ -266,24 +308,28 @@ namespace ProjectTyrant
             {
                 if (c == null || c.IsDead || !_self.IsHostileTo(c)) continue;
                 if (Vector3.Distance(c.transform.position, transform.position) > radius) continue;
-                DamageCalculator.DealDirect(_self, c, coef);
+                DamageCalculator.DealDirect(_self, c, kind == MountKind.Griffon ? coef * (0.6f + 0.9f * diveFactor) : coef);
                 switch (kind)
                 {
                     case MountKind.Raptor: c.Effects.Apply(new EffectApplication(EffectType.Cripple, 1, 3f), _self); break;        // Schwanzfeger
                     case MountKind.Springer: c.Effects.Apply(new EffectApplication(EffectType.Stun, 1, 1.5f), _self); break;      // Stampfer
                     case MountKind.Skimmer: c.Effects.Apply(new EffectApplication(EffectType.Vulnerability, 5, 6f), _self); break; // Wellenschlag
                     case MountKind.Griffon: c.Effects.Apply(new EffectApplication(EffectType.Stun, 1, 1f), _self); c.Effects.Apply(new EffectApplication(EffectType.Vulnerability, 3, 5f), _self); break;   // Sturzangriff
+                    case MountKind.Skyscale: c.Effects.Apply(new EffectApplication(EffectType.Burning, 3, 4f), _self); c.Effects.Apply(new EffectApplication(EffectType.Stun, 1, 0.5f), _self); break;   // Feuerstoß: 3 Brennen, Trotz 150
                 }
             }
             SkillExecutor.VfxPulse(transform.position, radius, new Color(1f, 0.8f, 0.4f));
-            GameEventBus.Notify(kind == MountKind.Raptor ? "Schwanzfeger!" : kind == MountKind.Springer ? "Stampfer!" : kind == MountKind.Griffon ? "Sturzangriff!" : "Wellenschlag!", new Color(1f, 0.85f, 0.5f));
+            GameEventBus.Notify(kind == MountKind.Raptor ? "Schwanzfeger!" : kind == MountKind.Springer ? "Stampfer!" : kind == MountKind.Griffon ? "Sturzangriff!" : kind == MountKind.Skyscale ? "Feuerstoß!" : "Wellenschlag!", new Color(1f, 0.85f, 0.5f));
         }
 
-        /// <summary>Lauf 6: Aufwind hebt den fliegenden Greif an.</summary>
+        /// <summary>Lauf 10: Aufwind – wirkt auf Flugreittiere mit der passenden Beherrschung (Greif 2 / Himmelsschuppe 3).</summary>
         public bool ApplyUpdraft(float strength)
         {
-            if (Motor.Mounted != MountKind.Griffon || _pc.IsGrounded) return false;
-            _pc.SetVerticalVelocity(Mathf.Max(_pc.VerticalVelocity, strength)); _pc.ResetFallTracking();
+            if (Flight == null || !Flight.Airborne) return false;
+            var mm = PlayerProfile.Instance != null ? PlayerProfile.Instance.Mastery : null;
+            bool ok = mm == null || (Motor.Mounted == MountKind.Griffon ? MasteryEffects.GriffonUpdrafts(mm) : MasteryEffects.SkyscaleUpdrafts(mm));
+            if (!ok) return false;
+            _updraftT = 0.25f;
             return true;
         }
 

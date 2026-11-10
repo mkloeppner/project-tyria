@@ -64,6 +64,7 @@ namespace ProjectTyrant.Balance
             if (State == PursuitState.Chase || State == PursuitState.Hesitate) { if (attacked && State == PursuitState.Hesitate) Begin(now); return; }
             if (State == PursuitState.Return) return;   // GW2: zurückkehrende Gegner sind unverwundbar und ignorieren alles
             LastReason = GiveUpReason.None;
+            ChaseStart = now;   // auch beim Zögern: sonst wertet Regel 6 eine alte Reise als neue (Gegner gaben sofort auf)
             if (!attacked && Profile.Hesitation > 0f) { State = PursuitState.Hesitate; _hesitateUntil = now + Profile.Hesitation; }
             else Begin(now);
         }

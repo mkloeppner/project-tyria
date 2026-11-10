@@ -33,6 +33,8 @@ namespace ProjectTyrant
         // Lauf 4: Reittiere + Beherrschungen
         public List<string> Mounts = new List<string>();
         public string SelectedMount;
+        public MountPrefsDto MountPrefs = new MountPrefsDto();   // Lauf 10: Reittier-Auswahl
+        public List<string> AdminMarks = new List<string>();     // Lauf 10: per Admin freigeschaltet (Kennzeichnung)
         public long MasteryXp;
         public int MasteryPointsEarned;
         public List<MasteryTrackDto> Masteries = new List<MasteryTrackDto>();

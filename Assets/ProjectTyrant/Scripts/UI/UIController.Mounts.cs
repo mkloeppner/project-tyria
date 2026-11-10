@@ -12,6 +12,8 @@ namespace ProjectTyrant
         readonly System.Collections.Generic.List<(MountKind kind, Image img, Vector2 dir)> _radialItems = new System.Collections.Generic.List<(MountKind, Image, Vector2)>();
         MountKind _radialHover;
         TextMeshProUGUI _radialLabel;
+        TextMeshProUGUI _flightText;   // Lauf 10: Auftrieb / Flugausdauer
+        Image _mountIcon; MountKind _mountIconKind = (MountKind)(-1); bool _mountIconMounted;   // Lauf 10: HUD-Symbol des X-Reittiers
 
         void EnsureMountHud()
         {
@@ -20,6 +22,31 @@ namespace ProjectTyrant
             _mountChannel = MakeBar("MountChannel", HudLayer, new Vector2(0.5f, 0f), new Vector2(0, 240), new Vector2(360, 18), new Color(1f, 0.85f, 0.45f), 14);
             _mountCharge = MakeBar("MountCharge", HudLayer, new Vector2(0.5f, 0f), new Vector2(0, 200), new Vector2(240, 12), new Color(0.6f, 1f, 0.6f), 11);
             _mountHp.Root.SetActive(false); _mountChannel.Root.SetActive(false); _mountCharge.Root.SetActive(false);
+            _flightText = UiFactory.Text("FlightText", HudLayer, "", 16, TextAlignmentOptions.Center, new Color(0.85f, 0.93f, 1f));
+            _flightText.rectTransform.Place(new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0, 176), new Vector2(520, 44));
+            _flightText.gameObject.SetActive(false);
+            _mountIcon = UiFactory.Image("MountIcon", HudLayer, Color.white);
+            _mountIcon.rectTransform.Place(new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(-470, 30), new Vector2(46, 46));
+            _mountIcon.gameObject.SetActive(false);
+        }
+
+        /// <summary>Lauf 10: Symbol des Reittiers, das X antippen aufruft (hell = aufgesessen).</summary>
+        void UpdateMountIcon(MountController mc)
+        {
+            var prof = PlayerProfile.Instance;
+            var k = MountKind.None;
+            if (mc.Motor.IsMounted) k = mc.Motor.Mounted;
+            else if (prof != null) k = prof.State.MountSelection().ForTap();
+            bool show = k != MountKind.None && !HudHidden;
+            if (_mountIcon.gameObject.activeSelf != show) _mountIcon.gameObject.SetActive(show);
+            if (!show) return;
+            if (k != _mountIconKind || _mountIconMounted != mc.Motor.IsMounted)
+            {
+                _mountIconKind = k; _mountIconMounted = mc.Motor.IsMounted;
+                var def = mc.Def(k);
+                _mountIcon.sprite = def != null ? UiFactory.Sprite(def.Icon) : null;
+                _mountIcon.color = mc.Motor.IsMounted ? Color.white : new Color(0.8f, 0.8f, 0.85f, 0.8f);
+            }
         }
 
         public void UpdateMountHud(MountController mc)
@@ -35,6 +62,11 @@ namespace ProjectTyrant
             if (ch) SetBar(_mountChannel, m.ChannelProgress, "Aufsitzen: " + (mc.Def(m.Channeling) != null ? mc.Def(m.Channeling).DisplayName : m.Channeling.ToString()) + " …");
             if (cg) SetBar(_mountCharge, m.Charge, "Sprungkraft " + Mathf.RoundToInt(Mathf.Lerp(m.Stats.MinJump, m.Stats.MaxJump, m.Charge)) + " m");
             if (_radial != null && _radial.gameObject.activeSelf) UpdateRadial();
+            string ft = m.IsMounted && !HudHidden ? mc.FlightHudText() : null;
+            bool fs = !string.IsNullOrEmpty(ft);
+            if (_flightText.gameObject.activeSelf != fs) _flightText.gameObject.SetActive(fs);
+            if (fs) _flightText.text = ft;
+            UpdateMountIcon(mc);
         }
 
         /// <summary>Öffnet (true) oder schließt (false) das Radialmenü; beim Schließen das gewählte Reittier.</summary>
