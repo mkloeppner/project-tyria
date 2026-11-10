@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7822962983941438414}
   - component: {fileID: 5694925613591657307}
   - component: {fileID: 5000607583412370675}
+  - component: {fileID: 7740222790810823714}
   m_Layer: 0
   m_Name: Rise
   m_TagString: Untagged
@@ -2307,6 +2308,19 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!114 &7740222790810823714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549758480493891096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132796e78905cff4f9bde0e75d2271ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.VfxAreaLayer
+  Layer: 1
 --- !u!1 &4512728040316755383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,6 +2332,7 @@ GameObject:
   - component: {fileID: 4674093523905592895}
   - component: {fileID: 1600155505986037856}
   - component: {fileID: 5396557211812203028}
+  - component: {fileID: 8278477166179582799}
   m_Layer: 0
   m_Name: Ring
   m_TagString: Untagged
@@ -2397,6 +2412,19 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8278477166179582799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4512728040316755383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132796e78905cff4f9bde0e75d2271ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.VfxAreaLayer
+  Layer: 0
 --- !u!1 &8798734265847675031
 GameObject:
   m_ObjectHideFlags: 0

@@ -57,9 +57,26 @@ MonoBehaviour:
   - Id: wp_frost_tempel
     Name: Wegmarke Eiswind
     Position: {x: -180, y: 7.0328674, z: 240}
+  - Id: wp_frostkamm_ankunft
+    Name: Ankunfts-Wegmarke Frostkamm
+    Position: {x: 8, y: 13.989325, z: -440}
+  - Id: wp_frostkamm_ankunft_gluetoede
+    Name: "Portal-Wegmarke Glut\xF6de"
+    Position: {x: 460.95074, y: -4.1458035, z: 43.48022}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 13.989325, z: -440}
+    WaypointId: wp_frostkamm_ankunft
+  - Entrance: portal:frostkamm_nebelmoor
+    Position: {x: -19.744911, y: 14, z: -464.00543}
+    WaypointId: wp_frostkamm_ankunft
+  - Entrance: portal:frostkamm_gluetoede
+    Position: {x: 454.02255, y: -4.1458035, z: 39.48022}
+    WaypointId: wp_frostkamm_ankunft_gluetoede
   Tips:
   - "Der Springer \xFCberwindet die Terrassen des Frostkamms mit einem Satz."
   - Der Weltboss Frostschlund erscheint alle 15 Minuten.
+  LoadingImage: {fileID: 2800000, guid: 49cb8948acc965641a22d92fe39ed6c5, type: 3}
   Regions:
   - Name: Bergsteigerlager
     Center: {x: -240, y: -270}
@@ -112,3 +129,4 @@ MonoBehaviour:
   - heart_frost_runa
   - heart_frost_bodo
   - heart_frost_saga
+  - heart_frost_elva

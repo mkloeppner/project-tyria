@@ -21,6 +21,7 @@ namespace ProjectTyrant
             GameMenu = new GameMenu(_dialogManager);   // Lauf 5 / M24: Esc-Spielmenü + Optionen
             GameOptions.Changed += OnOptionsChanged;
             BuildMap();
+            BuildStoryUi();   // Lauf 6
             if (Application.isEditor || UnityEngine.Debug.isDebugBuild) Debug = new DebugPanel(Windows);
             UiItemSlot.Dropped += ItemActions.HandleDrop;
             UiItemSlot.RightClicked += ItemActions.ContextMenu;
@@ -62,6 +63,7 @@ namespace ProjectTyrant
         partial void UpdateWindows()
         {
             UpdateMap();
+            UpdateStoryUi();   // Lauf 6
             if (Hero.Window.IsOpen) Hero.Refresh();
             if (Inventory.Window.IsOpen) Inventory.Refresh();
             if (Vendor.Window.IsOpen) Vendor.Refresh();

@@ -1,0 +1,408 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_01
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 1
+  Title: "Rauch \xFCber Sonnfurt"
+  Zone: sonnfurt
+  MinLevel: 1
+  Summary: "Die Aschkrallen \xFCberfallen die Grenzmark. Der Held rettet, wen er kann, und folgt den Pl\xFCnderern bis zu ihrem Lager."
+  Steps:
+  - Id: K01_S01H
+    Title: Feuer auf dem Hof
+    Description: "Die Aschkrallen z\xFCnden den Hof an. Hol die Tiere und die Nachbarn raus."
+    Type: 0
+    Zone: sonnfurt
+    Position: {x: -8, y: 1, z: -60}
+    Npc: 
+    Condition:
+      Origin: 1
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 4
+      Target: '*'
+      Count: 3
+      Text: Weiche drei Hieben aus
+      Hint: dodge
+      Optional: 0
+      Label: "Ru\xDFklaue, Aschkrallen-Brecher"
+      Offset: {x: 0, y: 0, z: 7}
+      Scale: 1
+      Scene: 
+      Partner: Enemy_Veteran_Brecher
+    - Kind: 2
+      Target: Enemy_Trash_Pluenderer
+      Count: 4
+      Text: "Besiege die Pl\xFCnderer"
+      Hint: skills
+      Optional: 0
+      Label: "Aschkrallen-Pl\xFCnderer"
+      Offset: {x: 6, y: 0, z: 4}
+      Scale: 0.6
+      Scene: 
+      Partner: 
+    - Kind: 7
+      Target: '*'
+      Count: 1
+      Text: Heile dich (6)
+      Hint: heal
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 9
+      Target: dorfbewohner
+      Count: 3
+      Text: Bring die Leute in Sicherheit
+      Hint: interact
+      Optional: 0
+      Label: Befreien
+      Offset: {x: -6, y: 0, z: 6}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K01_S01
+    SceneEnd: K01_S01E
+    Checkpoints:
+    - 1
+    - 2
+    Reward:
+      Experience: 250
+      Karma: 40
+      Copper: 100
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 40
+    Companion: 
+    Props:
+    - feuer@-6,-4
+    - feuer@5,-8
+    - feuer@-2,9
+    - rauch@-6,-4
+    - rauch@5,-8
+    - kisten@8,3
+  - Id: K01_S01P
+    Title: "Feuer an der Stra\xDFe"
+    Description: "Pl\xFCnderer \xFCberfallen den Karren aus Sonnfurt. Halte die Stra\xDFe."
+    Type: 0
+    Zone: sonnfurt
+    Position: {x: -70, y: 1, z: -10}
+    Npc: 
+    Condition:
+      Origin: 2
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 4
+      Target: '*'
+      Count: 3
+      Text: Weiche drei Hieben aus
+      Hint: dodge
+      Optional: 0
+      Label: "Ru\xDFklaue, Aschkrallen-Brecher"
+      Offset: {x: 0, y: 0, z: 7}
+      Scale: 1
+      Scene: 
+      Partner: Enemy_Veteran_Brecher
+    - Kind: 2
+      Target: Enemy_Trash_Pluenderer
+      Count: 4
+      Text: "Besiege die Pl\xFCnderer"
+      Hint: skills
+      Optional: 0
+      Label: "Aschkrallen-Pl\xFCnderer"
+      Offset: {x: 6, y: 0, z: 4}
+      Scale: 0.6
+      Scene: 
+      Partner: 
+    - Kind: 7
+      Target: '*'
+      Count: 1
+      Text: Heile dich (6)
+      Hint: heal
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 9
+      Target: dorfbewohner
+      Count: 3
+      Text: Bring die Leute in Sicherheit
+      Hint: interact
+      Optional: 0
+      Label: Befreien
+      Offset: {x: -6, y: 0, z: 6}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K01_S01
+    SceneEnd: K01_S01E
+    Checkpoints:
+    - 1
+    - 2
+    Reward:
+      Experience: 250
+      Karma: 40
+      Copper: 100
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 40
+    Companion: 
+    Props:
+    - barrikade@0,-6
+    - barrikade@4,8
+    - feuer@-5,2
+    - kisten@3,-2
+    - rauch@-5,2
+  - Id: K01_S01R
+    Title: Besuch in den Ruinen
+    Description: "Pl\xFCnderer graben in Elmhains Ruinen. Sch\xFCtze Magister Elmar."
+    Type: 0
+    Zone: sonnfurt
+    Position: {x: 58, y: 2, z: -55}
+    Npc: 
+    Condition:
+      Origin: 3
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 4
+      Target: '*'
+      Count: 3
+      Text: Weiche drei Hieben aus
+      Hint: dodge
+      Optional: 0
+      Label: "Ru\xDFklaue, Aschkrallen-Brecher"
+      Offset: {x: 0, y: 0, z: 7}
+      Scale: 1
+      Scene: 
+      Partner: Enemy_Veteran_Brecher
+    - Kind: 2
+      Target: Enemy_Trash_Pluenderer
+      Count: 4
+      Text: "Besiege die Pl\xFCnderer"
+      Hint: skills
+      Optional: 0
+      Label: "Aschkrallen-Pl\xFCnderer"
+      Offset: {x: 6, y: 0, z: 4}
+      Scale: 0.6
+      Scene: 
+      Partner: 
+    - Kind: 7
+      Target: '*'
+      Count: 1
+      Text: Heile dich (6)
+      Hint: heal
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 9
+      Target: dorfbewohner
+      Count: 3
+      Text: Bring die Leute in Sicherheit
+      Hint: interact
+      Optional: 0
+      Label: Befreien
+      Offset: {x: -6, y: 0, z: 6}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K01_S01
+    SceneEnd: K01_S01E
+    Checkpoints:
+    - 1
+    - 2
+    Reward:
+      Experience: 250
+      Karma: 40
+      Copper: 100
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 40
+    Companion: 
+    Props:
+    - zelt@-7,5
+    - kisten@6,-3
+    - feuer@2,8
+    - kisten@-4,-6
+  - Id: K01_S02
+    Title: Miras Liste
+    Description: "Der Weiler braucht Hilfe. Mira f\xFChrt Buch \u2013 hilf ihr beim Herz \u201ESonnfurt sichern\u201C."
+    Type: 1
+    Zone: sonnfurt
+    Position: {x: -60, y: 1, z: -60}
+    Npc: mira
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 11
+      Target: heart_sonnfurt_mira
+      Count: 1
+      Text: Hilf Mira, Sonnfurt zu sichern (Herz)
+      Hint: heart
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 12
+      Target: wp_
+      Count: 1
+      Text: Entdecke eine Wegmarke
+      Hint: waypoint
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 8
+      Target: '*'
+      Count: 1
+      Text: Wechsle einmal die Waffe
+      Hint: swap
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: 
+    SceneEnd: K01_S02E
+    Checkpoints: []
+    Reward:
+      Experience: 300
+      Karma: 50
+      Copper: 150
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K01_S03
+    Title: Das Lager in der Rabenschanze
+    Description: "Die Spuren f\xFChren zur Rabenschanze. Hol Joss und die Zwillinge zur\xFCck."
+    Type: 0
+    Zone: sonnfurt
+    Position: {x: 58, y: 2, z: 58}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 2
+      Target: Enemy_Trash_Pluenderer
+      Count: 5
+      Text: Besiege die Lagerwachen
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 6}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 9
+      Target: dorfbewohner
+      Count: 3
+      Text: Befreie die Gefangenen
+      Hint: 
+      Optional: 0
+      Label: "Fesseln l\xF6sen"
+      Offset: {x: -8, y: 0, z: -6}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 29
+      Target: Enemy_Veteran_Brecher
+      Count: 1
+      Text: "Besiege den Lageranf\xFChrer"
+      Hint: 
+      Optional: 0
+      Label: "Ru\xDFzahn, Lageranf\xFChrer"
+      Offset: {x: 4, y: 0, z: 10}
+      Scale: 2.5
+      Scene: 
+      Partner: 
+    SceneStart: K01_S03
+    SceneEnd: K01_S03E
+    Checkpoints:
+    - 0
+    - 1
+    Reward:
+      Experience: 500
+      Karma: 80
+      Copper: 300
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: L_K01
+    Radius: 45
+    Companion: mira
+    Props:
+    - zelt@-8,8
+    - zelt@6,12
+    - kaefig@-8,-6
+    - kaefig@-11,-3
+    - feuer@0,4
+    - barrikade@0,-10
+  JournalLines:
+  - K01_J
+  Mechanics:
+  - Bewegung, Kamera
+  - "Fertigkeiten 1\u20135"
+  - Ausweichen (Pflicht)
+  - Heilen
+  - Waffenwechsel
+  - Interaktion
+  - erstes Herz
+  - erste Wegmarke

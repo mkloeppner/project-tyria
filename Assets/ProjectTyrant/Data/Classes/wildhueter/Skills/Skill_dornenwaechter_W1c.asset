@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: wildhueter_dornenwaechter_W1c
   DisplayName: Giftschlag
-  Description: Abschluss der Kette mit Zusatzeffekt.
+  Description: "Kettenabschluss: +40 % Schaden, Schw\xE4che (3 s)."
   ShortLabel: Dornen. III
   IconColor: {r: 0.5, g: 0.9, b: 0.2, a: 1}
   Icon: {fileID: 0}
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 3
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.82
+  ChainBonus: 1
+  ChainRoot: {fileID: 11400000, guid: 0172dbf102d400a46b35cf4ae8ca68f6, type: 2}
+  Coefficient: 0.506
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -38,9 +40,9 @@ MonoBehaviour:
   ProjectileSpeed: 34
   LeapDistance: 0
   TargetBuffs:
-  - Type: 16
-    Stacks: 2
-    Duration: 5
+  - Type: 19
+    Stacks: 1
+    Duration: 3
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0

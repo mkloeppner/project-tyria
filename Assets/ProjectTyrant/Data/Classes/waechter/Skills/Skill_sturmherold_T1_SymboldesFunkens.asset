@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 15
   Radius: 4
   TargetCount: 5
-  Coefficient: 0.35000002
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 0.403
   Hits: 4
   HitInterval: 0.75
   HealBase: 0

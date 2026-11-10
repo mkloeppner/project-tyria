@@ -1,0 +1,49 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K10_S01_L01;mira;entschlossen;rechts;Die Bündnisse stehen vor den Toren. Alle drei. Ich habe sie zusammengeschrieben. Mit sehr vielen Briefen.;
+K10_S01_L02;haldis;entschlossen;rechts;Drei Tore. Wir nehmen sie nacheinander. Keiner bleibt liegen.;
+K10_S01_L03;tovin;besorgt;rechts;Die Siegelbrecher arbeiten an den Toren. Wenn sie fertig sind, ist die Kammer offen. Für ihn.;
+K10_S01_L04;veyra;neutral;rechts;Ich gehe vor. Der Herold hat Wachen, die mich kennen. Und nicht mögen.;
+K10_S01_C1_A;held;entschlossen;links;Für Brennar. Für alle, die nicht mehr hier sind.;opt:1|tend:Wuerde|reply:K10_S01_R1
+K10_S01_C1_B;held;amuesiert;links;Mira, setz uns auf die Liste der Sieger.;opt:1|tend:Charme|reply:K10_S01_R2
+K10_S01_C1_C;held;zornig;links;Keine Gnade für die Garde.;opt:1|tend:Wildheit|reply:K10_S01_R3
+K10_S01_R1;haldis;trauernd;rechts;Für Brennar. Er hätte jetzt etwas Kurzes gesagt.;reply
+K10_S01_R2;mira;amuesiert;rechts;Steht schon drauf. Mit Bleistift. Ich will radieren können.;reply
+K10_S01_R3;veyra;neutral;rechts;Die Garde gibt auch keine.;reply
+K10_S01E_L01;held;entschlossen;nah;Das dritte Tor fällt. Der Hof ist frei. Der Thronsaal wartet.;
+K10_S02_L01;herold;neutral;total;Du hast dich verändert. Brennar hätte dich gemocht.;
+K10_S02_L02;held;zornig;links;Er hat mich gemocht. Bevor du ihn getötet hast.;
+K10_S02_L03;herold;trauernd;rechts;Ich habe ihn nicht getötet. Der Berg hat es getan. Ich habe nur das Siegel gebrochen.;
+K10_S02_L04;held;zornig;links;Das ist dasselbe.;
+K10_S02_L05;herold;neutral;rechts;Ja. Ich weiß. Ich habe lange gebraucht, um es zu wissen.;
+K10_S02_C2_A;held;neutral;links;Dann hör auf. Leg die Klinge nieder.;opt:2|tend:Charme|flag:k10_angebot|reply:K10_S02_R1
+K10_S02_C2_B;held;zornig;links;Zu spät für Reue. Kämpf.;opt:2|tend:Wildheit|flag:k10_kampf|reply:K10_S02_R2
+K10_S02_R1;herold;trauernd;rechts;Zu spät. Er hört mich schon nicht mehr. Nur noch dich.;reply
+K10_S02_R2;herold;neutral;rechts;Endlich jemand, der ehrlich ist.;reply
+K10_S02E_L01;herold;trauernd;total;Er hat mir Ordnung versprochen. Er hat gelogen. Halte ihn auf.;
+K10_S02E_L02;held;trauernd;nah;Das werde ich. Ruh dich aus.;
+K10_S02E_L02@Wildheit;held;neutral;nah;Ich halte ihn auf. Nicht für dich.;
+K10_S03_L01;vareth;neutral;total;Kleiner Wächter. Du hast meinen Diener gebrochen. Jetzt brich mich.;
+K10_S03_L02;held;entschlossen;links;Nicht brechen. Einschließen. Für immer.;
+K10_S03_L03;vareth;amuesiert;total;Für immer ist kurz. Ich habe es schon einmal erlebt.;
+K10_S03_L04;haldis;entschlossen;rechts;Die Siegel! Halt die Siegel, ich halte ihn!;if:Pact=Wacht
+K10_S03_L05;tovin;besorgt;rechts;Die Inschrift! Ich lese, du schlägst. Wenn ich mich verlese, entschuldige ich mich hinterher.;if:Pact=Archiv
+K10_S03_L06;veyra;neutral;rechts;Er sieht mich nicht. Ich bin der Schatten an seinem Thron.;if:Pact=Schleier
+K10_S03_L07;held;entschlossen;nah;Jetzt!;
+K10_S03E_L01;vareth;neutral;total;Ich schlafe. Aber ich träume. Und im Traum zähle ich meine Wächter.;
+K10_S03E_L02;held;entschlossen;nah;Dann zähl mich mit. Ich bin der letzte, den du brauchst.;
+K10_S03E_L02@Raetsel;held;entschlossen;nah;Jetzt verstehe ich die Zeichen. Ich bin einer der Wächter. Und ich bleibe wach.;
+K10_S03E_L02@Verlorener;held;entschlossen;nah;Ilan ist frei. Der Wald lässt ihn gehen. Du hältst niemanden mehr fest.;
+K10_S03E_L02@Schuld;held;entschlossen;nah;Diesmal bin ich geblieben. Bis zum Ende.;
+K10_S04_L01;mira;trauernd;rechts;Brennars Grabmal. Ich habe es selbst entworfen. Mit einer Liste. Natürlich.;
+K10_S04_L02;held;trauernd;links;Was steht drauf?;
+K10_S04_L03;mira;neutral;rechts;Erste Zeile: Brennar Feld. Zweite Zeile: hat die Linie gehalten. Spalte zwei: wir auch.;
+K10_S04_L04;haldis;neutral;rechts;Die Wacht bleibt an der Feste. Jemand muss die Siegel bewachen. Ich delegiere das. Zum ersten Mal.;
+K10_S04_L05;tovin;amuesiert;rechts;Ich schreibe ein Buch. Über dich. Kapitel eins heißt: Rauch über Sonnfurt.;
+K10_S04_L06;veyra;neutral;rechts;Der Herold ist weg. Meine Rechnung ist bezahlt. Vielleicht bleibe ich trotzdem.;
+K10_S04_C3_A;held;neutral;links;Und jetzt? Ich habe keine Liste für danach.;opt:3|tend:Charme|flag:epilog_frage|reply:K10_S04_R1
+K10_S04_C3_B;held;entschlossen;links;Jetzt halten wir, was wir gewonnen haben.;opt:3|tend:Wuerde|flag:epilog_halten|reply:K10_S04_R2
+K10_S04_C3_C;held;amuesiert;links;Jetzt essen wir. Ich habe seit Kapitel fünf nichts gegessen.;opt:3|tend:Wildheit|flag:epilog_essen|reply:K10_S04_R3
+K10_S04_R1;mira;amuesiert;rechts;Ich schon. Erste Zeile: Frühstück.;reply
+K10_S04_R2;mira;entschlossen;rechts;Dann schreib ich dich in die erste Spalte. Neben ihn.;reply
+K10_S04_R3;mira;amuesiert;rechts;Kapitel fünf? Du redest schon wie Tovin.;reply
+K10_J;held;entschlossen;;In der Tyrannenfeste fiel der Herold. Wir haben Vareth versiegelt, nicht getötet. An Brennars Grab hat Mira eine neue Liste angefangen.;journal

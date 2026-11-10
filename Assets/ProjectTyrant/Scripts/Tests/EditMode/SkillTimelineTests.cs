@@ -55,10 +55,14 @@ namespace ProjectTyrant.Tests
                 Assert.IsNotNull(b, id);
                 Assert.AreEqual(2, b.Chain.Length, id);
                 var links = new[] { b, b.Chain[0], b.Chain[1] };
-                Assert.Less(links[0].Coefficient, links[1].Coefficient); Assert.Less(links[1].Coefficient, links[2].Coefficient);
+                // Fix-Lauf F1 (Auftrag): Glied 1 und 2 Basis-Koeffizient, Glied 3 höher (+30–50 %) – vorher steigend 1 < 2 < 3; Mittelwert-Prüfung unverändert
+                Assert.AreEqual(links[0].Coefficient, links[1].Coefficient, 1e-4f); Assert.Less(links[1].Coefficient, links[2].Coefficient);
+                Assert.That(links[2].Coefficient / links[0].Coefficient, Is.InRange(1.3f, 1.5f));
                 float avg = (links[0].Coefficient + links[1].Coefficient + links[2].Coefficient) / 3f;
                 Assert.AreEqual(id.StartsWith("GS") ? 0.8f : 0.7f, avg, 0.005f, "Mittel = bisheriger Koeffizient (gleiche Zahlen)");
-                Assert.Greater(links[2].TargetBuffs.Count, links[0].TargetBuffs.Count - (id.StartsWith("ST") ? 0 : 0), "Glied 3 mit Zusatzeffekt");
+                // Fix-Lauf F1: Zusatzeffekt je Waffe kann am Ziel ODER am Wirker liegen (Großschwert: Macht + 3 Ziele) – geprüft wird die Summe beider Listen
+                Assert.Greater(links[2].TargetBuffs.Count + links[2].SelfBuffs.Count, links[0].TargetBuffs.Count + links[0].SelfBuffs.Count, "Glied 3 mit Zusatzeffekt");
+                Assert.IsTrue(links[2].ChainBonus, "Glied 3 als Kettenabschluss markiert");
                 var clips = new HashSet<string>(); foreach (var l in links) clips.Add(l.Timeline.Clip);
                 Assert.AreEqual(3, clips.Count, "jede Stufe eigene Animation");
                 var sfx = new HashSet<string>(); foreach (var l in links) sfx.Add(l.Timeline.SfxRelease);

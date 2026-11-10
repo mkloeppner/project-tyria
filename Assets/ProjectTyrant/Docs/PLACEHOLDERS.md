@@ -85,3 +85,10 @@ Jedes Objekt mit `PlaceholderMarker`-Komponente ist hier gelistet. Austausch: Me
 | 10 neue Waffenmodelle (Hammer, Gewehr, Dolch+Horn, Zepter+Horn, Degen+Fokus, Zepter+Dolch, Zepter+Pistole, Axt+Dolch, Schwert+Schild, Zepter+Fackel) | CharacterBuilder (Primitive) | Primitive mit Materialfarben | modellierte Waffen |
 | Signatur-Effekte (16 Paletten) | Prefabs/Vfx/<Palette> | Baukasten-Formen in eigener Farbe | handgestaltete Signatur-Effekte |
 | Sound-Motive (16) | Procedural/Audio | prozedurale Synth-Familien | gestaltete Klangfamilien |
+
+### Lauf 5 / M27
+| Objekt | Ort | Status |
+|---|---|---|
+| Langbogen, Elementarstab, Dolche | CharacterBuilder | ersetzt durch Meshy (`ReplacedByMeshy`) – Primitive bleiben als Rückfall, falls das FBX fehlt |
+| Helden Wildhüter/Elementarweber/Schattenklinge | Figuren | Meshy geliefert, aber nicht rissfrei skinnbar → bleiben geriggte MeshKit-Figuren (Platzhalter), Meshy-Modelle stehen als Statuen im Heldenhain (`PlaceholderMarker` „Statue …“) |
+| Ladebildschirm-Illustrationen | Data/Zones/Loading | Builder-Aufnahmen vom Aussichtspunkt (Spiel-Asset, kein Platzhalter); Ziel wäre gemalte Key-Art |

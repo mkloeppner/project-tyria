@@ -48,6 +48,7 @@ namespace ProjectTyrant
 
         IEnumerator RespawnRoutine()
         {
+            if (Story != null && Story.Instance.Active) yield break;   // Lauf 6: in Story-Instanzen startet der Direktor am Kontrollpunkt neu
             var ui = UIController.Instance;
             if (ui != null && ui.WorldMap != null && PlayerProfile.Instance != null)
             {

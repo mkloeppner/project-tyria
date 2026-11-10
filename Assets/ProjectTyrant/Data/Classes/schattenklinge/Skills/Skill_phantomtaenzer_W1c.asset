@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: schattenklinge_phantomtaenzer_W1c
   DisplayName: Rundumhieb
-  Description: Abschluss der Kette mit Zusatzeffekt.
+  Description: "Kettenabschluss: +40 % Schaden, durchschl\xE4gt (bis zu 3 Ziele), 2 Verwundbarkeit."
   ShortLabel: Stabsc. III
   IconColor: {r: 0.92, g: 0.75, b: 0.4, a: 1}
   Icon: {fileID: 0}
@@ -29,8 +29,10 @@ MonoBehaviour:
   Delivery: 0
   Range: 3
   Radius: 2.5
-  TargetCount: 5
-  Coefficient: 0.82
+  TargetCount: 3
+  ChainBonus: 1
+  ChainRoot: {fileID: 11400000, guid: 277bb9208306a6c4681a7456160f59a6, type: 2}
+  Coefficient: 1.979
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -38,9 +40,9 @@ MonoBehaviour:
   ProjectileSpeed: 34
   LeapDistance: 0
   TargetBuffs:
-  - Type: 19
+  - Type: 24
     Stacks: 2
-    Duration: 5
+    Duration: 6
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
@@ -63,10 +65,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Staff_Auto3
     AnimScale: 0.6666667
-    VfxCharge: Charge/Staubgold/S
-    VfxRelease: Release/Staubgold/S
-    VfxProjectile: Trail/Staubgold/S
-    VfxImpact: Impact/Staubgold/S
+    VfxCharge: Charge/Staubgold/L
+    VfxRelease: Release/Staubgold/L
+    VfxProjectile: Trail/Staubgold/L
+    VfxImpact: Impact/Staubgold/L
     VfxAfter: 
     SfxCharge: Staubgold/Charge
     SfxRelease: Staubgold/Swing3

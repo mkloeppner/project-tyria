@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: schattenklinge_SP1_Saebelhiebb
   DisplayName: "R\xFCckhandhieb"
-  Description: Zweites Glied der Kette.
+  Description: Zweites Glied der Kette (61 % Koeffizient).
   ShortLabel: "S\xE4bel II"
   IconColor: {r: 0.55, g: 0.35, b: 0.75, a: 1}
   Icon: {fileID: 0}
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 3
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.68
+  ChainBonus: 0
+  ChainRoot: {fileID: 11400000, guid: 9c0e28c2569078245bb60646641182c9, type: 2}
+  Coefficient: 0.949
   Hits: 1
   HitInterval: 0.25
   HealBase: 0

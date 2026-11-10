@@ -37,6 +37,7 @@ namespace ProjectTyrant
             TraitsPage = AddTab("Eigenschaften");
             ProgressPage = AddTab("Fortschritt");
             BuildWorldTabs();
+            BuildStoryTab();   // Lauf 6
             BuildProgress();
             BuildEquipmentPage();
             BuildSkillsPage();
@@ -119,6 +120,7 @@ namespace ProjectTyrant
             var lockProf = PlayerProfile.Instance;
             bool lockNow = lockProf != null && lockProf.BuildLocked;
             if (lockNow != _lastLock) { _lastLock = lockNow; _dirty = true; }
+            if (_active == _storyIndex) RefreshStory();   // Lauf 6: eigener Versionsvergleich
             if (!_dirty) return;
             _dirty = false;
             var prof = PlayerProfile.Instance;

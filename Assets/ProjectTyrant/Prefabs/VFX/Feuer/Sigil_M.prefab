@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 7029351892857014281}
   - component: {fileID: 5145051269777051592}
   - component: {fileID: 5588763095769410004}
+  - component: {fileID: 3973463688911599743}
   m_Layer: 0
   m_Name: Glimmer
   m_TagString: Untagged
@@ -2367,6 +2368,19 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!114 &3973463688911599743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3583467038252779413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132796e78905cff4f9bde0e75d2271ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.VfxAreaLayer
+  Layer: 1
 --- !u!1 &8826646429615119555
 GameObject:
   m_ObjectHideFlags: 0
@@ -2378,6 +2392,7 @@ GameObject:
   - component: {fileID: 6977130699777673575}
   - component: {fileID: 2389519682916797535}
   - component: {fileID: 3556430003627536067}
+  - component: {fileID: 3874929070215330521}
   m_Layer: 0
   m_Name: Sigil
   m_TagString: Untagged
@@ -2457,3 +2472,16 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3874929070215330521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8826646429615119555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132796e78905cff4f9bde0e75d2271ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.VfxAreaLayer
+  Layer: 0

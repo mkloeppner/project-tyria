@@ -1,0 +1,47 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+SP_sonnfurt_1_L01;sp_sonnfurt_1;besorgt;;Die Felder um Gerstenbrunn brennen nicht mehr, aber Wilma braucht jede Hand. Plünderer schleichen noch an den Zäunen.;scene:SP_sonnfurt_1
+SP_sonnfurt_1_L02;sp_sonnfurt_1;amuesiert;;Im Weiler führt Mira Buch über alles. Sag ihr, ich habe die Brunnen gezählt. Zweimal.;scene:SP_sonnfurt_1
+SP_sonnfurt_2_L01;sp_sonnfurt_2;entschlossen;;Dornwacht hält die Straße, solange die Palisade steht. Kerla repariert schneller, als die Aschkrallen anzünden.;scene:SP_sonnfurt_2
+SP_sonnfurt_2_L02;sp_sonnfurt_2;amuesiert;;Wer Hauptmann Brennar sucht: Er steht immer dort, wo es am meisten zieht.;scene:SP_sonnfurt_2
+SP_sonnfurt_3_L01;sp_sonnfurt_3;besorgt;;In Elmhains Ruinen graben Aschkrallen nach Steinen mit Zeichen. Bertold sagt, die Steine summen nachts.;scene:SP_sonnfurt_3
+SP_sonnfurt_3_L02;sp_sonnfurt_3;neutral;;Ich sage nur: Ich schlafe nicht mehr dort. Und Udo schläft eigentlich überall.;scene:SP_sonnfurt_3
+SP_nebelmoor_1_L01;sp_nebelmoor_1;neutral;;Willkommen im Nebelmoor. Bleib auf den Bohlen, das Moor behält, was es kriegt.;scene:SP_nebelmoor_1
+SP_nebelmoor_1_L02;sp_nebelmoor_1;amuesiert;;Ilse sticht Torf im Süden. Sie flucht wie ein Fuhrmann, aber sie zahlt anständig.;scene:SP_nebelmoor_1
+SP_nebelmoor_2_L01;sp_nebelmoor_2;besorgt;;Die Schilfwacht sieht alles, was sich im Röhricht bewegt. Meistens Kröten. Manchmal nicht.;scene:SP_nebelmoor_2
+SP_nebelmoor_2_L02;sp_nebelmoor_2;zornig;;Wilderer legen Fallen im Schilf aus. Fischer Jaro räumt sie weg und tritt selbst hinein.;scene:SP_nebelmoor_2
+SP_nebelmoor_3_L01;sp_nebelmoor_3;neutral;;Am Nebelkreuz treffen sich vier Stege und doppelt so viele Gerüchte.;scene:SP_nebelmoor_3
+SP_nebelmoor_3_L02;sp_nebelmoor_3;besorgt;;Merle setzt Leute über den Fluss. Ihre Fischer werden von Spuckern belagert.;scene:SP_nebelmoor_3
+SP_nebelmoor_4_L01;sp_nebelmoor_4;neutral;;Auf der Weidenhöhe wächst das beste Moorkraut. Albin flickt dort Zäune gegen alles mit Zähnen.;scene:SP_nebelmoor_4
+SP_nebelmoor_4_L02;sp_nebelmoor_4;amuesiert;;Weiter nördlich beginnt der Frostkamm. Nimm einen Mantel mit. Nimm zwei.;scene:SP_nebelmoor_4
+SP_frostkamm_1_L01;sp_frostkamm_1;besorgt;;Der Frostkamm frisst Wanderer, die ohne Führer gehen. Runa führt dich, wenn du Holz bringst.;scene:SP_frostkamm_1
+SP_frostkamm_1_L02;sp_frostkamm_1;neutral;;Und lass die Eiswölfe in Ruhe. Sie lassen dich auch in Ruhe. Meistens.;scene:SP_frostkamm_1
+SP_frostkamm_2_L01;sp_frostkamm_2;amuesiert;;Im Lager zählen wir Finger statt Münzen. Wer noch alle zehn hat, gilt als reich.;scene:SP_frostkamm_2
+SP_frostkamm_2_L02;sp_frostkamm_2;besorgt;;Bodo gräbt im Osten Kristallerz. Seine Stollen knarren lauter als mein Rücken.;scene:SP_frostkamm_2
+SP_frostkamm_3_L01;sp_frostkamm_3;entschlossen;;Der Kammpass ist der einzige Weg nach Norden. Wer ihn hält, hält den Frostkamm.;scene:SP_frostkamm_3
+SP_frostkamm_3_L02;sp_frostkamm_3;besorgt;;Letzte Nacht stand ein Mann in Grau auf dem Grat. Er warf keinen Schatten.;scene:SP_frostkamm_3
+SP_frostkamm_4_L01;sp_frostkamm_4;neutral;;Im Eiswind läuten Sagas Glocken. Verstimmt klingen sie wie Wölfe.;scene:SP_frostkamm_4
+SP_frostkamm_4_L02;sp_frostkamm_4;amuesiert;;Elva hütet ihre Ziegen am Hang. Sie redet mit ihnen mehr als mit uns, und sie antworten.;scene:SP_frostkamm_4
+SP_gluetoede_1_L01;sp_gluetoede_1;amuesiert;;Die Glutöde heißt so, weil sie glüht. Wir haben lange über den Namen nachgedacht.;scene:SP_gluetoede_1
+SP_gluetoede_1_L02;sp_gluetoede_1;neutral;;Kaya sammelt Glutkristalle im Westen. Sie braucht Leute mit dicken Handschuhen.;scene:SP_gluetoede_1
+SP_gluetoede_2_L01;sp_gluetoede_2;besorgt;;Im Schlackenfeld legen Aschkrallen Minen aus Schlacke. Feuerwache Brann räumt sie, eine nach der anderen.;scene:SP_gluetoede_2
+SP_gluetoede_2_L02;sp_gluetoede_2;entschlossen;;Wenn es unter deinem Stiefel klickt: nicht nachsehen. Rennen.;scene:SP_gluetoede_2
+SP_gluetoede_3_L01;sp_gluetoede_3;amuesiert;;Torvalds Glutschmiede brennt seit dreihundert Jahren. Er behauptet, er sei nicht ganz so alt.;scene:SP_gluetoede_3
+SP_gluetoede_3_L02;sp_gluetoede_3;besorgt;;Seine Kühlrinnen lecken. Hilf ihm, bevor er die halbe Schmiede flutet.;scene:SP_gluetoede_3
+SP_gluetoede_4_L01;sp_gluetoede_4;neutral;;Am Sturmauge schlagen Blitze in den Sand und machen Glas daraus. Oleg sammelt die Stücke.;scene:SP_gluetoede_4
+SP_gluetoede_4_L02;sp_gluetoede_4;amuesiert;;Seine Blitzableiter fallen dauernd um. Der Sturm hat einen eigenen Kopf.;scene:SP_gluetoede_4
+HZ_heart_gerstenbrunn_L01;wilma;besorgt;;Die Plünderer haben meine Zäune zerlegt und die Vorratskisten verstreut. Jede Hand zählt!;scene:HZ_heart_gerstenbrunn
+HZ_heart_dornwacht_L01;kerla;entschlossen;;Die Palisade hält, wenn wir sie halten. Hammer oder Verband, nimm dir eins.;scene:HZ_heart_dornwacht
+HZ_heart_elmhain_L01;bertold;besorgt;;Vorsicht mit den Relikten! Manche sind älter als die Karten, auf denen du stehst.;scene:HZ_heart_elmhain
+HZ_heart_sonnfurt_mira_L01;mira;amuesiert;;Die Ziegen haben Hunger, die Glutnester qualmen, und die Kinder brauchen einen Grund zum Jubeln. Steht alles auf meiner Liste.;scene:HZ_heart_sonnfurt_mira
+HZ_heart_moor_albin_L01;albin;neutral;;Die Weidenzäune halten nichts mehr ab. Nicht mal Kräuterdiebe, und die sind langsam.;scene:HZ_heart_moor_albin
+HZ_heart_moor_ilse_L01;ilse;zornig;;Torf sticht sich nicht von allein. Und die Stege reparieren sich auch nicht!;scene:HZ_heart_moor_ilse
+HZ_heart_moor_merle_L01;merle;besorgt;;Meine Fischer sind verletzt, die Reusen versunken, und die Spucker lachen sich krumm. Hilf mir!;scene:HZ_heart_moor_merle
+HZ_heart_moor_jaro_L01;jaro;zornig;;Wilderer! Ihre Fallen liegen überall im Schilf. Die Reiher treten hinein. Ich auch.;scene:HZ_heart_moor_jaro
+HZ_heart_frost_bodo_L01;bodo;besorgt;;Die Stollen geben nach. Stütz sie ab, bevor der Berg es sich anders überlegt.;scene:HZ_heart_frost_bodo
+HZ_heart_frost_runa_L01;runa;neutral;;Holz, Decken und Leute, die warm bleiben. Mehr braucht ein Lager nicht.;scene:HZ_heart_frost_runa
+HZ_heart_frost_saga_L01;saga;besorgt;;Die Windglocken singen falsch. Wenn sie schweigen, kommt der Schnee.;scene:HZ_heart_frost_saga
+HZ_heart_frost_elva_L01;elva;amuesiert;;Meine Ziegen frieren, und der Hang rutscht. Säcke stapeln, Ziegen füttern, und ein Tänzchen wärmt alle.;scene:HZ_heart_frost_elva
+HZ_heart_glut_kaya_L01;kaya;entschlossen;;Glutkristalle verbrennen dir die Finger und retten uns den Winter. Sammeln, bitte.;scene:HZ_heart_glut_kaya
+HZ_heart_glut_oleg_L01;oleg;besorgt;;Die Blitzableiter liegen wieder im Sand. Stell sie auf, bevor der Himmel zuschlägt.;scene:HZ_heart_glut_oleg
+HZ_heart_glut_torvald_L01;torvald;zornig;;Die Kühlrinnen lecken! Wenn die Schmiede kocht, kochen wir mit.;scene:HZ_heart_glut_torvald
+HZ_heart_glut_brann_L01;brann;entschlossen;;Schlackenminen im Feld, Glutbrände am Rand. Eimer nehmen, Minen entschärfen, nichts anfassen, was klickt.;scene:HZ_heart_glut_brann

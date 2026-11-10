@@ -61,3 +61,16 @@ Nicht genutzt (2): Sturmtyrann und Gegnertypen bleiben prozedural – ohne Rig v
 ## Lauf 5 – generate_audio (M24)
 Budget 8 Clips (nur Musik-Grundthemen) · **verbraucht 0**. Begründung: Der generative Komponist liefert je Zone, Kampf, Boss und Menü fünf synchrone, nahtlose Stems mit dem Hauptthema; ein generiertes Thema wäre nur als zusätzlicher Melodie-Stem einbindbar gewesen und hätte Tonart-Treue der Stinger und die Stem-Synchronität (Test) nicht garantiert. Alles prozedural über AudioSynth 2.0 (DECISIONS M24).
 
+## Lauf 5 – Meshy (M27, Budget 6, kumuliert max. 32)
+Erster Start (6 Jobs, 02:5x) ging verloren: der Eintritt in den Play Mode (Domain-Reload) während der Generierung machte die Jobs unabfragbar („Unity is reloading“ bei jedem Status-Aufruf, kein Ergebnis). Ob Meshy dafür Guthaben abgebucht hat, ist aus Unity nicht sichtbar – vorsorglich als **6 verbraucht** gezählt. Zweiter Start ohne Play Mode/Kompilieren: alle 6 in ~6 min geliefert. **Verbrauch Lauf 5: 12 (6 verloren + 6 geliefert), kumuliert 30 von 32.**
+
+| # | Tier | Asset | Status | Versuche | Einbau |
+|---|---|---|---|---|---|
+| 23 | 1 | Held Wildhüter (A-Pose) | ✅ | 2 | Skinning 3 Ansätze mit Rissen (max. Streckung 92,5, 706 674 Risskanten) → Statue im Heldenhain; Figur bleibt geriggte MeshKit-Fassung |
+| 24 | 1 | Held Elementarweber (A-Pose) | ✅ | 2 | Skinning 3 Ansätze mit Rissen (85,9 / 156 125) → Statue |
+| 25 | 1 | Held Schattenklinge (A-Pose) | ✅ | 2 | Skinning 3 Ansätze mit Rissen (99,5 / 129 902) → Statue |
+| 26 | 2 | Langbogen (Wildhüter) | ✅ | 2 | `PT_Meshy_Longbow` (1,5 m, Griff in der Mitte) ersetzt den Primitive-Bogen |
+| 27 | 2 | Elementarstab | ✅ | 2 | `PT_Meshy_ElementStaff` (1,6 m, Kristall oben) → neue Waffenoptik `ElementStaff` des Elementarwebers |
+| 28 | 2 | Schattendolch | ✅ | 2 | `PT_Meshy_ShadowDagger` (0,45 m) → beide Dolche (Schattenklinge, Elementarweber) |
+
+Regel ergänzt: Während Meshy-Jobs laufen, weder kompilieren **noch den Play Mode betreten** (beides lädt die Domain neu).

@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 22
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.56
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 2.24
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -63,10 +65,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Cast1H
     AnimScale: 1.8181819
-    VfxCharge: Charge/Wasser/M
-    VfxRelease: Release/Wasser/M
-    VfxProjectile: Projectile/Wasser/M
-    VfxImpact: Impact/Wasser/M
+    VfxCharge: Charge/Wasser/L
+    VfxRelease: Release/Wasser/L
+    VfxProjectile: Projectile/Wasser/L
+    VfxImpact: Impact/Wasser/L
     VfxAfter: 
     SfxCharge: Wasser/Charge
     SfxRelease: Wasser/Release

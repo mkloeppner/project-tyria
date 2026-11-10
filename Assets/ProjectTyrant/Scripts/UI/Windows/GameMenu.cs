@@ -76,34 +76,17 @@ namespace ProjectTyrant
             var backB = UiFactory.Button("Back", Window.Content, "Zurück", () => back(), 17);
             ((RectTransform)backB.transform).Place(new Vector2(1, 0), new Vector2(1, 0), new Vector2(1, 0), Vector2.zero, new Vector2(150, 38));
 
-            var audio = Tab(bar, "Audio");
-            SliderRow(audio, "Gesamt", () => O.Master, v => O.Master = v);
-            SliderRow(audio, "Musik", () => O.Music, v => O.Music = v);
-            SliderRow(audio, "Umgebung", () => O.Ambience, v => O.Ambience = v);
-            SliderRow(audio, "Effekte", () => O.Effects, v => O.Effects = v);
-            SliderRow(audio, "Benutzeroberfläche", () => O.Ui, v => O.Ui = v);
-
-            var cam = Tab(bar, "Kamera");
-            SliderRow(cam, "Abstand", () => O.CameraDistance, v => O.CameraDistance = v, 0.6f, 1.6f);
-            SliderRow(cam, "Empfindlichkeit", () => O.CameraSensitivity, v => O.CameraSensitivity = v, 0.3f, 2.5f);
-            ToggleRow(cam, "Kamera-Impuls bei Treffern", () => O.CameraImpulse, v => O.CameraImpulse = v);
-            ToggleRow(cam, "Action-Kamera-Fadenkreuz", () => O.ActionCrosshair, v => O.ActionCrosshair = v);
-
-            var gfx = Tab(bar, "Grafik");
-            SliderRow(gfx, "Qualitätsstufe", () => O.Quality < 0 ? QualitySettings.GetQualityLevel() : O.Quality, v => O.Quality = Mathf.RoundToInt(v), 0, Mathf.Max(1, QualitySettings.names.Length - 1), true);
-            SliderRow(gfx, "Sichtweite", () => O.ViewDistance, v => O.ViewDistance = v, 0.5f, 1.5f);
-            SliderRow(gfx, "Effekt-Dichte (Voll · Reduziert · Minimal)", () => O.EffectDensity, v => O.EffectDensity = Mathf.RoundToInt(v), 0, 2, true);
-            ToggleRow(gfx, "Schatten", () => O.Shadows, v => O.Shadows = v);
-
-            var game = Tab(bar, "Spiel");
-            ToggleRow(game, "Auto-Beute", () => O.AutoLoot, v => O.AutoLoot = v);
-            SliderRow(game, "Kampftext-Dichte", () => O.CombatTextDensity, v => O.CombatTextDensity = Mathf.RoundToInt(v), 0, 2, true);
-            ToggleRow(game, "Hit-Stop", () => O.HitStop, v => O.HitStop = v);
-            ToggleRow(game, "Telegraphen: Farbenblind-Modus", () => O.ColorblindTelegraphs, v => O.ColorblindTelegraphs = v);
-            SliderRow(game, "UI-Skalierung", () => O.UiScale, v => O.UiScale = v, 0.8f, 1.3f);
-            ToggleRow(game, "Minimap dreht mit", () => O.MinimapRotate, v => O.MinimapRotate = v);
-
-            var keys = Tab(bar, "Steuerung");
+            // Fix-Lauf F1: Zeilen aus dem OptionCatalog (Tooltip je Einstellung, „Standard“ je Tab)
+            foreach (var tab in OptionCatalog.Tabs)
+            {
+                var rows = Tab(bar, tab);
+                foreach (var d in OptionCatalog.All) if (d.Tab == tab) CatalogRow(rows, d);
+                string tt = tab;
+                var std = UiFactory.Button("Standard_" + tab, rows, "Standard", () => { OptionCatalog.ResetTab(O, tt); O.Save(); ApplyCameraDefaults(tt); RefreshRows(); UiFactory.Sound("TraitSelect"); }, 15);
+                UiFactory.Layout(std, 34);
+                std.gameObject.AddComponent<UiTooltipTrigger>().Provider = () => { var c = new TooltipContent { Title = "Standard" }; c.Add("Setzt alle Einstellungen des Tabs „" + tt + "“ auf die Werkseinstellungen zurück.", new Color(0.85f, 0.85f, 0.85f)); return c; };
+            }
+            var keys = Tab(bar, "Tasten");
             var t = UiFactory.Text("Keys", keys, UIController.HelpTextFull, 16, TextAlignmentOptions.TopLeft, new Color(0.88f, 0.88f, 0.9f));
             UiFactory.Layout(t, 420);
             Select(0);
@@ -132,7 +115,65 @@ namespace ProjectTyrant
             }
         }
 
-        void SliderRow(RectTransform rows, string label, Func<float> get, Action<float> set, float min = 0f, float max = 1f, bool whole = false)
+        readonly System.Collections.Generic.List<Action> _refresh = new System.Collections.Generic.List<Action>();
+        void RefreshRows() { foreach (var r in _refresh) r(); }
+
+        static void ApplyCameraDefaults(string tab)
+        {
+            if (tab != "Kamera") return;
+            var rig = ThirdPersonCameraRig.Current; if (rig != null) rig.Zoom.Snap(GameOptions.Load().CameraDefaultDistance);
+        }
+
+        static readonly System.Collections.Generic.Dictionary<string, Vector3> Ranges = new System.Collections.Generic.Dictionary<string, Vector3>
+        {   // min, max, ganzzahlig (1)
+            { "ZoomStep", new Vector3(0.25f, 1.5f, 0) }, { "CameraDefaultDistance", new Vector3(1.5f, 12f, 0) }, { "CameraSensitivity", new Vector3(0.3f, 2.5f, 0) },
+            { "ViewDistance", new Vector3(0.5f, 1.5f, 0) }, { "EffectDensity", new Vector3(0, 2, 1) }, { "CombatTextDensity", new Vector3(0, 2, 1) },
+            { "UiScale", new Vector3(0.8f, 1.3f, 0) }, { "GroundHoldMs", new Vector3(100, 300, 1) },
+            { "SubtitleSize", new Vector3(18, 40, 1) }, { "TextSpeed", new Vector3(0.5f, 2f, 0) },
+        };
+
+        /// <summary>Zeile nach Feldtyp: bool → Schalter, int mit Auswahl → Wechsel-Button, sonst Schieberegler; Tooltip aus dem Katalog.</summary>
+        void CatalogRow(RectTransform rows, OptionCatalog.Def d)
+        {
+            var f = OptionCatalog.Field(d.Field); if (f == null) return;
+            GameObject rowGo;
+            if (d.Field == "Quality")
+                rowGo = SliderRow(rows, d.Label, () => O.Quality < 0 ? QualitySettings.GetQualityLevel() : O.Quality, v => O.Quality = Mathf.RoundToInt(v), 0, Mathf.Max(1, QualitySettings.names.Length - 1), true);
+            else if (f.FieldType == typeof(bool))
+                rowGo = ToggleRow(rows, d.Label, () => (bool)f.GetValue(O), v => f.SetValue(O, v));
+            else if (d.Choices != null)
+                rowGo = ChoiceRow(rows, d.Label, d.Choices, () => (int)f.GetValue(O), v => f.SetValue(O, v));
+            else
+            {
+                var r = Ranges.TryGetValue(d.Field, out var rr) ? rr : new Vector3(0f, 1f, 0f);
+                bool whole = r.z > 0.5f;
+                if (f.FieldType == typeof(int)) rowGo = SliderRow(rows, d.Label, () => (int)f.GetValue(O), v => f.SetValue(O, Mathf.RoundToInt(v)), r.x, r.y, true);
+                else rowGo = SliderRow(rows, d.Label, () => (float)f.GetValue(O), v => { f.SetValue(O, v); if (d.Field == "CameraDefaultDistance") ApplyCameraDefaults("Kamera"); }, r.x, r.y, whole);
+            }
+            var def = d;
+            foreach (var g in rowGo.GetComponentsInChildren<Graphic>(true)) if (g.raycastTarget && g.GetComponent<UiTooltipTrigger>() == null) { g.gameObject.AddComponent<UiTooltipTrigger>().Provider = () => OptionTooltip(def); break; }
+            var trig = rowGo.GetComponent<UiTooltipTrigger>(); if (trig == null) { var img = rowGo.GetComponent<Image>() ?? rowGo.AddComponent<Image>(); img.color = new Color(0, 0, 0, 0.001f); rowGo.AddComponent<UiTooltipTrigger>().Provider = () => OptionTooltip(def); }
+        }
+
+        static TooltipContent OptionTooltip(OptionCatalog.Def d)
+        {
+            var c = new TooltipContent { Title = d.Label, Subtitle = "Optionen · " + d.Tab };
+            c.Add(d.Tooltip, d.Field == "EnemyTelegraphs" ? new Color(1f, 0.7f, 0.45f) : new Color(0.85f, 0.85f, 0.85f));
+            return c;
+        }
+
+        GameObject ChoiceRow(RectTransform rows, string label, string[] choices, Func<int> get, Action<int> set)
+        {
+            var row = UiFactory.Rect("Row_" + label, rows); UiFactory.Layout(row, 40);
+            Button b = null;
+            Action show = () => UiFactory.SetLabel(b, label + ":  " + choices[Mathf.Clamp(get(), 0, choices.Length - 1)]);
+            b = UiFactory.Button("Choice", row, "", () => { set((get() + 1) % choices.Length); O.Save(); show(); }, 16);
+            ((RectTransform)b.transform).Stretch();
+            show(); Window.Opened += show; _refresh.Add(show);
+            return row.gameObject;
+        }
+
+        GameObject SliderRow(RectTransform rows, string label, Func<float> get, Action<float> set, float min = 0f, float max = 1f, bool whole = false)
         {
             var row = UiFactory.Rect("Row_" + label, rows); UiFactory.Layout(row, 40);
             var l = UiFactory.Text("Label", row, label, 16, TextAlignmentOptions.Left, Color.white); l.rectTransform.Place(new Vector2(0, 0), new Vector2(0.45f, 1), new Vector2(0, 0.5f), Vector2.zero, Vector2.zero);
@@ -141,6 +182,7 @@ namespace ProjectTyrant
             ((RectTransform)s.transform).Place(new Vector2(0.46f, 0.5f), new Vector2(0.88f, 0.5f), new Vector2(0, 0.5f), Vector2.zero, new Vector2(0, 18));
             Action show = () => valueText.text = whole ? Mathf.RoundToInt(s.value).ToString() : Mathf.RoundToInt(s.value * (max <= 1.01f ? 100f : 100f / max * max)) + (max <= 1.01f ? " %" : "");
             if (!whole && max > 1.01f) show = () => valueText.text = s.value.ToString("0.00") + "×";
+            if (label.Contains("Kameraabstand") || label.Contains("Zoom")) show = () => valueText.text = s.value.ToString("0.00") + " m";
             show();
             int lastStep = Mathf.RoundToInt(s.value * 20f);
             s.onValueChanged.AddListener(v =>
@@ -149,17 +191,21 @@ namespace ProjectTyrant
                 int step = whole ? Mathf.RoundToInt(v) : Mathf.RoundToInt((v - min) / Mathf.Max(0.0001f, max - min) * 20f);   // Tick je Stufe (5 %)
                 if (step != lastStep) { lastStep = step; UiFactory.Sound("Slider"); }
             });
-            Window.Opened += () => { s.SetValueWithoutNotify(get()); show(); };
+            Action sync = () => { s.SetValueWithoutNotify(get()); show(); };
+            Window.Opened += sync; _refresh.Add(sync);
+            return row.gameObject;
         }
 
-        void ToggleRow(RectTransform rows, string label, Func<bool> get, Action<bool> set)
+        GameObject ToggleRow(RectTransform rows, string label, Func<bool> get, Action<bool> set)
         {
             var row = UiFactory.Rect("Row_" + label, rows); UiFactory.Layout(row, 40);
             Button b = null;
             b = UiFactory.Button("Toggle", row, "", () => { set(!get()); O.Save(); UiFactory.SetLabel(b, label + ":  " + (get() ? "an" : "aus")); }, 16);
             ((RectTransform)b.transform).Stretch();
             UiFactory.SetLabel(b, label + ":  " + (get() ? "an" : "aus"));
-            Window.Opened += () => UiFactory.SetLabel(b, label + ":  " + (get() ? "an" : "aus"));
+            Action sync = () => UiFactory.SetLabel(b, label + ":  " + (get() ? "an" : "aus"));
+            Window.Opened += sync; _refresh.Add(sync);
+            return row.gameObject;
         }
     }
 }

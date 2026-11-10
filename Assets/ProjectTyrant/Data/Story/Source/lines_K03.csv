@@ -1,0 +1,35 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K03_S01E_L01;merle;neutral;blase;Neu im Moor? Bleib auf den Stegen. Was daneben liegt, gehört dem Moor.;
+K03_S02_L01;merle;besorgt;rechts;Der Giftnebel kriecht zum Fischerdorf. Ohne Boot kommt da keiner hin.;
+K03_S02_L02;held;neutral;links;Ich habe gehört, ihr vermietet Skimmer.;
+K03_S02_L03;merle;amuesiert;rechts;Vermieten ist ein großes Wort. Wir leihen sie Leuten, die zurückkommen.;
+K03_S02_C1_A;held;amuesiert;links;Ich komme immer zurück. Meistens sogar mit dem Boot.;opt:1|tend:Charme|reply:K03_S02_R1
+K03_S02_C1_B;held;neutral;links;Ich bringe ihn heil zurück. Mein Wort.;opt:1|tend:Wuerde|reply:K03_S02_R2
+K03_S02_R1;merle;amuesiert;rechts;Meistens. Das schreibe ich auf deinen Leihschein.;reply
+K03_S02_R2;merle;neutral;rechts;Worte schwimmen nicht. Aber gut. Hilf erst meinen Fischern.;reply
+K03_S02E_L01;merle;neutral;blase;Du bist zurückgekommen. Das Boot auch. Ich mag dich.;
+K03_S03_L01;tovin;besorgt;rechts;Nicht stehen bleiben! Da, wo du stehst, war gerade eine sehr wichtige Spur.;
+K03_S03_L02;held;amuesiert;links;Du bist Tovin.;
+K03_S03_L03;tovin;neutral;rechts;Gelehrter Tovin Aschgrau. Zweiter Band, dritte Fußnote. Brennar schickt dich, nicht wahr?;
+K03_S03_L04;tovin;entschlossen;rechts;Diese Steine sind ein Siegel. Ein Ring aus Siegeln, quer über das Land.;
+K03_S03_L05;tovin;besorgt;rechts;Jemand bricht sie. Eins nach dem anderen. Wie Knöpfe an einem Mantel.;
+K03_S03_C1_A;held;amuesiert;links;Und unter dem Mantel?;opt:1|tend:Charme|reply:K03_S03_R1
+K03_S03_C1_B;held;neutral;links;Was hält das Siegel fest?;opt:1|tend:Wuerde|reply:K03_S03_R2
+K03_S03_C1_C;held;zornig;links;Wer bricht sie? Ich will einen Namen.;opt:1|tend:Wildheit|reply:K03_S03_R3
+K03_S03_R1;tovin;besorgt;rechts;Ein König. Ein sehr alter. Und sehr schlecht gelaunt.;reply
+K03_S03_R2;tovin;neutral;rechts;Einen König aus der Zeit vor den Karten. Vareth. So steht es in drei Texten, die sich sonst nie einig sind.;reply
+K03_S03_R3;tovin;neutral;rechts;Der Herold. Aber er bricht sie nicht selbst. Er lässt brechen.;reply
+K03_S03_L06;tovin;neutral;rechts;Das Gift im Nebel kommt aus dem gebrochenen Stein. Reinige dich, sonst denkst du bald in Pilzen.;
+K03_S04_L01;held;entschlossen;links;Das Dorf zuerst. Dann reden wir über Könige.;
+K03_S04_L02;tovin;amuesiert;rechts;Einverstanden. Ich halte die Laterne. Das ist meine Kernkompetenz.;
+K03_S04_C1_A;held;entschlossen;links;Die Kinder zuerst. Dann die Alten. Dann ich.;opt:1|tend:Wuerde|flag:k03_kinder_zuerst|reply:K03_S04_R1
+K03_S04_C1_B;held;amuesiert;links;Halt die Laterne hoch, Tovin. Ich will sehen, wohin ich renne.;opt:1|tend:Charme|flag:k03_tovin_licht|reply:K03_S04_R2
+K03_S04_C1_C;held;zornig;links;Wer den Nebel gemacht hat, schuldet mir eine Erklärung.;opt:1|tend:Wildheit|flag:k03_spur|reply:K03_S04_R3
+K03_S04_R1;tovin;neutral;rechts;Vernünftig. Ich notiere: Held vernünftig. Erster Eintrag dieser Art.;reply
+K03_S04_R2;tovin;amuesiert;rechts;Höher geht nicht. Ich bin nicht besonders groß.;reply
+K03_S04_R3;tovin;besorgt;rechts;Der Herold erklärt nichts. Er hinterlässt nur Fußnoten.;reply
+K03_S04E_L01;tovin;neutral;rechts;Alle draußen. Und das Siegel … ist nicht ganz tot. Es atmet noch.;
+K03_S04E_L02;merle;entschlossen;links;Dann hat das Moor heute zwei Mal Glück gehabt.;
+K03_S04E_L03;tovin;besorgt;rechts;Der nächste Stein liegt im Frostkamm. Auf dem Pass. Wer ihn bricht, weckt etwas Großes.;
+K03_S04E_L04;held;entschlossen;links;Dann sagen wir Brennar Bescheid.;
+K03_J;held;neutral;;Im Nebelmoor traf ich Tovin. Ein Ring aus Siegeln hält König Vareth unter der Erde, sagt er. Der Herold bricht die Siegel.;journal

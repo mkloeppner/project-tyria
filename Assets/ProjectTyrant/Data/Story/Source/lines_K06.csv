@@ -1,0 +1,37 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K06_S01E_L01;gorran;amuesiert;blase;Willkommen in Silbermund! Hundert Segel, tausend Schulden, ein Portalplatz. Bitte nicht auf die Möwen treten.;
+K06_S02_L01;haldis;entschlossen;rechts;Schmuggler bringen Siegelsplitter über die Grotte an der Steilküste. Wir räumen sie aus. Heute.;if:Pact=Wacht
+K06_S02_L02;held;neutral;links;Wie viele?;if:Pact=Wacht
+K06_S02_L03;haldis;amuesiert;rechts;Genug, dass es sich lohnt. Zu wenige, dass es spannend wird. Ich hoffe auf mehr.;if:Pact=Wacht
+K06_S02_L04;tovin;besorgt;rechts;Im Archiv fehlt ein Buch. Das einzige über Vareths Krönung. Jemand hat es gestohlen. Aus meinem Archiv!;if:Pact=Archiv
+K06_S02_L05;held;neutral;links;Und wer hat einen Schlüssel?;if:Pact=Archiv
+K06_S02_L06;tovin;zornig;rechts;Ich. Und der Kurator. Und, wie sich herausstellt, ein Fenster im zweiten Stock.;if:Pact=Archiv
+K06_S02_L07;veyra;neutral;rechts;Im Hafen sitzt ein Mann, der für beide Seiten arbeitet. Für uns und für den Herold.;if:Pact=Schleier
+K06_S02_L08;held;neutral;links;Und für wen arbeitet er wirklich?;if:Pact=Schleier
+K06_S02_L09;veyra;amuesiert;rechts;Für den, der zuletzt bezahlt. Heute Abend sind wir das. Mit falschen Münzen.;if:Pact=Schleier
+K06_S02_L10;mira;neutral;rechts;Ich halte Silbermund warm. Und eine Liste, wer dir was schuldet.;
+K06_S02_C1_A;held;amuesiert;links;Klingt nach einem schönen Abend.;opt:1|tend:Charme|reply:K06_S02_R1
+K06_S02_C1_B;held;neutral;links;Gib mir den Plan. Ich halte mich daran.;opt:1|tend:Wuerde|reply:K06_S02_R2
+K06_S02_C1_C;held;zornig;links;Ich brauche keinen Plan. Ich brauche eine Tür.;opt:1|tend:Wildheit|reply:K06_S02_R3
+K06_S02_R1;mira;amuesiert;rechts;Ich trage es als Freizeit ein.;reply
+K06_S02_R2;mira;neutral;rechts;Endlich hält sich mal jemand an einen Plan. Ich bin gerührt.;reply
+K06_S02_R3;mira;besorgt;rechts;Türen haben meistens Leute dahinter. Denk dran.;reply
+K06_S02W_L01;haldis;entschlossen;total;Linie! Schilde vor! Und du: geradeaus, bis keiner mehr steht.;
+K06_S02WE_L01;haldis;amuesiert;rechts;Die Schmugglerkönigin ist entkommen. Ihre Splitter nicht. Das zählt.;
+K06_S02A_L01;tovin;besorgt;total;Leise. Die Wächter sind Konstrukte. Sie hören keine Schritte, aber sie riechen Tinte.;
+K06_S02AE_L01;tovin;amuesiert;rechts;Das Buch! Mit Fettflecken. Wer isst beim Stehlen?;
+K06_S02S_L01;veyra;neutral;total;Er sitzt hinten, roter Mantel. Du lenkst ab. Ich höre zu.;
+K06_S02SE_L01;veyra;neutral;rechts;Der Herold sucht einen Schlüssel im Dünenmeer. Unser Mann hat es verraten. Für falsche Münzen.;
+K06_S03_L01;gorran;neutral;rechts;Der Rat der Bündnisse. Ich bin der Hafenmeister, ich führe nur das Protokoll. Und das Buffet.;
+K06_S03_L02;haldis;entschlossen;rechts;Die Spur führt in zwei Richtungen. Der Dämmerwald stirbt, und im Dünenmeer liegt ein Schlüssel.;
+K06_S03_L03;tovin;neutral;rechts;Der Wald zuerst. Die Verderbnis dort ist Vareths Atem. Wenn er stärker atmet, wacht er bald.;
+K06_S03_L04;veyra;neutral;rechts;Und während wir im Wald sind, holt sich der Herold den Schlüssel. Wie immer.;
+K06_S03_C2_A;held;neutral;links;Erst die Menschen im Wald. Schlüssel warten, Leute nicht.;opt:2|tend:Wuerde|flag:k06_wald_zuerst|reply:K06_S03_R1
+K06_S03_C2_B;held;amuesiert;links;Der Herold kann warten. Er hat Übung darin.;opt:2|tend:Charme|flag:k06_wald_zuerst|reply:K06_S03_R2
+K06_S03_R1;gorran;neutral;rechts;Ich trage ins Protokoll ein: Der Wald zuerst. Und ein zweites Brötchen für mich.;reply
+K06_S03_R2;veyra;amuesiert;rechts;Du hast recht. Und das ärgert mich.;reply
+K06_S03_L05;mira;entschlossen;rechts;Ich bleibe hier und organisiere. Jemand muss die Briefe schreiben, die du nicht liest.;
+K06_J;held;neutral;;In Silbermund tagen die Bündnisse. Wir haben eine Spur zum Schlüssel im Dünenmeer, aber zuerst ruft der Dämmerwald.;journal
+K06_J@Wacht;held;neutral;;Mit der Wacht stürmte ich die Schmugglergrotte an der Silberküste. Die Spur führt in den Dämmerwald und ins Dünenmeer.;journal
+K06_J@Archiv;held;neutral;;Mit Tovin holte ich das gestohlene Krönungsbuch zurück. Die Spur führt in den Dämmerwald und ins Dünenmeer.;journal
+K06_J@Schleier;held;neutral;;Mit Veyra legte ich einen Doppelagenten herein. Die Spur führt in den Dämmerwald und ins Dünenmeer.;journal

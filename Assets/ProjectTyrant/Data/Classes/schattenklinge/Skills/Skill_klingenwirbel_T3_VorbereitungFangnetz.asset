@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 0
   Radius: 3.9
   TargetCount: 5
-  Coefficient: 1.2
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.86
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -40,7 +42,7 @@ MonoBehaviour:
   TargetBuffs:
   - Type: 13
     Stacks: 5
-    Duration: 5
+    Duration: 7.75
   - Type: 25
     Stacks: 1
     Duration: 2
@@ -66,10 +68,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Cast1H
     AnimScale: 0.75757575
-    VfxCharge: Charge/Stahl/M
-    VfxRelease: Shockwave/Stahl/M
+    VfxCharge: Charge/Stahl/L
+    VfxRelease: Shockwave/Stahl/L
     VfxProjectile: 
-    VfxImpact: Impact/Stahl/M
+    VfxImpact: Impact/Stahl/L
     VfxAfter: 
     SfxCharge: Stahl/Charge
     SfxRelease: Stahl/Release

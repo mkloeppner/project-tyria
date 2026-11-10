@@ -108,7 +108,7 @@ namespace ProjectTyrant.EditorTools
         {
             ResetCache();
             var tmp = new GameObject("MeshyProbe").transform;
-            foreach (var (m, h, b) in new[] { ("PT_Meshy_PlayerHero", 1.8f, 1f), ("PT_Meshy_TrashRaider", 1.85f, 1.15f), ("PT_Meshy_VeteranBrute", 1.85f, 1.15f), ("PT_Meshy_ChampionWarlord", 1.85f, 1.15f), ("PT_Meshy_Frostschlund", 1.9f, 1.3f) })
+            foreach (var (m, h, b) in new[] { ("PT_Meshy_PlayerHero", 1.8f, 1f), ("PT_Meshy_TrashRaider", 1.85f, 1.15f), ("PT_Meshy_VeteranBrute", 1.85f, 1.15f), ("PT_Meshy_ChampionWarlord", 1.85f, 1.15f), ("PT_Meshy_Frostschlund", 1.9f, 1.3f), ("PT_Meshy_HeroWildhueter", 1.8f, 1f), ("PT_Meshy_HeroElementarweber", 1.8f, 1f), ("PT_Meshy_HeroSchattenklinge", 1.8f, 1f) })
                 TryMeshy(tmp, m, h, b);
             TryMeshyBeast(tmp, "PT_Meshy_MountRaptor", 2.6f, "Raptor", true);
             TryMeshyBeast(tmp, "PT_Meshy_MountSpringer", 2.4f, "Springer", true);

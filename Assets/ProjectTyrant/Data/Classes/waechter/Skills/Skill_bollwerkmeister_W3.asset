@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 9
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.95
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.9
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -63,10 +65,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Sword_Thrust
     AnimScale: 1.1764705
-    VfxCharge: Charge/Bollwerk/M
-    VfxRelease: Release/Bollwerk/M
+    VfxCharge: Charge/Bollwerk/L
+    VfxRelease: Release/Bollwerk/L
     VfxProjectile: 
-    VfxImpact: Impact/Bollwerk/M
+    VfxImpact: Impact/Bollwerk/L
     VfxAfter: Aura/Bollwerk/S
     SfxCharge: Bollwerk/Charge
     SfxRelease: Bollwerk/Release

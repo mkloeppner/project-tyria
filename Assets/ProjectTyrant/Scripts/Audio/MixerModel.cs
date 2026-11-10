@@ -70,6 +70,8 @@ namespace ProjectTyrant
         public void DuckForStinger(float seconds) => _stingerDuck = Math.Max(_stingerDuck, seconds);
         public bool MenuOpen { get; set; }
         public const float StingerDuckDb = -4f, MenuDuckDb = -6f;
+        /// <summary>Lauf 6: Sprache über Musik während Szenen (Ducking).</summary>
+        public bool Dialogue; public const float DialogueMusicDb = -9f, DialogueAmbienceDb = -6f;
 
         public void Update(float dt)
         {
@@ -103,6 +105,7 @@ namespace ProjectTyrant
                 cur = Parent(cur.Value);
             }
             if (g == MixGroup.Music) db += _stingerDuck > 0f ? StingerDuckDb : 0f;
+            if (Dialogue) { if (g == MixGroup.Music) db += DialogueMusicDb; else if (g == MixGroup.Ambience) db += DialogueAmbienceDb; else if (g == MixGroup.Combat || g == MixGroup.World) db -= 4f; }
             if (g == MixGroup.Combat || g == MixGroup.Movement || g == MixGroup.World) db += MenuDuckDb * _menuDuck;
             return Math.Max(-80f, db);
         }

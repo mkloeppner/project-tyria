@@ -1,0 +1,71 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+SP_silberkueste_1_L01;sp_silberkueste_1;amuesiert;;Willkommen in Silbermund! Neun Portale, ein Brunnen und mehr Möwen als Einwohner.;scene:SP_silberkueste_1
+SP_silberkueste_1_L02;sp_silberkueste_1;neutral;;Das Bündnis-Viertel liegt nördlich vom Platz. Dort sitzen Wacht, Archiv und Schleier. Meistens getrennt.;scene:SP_silberkueste_1
+SP_silberkueste_2_L01;sp_silberkueste_2;neutral;;Am Hafen sucht Gorran Hände für die Fracht. Er zahlt in Karma und schlechten Witzen.;scene:SP_silberkueste_2
+SP_silberkueste_2_L02;sp_silberkueste_2;besorgt;;Draußen auf dem Inselfels steht ein Schrein. Ohne Skimmer kommst du da nicht hin.;scene:SP_silberkueste_2
+SP_silberkueste_3_L01;sp_silberkueste_3;besorgt;;Unter der Steilküste liegen die Grotten der Schmuggler. Ihre Königin lässt sich selten blicken.;scene:SP_silberkueste_3
+SP_silberkueste_3_L02;sp_silberkueste_3;neutral;;Wenn sie es doch tut, bring Freunde mit. Viele Freunde.;scene:SP_silberkueste_3
+SP_silberkueste_4_L01;sp_silberkueste_4;amuesiert;;Der alte Leuchtturm hat eine Treppe außen herum. Halb eingestürzt. Oben liegt angeblich eine Truhe.;scene:SP_silberkueste_4
+SP_silberkueste_4_L02;sp_silberkueste_4;neutral;;Bastian repariert die Linsen. Er redet mit ihnen. Sie antworten nicht. Noch nicht.;scene:SP_silberkueste_4
+SP_daemmerwald_1_L01;sp_daemmerwald_1;besorgt;;Bleib im Licht der Laternen. Die violetten Flecken brennen, auch wenn sie hübsch aussehen.;scene:SP_daemmerwald_1
+SP_daemmerwald_1_L02;sp_daemmerwald_1;neutral;;Fenn und das Dorf auf der Lichtung brauchen jede Hilfe. Folge dem Weg nach Westen.;scene:SP_daemmerwald_1
+SP_daemmerwald_2_L01;sp_daemmerwald_2;besorgt;;Die Schattenpriester beten, und mit jedem Gebet wächst die Verderbnis. Unterbrich sie.;scene:SP_daemmerwald_2
+SP_daemmerwald_2_L02;sp_daemmerwald_2;neutral;;Gelingt es, weicht das Violett zurück. Das sieht man sogar von hier.;scene:SP_daemmerwald_2
+SP_daemmerwald_3_L01;sp_daemmerwald_3;neutral;;Der Wächterstein ist älter als jede Karte. Manche sagen, er erinnert sich an uns.;scene:SP_daemmerwald_3
+SP_daemmerwald_3_L02;sp_daemmerwald_3;besorgt;;Im Alten Hain im Osten erwacht manchmal ein Baumriese. Dann rennt man. Oder kämpft.;scene:SP_daemmerwald_3
+SP_duenenmeer_1_L01;sp_duenenmeer_1;neutral;;Das Dünenmeer. Alle zwölf Minuten kommt der Sandsturm. Such dir dann ein Späher-Zelt.;scene:SP_duenenmeer_1
+SP_duenenmeer_1_L02;sp_duenenmeer_1;amuesiert;;Oder bleib draußen und lern, wie Sand schmeckt.;scene:SP_duenenmeer_1
+SP_duenenmeer_2_L01;sp_duenenmeer_2;neutral;;An der Oase Sahim sammeln sich die Karawanen. Nadira führt die größte.;scene:SP_duenenmeer_2
+SP_duenenmeer_2_L02;sp_duenenmeer_2;besorgt;;Die drei Schluchten im Osten nimmt man nur mit dem Raptor. Zu Fuß fällt man.;scene:SP_duenenmeer_2
+SP_duenenmeer_3_L01;sp_duenenmeer_3;neutral;;Die Ruinen von Qasir stehen auf alten Gewölben. Was darunter liegt, weiß niemand.;scene:SP_duenenmeer_3
+SP_duenenmeer_3_L02;sp_duenenmeer_3;besorgt;;Im Sturm wandert ein Riese aus Glas über die Ebene. Halte Abstand.;scene:SP_duenenmeer_3
+SP_kristalltiefe_1_L01;sp_kristalltiefe_1;besorgt;;Hier unten gibt es kein Tageslicht. Bleib bei den Kristallen oder trag eine Laterne.;scene:SP_kristalltiefe_1
+SP_kristalltiefe_1_L02;sp_kristalltiefe_1;neutral;;Im Dunkeln wirst du schwach. Das ist kein Aberglaube, das ist die Tiefe.;scene:SP_kristalltiefe_1
+SP_kristalltiefe_2_L01;sp_kristalltiefe_2;neutral;;Der Schwarze See ist tiefer, als jemand gemessen hat. Auf der Insel steht ein Kristall.;scene:SP_kristalltiefe_2
+SP_kristalltiefe_2_L02;sp_kristalltiefe_2;besorgt;;Die blinden Jäger hören deine Schritte. Geh leise, und sie gehen vorbei.;scene:SP_kristalltiefe_2
+SP_kristalltiefe_3_L01;sp_kristalltiefe_3;besorgt;;In der Kammer der Stimme flüstert etwas. Ich gehe da nicht mehr rein.;scene:SP_kristalltiefe_3
+SP_kristalltiefe_3_L02;sp_kristalltiefe_3;neutral;;Westlich davon stehen Kristallsäulen. Wer hinaufspringt, findet oben etwas Hübsches.;scene:SP_kristalltiefe_3
+SP_himmelsspitzen_1_L01;sp_himmelsspitzen_1;amuesiert;;Willkommen über den Wolken. Schau nicht nach unten, da sind nur noch mehr Wolken.;scene:SP_himmelsspitzen_1
+SP_himmelsspitzen_1_L02;sp_himmelsspitzen_1;neutral;;Die Aufwinde tragen Gleitende nach oben. Ohne sie bist du hier ein Fußgänger.;scene:SP_himmelsspitzen_1
+SP_himmelsspitzen_2_L01;sp_himmelsspitzen_2;neutral;;Die Greifennester liegen an den Klippen. Die Piraten stehlen die Eier.;scene:SP_himmelsspitzen_2
+SP_himmelsspitzen_2_L02;sp_himmelsspitzen_2;besorgt;;Wer den Greifen hilft, dem vertrauen sie. Irgendwann.;scene:SP_himmelsspitzen_2
+SP_himmelsspitzen_3_L01;sp_himmelsspitzen_3;neutral;;Der Tempel der Himmelswächter. Sela sieht dich schon. Sie sieht alles.;scene:SP_himmelsspitzen_3
+SP_himmelsspitzen_3_L02;sp_himmelsspitzen_3;besorgt;;Manchmal greift ein Wyrm aus Sturm und Wolke den Tempel an. Dann hilft jede Klinge.;scene:SP_himmelsspitzen_3
+SP_tyrannenfeste_1_L01;sp_tyrannenfeste_1;entschlossen;;Das Belagerungslager der Bündnisse. Von hier aus stürmen wir die Feste. Immer wieder.;scene:SP_tyrannenfeste_1
+SP_tyrannenfeste_1_L02;sp_tyrannenfeste_1;neutral;;Marit verbindet Verwundete. Sie hat viel zu tun.;scene:SP_tyrannenfeste_1
+SP_tyrannenfeste_2_L01;sp_tyrannenfeste_2;besorgt;;Drei Tore: Eisen, Stein, Siegel. Erst wenn alle drei fallen, öffnet sich der Hof.;scene:SP_tyrannenfeste_2
+SP_tyrannenfeste_2_L02;sp_tyrannenfeste_2;neutral;;Scheitert der Sturm, schließen sie sich wieder. Dann fangen wir von vorne an.;scene:SP_tyrannenfeste_2
+SP_tyrannenfeste_3_L01;sp_tyrannenfeste_3;besorgt;;Im Hof fiel der letzte Wächter vor tausend Jahren. Der Thronsaal liegt dahinter.;scene:SP_tyrannenfeste_3
+SP_tyrannenfeste_3_L02;sp_tyrannenfeste_3;neutral;;Der Thron ist leer. Ich hoffe, das bleibt so.;scene:SP_tyrannenfeste_3
+HZ_heart_kueste_hafen_L01;gorran;amuesiert;;Fracht, Netze, verletzte Leute. Ein normaler Tag im Hafen. Nur mehr davon.;scene:HZ_heart_kueste_hafen
+HZ_heart_kueste_markt_L01;ysolde;zornig;;Die Ratten haben meinen Stand geplündert! Hilf mir, bevor sie auch den Käse finden.;scene:HZ_heart_kueste_markt
+HZ_heart_kueste_leuchtturm_L01;bastian;besorgt;;Ohne Licht laufen die Schiffe auf die Klippen. Die Linsen brauchen Pflege.;scene:HZ_heart_kueste_leuchtturm
+HZ_heart_kueste_fischer_L01;wenda;amuesiert;;Reiher pflegen, Treibgut aufbrechen und beim Bootsrennen jubeln. Das Letzte ist am wichtigsten.;scene:HZ_heart_kueste_fischer
+HZ_heart_wald_fenn_L01;fenn;besorgt;;Laternen anzünden, Lichtmoos sammeln, Verletzte versorgen. Das Licht hält uns am Leben.;scene:HZ_heart_wald_fenn
+HZ_heart_wald_hira_L01;hira;neutral;;Meine Hochsitze sind kaputt, mein Pfeilholz ist alle. Und die Keiler sind violett.;scene:HZ_heart_wald_hira
+HZ_heart_wald_oda_L01;oda;besorgt;;Die Waldläufer kommen verwundet zurück. Ich brauche Kräuter und Hände.;scene:HZ_heart_wald_oda
+HZ_heart_wald_laternen_L01;ivo;entschlossen;;Fallen weg, Laternen hin. So einfach ist das. Fast.;scene:HZ_heart_wald_laternen
+HZ_heart_duene_nadira_L01;nadira;neutral;;Waren liegen im Sand, Zelte sind eingerissen, Träger erschöpft. Willkommen in meiner Karawane.;scene:HZ_heart_duene_nadira
+HZ_heart_duene_qasir_L01;imra;amuesiert;;Jede Scherbe erzählt eine Geschichte. Die meisten handeln von Leuten, die zu nah an Säulen standen.;scene:HZ_heart_duene_qasir
+HZ_heart_duene_glas_L01;faris;neutral;;Blitzglas ist das schönste Glas der Welt. Und das heißeste. Handschuhe an.;scene:HZ_heart_duene_glas
+HZ_heart_duene_oase_L01;samir;besorgt;;Die Tiere haben Durst, die Glut kriecht heran, und Räuber legen Fallen. Ich bin nur ein Brunnenhüter.;scene:HZ_heart_duene_oase
+HZ_heart_tiefe_brom_L01;brom;besorgt;;Die Stollen knarren, das Licht ist knapp, und zwei Kumpel sind verschüttet. Hilf mir!;scene:HZ_heart_tiefe_brom
+HZ_heart_tiefe_lys_L01;lys;amuesiert;;Pilze, Messungen, Notizen. Und ja, manche Pilze leuchten, wenn man sie anschreit.;scene:HZ_heart_tiefe_lys
+HZ_heart_tiefe_fischer_L01;tamo;neutral;;Im Schwarzen See gibt es Fische ohne Augen. Sie beißen trotzdem.;scene:HZ_heart_tiefe_fischer
+HZ_heart_tiefe_laternen_L01;nell;entschlossen;;Licht in jeden Stollen. Und vorher die alten Sprengfallen weg. In dieser Reihenfolge.;scene:HZ_heart_tiefe_laternen
+HZ_heart_himmel_sela_L01;sela;neutral;;Die Windglocken müssen klingen, die Wächter heilen. Federn sammeln schadet auch nicht.;scene:HZ_heart_himmel_sela
+HZ_heart_himmel_nest_L01;aya;besorgt;;Die Nester sind zerzaust. Die Greifen sind wütend. Ich bin auch wütend.;scene:HZ_heart_himmel_nest
+HZ_heart_himmel_bucht_L01;rhea;zornig;;Piraten haben meine Segel zerschossen und meine Matrosen auch. Hilf mir flicken.;scene:HZ_heart_himmel_bucht
+HZ_heart_himmel_kinder_L01;pia;amuesiert;;Küken füttern, Windschutz bauen und den Wächtern zuwinken. Sie winken nie zurück, aber sie freuen sich.;scene:HZ_heart_himmel_kinder
+HZ_heart_feste_lager_L01;marit;besorgt;;Jeder Sturm bringt mir neue Verwundete. Verband her, Zelt flicken, weiter.;scene:HZ_heart_feste_lager
+HZ_heart_feste_tore_L01;ulf;entschlossen;;Ohne Rammböcke kein Tor. Ohne Munition keine Rammböcke. Los!;scene:HZ_heart_feste_tore
+HZ_heart_feste_kammern_L01;edric;besorgt;;Die Siegelsplitter dürfen nicht in falsche Hände. Sammle sie, bevor die Brecher es tun.;scene:HZ_heart_feste_kammern
+HZ_heart_feste_bresche_L01;kaja;entschlossen;;Fallen, Brände, Verwundete. Die Bresche hält nur, wenn wir sie halten.;scene:HZ_heart_feste_bresche
+FP_mira_L01;mira;amuesiert;;Ich führe jetzt Listen über ganz Silbermund. Die Stadt weiß es noch nicht.;scene:FP_mira
+FP_haldis_L01;haldis;entschlossen;;Die Wacht steht. Wenn du sie brauchst, ruf. Laut.;scene:FP_haldis
+FP_tovin_L01;tovin;amuesiert;;Ich habe ein neues Kapitel über dich angefangen. Es hat schon Fußnoten.;scene:FP_tovin
+FP_veyra_L01;veyra;neutral;;Ich bin nicht hier. Du siehst mich nur, weil ich es will.;scene:FP_veyra
+FP_fenn_L01;fenn;neutral;;Die Lichtung ist leer, aber die Laternen brennen. Danke dafür.;scene:FP_fenn
+FP_nadira_L01;nadira;amuesiert;;Silbermund hat zu wenig Sand. Ich bringe welchen mit, nächstes Mal.;scene:FP_nadira
+FP_sela_L01;sela;neutral;;Die Greifin fragt nach dir. Auf ihre Art. Laut.;scene:FP_sela
+FP_gorran_L01;gorran;amuesiert;;Der Rat tagt wieder. Ich führe Protokoll. Und das Buffet.;scene:FP_gorran

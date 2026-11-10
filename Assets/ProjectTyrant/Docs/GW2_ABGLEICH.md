@@ -87,3 +87,29 @@ Feature → GW2-Verhalten → Umsetzung im Prototyp → Abweichung und Grund.
 | Weltboss | feste Zeitpläne, Vor-Events | 15-min-Zyklus über Sitzungs-Weltuhr, 2 Vor-Ereignisse, 8 min Limit | Uhr nicht server-weit |
 | Meta-Ereignis | mehrere Phasen, kartenweit | 4 Phasen, 20-min-Zyklus | auf einen Kartenbereich beschränkt |
 | Herzen | ≥ 3 je Karte | 3 je Biom-Zone | Lauf 6 erweitert |
+
+## Lauf 5 – Klassen, Animation, VFX, Sound & Musik
+| System | GW2 | Project Tyrant | Abweichung |
+|---|---|---|---|
+| Animation | Motion-Capture, Ober-/Unterkörper getrennt, Fuß-IK | prozedurale Clips, Playables mit Oberkörper-Maske, Fuß-/Blick-IK, Animations-LOD | keine Gesichts-Animation, kein Dreh-Clip |
+| Skill-Timeline | Aktivierung, Nachwirkung, Warteschlange, Unterbrechung | identisch, datengetrieben aus Clip-Markern, Hit-Stop bei schweren Treffern | Werte eigene |
+| Auto-Ketten | 3 Glieder | 3 Glieder, Glied 3 +40 % + Waffenbonus (F1) | – |
+| Klassen | 9 Berufe | Wächter, Wildhüter (Gefährte), Elementarweber (4 Einstimmungen), Schattenklinge (Initiative, Tarnung, Stehlen) | 4 Klassen, 2–3 Waffensets je Kern |
+| Spezialisierungen | 3 Elite je Beruf, 3. Linienplatz | 4 je Klasse (16), Platz 3, Freischaltung 3 × 10 Heldenpunkte ab Stufe 30 | Stufe 30 statt 80 |
+| Balancing | über Skill-Koeffizienten | Faktoren je Klasse/Spezialisierung auf Skill-Werte; 17 von 20 Einträgen ±15 % zum Wächter | Elementarweber, Sturmrufer, Dornenwächter offen (KNOWN 48–50) |
+| VFX | handgemachte Effekte je Skill | Baukasten 13 Formen × 27 Paletten × 4 Größen, Lesbarkeit je Team | keine handgemachten Signatur-Effekte |
+| Audio | orchestrale Musik, dynamische Kampfmusik | synthetisierte Klänge + generativer Komponist mit Stems, Musik-Direktor (Erkundung/Kampf/Boss) | kein Orchester, keine Stimmen |
+| Ladebildschirm | gemalte Zonen-Illustration, Tipp | Aufnahme der Zone vom Aussichtspunkt, Zonenname, Stufe, Tipp, Fortschritt | gerendert statt gemalt |
+| Charakterauswahl | 3D-Figuren vor Kulisse | 5 Plätze als animierte Figuren, Erstellen mit Klassenkarten, Löschen mit Namenseingabe | einfache Kulisse |
+
+## Fix-Lauf F1
+| System | GW2 | Project Tyrant | Abweichung |
+|---|---|---|---|
+| Wegmarken beim Zonenbetreten | Eingangs-Wegmarke meist in Sichtweite | Ankunfts-Wegmarke ≤ 40 m je Eingang, Auto-Freischaltung beim Betreten | Freischaltung automatisch statt im Vorbeilaufen |
+| Wiederbelebung nach Niederlage | Wegmarken-Liste, notfalls Kartenbeginn | Besiegt-Optionen nie leer, Notfall-Wegmarke | – |
+| Mausrad-Zoom | stufenlos, beritten weiter | 1,5–12 m / beritten 2,5–16 m, 0,75 m je Raste, gedämpft | keine Ego-Perspektive |
+| A/D | drehen (Standard), RMB = seitwärts | identisch, Option für bisheriges Verhalten | – |
+| Bodenziel | Normal, Schnell-Wirken, Schnell mit Reichweite, Halten-Loslassen | 4 Modi, Halte-Schwelle 150 ms | – |
+| Flächeneffekte | Optionen für eigene/verbündete Effekte | Fläche+Effekt / Nur Effekt; Verbündete Voll/Nur Effekt/Reduziert/Aus | Gegner-Telegraphen abschaltbar nur mit Warnung |
+| Auto-Angriffs-Ketten | 3 Glieder, letztes stärker | 3 Glieder, Glied 3 × 1,4 + Waffenbonus, Reset nach 2 s | Werte eigene |
+

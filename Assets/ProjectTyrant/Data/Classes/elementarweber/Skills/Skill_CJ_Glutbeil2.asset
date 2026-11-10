@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 3.2
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.95
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.9
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -40,7 +42,7 @@ MonoBehaviour:
   TargetBuffs:
   - Type: 14
     Stacks: 1
-    Duration: 4
+    Duration: 8
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
@@ -63,10 +65,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Axe_Thrust
     AnimScale: 1.8518518
-    VfxCharge: Charge/Feuer/M
-    VfxRelease: Release/Feuer/M
-    VfxProjectile: Trail/Feuer/M
-    VfxImpact: Impact/Feuer/M
+    VfxCharge: Charge/Feuer/L
+    VfxRelease: Release/Feuer/L
+    VfxProjectile: Trail/Feuer/L
+    VfxImpact: Impact/Feuer/L
     VfxAfter: 
     SfxCharge: Feuer/Charge
     SfxRelease: Feuer/Release

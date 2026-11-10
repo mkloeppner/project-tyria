@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_Bundle_Sandsack_Schichten
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: Bundle_Sandsack_Schichten
+  DisplayName: Aufschichten
+  Description: "Schichtet einen Wall: Schutz f\xFCr dich und Verb\xFCndete."
+  ShortLabel: Au
+  IconColor: {r: 0.6, g: 0.45, b: 0.25, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 0
+  CastTime: 1
+  Cooldown: 6
+  Delivery: 3
+  Range: 0
+  Radius: 2.5
+  TargetCount: 5
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 0
+  Hits: 1
+  HitInterval: 0.25
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 28
+  LeapDistance: 0
+  TargetBuffs: []
+  SelfBuffs:
+  - Type: 7
+    Stacks: 1
+    Duration: 5
+  ShareWithAllies: 1
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 0
+  Field: 0
+  FieldDuration: 4
+  FieldRadius: 3
+  FieldTickCoefficient: 0
+  Finisher: 0
+  Timeline:
+    Activation: 1
+    Aftercast: 1
+    Hits:
+    - 1
+    Projectiles: []
+    Movement: 0
+    MoveDistance: 0
+    Instant: 0
+    Channel: 0
+    Clip: Sword_Block
+    AnimScale: 2
+    VfxCharge: Charge/Erde/M
+    VfxRelease: Release/Erde/M
+    VfxProjectile: 
+    VfxImpact: Aura/Erde/M
+    VfxAfter: Aura/Erde/S
+    SfxCharge: Erde/Charge
+    SfxRelease: Erde/Release
+    SfxImpact: Erde/Buff
+  Chain: []
+  Palette: 3
+  PaletteExplicit: 1
+  WeaponStyleOverride: Sword
+  ClassId: 
+  InitiativeCost: 0
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

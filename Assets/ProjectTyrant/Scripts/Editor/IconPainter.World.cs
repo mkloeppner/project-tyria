@@ -26,6 +26,7 @@ namespace ProjectTyrant.EditorTools
                 .Fill(Box(32, 19, 6, 2, 1), outline));
             PaintMounts();
             PaintMastery();
+            PaintStory();   // Lauf 6
         }
 
         static void PaintMastery()

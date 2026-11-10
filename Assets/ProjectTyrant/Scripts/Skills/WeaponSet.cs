@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ProjectTyrant
 {
-    public enum WeaponVisual { Greatsword, Staff, Longbow, AxeTorch, SwordWarhorn, ScepterFocus, DaggerDagger, SwordPistol, Shortbow, Conjured, Hammer, Rifle, DaggerWarhorn, ScepterWarhorn, SwordFocus, ScepterDagger, ScepterPistol, AxeDagger, SwordShield, ScepterTorch }
+    public enum WeaponVisual { Greatsword, Staff, Longbow, AxeTorch, SwordWarhorn, ScepterFocus, DaggerDagger, SwordPistol, Shortbow, Conjured, Hammer, Rifle, DaggerWarhorn, ScepterWarhorn, SwordFocus, ScepterDagger, ScepterPistol, AxeDagger, SwordShield, ScepterTorch, ElementStaff }
 
     [CreateAssetMenu(menuName = "Project Tyrant/Weapon Set", fileName = "Weapon_")]
     public class WeaponSet : ScriptableObject

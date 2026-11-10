@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: ST1b_Funkenpaar
   DisplayName: Funkenpaar
-  Description: Zweites Geschoss der Kette. Projektil-Finisher.
+  Description: Zweites Glied der Kette (62 % Koeffizient).
   ShortLabel: Bolzen II
   IconColor: {r: 0.55, g: 0.45, b: 0.95, a: 1}
   Icon: {fileID: 0}
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 24
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.7
+  ChainBonus: 0
+  ChainRoot: {fileID: 11400000, guid: 64185f9d137cf354999cb133041e74b1, type: 2}
+  Coefficient: 0.618
   Hits: 1
   HitInterval: 0.25
   HealBase: 0

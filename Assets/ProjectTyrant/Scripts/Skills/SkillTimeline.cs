@@ -102,6 +102,11 @@ namespace ProjectTyrant
         /// <summary>Glied abgeschlossen → nächstes.</summary>
         public void Completed(float now) { Current(now); Index = (Index + 1) % Length; _lastTime = now; }
         public void Reset() { Index = 0; _lastTime = float.NegativeInfinity; }
+        /// <summary>Fix-Lauf F1: ist das aktuelle Glied das Bonus-Glied (letztes)?</summary>
+        public bool AtBonus(float now) => Length > 1 && Current(now) == Length - 1;
+        public int ResetCount { get; private set; }
+        /// <summary>Reset aus Regel (Waffenwechsel, Ausweichen, Unterbrechung, Zielverlust).</summary>
+        public void Break() { if (Index != 0 || !float.IsNegativeInfinity(_lastTime)) ResetCount++; Reset(); }
     }
 
     /// <summary>

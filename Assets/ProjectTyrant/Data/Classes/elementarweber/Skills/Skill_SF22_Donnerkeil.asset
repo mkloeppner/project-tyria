@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 22
   Radius: 3.5
   TargetCount: 5
-  Coefficient: 1.1
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 4.4
   Hits: 3
   HitInterval: 0.3
   HealBase: 0
@@ -65,10 +67,10 @@ MonoBehaviour:
     Channel: 1
     Clip: Cast2H
     AnimScale: 2
-    VfxCharge: Charge/Luft/M
-    VfxRelease: Sigil/Luft/M
+    VfxCharge: Charge/Luft/L
+    VfxRelease: Sigil/Luft/L
     VfxProjectile: 
-    VfxImpact: Pillar/Luft/M
+    VfxImpact: Pillar/Luft/L
     VfxAfter: 
     SfxCharge: Luft/Charge
     SfxRelease: Luft/Release

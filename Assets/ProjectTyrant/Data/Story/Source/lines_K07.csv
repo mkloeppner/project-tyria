@@ -1,0 +1,40 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K07_S01_L01;fenn;besorgt;rechts;Ihr kommt vom Rat? Gut. Der Wald wird violett. Und violett ist keine Farbe für einen Wald.;
+K07_S01_L02;held;neutral;links;Was hilft dagegen?;
+K07_S01_L03;fenn;neutral;rechts;Licht. Laternen an den Wächtersteinen. Und jemand, der die Schattenpriester unterbricht, bevor sie fertig beten.;
+K07_S01_L04;held;neutral;links;Unterbrechen kann ich.;
+K07_S01_L04@Wildheit;held;amuesiert;links;Unterbrechen ist meine Lieblingsbeschäftigung.;
+K07_S01E_L01;fenn;amuesiert;blase;Die Verderbnis weicht! Ein bisschen. Ich nehme jedes bisschen.;
+K07_S02_L01;fenn;besorgt;rechts;Das Dorf an der Lichtung muss raus. Die Alten laufen langsam, die Kinder zu schnell.;
+K07_S02_L02;haldis;entschlossen;rechts;Ich geh vorne. Du hältst die Flanke. Wer zurückbleibt, wird getragen.;if:Pact=Wacht
+K07_S02_L03;tovin;besorgt;rechts;Ich habe eine Karte gezeichnet. Sie stimmt. Ziemlich. Größtenteils.;if:Pact=Archiv
+K07_S02_L04;veyra;neutral;rechts;Ich kenne einen Pfad, den die Dornenschrecken nicht kennen. Weil ich ihn gestern erfunden habe.;if:Pact=Schleier
+K07_S02_L05;fenn;besorgt;rechts;Die Dornenschrecken riechen Angst. Also sagt ihnen bitte niemand, dass wir welche haben.;
+K07_S02_C1_A;held;amuesiert;links;Alle festhalten. Wir machen einen Ausflug.;opt:1|tend:Charme|reply:K07_S02_R1
+K07_S02_C1_B;held;entschlossen;links;Niemand bleibt zurück. Niemand.;opt:1|tend:Wuerde|reply:K07_S02_R2
+K07_S02_C1_C;held;zornig;links;Wer die Leute angreift, bekommt es mit mir zu tun.;opt:1|tend:Wildheit|reply:K07_S02_R3
+K07_S02_R1;fenn;amuesiert;rechts;Ein Ausflug. Ich sage den Kindern, es gibt Picknick.;reply
+K07_S02_R2;fenn;trauernd;rechts;Das hat man uns schon oft versprochen. Halte es.;reply
+K07_S02_R3;fenn;besorgt;rechts;Dann bekommst du es mit vielen zu tun. Der Wald ist voll.;reply
+K07_S02E_L01;fenn;trauernd;rechts;Alle draußen. Auch die Ziege. Ich weiß nicht, wie ich danken soll.;
+K07_S02E_L02;held;neutral;links;Bleib am Leben. Das reicht.;
+K07_S03_L01;held;besorgt;nah;Am Wächterstein wartet etwas auf mich. Ich spüre es seit der Lichtung.;
+K07_S03_L02;ilan;trauernd;rechts;Du hast mich gesucht. All die Jahre. Ich habe deine Zettel an den Bäumen gesehen.;if:Lodestar=Verlorener
+K07_S03_L03;held;trauernd;links;Ilan. Du lebst. Warum bist du nie zurückgekommen?;if:Lodestar=Verlorener
+K07_S03_L04;ilan;besorgt;rechts;Weil der Wald mich festhält. Die Verderbnis. Erst wenn das Siegel hält, kann ich gehen.;if:Lodestar=Verlorener
+K07_S03_L05;held;besorgt;links;Die Zeichen am Stein. Ich habe sie geträumt. Seit ich ein Kind war.;if:Lodestar=Raetsel
+K07_S03_L06;tovin;besorgt;rechts;Das ist die Schrift der Wächter. Vor den Karten. Sie sagt: Der Schläfer zählt seine Wächter.;if:Lodestar=Raetsel
+K07_S03_L07;held;neutral;links;Dann bin ich einer davon. Irgendwie.;if:Lodestar=Raetsel
+K07_S03_L08;kerrin;zornig;rechts;Du. Du bist weggelaufen, als die Brücke brannte. Ich habe drei Wochen gelegen.;if:Lodestar=Schuld
+K07_S03_L09;held;trauernd;links;Ich weiß. Ich habe es mir nie verziehen. Ich laufe nicht mehr weg.;if:Lodestar=Schuld
+K07_S03_L10;kerrin;neutral;rechts;Beweis es. Halte den Stein, bis das Licht wieder brennt.;if:Lodestar=Schuld
+K07_S03_L11;fenn;neutral;rechts;Der Stein leuchtet, wenn man ihm die Wahrheit sagt. Sagen die Alten.;
+K07_S03_C2_A;held;entschlossen;links;Ich bringe das zu Ende. Für alle, die hier warten.;opt:2|tend:Wuerde|flag:k07_leitstern_treu|reply:K07_S03_R1
+K07_S03_C2_B;held;trauernd;links;Ich weiß nicht, ob ich das kann. Aber ich versuche es.;opt:2|tend:Charme|flag:k07_leitstern_ehrlich|reply:K07_S03_R2
+K07_S03_R1;fenn;neutral;rechts;Der Stein hat es gehört. Steine vergessen nichts.;reply
+K07_S03_R2;fenn;amuesiert;rechts;Ehrlich ist besser als mutig. Mutige gibt es hier genug, auf dem Friedhof.;reply
+K07_S03E_L01;held;entschlossen;nah;Das Licht brennt wieder. Vareth atmet langsamer. Aber er atmet.;
+K07_J;held;besorgt;;Im Dämmerwald drängten wir die Verderbnis zurück und brachten ein Dorf in Sicherheit. Am Wächterstein holte mich die Vergangenheit ein.;journal
+K07_J@Verlorener;held;besorgt;;Im Dämmerwald brachten wir ein Dorf in Sicherheit. Am Wächterstein fand ich Ilan wieder. Der Wald lässt ihn erst gehen, wenn das Siegel hält.;journal
+K07_J@Raetsel;held;besorgt;;Im Dämmerwald brachten wir ein Dorf in Sicherheit. Am Wächterstein standen die Zeichen aus meinen Träumen. Der Schläfer zählt seine Wächter.;journal
+K07_J@Schuld;held;besorgt;;Im Dämmerwald brachten wir ein Dorf in Sicherheit. Am Wächterstein wartete Kerrin. Diesmal bin ich nicht weggelaufen.;journal

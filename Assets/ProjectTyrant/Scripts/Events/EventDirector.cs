@@ -25,6 +25,8 @@ namespace ProjectTyrant
         public float ChainResetDelay = 30f;
 
         public EventScheduler Scheduler { get; private set; }
+        /// <summary>Lauf 6: Story-Instanz – Ereignisse ruhen (dieselbe Zonen-Szene im Instanz-Modus).</summary>
+        public bool Paused;
         public readonly List<string> History = new List<string>();
 
         class World
@@ -129,7 +131,7 @@ namespace ProjectTyrant
         void Update()
         {
             WorldClock.Seconds += Time.deltaTime;
-            if (Scheduler == null) return;
+            if (Scheduler == null || Paused) return;   // Lauf 6: Story-Instanz pausiert Ereignisse
             float dt = Time.deltaTime;
             var p = Player;
             Scheduler.Tick(dt, p != null ? p.transform.position : Vector3.one * 9999f);

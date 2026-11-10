@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631f4299acbe61548b68a43d14115eb0, type: 3}
+  m_Name: Zone_heart_sonnfurt_mira
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneObjectDefinition
+  Id: heart_sonnfurt_mira
+  Kind: 4
+  DisplayName: Sonnfurt sichern
+  Description: "F\xFCttere die Ziegen, l\xF6sche Glutnester mit dem Eimer und gib den Kindern einen Grund zum Jubeln."
+  Position: {x: -62, y: 1, z: -66}
+  Radius: 20
+  Experience: 168
+  Karma: 105
+  Copper: 50
+  HeroPoints: 0
+  Requires: 0
+  HeartTask: "F\xFCttere die Ziegen, l\xF6sche Glutnester mit dem Eimer und gib den Kindern einen Grund zum Jubeln."
+  KillValue: 0.03
+  TaskValue: 0.12

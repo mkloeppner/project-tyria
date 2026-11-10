@@ -6,7 +6,7 @@ using static ProjectTyrant.EditorTools.PTEditorUtil;
 namespace ProjectTyrant.EditorTools
 {
     /// <summary>Lauf 4: 9 neue Gegnertypen (3 je Biom-Zone) mit Sonderverhalten + Umgebungstiere – alle prozedural (ab Lauf 5 geriggt, CharacterAnimator).</summary>
-    public static class WorldEnemyBuilder
+    public static partial class WorldEnemyBuilder
     {
         const string EnemyDir = DataDir + "/Enemies";
         const string NpcPrefabDir = PrefabDir + "/Characters";
@@ -126,6 +126,7 @@ namespace ProjectTyrant.EditorTools
 
             foreach (var a in new[] { lurk, spit, koloss, wolf, huter, werfer, crawl, caller, golem, cKoloss, cWolf, cBrut, wb, meta }) EditorUtility.SetDirty(a);
             BuildCritters();
+            BuildLauf6(trashLoot, vetLoot, champBag);   // Lauf 6: Gegner der sechs neuen Zonen, Story-Gegner
             AssetDatabase.SaveAssets();
         }
 
@@ -143,7 +144,7 @@ namespace ProjectTyrant.EditorTools
 
         static GameObject Prefab(string name, EnemyArchetype arch, System.Func<Transform, GameObject> visualFn, string prompt)
         {
-            arch.Palette = name.Contains("_Moor_") ? VfxPalette.Natur : name.Contains("_Frost") ? VfxPalette.Frost : name.Contains("_Glut_") ? VfxPalette.Glut : name.Contains("Sturm") ? VfxPalette.Luft : VfxPalette.Blut;
+            arch.Palette = name.Contains("_Wald_") ? VfxPalette.Zwielicht : name.Contains("_Duene_") ? VfxPalette.Staubgold : name.Contains("_Tiefe_") ? VfxPalette.Arkan : name.Contains("_Himmel_") ? VfxPalette.Himmel : name.Contains("_Feste_") || name.Contains("Vareth") ? VfxPalette.Tiefviolett : name.Contains("_Kueste_") ? VfxPalette.Wasser : name.Contains("_Moor_") ? VfxPalette.Natur : name.Contains("_Frost") ? VfxPalette.Frost : name.Contains("_Glut_") ? VfxPalette.Glut : name.Contains("Sturm") ? VfxPalette.Luft : VfxPalette.Blut;
             EditorUtility.SetDirty(arch);
             var go = new GameObject(name);
             go.layer = CharacterLayer;

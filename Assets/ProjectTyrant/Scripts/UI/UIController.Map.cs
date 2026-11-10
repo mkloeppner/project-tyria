@@ -56,6 +56,20 @@ namespace ProjectTyrant
             DefeatMode = true;
             WorldMap.SetDefeatMode(true);
             OpenWorldMap(Player != null ? Player.transform.position : Vector3.zero);
+            // Fix-Lauf F1: Liste der Wiederbelebungs-Orte – nie leer (Notfall-Wegmarke, andere Zonen)
+            var prof = PlayerProfile.Instance;
+            _defeatOptions = prof != null ? prof.DefeatOptions() : new System.Collections.Generic.List<WaypointSafety.DefeatOption>();
+            WorldMap.SetDefeatOptions(_defeatOptions, PickDefeatOption);
+        }
+
+        System.Collections.Generic.List<WaypointSafety.DefeatOption> _defeatOptions = new System.Collections.Generic.List<WaypointSafety.DefeatOption>();
+        public System.Collections.Generic.IReadOnlyList<WaypointSafety.DefeatOption> DefeatOptionsShown => _defeatOptions;
+
+        public void PickDefeatOption(WaypointSafety.DefeatOption o)
+        {
+            var prof = PlayerProfile.Instance; if (prof == null || !DefeatMode) return;
+            DefeatMode = false; WorldMap.SetDefeatMode(false); WorldMap.Window.Close();
+            prof.RespawnAt(o);
         }
 
         public void RequestTravel(MapMarkerInfo wp)
@@ -64,6 +78,7 @@ namespace ProjectTyrant
             if (prof == null || Player == null) return;
             if (DefeatMode)
             {
+                foreach (var o in _defeatOptions) if (o.Emergency && WaypointSafety.FlatDistance(o.Waypoint.Position, wp.Position) < 1f) { PickDefeatOption(o); return; }
                 if (wp.State != MarkerState.Open) { GameEventBus.Notify(wp.State == MarkerState.Contested ? "Wegmarke umkämpft – wähle eine andere" : "Wegmarke noch nicht entdeckt", new Color(1f, 0.5f, 0.4f)); return; }
                 DefeatMode = false; WorldMap.SetDefeatMode(false); WorldMap.Window.Close();
                 prof.RespawnAt(wp.Position, wp.Label);

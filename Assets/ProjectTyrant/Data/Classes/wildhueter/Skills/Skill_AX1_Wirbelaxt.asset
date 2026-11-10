@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: wildhueter_AX1_Wirbelaxt
   DisplayName: Wirbelaxt
   Description: "Geworfene Axt, die zur\xFCckfliegt; 1 Verwundbarkeit."
-  ShortLabel: Axt
+  ShortLabel: Axt I
   IconColor: {r: 0.45, g: 0.75, b: 0.3, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 18
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.72
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 0.73
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -71,7 +73,9 @@ MonoBehaviour:
     SfxCharge: Natur/Charge
     SfxRelease: Natur/Swing1
     SfxImpact: Natur/Impact
-  Chain: []
+  Chain:
+  - {fileID: 11400000, guid: 0f19b2f29b457844fa92634ab44c674c, type: 2}
+  - {fileID: 11400000, guid: e43d9441c51de6342a1dd9736016a248, type: 2}
   Palette: 4
   PaletteExplicit: 1
   WeaponStyleOverride: Axe

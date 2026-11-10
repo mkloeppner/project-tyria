@@ -89,6 +89,8 @@ namespace ProjectTyrant.EditorTools
             Begin("wildhueter", Color.white, VfxPalette.Natur); BuildPets();
             lib.Classes = new List<ClassDefinition> { BuildGuardian(), BuildRanger(), BuildWeaver(), BuildThief() };
             BuildElites(lib);   // Lauf 5 / M26
+            NormalizeChains(lib);   // Fix-Lauf F1
+            ApplyBalance(lib);      // M27: Klassen-/Spezialisierungs-Schaden ±15 % zum Wächter
             foreach (var o in _dirty) if (o != null) EditorUtility.SetDirty(o);
             AssetDatabase.SaveAssets();
             int skills = 0, elite = 0, specs = 0; foreach (var c in lib.Classes) { foreach (var _ in c.AllSkills()) skills++; foreach (var e in c.EliteSpecs) { specs++; foreach (var _ in e.AllSkills()) elite++; } }

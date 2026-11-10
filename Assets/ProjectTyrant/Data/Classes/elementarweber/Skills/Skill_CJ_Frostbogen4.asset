@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 26
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 1.45
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 2.9
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -63,10 +65,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Bow_Shoot
     AnimScale: 0.89285713
-    VfxCharge: Charge/Frost/M
-    VfxRelease: Release/Frost/M
-    VfxProjectile: Projectile/Frost/M
-    VfxImpact: Impact/Frost/M
+    VfxCharge: Charge/Frost/L
+    VfxRelease: Release/Frost/L
+    VfxProjectile: Projectile/Frost/L
+    VfxImpact: Impact/Frost/L
     VfxAfter: 
     SfxCharge: Frost/Charge
     SfxRelease: Frost/Release

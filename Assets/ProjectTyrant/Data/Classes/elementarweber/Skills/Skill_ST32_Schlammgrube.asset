@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 24
   Radius: 3.5
   TargetCount: 5
-  Coefficient: 0.9
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.8
   Hits: 1
   HitInterval: 0.3
   HealBase: 0
@@ -40,7 +42,7 @@ MonoBehaviour:
   TargetBuffs:
   - Type: 13
     Stacks: 2
-    Duration: 6
+    Duration: 12
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
@@ -63,10 +65,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Cast2H
     AnimScale: 0.9090909
-    VfxCharge: Charge/Erde/M
-    VfxRelease: Sigil/Erde/M
+    VfxCharge: Charge/Erde/L
+    VfxRelease: Sigil/Erde/L
     VfxProjectile: 
-    VfxImpact: Pillar/Erde/M
+    VfxImpact: Pillar/Erde/L
     VfxAfter: 
     SfxCharge: Erde/Charge
     SfxRelease: Erde/Release

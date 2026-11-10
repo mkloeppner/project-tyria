@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: wildhueter_sturmfalke_W1
   DisplayName: Federschuss
   Description: Grundangriff auf bis zu 30 m; Verwundbarkeit (1). Projektil-Finisher.
-  ShortLabel: Feders.
+  ShortLabel: Feders. I
   IconColor: {r: 0.55, g: 0.82, b: 1, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 30
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.72
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 0.475
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -71,7 +73,9 @@ MonoBehaviour:
     SfxCharge: Himmel/Charge
     SfxRelease: Himmel/Swing1
     SfxImpact: Himmel/Impact
-  Chain: []
+  Chain:
+  - {fileID: 11400000, guid: e373102be50265a4294b56722e04b6eb, type: 2}
+  - {fileID: 11400000, guid: fc40e5cd6a4041e4c89c3def506fd67e, type: 2}
   Palette: 14
   PaletteExplicit: 1
   WeaponStyleOverride: Bow

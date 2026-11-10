@@ -1,0 +1,56 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K01_S01_L01;alda;besorgt;total;Rauch über dem Feld! Das ist keine Ernte, die da brennt.;if:Origin=Hof
+K01_S01_L02;held;entschlossen;nah;Aschkrallen. Ich hole die Tiere raus. Du läufst zum Weiler.;if:Origin=Hof
+K01_S01_L03;alda;besorgt;links;Du hast eine Mistgabel und ein Abendessen im Bauch. Das ist kein Plan.;if:Origin=Hof
+K01_S01_L04;held;neutral;rechts;Mehr brauche ich nicht. Lauf, Alda.;if:Origin=Hof
+K01_S01_L04@Charme;held;amuesiert;rechts;Dann sollen sie sich vor meinem Abendessen fürchten. Lauf, Alda.;if:Origin=Hof
+K01_S01_L04@Wildheit;held;zornig;rechts;Die Mistgabel reicht. Für den Anfang. Lauf!;if:Origin=Hof
+K01_S01_L05;orsk;zornig;total;Feuer an der Straße! Das ist der Karren aus Sonnfurt.;if:Origin=Posten
+K01_S01_L06;held;entschlossen;nah;Plünderer. Ich sehe vier, vielleicht fünf.;if:Origin=Posten
+K01_S01_L07;orsk;besorgt;links;Und ich sehe einen Rekruten, der noch nie ernst gemacht hat.;if:Origin=Posten
+K01_S01_L08;held;entschlossen;rechts;Dann ist heute mein erster Tag.;if:Origin=Posten
+K01_S01_L08@Charme;held;amuesiert;rechts;Dann wird das ein denkwürdiger erster Tag, Wachtmeister.;if:Origin=Posten
+K01_S01_L09;elmar;besorgt;total;Leg die Schriftrolle hin. Ganz langsam. Wir haben Besuch.;if:Origin=Ruinen
+K01_S01_L10;held;besorgt;nah;Aschkrallen? Hier draußen gibt es nichts zu holen.;if:Origin=Ruinen
+K01_S01_L11;elmar;neutral;links;Außer uns. Und den Steinen, nach denen sie so eifrig graben.;if:Origin=Ruinen
+K01_S01_L12;held;entschlossen;rechts;Dann graben sie heute umsonst.;if:Origin=Ruinen
+K01_S01_L13;held;entschlossen;nah;In Bewegung bleiben. Ihren Hieben ausweichen. Dann zurückschlagen.;
+K01_S01E_L01;mira;besorgt;rechts;Da bist du ja! Ich hab dich zweimal für tot erklärt. Einmal laut.;
+K01_S01E_L02;held;neutral;links;Ich war beschäftigt. Sie haben Säcke mitgenommen. Und Leute.;
+K01_S01E_L03;mira;zornig;rechts;Den alten Joss und die Zwillinge vom Mühlbach.;
+K01_S01E_C1_A;held;amuesiert;links;Dann holen wir sie zurück. Du bringst die Liste, ich die Fäuste.;opt:1|tend:Charme|reply:K01_S01E_R1
+K01_S01E_C1_B;held;entschlossen;links;Wir bringen sie heim. Alle drei.;opt:1|tend:Wuerde|reply:K01_S01E_R2
+K01_S01E_C1_C;held;zornig;links;Ich jage sie. Bis zum letzten Plünderer.;opt:1|tend:Wildheit|reply:K01_S01E_R3
+K01_S01E_R1;mira;amuesiert;rechts;Die Liste ist schon fertig. Die Fäuste prüfe ich noch.;reply
+K01_S01E_R2;mira;besorgt;rechts;Du sagst das so ruhig. Das macht mir ein bisschen Angst.;reply
+K01_S01E_R3;mira;besorgt;rechts;Bis zum Lager reicht. Über den Rest reden wir danach.;reply
+K01_S01E_L04;mira;entschlossen;rechts;Erst der Weiler. Die Leute brauchen Wasser, Verbände und jemanden, der nicht schreit.;
+K01_S01E_L05;held;amuesiert;links;Das Schreien übernimmst dann du?;
+K01_S01E_L06;mira;amuesiert;rechts;Nur, wenn es organisiert ist.;
+K01_S02E_L01;mira;neutral;blase;Die Scheune steht, die Brunnen laufen. Ich führe jetzt eine Liste über dich.;
+K01_S02E_L02;mira;amuesiert;blase;Spalte eins: unerwartet nützlich. Spalte zwei ist noch leer.;
+K01_S03_L01;mira;besorgt;rechts;Die Spuren führen zum alten Steinbruch. Da haben sie ihr Lager.;
+K01_S03_L02;held;entschlossen;links;Du bleibst hier und zählst, wer herauskommt.;
+K01_S03_L03;mira;zornig;rechts;Ich zähle auch, wer nicht herauskommt. Sieh zu, dass du nicht dabei bist.;
+K01_S03_C2_A;held;amuesiert;links;Zähl langsam. Ich brauche vielleicht etwas länger.;opt:2|tend:Charme|reply:K01_S03_R1
+K01_S03_C2_B;held;entschlossen;links;Ich bringe alle zurück. Das ist ein Versprechen.;opt:2|tend:Wuerde|reply:K01_S03_R2
+K01_S03_C2_C;held;zornig;links;Die werden sich wünschen, sie wären im Bett geblieben.;opt:2|tend:Wildheit|reply:K01_S03_R3
+K01_S03_R1;mira;amuesiert;rechts;Ich zähle so langsam, wie du willst. Bis drei. Dann komme ich nach.;reply
+K01_S03_R2;mira;besorgt;rechts;Versprechen schreibe ich auf. Mit Tinte. Die geht nicht weg.;reply
+K01_S03_R3;mira;neutral;rechts;Die meisten wünschen sich das schon, seit sie dich kennen.;reply
+K01_S03E_L01;brennar;neutral;total;Sauber. Unordentlich, aber sauber.;
+K01_S03E_L02;held;besorgt;nah;Wer seid Ihr?;
+K01_S03E_L03;brennar;neutral;nah;Brennar Feld. Hauptmann der Dornwacht. Ich jage diese Bande seit drei Wochen.;
+K01_S03E_L04;brennar;amuesiert;nah;Du hast sie an einem Nachmittag eingeholt. Das ärgert mich ein wenig.;
+K01_S03E_L05;mira;entschlossen;links;Joss und die Zwillinge sind frei. Schreibt das auf, Hauptmann.;
+K01_S03E_L06;brennar;neutral;nah;Ich schreibe nichts auf. Ich lade ein. Komm nach Dornwacht, wenn deine Wunden zu sind.;
+K01_S03E_C1_A;held;amuesiert;nah;Gibt es dort Abendessen?;opt:1|tend:Charme|flag:k01_eintopf|reply:K01_S03E_R1
+K01_S03E_C1_B;held;entschlossen;nah;Ich komme. Die Aschkrallen sind noch nicht fertig.;opt:1|tend:Wuerde|flag:k01_pflicht|reply:K01_S03E_R2
+K01_S03E_C1_C;held;zornig;nah;Nur, wenn ich den nächsten Anführer selbst erledige.;opt:1|tend:Wildheit|flag:k01_jagd|reply:K01_S03E_R3
+K01_S03E_R1;brennar;amuesiert;nah;Es gibt Eintopf. Ob das Abendessen ist, entscheidet jeder selbst.;reply
+K01_S03E_R2;brennar;entschlossen;nah;Nein. Und wir auch nicht.;reply
+K01_S03E_R3;brennar;neutral;nah;Ehrgeiz. Gut. Den schleifen wir dir noch zurecht.;reply
+K01_J;held;neutral;;Die Aschkrallen überfielen Sonnfurt, und ich blieb. Mira zählte die Leute, ich holte sie zurück. Hauptmann Brennar lädt mich nach Dornwacht ein.;journal
+K01_J@Hof;held;neutral;;Die Aschkrallen haben unseren Hof angezündet. Ich habe die Tiere gerettet und danach die Nachbarn. Ein Hauptmann namens Brennar hat mich nach Dornwacht eingeladen.;journal
+K01_J@Posten;held;neutral;;An meinem ersten Tag auf dem Posten brannte die Straße. Orsk hat geflucht, ich habe gekämpft. Hauptmann Brennar will mich in Dornwacht sehen.;journal
+K01_J@Ruinen;held;neutral;;Die Aschkrallen gruben in Elmhains Ruinen nach Steinen. Magister Elmar und ich haben sie gestört. Hauptmann Brennar will mich in Dornwacht sehen.;journal

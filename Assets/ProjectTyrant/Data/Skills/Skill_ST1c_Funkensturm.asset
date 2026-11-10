@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: ST1c_Funkensturm
   DisplayName: Funkensturm
-  Description: 'Abschluss der Kette: starkes Geschoss, 2 Verwundbarkeit. Projektil-Finisher.'
+  Description: "Kettenabschluss: +40 % Schaden, durchschl\xE4gt (bis zu 3 Ziele), 2 Verwundbarkeit."
   ShortLabel: Bolzen III
   IconColor: {r: 0.55, g: 0.45, b: 0.95, a: 1}
   Icon: {fileID: 0}
@@ -29,8 +29,10 @@ MonoBehaviour:
   Delivery: 1
   Range: 24
   Radius: 2.5
-  TargetCount: 5
-  Coefficient: 0.77
+  TargetCount: 3
+  ChainBonus: 1
+  ChainRoot: {fileID: 11400000, guid: 64185f9d137cf354999cb133041e74b1, type: 2}
+  Coefficient: 0.8651999
   Hits: 1
   HitInterval: 0.25
   HealBase: 0

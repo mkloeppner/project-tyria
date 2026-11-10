@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 9
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 1.035
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.76
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -40,7 +42,7 @@ MonoBehaviour:
   TargetBuffs:
   - Type: 14
     Stacks: 2
-    Duration: 4
+    Duration: 6.8
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
@@ -63,10 +65,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Hammer_Thrust
     AnimScale: 0.7692308
-    VfxCharge: Charge/Feuer/M
-    VfxRelease: Release/Feuer/M
+    VfxCharge: Charge/Feuer/L
+    VfxRelease: Release/Feuer/L
     VfxProjectile: 
-    VfxImpact: Impact/Feuer/M
+    VfxImpact: Impact/Feuer/L
     VfxAfter: 
     SfxCharge: Feuer/Charge
     SfxRelease: Feuer/Release

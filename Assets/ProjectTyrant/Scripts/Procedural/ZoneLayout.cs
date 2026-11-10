@@ -28,11 +28,11 @@ namespace ProjectTyrant.Procedural
         public static readonly Region[] Regions =
         {
             new Region { Name = "Weiler Sonnfurt", Center = new Vector2(-60, -60), Radius = 34, MinLevel = 1, MaxLevel = 3 },
-            new Region { Name = "Hof Gerstenbrunn", Center = new Vector2(-8, -60), Radius = 24, MinLevel = 3, MaxLevel = 5 },
-            new Region { Name = "Ruinen von Elmhain", Center = new Vector2(58, -55), Radius = 32, MinLevel = 5, MaxLevel = 8 },
-            new Region { Name = "Grenzposten Dornwacht", Center = new Vector2(5, 5), Radius = 32, MinLevel = 8, MaxLevel = 12 },
-            new Region { Name = "Rabenschanze", Center = new Vector2(58, 58), Radius = 30, MinLevel = 10, MaxLevel = 12 },
-            new Region { Name = "Spiegelsee", Center = new Vector2(-45, 40), Radius = 30, MinLevel = 4, MaxLevel = 6 },
+            new Region { Name = "Hof Gerstenbrunn", Center = new Vector2(-8, -60), Radius = 24, MinLevel = 2, MaxLevel = 4 },
+            new Region { Name = "Ruinen von Elmhain", Center = new Vector2(58, -55), Radius = 32, MinLevel = 4, MaxLevel = 7 },
+            new Region { Name = "Grenzposten Dornwacht", Center = new Vector2(5, 5), Radius = 32, MinLevel = 5, MaxLevel = 8 },
+            new Region { Name = "Rabenschanze", Center = new Vector2(58, 58), Radius = 30, MinLevel = 9, MaxLevel = 12 },
+            new Region { Name = "Spiegelsee", Center = new Vector2(-45, 40), Radius = 30, MinLevel = 3, MaxLevel = 5 },
         };
         public const string WildernessName = "Grenzmark Ashveil";
 
@@ -55,9 +55,9 @@ namespace ProjectTyrant.Procedural
         {
             int i = RegionIndexAt(pos);
             if (i >= 0) return new Vector2Int(Regions[i].MinLevel, Regions[i].MaxLevel);
-            // Wildnis: Level nach Entfernung vom Hub (2 → 9)
+            // Wildnis: Level nach Entfernung vom Hub (2 → 9); Lauf 6: flacher (2 → 8), damit Spieler der Stufe 3–5 nicht zwischen Stufe-10-Gegnern landen
             float d = Vector2.Distance(new Vector2(pos.x, pos.z), Hub.Center);
-            int l = Mathf.Clamp(2 + Mathf.RoundToInt(d / 22f), 2, 9);
+            int l = Mathf.Clamp(2 + Mathf.RoundToInt(d / 28f), 2, 8);
             return new Vector2Int(l, l + 1);
         }
 

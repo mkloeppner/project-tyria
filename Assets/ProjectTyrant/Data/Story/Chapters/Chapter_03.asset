@@ -1,0 +1,256 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_03
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 3
+  Title: "Fl\xFCstern im Moor"
+  Zone: nebelmoor
+  MinLevel: 12
+  Summary: "Spuren des Herolds f\xFChren ins Nebelmoor. Tovin deutet das Siegel, der Held rettet ein Fischerdorf aus dem Giftnebel."
+  Steps:
+  - Id: K03_S01
+    Title: Ins Nebelmoor
+    Description: "Reise ins Nebelmoor und sprich mit einem Sp\xE4her am Torfsteg."
+    Type: 3
+    Zone: nebelmoor
+    Position: {x: 14, y: 2, z: -352}
+    Npc: merle
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 1
+      Target: K03_S01
+      Count: 1
+      Text: Erreiche den Torfsteg
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 22
+      Target: '*'
+      Count: 1
+      Text: "Sprich mit einem Sp\xE4her"
+      Hint: scout
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: 
+    SceneEnd: K03_S01E
+    Checkpoints: []
+    Reward:
+      Experience: 600
+      Karma: 60
+      Copper: 300
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K03_S02
+    Title: "Merles F\xE4hre"
+    Description: "F\xE4hrfrau Merle braucht Hilfe, bevor sie dir einen Skimmer leiht."
+    Type: 1
+    Zone: nebelmoor
+    Position: {x: 300, y: 2, z: -95}
+    Npc: merle
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 11
+      Target: heart_moor_merle
+      Count: 1
+      Text: "Unterst\xFCtze F\xE4hrfrau Merle (Herz)"
+      Hint: bundle
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 16
+      Target: Skimmer
+      Count: 1
+      Text: Steig auf einen Skimmer
+      Hint: mount
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K03_S02
+    SceneEnd: K03_S02E
+    Checkpoints: []
+    Reward:
+      Experience: 800
+      Karma: 80
+      Copper: 400
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K03_S03
+    Title: Der Gelehrte
+    Description: Auf der Insel der Irrlichter sucht ein Gelehrter nach Spuren.
+    Type: 2
+    Zone: nebelmoor
+    Position: {x: 190, y: 4, z: 160}
+    Npc: tovin
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: tovin
+      Count: 1
+      Text: Sprich mit Tovin
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 15
+      Target: '*'
+      Count: 1
+      Text: "W\xE4hle eine Eigenschaft (H)"
+      Hint: traits
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K03_S03
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 700
+      Karma: 80
+      Copper: 400
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K03_S04
+    Title: Das Fischerdorf
+    Description: "Der Giftnebel kriecht nach Kr\xF6tenfurt. Hol die Leute raus und reinige dich."
+    Type: 0
+    Zone: nebelmoor
+    Position: {x: 330, y: 3, z: -60}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 26
+      Target: '*'
+      Count: 2
+      Text: "Reinige zwei Zust\xE4nde"
+      Hint: cleanse
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 9
+      Target: dorfbewohner
+      Count: 4
+      Text: Hol die Fischer aus dem Nebel
+      Hint: 
+      Optional: 0
+      Label: "Fischer st\xFCtzen"
+      Offset: {x: -8, y: 0, z: 6}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 2
+      Target: Enemy_Moor_Schleicher
+      Count: 5
+      Text: Vertreibe die Moorschleicher
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 6, y: 0, z: -6}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K03_S04
+    SceneEnd: K03_S04E
+    Checkpoints:
+    - 0
+    - 1
+    Reward:
+      Experience: 1200
+      Karma: 120
+      Copper: 800
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags:
+    - kennt_siegel
+    Letter: L_K03
+    Radius: 45
+    Companion: tovin
+    Props:
+    - rauch@-6,2
+    - rauch@6,-4
+    - kisten@4,6
+    - kisten@-8,-6
+    - feuer@0,10
+  JournalLines:
+  - K03_J
+  Mechanics:
+  - Skimmer
+  - Eigenschaften
+  - "Zust\xE4nde reinigen"
+  - "Herzen mit B\xFCndeln"
+  - "Sp\xE4her"
+  - "H\xE4ndler"

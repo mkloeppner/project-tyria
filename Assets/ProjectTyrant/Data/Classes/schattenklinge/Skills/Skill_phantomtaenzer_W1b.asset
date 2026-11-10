@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: schattenklinge_phantomtaenzer_W1b
   DisplayName: Doppelschlag
-  Description: Zweites Glied der Kette.
+  Description: Zweites Glied der Kette (63 % Koeffizient).
   ShortLabel: Stabsc. II
   IconColor: {r: 0.92, g: 0.75, b: 0.4, a: 1}
   Icon: {fileID: 0}
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 3
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.7
+  ChainBonus: 0
+  ChainRoot: {fileID: 11400000, guid: 277bb9208306a6c4681a7456160f59a6, type: 2}
+  Coefficient: 1.414
   Hits: 1
   HitInterval: 0.25
   HealBase: 0

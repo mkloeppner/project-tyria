@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: waechter_sturmherold_W1b
   DisplayName: Funkenhieb
-  Description: Zweites Glied der Kette.
+  Description: Zweites Glied der Kette (63 % Koeffizient).
   ShortLabel: Donner. II
   IconColor: {r: 0.3, g: 0.62, b: 1, a: 1}
   Icon: {fileID: 0}
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 3
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.7
+  ChainBonus: 0
+  ChainRoot: {fileID: 11400000, guid: 18ed933156085874bb665a01b4626b9b, type: 2}
+  Coefficient: 0.723
   Hits: 1
   HitInterval: 0.25
   HealBase: 0

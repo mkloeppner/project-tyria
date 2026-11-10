@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 0
   Radius: 3.9
   TargetCount: 5
-  Coefficient: 1.2
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.08
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -40,7 +42,7 @@ MonoBehaviour:
   TargetBuffs:
   - Type: 14
     Stacks: 5
-    Duration: 5
+    Duration: 4.5
   - Type: 25
     Stacks: 1
     Duration: 2

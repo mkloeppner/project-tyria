@@ -14,6 +14,18 @@ namespace ProjectTyrant
         public float Master = 1f, Music = 0.8f, Ambience = 0.8f, Effects = 0.9f, Ui = 0.8f;
         // Kamera
         public float CameraDistance = 1f, CameraSensitivity = 1f; public bool CameraImpulse = true, ActionCrosshair = true;
+        // Fix-Lauf F1 – Kamera
+        public float ZoomStep = 0.75f; public bool ZoomInvert; public float CameraDefaultDistance = 6f; public float CameraCurrentDistance = -1f; public bool FirstPersonAtMinZoom;
+        // Fix-Lauf F1 – Steuerung
+        public int TurnMode;                 // 0 Drehen (A/D drehen, Standard), 1 Seitwärts
+        public int GroundTargetMode;         // 0 Normal, 1 Drücken und Loslassen, 2 Sofort, 3 Sofort mit Reichweitenanzeige
+        public int GroundHoldMs = 150; public bool GroundSnapToTarget; public bool GroundClampToRange = true;
+        // Fix-Lauf F1 – Spiel
+        public int AreaOwn;                  // 0 Fläche und Effekt, 1 Nur Effekt
+        public int AreaAllies = 2;           // 0 Voll, 1 Nur Effekt, 2 Reduziert, 3 Aus
+        public bool EnemyTelegraphs = true;
+        // Lauf 6 – Dialoge (Barrierefreiheit)
+        public int SubtitleSize = 26; public float TextSpeed = 1f; public bool AutoAdvanceDialogue = true; public bool StoryHints = true;
         // Grafik
         public int Quality = -1; public float ViewDistance = 1f; public int EffectDensity; public bool Shadows = true;
         // Spiel
@@ -46,7 +58,14 @@ namespace ProjectTyrant
             CameraDistance = Mathf.Clamp(CameraDistance, 0.6f, 1.6f); CameraSensitivity = Mathf.Clamp(CameraSensitivity, 0.3f, 2.5f);
             ViewDistance = Mathf.Clamp(ViewDistance, 0.5f, 1.5f); EffectDensity = Mathf.Clamp(EffectDensity, 0, 2); CombatTextDensity = Mathf.Clamp(CombatTextDensity, 0, 2);
             UiScale = Mathf.Clamp(UiScale, 0.8f, 1.3f);
+            ZoomStep = Mathf.Clamp(ZoomStep, CameraZoomModel.StepMin, CameraZoomModel.StepMax); CameraDefaultDistance = Mathf.Clamp(CameraDefaultDistance, CameraZoomModel.FootMin, CameraZoomModel.FootMax);
+            TurnMode = Mathf.Clamp(TurnMode, 0, 1); GroundTargetMode = Mathf.Clamp(GroundTargetMode, 0, 3); GroundHoldMs = Mathf.Clamp(GroundHoldMs, 100, 300);
+            AreaOwn = Mathf.Clamp(AreaOwn, 0, 1); AreaAllies = Mathf.Clamp(AreaAllies, 0, 3);
+            SubtitleSize = Mathf.Clamp(SubtitleSize, 18, 40); TextSpeed = Mathf.Clamp(TextSpeed, 0.5f, 2f);
         }
+
+        /// <summary>Nur speichern (z. B. aktueller Kameraabstand), ohne alles neu anzuwenden.</summary>
+        public void SaveQuiet() { Clamp(); Current = this; PlayerPrefs.SetString(Key, ToJson()); }
 
         /// <summary>Speichern und sofort anwenden.</summary>
         public void Save()
@@ -62,11 +81,13 @@ namespace ProjectTyrant
         {
             CombatFeel.HitStopEnabled = HitStop; CombatFeel.CameraImpulseEnabled = CameraImpulse;
             VfxPool.EffectDensity = (VfxPool.Density)EffectDensity;
-            GroundTelegraph.Colorblind = ColorblindTelegraphs;
+            GroundTelegraph.Colorblind = ColorblindTelegraphs; GroundTelegraph.ShowEnemyTelegraphs = EnemyTelegraphs;
+            UIController.SubtitleSize = SubtitleSize; DialoguePlayer.TextSpeed = TextSpeed; DialoguePlayer.AutoAdvance = AutoAdvanceDialogue;
+            var sd = GameManager.Instance != null ? GameManager.Instance.Story : null; if (sd != null && sd.State != null) sd.State.HintsEnabled = StoryHints;
             if (Quality >= 0 && Quality < QualitySettings.names.Length && QualitySettings.GetQualityLevel() != Quality) QualitySettings.SetQualityLevel(Quality, true);
             QualitySettings.shadows = Shadows ? ShadowQuality.All : ShadowQuality.Disable;
             var cam = Camera.main; if (cam != null) cam.farClipPlane = 600f * ViewDistance;
-            var rig = ThirdPersonCameraRig.Current; if (rig != null) { rig.Sensitivity = 0.15f * CameraSensitivity; rig.MaxZoom = 1.8f * CameraDistance; }
+            var rig = ThirdPersonCameraRig.Current; if (rig != null) { rig.Sensitivity = 0.15f * CameraSensitivity; rig.ApplyOptions(this); }
             var pool = AudioPool.Current; if (pool != null) pool.LoadOptions();
             Changed?.Invoke(this);
         }

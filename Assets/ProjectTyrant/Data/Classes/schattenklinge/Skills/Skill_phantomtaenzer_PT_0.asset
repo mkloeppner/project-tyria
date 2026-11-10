@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 0
   Radius: 3.5
   TargetCount: 5
-  Coefficient: 0.8
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.798
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -64,9 +66,9 @@ MonoBehaviour:
     Clip: Staff_Whirl
     AnimScale: 0.35
     VfxCharge: 
-    VfxRelease: Shockwave/Staubgold/M
+    VfxRelease: Shockwave/Staubgold/L
     VfxProjectile: 
-    VfxImpact: Impact/Staubgold/M
+    VfxImpact: Impact/Staubgold/L
     VfxAfter: 
     SfxCharge: 
     SfxRelease: Staubgold/Release

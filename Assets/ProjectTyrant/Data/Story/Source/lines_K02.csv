@@ -1,0 +1,38 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K02_S01_L01;brennar;neutral;rechts;Pünktlich. Und mit Wunden, die zu sind. Du hörst wenigstens zu.;
+K02_S01_L02;held;neutral;links;Ihr habt von einer Einladung gesprochen.;
+K02_S01_L03;brennar;neutral;rechts;Die Dornwacht nimmt jeden, der bleibt, wenn es unangenehm wird. Die meisten bleiben nicht.;
+K02_S01_L04;brennar;besorgt;rechts;Die Aschkrallen greifen in der Nacht die Palisade an. Mehr als sonst. Jemand führt sie.;
+K02_S01_C1_A;held;amuesiert;links;Dann bleibe ich. Unangenehm kann ich.;opt:1|tend:Charme|reply:K02_S01_R1
+K02_S01_C1_B;held;entschlossen;links;Dann bleibe ich. Die Palisade fällt nicht.;opt:1|tend:Wuerde|reply:K02_S01_R2
+K02_S01_C1_C;held;zornig;links;Dann bleibe ich. Und finde den, der sie führt.;opt:1|tend:Wildheit|reply:K02_S01_R3
+K02_S01_R1;brennar;amuesiert;rechts;Mira hat mich gewarnt. Sie hat eine Liste.;reply
+K02_S01_R2;brennar;entschlossen;rechts;Sag das nicht. Halt es einfach.;reply
+K02_S01_R3;brennar;neutral;rechts;Erst die Palisade. Dann die Jagd. In dieser Reihenfolge.;reply
+K02_S01_L05;brennar;neutral;rechts;Kämpf mit den anderen. Feuer auf dem Boden, Klinge hindurch. So wird aus zwei Schlägen einer.;
+K02_S01_C2_A;held;amuesiert;links;Bekomme ich auch so einen Mantel?;opt:2|tend:Charme|reply:K02_S01_R4
+K02_S01_C2_B;held;neutral;links;Was erwartet die Wacht von mir?;opt:2|tend:Wuerde|reply:K02_S01_R5
+K02_S01_R4;brennar;amuesiert;rechts;Den Mantel verdient man sich. Die Löcher darin auch.;reply
+K02_S01_R5;brennar;neutral;rechts;Pünktlichkeit. Mut ist billig, Pünktlichkeit selten.;reply
+K02_S02E_L01;brennar;neutral;blase;Die Palisade steht. Du hast den anderen Platz gelassen. Das lernt hier kaum einer.;
+K02_S03_L01;mira;entschlossen;rechts;Ich komme mit. Keine Diskussion. Ich habe Verbände und eine sehr laute Stimme.;
+K02_S03_L02;held;besorgt;links;Grolmoks Lager ist kein Weiler, Mira.;
+K02_S03_L03;mira;amuesiert;rechts;Deshalb komme ich ja mit. Weiler kann ich allein.;
+K02_S03_L04;brennar;neutral;total;Wenn jemand fällt, bleibt ihr stehen und holt ihn hoch. Niemand bleibt liegen.;
+K02_S03M_L01;mira;besorgt;blase;Hilf mir hoch … nur kurz … die Liste ist noch nicht fertig.;
+K02_S03E_L01;grolmok;zornig;nah;Ihr glaubt, ihr habt gewonnen? Ihr habt einen Hund geschlagen. Der Herr ist woanders.;
+K02_S03E_L02;held;zornig;nah;Welcher Herr?;
+K02_S03E_L03;grolmok;trauernd;nah;Der Herold … er hat uns die Feste versprochen. Und den, der darunter schläft.;
+K02_S03E_L04;grolmok;trauernd;nah;Er ruft ihn wach. Dann zählt ihr eure Dörfer nicht mehr.;
+K02_S03E_L05;mira;besorgt;links;Er ist tot. Und er hatte Angst. Nicht vor uns.;
+K02_S04_L01;brennar;besorgt;rechts;Der Herold. Ich habe den Namen zuletzt vor zwanzig Jahren gehört. Auf dem Pass.;
+K02_S04_L02;held;neutral;links;Wer ist er?;
+K02_S04_L03;brennar;neutral;rechts;Einer, der früher die Feste im Osten bewacht hat. Er hat aufgehört, Wächter zu sein.;
+K02_S04_L04;brennar;neutral;rechts;Im Nebelmoor gibt es einen Gelehrten, der mehr weiß als gut für ihn ist. Tovin. Finde ihn.;
+K02_S04_C1_A;held;amuesiert;links;Ein Gelehrter. Ich nehme Kekse mit.;opt:1|tend:Charme|reply:K02_S04_R1
+K02_S04_C1_B;held;entschlossen;links;Ich breche morgen auf.;opt:1|tend:Wuerde|flag:k02_frueh|reply:K02_S04_R2
+K02_S04_C1_C;held;zornig;links;Und wenn er nicht reden will?;opt:1|tend:Wildheit|reply:K02_S04_R3
+K02_S04_R1;brennar;amuesiert;rechts;Nimm Tinte mit. Gelehrte kann man nicht bestechen. Nur beschäftigen.;reply
+K02_S04_R2;brennar;neutral;rechts;Heute Nacht schläfst du. Morgen brichst du auf. Das ist ein Befehl.;reply
+K02_S04_R3;brennar;zornig;rechts;Dann hörst du zu, bis er will. Wir sind nicht die Aschkrallen.;reply
+K02_J;held;neutral;;Ich habe mit der Dornwacht die Palisade gehalten und Grolmoks Lager gestürmt. Mira ist gefallen und wieder aufgestanden. Grolmok nannte sterbend den Herold.;journal

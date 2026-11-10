@@ -1,0 +1,30 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K08_S01_L01;nadira;neutral;rechts;Nadira, Karawanenführerin. Ihr wollt zu den Ruinen von Qasir? Dann reitet. Zu Fuß frisst euch der Sand.;
+K08_S01_L02;held;neutral;links;Wie weit ist es?;
+K08_S01_L03;nadira;amuesiert;rechts;Drei Schluchten. Ein Raptor springt darüber. Ein Held fällt hinein. Meistens.;
+K08_S01_C1_A;held;amuesiert;links;Ich bin der Typ, der springt.;opt:1|tend:Charme|reply:K08_S01_R1
+K08_S01_C1_B;held;neutral;links;Zeig mir den sicheren Weg.;opt:1|tend:Wuerde|reply:K08_S01_R2
+K08_S01_C1_C;held;zornig;links;Der Herold wartet nicht. Ich auch nicht.;opt:1|tend:Wildheit|reply:K08_S01_R3
+K08_S01_R1;nadira;amuesiert;rechts;Das sagen alle. Die Schlucht hat ein langes Gedächtnis.;reply
+K08_S01_R2;nadira;neutral;rechts;Es gibt keinen sicheren Weg. Es gibt nur weniger gefährliche.;reply
+K08_S01_R3;nadira;besorgt;rechts;Dann warte wenigstens den Sturm ab. Er wartet auf niemanden.;reply
+K08_S01E_L01;nadira;amuesiert;blase;Drei Schluchten, null Absturz. Ich schulde einem Raptor ein Bier.;
+K08_S02_L01;herold;neutral;total;Du bist gekommen. Natürlich. Brennar kam auch immer.;
+K08_S02_L02;held;zornig;links;Sprich nicht von ihm.;
+K08_S02_L02@Wuerde;held;zornig;links;Du hast kein Recht auf seinen Namen.;
+K08_S02_L03;herold;neutral;rechts;Ich spreche von allen, die ich bewacht habe. Er auch. Er wusste es nur nicht.;
+K08_S02_L04;haldis;zornig;rechts;Genug geredet. Linie! Wir drücken ihn gegen die Säulen!;if:Pact=Wacht
+K08_S02_L05;tovin;besorgt;rechts;Die Säulen! Sie sind Teil des Siegelschlosses. Bring ihn dazu, sie zu treffen!;if:Pact=Archiv
+K08_S02_L06;veyra;zornig;rechts;Diesmal entkommst du nicht. Ich habe deine Ausgänge gezählt.;if:Pact=Schleier
+K08_S02_L07;herold;amuesiert;rechts;Zählt nur. Ich habe einen mehr.;
+K08_S02E_L01;herold;neutral;total;Der Schlüssel ist geteilt. Eine Hälfte in der Tiefe, eine über den Wolken. Viel Glück. Ihr braucht es.;
+K08_S02E_L02;veyra;zornig;rechts;Er ist weg. Schon wieder. Ich hasse diesen Mann.;
+K08_S02E_L03;held;entschlossen;nah;Dann holen wir die Hälften vor ihm.;
+K08_S03_L01;nadira;neutral;rechts;Ihr habt den Herold vertrieben. Das erzählt man sich an jedem Feuer. Zweimal, mit Übertreibung.;
+K08_S03_L02;held;neutral;links;Der Schlüssel ist geteilt. Kristalltiefe und Himmelsspitzen.;
+K08_S03_L03;nadira;besorgt;rechts;Die Tiefe ist dunkel, die Spitzen sind hoch. Ich weiß nicht, was schlimmer ist.;
+K08_S03_C2_A;held;neutral;links;Erst die Tiefe. Was im Dunkeln liegt, will ich zuerst sehen.;opt:2|tend:Wuerde|flag:k08_tiefe|reply:K08_S03_R1
+K08_S03_C2_B;held;amuesiert;links;Erst die Tiefe. Danach brauche ich frische Luft.;opt:2|tend:Charme|flag:k08_tiefe|reply:K08_S03_R2
+K08_S03_R1;nadira;neutral;rechts;Nimm eine Laterne. Und noch eine. Die erste geht immer aus.;reply
+K08_S03_R2;nadira;amuesiert;rechts;Frische Luft gibt es oben genug. Zu viel davon.;reply
+K08_J;held;zornig;;Im Dünenmeer stellte ich den Herold in den Ruinen von Qasir. Er entkam wieder. Der Schlüssel ist geteilt: Tiefe und Wolken.;journal

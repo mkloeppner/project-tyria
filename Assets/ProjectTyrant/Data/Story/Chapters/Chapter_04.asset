@@ -1,0 +1,254 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_04
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 4
+  Title: "Der Pass der St\xFCrme"
+  Zone: frostkamm
+  MinLevel: 20
+  Summary: "Die Wacht zieht gegen den Herold zum Pass. Der Frostschlund wird geweckt, Brennar h\xE4lt den Pass und f\xE4llt."
+  Steps:
+  - Id: K04_S01
+    Title: "\xDCber die Firnpforte"
+    Description: Reise in den Frostkamm. Nutze Aufwinde und Gleiter, um voranzukommen.
+    Type: 3
+    Zone: frostkamm
+    Position: {x: 24, y: 7, z: -410}
+    Npc: runa
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 1
+      Target: K04_S01
+      Count: 1
+      Text: Erreiche die Firnpforte
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 17
+      Target: '*'
+      Count: 1
+      Text: "Gleite ein St\xFCck"
+      Hint: glide
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 16
+      Target: Springer
+      Count: 1
+      Text: Steig auf einen Springer
+      Hint: mount
+      Optional: 1
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: 
+    SceneEnd: K04_S01E
+    Checkpoints: []
+    Reward:
+      Experience: 1500
+      Karma: 100
+      Copper: 600
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K04_S02
+    Title: Lagebesprechung
+    Description: Brennar wartet am Kammpass.
+    Type: 2
+    Zone: frostkamm
+    Position: {x: 120, y: 21, z: -60}
+    Npc: brennar
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: brennar
+      Count: 1
+      Text: Sprich mit Brennar am Kammpass
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 19
+      Target: wb_
+      Count: 1
+      Text: Hilf bei den Vor-Ereignissen des Frostschlunds
+      Hint: worldboss
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K04_S02
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 1500
+      Karma: 120
+      Copper: 800
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K04_S03
+    Title: Der Pass
+    Description: Der Herold steht am Siegel unter dem Frostschlund.
+    Type: 0
+    Zone: frostkamm
+    Position: {x: 60, y: 14, z: 300}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 2
+      Target: Enemy_Frost_Eiswolf
+      Count: 4
+      Text: "Brich durch die Eisw\xF6lfe"
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: -8}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 18
+      Target: Enemy_Story_Herold
+      Count: 1
+      Text: Brich die Trotzleiste des Herolds
+      Hint: defiance
+      Optional: 0
+      Label: Der Herold
+      Offset: {x: 0, y: 0, z: 8}
+      Scale: 2
+      Scene: 
+      Partner: 
+    - Kind: 28
+      Target: '*'
+      Count: 20
+      Text: Halte stand
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K04_S03
+    SceneEnd: K04_S03E
+    Checkpoints:
+    - 0
+    - 1
+    Reward:
+      Experience: 2500
+      Karma: 200
+      Copper: 1500
+      HeroPoints: 2
+      MasteryPoints: 0
+      Item: 
+    SetFlags:
+    - brennar_gefallen
+    Letter: 
+    Radius: 45
+    Companion: brennar
+    Props:
+    - barrikade@-4,-8
+    - barrikade@5,-6
+    - feuer@0,-12
+    - kisten@-8,2
+  - Id: K04_S04
+    Title: Die erste Zeile
+    Description: Mira wartet im Bergsteigerlager.
+    Type: 2
+    Zone: frostkamm
+    Position: {x: -240, y: 9, z: -270}
+    Npc: mira
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: mira
+      Count: 1
+      Text: Sprich mit Mira
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K04_S04
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 1000
+      Karma: 150
+      Copper: 1000
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: L_K04
+    Radius: 60
+    Companion: 
+    Props: []
+  JournalLines:
+  - K04_J
+  Mechanics:
+  - Springer
+  - Gleiten
+  - Weltboss-Zyklus und Vor-Events
+  - Trotzleiste (Pflicht)
+  - Heldenherausforderungen

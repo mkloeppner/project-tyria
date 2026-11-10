@@ -46,6 +46,7 @@ namespace ProjectTyrant
         public void ChangeZone(string zoneId, string targetPortal, Vector3? position = null)
         {
             if (Transitioning || World == null || World.Zone(zoneId) == null) return;
+            if (!ZoneGate.Allowed(zoneId, Story != null ? Story.State : null, out var why)) { GameEventBus.Notify(why, new Color(1f, 0.6f, 0.5f)); return; }   // Lauf 6: Tyrannenfeste erst mit Kapitel 10
             StartCoroutine(LoadZone(zoneId, targetPortal, false, position));
         }
 
@@ -99,11 +100,11 @@ namespace ProjectTyrant
             if (EventDirector.Instance != null && root != null) EventDirector.Instance.BindZone(root);
 
             // Spieler platzieren: Zielportal → gespeicherte Position → Spawn
-            Vector3 target = def.DefaultSpawn; float yaw = 0f;
+            Vector3 target = def.DefaultSpawn; float yaw = 0f; string entrance = WaypointSafety.SpawnEntrance;
             var portal = !string.IsNullOrEmpty(targetPortal) ? def.Portal(targetPortal) : null;
-            if (portal != null) { var fwd = Quaternion.Euler(0, portal.Yaw, 0) * Vector3.forward; target = portal.Position + fwd * 6f; yaw = portal.Yaw; }
-            else if (position.HasValue) target = position.Value;
-            else if (useSavedPosition && prof != null && prof.State.HasPosition) { target = prof.State.Position; yaw = prof.State.RotationY; }
+            if (portal != null) { target = WaypointSafety.ArrivalPoint(portal); yaw = portal.Yaw; entrance = WaypointSafety.PortalEntrance(portal.Id); }
+            else if (position.HasValue) { target = position.Value; entrance = null; }
+            else if (useSavedPosition && prof != null && prof.State.HasPosition) { target = prof.State.Position; yaw = prof.State.RotationY; entrance = null; }
             target = GroundAt(target);
             if (Player != null)
             {
@@ -117,8 +118,17 @@ namespace ProjectTyrant
             if (ui != null) ui.HideLoading();
             LastLoadSeconds = Time.realtimeSinceStartup - t0;
             GameEventBus.RaiseAreaEntered(def.DisplayName, "Stufe " + def.LevelText);
+            // Fix-Lauf F1: Ankunfts-Wegmarke des Eingangs freischalten (Spawn/Portal); bei gespeicherter Position die nächste Ankunft (Migration)
+            if (prof != null) prof.UnlockArrivalWaypoint(def, entrance ?? NearestEntrance(def, Player != null ? Player.transform.position : target));
             if (prof != null) prof.RequestSave("Zonenwechsel");
             Transitioning = false;
+        }
+
+        static string NearestEntrance(ZoneDefinition def, Vector3 pos)
+        {
+            string best = WaypointSafety.SpawnEntrance; float bd = float.MaxValue;
+            foreach (var e in WaypointSafety.Entrances(def)) { float d = WaypointSafety.FlatDistance(e.Value, pos); if (d < bd) { bd = d; best = e.Key; } }
+            return best;
         }
 
         string PickTip(ZoneDefinition def)

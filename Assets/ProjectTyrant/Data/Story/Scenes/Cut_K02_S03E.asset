@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f47119f8110b0a34ba0f207888c1afe7, type: 3}
+  m_Name: Cut_K02_S03E
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.CutsceneDefinition
+  Id: K02_S03E
+  Zone: sonnfurt
+  Origin: {x: 0, y: 0, z: 0}
+  Actors:
+  - Speaker: grolmok
+    Marker: m_grolmok
+    Clip: Knockdown
+  - Speaker: mira
+    Marker: m_mira
+    Clip: 
+  Camera: []
+  Markers:
+  - m_grolmok=0,0,3
+  - m_mira=-2,0,2
+  Music: 
+  MaxSeconds: 90

@@ -65,13 +65,30 @@ namespace ProjectTyrant.EditorTools
             {
                 root.Definition.DefaultSpawn = _anchors.Waypoint.position + _anchors.Waypoint.forward * 3f;
                 root.Definition.Waypoints = new List<ZoneWaypointInfo> { new ZoneWaypointInfo { Id = "wp_sonnfurt", Name = "Wegmarke Sonnfurt", Position = _anchors.Waypoint.position } };
+                // Fix-Lauf F1: alle Szenen-Wegmarken der Startzone in die Definition (Besiegt-Liste, Kontinentkarte)
+                foreach (var w in ZoneContent.Waypoints) if (w.Id != "wp_sonnfurt") root.Definition.Waypoints.Add(new ZoneWaypointInfo { Id = w.Id, Name = w.Name, Position = G(w.Pos) });
                 EditorUtility.SetDirty(root.Definition);
             }
             if (root.Definition != null)
+            {
                 foreach (var p in root.Definition.Portals) BiomeZoneBuilder.BuildPortal(p, _env, root.Definition);
+                ArrivalWaypointBuilder.Ensure(root.Definition, rootGo.transform, ZoneContentBuilder.Dir, 120);   // Fix-Lauf F1
+            }
             root.MapTexture = MapBaker.Bake(_env);
 
             PopulateGameplay(root);
+            if (root.Definition != null)   // Lauf 6: Zonenabschluss-Ziele der Startzone (bisher leer → Kontinentkarte 0 %): alle Definitionen direkt in ZoneContentBuilder.Dir außer Einsichten
+            {
+                root.Definition.CompletionIds = new List<string>();
+                foreach (var g in AssetDatabase.FindAssets("t:ZoneObjectDefinition", new[] { ZoneContentBuilder.Dir }))
+                {
+                    var path = AssetDatabase.GUIDToAssetPath(g); if (System.IO.Path.GetDirectoryName(path).Replace('\\', '/') != ZoneContentBuilder.Dir) continue;
+                    var d = AssetDatabase.LoadAssetAtPath<ZoneObjectDefinition>(path);
+                    if (d != null && d.Kind != MapMarkerKind.Insight) root.Definition.CompletionIds.Add(d.Id);
+                }
+                EditorUtility.SetDirty(root.Definition);
+            }
+            if (root.Definition != null) WorldStoryBuilder.Populate(root.Definition, rootGo.transform, (x, zz) => G(x, zz).y);   // Lauf 6: Späher, Herzen, Bündel
 
             foreach (var r in _env.GetComponentsInChildren<Transform>(true))
                 if (r.GetComponent<Light>() == null && r.GetComponent<WorldBanner>() == null && r.GetComponentInParent<WorldBanner>() == null && r.GetComponent<Bobber>() == null && r.GetComponentInParent<Bobber>() == null)

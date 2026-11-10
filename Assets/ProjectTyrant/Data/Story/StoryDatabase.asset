@@ -1,0 +1,453 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5e8c356710c1b4eb02cd131fba2998, type: 3}
+  m_Name: StoryDatabase
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryDatabase
+  Chapters:
+  - {fileID: 11400000, guid: 9cdd26ce9959c1e429730b5b285a1ef1, type: 2}
+  - {fileID: 11400000, guid: 0d881fafa37295648a0dd57ae30bca91, type: 2}
+  - {fileID: 11400000, guid: 5d937b9b7cd88ca469db1a5092b224fe, type: 2}
+  - {fileID: 11400000, guid: 9dadb9b5c6168574babf61998536c738, type: 2}
+  Archetypes:
+  - {fileID: 11400000, guid: 442c631b16529694989b215f32bbcdf4, type: 2}
+  - {fileID: 11400000, guid: 2929640770496e949b9b15779fc8cb08, type: 2}
+  - {fileID: 11400000, guid: d07fe6a959054e64ea28220c5c9c0421, type: 2}
+  - {fileID: 11400000, guid: d8caca86c71eb5047a995e50faac9abd, type: 2}
+  - {fileID: 11400000, guid: 2f85c813b987d144080ebabf4f79fcbf, type: 2}
+  - {fileID: 11400000, guid: 733bcea6c1ed56d44b7ca3b77e231e5c, type: 2}
+  - {fileID: 11400000, guid: f26a9eecee67e2c4894fa8511013fd2d, type: 2}
+  - {fileID: 11400000, guid: 238ac16e8e51a024c9e86f60d7538fc4, type: 2}
+  - {fileID: 11400000, guid: 611b933018f0a93478c771de2d6475a3, type: 2}
+  - {fileID: 11400000, guid: 8a53e0919d1af7543820e6076326996d, type: 2}
+  - {fileID: 11400000, guid: 3f63996bde8b0e64eaabbdc9a7dbd8c7, type: 2}
+  - {fileID: 11400000, guid: 116bc23a658f8cc43a83273424903c1e, type: 2}
+  - {fileID: 11400000, guid: 3de62761c8a7b744b8ef2a569d7ede01, type: 2}
+  - {fileID: 11400000, guid: 3a8a6cd2e3618c14fa9fb62050d1fb73, type: 2}
+  - {fileID: 11400000, guid: 97710e423d423cf4f87dca2aa17e4f3a, type: 2}
+  - {fileID: 11400000, guid: d93cb94ace8b77f41a3826ea7dec05b4, type: 2}
+  - {fileID: 11400000, guid: 197a40b5c0fb02d4793660d43ea42fc5, type: 2}
+  - {fileID: 11400000, guid: 2f0b2a30a79533f4f9b512832f11f5b0, type: 2}
+  - {fileID: 11400000, guid: 76d0e4bdfebc07f4ca1bc97d55bd4afe, type: 2}
+  - {fileID: 11400000, guid: 53babf5c9b2da9447a1d04456d071871, type: 2}
+  - {fileID: 11400000, guid: 40c3a1cad1a3142469531571570555fe, type: 2}
+  - {fileID: 11400000, guid: b26d745b417083c498e0d6e03fa36a20, type: 2}
+  Backdrops:
+  - {fileID: 2800000, guid: 9eba7aec5ba1b434fb8101a4596f9776, type: 3}
+  - {fileID: 2800000, guid: f0a732257d776c240b7ca986d31a732e, type: 3}
+  - {fileID: 2800000, guid: b74a39d7c8a9fe3438bd7584385d70f4, type: 3}
+  - {fileID: 2800000, guid: c73d0b20076ac4e47829b6d60d5f3a92, type: 3}
+  Figures:
+  - {fileID: 2033970672359969352, guid: 90737087ee2b8ea409b47e8d012d6256, type: 3}
+  - {fileID: 9052422131702399332, guid: bd1fccd8e572d524f82c7181ea635559, type: 3}
+  - {fileID: 551453574186742970, guid: 225dac46035d4624f9db2ca66dab2e56, type: 3}
+  - {fileID: 8167784560948972231, guid: 20c93ef7523507144838dabc4ff7aaf0, type: 3}
+  - {fileID: 5521880822411683584, guid: 968c283ed62ce784a9e0f0d6af496e23, type: 3}
+  - {fileID: 8779017042941090970, guid: 73f14050cc262da408817eb55489dafc, type: 3}
+  - {fileID: 7213556900147833885, guid: 91166bc51d3c054448f8ea0bbcaa1ce0, type: 3}
+  - {fileID: 7859450073432172615, guid: 2ae50a5b1ed13394e9e9dd3dea58d218, type: 3}
+  - {fileID: 2055542902144378743, guid: ed9233f2115de624a80ed924a6bad22b, type: 3}
+  - {fileID: 5828256670299109714, guid: 5e685022fdd50db45b8ec37890f7b92c, type: 3}
+  - {fileID: 2311966350327619784, guid: 4923ae522375eac429cf395c74997a5f, type: 3}
+  - {fileID: 6584017933960041647, guid: 798bcaff1f9b77149bb6f8f9293e2ea7, type: 3}
+  - {fileID: 5632692102182874313, guid: 05b96aeebae5b49439636da290e49e5b, type: 3}
+  - {fileID: 3981557506170887335, guid: ab1afed6f7f66ce4aa9a37d0fe343da1, type: 3}
+  - {fileID: 3604503453014588395, guid: a56f8093814a5f6469ec62a15c58031d, type: 3}
+  - {fileID: 5108098673515560635, guid: d76c4cf9739c3974592cf6382c196a28, type: 3}
+  - {fileID: 8058675834493990886, guid: b4762b0dc91a5f04aa6907d70d800ab6, type: 3}
+  Text: {fileID: 11400000, guid: ba1ba0a2cac61e347a34744d1b611919, type: 2}
+  Cast: {fileID: 11400000, guid: 204e0d50355af2a4bb581e45d9e72972, type: 2}
+  Scenes:
+  - {fileID: 11400000, guid: 1ad71461058e7444d821377ad2e798e0, type: 2}
+  - {fileID: 11400000, guid: 4a99cfdc3cff3a94489150f92a68e128, type: 2}
+  - {fileID: 11400000, guid: f9e54d85ff3edd94788a0cef239a7f4f, type: 2}
+  - {fileID: 11400000, guid: cd12ebe17784f0247b4e8637bba886bb, type: 2}
+  - {fileID: 11400000, guid: 5d006182952cb2240b91b9b73c1136ce, type: 2}
+  - {fileID: 11400000, guid: 9ffa63338a2480941944e195d1e7a875, type: 2}
+  - {fileID: 11400000, guid: 7a8a9d165c3f79948b0fb9deed033ea0, type: 2}
+  - {fileID: 11400000, guid: 95ef4534007bade4c92eb30ede17dedb, type: 2}
+  - {fileID: 11400000, guid: b1b44b7d6f499b9479334c1de1515e8d, type: 2}
+  - {fileID: 11400000, guid: 4e0d13ff1600ac14490d741a3f0794ae, type: 2}
+  - {fileID: 11400000, guid: 7f1fc93a09d076e4b8ec556b5089c5c2, type: 2}
+  - {fileID: 11400000, guid: c1bf27387e65aa549b924b0cfe34cb97, type: 2}
+  - {fileID: 11400000, guid: 7b183c10ae8725c4f9d0d20ee8b253d8, type: 2}
+  - {fileID: 11400000, guid: c410b2c2740286547a5d37467e830b7e, type: 2}
+  - {fileID: 11400000, guid: 48a894a454fc203409711427c2569011, type: 2}
+  - {fileID: 11400000, guid: 8905b0f78ff5a234fa9835ae61c8dd3b, type: 2}
+  - {fileID: 11400000, guid: b5a87e45d559d5d4690c20dd4635bae8, type: 2}
+  - {fileID: 11400000, guid: 2dd17ce97955ec44d9645e791adf00ad, type: 2}
+  - {fileID: 11400000, guid: 14cd3116b15c88c48a532aeab4497fc4, type: 2}
+  - {fileID: 11400000, guid: ff8e5a06a9bbf7a429c96a306e26d8e3, type: 2}
+  - {fileID: 11400000, guid: 9ecb5c11d4f1a64428573bbe46e2ba03, type: 2}
+  - {fileID: 11400000, guid: 27d986efb60d08548b1ebb363829d791, type: 2}
+  - {fileID: 11400000, guid: a0675241debf0e54d800068c1c1c25a2, type: 2}
+  - {fileID: 11400000, guid: 8a0398a7efd5ae04496dcebe18cc9e07, type: 2}
+  - {fileID: 11400000, guid: a43ae90a4b071f4499ce520ae163697a, type: 2}
+  - {fileID: 11400000, guid: f4f97fbd16794024c8bfa092b4cfb32a, type: 2}
+  - {fileID: 11400000, guid: 0555159a0b3c85944a55dc3bc7315eea, type: 2}
+  - {fileID: 11400000, guid: 009a58533b7a6a94b86ccd48d1ec7e84, type: 2}
+  - {fileID: 11400000, guid: d787844719c3e5845999c503a092592b, type: 2}
+  - {fileID: 11400000, guid: 7dfd51fbfb3094644bd50330d67b8540, type: 2}
+  - {fileID: 11400000, guid: 5cece00aecee6b44593c4a31c2e6dcbb, type: 2}
+  - {fileID: 11400000, guid: 281babc28a2868949869d962d8ea9c90, type: 2}
+  - {fileID: 11400000, guid: 86494cde29a97e544bfe484056ab0b5e, type: 2}
+  - {fileID: 11400000, guid: 20ac0532a92ff2343ac70f91a17bc787, type: 2}
+  - {fileID: 11400000, guid: b07a2eb83dd45d042a3e915443f865dd, type: 2}
+  - {fileID: 11400000, guid: 50b48a65f08489e4f8064466b6e4b78a, type: 2}
+  - {fileID: 11400000, guid: 6b38679099a8c1340a5283d075d8ae40, type: 2}
+  - {fileID: 11400000, guid: d08f2d52160babd4091cfb5502d3b279, type: 2}
+  - {fileID: 11400000, guid: e30f725d926214646bca572b121468db, type: 2}
+  - {fileID: 11400000, guid: ae0213bc26d6eb54bb2bd56d33557242, type: 2}
+  - {fileID: 11400000, guid: 72bb344d4ba84f345971830970a5be0c, type: 2}
+  - {fileID: 11400000, guid: 5d413688571fb634dbb5c70447d0a22e, type: 2}
+  - {fileID: 11400000, guid: b715dcbe37907ad4595c51c7ec08512d, type: 2}
+  - {fileID: 11400000, guid: 5379f3cd30ffdbe47ad86767d94ec5cb, type: 2}
+  - {fileID: 11400000, guid: 9bd96e1438dc7394989ae7dd824f4363, type: 2}
+  - {fileID: 11400000, guid: 626989d8f98f6fd4682c9c041d5eddf3, type: 2}
+  - {fileID: 11400000, guid: 62d0f1401cd98df439505b9b822ea334, type: 2}
+  - {fileID: 11400000, guid: d07fcbfc4737db54eb7453e7e07491b9, type: 2}
+  - {fileID: 11400000, guid: 55b30451a9294ee43ba98f8d4c70f2c2, type: 2}
+  - {fileID: 11400000, guid: 6b37098ca9ba26c4a85e6114f66214cb, type: 2}
+  - {fileID: 11400000, guid: 035b2db24c3f729488a3f32e7e9560ad, type: 2}
+  - {fileID: 11400000, guid: e54f85f911b7c13419c6f2aad65668cf, type: 2}
+  - {fileID: 11400000, guid: 6257699bf5e09c44eac5584bbc487a1e, type: 2}
+  Letters:
+  - Id: L_K01
+    From: mira
+    Subject: Die Liste
+    Body: "Joss sagt Danke. Die Zwillinge sagen es lauter. Spalte zwei auf meiner Liste hei\xDFt jetzt: \u201EHat Wort gehalten\u201C.\nBrennar wartet in Dornwacht. Geh hin, bevor er es sich anders \xFCberlegt.\n\u2013 Mira"
+    Karma: 50
+    Copper: 200
+    Item: 
+  - Id: L_K02
+    From: brennar
+    Subject: Nebelmoor
+    Body: "Der Gelehrte hei\xDFt Tovin. Er wohnt in einem Turm aus Papier im Nebelmoor. Nimm Tinte mit.\nUnd: Gut gemacht. Ich sage das selten.\n\u2013 B. Feld"
+    Karma: 80
+    Copper: 400
+    Item: 
+  - Id: L_K03
+    From: tovin
+    Subject: "Fu\xDFnote zu dir"
+    Body: "Ich habe dich in meine Notizen aufgenommen. Fu\xDFnote 41: \u201EBemerkenswert unbeeindruckt von Giftnebel.\u201C\nDer Stein im Frostkamm macht mir Sorgen. Brennar sollte es wissen.\n\u2013 Tovin Aschgrau"
+    Karma: 80
+    Copper: 500
+    Item: 
+  - Id: L_K04
+    From: mira
+    Subject: "Ohne \xDCberschrift"
+    Body: "Ich habe die Liste neu angefangen. Die erste Zeile ist voll.\nWir treffen uns in der Glut\xF6de, am Aschentor. Bring dich mit. Ganz.\n\u2013 Mira"
+    Karma: 120
+    Copper: 800
+    Item: 
+  - Id: Dank_heart_gerstenbrunn
+    From: "B\xE4uerin Wilma"
+    Subject: "Die Z\xE4une stehen"
+    Body: "Die Z\xE4une stehen wieder, die Kisten sind gez\xE4hlt, und kein Pl\xFCnderer hat sich mehr blicken lassen.\nKomm vorbei, es gibt Brot. Frisches.\n\u2013 Wilma"
+    Karma: 20
+    Copper: 100
+    Item: 
+  - Id: Dank_heart_dornwacht
+    From: Hauptfrau Kerla
+    Subject: Palisade
+    Body: "Die Palisade hat drei Angriffe gehalten. Zwei davon dank dir.\nDer dritte war Gl\xFCck. Rechne nicht damit.\n\u2013 Kerla"
+    Karma: 20
+    Copper: 100
+    Item: 
+  - Id: Dank_heart_elmhain
+    From: Archivar Bertold
+    Subject: Relikte
+    Body: "Die Relikte sind verzeichnet. Eines summt immer noch. Ich habe es in eine Decke gewickelt.\nDanke f\xFCr deine ruhigen H\xE4nde.\n\u2013 Bertold"
+    Karma: 20
+    Copper: 100
+    Item: 
+  - Id: Dank_heart_sonnfurt_mira
+    From: Mira
+    Subject: Liste abgehakt
+    Body: "Ziegen satt, Glut gel\xF6scht, Kinder heiser vom Jubeln. Ich habe dich auf meiner Liste ganz nach oben geschrieben.\nUnterstrichen.\n\u2013 Mira"
+    Karma: 25
+    Copper: 120
+    Item: 
+  - Id: Dank_heart_moor_albin
+    From: "Kr\xE4uterkundiger Albin"
+    Subject: "Z\xE4une und Beeren"
+    Body: "Die Z\xE4une halten, die Beeren reifen, und die Diebe suchen sich ein anderes Moor.\nHier ein S\xE4ckchen Moorkraut gegen Husten.\n\u2013 Albin"
+    Karma: 35
+    Copper: 180
+    Item: 
+  - Id: Dank_heart_moor_ilse
+    From: Torfstecherin Ilse
+    Subject: Torf
+    Body: "Der Torf ist gestochen, die Stege tragen wieder. Ich fluche jetzt nur noch aus Gewohnheit.\n\u2013 Ilse"
+    Karma: 35
+    Copper: 180
+    Item: 
+  - Id: Dank_heart_moor_merle
+    From: "F\xE4hrfrau Merle"
+    Subject: "Die F\xE4hre f\xE4hrt"
+    Body: "Meine Fischer sind wieder auf den Beinen, und die Spucker haben das Lachen verlernt.\nDie n\xE4chste \xDCberfahrt ist umsonst.\n\u2013 Merle"
+    Karma: 35
+    Copper: 180
+    Item: 
+  - Id: Dank_heart_moor_jaro
+    From: Fischer Jaro
+    Subject: Keine Fallen mehr
+    Body: "Die Wilderer sind weg, ihre Fallen auch. Die Reiher stolzieren wieder durchs Schilf, als geh\xF6re es ihnen.\nTut es ja auch.\n\u2013 Jaro"
+    Karma: 35
+    Copper: 180
+    Item: 
+  - Id: Dank_heart_frost_bodo
+    From: Steiger Bodo
+    Subject: Stollen
+    Body: "Die Stollen stehen, und wir haben eine Ader Kristallerz gefunden, so dick wie mein Arm.\nIch schulde dir einen Klumpen.\n\u2013 Bodo"
+    Karma: 50
+    Copper: 250
+    Item: 
+  - Id: Dank_heart_frost_runa
+    From: "Bergf\xFChrerin Runa"
+    Subject: Das Lager
+    Body: "Das Lager ist warm, die Bergsteiger sind zur\xFCck. Einer hat sogar alle Zehen behalten.\nWenn du \xFCber den Pass willst, frag nach mir.\n\u2013 Runa"
+    Karma: 50
+    Copper: 250
+    Item: 
+  - Id: Dank_heart_frost_saga
+    From: "H\xFCterin Saga"
+    Subject: Die Glocken
+    Body: "Die Windglocken singen wieder richtig. Der Schnee bleibt diese Woche auf den Gipfeln.\nH\xF6r hin, wenn du vorbeikommst.\n\u2013 Saga"
+    Karma: 50
+    Copper: 250
+    Item: 
+  - Id: Dank_heart_frost_elva
+    From: Hirtin Elva
+    Subject: Die Ziegen
+    Body: "Die Ziegen sind satt, der Hang h\xE4lt, und die Hirten tanzen seit deinem Besuch jeden Abend.\nDie Ziegen auch. Fast.\n\u2013 Elva"
+    Karma: 50
+    Copper: 250
+    Item: 
+  - Id: Dank_heart_glut_kaya
+    From: "Sp\xE4herin Kaya"
+    Subject: Glutkristalle
+    Body: "Wir haben genug Glutkristalle f\xFCr den ganzen Winter. Meine Handschuhe sind hin\xFCber, deine hoffentlich nicht.\n\u2013 Kaya"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_glut_oleg
+    From: "Sturmw\xE4chter Oleg"
+    Subject: Blitzableiter
+    Body: "Die Blitzableiter stehen. Gestern schlug es dreimal ein, und keiner hat gebrannt.\nEin neuer Rekord.\n\u2013 Oleg"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_glut_torvald
+    From: Schmied Torvald
+    Subject: Die Schmiede
+    Body: "Die K\xFChlrinnen sind dicht, die Esse brennt. Die Schmiede \xFCberlebt noch einmal dreihundert Jahre.\nIch vielleicht nicht.\n\u2013 Torvald"
+    Karma: 60
+    Copper: 300
+    Item: 
+  - Id: Dank_heart_glut_brann
+    From: Feuerwache Brann
+    Subject: Das Schlackenfeld
+    Body: "Das Schlackenfeld klickt nicht mehr. Die Br\xE4nde sind aus. Ich schlafe heute zum ersten Mal seit Wochen.\n\u2013 Brann"
+    Karma: 60
+    Copper: 300
+    Item: 
+  Hints:
+  - Id: dodge
+    Title: Ausweichen
+    Text: "Weiche roten Warnkreisen und gro\xDFen Hieben aus. Ausweichen kostet Ausdauer (gelbe Leiste) und macht kurz unverwundbar."
+    Key: V
+    Clip: 
+  - Id: skills
+    Title: Waffenfertigkeiten
+    Text: "Die Tasten 1\u20135 sind die Fertigkeiten deiner Waffe. 1 greift automatisch weiter an."
+    Key: "1\u20135"
+    Clip: 
+  - Id: heal
+    Title: Heilen
+    Text: "Die Taste 6 ist deine Heilfertigkeit. Nutze sie fr\xFCh, nicht erst kurz vor dem Fall."
+    Key: 6
+    Clip: 
+  - Id: swap
+    Title: Waffenwechsel
+    Text: Wechsle im Kampf die Waffe, um neue Fertigkeiten zu bekommen.
+    Key: ^ / Y
+    Clip: 
+  - Id: interact
+    Title: Interagieren
+    Text: Mit F sprichst du, hebst auf und benutzt Dinge in der Welt.
+    Key: F
+    Clip: 
+  - Id: heart
+    Title: Herzen
+    Text: "Herzen zeigen Leute, die Hilfe brauchen. Jeder Beitrag z\xE4hlt: Gegner, Aufgaben, Gegenst\xE4nde."
+    Key: 
+    Clip: 
+  - Id: waypoint
+    Title: Wegmarken
+    Text: "Wegmarken sind Schnellreisepunkte. \xD6ffne die Karte (M) und klicke eine Wegmarke an."
+    Key: M
+    Clip: 
+  - Id: event
+    Title: Ereignisse
+    Text: "Ereignisse passieren ohne dich weiter. Mach mit \u2013 Gold-, Silber- und Bronzemedaille zeigen deinen Beitrag."
+    Key: 
+    Clip: 
+  - Id: downed
+    Title: Am Boden
+    Text: "F\xE4llst du, kannst du mit 1\u20134 weiterk\xE4mpfen. Besiegst du einen Gegner, stehst du wieder auf. Verb\xFCndete k\xF6nnen dich mit F wiederbeleben."
+    Key: F
+    Clip: 
+  - Id: combo
+    Title: Kombos
+    Text: "Feuer auf dem Boden ist ein Feld. Schl\xE4gst du mit einem Finisher hindurch, entsteht eine Kombo."
+    Key: 
+    Clip: 
+  - Id: equip
+    Title: "Ausr\xFCstung"
+    Text: "Lege bessere Ausr\xFCstung im Inventar (I) per Doppelklick an."
+    Key: I
+    Clip: 
+  - Id: scout
+    Title: "Sp\xE4her"
+    Text: "Sp\xE4her kennen ihre Gegend. Sprich mit ihnen, und sie zeigen dir Herzen und Wege auf der Karte."
+    Key: F
+    Clip: 
+  - Id: traits
+    Title: Eigenschaften
+    Text: "Im Heldenfenster (H) w\xE4hlst du Eigenschaften. Sie ver\xE4ndern, wie deine Fertigkeiten wirken."
+    Key: H
+    Clip: 
+  - Id: cleanse
+    Title: "Zust\xE4nde reinigen"
+    Text: "Zust\xE4nde wie Gift schaden dir dauerhaft. Manche Fertigkeiten und Heilungen entfernen sie."
+    Key: 
+    Clip: 
+  - Id: mount
+    Title: Reittiere
+    Text: "Mit X steigst du auf dein Reittier. Leertaste nutzt seine F\xE4higkeit."
+    Key: X
+    Clip: 
+  - Id: glide
+    Title: Gleiten
+    Text: Springe in der Luft erneut, um zu gleiten. Aufwinde tragen dich nach oben.
+    Key: Leertaste
+    Clip: 
+  - Id: defiance
+    Title: Trotzleiste
+    Text: "Starke Gegner haben eine Trotzleiste. Kontrolle (Bet\xE4uben, Zur\xFCcksto\xDFen) bricht sie \u2013 dann sind sie wehrlos."
+    Key: 
+    Clip: 
+  - Id: worldboss
+    Title: Weltbosse
+    Text: Weltbosse erscheinen nach einem Zeitplan. Die Kontinentkarte zeigt, wann.
+    Key: M
+    Clip: 
+  - Id: mastery
+    Title: Beherrschungen
+    Text: "Ab Stufe 30 flie\xDFt Erfahrung in Beherrschungen. W\xE4hle eine Linie im Heldenfenster."
+    Key: H
+    Clip: 
+  - Id: meta
+    Title: Meta-Ereignisse
+    Text: Meta-Ereignisse haben mehrere Phasen. Die ganze Karte arbeitet zusammen.
+    Key: 
+    Clip: 
+  - Id: elite
+    Title: Elite-Spezialisierung
+    Text: "Ab Stufe 30 kannst du eine Elite-Spezialisierung freischalten (H \u2192 Eigenschaften, dritter Platz)."
+    Key: H
+    Clip: 
+  - Id: story_instance
+    Title: Story-Instanz
+    Text: "Das ist deine eigene Instanz. F\xE4llst du, beginnst du am letzten Kontrollpunkt neu."
+    Key: 
+    Clip: 
+  - Id: story_portal
+    Title: "Pers\xF6nliche Geschichte"
+    Text: "Der gr\xFCne Stern f\xFChrt dich durch deine Geschichte. Gr\xFCne Portale \xF6ffnen Story-Instanzen."
+    Key: 
+    Clip: 
+  - Id: bundle
+    Title: "B\xFCndel"
+    Text: "Aufgehobene Gegenst\xE4nde ersetzen deine Fertigkeiten 1\u20135. Mit 5 legst du sie wieder ab."
+    Key: 5
+    Clip: 
+  - Id: emote
+    Title: Emotes
+    Text: "Mit Enter \xF6ffnest du den Chat. /winken, /jubeln, /tanzen, /verbeugen und /sitzen sind Emotes."
+    Key: Enter
+    Clip: 
+  - Id: interrupt
+    Title: Unterbrechen
+    Text: "Wer einen Zauber vorbereitet, l\xE4sst sich mit Kontrolle unterbrechen."
+    Key: 
+    Clip: 
+  - Id: escort
+    Title: Eskorte
+    Text: "Bleib bei den Leuten, die du begleitest \u2013 sie folgen dir."
+    Key: 
+    Clip: 
+  Bundles:
+  - Id: eimer
+    Name: Wassereimer
+    Skills:
+    - {fileID: 11400000, guid: 77d24440f5b485f4f904eb4e6b1b9567, type: 2}
+    - {fileID: 11400000, guid: fc25512deef1da24a9cc5573fe6d4c3f, type: 2}
+    Drop: {fileID: 11400000, guid: 62748dbc3d53f694796e157c1f914fb9, type: 2}
+    Color: {r: 0.45, g: 0.65, b: 0.95, a: 1}
+    LightRadius: 0
+  - Id: heugabel
+    Name: Heugabel
+    Skills:
+    - {fileID: 11400000, guid: 1efb64df6eb6e524785adbddfe1ce80b, type: 2}
+    - {fileID: 11400000, guid: c8eff8a48ce94584aae60a9b657512cb, type: 2}
+    Drop: {fileID: 11400000, guid: 62748dbc3d53f694796e157c1f914fb9, type: 2}
+    Color: {r: 0.65, g: 0.5, b: 0.3, a: 1}
+    LightRadius: 0
+  - Id: fackel
+    Name: Fackel
+    Skills:
+    - {fileID: 11400000, guid: dbf3a4479d86b554cb3042235fbe7511, type: 2}
+    - {fileID: 11400000, guid: db4ba948ed6f158409043790437f9e58, type: 2}
+    Drop: {fileID: 11400000, guid: 62748dbc3d53f694796e157c1f914fb9, type: 2}
+    Color: {r: 1, g: 0.55, b: 0.2, a: 1}
+    LightRadius: 6
+  - Id: sandsack
+    Name: Sandsack
+    Skills:
+    - {fileID: 11400000, guid: f2841de53aa837949af2ec015ad5fc54, type: 2}
+    - {fileID: 11400000, guid: 306c79ea5a0893644b40259cbf79a92d, type: 2}
+    Drop: {fileID: 11400000, guid: 62748dbc3d53f694796e157c1f914fb9, type: 2}
+    Color: {r: 0.8, g: 0.7, b: 0.45, a: 1}
+    LightRadius: 0
+  - Id: harpune
+    Name: Harpune
+    Skills:
+    - {fileID: 11400000, guid: 1da3cd4c0c7c18141acc68edba787f38, type: 2}
+    - {fileID: 11400000, guid: 1144b1d0bf1ec6f43ab7a085ad3c0b7d, type: 2}
+    Drop: {fileID: 11400000, guid: 62748dbc3d53f694796e157c1f914fb9, type: 2}
+    Color: {r: 0.6, g: 0.65, b: 0.7, a: 1}
+    LightRadius: 0
+  - Id: laterne
+    Name: Laterne
+    Skills:
+    - {fileID: 11400000, guid: 85d1e7c043d5e6848a5222bc50a7c278, type: 2}
+    Drop: {fileID: 11400000, guid: 62748dbc3d53f694796e157c1f914fb9, type: 2}
+    Color: {r: 1, g: 0.85, b: 0.5, a: 1}
+    LightRadius: 14
+  - Id: verband
+    Name: Verbandskasten
+    Skills:
+    - {fileID: 11400000, guid: 3423d87741de45448b94b06fb3c2f6f5, type: 2}
+    Drop: {fileID: 11400000, guid: 62748dbc3d53f694796e157c1f914fb9, type: 2}
+    Color: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+    LightRadius: 0

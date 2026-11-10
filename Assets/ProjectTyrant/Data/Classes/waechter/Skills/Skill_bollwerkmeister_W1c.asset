@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: waechter_bollwerkmeister_W1c
   DisplayName: "Wallsto\xDF"
-  Description: Abschluss der Kette mit Zusatzeffekt.
+  Description: "Kettenabschluss: +40 % Schaden, Verkr\xFCppelung (2 s)."
   ShortLabel: Schild. III
   IconColor: {r: 0.65, g: 0.78, b: 1, a: 1}
   Icon: {fileID: 0}
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 3
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.82
+  ChainBonus: 1
+  ChainRoot: {fileID: 11400000, guid: b79fd29f9cc2b7a48ae4b22c7eac5b9c, type: 2}
+  Coefficient: 1.761
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -38,9 +40,9 @@ MonoBehaviour:
   ProjectileSpeed: 34
   LeapDistance: 0
   TargetBuffs:
-  - Type: 19
-    Stacks: 2
-    Duration: 5
+  - Type: 21
+    Stacks: 1
+    Duration: 2
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
@@ -63,10 +65,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Sword_Auto3
     AnimScale: 0.7843137
-    VfxCharge: Charge/Bollwerk/S
-    VfxRelease: Release/Bollwerk/S
-    VfxProjectile: Trail/Bollwerk/S
-    VfxImpact: Impact/Bollwerk/S
+    VfxCharge: Charge/Bollwerk/L
+    VfxRelease: Release/Bollwerk/L
+    VfxProjectile: Trail/Bollwerk/L
+    VfxImpact: Impact/Bollwerk/L
     VfxAfter: 
     SfxCharge: Bollwerk/Charge
     SfxRelease: Bollwerk/Swing3

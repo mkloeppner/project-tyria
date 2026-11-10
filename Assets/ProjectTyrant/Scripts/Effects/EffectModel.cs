@@ -221,6 +221,8 @@ namespace ProjectTyrant
         public void ClearConditions() { if (_stacks.RemoveAll(s => EffectLibrary.IsCondition(s.Type) || EffectLibrary.IsControl(s.Type)) > 0) Changed?.Invoke(); }
 
         /// <summary>Entfernt bis zu n Zustandsarten (GW2: Reinigen entfernt ganze Zustände).</summary>
+        /// <summary>Lauf 6: Reinigung gemeldet (Story-Ziel „Zustände reinigen“).</summary>
+        public static event Action<EffectModel, int> Cleansed;
         public int Cleanse(int count)
         {
             int removed = 0;
@@ -232,6 +234,7 @@ namespace ProjectTyrant
                 removed++;
             }
             if (removed > 0) Changed?.Invoke();
+            if (removed > 0) Cleansed?.Invoke(this, removed);
             return removed;
         }
 

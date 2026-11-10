@@ -80,9 +80,14 @@ namespace ProjectTyrant
             if (Application.isPlaying) Destroy(gameObject, 0.05f);
         }
 
+        /// <summary>Fix-Lauf F1: Option „Gegner-Telegraphen“ (Standard: immer anzeigen) – nur für gegnerische Telegraphen.</summary>
+        public static bool ShowEnemyTelegraphs = true;
+
         void UpdateVisual()
         {
             if (_r == null) return;
+            bool show = ShowEnemyTelegraphs || Owner == null || Owner.Team != Team.Enemy;
+            if (_r.enabled != show) _r.enabled = show;
             float k = Mathf.Clamp01(Elapsed / Mathf.Max(0.01f, Delay));
             _mpb.SetColor(ColorId, Colorblind ? new Color(0.15f + 0.8f * (1 - k), 0.35f + 0.5f * (1 - k), 1f - 0.9f * (1 - k), 0.8f) : new Color(1f, 0.2f + 0.3f * (1 - k), 0.08f, 0.75f));
             _mpb.SetFloat(FillId, k);

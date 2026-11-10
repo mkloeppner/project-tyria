@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_Bundle_Laterne_Leuchten
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: Bundle_Laterne_Leuchten
+  DisplayName: Aufleuchten
+  Description: 'Grelles Licht: blendet Gegner um dich, vertreibt Tiefenschrecken.'
+  ShortLabel: Le
+  IconColor: {r: 0.98, g: 0.82, b: 0.35, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 0
+  CastTime: 0.5
+  Cooldown: 8
+  Delivery: 3
+  Range: 0
+  Radius: 6
+  TargetCount: 5
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 0
+  Hits: 1
+  HitInterval: 0.25
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 28
+  LeapDistance: 0
+  TargetBuffs:
+  - Type: 12
+    Stacks: 1
+    Duration: 3
+  SelfBuffs: []
+  ShareWithAllies: 0
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 0
+  Field: 0
+  FieldDuration: 4
+  FieldRadius: 3
+  FieldTickCoefficient: 0
+  Finisher: 0
+  Timeline:
+    Activation: 0.5
+    Aftercast: 0.5
+    Hits:
+    - 0.5
+    Projectiles: []
+    Movement: 0
+    MoveDistance: 0
+    Instant: 0
+    Channel: 0
+    Clip: Sword_Block
+    AnimScale: 1
+    VfxCharge: Charge/Licht/L
+    VfxRelease: Shockwave/Licht/L
+    VfxProjectile: 
+    VfxImpact: Aura/Licht/L
+    VfxAfter: 
+    SfxCharge: Licht/Charge
+    SfxRelease: Licht/Release
+    SfxImpact: Licht/Buff
+  Chain: []
+  Palette: 6
+  PaletteExplicit: 1
+  WeaponStyleOverride: Sword
+  ClassId: 
+  InitiativeCost: 0
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 22
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.65
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.562
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -66,10 +68,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Cast1H
     AnimScale: 1.5151515
-    VfxCharge: Charge/Tiefviolett/M
-    VfxRelease: Release/Tiefviolett/M
-    VfxProjectile: Projectile/Tiefviolett/M
-    VfxImpact: Impact/Tiefviolett/M
+    VfxCharge: Charge/Tiefviolett/L
+    VfxRelease: Release/Tiefviolett/L
+    VfxProjectile: Projectile/Tiefviolett/L
+    VfxImpact: Impact/Tiefviolett/L
     VfxAfter: 
     SfxCharge: Tiefviolett/Charge
     SfxRelease: Tiefviolett/Release

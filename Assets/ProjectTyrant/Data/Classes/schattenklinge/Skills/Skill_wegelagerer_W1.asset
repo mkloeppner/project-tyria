@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: schattenklinge_wegelagerer_W1
   DisplayName: Pulverschuss
   Description: Grundangriff auf bis zu 30 m; Verwundbarkeit (1). Projektil-Finisher.
-  ShortLabel: Pulver.
+  ShortLabel: Pulver. I
   IconColor: {r: 0.85, g: 0.15, b: 0.15, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 30
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.72
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.378
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -71,7 +73,9 @@ MonoBehaviour:
     SfxCharge: Pulver/Charge
     SfxRelease: Pulver/Swing1
     SfxImpact: Pulver/Impact
-  Chain: []
+  Chain:
+  - {fileID: 11400000, guid: f8f44cac083106c46b2bf9ea9c28c491, type: 2}
+  - {fileID: 11400000, guid: 7f272ba6f79b63c4d9a4fe3cc348c4ce, type: 2}
   Palette: 19
   PaletteExplicit: 1
   WeaponStyleOverride: Bow

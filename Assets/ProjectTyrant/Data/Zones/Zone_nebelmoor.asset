@@ -57,9 +57,26 @@ MonoBehaviour:
   - Id: wp_moor_weidenhoehe
     Name: "Wegmarke Weidenh\xF6he"
     Position: {x: -120, y: 2.1, z: 300}
+  - Id: wp_nebelmoor_ankunft_sonnfurt
+    Name: Portal-Wegmarke Grenzmark Ashveil
+    Position: {x: -21.572517, y: 2.6495693, z: -414.01526}
+  - Id: wp_nebelmoor_ankunft_frostkamm
+    Name: Portal-Wegmarke Frostkamm
+    Position: {x: 27.71461, y: 2.097721, z: 414.00684}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: 0, y: 2.9627912, z: -380}
+    WaypointId: wp_moor_torfsteg
+  - Entrance: portal:nebelmoor_sonnfurt
+    Position: {x: -29.572517, y: 2.6364026, z: -414.01526}
+    WaypointId: wp_nebelmoor_ankunft_sonnfurt
+  - Entrance: portal:nebelmoor_frostkamm
+    Position: {x: 19.71461, y: 2.1, z: 414.0068}
+    WaypointId: wp_nebelmoor_ankunft_frostkamm
   Tips:
   - "Im Nebelmoor sind Kan\xE4le tief \u2013 mit dem Skimmer gleitest du \xFCber Wasser."
   - "Giftnebel schw\xE4cht dich, bis du die Umwelt-Beherrschung gelernt hast."
+  LoadingImage: {fileID: 2800000, guid: 81eb865122ad06b47a189611f5fc41b0, type: 3}
   Regions:
   - Name: Torfstecher-Siedlung
     Center: {x: -70, y: -300}
@@ -112,3 +129,4 @@ MonoBehaviour:
   - heart_moor_ilse
   - heart_moor_merle
   - heart_moor_albin
+  - heart_moor_jaro

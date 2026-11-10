@@ -19,6 +19,9 @@ namespace ProjectTyrant
         MaterialPropertyBlock _mpb;
         static readonly int ColorId = Shader.PropertyToID("_Color");
         static readonly int FillId = Shader.PropertyToID("_Fill");
+        static readonly int PulseId2 = Shader.PropertyToID("_Pulse");
+        float _alpha = 1f; bool _rimOnly;
+        public bool RimOnly => _rimOnly; public float DisplayAlpha => _alpha;
 
         public static Color FieldColor(ComboFieldType f)
         {
@@ -61,9 +64,14 @@ namespace ProjectTyrant
                 f._renderer = quad.GetComponent<Renderer>();
                 f._renderer.sharedMaterial = lib.GroundMarker;
                 f._mpb = new MaterialPropertyBlock();
-                f._mpb.SetColor(ColorId, FieldColor(type));
-                f._mpb.SetFloat(FillId, 1f);
+                // Fix-Lauf F1: „Nur Effekt“ → dünner, pulsierender Elementrand statt gefüllter Scheibe (Feld bleibt erkennbar); Verbündete reduziert/aus
+                var vis = AreaDisplay.Current(AreaDisplay.FromTeam(owner != null ? owner.Team : Team.Enemy));
+                f._alpha = vis.Effect ? vis.Alpha : 0f; f._rimOnly = !vis.Outline;
+                f._mpb.SetColor(ColorId, FieldColor(type) * new Color(1f, 1f, 1f, f._alpha));
+                f._mpb.SetFloat(FillId, f._rimOnly ? 0f : 1f);
+                f._mpb.SetFloat(PulseId2, f._rimOnly ? 1f : 0f);
                 f._renderer.SetPropertyBlock(f._mpb);
+                if (f._alpha <= 0f) f._renderer.enabled = false;
             }
             return f;
         }
@@ -92,7 +100,7 @@ namespace ProjectTyrant
             if (_pulse >= 1f) { _pulse -= 1f; Pulse(); }
             if (_renderer != null && Remaining < 1f)
             {
-                var c = FieldColor(Field); c.a *= Remaining;
+                var c = FieldColor(Field); c.a *= Remaining * _alpha;
                 _mpb.SetColor(ColorId, c);
                 _renderer.SetPropertyBlock(_mpb);
             }

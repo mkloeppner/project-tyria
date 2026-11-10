@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: schattenklinge_DD1_Klingenhiebc
   DisplayName: "Giftsto\xDF"
-  Description: Abschluss der Kette mit Zusatzeffekt.
+  Description: 'Kettenabschluss: +40 % Schaden, 2 Blutung.'
   ShortLabel: Klinge III
   IconColor: {r: 0.55, g: 0.35, b: 0.75, a: 1}
   Icon: {fileID: 0}
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 3
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.73
+  ChainBonus: 1
+  ChainRoot: {fileID: 11400000, guid: dc14aff309ca27e459482e486bb504d6, type: 2}
+  Coefficient: 1.213
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -38,9 +40,9 @@ MonoBehaviour:
   ProjectileSpeed: 34
   LeapDistance: 0
   TargetBuffs:
-  - Type: 16
-    Stacks: 1
-    Duration: 4
+  - Type: 13
+    Stacks: 2
+    Duration: 9.3
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0

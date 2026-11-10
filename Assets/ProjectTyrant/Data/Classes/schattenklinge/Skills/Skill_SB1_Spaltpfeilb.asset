@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_SB1_Spaltpfeilb
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: schattenklinge_SB1_Spaltpfeilb
+  DisplayName: "Spaltpfeil \xB7 Folgeschuss"
+  Description: Zweites Glied der Kette (53 % Koeffizient).
+  ShortLabel: Spalt II
+  IconColor: {r: 0.55, g: 0.35, b: 0.75, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 9
+  CastTime: 0.55
+  Cooldown: 0
+  Delivery: 1
+  Range: 24
+  Radius: 2.5
+  TargetCount: 2
+  ChainBonus: 0
+  ChainRoot: {fileID: 11400000, guid: dde1d288881c60543972f8dc8bbe6a4a, type: 2}
+  Coefficient: 0.82
+  Hits: 1
+  HitInterval: 0.25
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 34
+  LeapDistance: 0
+  TargetBuffs: []
+  SelfBuffs: []
+  ShareWithAllies: 0
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 0
+  Field: 0
+  FieldDuration: 5
+  FieldRadius: 4
+  FieldTickCoefficient: 0
+  Finisher: 3
+  Timeline:
+    Activation: 0.37
+    Aftercast: 0.18
+    Hits: []
+    Projectiles:
+    - 0.37
+    Movement: 0
+    MoveDistance: 0
+    Instant: 0
+    Channel: 0
+    Clip: Bow_Auto2
+    AnimScale: 1
+    VfxCharge: Charge/Schatten/S
+    VfxRelease: Release/Schatten/S
+    VfxProjectile: Projectile/Schatten/S
+    VfxImpact: Impact/Schatten/S
+    VfxAfter: 
+    SfxCharge: Schatten/Charge
+    SfxRelease: Schatten/Swing2
+    SfxImpact: Schatten/Impact
+  Chain: []
+  Palette: 5
+  PaletteExplicit: 1
+  WeaponStyleOverride: Bow
+  ClassId: schattenklinge
+  InitiativeCost: 0
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

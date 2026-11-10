@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 3
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.77
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.54
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -63,10 +65,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Dagger_Thrust
     AnimScale: 2.3809524
-    VfxCharge: Charge/Luft/M
-    VfxRelease: Release/Luft/M
-    VfxProjectile: Trail/Luft/M
-    VfxImpact: Impact/Luft/M
+    VfxCharge: Charge/Luft/L
+    VfxRelease: Release/Luft/L
+    VfxProjectile: Trail/Luft/L
+    VfxImpact: Impact/Luft/L
     VfxAfter: 
     SfxCharge: Luft/Charge
     SfxRelease: Luft/Release

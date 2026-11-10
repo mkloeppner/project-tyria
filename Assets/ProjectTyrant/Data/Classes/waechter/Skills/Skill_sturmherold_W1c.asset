@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: waechter_sturmherold_W1c
   DisplayName: Wetterschlag
-  Description: Abschluss der Kette mit Zusatzeffekt.
+  Description: "Kettenabschluss: +40 % Schaden, Schw\xE4che (3 s)."
   ShortLabel: Donner. III
   IconColor: {r: 0.3, g: 0.62, b: 1, a: 1}
   Icon: {fileID: 0}
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 3
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.82
+  ChainBonus: 1
+  ChainRoot: {fileID: 11400000, guid: 18ed933156085874bb665a01b4626b9b, type: 2}
+  Coefficient: 1.013
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -38,9 +40,9 @@ MonoBehaviour:
   ProjectileSpeed: 34
   LeapDistance: 0
   TargetBuffs:
-  - Type: 24
-    Stacks: 2
-    Duration: 5
+  - Type: 19
+    Stacks: 1
+    Duration: 3
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0

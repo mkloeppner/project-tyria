@@ -28,9 +28,11 @@ namespace ProjectTyrant
         readonly Plane[] _planes = new Plane[6];
         public int LastDrawnInstances { get; private set; }
 
-        void LateUpdate()
+        void LateUpdate() => DrawFor(Camera.main, false);
+
+        /// <summary>Instanzen für eine Kamera einreihen. M27: der Ladebild-Builder ruft das direkt vor <c>Camera.Render()</c> auf (only = nur diese Kamera).</summary>
+        public void DrawFor(Camera cam, bool only)
         {
-            var cam = Camera.main;
             if (cam == null) return;
             GeometryUtility.CalculateFrustumPlanes(cam, _planes);
             var cp = cam.transform.position;
@@ -39,6 +41,7 @@ namespace ProjectTyrant
             {
                 if (b.Mesh == null || b.Material == null) continue;
                 var rp = new RenderParams(b.Material) { shadowCastingMode = b.CastShadows ? ShadowCastingMode.On : ShadowCastingMode.Off, receiveShadows = true, layer = gameObject.layer };
+                if (only) rp.camera = cam;
                 float maxD = b.ViewDistance + CellSize * 0.71f;
                 foreach (var c in b.Cells)
                 {

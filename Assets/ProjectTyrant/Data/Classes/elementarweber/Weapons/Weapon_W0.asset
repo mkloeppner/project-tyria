@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Weapon_W0
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.WeaponSet
   DisplayName: Elementarstab
-  Visual: 1
+  Visual: 20
   WeaponColor: {r: 0.95, g: 0.55, b: 0.25, a: 1}
   Skills:
   - {fileID: 11400000, guid: 9c762982721b227498c480c3c679e80c, type: 2}

@@ -10,11 +10,16 @@ namespace ProjectTyrant
         RectTransform _loading;
         TextMeshProUGUI _loadTitle, _loadSub, _loadDesc, _loadTip;
         Image _loadFill, _loadBg;
+        RawImage _loadArt;
 
         void BuildLoading()
         {
             _loadBg = UiFactory.Image("Loading", OverlayLayer, new Color(0.05f, 0.05f, 0.07f, 1f), null, true);
             _loading = _loadBg.rectTransform.Stretch();
+            // M27: Zonen-Illustration bildschirmfüllend, darüber ein Schleier für lesbaren Text
+            var artGo = new GameObject("Art", typeof(RectTransform), typeof(RawImage)); artGo.transform.SetParent(_loading, false);
+            _loadArt = artGo.GetComponent<RawImage>(); _loadArt.raycastTarget = false; ((RectTransform)artGo.transform).Stretch();
+            var veil = UiFactory.Image("Veil", _loading, new Color(0f, 0f, 0f, 0.45f)); veil.raycastTarget = false; veil.rectTransform.Stretch();
             _loadTitle = UiFactory.Text("Title", _loading, "", 64, TextAlignmentOptions.Center, UiFactory.AccentColor);
             _loadTitle.rectTransform.Place(new Vector2(0, 0.5f), new Vector2(1, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0, 150), new Vector2(0, 90));
             _loadTitle.fontStyle = FontStyles.Bold;
@@ -48,9 +53,19 @@ namespace ProjectTyrant
                 _loadSub.text = "Stufe " + z.LevelText;
                 _loadDesc.text = z.Description;
                 if (z.Biome != null) _loadBg.color = Color.Lerp(new Color(0.04f, 0.04f, 0.06f), z.Biome.FogColor, 0.18f);
+                _loadArt.texture = z.LoadingImage; _loadArt.enabled = z.LoadingImage != null;
+                if (z.LoadingImage != null) FitCover(_loadArt, z.LoadingImage);
             }
             if (tip != null) _loadTip.text = string.IsNullOrEmpty(tip) ? "" : "Tipp: " + tip;
             _loadFill.fillAmount = Mathf.Clamp01(progress);
+        }
+
+        /// <summary>Bild füllt den Bildschirm ohne Verzerrung (Ränder werden beschnitten).</summary>
+        static void FitCover(RawImage img, Texture tex)
+        {
+            var size = ((RectTransform)img.transform.parent).rect.size; if (size.x <= 0f || size.y <= 0f) size = new Vector2(Screen.width, Screen.height);
+            float screenA = size.x / size.y, texA = (float)tex.width / tex.height;
+            img.uvRect = screenA > texA ? new Rect(0f, (1f - texA / screenA) * 0.5f, 1f, texA / screenA) : new Rect((1f - screenA / texA) * 0.5f, 0f, screenA / texA, 1f);
         }
 
         public void HideLoading() { if (_loading != null) _loading.gameObject.SetActive(false); }

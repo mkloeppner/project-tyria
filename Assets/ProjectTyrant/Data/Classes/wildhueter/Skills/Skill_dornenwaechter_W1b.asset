@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: wildhueter_dornenwaechter_W1b
   DisplayName: Stachelhieb
-  Description: Zweites Glied der Kette.
+  Description: Zweites Glied der Kette (63 % Koeffizient).
   ShortLabel: Dornen. II
   IconColor: {r: 0.5, g: 0.9, b: 0.2, a: 1}
   Icon: {fileID: 0}
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 3
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.7
+  ChainBonus: 0
+  ChainRoot: {fileID: 11400000, guid: 0172dbf102d400a46b35cf4ae8ca68f6, type: 2}
+  Coefficient: 0.362
   Hits: 1
   HitInterval: 0.25
   HealBase: 0

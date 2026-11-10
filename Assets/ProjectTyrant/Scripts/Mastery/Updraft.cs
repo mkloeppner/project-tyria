@@ -11,6 +11,13 @@ namespace ProjectTyrant
 
         void Update()
         {
+            var mc = MountController.Local;   // Lauf 6: Aufwinde heben auch den Greif
+            if (mc != null && mc.Motor.Mounted == MountKind.Griffon)
+            {
+                var q = mc.transform.position - transform.position;
+                if (q.y >= -2f && q.y <= Height) { q.y = 0f; if (q.sqrMagnitude <= Radius * Radius) mc.ApplyUpdraft(Strength); }
+                return;
+            }
             var a = MasteryAbilities.Local;
             if (a == null || !a.Gliding) return;
             var p = a.transform.position - transform.position;

@@ -296,6 +296,12 @@ namespace ProjectTyrant.EditorTools
             return l;
         }
 
+        static void AreaTag(Transform root, string child, AreaLayer layer)
+        {
+            var c = root.Find(child); if (c == null) return;
+            var tag = c.gameObject.GetComponent<VfxAreaLayer>(); if (tag == null) tag = c.gameObject.AddComponent<VfxAreaLayer>(); tag.Layer = layer;
+        }
+
         /// <summary>Eine Komposition bauen (Form × Palette × Größe).</summary>
         public static GameObject Build(VfxShape shape, VfxCatalog.PaletteDef p, VfxSize size, out float duration, out bool loop)
         {
@@ -442,6 +448,9 @@ namespace ProjectTyrant.EditorTools
             int budget = VfxCatalog.Budget(size), sum = 0; var all = root.GetComponentsInChildren<ParticleSystem>(true);
             foreach (var ps in all) sum += ps.main.maxParticles;
             if (sum > budget) foreach (var ps in all) { var m = ps.main; m.maxParticles = Mathf.Max(1, Mathf.FloorToInt(m.maxParticles * budget / (float)sum)); }
+            // Fix-Lauf F1: Boden-Kompositionen tragen zwei Ebenen (Flächenrahmen / Effekt)
+            if (shape == VfxShape.GroundCircle) { AreaTag(t, "Ring", AreaLayer.AreaOutline); AreaTag(t, "Rise", AreaLayer.AreaEffect); }
+            if (shape == VfxShape.Sigil) { AreaTag(t, "Sigil", AreaLayer.AreaOutline); AreaTag(t, "Glimmer", AreaLayer.AreaEffect); }
             return root;
         }
     }

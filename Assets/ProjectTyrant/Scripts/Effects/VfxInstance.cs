@@ -40,9 +40,19 @@ namespace ProjectTyrant
 
         public int ParticleCount { get { int n = 0; if (_ps != null) foreach (var p in _ps) n += p.particleCount; return n; } }
 
+        VfxAreaLayer[] _areaLayers;
+
         public void Play(VfxPool pool, Vector3 pos, Quaternion rot, Transform follow, float intensity, float density)
         {
             _pool = pool; _follow = follow; _t = 0f; Active = true;
+            // Fix-Lauf F1: Flächenrahmen/Effekt je Besitzer und Option ein-/ausblenden
+            if (_areaLayers == null) _areaLayers = GetComponentsInChildren<VfxAreaLayer>(true);
+            if (_areaLayers.Length > 0)
+            {
+                var vis = AreaDisplay.Current(AreaDisplay.FromIntensity(intensity));
+                foreach (var l in _areaLayers) if (l != null) l.gameObject.SetActive(l.Layer == AreaLayer.AreaOutline ? vis.Outline : vis.Effect);
+                intensity *= vis.Alpha;
+            }
             transform.SetPositionAndRotation(pos, rot);
             gameObject.SetActive(true);
             for (int i = 0; i < _ps.Length; i++)

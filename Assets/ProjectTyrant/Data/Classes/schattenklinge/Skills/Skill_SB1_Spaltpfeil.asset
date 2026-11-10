@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: schattenklinge_SB1_Spaltpfeil
   DisplayName: Spaltpfeil
   Description: "Pfeil, der auf ein zweites Ziel \xFCberspringt."
-  ShortLabel: Spalt
+  ShortLabel: Spalt I
   IconColor: {r: 0.55, g: 0.35, b: 0.75, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 24
   Radius: 2.5
   TargetCount: 2
-  Coefficient: 0.6
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 0.82
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -68,7 +70,9 @@ MonoBehaviour:
     SfxCharge: Schatten/Charge
     SfxRelease: Schatten/Swing1
     SfxImpact: Schatten/Impact
-  Chain: []
+  Chain:
+  - {fileID: 11400000, guid: 9adeb625e27411847b719f3b8afbc887, type: 2}
+  - {fileID: 11400000, guid: 0e026b4a983503f498fef2f5d0bf85e2, type: 2}
   Palette: 5
   PaletteExplicit: 1
   WeaponStyleOverride: Bow

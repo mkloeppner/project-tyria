@@ -14,7 +14,7 @@ namespace ProjectTyrant.EditorTools
         const long Gold = 10000;
 
         public static MountDefinition Load(MountKind k) => AssetDatabase.LoadAssetAtPath<MountDefinition>(Dir + "/Mount_" + k + ".asset");
-        public static MountDefinition[] LoadAll() => new[] { Load(MountKind.Raptor), Load(MountKind.Springer), Load(MountKind.Skimmer) };
+        public static MountDefinition[] LoadAll() => new[] { Load(MountKind.Raptor), Load(MountKind.Springer), Load(MountKind.Skimmer), Load(MountKind.Griffon) };
 
         public static void BuildAll()
         {
@@ -31,7 +31,22 @@ namespace ProjectTyrant.EditorTools
                 6 * Gold, "heart_frost_runa", "frostkamm", "mount_springer", 1.7f,
                 p => CreatureBuilder.Springer(p, "MSpring", new CreatureBuilder.Look { Body = new Color(0.72f, 0.62f, 0.5f), Belly = new Color(0.95f, 0.92f, 0.85f), Accent = new Color(0.55f, 0.3f, 0.6f), Eye = new Color(0.15f, 0.1f, 0.1f), Scale = 1.15f }, true),
                 "stylized painterly fantasy giant rabbit mount with powerful hind legs and saddle, game-ready low poly, hand-painted texture");
+            Def(MountKind.Griffon, "Greif", "Der Greif der Himmelswächter – gleitet weit und stürzt sich aus großer Höhe herab. Nur über die Persönliche Geschichte (Kapitel 9).", "Abheben (Leertaste), in der Luft halten: Sturzflug, loslassen: Abfangen", "Sturzangriff: Schaden, Betäubung, Verwundbarkeit",
+                0, "", "himmelsspitzen", "mount_griffon", 1.6f, p => GriffonVisual(p), "stylized painterly fantasy griffin mount with saddle, eagle head, lion body, white and gold feathers, game-ready low poly, hand-painted texture");
             AssetDatabase.SaveAssets();
+        }
+
+        /// <summary>Lauf 6: Greif aus dem Raptor-Rig (Läufer-Skelett) mit Federkleid-Farben und zwei Flügeln.</summary>
+        static GameObject GriffonVisual(Transform p)
+        {
+            var v = CreatureBuilder.Raptor(p, "MGriffon", new CreatureBuilder.Look { Body = new Color(0.82f, 0.68f, 0.42f), Belly = new Color(0.98f, 0.96f, 0.9f), Accent = new Color(0.95f, 0.8f, 0.3f), Eye = new Color(1.6f, 1.2f, 0.2f) }, true);
+            var feather = Mat("GriffonWing", new Color(0.96f, 0.94f, 0.88f));
+            foreach (var side in new[] { -1f, 1f })
+            {
+                var w = Part(v.transform, PrimitiveType.Cube, new Vector3(side * 1.1f, 1.7f, 0.1f), new Vector3(1.9f, 0.06f, 0.9f), feather, side < 0 ? "WingL" : "WingR", new Vector3(0, 0, side * -18f));
+                AddPlaceholder(w, "Griffon_Wing", "– Platzhalter-Flügel");
+            }
+            return v;
         }
 
         static void Def(MountKind k, string name, string desc, string ability, string engage, long price, string heart, string zone, string icon, float seat, System.Func<Transform, GameObject> visual, string prompt)
@@ -45,8 +60,8 @@ namespace ProjectTyrant.EditorTools
             var v = visual(go.transform);
             AddPlaceholder(v, "PT_Mount_" + k, prompt);
             // Lauf 5: Meshy-Modell auf das Vierbeiner-Skelett skinnen; bei Rissen bleibt die geriggte MeshKit-Fassung (Modell → Statue)
-            float mh = k == MountKind.Raptor ? 2.6f : k == MountKind.Springer ? 2.4f : 1.3f;
-            string prof = k == MountKind.Raptor ? "Raptor" : k == MountKind.Springer ? "Springer" : "Ray";
+            float mh = k == MountKind.Raptor || k == MountKind.Griffon ? 2.6f : k == MountKind.Springer ? 2.4f : 1.3f;
+            string prof = k == MountKind.Raptor || k == MountKind.Griffon ? "Raptor" : k == MountKind.Springer ? "Springer" : "Ray";
             var skinned = CharacterRigs.TryMeshyBeast(go.transform, "PT_Meshy_Mount" + k, mh, prof, true);
             if (skinned != null) { Object.DestroyImmediate(v); v = skinned; }
             CharacterRigs.Drive(go, v, Anim.AnimDriver.Role.Mount);

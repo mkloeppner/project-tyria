@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: wildhueter_SW1_Schnitthiebc
   DisplayName: Ausfallhieb
-  Description: Abschluss der Kette mit Zusatzeffekt.
+  Description: "Kettenabschluss: +40 % Schaden, Verkr\xFCppelung (2 s)."
   ShortLabel: Hieb III
   IconColor: {r: 0.45, g: 0.75, b: 0.3, a: 1}
   Icon: {fileID: 0}
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 3
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.76
+  ChainBonus: 1
+  ChainRoot: {fileID: 11400000, guid: 4e10dc0c4a38326408b9ed78971fdd9e, type: 2}
+  Coefficient: 0.966
   Hits: 1
   HitInterval: 0.25
   HealBase: 0

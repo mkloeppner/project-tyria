@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 24
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 1.2
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.86
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -64,9 +66,9 @@ MonoBehaviour:
     Clip: Cast1H
     AnimScale: 0.5208334
     VfxCharge: 
-    VfxRelease: Release/Frost/M
-    VfxProjectile: Projectile/Frost/M
-    VfxImpact: Impact/Frost/M
+    VfxRelease: Release/Frost/L
+    VfxProjectile: Projectile/Frost/L
+    VfxImpact: Impact/Frost/L
     VfxAfter: 
     SfxCharge: 
     SfxRelease: Frost/Release

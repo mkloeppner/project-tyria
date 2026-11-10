@@ -40,13 +40,54 @@ MonoBehaviour:
   - Id: wp_sonnfurt
     Name: Wegmarke Sonnfurt
     Position: {x: -54, y: 1, z: -54}
+  - Id: wp_gerstenbrunn
+    Name: Wegmarke Gerstenbrunn
+    Position: {x: -8, y: 1.047716, z: -44}
+  - Id: wp_dornwacht
+    Name: Wegmarke Dornwacht
+    Position: {x: -15, y: 1.0631161, z: -3}
+  - Id: wp_elmhain
+    Name: Wegmarke Elmhain
+    Position: {x: 40, y: 1.1482588, z: -50}
+  - Id: wp_spiegelsee
+    Name: Wegmarke Spiegelsee
+    Position: {x: -25, y: 0.35889173, z: 52}
+  Arrivals:
+  - Entrance: spawn
+    Position: {x: -54, y: 1, z: -51}
+    WaypointId: wp_sonnfurt
+  - Entrance: portal:sonnfurt_nebelmoor
+    Position: {x: -9.044605, y: 0.11583114, z: 56.076553}
+    WaypointId: wp_spiegelsee
   Tips:
   - "Herzen zeigen dir, wo Bewohner Hilfe brauchen \u2013 sie bringen Karma und Ruf."
   - "Das Portal am Nordrand f\xFChrt ins Nebelmoor (Stufe 15\u201325)."
+  LoadingImage: {fileID: 2800000, guid: 79bce6b14e275614fa5debbafc73246c, type: 3}
   Regions: []
   TimerLabel: 
   TimerPeriod: 0
   TimerOffset: 0
   TimerPosition: {x: 0, y: 0, z: 0}
   TimerEventId: 
-  CompletionIds: []
+  CompletionIds:
+  - hc_herausforderer
+  - hc_relikt_elmhain
+  - hc_schrein_see
+  - hc_schrein_sonnfurt
+  - heart_dornwacht
+  - heart_elmhain
+  - heart_gerstenbrunn
+  - poi_dornwacht
+  - poi_elmhain
+  - poi_gerstenbrunn
+  - poi_rabenschanze
+  - poi_sonnfurt
+  - vista_dornwacht
+  - vista_elmhain
+  - vista_leuchtfeuer
+  - wp_dornwacht
+  - wp_elmhain
+  - wp_gerstenbrunn
+  - wp_sonnfurt
+  - wp_spiegelsee
+  - heart_sonnfurt_mira

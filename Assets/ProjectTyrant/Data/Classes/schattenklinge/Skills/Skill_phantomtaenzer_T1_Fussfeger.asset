@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 3.5
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 1.1
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 2.472
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -66,10 +68,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Cast1H
     AnimScale: 0.75757575
-    VfxCharge: Charge/Staubgold/M
-    VfxRelease: Release/Staubgold/M
-    VfxProjectile: Trail/Staubgold/M
-    VfxImpact: Impact/Staubgold/M
+    VfxCharge: Charge/Staubgold/L
+    VfxRelease: Release/Staubgold/L
+    VfxProjectile: Trail/Staubgold/L
+    VfxImpact: Impact/Staubgold/L
     VfxAfter: Aura/Staubgold/S
     SfxCharge: Staubgold/Charge
     SfxRelease: Staubgold/Release

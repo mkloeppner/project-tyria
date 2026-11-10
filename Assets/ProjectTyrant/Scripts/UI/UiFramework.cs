@@ -202,7 +202,7 @@ namespace ProjectTyrant
             Title = UiFactory.Text("Title", Header, title, 19, TextAlignmentOptions.Left, UiFactory.AccentColor);
             Title.rectTransform.Stretch(12, 44, 0, 0);
             Title.fontStyle = FontStyles.Bold;
-            var close = UiFactory.Button("Close", Header, "✕", Close, 18);
+            var close = UiFactory.Button("Close", Header, "×", Close, 18);
             ((RectTransform)close.transform).Place(new Vector2(1, 0.5f), new Vector2(1, 0.5f), new Vector2(1, 0.5f), new Vector2(-4, 0), new Vector2(30, 28));
             UiFactory.SetLabel(close, "X");
             Content = UiFactory.Rect("Content", Root).Stretch(10, 10, 42, 10);

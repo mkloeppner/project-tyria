@@ -1,0 +1,88 @@
+Id;Name;Farbe;Tonhoehe;Tempo;Hall;Formant;Weiblich;Doppelt;Kapitel;Aussehen;Stoff;Akzent;Rolle;Bio
+held;Held;#F2E6C8;1.0;1.0;0.10;0;1;0;1;player;#5A6E9C;#E0C060;Spielerheld;Ein Niemand aus Sonnfurt, um den sich der Widerstand sammelt. Spricht in der ersten Person.
+mira;Mira Sonnfurt;#F7B267;1.08;1.12;0.08;0.3;1;0;1;villager;#C0703A;#F2D29B;Freundin aus der Kindheit;Führt Listen über alles und jeden. Wird vom zweifelnden Mädchen aus dem Weiler zum Herz des Widerstands.
+brennar;Hauptmann Brennar Feld;#9DB4C0;0.62;0.88;0.14;-0.6;0;0;1;soldier;#35465A;#B0B8C0;Mentor, Kommandant der Dornwacht;Spricht wenig und meint jedes Wort. Lehrt Kampf und Pflicht und hält am Pass die Linie.
+haldis;Kommandantin Haldis;#E05A47;0.86;1.0;0.12;-0.2;1;0;5;soldier;#7A2E24;#D8B060;Bündnis Wacht;Gibt Befehle auch an Türen und Wetter. Lernt, dass eine Armee mehr ist als ihre lauteste Stimme.
+tovin;Gelehrter Tovin Aschgrau;#8EC5A8;0.78;1.25;0.06;0.1;0;0;3;scholar;#4E6B5A;#C8B88A;Bündnis Archiv;Schreibt Notizen auf alles, auch auf Notizen. Findet als Erster heraus, wer der Tyrann wirklich war.
+veyra;Veyra;#A88BD8;0.92;0.82;0.16;-0.1;1;0;5;agent;#2E2A3A;#7A6AA8;Bündnis Schleier;Kommt, wenn niemand sie ruft, und geht, bevor man fragt. Hat eine eigene Rechnung mit dem Herold.
+herold;Der Herold;#C0C0D8;0.7;0.9;0.35;-0.4;0;0;2;herald;#1E1E28;#8080A0;Gegenspieler;Ehemaliger Wächter der Tyrannenfeste. Glaubt, dass erst der Tyrann der Welt Ordnung bringt, und brüllt nie.
+vareth;Vareth, der Tyrann;#D86A4A;0.5;0.75;0.5;-0.9;0;1;9;tyrant;#3A1410;#D86A4A;Der Tyrann;Ein Herrscher aus der Zeit vor den Karten, der unter seiner Feste schläft. Spricht mit zwei Stimmen zugleich.
+grolmok;Grolmok;#B07850;0.66;0.95;0.1;-0.5;0;0;2;raider;#5A3A28;#A06030;Anführer der Aschkrallen;Plünderer mit großem Mundwerk und kleinem Plan. Nennt sterbend einen Namen, den er nicht hätte nennen sollen.
+alda;Alda;#D8C27A;1.02;1.0;0.06;0.2;1;0;1;villager;#7A6A3A;#D8C27A;Nachbarin vom Hof;Kennt den Helden seit dem ersten Zahn und hält ihn trotzdem für vernünftig.
+orsk;Wachtmeister Orsk;#8AA0B8;0.7;0.95;0.1;-0.4;0;0;1;soldier;#3A4A5A;#A0A8B0;Postenführer an der Straße;Hat zwanzig Rekruten ausgebildet und dreißig verloren – beim Kartenspiel.
+elmar;Magister Elmar;#B8A0D0;0.8;1.1;0.12;0;0;0;1;scholar;#5A4A6A;#C0B0D8;Lehrmeister in Elmhain;Lehrt Lehrlinge, dass Ruinen höflicher sind als Menschen. Ist sich dabei nicht mehr ganz sicher.
+merle;Fährfrau Merle;#7AB0C0;1.0;1.05;0.08;0.1;1;0;3;villager;#3A5A6A;#90C0D0;Fährfrau im Nebelmoor;Kennt jeden Steg im Moor und jeden Lügner am Steg.
+runa;Bergführerin Runa;#C0D0E0;0.95;0.95;0.18;0;1;0;4;villager;#5A6A7A;#D0E0F0;Bergführerin im Frostkamm;Führt Leute über den Pass, die sie nie wieder sieht. Hofft diesmal auf eine Ausnahme.
+sela;Himmelswächterin Sela;#E8E0A0;1.05;0.9;0.3;0.2;1;0;9;scholar;#C0B070;#F0E8B0;Hüterin der Himmelsspitzen;Spricht mit Greifen lieber als mit Menschen und erklärt beides nicht.
+gorran;Hafenmeister Gorran;#C09060;0.75;1.05;0.08;-0.3;0;0;6;villager;#5A4030;#C09060;Hafenmeister von Silbermund;Zählt Schiffe, Schulden und Gefallen, in genau dieser Reihenfolge.
+sp_sonnfurt_1;Späher Ansgar;#A8C8E0;0.85;0.92;0.06;-0.3;0;0;1;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_sonnfurt_2;Späherin Wenke;#A8C8E0;1.04;1.00;0.06;0.1;1;0;1;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_sonnfurt_3;Späher Udo;#A8C8E0;0.74;1.08;0.06;-0.3;0;0;1;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_nebelmoor_1;Späherin Rieke;#A8C8E0;1.0;0.96;0.06;0.1;1;0;1;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_nebelmoor_2;Späher Kolja;#A8C8E0;0.8;1.04;0.06;-0.3;0;0;1;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_nebelmoor_3;Späherin Mareike;#A8C8E0;0.94;0.92;0.06;0.1;1;0;1;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_nebelmoor_4;Späher Ewald;#A8C8E0;0.7;1.00;0.06;-0.3;0;0;1;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_frostkamm_1;Späherin Ylva;#A8C8E0;1.06;1.08;0.06;0.1;1;0;1;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_frostkamm_2;Späher Torge;#A8C8E0;0.76;0.96;0.06;-0.3;0;0;1;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_frostkamm_3;Späherin Svea;#A8C8E0;0.96;1.04;0.06;0.1;1;0;1;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_frostkamm_4;Späher Arvid;#A8C8E0;0.82;0.92;0.06;-0.3;0;0;1;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_gluetoede_1;Späher Harm;#A8C8E0;0.72;1.00;0.06;-0.3;0;0;1;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_gluetoede_2;Späherin Ilka;#A8C8E0;1.02;1.08;0.06;0.1;1;0;1;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_gluetoede_3;Späher Jorin;#A8C8E0;0.86;0.96;0.06;-0.3;0;0;1;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_gluetoede_4;Späherin Dagny;#A8C8E0;0.92;1.04;0.06;0.1;1;0;1;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+wilma;Bäuerin Wilma;#E8C070;0.98;0.92;0.06;0.1;1;0;1;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+kerla;Hauptfrau Kerla;#E8C070;0.9;1.00;0.06;0.1;1;0;1;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+bertold;Archivar Bertold;#E8C070;0.78;1.08;0.06;-0.3;0;0;1;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+albin;Kräuterkundiger Albin;#E8C070;0.84;0.96;0.06;-0.3;0;0;1;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+ilse;Torfstecherin Ilse;#E8C070;0.97;1.04;0.06;0.1;1;0;1;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+jaro;Fischer Jaro;#E8C070;0.8;0.92;0.06;-0.3;0;0;1;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+bodo;Steiger Bodo;#E8C070;0.68;1.00;0.06;-0.3;0;0;1;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+saga;Hüterin Saga;#E8C070;1.04;1.08;0.06;0.1;1;0;1;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+elva;Hirtin Elva;#E8C070;1.0;0.96;0.06;0.1;1;0;1;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+kaya;Späherin Kaya;#E8C070;1.02;1.04;0.06;0.1;1;0;1;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+oleg;Sturmwächter Oleg;#E8C070;0.72;0.92;0.06;-0.3;0;0;1;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+torvald;Schmied Torvald;#E8C070;0.66;1.00;0.06;-0.3;0;0;1;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+brann;Feuerwache Brann;#E8C070;0.76;1.08;0.06;-0.3;0;0;1;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+fenn;Ältester Fenn;#9CB07A;0.74;0.9;0.1;-0.2;0;0;7;villager;#4A5A3A;#9CB07A;Dorfältester im Dämmerwald;Hat mehr Winter gesehen als Bäume im Wald. Glaubt an Laternen und an Leute, die sie tragen.
+nadira;Karawanenführerin Nadira;#E0B070;1.0;1.05;0.08;0.0;1;0;8;agent;#8A6030;#E0B070;Karawanenführerin im Dünenmeer;Kennt jede Düne beim Namen. Die Dünen kennen ihren auch.
+ilan;Ilan;#B0A0C8;0.98;0.95;0.14;0.1;0;0;7;villager;#4A4060;#B0A0C8;Leitstern: der Verlorene;Verschwand vor Jahren im Dämmerwald. Der Wald hat ihn behalten, aber nicht vergessen.
+kerrin;Kerrin;#A08070;0.8;1.0;0.08;-0.2;0;0;7;soldier;#5A4A3A;#A08070;Leitstern: die alte Schuld;Lag drei Wochen unter einer brennenden Brücke. Hat nie aufgehört, auf eine Entschuldigung zu warten.
+wenda;Fischerin Wenda;#C8D0E0;1.06;0.92;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+ivo;Laternenträger Ivo;#C8D0E0;0.74;1.00;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+samir;Brunnenhüter Samir;#C8D0E0;0.7;1.08;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+nell;Lampenmeisterin Nell;#C8D0E0;0.94;0.96;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+pia;Nestwächterin Pia;#C8D0E0;1.06;1.04;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+kaja;Pionierin Kaja;#C8D0E0;0.98;0.92;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+ysolde;Marktfrau Ysolde;#C8D0E0;1.02;1.00;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+bastian;Wärter Bastian;#C8D0E0;0.8;1.08;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+hira;Jägerin Hira;#C8D0E0;1.06;0.96;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+oda;Kräuterfrau Oda;#C8D0E0;0.98;1.04;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+imra;Archäologin Imra;#C8D0E0;1.02;0.92;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+faris;Glasbläser Faris;#C8D0E0;0.8;1.00;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+brom;Bergmann Brom;#C8D0E0;0.84;1.08;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+lys;Forscherin Lys;#C8D0E0;0.98;0.96;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+tamo;Höhlenfischer Tamo;#C8D0E0;0.7;1.04;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+aya;Greifenpflegerin Aya;#C8D0E0;0.94;0.92;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+rhea;Kapitänin Rhea;#C8D0E0;1.06;1.00;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+marit;Feldscherin Marit;#C8D0E0;0.98;1.08;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+ulf;Rammmeister Ulf;#C8D0E0;0.7;0.96;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+edric;Siegelkundiger Edric;#C8D0E0;0.8;1.04;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Herz-NPC;Figur der offenen Welt.
+sp_silberkueste_1;Späherin Lene;#C8D0E0;1.06;0.92;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_silberkueste_2;Späher Bodmar;#C8D0E0;0.74;1.00;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_silberkueste_3;Späherin Ines;#C8D0E0;1.02;1.08;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_silberkueste_4;Späher Quill;#C8D0E0;0.8;0.96;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_daemmerwald_1;Späherin Ronja;#C8D0E0;1.06;1.04;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_daemmerwald_2;Späher Morten;#C8D0E0;0.74;0.92;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_daemmerwald_3;Späherin Tilde;#C8D0E0;1.02;1.00;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_duenenmeer_1;Späher Jamal;#C8D0E0;0.8;1.08;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_duenenmeer_2;Späherin Leyla;#C8D0E0;1.06;0.96;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_duenenmeer_3;Späher Tarik;#C8D0E0;0.74;1.04;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_kristalltiefe_1;Späherin Wiska;#C8D0E0;1.02;0.92;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_kristalltiefe_2;Späher Grim;#C8D0E0;0.8;1.00;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_kristalltiefe_3;Späherin Elin;#C8D0E0;1.06;1.08;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_himmelsspitzen_1;Späher Aurel;#C8D0E0;0.74;0.96;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_himmelsspitzen_2;Späherin Wolke;#C8D0E0;1.02;1.04;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_himmelsspitzen_3;Späher Falk;#C8D0E0;0.8;0.92;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_tyrannenfeste_1;Späherin Greta;#C8D0E0;1.06;1.00;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_tyrannenfeste_2;Späher Konrad;#C8D0E0;0.74;1.08;0.06;-0.3;0;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.
+sp_tyrannenfeste_3;Späherin Asta;#C8D0E0;1.02;0.96;0.06;0.1;1;0;6;world;#5A6E7A;#C0A060;Späher;Figur der offenen Welt.

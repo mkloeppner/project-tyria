@@ -1,0 +1,763 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872e85767a6070e4bbd9a00727da017c, type: 3}
+  m_Name: StoryCast
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryCast
+  Speakers:
+  - Id: held
+    DisplayName: Held
+    Color: {r: 0.9490196, g: 0.9019608, b: 0.78431374, a: 1}
+    Pitch: 1
+    Rate: 1
+    Reverb: 0.1
+    Formant: 0
+    Female: 1
+    Doubled: 0
+    Role: Spielerheld
+    Bio: Ein Niemand aus Sonnfurt, um den sich der Widerstand sammelt. Spricht in der ersten Person.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.6117647, a: 1}
+    Trim: {r: 0.8784314, g: 0.7529412, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: player
+  - Id: mira
+    DisplayName: Mira Sonnfurt
+    Color: {r: 0.96862745, g: 0.69803923, b: 0.40392157, a: 1}
+    Pitch: 1.08
+    Rate: 1.12
+    Reverb: 0.08
+    Formant: 0.3
+    Female: 1
+    Doubled: 0
+    Role: Freundin aus der Kindheit
+    Bio: "F\xFChrt Listen \xFCber alles und jeden. Wird vom zweifelnden M\xE4dchen aus dem Weiler zum Herz des Widerstands."
+    UnlockChapter: 1
+    Cloth: {r: 0.7529412, g: 0.4392157, b: 0.22745098, a: 1}
+    Trim: {r: 0.9490196, g: 0.8235294, b: 0.60784316, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: villager
+  - Id: brennar
+    DisplayName: Hauptmann Brennar Feld
+    Color: {r: 0.6156863, g: 0.7058824, b: 0.7529412, a: 1}
+    Pitch: 0.62
+    Rate: 0.88
+    Reverb: 0.14
+    Formant: -0.6
+    Female: 0
+    Doubled: 0
+    Role: Mentor, Kommandant der Dornwacht
+    Bio: "Spricht wenig und meint jedes Wort. Lehrt Kampf und Pflicht und h\xE4lt am Pass die Linie."
+    UnlockChapter: 1
+    Cloth: {r: 0.20784314, g: 0.27450982, b: 0.3529412, a: 1}
+    Trim: {r: 0.6901961, g: 0.72156864, b: 0.7529412, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: soldier
+  - Id: haldis
+    DisplayName: Kommandantin Haldis
+    Color: {r: 0.8784314, g: 0.3529412, b: 0.2784314, a: 1}
+    Pitch: 0.86
+    Rate: 1
+    Reverb: 0.12
+    Formant: -0.2
+    Female: 1
+    Doubled: 0
+    Role: "B\xFCndnis Wacht"
+    Bio: "Gibt Befehle auch an T\xFCren und Wetter. Lernt, dass eine Armee mehr ist als ihre lauteste Stimme."
+    UnlockChapter: 5
+    Cloth: {r: 0.47843137, g: 0.18039216, b: 0.14117648, a: 1}
+    Trim: {r: 0.84705883, g: 0.6901961, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: soldier
+  - Id: tovin
+    DisplayName: Gelehrter Tovin Aschgrau
+    Color: {r: 0.5568628, g: 0.77254903, b: 0.65882355, a: 1}
+    Pitch: 0.78
+    Rate: 1.25
+    Reverb: 0.06
+    Formant: 0.1
+    Female: 0
+    Doubled: 0
+    Role: "B\xFCndnis Archiv"
+    Bio: Schreibt Notizen auf alles, auch auf Notizen. Findet als Erster heraus, wer der Tyrann wirklich war.
+    UnlockChapter: 3
+    Cloth: {r: 0.30588236, g: 0.41960785, b: 0.3529412, a: 1}
+    Trim: {r: 0.78431374, g: 0.72156864, b: 0.5411765, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: scholar
+  - Id: veyra
+    DisplayName: Veyra
+    Color: {r: 0.65882355, g: 0.54509807, b: 0.84705883, a: 1}
+    Pitch: 0.92
+    Rate: 0.82
+    Reverb: 0.16
+    Formant: -0.1
+    Female: 1
+    Doubled: 0
+    Role: "B\xFCndnis Schleier"
+    Bio: Kommt, wenn niemand sie ruft, und geht, bevor man fragt. Hat eine eigene Rechnung mit dem Herold.
+    UnlockChapter: 5
+    Cloth: {r: 0.18039216, g: 0.16470589, b: 0.22745098, a: 1}
+    Trim: {r: 0.47843137, g: 0.41568628, b: 0.65882355, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: agent
+  - Id: herold
+    DisplayName: Der Herold
+    Color: {r: 0.7529412, g: 0.7529412, b: 0.84705883, a: 1}
+    Pitch: 0.7
+    Rate: 0.9
+    Reverb: 0.35
+    Formant: -0.4
+    Female: 0
+    Doubled: 0
+    Role: Gegenspieler
+    Bio: "Ehemaliger W\xE4chter der Tyrannenfeste. Glaubt, dass erst der Tyrann der Welt Ordnung bringt, und br\xFCllt nie."
+    UnlockChapter: 2
+    Cloth: {r: 0.11764706, g: 0.11764706, b: 0.15686275, a: 1}
+    Trim: {r: 0.5019608, g: 0.5019608, b: 0.627451, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: herald
+  - Id: vareth
+    DisplayName: Vareth, der Tyrann
+    Color: {r: 0.84705883, g: 0.41568628, b: 0.2901961, a: 1}
+    Pitch: 0.5
+    Rate: 0.75
+    Reverb: 0.5
+    Formant: -0.9
+    Female: 0
+    Doubled: 1
+    Role: Der Tyrann
+    Bio: "Ein Herrscher aus der Zeit vor den Karten, der unter seiner Feste schl\xE4ft. Spricht mit zwei Stimmen zugleich."
+    UnlockChapter: 9
+    Cloth: {r: 0.22745098, g: 0.078431375, b: 0.0627451, a: 1}
+    Trim: {r: 0.84705883, g: 0.41568628, b: 0.2901961, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: tyrant
+  - Id: grolmok
+    DisplayName: Grolmok
+    Color: {r: 0.6901961, g: 0.47058824, b: 0.3137255, a: 1}
+    Pitch: 0.66
+    Rate: 0.95
+    Reverb: 0.1
+    Formant: -0.5
+    Female: 0
+    Doubled: 0
+    Role: "Anf\xFChrer der Aschkrallen"
+    Bio: "Pl\xFCnderer mit gro\xDFem Mundwerk und kleinem Plan. Nennt sterbend einen Namen, den er nicht h\xE4tte nennen sollen."
+    UnlockChapter: 2
+    Cloth: {r: 0.3529412, g: 0.22745098, b: 0.15686275, a: 1}
+    Trim: {r: 0.627451, g: 0.3764706, b: 0.1882353, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: raider
+  - Id: alda
+    DisplayName: Alda
+    Color: {r: 0.84705883, g: 0.7607843, b: 0.47843137, a: 1}
+    Pitch: 1.02
+    Rate: 1
+    Reverb: 0.06
+    Formant: 0.2
+    Female: 1
+    Doubled: 0
+    Role: Nachbarin vom Hof
+    Bio: "Kennt den Helden seit dem ersten Zahn und h\xE4lt ihn trotzdem f\xFCr vern\xFCnftig."
+    UnlockChapter: 1
+    Cloth: {r: 0.47843137, g: 0.41568628, b: 0.22745098, a: 1}
+    Trim: {r: 0.84705883, g: 0.7607843, b: 0.47843137, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: villager
+  - Id: orsk
+    DisplayName: Wachtmeister Orsk
+    Color: {r: 0.5411765, g: 0.627451, b: 0.72156864, a: 1}
+    Pitch: 0.7
+    Rate: 0.95
+    Reverb: 0.1
+    Formant: -0.4
+    Female: 0
+    Doubled: 0
+    Role: "Postenf\xFChrer an der Stra\xDFe"
+    Bio: "Hat zwanzig Rekruten ausgebildet und drei\xDFig verloren \u2013 beim Kartenspiel."
+    UnlockChapter: 1
+    Cloth: {r: 0.22745098, g: 0.2901961, b: 0.3529412, a: 1}
+    Trim: {r: 0.627451, g: 0.65882355, b: 0.6901961, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: soldier
+  - Id: elmar
+    DisplayName: Magister Elmar
+    Color: {r: 0.72156864, g: 0.627451, b: 0.8156863, a: 1}
+    Pitch: 0.8
+    Rate: 1.1
+    Reverb: 0.12
+    Formant: 0
+    Female: 0
+    Doubled: 0
+    Role: Lehrmeister in Elmhain
+    Bio: "Lehrt Lehrlinge, dass Ruinen h\xF6flicher sind als Menschen. Ist sich dabei nicht mehr ganz sicher."
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.2901961, b: 0.41568628, a: 1}
+    Trim: {r: 0.7529412, g: 0.6901961, b: 0.84705883, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: scholar
+  - Id: merle
+    DisplayName: "F\xE4hrfrau Merle"
+    Color: {r: 0.47843137, g: 0.6901961, b: 0.7529412, a: 1}
+    Pitch: 1
+    Rate: 1.05
+    Reverb: 0.08
+    Formant: 0.1
+    Female: 1
+    Doubled: 0
+    Role: "F\xE4hrfrau im Nebelmoor"
+    Bio: "Kennt jeden Steg im Moor und jeden L\xFCgner am Steg."
+    UnlockChapter: 3
+    Cloth: {r: 0.22745098, g: 0.3529412, b: 0.41568628, a: 1}
+    Trim: {r: 0.5647059, g: 0.7529412, b: 0.8156863, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: villager
+  - Id: runa
+    DisplayName: "Bergf\xFChrerin Runa"
+    Color: {r: 0.7529412, g: 0.8156863, b: 0.8784314, a: 1}
+    Pitch: 0.95
+    Rate: 0.95
+    Reverb: 0.18
+    Formant: 0
+    Female: 1
+    Doubled: 0
+    Role: "Bergf\xFChrerin im Frostkamm"
+    Bio: "F\xFChrt Leute \xFCber den Pass, die sie nie wieder sieht. Hofft diesmal auf eine Ausnahme."
+    UnlockChapter: 4
+    Cloth: {r: 0.3529412, g: 0.41568628, b: 0.47843137, a: 1}
+    Trim: {r: 0.8156863, g: 0.8784314, b: 0.9411765, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: villager
+  - Id: sela
+    DisplayName: "Himmelsw\xE4chterin Sela"
+    Color: {r: 0.9098039, g: 0.8784314, b: 0.627451, a: 1}
+    Pitch: 1.05
+    Rate: 0.9
+    Reverb: 0.3
+    Formant: 0.2
+    Female: 1
+    Doubled: 0
+    Role: "H\xFCterin der Himmelsspitzen"
+    Bio: "Spricht mit Greifen lieber als mit Menschen und erkl\xE4rt beides nicht."
+    UnlockChapter: 9
+    Cloth: {r: 0.7529412, g: 0.6901961, b: 0.4392157, a: 1}
+    Trim: {r: 0.9411765, g: 0.9098039, b: 0.6901961, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: scholar
+  - Id: gorran
+    DisplayName: Hafenmeister Gorran
+    Color: {r: 0.7529412, g: 0.5647059, b: 0.3764706, a: 1}
+    Pitch: 0.75
+    Rate: 1.05
+    Reverb: 0.08
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: Hafenmeister von Silbermund
+    Bio: "Z\xE4hlt Schiffe, Schulden und Gefallen, in genau dieser Reihenfolge."
+    UnlockChapter: 6
+    Cloth: {r: 0.3529412, g: 0.2509804, b: 0.1882353, a: 1}
+    Trim: {r: 0.7529412, g: 0.5647059, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: villager
+  - Id: sp_sonnfurt_1
+    DisplayName: "Sp\xE4her Ansgar"
+    Color: {r: 0.65882355, g: 0.78431374, b: 0.8784314, a: 1}
+    Pitch: 0.85
+    Rate: 0.92
+    Reverb: 0.06
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: "Sp\xE4her"
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: sp_sonnfurt_2
+    DisplayName: "Sp\xE4herin Wenke"
+    Color: {r: 0.65882355, g: 0.78431374, b: 0.8784314, a: 1}
+    Pitch: 1.04
+    Rate: 1
+    Reverb: 0.06
+    Formant: 0.1
+    Female: 1
+    Doubled: 0
+    Role: "Sp\xE4her"
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: sp_sonnfurt_3
+    DisplayName: "Sp\xE4her Udo"
+    Color: {r: 0.65882355, g: 0.78431374, b: 0.8784314, a: 1}
+    Pitch: 0.74
+    Rate: 1.08
+    Reverb: 0.06
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: "Sp\xE4her"
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: sp_nebelmoor_1
+    DisplayName: "Sp\xE4herin Rieke"
+    Color: {r: 0.65882355, g: 0.78431374, b: 0.8784314, a: 1}
+    Pitch: 1
+    Rate: 0.96
+    Reverb: 0.06
+    Formant: 0.1
+    Female: 1
+    Doubled: 0
+    Role: "Sp\xE4her"
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: sp_nebelmoor_2
+    DisplayName: "Sp\xE4her Kolja"
+    Color: {r: 0.65882355, g: 0.78431374, b: 0.8784314, a: 1}
+    Pitch: 0.8
+    Rate: 1.04
+    Reverb: 0.06
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: "Sp\xE4her"
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: sp_nebelmoor_3
+    DisplayName: "Sp\xE4herin Mareike"
+    Color: {r: 0.65882355, g: 0.78431374, b: 0.8784314, a: 1}
+    Pitch: 0.94
+    Rate: 0.92
+    Reverb: 0.06
+    Formant: 0.1
+    Female: 1
+    Doubled: 0
+    Role: "Sp\xE4her"
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: sp_nebelmoor_4
+    DisplayName: "Sp\xE4her Ewald"
+    Color: {r: 0.65882355, g: 0.78431374, b: 0.8784314, a: 1}
+    Pitch: 0.7
+    Rate: 1
+    Reverb: 0.06
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: "Sp\xE4her"
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: sp_frostkamm_1
+    DisplayName: "Sp\xE4herin Ylva"
+    Color: {r: 0.65882355, g: 0.78431374, b: 0.8784314, a: 1}
+    Pitch: 1.06
+    Rate: 1.08
+    Reverb: 0.06
+    Formant: 0.1
+    Female: 1
+    Doubled: 0
+    Role: "Sp\xE4her"
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: sp_frostkamm_2
+    DisplayName: "Sp\xE4her Torge"
+    Color: {r: 0.65882355, g: 0.78431374, b: 0.8784314, a: 1}
+    Pitch: 0.76
+    Rate: 0.96
+    Reverb: 0.06
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: "Sp\xE4her"
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: sp_frostkamm_3
+    DisplayName: "Sp\xE4herin Svea"
+    Color: {r: 0.65882355, g: 0.78431374, b: 0.8784314, a: 1}
+    Pitch: 0.96
+    Rate: 1.04
+    Reverb: 0.06
+    Formant: 0.1
+    Female: 1
+    Doubled: 0
+    Role: "Sp\xE4her"
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: sp_frostkamm_4
+    DisplayName: "Sp\xE4her Arvid"
+    Color: {r: 0.65882355, g: 0.78431374, b: 0.8784314, a: 1}
+    Pitch: 0.82
+    Rate: 0.92
+    Reverb: 0.06
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: "Sp\xE4her"
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: sp_gluetoede_1
+    DisplayName: "Sp\xE4her Harm"
+    Color: {r: 0.65882355, g: 0.78431374, b: 0.8784314, a: 1}
+    Pitch: 0.72
+    Rate: 1
+    Reverb: 0.06
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: "Sp\xE4her"
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: sp_gluetoede_2
+    DisplayName: "Sp\xE4herin Ilka"
+    Color: {r: 0.65882355, g: 0.78431374, b: 0.8784314, a: 1}
+    Pitch: 1.02
+    Rate: 1.08
+    Reverb: 0.06
+    Formant: 0.1
+    Female: 1
+    Doubled: 0
+    Role: "Sp\xE4her"
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: sp_gluetoede_3
+    DisplayName: "Sp\xE4her Jorin"
+    Color: {r: 0.65882355, g: 0.78431374, b: 0.8784314, a: 1}
+    Pitch: 0.86
+    Rate: 0.96
+    Reverb: 0.06
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: "Sp\xE4her"
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: sp_gluetoede_4
+    DisplayName: "Sp\xE4herin Dagny"
+    Color: {r: 0.65882355, g: 0.78431374, b: 0.8784314, a: 1}
+    Pitch: 0.92
+    Rate: 1.04
+    Reverb: 0.06
+    Formant: 0.1
+    Female: 1
+    Doubled: 0
+    Role: "Sp\xE4her"
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: wilma
+    DisplayName: "B\xE4uerin Wilma"
+    Color: {r: 0.9098039, g: 0.7529412, b: 0.4392157, a: 1}
+    Pitch: 0.98
+    Rate: 0.92
+    Reverb: 0.06
+    Formant: 0.1
+    Female: 1
+    Doubled: 0
+    Role: Herz-NPC
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: kerla
+    DisplayName: Hauptfrau Kerla
+    Color: {r: 0.9098039, g: 0.7529412, b: 0.4392157, a: 1}
+    Pitch: 0.9
+    Rate: 1
+    Reverb: 0.06
+    Formant: 0.1
+    Female: 1
+    Doubled: 0
+    Role: Herz-NPC
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: bertold
+    DisplayName: Archivar Bertold
+    Color: {r: 0.9098039, g: 0.7529412, b: 0.4392157, a: 1}
+    Pitch: 0.78
+    Rate: 1.08
+    Reverb: 0.06
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: Herz-NPC
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: albin
+    DisplayName: "Kr\xE4uterkundiger Albin"
+    Color: {r: 0.9098039, g: 0.7529412, b: 0.4392157, a: 1}
+    Pitch: 0.84
+    Rate: 0.96
+    Reverb: 0.06
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: Herz-NPC
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: ilse
+    DisplayName: Torfstecherin Ilse
+    Color: {r: 0.9098039, g: 0.7529412, b: 0.4392157, a: 1}
+    Pitch: 0.97
+    Rate: 1.04
+    Reverb: 0.06
+    Formant: 0.1
+    Female: 1
+    Doubled: 0
+    Role: Herz-NPC
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: jaro
+    DisplayName: Fischer Jaro
+    Color: {r: 0.9098039, g: 0.7529412, b: 0.4392157, a: 1}
+    Pitch: 0.8
+    Rate: 0.92
+    Reverb: 0.06
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: Herz-NPC
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: bodo
+    DisplayName: Steiger Bodo
+    Color: {r: 0.9098039, g: 0.7529412, b: 0.4392157, a: 1}
+    Pitch: 0.68
+    Rate: 1
+    Reverb: 0.06
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: Herz-NPC
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: saga
+    DisplayName: "H\xFCterin Saga"
+    Color: {r: 0.9098039, g: 0.7529412, b: 0.4392157, a: 1}
+    Pitch: 1.04
+    Rate: 1.08
+    Reverb: 0.06
+    Formant: 0.1
+    Female: 1
+    Doubled: 0
+    Role: Herz-NPC
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: elva
+    DisplayName: Hirtin Elva
+    Color: {r: 0.9098039, g: 0.7529412, b: 0.4392157, a: 1}
+    Pitch: 1
+    Rate: 0.96
+    Reverb: 0.06
+    Formant: 0.1
+    Female: 1
+    Doubled: 0
+    Role: Herz-NPC
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: kaya
+    DisplayName: "Sp\xE4herin Kaya"
+    Color: {r: 0.9098039, g: 0.7529412, b: 0.4392157, a: 1}
+    Pitch: 1.02
+    Rate: 1.04
+    Reverb: 0.06
+    Formant: 0.1
+    Female: 1
+    Doubled: 0
+    Role: Herz-NPC
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: oleg
+    DisplayName: "Sturmw\xE4chter Oleg"
+    Color: {r: 0.9098039, g: 0.7529412, b: 0.4392157, a: 1}
+    Pitch: 0.72
+    Rate: 0.92
+    Reverb: 0.06
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: Herz-NPC
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: torvald
+    DisplayName: Schmied Torvald
+    Color: {r: 0.9098039, g: 0.7529412, b: 0.4392157, a: 1}
+    Pitch: 0.66
+    Rate: 1
+    Reverb: 0.06
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: Herz-NPC
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world
+  - Id: brann
+    DisplayName: Feuerwache Brann
+    Color: {r: 0.9098039, g: 0.7529412, b: 0.4392157, a: 1}
+    Pitch: 0.76
+    Rate: 1.08
+    Reverb: 0.06
+    Formant: -0.3
+    Female: 0
+    Doubled: 0
+    Role: Herz-NPC
+    Bio: Figur der offenen Welt.
+    UnlockChapter: 1
+    Cloth: {r: 0.3529412, g: 0.43137255, b: 0.47843137, a: 1}
+    Trim: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
+    Skin: {r: 0.9, g: 0.72, b: 0.58, a: 1}
+    Hair: {r: 0.3, g: 0.2, b: 0.12, a: 1}
+    Look: world

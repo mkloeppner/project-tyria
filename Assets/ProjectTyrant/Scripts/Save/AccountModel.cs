@@ -12,6 +12,7 @@ namespace ProjectTyrant
         public int Slot; public string Name; public string ClassId; public int Level = 1; public string Zone = ProfileState.StartZoneId;
         public string Created; public string PrimaryHex = "#C8A040", SecondaryHex = "#3050A0"; public string LastPlayed;
         public string EliteSpec = "";   // Lauf 5 / M26: Anzeigename der aktiven Elite-Spezialisierung (Charakterauswahl)
+        public int Origin, Trait, Lodestar; public bool VoiceB;   // Lauf 6: Biografie und Stimm-Variante aus der Charaktererstellung
     }
 
     /// <summary>

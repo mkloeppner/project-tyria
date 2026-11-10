@@ -6,6 +6,9 @@ namespace ProjectTyrant
     public class Heart : ZoneObject
     {
         public string NpcName;
+        [Tooltip("Lauf 6: erlaubte Beitragswege (leer = alle)")] public HeartWay[] Ways = new HeartWay[0];
+        [Tooltip("Lauf 6: Emote-Aufgabe (z. B. /jubeln vor dem NPC)")] public Emote EmoteWanted;
+        [Tooltip("Lauf 6: Aufgaben-Icons im Pop-up")] public string TaskSummary;
         void Reset() { PromptText = "Sprechen"; Range = 3f; }
 
         protected override void OnEnable() { base.OnEnable(); GameEventBus.EntityKilled += OnKilled; }
@@ -22,7 +25,7 @@ namespace ProjectTyrant
             var prof = PlayerProfile.Instance;
             if (prof == null || Done || victim == null || victim.Team != Team.Enemy || !Contains(victim.transform.position)) return;
             if (killer != prof.Player && !victim.Attackers.Contains(prof.Player)) return;
-            prof.AddHeartProgress(Definition, Definition.KillValue, "Gegner besiegt");
+            prof.AddHeartWay(Definition, HeartWay.Kill, Definition.KillValue, "Gegner besiegt");
         }
 
         public override string Prompt => "Sprechen – " + NpcName;
@@ -30,6 +33,8 @@ namespace ProjectTyrant
         public override void Interact(Combatant player)
         {
             EventDirector.Instance?.NotifyHeart(Id);   // Herz-Interaktion als Ereignis-Auslöser
+            var story = GameManager.Instance != null ? GameManager.Instance.Story : null;   // Lauf 6: Herz-NPC spricht seine Zeile (Sprechblase mit Stimme)
+            if (story != null && !Done && story.Database != null && story.Database.Scene("HZ_" + Id) != null && !story.Busy) { story.PlayScene("HZ_" + Id, null); return; }
             if (Done) GameEventBus.Notify(NpcName + ": „Danke für deine Hilfe! Sieh dir meine Waren an.“", new Color(1f, 0.85f, 0.5f));
             else GameEventBus.Notify(NpcName + ": „" + (Definition != null ? Definition.HeartTask : "") + "“", new Color(1f, 0.85f, 0.5f));
         }

@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 0
   Radius: 4
   TargetCount: 5
-  Coefficient: 0.3
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 0.345
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -46,7 +48,7 @@ MonoBehaviour:
   Field: 1
   FieldDuration: 5
   FieldRadius: 4
-  FieldTickCoefficient: 0.15
+  FieldTickCoefficient: 0.172
   Finisher: 0
   Timeline:
     Activation: 0.5

@@ -24,8 +24,26 @@ namespace ProjectTyrant
         public event Action SlotsChanged;
         public void NotifySlotsChanged() => SlotsChanged?.Invoke();
         public bool AutoAttack = true;
-        [Tooltip("Aus: Ground-Target-Skills zeigen erst einen Zielkreis (Taste/LMB bestätigt, Esc bricht ab). An: sofort am Mauszeiger.")]
-        public bool FastCastGroundTargets = false;
+        /// <summary>Fix-Lauf F1: Bodenziel-Modi (Normal, Drücken und Loslassen, Sofort, Sofort mit Reichweitenanzeige) als Zustandsmaschine.</summary>
+        public readonly GroundTargetModel Ground = new GroundTargetModel();
+        /// <summary>Alias aus Lauf 3 (Tests/Debug): an = Modus „Sofort“.</summary>
+        public bool FastCastGroundTargets
+        {
+            get => Ground.CurrentMode == GroundTargetModel.Mode.Instant || Ground.CurrentMode == GroundTargetModel.Mode.InstantWithRange;
+            set => SetGroundMode(value ? GroundTargetModel.Mode.Instant : GroundTargetModel.Mode.Normal);
+        }
+
+        public void SetGroundMode(GroundTargetModel.Mode m) { if (Ground.SetMode(m) == GroundTargetModel.Action.Cancel) CancelAimVisual(); }
+
+        void ApplyGroundOptions(GameOptions o)
+        {
+            if (o == null) return;
+            SetGroundMode((GroundTargetModel.Mode)o.GroundTargetMode);
+            Ground.HoldThreshold = o.GroundHoldMs / 1000f; Ground.ClampToRange = o.GroundClampToRange; Ground.SnapToTarget = o.GroundSnapToTarget;
+        }
+        void OnEnable() { GameOptions.Changed += ApplyGroundOptions; ApplyGroundOptions(GameOptions.Current); GameEventBus.DodgePerformed += OnDodgeChain; }
+        void OnDisable() { GameOptions.Changed -= ApplyGroundOptions; GameEventBus.DodgePerformed -= OnDodgeChain; }
+        void OnDodgeChain(Combatant c) { if (c != null && c == _self) Chain.Break(); }   // Fix-Lauf F1: Ausweichen setzt die Kette zurück
 
         public int ActiveSetIndex { get; private set; }
         public WeaponSet ActiveSet => WeaponSets != null && WeaponSets.Length > ActiveSetIndex ? WeaponSets[ActiveSetIndex] : null;
@@ -101,6 +119,7 @@ namespace ProjectTyrant
         {
             if (_downed != null && _downed.IsDowned)
                 return slot >= 0 && slot < 4 && DownedSkills != null && DownedSkills.Length > slot ? DownedSkills[slot] : null;
+            if (SlotOverride != null && slot < 5) { var bo = SlotOverride(slot); if (bo != null) return bo; }   // Lauf 6: Bündel
             if (Mechanic != null && slot < 5) { var o = Mechanic.OverrideSlot(slot, ActiveSet); if (o != null) return slot == 0 ? ChainLink(o) : o; }
             if (slot == 0) return ChainLink(ActiveSet != null && ActiveSet.Skills.Length > 0 ? ActiveSet.Skills[0] : null);
             if (slot < 5) return ActiveSet != null && ActiveSet.Skills.Length > slot ? ActiveSet.Skills[slot] : null;
@@ -185,7 +204,7 @@ namespace ProjectTyrant
                         if (!_downed.IsDowned) { CancelCast(); return; }
                     }
                 }
-                if (_castTarget != null && _mover != null) _mover.FacingOverride = _castTarget.transform.position;
+                if (_castTarget != null && _mover != null && !IsAutoAttack(CastingSkill)) _mover.FacingOverride = _castTarget.transform.position;   // Lauf 6: Auto-Angriff dreht nicht dauerhaft zum Ziel
                 if (_mover != null) _mover.CastMoveFactor = CastingSkill.Timeline != null && CastingSkill.Timeline.Movement == SkillMoveRule.Rooted ? 0f : 1f;
                 CastRemaining -= dt;
                 if (CastRemaining <= 0f) CompleteCast();
@@ -201,12 +220,15 @@ namespace ProjectTyrant
             if (input == null || _self == null || _self.IsDead) return;
             if (InputSuppressed) { _autoAttackArmed = false; return; }
             if (input.SwapPressed) { CancelAim(); TrySwapWeapons(); }
+            if (_rangeFlash > 0f) { _rangeFlash -= Time.deltaTime; if (_rangeFlash <= 0f) HideRangeRing(); }
             if (IsAiming)
             {
                 UpdateAim();
-                if (input.EscapeForWorld) { AimInputFrame = Time.frameCount; CancelAim(); return; }
-                if (input.PrimaryClick || input.SkillPressed == _aimSlot) { AimInputFrame = Time.frameCount; ConfirmAim(); return; }
-                if (input.SkillPressed >= 0) CancelAim(); // anderer Skill: Zielen abbrechen und normal fortfahren
+                if (input.EscapeForWorld) { AimInputFrame = Time.frameCount; Ground.Escape(); CancelAim(); return; }
+                if (input.SkillReleased == _aimSlot && Ground.KeyUp(_aimSlot, Time.time) == GroundTargetModel.Action.Cast) { AimInputFrame = Time.frameCount; ConfirmAim(); return; }
+                if (input.PrimaryClick) { AimInputFrame = Time.frameCount; Ground.Click(); ConfirmAim(); return; }
+                if (input.SkillPressed == _aimSlot && Ground.CurrentMode == GroundTargetModel.Mode.Normal) { AimInputFrame = Time.frameCount; Ground.KeyDown(_aimSlot, Time.time); ConfirmAim(); return; }
+                if (input.SkillPressed >= 0 && input.SkillPressed != _aimSlot) { Ground.OtherSkill(input.SkillPressed); CancelAim(); } // anderer Skill: Zielen abbrechen und normal fortfahren
                 else return;
             }
             if (input.SkillPressed >= 0)
@@ -217,7 +239,8 @@ namespace ProjectTyrant
             var rig = ThirdPersonCameraRig.Current;
             if (rig != null && rig.ActionCam && input.PrimaryClick) { _autoAttackArmed = true; TryUseSlot(0); }
 
-            if (_targeting != null && _targeting.Current == null) _autoAttackArmed = false;
+            if (_targeting != null && _targeting.Current == null) { _autoAttackArmed = false; if (_hadTarget) Chain.Break(); }   // Fix-Lauf F1: Zielverlust setzt die Kette zurück
+            _hadTarget = _targeting != null && _targeting.Current != null;
             if (AutoAttack && _autoAttackArmed && !IsCasting && !Queue.IsBusy(Time.time) && Queue.Queued == null && _targeting != null && _targeting.Current != null)
             {
                 var s = GetSkillInSlot(0);
@@ -243,15 +266,21 @@ namespace ProjectTyrant
             Swapped?.Invoke();
         }
 
+        /// <summary>Lauf 6: Bündel ersetzen Skills 1–5 (Story-Director); Waffenwechsel mit Bündel gesperrt.</summary>
+        public static System.Func<int, SkillDefinition> SlotOverride;
+        public static System.Func<bool> SwapBlocked;
+
         public bool TrySwapWeapons()
         {
             if (_downed != null && _downed.IsDowned) return false;
+            if (SwapBlocked != null && SwapBlocked()) { GameEventBus.Notify("Mit Bündel kein Waffenwechsel – 5 legt es ab", new Color(1f, 0.85f, 0.4f)); return false; }
             if (SwapCooldownRemaining > 0f) { GameEventBus.Notify("Waffenwechsel lädt noch …", new Color(1f, 0.85f, 0.4f)); return false; }
             if (WeaponSets == null || WeaponSets.Length < 2 || WeaponSets[1 - ActiveSetIndex] == null) { GameEventBus.Notify("Kein zweites Waffenset angelegt", new Color(1f, 0.85f, 0.4f)); return false; }
             if (Mechanic != null && !Mechanic.AllowSwap(out string swapWhy)) { GameEventBus.Notify(swapWhy, new Color(1f, 0.85f, 0.4f)); return false; }
             if (IsCasting) CancelCast();
             ActiveSetIndex = 1 - ActiveSetIndex;
             SwapCooldownRemaining = WeaponSwapCooldown;
+            Chain.Break();   // Fix-Lauf F1: Waffenwechsel setzt die Kette zurück
             if (_visuals != null) _visuals.ShowWeapon(ActiveSet.Visual);
             Swapped?.Invoke();
             GameEventBus.RaiseWeaponSwap(_self);
@@ -263,7 +292,18 @@ namespace ProjectTyrant
         {
             var s = GetSkillInSlot(slot);
             if (s == null) return false;
-            if (s.IsGroundTargeted && !FastCastGroundTargets && !silent) return BeginAim(s, slot);
+            if (s.IsGroundTargeted && !silent)
+            {
+                LearnHints.Show("bodenziel", "Bodenziel-Modus: " + GroundTargetModel.Name(Ground.CurrentMode) + " (Optionen › Steuerung).");
+                var act = Ground.KeyDown(slot, Time.time);
+                if (act == GroundTargetModel.Action.Preview) { if (BeginAim(s, slot)) return true; Ground.Reset(); return false; }
+                if (act == GroundTargetModel.Action.Cast || act == GroundTargetModel.Action.CastWithRangeFlash)
+                {
+                    if (!ResolveGroundPoint(s, out var gp)) { Fail(s, "Außer Reichweite", false); return false; }
+                    if (act == GroundTargetModel.Action.CastWithRangeFlash) { ShowAimRing(gp, s.Radius, AimClamped); ShowRangeRing(s.Range); _rangeFlash = GroundTargetModel.RangeFlashSeconds; }
+                    return TryCast(s, silent, gp, force);
+                }
+            }
             return TryCast(s, silent, null, force);
         }
 
@@ -275,10 +315,13 @@ namespace ProjectTyrant
         }
 
         /// <summary>Kontrolle während der Aktivierung: abbrechen, Skill 5 s sperren (GW2), Kampftext „Unterbrochen“.</summary>
+        bool _hadTarget;
+
         public void Interrupt()
         {
             var s = CastingSkill;
             if (s == null) return;
+            Chain.Break();   // Fix-Lauf F1
             CancelCast();
             Queue.Cancel(Time.time);
             _cooldowns[s] = InterruptRule.LockedCooldown(GetCooldownRemaining(s));
@@ -306,6 +349,12 @@ namespace ProjectTyrant
 
         public void CancelAim()
         {
+            Ground.Reset();
+            CancelAimVisual();
+        }
+
+        void CancelAimVisual()
+        {
             AimingSkill = null; _aimSlot = -1;
             if (_aimRing != null) _aimRing.SetActive(false);
         }
@@ -314,24 +363,56 @@ namespace ProjectTyrant
         {
             var s = AimingSkill;
             if (s == null) return false;
-            Vector3 p = AimPoint;
+            UpdateAim();
+            Vector3 p = AimPoint; bool outside = AimOutOfRange;
             CancelAim();
+            if (outside) { Fail(s, "Außer Reichweite – abgebrochen", false); return false; }   // „Auf maximale Reichweite begrenzen“ aus
             return TryCast(s, false, p);
         }
+
+        /// <summary>Zielpunkt aus Cursor/Fadenkreuz nach den Bodenziel-Regeln (Einrasten, Reichweite).</summary>
+        bool ResolveGroundPoint(SkillDefinition s, out Vector3 point)
+        {
+            Vector3 cursor;
+            var rig = ThirdPersonCameraRig.Current;
+            if (rig != null && rig.TryGetGroundPoint(out var gp)) cursor = gp;
+            else cursor = transform.position + transform.forward * Mathf.Min(6f, s.Range);
+            Vector3? target = _targeting != null && _targeting.Current != null && !_targeting.Current.IsDead && _self.IsHostileTo(_targeting.Current) ? _targeting.Current.transform.position : (Vector3?)null;
+            bool ok = Ground.Resolve(transform.position, cursor, s.Range, target, out point, out bool clamped);
+            AimClamped = clamped; AimOutOfRange = !ok;
+            if (!ok) { var d = cursor - transform.position; d.y = 0f; point = transform.position + d.normalized * s.Range; }
+            point = ZoneAnchors.GroundAt(point);
+            return ok;
+        }
+        public bool AimOutOfRange { get; private set; }
+
+        // Reichweitenring für „Sofort mit Reichweitenanzeige“
+        GameObject _rangeRing; float _rangeFlash;
+        void ShowRangeRing(float range)
+        {
+            var lib = VfxLibrary.Current;
+            if (lib == null || lib.GroundMarker == null || !Application.isPlaying) return;
+            if (_rangeRing == null)
+            {
+                _rangeRing = GameObject.CreatePrimitive(PrimitiveType.Quad); _rangeRing.name = "GroundTargetRange";
+                Destroy(_rangeRing.GetComponent<Collider>()); _rangeRing.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
+                var r = _rangeRing.GetComponent<Renderer>(); r.sharedMaterial = lib.GroundMarker;
+                var mpb = new MaterialPropertyBlock(); mpb.SetColor("_Color", new Color(1f, 1f, 1f, 0.35f)); mpb.SetFloat("_Fill", 0f); mpb.SetFloat("_Pulse", 0f); r.SetPropertyBlock(mpb);
+            }
+            _rangeRing.SetActive(true);
+            _rangeRing.transform.position = transform.position + Vector3.up * 0.08f;
+            _rangeRing.transform.localScale = new Vector3(range * 2f, range * 2f, 1f);
+        }
+        void HideRangeRing() { if (_rangeRing != null) _rangeRing.SetActive(false); if (!IsAiming && _aimRing != null) _aimRing.SetActive(false); }
 
         void UpdateAim()
         {
             var s = AimingSkill;
             if (s == null) return;
-            Vector3 p;
-            var rig = ThirdPersonCameraRig.Current;
-            if (rig != null && rig.TryGetGroundPoint(out var gp)) p = gp;
-            else p = transform.position + transform.forward * Mathf.Min(6f, s.Range);
-            Vector3 d = p - transform.position; d.y = 0f;
-            AimClamped = d.magnitude > s.Range;
-            if (AimClamped) p = transform.position + d.normalized * s.Range;
-            AimPoint = ZoneAnchors.GroundAt(p);
-            ShowAimRing(AimPoint, s.Radius, AimClamped);
+            ResolveGroundPoint(s, out var p);
+            AimPoint = p;
+            if (Ground.PreviewVisible(Time.time)) ShowAimRing(AimPoint, s.Radius, AimClamped || AimOutOfRange);
+            else if (_aimRing != null && _rangeFlash <= 0f) _aimRing.SetActive(false);
         }
 
         void ShowAimRing(Vector3 pos, float radius, bool clamped)
@@ -405,7 +486,8 @@ namespace ProjectTyrant
             ChannelSkill = tl != null && tl.Channel && s.Hits > 1 ? s : null;
             _busyByAuto = IsAutoAttack(s);
             Mechanic?.OnCast(s);
-            if (target != null && _mover != null) _mover.FacingOverride = target.transform.position;
+            if (target != null && _mover != null && !IsAutoAttack(s)) _mover.FacingOverride = target.transform.position;
+            else if (target != null && _mover != null && !_mover.PlayerSteering) { var dir = target.transform.position - transform.position; dir.y = 0f; if (dir.sqrMagnitude > 0.01f) transform.rotation = Quaternion.LookRotation(dir); }   // Auto-Angriff: einmal zum Ziel drehen, nur wenn der Spieler steht
             CastStarted?.Invoke(s);
             if (CastRemaining <= 0f) CompleteCast();
             return true;

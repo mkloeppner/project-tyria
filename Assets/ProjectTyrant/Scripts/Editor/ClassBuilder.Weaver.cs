@@ -117,7 +117,7 @@ namespace ProjectTyrant.EditorTools
             d.SwapInCombat = false;
             var sets = new List<WeaponSet>();
             var kinds = new[] { WeaponKind.Staff, WeaponKind.ScepterFocus, WeaponKind.DaggerDagger };
-            var vis = new[] { WeaponVisual.Staff, WeaponVisual.ScepterFocus, WeaponVisual.DaggerDagger };
+            var vis = new[] { WeaponVisual.ElementStaff, WeaponVisual.ScepterFocus, WeaponVisual.DaggerDagger };   // M27: eigener Elementarstab (Meshy)
             var names = new[] { "Elementarstab", "Zepter & Fokus", "Doppeldolche" };
             for (int w = 0; w < 3; w++)
             {

@@ -11,7 +11,7 @@ namespace ProjectTyrant.EditorTools
     /// Lauf 4 – Welt-Fundament: Biom-Profile, Zonen-Definitionen (Portal-Kette), Welt-Definition, Core-Szene,
     /// Build-Einstellungen und das neue „Rebuild Everything“ (Daten → Startzone → Biom-Zonen → Core).
     /// </summary>
-    public static class WorldBuilder
+    public static partial class WorldBuilder
     {
         public const string ZoneDataDir = DataDir + "/Zones";
         public const string WorldPath = ZoneDataDir + "/PT_World.asset";
@@ -83,6 +83,7 @@ namespace ProjectTyrant.EditorTools
                 b.TreeDensity = 0.12f; b.RockDensity = 0.6f; b.TreeColor = C("#3a3230"); b.TrunkColor = C("#2a2220"); b.DeadTrees = true;
                 b.Weather = WeatherKind.AshWind; b.Ambient = AmbientKind.Embers;
             });
+            BuildBiomesLauf6();
             AssetDatabase.SaveAssets();
         }
 
@@ -157,10 +158,12 @@ namespace ProjectTyrant.EditorTools
             glut.Portals.Add(P("gluetoede_frostkamm", new Vector3(-510f, 0f, -30f), "frostkamm", "frostkamm_gluetoede"));
             glut.Tips.AddRange(new[] { "Lavarisse brennen – erst die Umwelt-Beherrschung macht sie passierbar.", "Das Meta-Ereignis „Sturm über der Glutöde“ verläuft in vier Phasen." });
 
+            var extra = BuildZonesLauf6(sonn, moor, frost, glut);   // Lauf 6: sechs neue Zonen, Grenzportale und Portalplatz in Silbermund
             foreach (var z in new[] { sonn, moor, frost, glut }) EditorUtility.SetDirty(z);
             var w = Asset<WorldDefinition>(WorldPath);
             w.StartZone = "sonnfurt";
             w.Zones = new List<ZoneDefinition> { sonn, moor, frost, glut };
+            w.Zones.AddRange(extra);
             w.Tips = new List<string> { "Mit M öffnest du die Karte – weiter herauszoomen zeigt den Kontinent.", "Wegmarken anderer Zonen kosten einen Aufschlag.", "In niedrigeren Zonen wirst du herabgestuft – Belohnungen bleiben fair.", "Drücke F an Portalen, Einblicken und beim Stallmeister." };
             EditorUtility.SetDirty(w);
             AssetDatabase.SaveAssets();
@@ -181,6 +184,9 @@ namespace ProjectTyrant.EditorTools
             var gm = systems.GetComponent<GameManager>();
             gm.Player = player.GetComponent<Combatant>();
             gm.World = LoadWorld();
+            // Lauf 6: Geschichte und Szenen am GameManager-Objekt (keine neuen Singletons)
+            var story = systems.AddComponent<StoryDirector>(); story.Database = StoryBuilder.Load();
+            systems.AddComponent<DialoguePlayer>();
             EditorSceneManager.SaveScene(scene, CorePath);
         }
 
@@ -236,7 +242,7 @@ namespace ProjectTyrant.EditorTools
             AnimGalleryBuilder.Build(); lap("QA-Szene Animationen");
             VfxKitBuilder.BuildAll(); VfxGalleryBuilder.Build(); lap("VFX-Baukasten + QA-Szene");
             DataBuilder.BuildAll(); lap("Daten");
-            ClassBuilder.BuildAll(); SkillTimelineBuilder.BuildAll(); lap("Klassen (Lauf 5)");
+            ClassBuilder.BuildAll(); StoryBuilder.BuildBundles(); SkillTimelineBuilder.BuildAll(); lap("Klassen (Lauf 5) + Bündel (Lauf 6)");
             AudioBuilder.BuildAll(); lap("Audio (Klänge, Musik, Stinger)");
             WorldEnemyBuilder.BuildAll(); lap("Gegner & Tiere (Lauf 4)");
             MountBuilder.BuildAll(); lap("Reittiere");
@@ -248,6 +254,8 @@ namespace ProjectTyrant.EditorTools
             var ids = new List<string>();
             foreach (var z in LoadWorld().Zones) if (!z.LegacyLayout) ids.Add(z.Id);
             foreach (var id in ids) { BiomeZoneBuilder.Build(Zone(id)); lap("Zone " + id); }
+            LoadingImageBuilder.BuildAll(); lap("Ladebilder");
+            StoryBuilder.BuildAll(true); lap("Geschichte + Sprache (Lauf 6)");
             BuildCore(); lap("Core");
             CharacterSelectBuilder.Build(); lap("Charakterauswahl");
             UpdateBuildSettings();

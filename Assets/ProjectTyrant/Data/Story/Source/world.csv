@@ -1,0 +1,78 @@
+Zone;Typ;Id;Name;X;Z;Radius;Npc;Extra
+# Späher: Radius = aufgedeckter Kartensektor (m), cx/cz = Sektor-Mitte (sonst Späher-Position)
+sonnfurt;Scout;sonnfurt_1;Späher Ansgar;-3;-39;60;sp_sonnfurt_1;cx=-10|cz=-50
+sonnfurt;Scout;sonnfurt_2;Späherin Wenke;-9;3;60;sp_sonnfurt_2;cx=0|cz=10
+sonnfurt;Scout;sonnfurt_3;Späher Udo;45;-45;60;sp_sonnfurt_3;cx=50|cz=-40
+nebelmoor;Scout;nebelmoor_1;Späherin Rieke;20;-345;220;sp_nebelmoor_1;cx=0|cz=-250
+nebelmoor;Scout;nebelmoor_2;Späher Kolja;-243;-144;220;sp_nebelmoor_2;cx=-250|cz=-120
+nebelmoor;Scout;nebelmoor_3;Späherin Mareike;67;27;220;sp_nebelmoor_3;cx=150|cz=-20
+nebelmoor;Scout;nebelmoor_4;Späher Ewald;-113;307;220;sp_nebelmoor_4;cx=-120|cz=250
+frostkamm;Scout;frostkamm_1;Späherin Ylva;31;-403;240;sp_frostkamm_1;cx=0|cz=-320
+frostkamm;Scout;frostkamm_2;Späher Torge;-253;-213;240;sp_frostkamm_2;cx=-220|cz=-180
+frostkamm;Scout;frostkamm_3;Späherin Svea;127;-53;240;sp_frostkamm_3;cx=200|cz=-100
+frostkamm;Scout;frostkamm_4;Späher Arvid;-173;247;240;sp_frostkamm_4;cx=-180|cz=200
+gluetoede;Scout;gluetoede_1;Späher Harm;-429;37;260;sp_gluetoede_1;cx=-350|cz=0
+gluetoede;Scout;gluetoede_2;Späherin Ilka;-193;-193;260;sp_gluetoede_2;cx=-180|cz=-180
+gluetoede;Scout;gluetoede_3;Späher Jorin;7;67;260;sp_gluetoede_3;cx=20|cz=40
+gluetoede;Scout;gluetoede_4;Späherin Dagny;227;267;260;sp_gluetoede_4;cx=200|cz=220
+# Neue Herzen (je Zone das vierte): tasks=Weg:Anzahl, bundle=Bündel:Ziele, emote=Emote, npc=Versatz x,z
+sonnfurt;Heart;heart_sonnfurt_mira;Sonnfurt sichern;-62;-66;20;mira;task=Füttere die Ziegen, lösche Glutnester mit dem Eimer und gib den Kindern einen Grund zum Jubeln.|level=2|tasks=Animals:4|animal=Bergziege|animalLabel=Ziege füttern|bundle=eimer:3|targetLabel=Glutnest gelöscht|emote=Jubeln|npc=4,4|value=0.12|kill=0.03
+nebelmoor;Heart;heart_moor_jaro;Hilf Fischer Jaro;-215;-110;28;jaro;task=Entschärfe die Fallen der Wilderer, versorge verletzte Reiher und brich Treibgut-Sperren mit der Harpune auf.|level=18|tasks=Disarm:4,Animals:3|animal=Reiher|animalLabel=Reiher versorgen|trapLabel=Wildererfalle entschärfen|bundle=harpune:3|targetLabel=Treibgut aufgebrochen|npc=5,3
+frostkamm;Heart;heart_frost_elva;Hilf Hirtin Elva;-150;200;26;elva;task=Füttere Elvas Ziegen, schichte Sandsäcke gegen den Rutschhang und zeig den Hirten, dass man hier noch tanzen kann.|level=27|tasks=Animals:4|animal=Bergziege|animalLabel=Ziege füttern|bundle=sandsack:3|targetLabel=Hang gesichert|emote=Tanzen|npc=4,-3
+gluetoede;Heart;heart_glut_brann;Unterstütze Feuerwache Brann;-170;-165;28;brann;task=Entschärfe Schlackenminen, lösche Glutbrände mit dem Eimer und löse Kombos gegen die Aschkrallen aus.|level=30|tasks=Disarm:5|trapLabel=Schlackenmine entschärfen|bundle=eimer:4|targetLabel=Glutbrand gelöscht|npc=-4,4
+# Sprecher bestehender Herz-NPCs (Sprechblase beim Ansprechen)
+sonnfurt;HeartNpc;heart_gerstenbrunn;;0;0;0;wilma
+sonnfurt;HeartNpc;heart_dornwacht;;0;0;0;kerla
+sonnfurt;HeartNpc;heart_elmhain;;0;0;0;bertold
+nebelmoor;HeartNpc;heart_moor_albin;;0;0;0;albin
+nebelmoor;HeartNpc;heart_moor_ilse;;0;0;0;ilse
+nebelmoor;HeartNpc;heart_moor_merle;;0;0;0;merle
+frostkamm;HeartNpc;heart_frost_bodo;;0;0;0;bodo
+frostkamm;HeartNpc;heart_frost_runa;;0;0;0;runa
+frostkamm;HeartNpc;heart_frost_saga;;0;0;0;saga
+gluetoede;HeartNpc;heart_glut_kaya;;0;0;0;kaya
+gluetoede;HeartNpc;heart_glut_oleg;;0;0;0;oleg
+gluetoede;HeartNpc;heart_glut_torvald;;0;0;0;torvald
+silberkueste;Scout;silberkueste_1;Späherin Lene;8;30;200;sp_silberkueste_1;cx=0|cz=40
+silberkueste;Scout;silberkueste_2;Späher Bodmar;95;-45;200;sp_silberkueste_2;cx=150|cz=-100
+silberkueste;Scout;silberkueste_3;Späherin Ines;-225;-160;200;sp_silberkueste_3;cx=-250|cz=-150
+silberkueste;Scout;silberkueste_4;Späher Quill;255;155;200;sp_silberkueste_4;cx=250|cz=150
+daemmerwald;Scout;daemmerwald_1;Späherin Ronja;16;-394;240;sp_daemmerwald_1;cx=0|cz=-300
+daemmerwald;Scout;daemmerwald_2;Späher Morten;-155;-174;240;sp_daemmerwald_2;cx=-200|cz=-100
+daemmerwald;Scout;daemmerwald_3;Späherin Tilde;26;286;240;sp_daemmerwald_3;cx=50|cz=250
+duenenmeer;Scout;duenenmeer_1;Späher Jamal;-434;-14;260;sp_duenenmeer_1;cx=-350|cz=0
+duenenmeer;Scout;duenenmeer_2;Späherin Leyla;-184;-74;260;sp_duenenmeer_2;cx=-150|cz=-100
+duenenmeer;Scout;duenenmeer_3;Späher Tarik;236;186;260;sp_duenenmeer_3;cx=250|cz=200
+kristalltiefe;Scout;kristalltiefe_1;Späherin Wiska;16;-354;220;sp_kristalltiefe_1;cx=0|cz=-250
+kristalltiefe;Scout;kristalltiefe_2;Späher Grim;-144;-34;220;sp_kristalltiefe_2;cx=-150|cz=0
+kristalltiefe;Scout;kristalltiefe_3;Späherin Elin;126;206;220;sp_kristalltiefe_3;cx=150|cz=150
+himmelsspitzen;Scout;himmelsspitzen_1;Späher Aurel;26;-394;240;sp_himmelsspitzen_1;cx=0|cz=-300
+himmelsspitzen;Scout;himmelsspitzen_2;Späherin Wolke;-194;86;240;sp_himmelsspitzen_2;cx=-200|cz=100
+himmelsspitzen;Scout;himmelsspitzen_3;Späher Falk;16;236;240;sp_himmelsspitzen_3;cx=0|cz=250
+tyrannenfeste;Scout;tyrannenfeste_1;Späherin Greta;16;-374;220;sp_tyrannenfeste_1;cx=0|cz=-300
+tyrannenfeste;Scout;tyrannenfeste_2;Späher Konrad;6;-254;220;sp_tyrannenfeste_2;cx=0|cz=-150
+tyrannenfeste;Scout;tyrannenfeste_3;Späherin Asta;6;26;220;sp_tyrannenfeste_3;cx=0|cz=150
+silberkueste;Heart;heart_kueste_fischer;Hilf Fischerin Wenda;-200;250;26;wenda;task=Versorge verletzte Reiher, brich Treibgut-Sperren mit der Harpune auf und jubel den Kindern beim Bootsrennen zu.|level=30|tasks=Animals:3|animal=Reiher|animalLabel=Reiher versorgen|bundle=harpune:3|targetLabel=Treibgut aufgebrochen|emote=Jubeln|npc=4,3
+daemmerwald;Heart;heart_wald_laternen;Hilf Laternenträger Ivo;100;-60;26;ivo;task=Entschärfe Wildererfallen und trag Laternen zu den Wächtersteinen.|level=30|tasks=Disarm:4|trapLabel=Falle entschärfen|bundle=laterne:3|targetLabel=Laterne gesetzt|npc=4,3
+duenenmeer;Heart;heart_duene_oase;Hilf Brunnenhüter Samir;-240;-140;24;samir;task=Tränke die Kamele, lösche Glutnester mit dem Eimer und entschärfe Räuberfallen.|level=30|tasks=Animals:3,Disarm:3|animal=Bergziege|animalLabel=Tier tränken|bundle=eimer:3|targetLabel=Glutnest gelöscht|npc=4,-3
+kristalltiefe;Heart;heart_tiefe_laternen;Hilf Lampenmeisterin Nell;60;-200;24;nell;task=Trag Laternen in die dunklen Stollen und entschärfe alte Sprengfallen.|level=30|tasks=Disarm:4|trapLabel=Sprengfalle entschärfen|bundle=laterne:3|targetLabel=Stollen erleuchtet|npc=4,3
+himmelsspitzen;Heart;heart_himmel_kinder;Hilf Nestwächterin Pia;150;120;24;pia;task=Füttere die Greifenküken, schichte Sandsäcke gegen den Wind und wink den Wächtern auf den Türmen zu.|level=30|tasks=Animals:4|animal=Bergziege|animalLabel=Küken füttern|bundle=sandsack:3|targetLabel=Windschutz gebaut|emote=Winken|npc=4,3
+tyrannenfeste;Heart;heart_feste_bresche;Hilf Pionierin Kaja;-120;-200;26;kaja;task=Entschärfe Siegelfallen, lösche Brände mit dem Eimer und verbinde verwundete Pioniere.|level=30|tasks=Disarm:4,Revive:2|trapLabel=Siegelfalle entschärfen|bundle=eimer:3|targetLabel=Brand gelöscht|npc=4,3
+silberkueste;HeartNpc;heart_kueste_hafen;;0;0;0;gorran
+silberkueste;HeartNpc;heart_kueste_markt;;0;0;0;ysolde
+silberkueste;HeartNpc;heart_kueste_leuchtturm;;0;0;0;bastian
+daemmerwald;HeartNpc;heart_wald_fenn;;0;0;0;fenn
+daemmerwald;HeartNpc;heart_wald_hira;;0;0;0;hira
+daemmerwald;HeartNpc;heart_wald_oda;;0;0;0;oda
+duenenmeer;HeartNpc;heart_duene_nadira;;0;0;0;nadira
+duenenmeer;HeartNpc;heart_duene_qasir;;0;0;0;imra
+duenenmeer;HeartNpc;heart_duene_glas;;0;0;0;faris
+kristalltiefe;HeartNpc;heart_tiefe_brom;;0;0;0;brom
+kristalltiefe;HeartNpc;heart_tiefe_lys;;0;0;0;lys
+kristalltiefe;HeartNpc;heart_tiefe_fischer;;0;0;0;tamo
+himmelsspitzen;HeartNpc;heart_himmel_sela;;0;0;0;sela
+himmelsspitzen;HeartNpc;heart_himmel_nest;;0;0;0;aya
+himmelsspitzen;HeartNpc;heart_himmel_bucht;;0;0;0;rhea
+tyrannenfeste;HeartNpc;heart_feste_lager;;0;0;0;marit
+tyrannenfeste;HeartNpc;heart_feste_tore;;0;0;0;ulf
+tyrannenfeste;HeartNpc;heart_feste_kammern;;0;0;0;edric

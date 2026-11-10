@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: wildhueter_bestienbund_W1c
   DisplayName: Blutrausch
-  Description: Abschluss der Kette mit Zusatzeffekt.
+  Description: 'Kettenabschluss: +40 % Schaden, 2 Blutung.'
   ShortLabel: Fangza. III
   IconColor: {r: 0.78, g: 0.38, b: 0.2, a: 1}
   Icon: {fileID: 0}
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 3
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.82
+  ChainBonus: 1
+  ChainRoot: {fileID: 11400000, guid: 30d4a1fa6cf355b428e78310a04a3d58, type: 2}
+  Coefficient: 0.962
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -40,7 +42,7 @@ MonoBehaviour:
   TargetBuffs:
   - Type: 13
     Stacks: 2
-    Duration: 5
+    Duration: 6.56
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0

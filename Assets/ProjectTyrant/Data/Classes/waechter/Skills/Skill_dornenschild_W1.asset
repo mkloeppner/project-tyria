@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: waechter_dornenschild_W1
   DisplayName: Dornenfunke
   Description: Grundangriff auf bis zu 20 m; Blutung (1). Projektil-Finisher.
-  ShortLabel: Dornen.
+  ShortLabel: Dornen. I
   IconColor: {r: 0.3, g: 0.85, b: 0.45, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 20
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.72
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 0.952
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -40,7 +42,7 @@ MonoBehaviour:
   TargetBuffs:
   - Type: 13
     Stacks: 1
-    Duration: 4
+    Duration: 6
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
@@ -71,7 +73,9 @@ MonoBehaviour:
     SfxCharge: Smaragd/Charge
     SfxRelease: Smaragd/Swing1
     SfxImpact: Smaragd/Impact
-  Chain: []
+  Chain:
+  - {fileID: 11400000, guid: 5aabbf15cb2d28d49b8e66176c4d0189, type: 2}
+  - {fileID: 11400000, guid: d13884ed7b50fc949b9fdfc14857621a, type: 2}
   Palette: 26
   PaletteExplicit: 1
   WeaponStyleOverride: Scepter

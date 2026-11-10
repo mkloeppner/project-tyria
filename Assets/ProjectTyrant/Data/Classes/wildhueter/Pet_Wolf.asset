@@ -21,7 +21,7 @@ MonoBehaviour:
   ArmorFactor: 1.6
   HealthFactor: 1
   MaxHealth: 0
-  AttackCoefficient: 2.6
+  AttackCoefficient: 2.99
   AttackRange: 2.4
   AttackInterval: 1.6
   AttackWindup: 0.6

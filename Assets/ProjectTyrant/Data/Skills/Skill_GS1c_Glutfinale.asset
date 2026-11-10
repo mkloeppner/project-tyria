@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: GS1c_Glutfinale
   DisplayName: Glutfinale
-  Description: 'Abschluss der Kette: Hieb von oben, 1 Verwundbarkeit und 1 Brennen (3 s).'
+  Description: 'Kettenabschluss: +40 % Schaden, trifft bis zu 3 Ziele, 1 Macht.'
   ShortLabel: Glut III
   IconColor: {r: 0.95, g: 0.45, b: 0.18, a: 1}
   Icon: {fileID: 0}
@@ -29,8 +29,10 @@ MonoBehaviour:
   Delivery: 0
   Range: 3.2
   Radius: 2.5
-  TargetCount: 5
-  Coefficient: 0.88
+  TargetCount: 3
+  ChainBonus: 1
+  ChainRoot: {fileID: 11400000, guid: e79cfaf7a69e817489c836ed3e1eb014, type: 2}
+  Coefficient: 0.9883999
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -41,10 +43,10 @@ MonoBehaviour:
   - Type: 24
     Stacks: 1
     Duration: 5
-  - Type: 14
+  SelfBuffs:
+  - Type: 4
     Stacks: 1
-    Duration: 3
-  SelfBuffs: []
+    Duration: 8
   ShareWithAllies: 0
   CleanseCount: 0
   Special: 0
@@ -70,7 +72,7 @@ MonoBehaviour:
     VfxRelease: Release/Glut/S
     VfxProjectile: Trail/Glut/S
     VfxImpact: Impact/Glut/S
-    VfxAfter: 
+    VfxAfter: Aura/Glut/S
     SfxCharge: Glut/Charge
     SfxRelease: Glut/Swing3
     SfxImpact: Glut/Impact

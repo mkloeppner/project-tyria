@@ -107,6 +107,7 @@ namespace ProjectTyrant
 
         bool HandleEscape()
         {
+            if (DialogueEscape()) return true;   // Lauf 6: Szene → „Überspringen?“
             // Lauf 5 / M24 (GW2): Menü/Optionen zuerst; sonst Kontext → Dialog → Fenster; ohne Ziel öffnet Esc das Spielmenü
             if (GameMenu != null && GameMenu.IsOpen) { GameMenu.Model.Escape(false); return true; }
             if (ContextMenu != null && ContextMenu.IsOpen) { ContextMenu.Close(); return true; }

@@ -21,6 +21,15 @@ namespace ProjectTyrant
         public Vector3 Position;
     }
 
+    /// <summary>Fix-Lauf F1: Ankunfts-Wegmarke je Eingang (Charakterstart/Spawn, Portal-Ankunft) – vom Builder geprüft (≤ 40 m) und ggf. angelegt.</summary>
+    [Serializable]
+    public class ZoneArrivalInfo
+    {
+        public string Entrance;      // "spawn" oder "portal:<Id>"
+        public Vector3 Position;     // Ankunftspunkt
+        public string WaypointId;
+    }
+
     /// <summary>Gebiet innerhalb einer Zone (Gebietsname-Einblendung, Gegnerstufe).</summary>
     [Serializable]
     public class ZoneRegionInfo
@@ -49,7 +58,9 @@ namespace ProjectTyrant
         [Tooltip("Rechteck auf der Kontinentkarte (0..1)")] public Rect ContinentRect = new Rect(0.1f, 0.1f, 0.2f, 0.2f);
         public Color ContinentColor = new Color(0.4f, 0.6f, 0.3f);
         public List<ZoneWaypointInfo> Waypoints = new List<ZoneWaypointInfo>();
+        [Tooltip("Fix-Lauf F1: Eingang → Ankunfts-Wegmarke (Builder)")] public List<ZoneArrivalInfo> Arrivals = new List<ZoneArrivalInfo>();
         public List<string> Tips = new List<string>();
+        [Tooltip("M27: Ladebildschirm-Illustration (Builder-Aufnahme vom Aussichtspunkt)")] public Texture2D LoadingImage;
         public List<ZoneRegionInfo> Regions = new List<ZoneRegionInfo>();
         [Header("Weltboss/Meta-Timer (Lauf 4)")]
         public string TimerLabel;

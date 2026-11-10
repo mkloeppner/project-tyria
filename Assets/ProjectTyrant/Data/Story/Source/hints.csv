@@ -1,0 +1,28 @@
+Id;Titel;Text;Taste
+dodge;Ausweichen;Weiche roten Warnkreisen und großen Hieben aus. Ausweichen kostet Ausdauer (gelbe Leiste) und macht kurz unverwundbar.;V
+skills;Waffenfertigkeiten;Die Tasten 1–5 sind die Fertigkeiten deiner Waffe. 1 greift automatisch weiter an.;1–5
+heal;Heilen;Die Taste 6 ist deine Heilfertigkeit. Nutze sie früh, nicht erst kurz vor dem Fall.;6
+swap;Waffenwechsel;Wechsle im Kampf die Waffe, um neue Fertigkeiten zu bekommen.;^ / Y
+interact;Interagieren;Mit F sprichst du, hebst auf und benutzt Dinge in der Welt.;F
+heart;Herzen;Herzen zeigen Leute, die Hilfe brauchen. Jeder Beitrag zählt: Gegner, Aufgaben, Gegenstände.;
+waypoint;Wegmarken;Wegmarken sind Schnellreisepunkte. Öffne die Karte (M) und klicke eine Wegmarke an.;M
+event;Ereignisse;Ereignisse passieren ohne dich weiter. Mach mit – Gold-, Silber- und Bronzemedaille zeigen deinen Beitrag.;
+downed;Am Boden;Fällst du, kannst du mit 1–4 weiterkämpfen. Besiegst du einen Gegner, stehst du wieder auf. Verbündete können dich mit F wiederbeleben.;F
+combo;Kombos;Feuer auf dem Boden ist ein Feld. Schlägst du mit einem Finisher hindurch, entsteht eine Kombo.;
+equip;Ausrüstung;Lege bessere Ausrüstung im Inventar (I) per Doppelklick an.;I
+scout;Späher;Späher kennen ihre Gegend. Sprich mit ihnen, und sie zeigen dir Herzen und Wege auf der Karte.;F
+traits;Eigenschaften;Im Heldenfenster (H) wählst du Eigenschaften. Sie verändern, wie deine Fertigkeiten wirken.;H
+cleanse;Zustände reinigen;Zustände wie Gift schaden dir dauerhaft. Manche Fertigkeiten und Heilungen entfernen sie.;
+mount;Reittiere;Mit X steigst du auf dein Reittier. Leertaste nutzt seine Fähigkeit.;X
+glide;Gleiten;Springe in der Luft erneut, um zu gleiten. Aufwinde tragen dich nach oben.;Leertaste
+defiance;Trotzleiste;Starke Gegner haben eine Trotzleiste. Kontrolle (Betäuben, Zurückstoßen) bricht sie – dann sind sie wehrlos.;
+worldboss;Weltbosse;Weltbosse erscheinen nach einem Zeitplan. Die Kontinentkarte zeigt, wann.;M
+mastery;Beherrschungen;Ab Stufe 30 fließt Erfahrung in Beherrschungen. Wähle eine Linie im Heldenfenster.;H
+meta;Meta-Ereignisse;Meta-Ereignisse haben mehrere Phasen. Die ganze Karte arbeitet zusammen.;
+elite;Elite-Spezialisierung;Ab Stufe 30 kannst du eine Elite-Spezialisierung freischalten (H → Eigenschaften, dritter Platz).;H
+story_instance;Story-Instanz;Das ist deine eigene Instanz. Fällst du, beginnst du am letzten Kontrollpunkt neu.;
+story_portal;Persönliche Geschichte;Der grüne Stern führt dich durch deine Geschichte. Grüne Portale öffnen Story-Instanzen.;
+bundle;Bündel;Aufgehobene Gegenstände ersetzen deine Fertigkeiten 1–5. Mit 5 legst du sie wieder ab.;5
+emote;Emotes;Mit Enter öffnest du den Chat. /winken, /jubeln, /tanzen, /verbeugen und /sitzen sind Emotes.;Enter
+interrupt;Unterbrechen;Wer einen Zauber vorbereitet, lässt sich mit Kontrolle unterbrechen.;
+escort;Eskorte;Bleib bei den Leuten, die du begleitest – sie folgen dir.;

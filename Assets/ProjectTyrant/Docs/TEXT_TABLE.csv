@@ -1,0 +1,179 @@
+﻿Id;Sprecher;Emotion;Kamera;Text;Woerter;Sprachdatei
+K01_S01_L01;alda;Besorgt;total;Rauch über dem Feld! Das ist keine Ernte, die da brennt.;11;K01_S01_L01
+K01_S01_L02;held;Entschlossen;nah;Aschkrallen. Ich hole die Tiere raus. Du läufst zum Weiler.;10;K01_S01_L02
+K01_S01_L03;alda;Besorgt;links;Du hast eine Mistgabel und ein Abendessen im Bauch. Das ist kein Plan.;13;K01_S01_L03
+K01_S01_L04;held;Neutral;rechts;Mehr brauche ich nicht. Lauf, Alda.;6;K01_S01_L04
+K01_S01_L04@Charme;held;Amuesiert;rechts;Dann sollen sie sich vor meinem Abendessen fürchten. Lauf, Alda.;10;K01_S01_L04_v_Charme
+K01_S01_L04@Wildheit;held;Zornig;rechts;Die Mistgabel reicht. Für den Anfang. Lauf!;7;K01_S01_L04_v_Wildheit
+K01_S01_L05;orsk;Zornig;total;Feuer an der Straße! Das ist der Karren aus Sonnfurt.;10;K01_S01_L05
+K01_S01_L06;held;Entschlossen;nah;Plünderer. Ich sehe vier, vielleicht fünf.;6;K01_S01_L06
+K01_S01_L07;orsk;Besorgt;links;Und ich sehe einen Rekruten, der noch nie ernst gemacht hat.;11;K01_S01_L07
+K01_S01_L08;held;Entschlossen;rechts;Dann ist heute mein erster Tag.;6;K01_S01_L08
+K01_S01_L08@Charme;held;Amuesiert;rechts;Dann wird das ein denkwürdiger erster Tag, Wachtmeister.;8;K01_S01_L08_v_Charme
+K01_S01_L09;elmar;Besorgt;total;Leg die Schriftrolle hin. Ganz langsam. Wir haben Besuch.;9;K01_S01_L09
+K01_S01_L10;held;Besorgt;nah;Aschkrallen? Hier draußen gibt es nichts zu holen.;8;K01_S01_L10
+K01_S01_L11;elmar;Neutral;links;Außer uns. Und den Steinen, nach denen sie so eifrig graben.;11;K01_S01_L11
+K01_S01_L12;held;Entschlossen;rechts;Dann graben sie heute umsonst.;5;K01_S01_L12
+K01_S01_L13;held;Entschlossen;nah;In Bewegung bleiben. Ihren Hieben ausweichen. Dann zurückschlagen.;8;K01_S01_L13
+K01_S01E_L01;mira;Besorgt;rechts;Da bist du ja! Ich hab dich zweimal für tot erklärt. Einmal laut.;13;K01_S01E_L01
+K01_S01E_L02;held;Neutral;links;Ich war beschäftigt. Sie haben Säcke mitgenommen. Und Leute.;9;K01_S01E_L02
+K01_S01E_L03;mira;Zornig;rechts;Den alten Joss und die Zwillinge vom Mühlbach.;8;K01_S01E_L03
+K01_S01E_C1_A;held;Amuesiert;links;Dann holen wir sie zurück. Du bringst die Liste, ich die Fäuste.;12;K01_S01E_C1_A
+K01_S01E_C1_B;held;Entschlossen;links;Wir bringen sie heim. Alle drei.;6;K01_S01E_C1_B
+K01_S01E_C1_C;held;Zornig;links;Ich jage sie. Bis zum letzten Plünderer.;7;K01_S01E_C1_C
+K01_S01E_R1;mira;Amuesiert;rechts;Die Liste ist schon fertig. Die Fäuste prüfe ich noch.;10;K01_S01E_R1
+K01_S01E_R2;mira;Besorgt;rechts;Du sagst das so ruhig. Das macht mir ein bisschen Angst.;11;K01_S01E_R2
+K01_S01E_R3;mira;Besorgt;rechts;Bis zum Lager reicht. Über den Rest reden wir danach.;10;K01_S01E_R3
+K01_S01E_L04;mira;Entschlossen;rechts;Erst der Weiler. Die Leute brauchen Wasser, Verbände und jemanden, der nicht schreit.;13;K01_S01E_L04
+K01_S01E_L05;held;Amuesiert;links;Das Schreien übernimmst dann du?;5;K01_S01E_L05
+K01_S01E_L06;mira;Amuesiert;rechts;Nur, wenn es organisiert ist.;5;K01_S01E_L06
+K01_S02E_L01;mira;Neutral;blase;Die Scheune steht, die Brunnen laufen. Ich führe jetzt eine Liste über dich.;13;K01_S02E_L01
+K01_S02E_L02;mira;Amuesiert;blase;Spalte eins: unerwartet nützlich. Spalte zwei ist noch leer.;9;K01_S02E_L02
+K01_S03_L01;mira;Besorgt;rechts;Die Spuren führen zum alten Steinbruch. Da haben sie ihr Lager.;11;K01_S03_L01
+K01_S03_L02;held;Entschlossen;links;Du bleibst hier und zählst, wer herauskommt.;7;K01_S03_L02
+K01_S03_L03;mira;Zornig;rechts;Ich zähle auch, wer nicht herauskommt. Sieh zu, dass du nicht dabei bist.;13;K01_S03_L03
+K01_S03E_L01;brennar;Neutral;total;Sauber. Unordentlich, aber sauber.;4;K01_S03E_L01
+K01_S03E_L02;held;Besorgt;nah;Wer seid Ihr?;3;K01_S03E_L02
+K01_S03E_L03;brennar;Neutral;nah;Brennar Feld. Hauptmann der Dornwacht. Ich jage diese Bande seit drei Wochen.;12;K01_S03E_L03
+K01_S03E_L04;brennar;Amuesiert;nah;Du hast sie an einem Nachmittag eingeholt. Das ärgert mich ein wenig.;12;K01_S03E_L04
+K01_S03E_L05;mira;Entschlossen;links;Joss und die Zwillinge sind frei. Schreibt das auf, Hauptmann.;10;K01_S03E_L05
+K01_S03E_L06;brennar;Neutral;nah;Ich schreibe nichts auf. Ich lade ein. Komm nach Dornwacht, wenn deine Wunden zu sind.;15;K01_S03E_L06
+K01_S03E_C1_A;held;Amuesiert;nah;Gibt es dort Abendessen?;4;K01_S03E_C1_A
+K01_S03E_C1_B;held;Entschlossen;nah;Ich komme. Die Aschkrallen sind noch nicht fertig.;8;K01_S03E_C1_B
+K01_S03E_C1_C;held;Zornig;nah;Nur, wenn ich den nächsten Anführer selbst erledige.;8;K01_S03E_C1_C
+K01_S03E_R1;brennar;Amuesiert;nah;Es gibt Eintopf. Ob das Abendessen ist, entscheidet jeder selbst.;10;K01_S03E_R1
+K01_S03E_R2;brennar;Entschlossen;nah;Nein. Und wir auch nicht.;5;K01_S03E_R2
+K01_S03E_R3;brennar;Neutral;nah;Ehrgeiz. Gut. Den schleifen wir dir noch zurecht.;8;K01_S03E_R3
+K01_J;held;Neutral;;Die Aschkrallen überfielen Sonnfurt, und ich blieb. Mira zählte die Leute, ich holte sie zurück. Hauptmann Brennar lädt mich nach Dornwacht ein.;22;
+K01_J@Hof;held;Neutral;;Die Aschkrallen haben unseren Hof angezündet. Ich habe die Tiere gerettet und danach die Nachbarn. Ein Hauptmann namens Brennar hat mich nach Dornwacht eingeladen.;24;
+K01_J@Posten;held;Neutral;;An meinem ersten Tag auf dem Posten brannte die Straße. Orsk hat geflucht, ich habe gekämpft. Hauptmann Brennar will mich in Dornwacht sehen.;23;
+K01_J@Ruinen;held;Neutral;;Die Aschkrallen gruben in Elmhains Ruinen nach Steinen. Magister Elmar und ich haben sie gestört. Hauptmann Brennar will mich in Dornwacht sehen.;22;
+K02_S01_L01;brennar;Neutral;rechts;Pünktlich. Und mit Wunden, die zu sind. Du hörst wenigstens zu.;11;K02_S01_L01
+K02_S01_L02;held;Neutral;links;Ihr habt von einer Einladung gesprochen.;6;K02_S01_L02
+K02_S01_L03;brennar;Neutral;rechts;Die Dornwacht nimmt jeden, der bleibt, wenn es unangenehm wird. Die meisten bleiben nicht.;14;K02_S01_L03
+K02_S01_L04;brennar;Besorgt;rechts;Die Aschkrallen greifen in der Nacht die Palisade an. Mehr als sonst. Jemand führt sie.;15;K02_S01_L04
+K02_S01_C1_A;held;Amuesiert;links;Dann bleibe ich. Unangenehm kann ich.;6;K02_S01_C1_A
+K02_S01_C1_B;held;Entschlossen;links;Dann bleibe ich. Die Palisade fällt nicht.;7;K02_S01_C1_B
+K02_S01_C1_C;held;Zornig;links;Dann bleibe ich. Und finde den, der sie führt.;9;K02_S01_C1_C
+K02_S01_R1;brennar;Amuesiert;rechts;Mira hat mich gewarnt. Sie hat eine Liste.;8;K02_S01_R1
+K02_S01_R2;brennar;Entschlossen;rechts;Sag das nicht. Halt es einfach.;6;K02_S01_R2
+K02_S01_R3;brennar;Neutral;rechts;Erst die Palisade. Dann die Jagd. In dieser Reihenfolge.;9;K02_S01_R3
+K02_S01_L05;brennar;Neutral;rechts;Kämpf mit den anderen. Feuer auf dem Boden, Klinge hindurch. So wird aus zwei Schlägen einer.;16;K02_S01_L05
+K02_S02E_L01;brennar;Neutral;blase;Die Palisade steht. Du hast den anderen Platz gelassen. Das lernt hier kaum einer.;14;K02_S02E_L01
+K02_S03_L01;mira;Entschlossen;rechts;Ich komme mit. Keine Diskussion. Ich habe Verbände und eine sehr laute Stimme.;13;K02_S03_L01
+K02_S03_L02;held;Besorgt;links;Grolmoks Lager ist kein Weiler, Mira.;6;K02_S03_L02
+K02_S03_L03;mira;Amuesiert;rechts;Deshalb komme ich ja mit. Weiler kann ich allein.;9;K02_S03_L03
+K02_S03_L04;brennar;Neutral;total;Wenn jemand fällt, bleibt ihr stehen und holt ihn hoch. Niemand bleibt liegen.;13;K02_S03_L04
+K02_S03M_L01;mira;Besorgt;blase;Hilf mir hoch … nur kurz … die Liste ist noch nicht fertig.;13;K02_S03M_L01
+K02_S03E_L01;grolmok;Zornig;nah;Ihr glaubt, ihr habt gewonnen? Ihr habt einen Hund geschlagen. Der Herr ist woanders.;14;K02_S03E_L01
+K02_S03E_L02;held;Zornig;nah;Welcher Herr?;2;K02_S03E_L02
+K02_S03E_L03;grolmok;Trauernd;nah;Der Herold … er hat uns die Feste versprochen. Und den, der darunter schläft.;14;K02_S03E_L03
+K02_S03E_L04;grolmok;Trauernd;nah;Er ruft ihn wach. Dann zählt ihr eure Dörfer nicht mehr.;11;K02_S03E_L04
+K02_S03E_L05;mira;Besorgt;links;Er ist tot. Und er hatte Angst. Nicht vor uns.;10;K02_S03E_L05
+K02_S04_L01;brennar;Besorgt;rechts;Der Herold. Ich habe den Namen zuletzt vor zwanzig Jahren gehört. Auf dem Pass.;14;K02_S04_L01
+K02_S04_L02;held;Neutral;links;Wer ist er?;3;K02_S04_L02
+K02_S04_L03;brennar;Neutral;rechts;Einer, der früher die Feste im Osten bewacht hat. Er hat aufgehört, Wächter zu sein.;15;K02_S04_L03
+K02_S04_L04;brennar;Neutral;rechts;Im Nebelmoor gibt es einen Gelehrten, der mehr weiß als gut für ihn ist. Tovin. Finde ihn.;17;K02_S04_L04
+K02_S04_C1_A;held;Amuesiert;links;Ein Gelehrter. Ich nehme Kekse mit.;6;K02_S04_C1_A
+K02_S04_C1_B;held;Entschlossen;links;Ich breche morgen auf.;4;K02_S04_C1_B
+K02_S04_C1_C;held;Zornig;links;Und wenn er nicht reden will?;6;K02_S04_C1_C
+K02_S04_R1;brennar;Amuesiert;rechts;Nimm Tinte mit. Gelehrte kann man nicht bestechen. Nur beschäftigen.;10;K02_S04_R1
+K02_S04_R2;brennar;Neutral;rechts;Heute Nacht schläfst du. Morgen brichst du auf. Das ist ein Befehl.;12;K02_S04_R2
+K02_S04_R3;brennar;Zornig;rechts;Dann hörst du zu, bis er will. Wir sind nicht die Aschkrallen.;12;K02_S04_R3
+K02_J;held;Neutral;;Ich habe mit der Dornwacht die Palisade gehalten und Grolmoks Lager gestürmt. Mira ist gefallen und wieder aufgestanden. Grolmok nannte sterbend den Herold.;23;
+K03_S01E_L01;merle;Neutral;blase;Neu im Moor? Bleib auf den Stegen. Was daneben liegt, gehört dem Moor.;13;K03_S01E_L01
+K03_S02_L01;merle;Besorgt;rechts;Der Giftnebel kriecht zum Fischerdorf. Ohne Boot kommt da keiner hin.;11;K03_S02_L01
+K03_S02_L02;held;Neutral;links;Ich habe gehört, ihr vermietet Skimmer.;6;K03_S02_L02
+K03_S02_L03;merle;Amuesiert;rechts;Vermieten ist ein großes Wort. Wir leihen sie Leuten, die zurückkommen.;11;K03_S02_L03
+K03_S02E_L01;merle;Neutral;blase;Du bist zurückgekommen. Das Boot auch. Ich mag dich.;9;K03_S02E_L01
+K03_S03_L01;tovin;Besorgt;rechts;Nicht stehen bleiben! Da, wo du stehst, war gerade eine sehr wichtige Spur.;13;K03_S03_L01
+K03_S03_L02;held;Amuesiert;links;Du bist Tovin.;3;K03_S03_L02
+K03_S03_L03;tovin;Neutral;rechts;Gelehrter Tovin Aschgrau. Zweiter Band, dritte Fußnote. Brennar schickt dich, nicht wahr?;12;K03_S03_L03
+K03_S03_L04;tovin;Entschlossen;rechts;Diese Steine sind ein Siegel. Ein Ring aus Siegeln, quer über das Land.;13;K03_S03_L04
+K03_S03_L05;tovin;Besorgt;rechts;Jemand bricht sie. Eins nach dem anderen. Wie Knöpfe an einem Mantel.;12;K03_S03_L05
+K03_S03_C1_A;held;Amuesiert;links;Und unter dem Mantel?;4;K03_S03_C1_A
+K03_S03_C1_B;held;Neutral;links;Was hält das Siegel fest?;5;K03_S03_C1_B
+K03_S03_C1_C;held;Zornig;links;Wer bricht sie? Ich will einen Namen.;7;K03_S03_C1_C
+K03_S03_R1;tovin;Besorgt;rechts;Ein König. Ein sehr alter. Und sehr schlecht gelaunt.;9;K03_S03_R1
+K03_S03_R2;tovin;Neutral;rechts;Einen König aus der Zeit vor den Karten. Vareth. So steht es in drei Texten, die sich sonst nie einig sind.;21;K03_S03_R2
+K03_S03_R3;tovin;Neutral;rechts;Der Herold. Aber er bricht sie nicht selbst. Er lässt brechen.;11;K03_S03_R3
+K03_S03_L06;tovin;Neutral;rechts;Das Gift im Nebel kommt aus dem gebrochenen Stein. Reinige dich, sonst denkst du bald in Pilzen.;17;K03_S03_L06
+K03_S04_L01;held;Entschlossen;links;Das Dorf zuerst. Dann reden wir über Könige.;8;K03_S04_L01
+K03_S04_L02;tovin;Amuesiert;rechts;Einverstanden. Ich halte die Laterne. Das ist meine Kernkompetenz.;9;K03_S04_L02
+K03_S04E_L01;tovin;Neutral;rechts;Alle draußen. Und das Siegel … ist nicht ganz tot. Es atmet noch.;13;K03_S04E_L01
+K03_S04E_L02;merle;Entschlossen;links;Dann hat das Moor heute zwei Mal Glück gehabt.;9;K03_S04E_L02
+K03_S04E_L03;tovin;Besorgt;rechts;Der nächste Stein liegt im Frostkamm. Auf dem Pass. Wer ihn bricht, weckt etwas Großes.;15;K03_S04E_L03
+K03_S04E_L04;held;Entschlossen;links;Dann sagen wir Brennar Bescheid.;5;K03_S04E_L04
+K03_J;held;Neutral;;Im Nebelmoor traf ich Tovin. Ein Ring aus Siegeln hält König Vareth unter der Erde, sagt er. Der Herold bricht die Siegel.;22;
+K04_S01E_L01;runa;Neutral;blase;Der Pass ist offen, aber nicht freundlich. Nutz die Aufwinde. Und schau nicht nach unten.;15;K04_S01E_L01
+K04_S02_L01;brennar;Entschlossen;rechts;Der Herold ist auf dem Pass. Er will das Siegel unter dem Frostschlund brechen.;14;K04_S02_L01
+K04_S02_L02;held;Besorgt;links;Und der Frostschlund?;3;K04_S02_L02
+K04_S02_L03;brennar;Neutral;rechts;Schläft noch. Wenn das Siegel fällt, wacht er auf. Wir halten die Kristalle klein.;14;K04_S02_L03
+K04_S03_L01;herold;Neutral;total;Hauptmann Feld. Du bist alt geworden. Ich nicht.;8;K04_S03_L01
+K04_S03_L02;brennar;Zornig;rechts;Du warst einer von uns. Du hast die Feste bewacht.;10;K04_S03_L02
+K04_S03_L03;herold;Neutral;links;Ich habe sie bewacht. Darum weiß ich, was in ihr wartet. Ordnung. Endlich Ordnung.;14;K04_S03_L03
+K04_S03_L04;held;Zornig;nah;Ordnung brennt keine Dörfer nieder.;5;K04_S03_L04
+K04_S03_L05;herold;Amuesiert;links;Nein. Das tut der Weg dorthin.;6;K04_S03_L05
+K04_S03_L06;brennar;Entschlossen;rechts;Brich seine Haltung. Erst dann trifft ihn auch irgendetwas.;9;K04_S03_L06
+K04_S03E_L01;herold;Neutral;links;Gut gekämpft. Aber der Stein ist schon gesprungen.;8;K04_S03E_L01
+K04_S03E_L02;brennar;Entschlossen;rechts;Lauf. Bring die anderen über den Pass. Ich halte ihn hier.;11;K04_S03E_L02
+K04_S03E_L03;held;Besorgt;nah;Nicht allein. Nicht jetzt.;4;K04_S03E_L03
+K04_S03E_L04;brennar;Neutral;rechts;Genau jetzt. Das ist der Moment, für den man bleibt. Geh.;11;K04_S03E_L04
+K04_S03E_L05;brennar;Trauernd;nah;Und sag Mira … ihre Liste war gut. Spalte zwei auch.;11;K04_S03E_L05
+K04_S04_L01;mira;Trauernd;rechts;Er hat dir den Befehl gegeben. Nicht mir. Nicht den anderen. Dir.;12;K04_S04_L01
+K04_S04_L02;held;Trauernd;links;Er hat gesagt, deine Liste war gut.;7;K04_S04_L02
+K04_S04_L03;mira;Trauernd;rechts;Natürlich war sie gut. Er stand ganz oben drauf.;9;K04_S04_L03
+K04_S04_C1_A;held;Neutral;links;Wir halten weiter. So, wie er es getan hätte.;9;K04_S04_C1_A
+K04_S04_C1_B;held;Zornig;links;Der Herold bezahlt dafür. Ich schwöre es.;7;K04_S04_C1_B
+K04_S04_C1_C;held;Trauernd;links;Erzähl mir von ihm. Von früher.;6;K04_S04_C1_C
+K04_S04_R1;mira;Entschlossen;rechts;Dann schreib ich ihn in die erste Zeile. Für immer.;10;K04_S04_R1
+K04_S04_R2;mira;Besorgt;rechts;Pass auf, dass du dabei nicht wie er wirst. Der Herold, meine ich.;13;K04_S04_R2
+K04_S04_R3;mira;Trauernd;rechts;Er hat mir Lesen beigebracht. Mit Dienstplänen. Ich habe sie gehasst.;11;K04_S04_R3
+K04_S04_L04;mira;Entschlossen;rechts;Die Glutöde. Dort sammeln sich alle, die noch kämpfen wollen. Dorthin gehen wir.;13;K04_S04_L04
+K04_J;held;Trauernd;;Auf dem Pass haben wir den Herold gestellt. Brennar hat die Linie gehalten, damit wir entkommen. Er ist nicht zurückgekommen.;20;
+SP_sonnfurt_1_L01;sp_sonnfurt_1;Besorgt;;Die Felder um Gerstenbrunn brennen nicht mehr, aber Wilma braucht jede Hand. Plünderer schleichen noch an den Zäunen.;18;SP_sonnfurt_1_L01
+SP_sonnfurt_1_L02;sp_sonnfurt_1;Amuesiert;;Im Weiler führt Mira Buch über alles. Sag ihr, ich habe die Brunnen gezählt. Zweimal.;15;SP_sonnfurt_1_L02
+SP_sonnfurt_2_L01;sp_sonnfurt_2;Entschlossen;;Dornwacht hält die Straße, solange die Palisade steht. Kerla repariert schneller, als die Aschkrallen anzünden.;15;SP_sonnfurt_2_L01
+SP_sonnfurt_2_L02;sp_sonnfurt_2;Amuesiert;;Wer Hauptmann Brennar sucht: Er steht immer dort, wo es am meisten zieht.;13;SP_sonnfurt_2_L02
+SP_sonnfurt_3_L01;sp_sonnfurt_3;Besorgt;;In Elmhains Ruinen graben Aschkrallen nach Steinen mit Zeichen. Bertold sagt, die Steine summen nachts.;15;SP_sonnfurt_3_L01
+SP_sonnfurt_3_L02;sp_sonnfurt_3;Neutral;;Ich sage nur: Ich schlafe nicht mehr dort. Und Udo schläft eigentlich überall.;13;SP_sonnfurt_3_L02
+SP_nebelmoor_1_L01;sp_nebelmoor_1;Neutral;;Willkommen im Nebelmoor. Bleib auf den Bohlen, das Moor behält, was es kriegt.;13;SP_nebelmoor_1_L01
+SP_nebelmoor_1_L02;sp_nebelmoor_1;Amuesiert;;Ilse sticht Torf im Süden. Sie flucht wie ein Fuhrmann, aber sie zahlt anständig.;14;SP_nebelmoor_1_L02
+SP_nebelmoor_2_L01;sp_nebelmoor_2;Besorgt;;Die Schilfwacht sieht alles, was sich im Röhricht bewegt. Meistens Kröten. Manchmal nicht.;13;SP_nebelmoor_2_L01
+SP_nebelmoor_2_L02;sp_nebelmoor_2;Zornig;;Wilderer legen Fallen im Schilf aus. Fischer Jaro räumt sie weg und tritt selbst hinein.;15;SP_nebelmoor_2_L02
+SP_nebelmoor_3_L01;sp_nebelmoor_3;Neutral;;Am Nebelkreuz treffen sich vier Stege und doppelt so viele Gerüchte.;11;SP_nebelmoor_3_L01
+SP_nebelmoor_3_L02;sp_nebelmoor_3;Besorgt;;Merle setzt Leute über den Fluss. Ihre Fischer werden von Spuckern belagert.;12;SP_nebelmoor_3_L02
+SP_nebelmoor_4_L01;sp_nebelmoor_4;Neutral;;Auf der Weidenhöhe wächst das beste Moorkraut. Albin flickt dort Zäune gegen alles mit Zähnen.;15;SP_nebelmoor_4_L01
+SP_nebelmoor_4_L02;sp_nebelmoor_4;Amuesiert;;Weiter nördlich beginnt der Frostkamm. Nimm einen Mantel mit. Nimm zwei.;11;SP_nebelmoor_4_L02
+SP_frostkamm_1_L01;sp_frostkamm_1;Besorgt;;Der Frostkamm frisst Wanderer, die ohne Führer gehen. Runa führt dich, wenn du Holz bringst.;15;SP_frostkamm_1_L01
+SP_frostkamm_1_L02;sp_frostkamm_1;Neutral;;Und lass die Eiswölfe in Ruhe. Sie lassen dich auch in Ruhe. Meistens.;13;SP_frostkamm_1_L02
+SP_frostkamm_2_L01;sp_frostkamm_2;Amuesiert;;Im Lager zählen wir Finger statt Münzen. Wer noch alle zehn hat, gilt als reich.;15;SP_frostkamm_2_L01
+SP_frostkamm_2_L02;sp_frostkamm_2;Besorgt;;Bodo gräbt im Osten Kristallerz. Seine Stollen knarren lauter als mein Rücken.;12;SP_frostkamm_2_L02
+SP_frostkamm_3_L01;sp_frostkamm_3;Entschlossen;;Der Kammpass ist der einzige Weg nach Norden. Wer ihn hält, hält den Frostkamm.;14;SP_frostkamm_3_L01
+SP_frostkamm_3_L02;sp_frostkamm_3;Besorgt;;Letzte Nacht stand ein Mann in Grau auf dem Grat. Er warf keinen Schatten.;14;SP_frostkamm_3_L02
+SP_frostkamm_4_L01;sp_frostkamm_4;Neutral;;Im Eiswind läuten Sagas Glocken. Verstimmt klingen sie wie Wölfe.;10;SP_frostkamm_4_L01
+SP_frostkamm_4_L02;sp_frostkamm_4;Amuesiert;;Elva hütet ihre Ziegen am Hang. Sie redet mit ihnen mehr als mit uns, und sie antworten.;17;SP_frostkamm_4_L02
+SP_gluetoede_1_L01;sp_gluetoede_1;Amuesiert;;Die Glutöde heißt so, weil sie glüht. Wir haben lange über den Namen nachgedacht.;14;SP_gluetoede_1_L01
+SP_gluetoede_1_L02;sp_gluetoede_1;Neutral;;Kaya sammelt Glutkristalle im Westen. Sie braucht Leute mit dicken Handschuhen.;11;SP_gluetoede_1_L02
+SP_gluetoede_2_L01;sp_gluetoede_2;Besorgt;;Im Schlackenfeld legen Aschkrallen Minen aus Schlacke. Feuerwache Brann räumt sie, eine nach der anderen.;15;SP_gluetoede_2_L01
+SP_gluetoede_2_L02;sp_gluetoede_2;Entschlossen;;Wenn es unter deinem Stiefel klickt: nicht nachsehen. Rennen.;9;SP_gluetoede_2_L02
+SP_gluetoede_3_L01;sp_gluetoede_3;Amuesiert;;Torvalds Glutschmiede brennt seit dreihundert Jahren. Er behauptet, er sei nicht ganz so alt.;14;SP_gluetoede_3_L01
+SP_gluetoede_3_L02;sp_gluetoede_3;Besorgt;;Seine Kühlrinnen lecken. Hilf ihm, bevor er die halbe Schmiede flutet.;11;SP_gluetoede_3_L02
+SP_gluetoede_4_L01;sp_gluetoede_4;Neutral;;Am Sturmauge schlagen Blitze in den Sand und machen Glas daraus. Oleg sammelt die Stücke.;15;SP_gluetoede_4_L01
+SP_gluetoede_4_L02;sp_gluetoede_4;Amuesiert;;Seine Blitzableiter fallen dauernd um. Der Sturm hat einen eigenen Kopf.;11;SP_gluetoede_4_L02
+HZ_heart_gerstenbrunn_L01;wilma;Besorgt;;Die Plünderer haben meine Zäune zerlegt und die Vorratskisten verstreut. Jede Hand zählt!;13;HZ_heart_gerstenbrunn_L01
+HZ_heart_dornwacht_L01;kerla;Entschlossen;;Die Palisade hält, wenn wir sie halten. Hammer oder Verband, nimm dir eins.;13;HZ_heart_dornwacht_L01
+HZ_heart_elmhain_L01;bertold;Besorgt;;Vorsicht mit den Relikten! Manche sind älter als die Karten, auf denen du stehst.;14;HZ_heart_elmhain_L01
+HZ_heart_sonnfurt_mira_L01;mira;Amuesiert;;Die Ziegen haben Hunger, die Glutnester qualmen, und die Kinder brauchen einen Grund zum Jubeln. Steht alles auf meiner Liste.;20;HZ_heart_sonnfurt_mira_L01
+HZ_heart_moor_albin_L01;albin;Neutral;;Die Weidenzäune halten nichts mehr ab. Nicht mal Kräuterdiebe, und die sind langsam.;13;HZ_heart_moor_albin_L01
+HZ_heart_moor_ilse_L01;ilse;Zornig;;Torf sticht sich nicht von allein. Und die Stege reparieren sich auch nicht!;13;HZ_heart_moor_ilse_L01
+HZ_heart_moor_merle_L01;merle;Besorgt;;Meine Fischer sind verletzt, die Reusen versunken, und die Spucker lachen sich krumm. Hilf mir!;15;HZ_heart_moor_merle_L01
+HZ_heart_moor_jaro_L01;jaro;Zornig;;Wilderer! Ihre Fallen liegen überall im Schilf. Die Reiher treten hinein. Ich auch.;13;HZ_heart_moor_jaro_L01
+HZ_heart_frost_bodo_L01;bodo;Besorgt;;Die Stollen geben nach. Stütz sie ab, bevor der Berg es sich anders überlegt.;14;HZ_heart_frost_bodo_L01
+HZ_heart_frost_runa_L01;runa;Neutral;;Holz, Decken und Leute, die warm bleiben. Mehr braucht ein Lager nicht.;12;HZ_heart_frost_runa_L01
+HZ_heart_frost_saga_L01;saga;Besorgt;;Die Windglocken singen falsch. Wenn sie schweigen, kommt der Schnee.;10;HZ_heart_frost_saga_L01
+HZ_heart_frost_elva_L01;elva;Amuesiert;;Meine Ziegen frieren, und der Hang rutscht. Säcke stapeln, Ziegen füttern, und ein Tänzchen wärmt alle.;16;HZ_heart_frost_elva_L01
+HZ_heart_glut_kaya_L01;kaya;Entschlossen;;Glutkristalle verbrennen dir die Finger und retten uns den Winter. Sammeln, bitte.;12;HZ_heart_glut_kaya_L01
+HZ_heart_glut_oleg_L01;oleg;Besorgt;;Die Blitzableiter liegen wieder im Sand. Stell sie auf, bevor der Himmel zuschlägt.;13;HZ_heart_glut_oleg_L01
+HZ_heart_glut_torvald_L01;torvald;Zornig;;Die Kühlrinnen lecken! Wenn die Schmiede kocht, kochen wir mit.;10;HZ_heart_glut_torvald_L01
+HZ_heart_glut_brann_L01;brann;Entschlossen;;Schlackenminen im Feld, Glutbrände am Rand. Eimer nehmen, Minen entschärfen, nichts anfassen, was klickt.;14;HZ_heart_glut_brann_L01

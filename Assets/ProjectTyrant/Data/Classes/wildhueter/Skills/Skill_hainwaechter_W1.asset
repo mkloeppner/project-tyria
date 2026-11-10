@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: wildhueter_hainwaechter_W1
   DisplayName: Mondstrahl
   Description: "Grundangriff auf bis zu 24 m; Verkr\xFCppelung (1). Projektil-Finisher. Heilt Verb\xFCndete nahe dem Ziel leicht."
-  ShortLabel: Mondst.
+  ShortLabel: Mondst. I
   IconColor: {r: 0.78, g: 0.88, b: 1, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 24
   Radius: 4
   TargetCount: 5
-  Coefficient: 0.72
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 0.694
   Hits: 1
   HitInterval: 0.25
   HealBase: 300
@@ -71,7 +73,9 @@ MonoBehaviour:
     SfxCharge: Mondlicht/Charge
     SfxRelease: Mondlicht/Swing1
     SfxImpact: Mondlicht/Impact
-  Chain: []
+  Chain:
+  - {fileID: 11400000, guid: 0db1575f439072b46a66fb9aa092ab6c, type: 2}
+  - {fileID: 11400000, guid: d786aafa08578c843838f610897d9f8a, type: 2}
   Palette: 11
   PaletteExplicit: 1
   WeaponStyleOverride: Staff

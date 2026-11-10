@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: schattenklinge_schattenhueter_W1
   DisplayName: Schattenbolzen
   Description: Grundangriff auf bis zu 22 m; Qual (1). Projektil-Finisher.
-  ShortLabel: Schatt.
+  ShortLabel: Schatt. I
   IconColor: {r: 0.5, g: 0.2, b: 0.8, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 22
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.72
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.526
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -40,7 +42,7 @@ MonoBehaviour:
   TargetBuffs:
   - Type: 18
     Stacks: 1
-    Duration: 4
+    Duration: 9.61
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
@@ -63,15 +65,17 @@ MonoBehaviour:
     Channel: 0
     Clip: Scepter_Auto1
     AnimScale: 1.3333334
-    VfxCharge: Charge/Tiefviolett/S
-    VfxRelease: Release/Tiefviolett/S
-    VfxProjectile: Projectile/Tiefviolett/S
-    VfxImpact: Impact/Tiefviolett/S
+    VfxCharge: Charge/Tiefviolett/L
+    VfxRelease: Release/Tiefviolett/L
+    VfxProjectile: Projectile/Tiefviolett/L
+    VfxImpact: Impact/Tiefviolett/L
     VfxAfter: 
     SfxCharge: Tiefviolett/Charge
     SfxRelease: Tiefviolett/Swing1
     SfxImpact: Tiefviolett/Impact
-  Chain: []
+  Chain:
+  - {fileID: 11400000, guid: fffdd3ffc57872142ac179a409c39375, type: 2}
+  - {fileID: 11400000, guid: 86eebf8704ad09d489195e750d4e4e12, type: 2}
   Palette: 21
   PaletteExplicit: 1
   WeaponStyleOverride: Scepter

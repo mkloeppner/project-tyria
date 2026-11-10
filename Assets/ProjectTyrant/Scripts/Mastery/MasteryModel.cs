@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ProjectTyrant
 {
-    public enum MasteryLine { Reittiere, Gleiten, Umwelt, Kommandant }
+    public enum MasteryLine { Reittiere, Gleiten, Umwelt, Kommandant, Greif }
 
     /// <summary>Kosten eines Rangs: Beherrschungs-EP (Training) + Beherrschungspunkte (Freischaltung).</summary>
     [System.Serializable]
@@ -82,6 +82,7 @@ namespace ProjectTyrant
                 case MasteryLine.Reittiere: return "Reittier-Training";
                 case MasteryLine.Gleiten: return "Gleiten";
                 case MasteryLine.Umwelt: return "Umweltkunde";
+                case MasteryLine.Greif: return "Greif";
                 default: return "Kommandant";
             }
         }
@@ -103,6 +104,8 @@ namespace ProjectTyrant
         public static float LavaFactor(MasteryModel m) => m.Has(MasteryLine.Umwelt, 3) ? 0f : 1f;
         public static bool SeesHiddenChests(MasteryModel m) => m.Has(MasteryLine.Umwelt, 4);
         public static bool AutoLoot(MasteryModel m) => m.Has(MasteryLine.Kommandant, 1);
+        public static bool GriffonDive(MasteryModel m) => m.Has(MasteryLine.Greif, 1);        // Lauf 6: Sturzflug
+        public static bool GriffonEndurance(MasteryModel m) => m.Has(MasteryLine.Greif, 2);   // Lauf 6: flacheres Gleiten
         public static float TravelDiscount(MasteryModel m) => m.Has(MasteryLine.Kommandant, 3) ? 0.4f : m.Has(MasteryLine.Kommandant, 2) ? 0.2f : 0f;
     }
 }

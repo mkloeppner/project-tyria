@@ -40,6 +40,16 @@ namespace ProjectTyrant
         public float Range = 3f;
         public float Radius = 2.5f;
         public int TargetCount = 5;
+        [Tooltip("Fix-Lauf F1: drittes Glied einer Auto-Angriffs-Kette (Bonus, Kampftext „Kettenabschluss“)")] public bool ChainBonus;
+        [Tooltip("Fix-Lauf F1: erstes Glied der Kette (für Glied 2/3; Tooltip zeigt alle Glieder)")] public SkillDefinition ChainRoot;
+        /// <summary>Kettenposition 1..n und Länge (1/1 ohne Kette).</summary>
+        public int ChainPosition(out int length)
+        {
+            var root = ChainRoot != null ? ChainRoot : this;
+            length = root.Chain != null ? root.Chain.Length + 1 : 1;
+            if (root == this) return 1;
+            int i = System.Array.IndexOf(root.Chain, this); return i < 0 ? 1 : i + 2;
+        }
         [Tooltip("Schadens-Koeffizient je Treffer (GW2: Waffenstärke × Kraft × Koeffizient / Rüstung).")]
         public float Coefficient = 1f;
         public int Hits = 1;

@@ -42,6 +42,7 @@ namespace ProjectTyrant
         public string PrimaryHex = "#C8A040", SecondaryHex = "#3050A0";
         public int ActiveAttunement;
         public readonly List<string> PetPair = new List<string>();
+        public StoryState Story = StoryState.NewCharacter(Origin.Hof, Trait.Wuerde, Lodestar.Raetsel);   // Lauf 6
 
         public SaveGameDto ToDto()
         {
@@ -54,6 +55,7 @@ namespace ProjectTyrant
                 ClassId = ClassId, CharacterName = CharacterName, EliteSpec = Traits.ActiveElite ?? "", PrimaryHex = PrimaryHex, SecondaryHex = SecondaryHex, ActiveAttunement = ActiveAttunement,
             };
             d.PetPair.AddRange(PetPair);
+            d.Story = Story;
             foreach (var kv in _fogs) d.ZoneFogs.Add(new ZoneFogDto { Zone = kv.Key, Size = kv.Value.WorldSize, Data = kv.Value.Serialize() });
             d.Completed.AddRange(Completed);
             foreach (var kv in Hearts) d.Hearts.Add(new HeartDto { Id = kv.Key, Progress = kv.Value });
@@ -65,6 +67,7 @@ namespace ProjectTyrant
         public void LoadDto(SaveGameDto d, ItemDatabase items, IList<SkillDefinition> skills)
         {
             if (d == null) return;
+            Story = d.Version < 4 || d.Story == null ? StoryState.Migrated() : d.Story;   // Lauf 6: alte Stände → Kapitel 1, Tutorial übersprungen
             Progression.Level = Mathf.Clamp(d.Level, 1, AttributeSet.MaxLevel);
             Progression.Xp = Mathf.Max(0, d.Xp);
             Progression.HeroPoints = d.HeroPoints; Progression.HeroPointsSpent = d.HeroPointsSpent;

@@ -24,6 +24,13 @@ namespace ProjectTyrant
         void Awake() { Instance = this; }
         void OnDestroy() { if (Instance == this) Instance = null; }
 
+        /// <summary>Wie <see cref="GroundAt"/>, meldet aber, ob dort überhaupt Boden ist (außerhalb der Karte: false).</summary>
+        public static bool TryGroundAt(Vector3 p, out Vector3 ground)
+        {
+            if (Physics.Raycast(new Vector3(p.x, 200f, p.z), Vector3.down, out var hit, 400f, 1, QueryTriggerInteraction.Ignore)) { ground = hit.point; return true; }
+            ground = p; return false;
+        }
+
         public static Vector3 GroundAt(Vector3 p)
         {
             if (Physics.Raycast(new Vector3(p.x, 200f, p.z), Vector3.down, out var hit, 400f, 1, QueryTriggerInteraction.Ignore))

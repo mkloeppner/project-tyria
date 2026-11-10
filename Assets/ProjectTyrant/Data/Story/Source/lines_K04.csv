@@ -1,0 +1,35 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K04_S01E_L01;runa;neutral;blase;Der Pass ist offen, aber nicht freundlich. Nutz die Aufwinde. Und schau nicht nach unten.;
+K04_S02_L01;brennar;entschlossen;rechts;Der Herold ist auf dem Pass. Er will das Siegel unter dem Frostschlund brechen.;
+K04_S02_L02;held;besorgt;links;Und der Frostschlund?;
+K04_S02_L03;brennar;neutral;rechts;Schläft noch. Wenn das Siegel fällt, wacht er auf. Wir halten die Kristalle klein.;
+K04_S02_C1_A;held;amuesiert;links;Klein halten. Wie Miras Ausgaben.;opt:1|tend:Charme|reply:K04_S02_R1
+K04_S02_C1_B;held;neutral;links;Sag mir, wo ich stehen soll.;opt:1|tend:Wuerde|reply:K04_S02_R2
+K04_S02_R1;brennar;amuesiert;rechts;Sag ihr das nicht. Sie führt auch über mich Buch.;reply
+K04_S02_R2;brennar;neutral;rechts;Neben mir. Wie immer.;reply
+K04_S03_L01;herold;neutral;total;Hauptmann Feld. Du bist alt geworden. Ich nicht.;
+K04_S03_L02;brennar;zornig;rechts;Du warst einer von uns. Du hast die Feste bewacht.;
+K04_S03_L03;herold;neutral;links;Ich habe sie bewacht. Darum weiß ich, was in ihr wartet. Ordnung. Endlich Ordnung.;
+K04_S03_L04;held;zornig;nah;Ordnung brennt keine Dörfer nieder.;
+K04_S03_L05;herold;amuesiert;links;Nein. Das tut der Weg dorthin.;
+K04_S03_L06;brennar;entschlossen;rechts;Brich seine Haltung. Erst dann trifft ihn auch irgendetwas.;
+K04_S03_C2_A;held;entschlossen;links;Dann brechen wir sie zusammen.;opt:2|tend:Wuerde|reply:K04_S03_R1
+K04_S03_C2_B;held;zornig;links;Ich breche ihm mehr als die Haltung.;opt:2|tend:Wildheit|reply:K04_S03_R2
+K04_S03_R1;brennar;entschlossen;rechts;Zusammen. So war es immer gedacht.;reply
+K04_S03_R2;herold;amuesiert;links;Versuch es. Viele haben es versucht.;reply
+K04_S03E_L01;herold;neutral;links;Gut gekämpft. Aber der Stein ist schon gesprungen.;
+K04_S03E_L02;brennar;entschlossen;rechts;Lauf. Bring die anderen über den Pass. Ich halte ihn hier.;
+K04_S03E_L03;held;besorgt;nah;Nicht allein. Nicht jetzt.;
+K04_S03E_L04;brennar;neutral;rechts;Genau jetzt. Das ist der Moment, für den man bleibt. Geh.;
+K04_S03E_L05;brennar;trauernd;nah;Und sag Mira … ihre Liste war gut. Spalte zwei auch.;
+K04_S04_L01;mira;trauernd;rechts;Er hat dir den Befehl gegeben. Nicht mir. Nicht den anderen. Dir.;
+K04_S04_L02;held;trauernd;links;Er hat gesagt, deine Liste war gut.;
+K04_S04_L03;mira;trauernd;rechts;Natürlich war sie gut. Er stand ganz oben drauf.;
+K04_S04_C1_A;held;neutral;links;Wir halten weiter. So, wie er es getan hätte.;opt:1|tend:Wuerde|flag:k04_schwur|reply:K04_S04_R1
+K04_S04_C1_B;held;zornig;links;Der Herold bezahlt dafür. Ich schwöre es.;opt:1|tend:Wildheit|flag:k04_rache|reply:K04_S04_R2
+K04_S04_C1_C;held;trauernd;links;Erzähl mir von ihm. Von früher.;opt:1|tend:Charme|flag:k04_erinnerung|reply:K04_S04_R3
+K04_S04_R1;mira;entschlossen;rechts;Dann schreib ich ihn in die erste Zeile. Für immer.;reply
+K04_S04_R2;mira;besorgt;rechts;Pass auf, dass du dabei nicht wie er wirst. Der Herold, meine ich.;reply
+K04_S04_R3;mira;trauernd;rechts;Er hat mir Lesen beigebracht. Mit Dienstplänen. Ich habe sie gehasst.;reply
+K04_S04_L04;mira;entschlossen;rechts;Die Glutöde. Dort sammeln sich alle, die noch kämpfen wollen. Dorthin gehen wir.;
+K04_J;held;trauernd;;Auf dem Pass haben wir den Herold gestellt. Brennar hat die Linie gehalten, damit wir entkommen. Er ist nicht zurückgekommen.;journal

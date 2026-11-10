@@ -203,6 +203,7 @@ namespace ProjectTyrant
             HookState();
             ApplyClassData(string.IsNullOrEmpty(dto.ClassId) ? "waechter" : dto.ClassId);   // Pool/Linien der Klasse vor dem Einlesen
             State.LoadDto(dto, Items, AllSkills);
+            int migrated = MigrateArrivalWaypoints(); if (migrated > 0) Debug.Log("[ProjectTyrant] Wegmarken-Migration: " + migrated + " Ankunfts-Wegmarken freigeschaltet");
             ApplyClassData(State.ClassId);
             InitRuntimeExtra();
             ApplyToPlayer(true);
@@ -220,6 +221,8 @@ namespace ProjectTyrant
             if (slot != null) { State.ClassId = slot.ClassId; State.CharacterName = slot.Name; State.PrimaryHex = slot.PrimaryHex; State.SecondaryHex = slot.SecondaryHex; }
             if (Account != null) { var d = State.ToDto(); AccountModel.ApplyAccount(Account, d); State.LoadDto(d, Items, AllSkills); if (slot != null) { State.ClassId = slot.ClassId; State.CharacterName = slot.Name; State.PrimaryHex = slot.PrimaryHex; State.SecondaryHex = slot.SecondaryHex; } }
             ApplyClassData(State.ClassId);
+            if (!State.Completed.Contains("wp_sonnfurt")) State.Completed.Add("wp_sonnfurt");   // Fix-Lauf F1: Sonnfurt ab Charaktererstellung frei
+            if (slot != null) State.Story = StoryState.NewCharacter((Origin)slot.Origin, (Trait)slot.Trait, (Lodestar)slot.Lodestar);   // Lauf 6: Biografie
             InitRuntimeExtra();
             ApplyToPlayer(false);
             Save("Neuer Charakter");

@@ -9,7 +9,7 @@ namespace ProjectTyrant.EditorTools
     /// Lauf 4 / M19: Ereignisse der Biom-Zonen (je ≥ 5) mit neuen Zieltypen Bauen, Benutzen, Jagd in Phasen, Weltboss;
     /// Weltboss-Kette „Frostschlund“ (15-min-Zyklus, 2 Vor-Ereignisse, 8 min Limit) und Meta „Sturm über der Glutöde“ (4 Phasen, 20-min-Zyklus).
     /// </summary>
-    public static class ZoneEventBuilder
+    public static partial class ZoneEventBuilder
     {
         static System.Func<float, float, float> _h;
         static ZoneDefinition _z;
@@ -60,6 +60,7 @@ namespace ProjectTyrant.EditorTools
                 case "nebelmoor": Moor(defendCrates); break;
                 case "frostkamm": Frost(); break;
                 case "gluetoede": Glut(defendCrates); break;
+                default: Lauf6Events(z.Id, defendCrates); break;   // Lauf 6: neue Zonen
             }
             EditorUtility.SetDirty(z);
             return _list.ToArray();

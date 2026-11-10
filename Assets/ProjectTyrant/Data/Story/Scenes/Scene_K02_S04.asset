@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857486e171c3fdf418f17427f4ad932e, type: 3}
+  m_Name: Scene_K02_S04
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.DialogueScript
+  Id: K02_S04
+  Form: 0
+  Left: held
+  Right: brennar
+  Backdrop: sonnfurt
+  Music: 
+  SkipAllowed: 1
+  Entries:
+  - Line: K02_S04_L01
+    CameraCue: rechts
+    AnimCue: 
+    VfxCue: 
+    SfxCue: 
+    Wait: 0
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    ChoiceIndex: -1
+  - Line: K02_S04_L02
+    CameraCue: links
+    AnimCue: 
+    VfxCue: 
+    SfxCue: 
+    Wait: 0
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    ChoiceIndex: -1
+  - Line: K02_S04_L03
+    CameraCue: rechts
+    AnimCue: 
+    VfxCue: 
+    SfxCue: 
+    Wait: 0
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    ChoiceIndex: -1
+  - Line: K02_S04_L04
+    CameraCue: rechts
+    AnimCue: 
+    VfxCue: 
+    SfxCue: 
+    Wait: 0
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    ChoiceIndex: 0
+  Choices:
+  - Prompt: 
+    Options:
+    - Line: K02_S04_C1_A
+      Tendency: 1
+      Flag: 
+      Reply: K02_S04_R1
+      SetPact: 0
+    - Line: K02_S04_C1_B
+      Tendency: 2
+      Flag: k02_frueh
+      Reply: K02_S04_R2
+      SetPact: 0
+    - Line: K02_S04_C1_C
+      Tendency: 3
+      Flag: 
+      Reply: K02_S04_R3
+      SetPact: 0
+  Cutscene: {fileID: 0}

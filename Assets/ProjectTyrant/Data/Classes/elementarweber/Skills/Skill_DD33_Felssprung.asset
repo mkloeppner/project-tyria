@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 9
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.80999994
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.62
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -40,7 +42,7 @@ MonoBehaviour:
   TargetBuffs:
   - Type: 13
     Stacks: 2
-    Duration: 6
+    Duration: 12
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
@@ -63,10 +65,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Dagger_Thrust
     AnimScale: 1.1904762
-    VfxCharge: Charge/Erde/M
-    VfxRelease: Release/Erde/M
+    VfxCharge: Charge/Erde/L
+    VfxRelease: Release/Erde/L
     VfxProjectile: 
-    VfxImpact: Impact/Erde/M
+    VfxImpact: Impact/Erde/L
     VfxAfter: 
     SfxCharge: Erde/Charge
     SfxRelease: Erde/Release

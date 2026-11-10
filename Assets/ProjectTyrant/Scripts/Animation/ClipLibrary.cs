@@ -383,6 +383,78 @@ namespace ProjectTyrant.Anim
                 .Key(1.2f, ""))
                 .AddMarker(Marker.Effect, 0.3f);
 
+            // Lauf 6: Gesprächs-Posen je Emotion (Oberkörper-Schleifen) und Emotes
+            B("Talk_Neutral", 2.5f, true, ClipLayer.UpperBody, (t, p) =>
+            {
+                float u = TwoPi * t / 2.5f;
+                p.R("UAR", -25f - 15f * Mathf.Max(0, Mathf.Sin(u)), 0, -10f); p.R("LAR", -55f - 12f * Mathf.Sin(u * 2f)); p.R("UAL", -10f * Mathf.Max(0, Mathf.Sin(u + 2f)), 0, -6f); p.R("LAL", -25f);
+                p.R("Hd", 3f * Mathf.Sin(u * 3f), 8f * Mathf.Sin(u), 0); p.R("S1", 0, 4f * Mathf.Sin(u), 0);
+            });
+            B("Talk_Entschlossen", 2.2f, true, ClipLayer.UpperBody, (t, p) =>
+            {
+                float u = TwoPi * t / 2.2f, beat = Mathf.Max(0, Mathf.Sin(u * 2f));
+                p.R("UAR", -55f - 25f * beat, 0, -18f); p.R("LAR", -85f + 20f * beat); p.R("HAR", 0, 0, -10f); p.R("UAL", -8f, 0, -10f); p.R("LAL", -20f);
+                p.R("S", -4f); p.R("S1", -3f, 6f * Mathf.Sin(u), 0); p.R("Hd", -6f + 4f * beat, 4f * Mathf.Sin(u), 0);
+            });
+            B("Talk_Besorgt", 3f, true, ClipLayer.UpperBody, (t, p) =>
+            {
+                float u = TwoPi * t / 3f;
+                p.R("UAR", -35f, 0, 25f); p.R("LAR", -110f + 6f * Mathf.Sin(u)); p.R("UAL", -35f, 0, -25f); p.R("LAL", -110f + 6f * Mathf.Sin(u + 1f));
+                p.R("S", 8f); p.R("S1", 4f); p.R("Hd", 12f + 3f * Mathf.Sin(u), 6f * Mathf.Sin(u * 0.5f), 4f);
+            });
+            B("Talk_Amuesiert", 2f, true, ClipLayer.UpperBody, (t, p) =>
+            {
+                float u = TwoPi * t / 2f, sh = Mathf.Abs(Mathf.Sin(u * 3f));
+                p.R("UAR", -20f, 0, -14f - 6f * sh); p.R("LAR", -70f); p.R("UAL", -20f, 0, 14f + 6f * sh); p.R("LAL", -70f);
+                p.R("S1", -5f - 3f * sh, 0, 2f * Mathf.Sin(u)); p.R("Hd", -10f - 4f * sh, 8f * Mathf.Sin(u * 0.5f), 6f);
+            });
+            B("Talk_Zornig", 1.8f, true, ClipLayer.UpperBody, (t, p) =>
+            {
+                float u = TwoPi * t / 1.8f, jab = Mathf.Max(0, Mathf.Sin(u * 2f));
+                p.R("UAR", -80f - 20f * jab, 0, -25f); p.R("LAR", -20f - 20f * (1f - jab)); p.R("HAR", 0, 0, 20f); p.R("UAL", -15f, 0, -20f); p.R("LAL", -95f);
+                p.R("S", -8f); p.R("S1", -4f, -8f, 0); p.R("Hd", -8f + 5f * jab, -6f, 0);
+            });
+            B("Talk_Trauernd", 4f, true, ClipLayer.UpperBody, (t, p) =>
+            {
+                float u = TwoPi * t / 4f;
+                p.R("UAR", 4f, 0, 4f); p.R("LAR", -12f); p.R("UAL", 4f, 0, -4f); p.R("LAL", -12f);
+                p.R("S", 14f + 2f * Mathf.Sin(u)); p.R("S1", 8f); p.R("Hd", 26f + 3f * Mathf.Sin(u), 0, 3f);
+            });
+            K("Emote_Winken", 1.6f, ClipLayer.UpperBody, k => k
+                .Key(0f, "")
+                .Key(0.3f, "UAR:-160,0,-35 LAR:-40 HAR:0,0,25 Hd:-5", 'b')
+                .Key(0.55f, "UAR:-160,0,-35 LAR:-20 HAR:0,0,-25 Hd:-5")
+                .Key(0.8f, "UAR:-160,0,-35 LAR:-40 HAR:0,0,25 Hd:-5")
+                .Key(1.05f, "UAR:-160,0,-35 LAR:-20 HAR:0,0,-25 Hd:-5")
+                .Key(1.6f, ""))
+                .AddMarker(Marker.Effect, 0.3f);
+            K("Emote_Jubeln", 1.2f, ClipLayer.UpperBody, k => k
+                .Key(0f, "")
+                .Key(0.3f, "UAL:-160,0,-30 UAR:-160,0,30 LAL:-20 LAR:-20 S:-8 Hd:-20", 'b')
+                .Key(0.6f, "UAL:-150,0,-20 UAR:-150,0,20 LAL:-50 LAR:-50 S:-5 Hd:-15")
+                .Key(0.9f, "UAL:-160,0,-30 UAR:-160,0,30 LAL:-20 LAR:-20 S:-8 Hd:-20")
+                .Key(1.2f, ""))
+                .AddMarker(Marker.Effect, 0.3f);
+            K("Emote_Verbeugen", 2.2f, ClipLayer.FullBody, k => k
+                .Key(0f, "")
+                .Key(0.6f, "S:45 S1:15 Hd:10 UAR:-20,0,-10 LAR:-90 UAL:15,0,-5 LAL:-10 ULL:-10 ULR:-10", 'o')
+                .Key(1.5f, "S:45 S1:15 Hd:10 UAR:-20,0,-10 LAR:-90 UAL:15,0,-5 LAL:-10 ULL:-10 ULR:-10")
+                .Key(2.2f, ""))
+                .AddMarker(Marker.Effect, 0.6f);
+            B("Emote_Tanzen", 1.6f, true, ClipLayer.FullBody, (t, p) =>
+            {
+                float u = TwoPi * t / 1.6f, b = Mathf.Sin(u), b2 = Mathf.Sin(u * 2f);
+                p.R("UAR", -120f + 30f * b, 0, -30f); p.R("LAR", -60f + 30f * b2); p.R("UAL", -120f - 30f * b, 0, 30f); p.R("LAL", -60f - 30f * b2);
+                p.R("ULL", -15f * Mathf.Max(0, b)); p.R("LLL", 30f * Mathf.Max(0, b)); p.R("ULR", -15f * Mathf.Max(0, -b)); p.R("LLR", 30f * Mathf.Max(0, -b));
+                p.R("S", 0, 10f * b, 4f * b2); p.R("Hd", -5f, -12f * b, 0); p.Root.y = 0.03f * Mathf.Abs(b2);
+            });
+            B("Emote_Sitzen", 3f, true, ClipLayer.FullBody, (t, p) =>
+            {
+                float b = Mathf.Sin(TwoPi * t / 3f);
+                new KeyTrack(p).Key(0, "ULL:-88,0,-10 ULR:-88,0,10 LLL:20 LLR:30 FTL:-20 FTR:-20 S:15 UAL:-15,0,-20 UAR:-15,0,20 LAL:-30 LAR:-30 root:0,-0.62,-0.1").Apply(0);
+                p.R("S", 2f * b); p.R("Hd", -2f * b, 10f * Mathf.Sin(TwoPi * t / 6f), 0);
+            });
+
             foreach (var st in Styles) WeaponClips(st, list, K);
             return list;
         }

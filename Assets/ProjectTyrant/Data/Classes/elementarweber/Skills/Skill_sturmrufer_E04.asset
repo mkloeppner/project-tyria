@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 0
   Radius: 4
   TargetCount: 5
-  Coefficient: 0.46
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.84
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -40,7 +42,7 @@ MonoBehaviour:
   TargetBuffs:
   - Type: 14
     Stacks: 2
-    Duration: 4
+    Duration: 16
   SelfBuffs:
   - Type: 4
     Stacks: 3
@@ -66,10 +68,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Scepter_Heavy
     AnimScale: 0.32051283
-    VfxCharge: Charge/Feuer/M
-    VfxRelease: Shockwave/Feuer/M
+    VfxCharge: Charge/Feuer/L
+    VfxRelease: Shockwave/Feuer/L
     VfxProjectile: 
-    VfxImpact: Impact/Feuer/M
+    VfxImpact: Impact/Feuer/L
     VfxAfter: Aura/Feuer/S
     SfxCharge: Feuer/Charge
     SfxRelease: Feuer/Release

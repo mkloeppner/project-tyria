@@ -1,0 +1,35 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K09_S01_L01;held;besorgt;nah;Kristalltiefe. Kein Licht außer den Kristallen. Und dieser Laterne.;
+K09_S01_L02;tovin;besorgt;rechts;Die blinden Jäger hören Schritte. Geh leise. Atme leise. Denk leise, wenn du kannst.;if:Pact=Archiv
+K09_S01_L03;haldis;entschlossen;rechts;Ich halte das Licht. Du hältst die Klinge. So einfach.;if:Pact=Wacht
+K09_S01_L04;veyra;neutral;rechts;Im Dunkeln bin ich zu Hause. Folge meiner Stimme. Nicht der anderen.;if:Pact=Schleier
+K09_S01_L05;held;neutral;links;Welche anderen?;
+K09_S01_L06;vareth;neutral;total;Kleiner Wächter. Du trägst Licht in mein Haus.;
+K09_S01_L07;vareth;neutral;total;Ich habe euch Ordnung gegeben. Ihr habt mich dafür begraben.;
+K09_S01_L08;held;besorgt;nah;Du hast Dörfer verbrannt. Das steht in jedem Buch.;
+K09_S01_L08@Raetsel;held;besorgt;nah;Ich kenne deine Stimme. Aus meinen Träumen. Seit ich ein Kind war.;
+K09_S01_L09;vareth;amuesiert;total;Bücher schreiben die Sieger. Ich werde bald wieder schreiben.;
+K09_S01_C1_A;held;zornig;links;Dann breche ich dir den Stift.;opt:1|tend:Wildheit|reply:K09_S01_R1
+K09_S01_C1_B;held;neutral;links;Nicht, solange ich stehe.;opt:1|tend:Wuerde|reply:K09_S01_R2
+K09_S01_C1_C;held;amuesiert;links;Für einen Begrabenen redest du ziemlich viel.;opt:1|tend:Charme|reply:K09_S01_R3
+K09_S01_R1;vareth;amuesiert;total;Mutig. Brennar war auch mutig. Wo ist er jetzt?;reply
+K09_S01_R2;vareth;neutral;total;Dann sorge ich dafür, dass du fällst.;reply
+K09_S01_R3;vareth;amuesiert;total;Ich hatte viel Zeit zum Üben.;reply
+K09_S01E_L01;held;entschlossen;nah;Die erste Hälfte des Schlüssels. Und eine Stimme, die nicht schlafen will.;
+K09_S02E_L01;sela;neutral;blase;Wer den Wind nicht fürchtet, darf zum Tempel. Wer ihn fürchtet, auch. Nur langsamer.;
+K09_S03_L01;sela;neutral;rechts;Sela, Himmelswächterin. Die zweite Hälfte liegt bei uns. Sie gehört dem, dem die Greifen vertrauen.;
+K09_S03_L02;held;neutral;links;Und wie gewinnt man das Vertrauen eines Greifen?;
+K09_S03_L03;sela;amuesiert;rechts;Man rettet ihre Eier vor Himmelspiraten. Das wirkt fast immer.;
+K09_S03_C2_A;held;amuesiert;links;Eier retten. Steht auch auf Miras Liste.;opt:2|tend:Charme|reply:K09_S03_R1
+K09_S03_C2_B;held;entschlossen;links;Zeig mir die Piraten.;opt:2|tend:Wildheit|reply:K09_S03_R2
+K09_S03_R1;sela;amuesiert;rechts;Mira? Die Briefe schreibt? Sie hat uns schon drei geschickt.;reply
+K09_S03_R2;sela;neutral;rechts;Gern. Sie zeigen sich ohnehin gleich selbst.;reply
+K09_S03E_L01;sela;neutral;rechts;Die Greifin hat entschieden. Sie fliegt mit dir. Behandle sie wie einen Freund, nicht wie ein Pferd.;
+K09_S04_L01;sela;neutral;rechts;Beide Hälften. Der Schlüssel öffnet die Siegelkammer der Feste. Und nur sie.;
+K09_S04_L02;held;entschlossen;links;Dann gehen wir zur Feste.;
+K09_S04_L03;sela;besorgt;rechts;Die Feste öffnet sich erst, wenn ihr bereit seid. Seid ihr es?;
+K09_S04_C3_A;held;entschlossen;links;Bereit oder nicht. Er wacht so oder so.;opt:3|tend:Wuerde|flag:k09_bereit|reply:K09_S04_R1
+K09_S04_C3_B;held;besorgt;links;Nein. Aber das war ich noch nie.;opt:3|tend:Charme|flag:k09_ehrlich|reply:K09_S04_R2
+K09_S04_R1;sela;neutral;rechts;Dann fliegt. Der Wind trägt euch bis zum schwarzen Fels.;reply
+K09_S04_R2;sela;amuesiert;rechts;Ehrliche Helden leben länger. Statistisch.;reply
+K09_J;held;entschlossen;;In der Kristalltiefe sprach Vareth zu mir. In den Himmelsspitzen gewann ich das Vertrauen einer Greifin. Der Schlüssel ist ganz.;journal

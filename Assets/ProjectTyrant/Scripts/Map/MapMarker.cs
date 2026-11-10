@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ProjectTyrant
 {
-    public enum MapMarkerKind { Waypoint, PointOfInterest, Vista, HeroChallenge, Heart, Vendor, Event, EventBoss, Ally, Target, Personal, Portal, Insight, WorldBoss }
+    public enum MapMarkerKind { Waypoint, PointOfInterest, Vista, HeroChallenge, Heart, Vendor, Event, EventBoss, Ally, Target, Personal, Portal, Insight, WorldBoss, Story, Scout }
     public enum MarkerState { Open, Done, Undiscovered, Contested, Inactive }
 
     /// <summary>Momentaufnahme eines Markers (Struct, keine Allokation je Frame).</summary>
@@ -69,6 +69,8 @@ namespace ProjectTyrant
                 case MapMarkerKind.Portal: return "Portal";
                 case MapMarkerKind.Insight: return "Beherrschungs-Einblick";
                 case MapMarkerKind.WorldBoss: return "Weltboss";
+                case MapMarkerKind.Story: return "Persönliche Geschichte";
+                case MapMarkerKind.Scout: return "Späher";
             }
             return "";
         }
@@ -92,6 +94,8 @@ namespace ProjectTyrant
                 case MapMarkerKind.Portal: return "map_portal";
                 case MapMarkerKind.Insight: return "map_insight";
                 case MapMarkerKind.WorldBoss: return "map_worldboss";
+                case MapMarkerKind.Story: return "map_story";
+                case MapMarkerKind.Scout: return "map_scout";
             }
             return "map_poi";
         }
@@ -100,7 +104,7 @@ namespace ProjectTyrant
         public static bool ShowOnMinimap(MapMarkerKind k) => true;
 
         /// <summary>Am Minimap-Rand festhalten, wenn außerhalb (Events, Bosse, Ziel, persönliche Wegmarke).</summary>
-        public static bool ClampOnMinimap(MapMarkerKind k) => k == MapMarkerKind.Event || k == MapMarkerKind.EventBoss || k == MapMarkerKind.Personal || k == MapMarkerKind.Target;
+        public static bool ClampOnMinimap(MapMarkerKind k) => k == MapMarkerKind.Event || k == MapMarkerKind.EventBoss || k == MapMarkerKind.Personal || k == MapMarkerKind.Target || k == MapMarkerKind.Story;
     }
 
     /// <summary>Statischer Szenen-Marker (vom Builder gesetzt). Status kann von anderen Komponenten über <see cref="StateProvider"/> geliefert werden.</summary>

@@ -81,8 +81,32 @@ namespace ProjectTyrant
             if (s.CleanseCount > 0) c.Add("Entfernt Zustände: " + s.CleanseCount, Fact, UiFactory.Sprite("fact_cleanse"));
             if (s.Field != ComboFieldType.None) c.Add("Combo-Feld: " + FieldName(s.Field), ComboFieldZone.FieldColor(s.Field) * 1.3f, UiFactory.Sprite("fact_field"));
             if (s.Finisher != ComboFinisherType.None) c.Add("Combo-Ende: " + FinisherName(s.Finisher), new Color(1f, 0.85f, 0.5f), UiFactory.Sprite("fact_finisher"));
+            // Fix-Lauf F1: Auto-Angriffs-Kette – alle Glieder mit Fakten (GW2-Darstellung „Kette“)
+            var root = s.ChainRoot != null ? s.ChainRoot : s;
+            if (root.Chain != null && root.Chain.Length > 0)
+            {
+                int pos = s.ChainPosition(out int len);
+                c.Add("Kette (" + len + " Glieder):", UiFactory.AccentColor);
+                for (int i = 0; i < len; i++)
+                {
+                    var link = i == 0 ? root : root.Chain[i - 1]; if (link == null) continue;
+                    string dmg = caster != null && link.Coefficient > 0f ? " – Schaden " + Mathf.RoundToInt(SkillHitDamage(link, caster)).ToString("N0") : " – Koeffizient " + link.Coefficient.ToString("0.00");
+                    string extra = link.ChainBonus ? " · Abschluss: " + BonusText(link, root) : "";
+                    c.Add((i + 1 == pos ? "▶ " : "   ") + (i + 1) + "/" + len + " " + link.DisplayName + dmg + extra, i + 1 == pos ? Fact : Gray);
+                }
+            }
             if (!string.IsNullOrEmpty(lockedInfo)) { c.Footer = lockedInfo; c.FooterColor = new Color(1f, 0.6f, 0.4f); }
             return c;
+        }
+
+        static string BonusText(SkillDefinition link, SkillDefinition root)
+        {
+            var parts = new System.Collections.Generic.List<string>();
+            if (root.Coefficient > 0f) parts.Add("+" + Mathf.RoundToInt((link.Coefficient / root.Coefficient - 1f) * 100f) + " %");
+            if (link.TargetCount != root.TargetCount) parts.Add(link.TargetCount + " Ziele");
+            foreach (var e in link.TargetBuffs) if (!root.TargetBuffs.Contains(e)) parts.Add((e.Stacks > 1 ? e.Stacks + " " : "") + EffectLibrary.Name(e.Type));
+            foreach (var e in link.SelfBuffs) if (!root.SelfBuffs.Contains(e)) parts.Add(EffectLibrary.Name(e.Type) + " (du)");
+            return string.Join(", ", parts);
         }
 
         static void AddEffectFact(TooltipContent c, EffectApplication e, Combatant caster)

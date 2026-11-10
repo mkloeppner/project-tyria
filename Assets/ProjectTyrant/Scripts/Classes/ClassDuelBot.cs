@@ -39,6 +39,10 @@ namespace ProjectTyrant
         EnemyArchetype _arch; Vector3 _arena; string _ownClass; bool _active; string _eliteId; bool _sigCast; float _sigShot;
         /// <summary>Captures der Signatur-Skills (Temp/PT_QA/m26_&lt;spez&gt;.png).</summary>
         public static bool CaptureSignatures = true;
+        /// <summary>M27: Messmodus – Gegner mit sehr viel Leben, Spieler unverwundbar (Schadensvergleich bei gleichem Gear ohne Niederlagen/Neuerscheinen; der Gegner bewegt sich und kämpft weiter, damit Nahkampf-Abstände realistisch bleiben).</summary>
+        public static bool PassiveDummy;
+        sealed class InvulnShield : IInvulnerabilitySource { public bool IsInvulnerable => PassiveDummy; }
+        static readonly InvulnShield Shield = new InvulnShield();
 
         void Start()
         {
@@ -52,7 +56,7 @@ namespace ProjectTyrant
             NextClass();
         }
 
-        void OnDestroy() { Application.logMessageReceived -= OnLog; Time.timeScale = 1f; Running = false; }
+        void OnDestroy() { Application.logMessageReceived -= OnLog; Time.timeScale = 1f; Running = false; if (_player != null) _player.InvulnerabilitySources.Remove(Shield); }
 
         void OnLog(string msg, string stack, LogType type) { if (_active && (type == LogType.Exception || type == LogType.Error)) _cur.Exceptions++; }
 
@@ -97,7 +101,8 @@ namespace ProjectTyrant
                 var sb2 = new StringBuilder(); for (int i = 0; i < Mathf.Min(6, dl.Count); i++) sb2.Append(dl[i].Key + " " + dl[i].Value.ToString("0") + "; ");
                 Debug.Log("[ProjectTyrant] Duell " + _cur + "\n   Schadensquellen: " + sb + "\n   Ausgeteilt: " + sb2 + " · abgewehrt/verfehlt " + _misses);
             }
-            _sources.Clear(); _dealt.Clear(); _misses = 0;
+            if (_misses2.Count > 0) { var ml = new List<KeyValuePair<string, int>>(_misses2); ml.Sort((a, b) => b.Value.CompareTo(a.Value)); var sb3 = new StringBuilder("[ProjectTyrant] Duell-Diagnose " + _cur.ClassId + ": "); for (int i = 0; i < Mathf.Min(6, ml.Count); i++) sb3.Append(ml[i].Key + " ×" + ml[i].Value + "; "); Debug.Log(sb3.ToString()); }
+            _sources.Clear(); _dealt.Clear(); _misses = 0; _misses2.Clear();
             _active = false;
         }
 
@@ -138,6 +143,8 @@ namespace ProjectTyrant
                 if (npc == null) return;
                 npc.LevelOverride = _player.Level + (_arch.Tier == EnemyTier.Veteran ? 1 : 0); npc.ApplyArchetype();
                 _enemy = npc.GetComponent<Combatant>(); _enemy.Damaged += OnEnemyDamaged;
+                // M27-Balancing: passiver Dummy (greift nicht an, sehr viel Leben) → reiner Schadensvergleich ohne Niederlagen und Neuerscheinen
+                if (PassiveDummy) { _enemy.MaxHealth = 5e7f; _enemy.SetHealth(_enemy.MaxHealth); if (!_player.InvulnerabilitySources.Contains(Shield)) _player.InvulnerabilitySources.Add(Shield); }
                 _player.Effects.ClearConditions(); _player.Heal(_player.MaxHealth);
             }
 
@@ -218,7 +225,8 @@ namespace ProjectTyrant
                 for (int k = 0; k < 12; k++)
                 {
                     float r = ring * 40f, a = k * 30f * Mathf.Deg2Rad;
-                    var p = ZoneAnchors.GroundAt(from + new Vector3(Mathf.Cos(a) * r, 30f, Mathf.Sin(a) * r));
+                    // QA-Fund F1-Dauertest: in kleinen Zonen (Sonnfurt) lagen Ringe neben der Karte → kein Boden, Spieler und Gegner fielen endlos
+                    if (!ZoneAnchors.TryGroundAt(from + new Vector3(Mathf.Cos(a) * r, 30f, Mathf.Sin(a) * r), out var p)) continue;
                     bool quiet = true;
                     foreach (var c in Combatant.All) if (c != null && !c.IsDead && c.Team == Team.Enemy && (c.transform.position - p).sqrMagnitude < 45f * 45f) { quiet = false; break; }
                     // QA-Fund M26: ein Platz in einem Felsen blockierte Geschosse und Nahkampf (DPS ~20) – Platz muss frei von Kollidern sein
@@ -234,13 +242,17 @@ namespace ProjectTyrant
             return from;
         }
 
+        /// <summary>M27-Diagnose: warum der Bot nicht wirkt (Reichweite/abgelehnt je Platz), im Duell-Log ausgegeben.</summary>
+        readonly Dictionary<string, int> _misses2 = new Dictionary<string, int>();
+        void Miss(string k) { _misses2.TryGetValue(k, out var v); _misses2[k] = v + 1; }
+
         bool TryCast(int slot)
         {
             var s = _caster.GetSkillInSlot(slot);
             if (s == null || _caster.GetCooldownRemaining(s) > 0f) return false;
-            if (s.Range > 0f && s.Delivery != SkillDelivery.Self && Vector3.Distance(_player.transform.position, _enemy.transform.position) > s.Range + 1f) return false;
+            if (s.Range > 0f && s.Delivery != SkillDelivery.Self && Vector3.Distance(_player.transform.position, _enemy.transform.position) > s.Range + 1f) { Miss("Reichweite " + slot); return false; }
             Vector3? ground = s.IsGroundTargeted ? _enemy.transform.position : (Vector3?)null;
-            if (!_caster.TryCast(s, true, ground)) return false;
+            if (!_caster.TryCast(s, true, ground)) { Miss("abgelehnt " + slot + " " + s.DisplayName); return false; }
             _cur.Casts++; return true;
         }
     }

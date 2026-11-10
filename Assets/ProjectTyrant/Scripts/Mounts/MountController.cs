@@ -11,6 +11,8 @@ namespace ProjectTyrant
     public class MountController : MonoBehaviour
     {
         public readonly MountMotor Motor = new MountMotor();
+        public readonly GriffonFlight Griffon = new GriffonFlight();   // Lauf 6
+        bool _diveArmed;
         public static MountController Local { get; private set; }
 
         PlayerController _pc;
@@ -180,6 +182,7 @@ namespace ProjectTyrant
             _pc.VisualOffset = Vector3.zero;
             _pc.HoverFloor = null;
             _pc.FallDamageHeight = _baseFallHeight;
+            _pc.MaxFallSpeed = 0f; Griffon.Land();   // Lauf 6
             if (_caster != null) _caster.InputSuppressed = false;
             if (_visual != null) { Destroy(_visual); _visual = null; }
             var rig = ThirdPersonCameraRig.Current;
@@ -219,6 +222,21 @@ namespace ProjectTyrant
                 case MountKind.Skimmer:
                     if (input.JumpPressed && grounded) _pc.SetVerticalVelocity(MountMotor.JumpVelocity(Motor.Stats.HopHeight, _pc.Gravity));
                     break;
+                case MountKind.Griffon:   // Lauf 6: Leertaste am Boden = Abheben, in der Luft halten = Sturzflug, loslassen = Abfangen
+                    var mm = PlayerProfile.Instance != null ? PlayerProfile.Instance.Mastery : null;
+                    Griffon.DiveUnlocked = mm == null || MasteryEffects.GriffonDive(mm); Griffon.Endurance = mm != null && MasteryEffects.GriffonEndurance(mm);
+                    if (input.JumpPressed && grounded) { _pc.SetVerticalVelocity(MountMotor.JumpVelocity(Griffon.TakeoffHeight, _pc.Gravity)); _pc.ResetFallTracking(); _diveArmed = false; }
+                    if (input.JumpReleased) _diveArmed = true;
+                    Griffon.Tick(dt, !grounded, input.JumpHeld && _diveArmed && !grounded, out float climb);
+                    if (!grounded)
+                    {
+                        _pc.SpeedOverride = Griffon.Speed * (SpeedFactor != null ? SpeedFactor() : 1f);
+                        _pc.MaxFallSpeed = Griffon.Sink;
+                        if (climb > 0f) _pc.SetVerticalVelocity(climb);
+                        _pc.ResetFallTracking();
+                    }
+                    else _pc.MaxFallSpeed = 0f;
+                    break;
             }
             if (input.DodgePressed && Motor.TryDodge())
             {
@@ -251,10 +269,19 @@ namespace ProjectTyrant
                     case MountKind.Raptor: c.Effects.Apply(new EffectApplication(EffectType.Cripple, 1, 3f), _self); break;        // Schwanzfeger
                     case MountKind.Springer: c.Effects.Apply(new EffectApplication(EffectType.Stun, 1, 1.5f), _self); break;      // Stampfer
                     case MountKind.Skimmer: c.Effects.Apply(new EffectApplication(EffectType.Vulnerability, 5, 6f), _self); break; // Wellenschlag
+                    case MountKind.Griffon: c.Effects.Apply(new EffectApplication(EffectType.Stun, 1, 1f), _self); c.Effects.Apply(new EffectApplication(EffectType.Vulnerability, 3, 5f), _self); break;   // Sturzangriff
                 }
             }
             SkillExecutor.VfxPulse(transform.position, radius, new Color(1f, 0.8f, 0.4f));
-            GameEventBus.Notify(kind == MountKind.Raptor ? "Schwanzfeger!" : kind == MountKind.Springer ? "Stampfer!" : "Wellenschlag!", new Color(1f, 0.85f, 0.5f));
+            GameEventBus.Notify(kind == MountKind.Raptor ? "Schwanzfeger!" : kind == MountKind.Springer ? "Stampfer!" : kind == MountKind.Griffon ? "Sturzangriff!" : "Wellenschlag!", new Color(1f, 0.85f, 0.5f));
+        }
+
+        /// <summary>Lauf 6: Aufwind hebt den fliegenden Greif an.</summary>
+        public bool ApplyUpdraft(float strength)
+        {
+            if (Motor.Mounted != MountKind.Griffon || _pc.IsGrounded) return false;
+            _pc.SetVerticalVelocity(Mathf.Max(_pc.VerticalVelocity, strength)); _pc.ResetFallTracking();
+            return true;
         }
 
         static Vector3 Flat(Vector3 v) { v.y = 0f; return v.sqrMagnitude < 1e-4f ? Vector3.forward : v; }

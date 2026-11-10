@@ -1,4 +1,4 @@
-# Project Tyrant – GW2-artiger Prototyp (Lauf 4: Offene Welt, Reittiere, Beherrschungen)
+# Project Tyrant – GW2-artiger Prototyp (Lauf 5: Klassen, Animation, VFX, Sound & Musik)
 
 **Start:** `Assets/ProjectTyrant/Scenes/PT_Core.unity` öffnen → Play. Die Core-Szene lädt die Zone aus dem Speicherstand (sonst die Startzone) additiv. Zonen-Szenen liegen unter `Scenes/Zones/`; ist eine schon geöffnet, wird sie übernommen.
 **Neu bauen:** Menü **Project Tyrant → Rebuild Everything** (≈ 85 s) – Icons, Daten, Gegner/Tiere, Reittiere, Beherrschungen, Zonen-Definitionen, 4 Zonen-Szenen (Gelände, Vegetation, Inhalte, Ereignisse, NavMesh, Karte), Core-Szene, Build-Einstellungen. Einzelne Zone: **Project Tyrant → Rebuild Zone → <Name>**; **Build Core Scene**.
@@ -8,11 +8,13 @@
 ## Steuerung
 | Taste | Aktion |
 |---|---|
-| WASD / Q E | Laufen / Strafen |
+| W / S | Vorwärts / rückwärts (rückwärts langsamer) |
+| A / D | Drehen (180 °/s, Kamera folgt) · mit gehaltener rechter Maustaste, in der Action-Kamera und beritten: seitwärts · Option „A/D-Tasten: Drehen/Seitwärts“ |
+| Q / E | Seitwärts gehen |
 | Leertaste | Springen (1,2 m, Fallschaden ab 8 m) · in der Luft: Gleiter (ab „Gleiten 1“) · beritten: Reittier-Fähigkeit (Raptor-Sprung, Springer halten = laden, Skimmer-Hüpfer) |
 | X | antippen: auf-/absitzen (1 s) · halten: Reittier-Radialmenü (Maus wählt, loslassen sitzt auf) |
 | V oder Doppeltipp Richtung | Ausweichrolle (i-Frames, Ausdauer) |
-| Rechtsklick halten | Kamera drehen · Mausrad = Zoom (über der Minimap: Minimap-Zoom) |
+| Rechtsklick halten | Kamera drehen · Mausrad = Zoom 1,5–12 m zu Fuß, 2,5–16 m beritten, 0,75 m je Raste, weich gedämpft (über der Minimap: Minimap-Zoom) |
 | C | Action-Kamera an/aus |
 | Tab / Linksklick / Esc | Ziel wechseln / anklicken / Esc: oberstes Fenster schließen, sonst Zielkreis abbrechen, sonst Ziel löschen |
 | 1–5 · 6 · 7–9 · 0 | Waffen-Skills · Heilung · Hilfe · Elite · beritten: 1 = Absitz-Angriff, V = Reittier-Ausweichen |
@@ -26,9 +28,45 @@
 | Esc | Spielmenü (Fortsetzen, Optionen, Charakterauswahl, Beenden) |
 | F9 | Debug-Panel (Editor/Development Build) · F10 Hilfe |
 
+## Optionen (Fix-Lauf F1)
+Jede Zeile hat einen Tooltip, jeder Reiter eine Schaltfläche „Standard“; gespeichert wird im Account (`account.json`), also für alle Charaktere gleich.
+
+| Reiter | Option | Werte (Standard fett) |
+|---|---|---|
+| Kamera | Zoom-Geschwindigkeit | 0,25–1,5 (**0,75 m je Raste**) |
+| Kamera | Zoomrichtung umkehren | **aus** / an |
+| Kamera | Standard-Abstand | 1,5–12 m (**6 m**); der zuletzt gewählte Abstand bleibt über Neustarts erhalten |
+| Steuerung | A/D-Tasten | **Drehen** / Seitwärts |
+| Steuerung | Bodenziel-Modus | **Normal (Maus bestätigt)** · Drücken und Loslassen · Sofort · Sofort mit Reichweitenanzeige |
+| Steuerung | Halte-Schwelle (Drücken und Loslassen) | 100–300 ms (**150 ms**) |
+| Steuerung | Auf Ziel einrasten | **aus** / an |
+| Steuerung | Auf Reichweite begrenzen | aus / **an** |
+| Spiel | Flächeneffekte eigener Skills | **Fläche und Effekt** / Nur Effekt |
+| Spiel | Flächeneffekte Verbündeter | Voll / Nur Effekt / **Reduziert** / Aus |
+| Spiel | Gegner-Telegraphen | **an** / aus (Tooltip warnt: ausgeschaltet fehlt die Information, wo ein Angriff einschlägt) |
+
+**Bodenziel-Modi:** *Normal* – Taste zeigt den Zielkreis, Linksklick oder erneuter Tastendruck wirkt, Esc/Rechtsklick bricht ab. *Drücken und Loslassen* – gedrückt halten zeigt den Kreis (nach der Halte-Schwelle), Loslassen wirkt; kurzes Antippen wirkt sofort an der Mausposition. *Sofort* – wirkt sofort an der Mausposition (wie Shift+Skill). *Sofort mit Reichweitenanzeige* – wie Sofort, Reichweiten- und Zielkreis blitzen 0,5 s auf.
+
+**Auto-Angriffs-Ketten:** Nahkampf- und Schusswaffen-Auto-Angriffe haben 3 Glieder (Glied 1 und 2 Basisschaden, Glied 3 +40 % plus Waffenbonus, z. B. Großschwert 3 Ziele + Macht, Gewehr 3 Verwundbarkeit). Abzeichen „1/3“ am Skill 1, Kampftext „Kettenabschluss“. Die Kette beginnt neu nach 2 s Pause, Waffenwechsel, Ausweichen, Unterbrechung oder Zielverlust. Ausnahmen: Langbogen und Elementarweber (Einstimmungs-Skills).
+
+**Wegmarken-Sicherheit:** Jeder Zonen-Eingang hat höchstens 40 m entfernt eine Ankunfts-Wegmarke, die beim Betreten automatisch freigeschaltet wird. Beim Besiegtwerden bietet die Karte immer mindestens eine Wiederbelebung an (notfalls die nächste Wegmarke der Zone als „Notfall-Wegmarke“).
+
 ## Charakterauswahl
 - Startszene `PT_CharacterSelect`: ↑/↓ (←/→) wählt einen der 5 Plätze, **Spielen** lädt den Charakter, **Erstellen** (Klasse, Name, Farben, Signatur-Vorschau), **Löschen** (Name eintippen). Geldbörse, Reittiere, Beherrschungen und Optionen gelten für den ganzen Account.
 - Klassen: **Wächter** (schwer, Großschwert/Stab), **Wildhüter** (mittel, Gefährte; Langbogen, Axt+Fackel, Schwert+Kriegshorn), **Elementarweber** (leicht, Einstimmungen; Stab, Zepter+Fokus, Dolch+Dolch), **Schattenklinge** (mittel, 12 Initiative, Stehlen, Heimlichkeit; Dolch+Dolch, Schwert+Pistole, Kurzbogen).
+
+## Klassen in 3 Minuten erleben
+1. Charakterauswahl → **Erstellen** → Klasse wählen (Karte zeigt Mechanik und Signatur) → Name → Spielen.
+2. F9 → „Stufe setzen“ 30 und „Exotische Waffen“ (gleiches Gear wie im Balancing), Plünderer südlich des Weilers angreifen.
+3. Mechanik testen: Wildhüter F1–F4 (Angriff, Familien-Skill, Tausch), Elementarweber F1–F4 (Einstimmungen), Schattenklinge F1 (Stehlen) + Tarnungsangriff, Wächter Tugenden über Skills.
+4. Spezialisierung: F9 → „Elite aktivieren (Id)“, z. B. `sturmfalke`, `weber`, `klingenwirbel`, `glutrichter` → F5 = Elite-Mechanik.
+5. Messung wie im Balancing: F9 → „Duell“ (Duell-Bot, 60 s × 3, Bericht im Log).
+
+## QA-Szenen
+- `Scenes/QA/PT_AnimGallery.unity` – alle Figuren und Clip-Sätze in Schleife (Kontaktbögen per `AnimGalleryBuilder.ContactSheet`).
+- `Scenes/QA/PT_VfxGallery.unity` – 13 Formen × Paletten in Schleife (`VfxGalleryCapture`).
+- Sound-Test: F9 → Audio (Klänge je Kategorie, Musik-Zustände, Mixer-Pegel).
+- Ladebildschirm-Illustrationen: `Data/Zones/Loading/Loading_<zone>.png` (vom `LoadingImageBuilder` aus der Zone gerendert).
 
 ## Elite-Spezialisierungen
 - Ab Stufe 30: Held (H) → Eigenschaften → Spalte 3, Reiter der Spezialisierung → 3 Schritte à 10 Heldenpunkte (Linie, Waffe, Skilltyp) → „Aktivieren“ (nur außerhalb des Kampfes; belegt Platz 3). Nur eine gleichzeitig.

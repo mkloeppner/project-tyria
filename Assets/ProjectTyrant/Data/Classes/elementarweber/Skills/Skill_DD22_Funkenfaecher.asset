@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 0
   Radius: 3.5
   TargetCount: 5
-  Coefficient: 1.1
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 2.2
   Hits: 3
   HitInterval: 0.3
   HealBase: 0
@@ -65,10 +67,10 @@ MonoBehaviour:
     Channel: 1
     Clip: Dagger_Whirl
     AnimScale: 1.375
-    VfxCharge: Charge/Luft/M
-    VfxRelease: Shockwave/Luft/M
+    VfxCharge: Charge/Luft/L
+    VfxRelease: Shockwave/Luft/L
     VfxProjectile: 
-    VfxImpact: Impact/Luft/M
+    VfxImpact: Impact/Luft/L
     VfxAfter: 
     SfxCharge: Luft/Charge
     SfxRelease: Luft/Release

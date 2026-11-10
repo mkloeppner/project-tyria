@@ -11,7 +11,7 @@ namespace ProjectTyrant
     /// Auswahl per Klick oder Pfeiltasten mit Kamerafahrt, Spielen/Erstellen/Löschen (Bestätigung mit Namenseingabe), Erstellung mit
     /// Klassenkarten, Name, Farbschema und Vorschau des Signatur-Skills. Musik-Zustand Menü.
     /// </summary>
-    public class CharacterSelectController : MonoBehaviour
+    public partial class CharacterSelectController : MonoBehaviour
     {
         public const string SceneName = "PT_CharacterSelect", CoreScene = "PT_Core";
         public ClassLibrary Classes;
@@ -97,7 +97,7 @@ namespace ProjectTyrant
             Btn("Play", "Spielen", new Vector2(0, 24), new Vector2(220, 48), Play);
             Btn("Create", "Erstellen", new Vector2(-250, 24), new Vector2(200, 44), OpenCreate);
             Btn("Delete", "Löschen", new Vector2(250, 24), new Vector2(200, 44), OpenDelete);
-            BuildCreate(); BuildDelete();
+            BuildCreate(); BuildBio(); BuildDelete();
         }
 
         Button Btn(string n, string label, Vector2 pos, Vector2 size, System.Action a)
@@ -137,7 +137,7 @@ namespace ProjectTyrant
                 }
                 y -= 44;
             }
-            var ok = UiFactory.Button("Confirm", _create, "Erstellen", ConfirmCreate, 19); ((RectTransform)ok.transform).Place(new Vector2(1, 0), new Vector2(1, 0), new Vector2(1, 0), new Vector2(-12, 12), new Vector2(200, 44));
+            var ok = UiFactory.Button("Confirm", _create, "Weiter", OpenBio, 19); ((RectTransform)ok.transform).Place(new Vector2(1, 0), new Vector2(1, 0), new Vector2(1, 0), new Vector2(-12, 12), new Vector2(200, 44));
             var back = UiFactory.Button("Back", _create, "Zurück", CloseCreate, 17); ((RectTransform)back.transform).Place(new Vector2(0, 0), new Vector2(0, 0), new Vector2(0, 0), new Vector2(12, 12), new Vector2(160, 44));
             _create.gameObject.SetActive(false);
         }
@@ -233,7 +233,7 @@ namespace ProjectTyrant
             PickClass(_newClass);
         }
 
-        void CloseCreate() { _creating = false; _create.gameObject.SetActive(false); Refresh(); }
+        void CloseCreate() { _creating = false; _create.gameObject.SetActive(false); if (_bio != null) _bio.gameObject.SetActive(false); Refresh(); }
 
         public void PickClass(string id)
         {
@@ -278,7 +278,7 @@ namespace ProjectTyrant
         }
 
         /// <summary>Für QA/Tests: Charakter ohne UI anlegen.</summary>
-        public int CreateDirect(string name, string classId) { int s = AccountModel.Create(_acc, name, classId, Palette[0], Palette[1], out _); if (s >= 0) { AccountStore.DeleteCharacterFile(s); AccountStore.Save(_acc); _sel = s; Refresh(); } return s; }
+        public int CreateDirect(string name, string classId) { int s = AccountModel.Create(_acc, name, classId, Palette[0], Palette[1], out _); if (s >= 0) { ApplyBio(AccountModel.Get(_acc, s)); AccountStore.DeleteCharacterFile(s); AccountStore.Save(_acc); _sel = s; Refresh(); } return s; }
 
         void OpenDelete()
         {

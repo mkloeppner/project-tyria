@@ -18,7 +18,7 @@ namespace ProjectTyrant
     [Serializable]
     public class SaveGameDto
     {
-        public const int CurrentVersion = 3;
+        public const int CurrentVersion = 4;   // Lauf 6: Story-Zustand je Charakter
         public int Version;
         // Lauf 5 / M25: Charakter-Ebene (Account-Felder liegen in account.json; Version 2 = Lauf 4, wird als Charakter 1 migriert)
         public string ClassId;
@@ -28,6 +28,7 @@ namespace ProjectTyrant
         public int ActiveAttunement;
         public List<string> PetPair = new List<string>();                                         // 0/1 = Lauf 3 (Feld fehlte), ToDto schreibt CurrentVersion
         public string CurrentZone;
+        public StoryState Story;                                                                      // Lauf 6: Persönliche Geschichte (fehlt vor Version 4 → Migration)
         public List<ZoneFogDto> ZoneFogs = new List<ZoneFogDto>();
         // Lauf 4: Reittiere + Beherrschungen
         public List<string> Mounts = new List<string>();

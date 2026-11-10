@@ -16,7 +16,7 @@ namespace ProjectTyrant
         public static readonly string[] SwishKinds = { "Heavy", "Light", "Blunt", "Bow", "Magic", "Gun" };
         public static readonly string[] Factions = { "Beast", "Bandit", "Moor", "Frost", "Glut" };
         public static readonly string[] UiIds = { "Hover", "Click", "WindowOpen", "WindowClose", "Tab", "DragStart", "Drop", "Split", "DestroyConfirm", "Error", "Buy", "Sell", "MapOpen", "MapClose", "Zoom", "WaypointSelect", "SkillAssign", "TraitSelect", "CharSelect", "Slider" };
-        public static readonly string[] Zones = { "sonnfurt", "nebelmoor", "frostkamm", "gluetoede" };
+        public static readonly string[] Zones = { "sonnfurt", "nebelmoor", "frostkamm", "gluetoede", "silberkueste", "daemmerwald", "duenenmeer", "kristalltiefe", "himmelsspitzen", "tyrannenfeste" };   // Lauf 6: zehn Zonen
 
         static List<SoundRecipe> _all;
         public static IReadOnlyList<SoundRecipe> All { get { if (_all == null) _all = Build(); return _all; } }
@@ -227,6 +227,13 @@ namespace ProjectTyrant
             Add(l, "Amb/nebelmoor", SoundCategory.Ambience, (r, v) => Bed(10f, r, wind: 0.4f, insects: 0.6f, birds: 0.1f, water: 0.5f, crackle: 0f, frogs: true), loop: true, spatial: false);
             Add(l, "Amb/frostkamm", SoundCategory.Ambience, (r, v) => Bed(10f, r, wind: 1f, insects: 0f, birds: 0f, water: 0f, crackle: 0f, snow: true), loop: true, spatial: false);
             Add(l, "Amb/gluetoede", SoundCategory.Ambience, (r, v) => Bed(10f, r, wind: 0.7f, insects: 0f, birds: 0f, water: 0f, crackle: 0.8f), loop: true, spatial: false);
+            // Lauf 6: Klangbetten der neuen Zonen
+            Add(l, "Amb/silberkueste", SoundCategory.Ambience, (r, v) => Bed(10f, r, wind: 0.6f, insects: 0.1f, birds: 0.6f, water: 0.9f, crackle: 0f), loop: true, spatial: false);
+            Add(l, "Amb/daemmerwald", SoundCategory.Ambience, (r, v) => Bed(10f, r, wind: 0.3f, insects: 0.5f, birds: 0.15f, water: 0f, crackle: 0.1f, frogs: true), loop: true, spatial: false);
+            Add(l, "Amb/duenenmeer", SoundCategory.Ambience, (r, v) => Bed(10f, r, wind: 0.9f, insects: 0.05f, birds: 0f, water: 0f, crackle: 0.15f), loop: true, spatial: false);
+            Add(l, "Amb/kristalltiefe", SoundCategory.Ambience, (r, v) => Bed(10f, r, wind: 0.15f, insects: 0f, birds: 0f, water: 0.35f, crackle: 0.05f), loop: true, spatial: false);
+            Add(l, "Amb/himmelsspitzen", SoundCategory.Ambience, (r, v) => Bed(10f, r, wind: 1.1f, insects: 0f, birds: 0.3f, water: 0f, crackle: 0f, snow: true), loop: true, spatial: false);
+            Add(l, "Amb/tyrannenfeste", SoundCategory.Ambience, (r, v) => Bed(10f, r, wind: 0.6f, insects: 0f, birds: 0f, water: 0f, crackle: 1f), loop: true, spatial: false);
             Add(l, "Amb/Water", SoundCategory.Ambience, (r, v) => Bed(8f, r, wind: 0f, insects: 0f, birds: 0f, water: 1f, crackle: 0f), loop: true);
             Add(l, "Amb/WindHigh", SoundCategory.Ambience, (r, v) => Bed(8f, r, wind: 1.2f, insects: 0f, birds: 0f, water: 0f, crackle: 0f), loop: true, spatial: false);
             Add(l, "Amb/HubMurmur", SoundCategory.Ambience, (r, v) => Murmur(8f, r), loop: true);

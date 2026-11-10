@@ -1,0 +1,248 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19bcc063925df43a5a51227363ae33, type: 3}
+  m_Name: Chapter_02
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.StoryChapter
+  Number: 2
+  Title: Die Wacht von Dornwacht
+  Zone: sonnfurt
+  MinLevel: 5
+  Summary: "Brennar nimmt den Helden in die Wacht auf. Die Verteidigung der Palisade wird zur Bew\xE4hrung, Grolmok nennt sterbend den Herold."
+  Steps:
+  - Id: K02_S01
+    Title: Die Einladung
+    Description: Hauptmann Brennar wartet am Grenzposten Dornwacht.
+    Type: 2
+    Zone: sonnfurt
+    Position: {x: 2, y: 2, z: 2}
+    Npc: brennar
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: brennar
+      Count: 1
+      Text: Sprich mit Hauptmann Brennar
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K02_S01
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 200
+      Karma: 30
+      Copper: 100
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K02_S02
+    Title: Die Palisade
+    Description: "Die Aschkrallen greifen Dornwacht an. K\xE4mpf mit den W\xE4chtern \u2013 und nutze Feld und Finisher."
+    Type: 1
+    Zone: sonnfurt
+    Position: {x: 5, y: 2, z: 5}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 19
+      Target: dornwacht
+      Count: 1
+      Text: Verteidige Dornwacht (Ereignis)
+      Hint: event
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 10
+      Target: '*'
+      Count: 1
+      Text: "L\xF6se eine Kombo aus"
+      Hint: combo
+      Optional: 1
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: 
+    SceneEnd: K02_S02E
+    Checkpoints: []
+    Reward:
+      Experience: 400
+      Karma: 60
+      Copper: 200
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 60
+    Companion: 
+    Props: []
+  - Id: K02_S03
+    Title: Grolmoks Lager
+    Description: "Mit Mira und den W\xE4chtern zu Grolmoks Lager. Niemand bleibt liegen."
+    Type: 0
+    Zone: sonnfurt
+    Position: {x: 55, y: 3, z: 55}
+    Npc: 
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 2
+      Target: Enemy_Trash_Pluenderer
+      Count: 4
+      Text: Durchbrich die Vorposten
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 8}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 5
+      Target: mira
+      Count: 1
+      Text: Belebe Mira wieder
+      Hint: downed
+      Optional: 0
+      Label: 
+      Offset: {x: -4, y: 0, z: 4}
+      Scale: 1
+      Scene: K02_S03M
+      Partner: 
+    - Kind: 14
+      Target: '*'
+      Count: 1
+      Text: "Lege ein Beutest\xFCck an (I)"
+      Hint: equip
+      Optional: 1
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    - Kind: 29
+      Target: Enemy_Champion_Grolmok
+      Count: 1
+      Text: Besiege Grolmok
+      Hint: 
+      Optional: 0
+      Label: "Grolmok, Aschenf\xFCrst"
+      Offset: {x: 6, y: 0, z: 14}
+      Scale: 1.2
+      Scene: 
+      Partner: 
+    SceneStart: K02_S03
+    SceneEnd: K02_S03E
+    Checkpoints:
+    - 0
+    - 1
+    Reward:
+      Experience: 700
+      Karma: 100
+      Copper: 500
+      HeroPoints: 1
+      MasteryPoints: 0
+      Item: 
+    SetFlags: []
+    Letter: 
+    Radius: 50
+    Companion: mira
+    Props:
+    - zelt@-6,16
+    - zelt@10,16
+    - zelt@12,6
+    - barrikade@0,4
+    - barrikade@-6,8
+    - feuer@2,12
+    - feuer@-4,-2
+    - kaefig@8,-4
+    - kisten@-10,10
+  - Id: K02_S04
+    Title: Ein Name
+    Description: Berichte Brennar von Grolmoks letzten Worten.
+    Type: 2
+    Zone: sonnfurt
+    Position: {x: 2, y: 2, z: 2}
+    Npc: brennar
+    Condition:
+      Origin: 0
+      Pact: 0
+      Trait: 0
+      Lodestar: 0
+      Flag: 
+      NotFlag: 
+    Objectives:
+    - Kind: 0
+      Target: brennar
+      Count: 1
+      Text: Berichte Hauptmann Brennar
+      Hint: 
+      Optional: 0
+      Label: 
+      Offset: {x: 0, y: 0, z: 0}
+      Scale: 1
+      Scene: 
+      Partner: 
+    SceneStart: K02_S04
+    SceneEnd: 
+    Checkpoints: []
+    Reward:
+      Experience: 300
+      Karma: 50
+      Copper: 200
+      HeroPoints: 0
+      MasteryPoints: 0
+      Item: 
+    SetFlags:
+    - kennt_herold
+    Letter: L_K02
+    Radius: 60
+    Companion: 
+    Props: []
+  JournalLines:
+  - K02_J
+  Mechanics:
+  - Ereignisse und Medaillen
+  - Am Boden / Wiederbeleben
+  - Kombo-Felder
+  - "Inventar und Ausr\xFCstung"
+  - Beute

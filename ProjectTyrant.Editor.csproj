@@ -64,9 +64,11 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.6.7f1\Editor\Data\BCLExtensions\TargetingPacks\netstandard2.1\analyzers\dotnet\roslyn4.0\cs\System.Text.Json.SourceGeneration.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldStoryBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.EliteData.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\DataBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\MapBaker.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.Balance.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.Thief.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ZoneBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\IconPainter.Map.cs" />
@@ -76,24 +78,32 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\MountBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\MapMarkerBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\SkinMesh.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\StoryBuilder.Bundles.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\BiomeZoneBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ZoneEventBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\VoiceBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.Traits.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\StoryBuilder.Chapters.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\AudioSynth.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\EventPopulator.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.Chains.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\PTEditorUtil.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\VfxGalleryCapture.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\VfxGalleryBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\LoadingImageBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\CreatureBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ZoneContentBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ItemBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\SkillTimelineBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\IconPainter.World.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\IconPainter.Story.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\MasteryBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\StoryBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\TraitBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\FxTextureKit.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\VfxKitBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldEnemyBuilder.Lauf6.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\IconPainter.Items.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\MeshyIntegrator.cs" />
@@ -101,14 +111,20 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\RigBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\GameplayPopulator.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ProfileBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ZoneEventBuilder.Lauf6.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.Elites.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\CharacterBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\CharacterRigs.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ZoneExtrasBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\StoryBuilder.Chapters2.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\EventDefinitionBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.Ranger.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.Weaver.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldEnemyBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\CharacterSelectBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldBuilder.Lauf6.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\StoryFigureBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ArrivalWaypointBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClipBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\AnimGalleryBuilder.cs" />
   </ItemGroup>

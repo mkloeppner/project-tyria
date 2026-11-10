@@ -10,6 +10,19 @@ namespace ProjectTyrant
         {
             DebugCommands.Extra.RemoveAll(e => e.label.StartsWith("Welt"));
             DebugCommands.Extra.Add(("Welt: Zone wechseln (Id)", a => ChangeZone(a)));
+            // Fix-Lauf F1: Wegmarken-Sicherheit live prüfen
+            DebugCommands.Extra.Add(("Welt: Spieler besiegen", a =>
+            {
+                var gm = GameManager.Instance; if (gm == null || gm.Player == null || gm.Player.IsDead) return "Nicht möglich";
+                var dc = gm.Player.GetComponent<DownedController>(); if (dc != null) dc.ResetState();
+                gm.Player.Die(null); GameEventBus.RaisePlayerDefeated(gm.Player); return "Besiegt";
+            }));
+            DebugCommands.Extra.Add(("Welt: Wegmarken dieser Zone vergessen", a =>
+            {
+                var gm = GameManager.Instance; var p = PlayerProfile.Instance; if (gm == null || p == null || gm.CurrentZone == null) return "Nicht möglich";
+                int n = 0; foreach (var w in gm.CurrentZone.Waypoints) if (p.State.Completed.Remove(w.Id)) n++;
+                return n + " Wegmarken zurückgesetzt";
+            }));
             DebugCommands.Extra.Add(("Welt: nächste Zone", a =>
             {
                 var gm = GameManager.Instance; if (gm == null || gm.World == null) return "Keine Welt";

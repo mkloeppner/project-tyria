@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 0
   Radius: 3.5
   TargetCount: 5
-  Coefficient: 0.8
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.6
   Hits: 1
   HitInterval: 0.3
   HealBase: 2000
@@ -63,10 +65,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Dagger_Heavy
     AnimScale: 0.64102566
-    VfxCharge: Charge/Wasser/M
-    VfxRelease: Shockwave/Wasser/M
+    VfxCharge: Charge/Wasser/L
+    VfxRelease: Shockwave/Wasser/L
     VfxProjectile: 
-    VfxImpact: Impact/Wasser/M
+    VfxImpact: Impact/Wasser/L
     VfxAfter: 
     SfxCharge: Wasser/Charge
     SfxRelease: Wasser/Release

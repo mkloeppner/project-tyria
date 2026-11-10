@@ -55,7 +55,7 @@ namespace ProjectTyrant.Procedural
     /// Inhalte der drei Biom-Zonen (reine Daten, vom Builder und den Tests gelesen): je ≥ 4 Wegmarken, ≥ 4 Sehenswürdigkeiten,
     /// ≥ 3 Aussichtspunkte, ≥ 4 Heldenherausforderungen, ≥ 3 Herzen, ≥ 3 Beherrschungs-Einblicke, ≥ 2 Tierarten, ≥ 3 neue Gegnertypen.
     /// </summary>
-    public static class BiomeZoneContent
+    public static partial class BiomeZoneContent
     {
         static BzSpot S(string id, string name, float x, float z, int lvl, string desc = "", SpotGate gate = SpotGate.None, float gateR = 16f) =>
             new BzSpot { Id = id, Name = name, Pos = new Vector2(x, z), Level = lvl, Desc = desc, Gate = gate, GateRadius = gateR };
@@ -255,7 +255,7 @@ namespace ProjectTyrant.Procedural
             Critters = new[] { A("Aschekaefer", -350, 40, 5), A("Aschekaefer", 100, 100, 5), A("Salamander", -180, -260, 3), A("Salamander", 280, -80, 3), A("Aschekaefer", 200, 300, 4) },
         };
 
-        public static readonly BzLayout[] All = { Nebelmoor, Frostkamm, Gluetoede };
+        public static BzLayout[] All => new[] { Nebelmoor, Frostkamm, Gluetoede, Silberkueste, Daemmerwald, Duenenmeer, Kristalltiefe, Himmelsspitzen, Tyrannenfeste };   // Lauf 6: Eigenschaft (Teil-Klassen-Initialisierung)
         public static BzLayout For(string zoneId) { foreach (var l in All) if (l.ZoneId == zoneId) return l; return null; }
     }
 }

@@ -75,6 +75,9 @@ namespace ProjectTyrant.EditorTools
             var spawn = Child(rootGo.transform, "Spawn", new Vector3(z.DefaultSpawn.x, sampler.Height(z.DefaultSpawn.x, z.DefaultSpawn.z), z.DefaultSpawn.z));
             root.Waypoint = spawn.transform;
             PopulateZone(z, sampler, env, root);
+            ArrivalWaypointBuilder.Ensure(z, rootGo.transform, DataDir + "/Zone/" + z.Id, 160);   // Fix-Lauf F1: jeder Eingang mit Wegmarke ≤ 40 m
+            ZoneExtrasBuilder.Populate(z, rootGo.transform, (x, zz) => sampler.Height(x, zz));   // Lauf 6: Stadt, Verderbnis, Sandsturm, Dunkelheit, Inseln, Belagerung, Sprungrätsel
+            WorldStoryBuilder.Populate(z, rootGo.transform, (x, zz) => sampler.Height(x, zz));   // Lauf 6: Späher, Herzen, Bündel
             // Lauf 5 / M23: Welt-Lebendigkeit je Biom
             var w = b.Weather;
             VfxKitBuilder.Ambient(rootGo.transform, w, w == WeatherKind.AshWind ? new Vector2(1f, -0.4f) : new Vector2(0.8f, 0.6f), w == WeatherKind.Snow ? 0.35f : w == WeatherKind.AshWind ? 0.3f : 0.2f,

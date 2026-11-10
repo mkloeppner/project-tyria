@@ -34,7 +34,7 @@ namespace ProjectTyrant
         static string[] BuildCd() { var a = new string[200]; for (int i = 0; i < a.Length; i++) a[i] = i == 0 ? "" : i.ToString(); return a; }
 
         public static string HelpTextFull => HelpText;
-        const string HelpText = "<b>Steuerung</b>\nWASD laufen · Q/E strafen · Leertaste springen\nV oder Doppeltipp = Ausweichen · Rechtsklick halten = Kamera\nC Action-Kamera · Tab Ziel · Esc Fenster/Ziel/Spielmenü\n1–5 Waffe · 6 Heilen · 7–9 Hilfe · 0 Elite · ^/Y Waffenwechsel · F1–F4 Klassenmechanik · F5 Elite-Mechanik\nX Reittier (halten = wählen) · Leertaste beritten = Fähigkeit · 1 beritten = Absitz-Angriff\nF Interagieren · I Inventar · H Held · M Karte · +/− Minimap\nAlt+Ziehen Stapel teilen · Shift Vergleich · Shift+Skill sofort · F9 Debug · F10 Hilfe";
+        const string HelpText = "<b>Steuerung</b>\nW/S laufen · A/D drehen (Rechtsklick halten: seitwärts) · Q/E seitwärts · Leertaste springen\nV oder Doppeltipp = Ausweichen · Rechtsklick halten = Kamera · Mausrad = Zoom\nC Action-Kamera · Tab Ziel · Esc Fenster/Ziel/Spielmenü\n1–5 Waffe · 6 Heilen · 7–9 Hilfe · 0 Elite · ^/Y Waffenwechsel · F1–F4 Klassenmechanik · F5 Elite-Mechanik\nX Reittier (halten = wählen) · Leertaste beritten = Fähigkeit · 1 beritten = Absitz-Angriff\nF Interagieren · I Inventar · H Held · M Karte · +/− Minimap\nAlt+Ziehen Stapel teilen · Shift Vergleich · Bodenziel-Modus und Shift+Skill sofort: Optionen › Steuerung · F9 Debug · F10 Hilfe";
 
         void BuildHud()
         {
@@ -270,6 +270,20 @@ namespace ProjectTyrant
             _crosshair.gameObject.SetActive(rig != null && rig.ActionCam && !Windows.AnyOpen && GameOptions.Load().ActionCrosshair);
         }
 
+        // Fix-Lauf F1: Ketten-Anzeige am Skill-1-Feld (1/3, 2/3, 3/3)
+        TMPro.TextMeshProUGUI _chainBadge; string _chainBadgeText;
+        void UpdateChainBadge(Slot slot, SkillDefinition s)
+        {
+            int pos = s.ChainPosition(out int len);
+            string t = len > 1 ? pos + "/" + len : "";
+            if (_chainBadge == null)
+            {
+                _chainBadge = UiFactory.Text("Chain", slot.Root.transform, "", 12, TMPro.TextAlignmentOptions.BottomRight, new Color(1f, 0.85f, 0.45f));
+                _chainBadge.rectTransform.Stretch(2, 2, 3, 1); _chainBadge.fontStyle = TMPro.FontStyles.Bold; _chainBadge.raycastTarget = false;
+            }
+            if (t != _chainBadgeText) { _chainBadgeText = t; _chainBadge.text = t; _chainBadge.color = pos == len && len > 1 ? new Color(1f, 0.6f, 0.25f) : new Color(1f, 0.85f, 0.45f); }
+        }
+
         void UpdateSlots(bool downed)
         {
             if (_caster == null) return;
@@ -288,6 +302,7 @@ namespace ProjectTyrant
                     slot.Label.text = s.Icon != null ? "" : s.ShortLabel;
                     slot.LastCd = -1; slot.LastFrac = -1f;
                 }
+                if (i == 0) UpdateChainBadge(slot, s);
                 float cd = _caster.GetCooldownRemaining(s);
                 float frac = _caster.GetCooldownFraction(s);
                 if (Mathf.Abs(frac - slot.LastFrac) > 0.002f) { slot.LastFrac = frac; slot.CdOverlay.anchorMax = new Vector2(1f, frac); }
@@ -526,7 +541,11 @@ namespace ProjectTyrant
                 if (d.Glancing) col = new Color(0.75f, 0.7f, 0.6f);
             }
             SpawnFloating(d.Target.AimPoint + Vector3.up * 0.6f, txt, col, size, d.Crit && outgoing ? Random.Range(-12f, 12f) : 0f);
+            // Fix-Lauf F1: Bonus des dritten Ketten-Glieds im Kampftext markieren (einmal je Treffer-Zeitpunkt)
+            if (outgoing && !d.IsCondition && d.Skill != null && d.Skill.ChainBonus && Time.time - _lastChainText > 0.3f)
+            { _lastChainText = Time.time; SpawnFloating(d.Target.AimPoint + Vector3.up * 1.3f, "Kettenabschluss", new Color(1f, 0.75f, 0.35f), 22); }
         }
+        float _lastChainText = -1f;
 
         float _healAccum, _healTimer;
 

@@ -10,7 +10,7 @@ namespace ProjectTyrant.EditorTools
         public const string Dir = DataDir + "/Mastery";
 
         public static MasteryLineDefinition Load(MasteryLine l) => AssetDatabase.LoadAssetAtPath<MasteryLineDefinition>(Dir + "/Mastery_" + l + ".asset");
-        public static MasteryLineDefinition[] LoadAll() => new[] { Load(MasteryLine.Reittiere), Load(MasteryLine.Gleiten), Load(MasteryLine.Umwelt), Load(MasteryLine.Kommandant) };
+        public static MasteryLineDefinition[] LoadAll() => new[] { Load(MasteryLine.Reittiere), Load(MasteryLine.Gleiten), Load(MasteryLine.Umwelt), Load(MasteryLine.Kommandant), Load(MasteryLine.Greif) };
 
         static MasteryRankCost R(string n, string e, long xp, int pts) => new MasteryRankCost { Name = n, Effect = e, Xp = xp, Points = pts };
 
@@ -29,6 +29,8 @@ namespace ProjectTyrant.EditorTools
             Line(MasteryLine.Kommandant, "Kommandant", "Komfort im Feld: Beute und Reisen.", "mastery_cmd", new Color(0.6f, 0.8f, 1f), new[] {
                 R("Auto-Beute", "Beute in 6 m wird automatisch eingesammelt", 4000, 1), R("Reisekasse", "Wegmarken-Reisen −20 %", 9000, 1),
                 R("Reisemeister", "Wegmarken-Reisen −40 %", 15000, 2) });
+            Line(MasteryLine.Greif, "Greif", "Der Greif der Himmelswächter (Persönliche Geschichte, Kapitel 9).", "mount_griffon", new Color(0.98f, 0.9f, 0.6f), new[] {
+                R("Sturzflug", "In der Luft Leertaste halten: Sturzflug mit Beschleunigung, Loslassen fängt ab", 8000, 1), R("Ausdauer der Lüfte", "Greif sinkt beim Gleiten langsamer (1,6 m/s)", 16000, 2) });
             AssetDatabase.SaveAssets();
         }
 

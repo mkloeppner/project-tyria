@@ -80,12 +80,39 @@ namespace ProjectTyrant
         static string NormalTitle => "Weltkarte – " + ZoneRoot.ZoneName;
         const string NormalHint = "Ziehen: verschieben · Mausrad: zoomen · Wegmarke anklicken: reisen";
 
+        // Fix-Lauf F1: Wiederbelebungs-Liste über der Legende (nur im Besiegt-Modus)
+        RectTransform _defeatPanel; readonly System.Collections.Generic.List<GameObject> _defeatRows = new System.Collections.Generic.List<GameObject>();
+
+        public void SetDefeatOptions(System.Collections.Generic.IList<WaypointSafety.DefeatOption> options, System.Action<WaypointSafety.DefeatOption> pick)
+        {
+            if (_defeatPanel == null)
+            {
+                var img = UiFactory.Image("DefeatList", Window.Content, new Color(0.09f, 0.06f, 0.06f, 1f), null, true);
+                _defeatPanel = img.rectTransform.Place(new Vector2(1, 0), new Vector2(1, 1), new Vector2(1, 0.5f), Vector2.zero, new Vector2(290, 0));
+                var t = UiFactory.Text("Title", _defeatPanel, "Wiederbeleben bei …", 19, TextAlignmentOptions.Left, new Color(1f, 0.55f, 0.45f));
+                t.rectTransform.Place(new Vector2(0, 1), new Vector2(1, 1), new Vector2(0, 1), new Vector2(12, -10), new Vector2(-24, 26));
+            }
+            foreach (var r in _defeatRows) if (r != null) Object.Destroy(r);
+            _defeatRows.Clear();
+            for (int i = 0; i < options.Count && i < 14; i++)
+            {
+                var o = options[i];
+                var b = UiFactory.Button("Opt" + i, _defeatPanel, (o.Emergency ? "<color=#FFB070>" : o.OtherZone ? "<color=#9CC8FF>" : "") + o.Label + (o.Emergency || o.OtherZone ? "</color>" : ""), () => pick(o), 13);
+                ((RectTransform)b.transform).Place(new Vector2(0, 1), new Vector2(1, 1), new Vector2(0, 1), new Vector2(10, -44 - i * 36), new Vector2(-20, 32));
+                b.GetComponentInChildren<TextMeshProUGUI>().alignment = TextAlignmentOptions.Left;
+                b.gameObject.AddComponent<UiTooltipTrigger>().Provider = () => { var c = new TooltipContent { Title = o.Waypoint.Name, Subtitle = o.Zone.DisplayName }; c.Add(o.Emergency ? "Notfall-Wegmarke: In dieser Zone ist keine freie Wegmarke entdeckt – die nächste Ankunfts-Wegmarke wird kostenlos freigeschaltet." : o.OtherZone ? "Wiederbelebung in einer anderen Zone (Zonenwechsel, kostenlos)." : "Entdeckte, nicht umkämpfte Wegmarke.", new Color(0.85f, 0.85f, 0.85f)); return c; };
+                _defeatRows.Add(b.gameObject);
+            }
+            _defeatPanel.gameObject.SetActive(true); _defeatPanel.SetAsLastSibling();
+        }
+
         public void SetDefeatMode(bool on)
         {
+            if (!on && _defeatPanel != null) _defeatPanel.gameObject.SetActive(false);
             DefeatMode = on;
             Window.Title.text = on ? "Besiegt – Zur Wegmarke zurückkehren" : NormalTitle;
             Window.Title.color = on ? new Color(1f, 0.5f, 0.4f) : UiFactory.AccentColor;
-            _hint.text = on ? "Wähle eine entdeckte, nicht umkämpfte Wegmarke – du erscheinst dort mit vollen Lebenspunkten." : NormalHint;
+            _hint.text = on ? "Wähle rechts einen Ort oder auf der Karte eine entdeckte, nicht umkämpfte Wegmarke – du erscheinst dort mit vollen Lebenspunkten." : NormalHint;
         }
 
         RawImage _mapRaw;

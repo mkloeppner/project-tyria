@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: wildhueter_bestienbund_W1b
   DisplayName: Krallenriss
-  Description: Zweites Glied der Kette.
+  Description: Zweites Glied der Kette (63 % Koeffizient).
   ShortLabel: Fangza. II
   IconColor: {r: 0.78, g: 0.38, b: 0.2, a: 1}
   Icon: {fileID: 0}
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 3
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.7
+  ChainBonus: 0
+  ChainRoot: {fileID: 11400000, guid: 30d4a1fa6cf355b428e78310a04a3d58, type: 2}
+  Coefficient: 0.687
   Hits: 1
   HitInterval: 0.25
   HealBase: 0

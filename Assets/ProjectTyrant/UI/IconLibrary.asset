@@ -197,3 +197,7 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: e027513d8f1d5bf41a977aa3fa3f1d69, type: 3}
   - Id: mastery_cmd
     Sprite: {fileID: 21300000, guid: 2201630662b25da4487b615a91a16e26, type: 3}
+  - Id: map_story
+    Sprite: {fileID: 21300000, guid: 80d797d33ab26274cb944cb2354b1de0, type: 3}
+  - Id: map_scout
+    Sprite: {fileID: 21300000, guid: 70b613fc0de0709409ef0cdb1cf3ea5c, type: 3}

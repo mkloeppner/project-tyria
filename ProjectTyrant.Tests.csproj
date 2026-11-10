@@ -64,10 +64,15 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.6.7f1\Editor\Data\BCLExtensions\TargetingPacks\netstandard2.1\analyzers\dotnet\roslyn4.0\cs\System.Text.Json.SourceGeneration.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf6WorldTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\LoadingImageTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\StoryModelTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\SkillTraitTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\EliteTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WorldEventTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\StoryDataTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\BiomeZoneTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\FixRunF1Tests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\DownedTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\EventEngineTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\FoundationTests.cs" />
@@ -75,13 +80,17 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\DodgeTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ZoneTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\MapTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\StoryPathTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\BalanceTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ClassTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\VfxKitTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WorldTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\AnimationTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WorldStoryTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\MasteryTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\EventChainTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\MountTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WaypointSafetyTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ComboTableTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ItemTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\AudioTests.cs" />

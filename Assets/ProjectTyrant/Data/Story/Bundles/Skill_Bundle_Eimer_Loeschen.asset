@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbc4a3a338e2c42909d8a0535afd3d, type: 3}
+  m_Name: Skill_Bundle_Eimer_Loeschen
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
+  Id: Bundle_Eimer_Loeschen
+  DisplayName: "L\xF6schen"
+  Description: "Schleudert Wasser: Wasserfeld, l\xF6scht Feuer."
+  ShortLabel: "L\xF6"
+  IconColor: {r: 0.25, g: 0.65, b: 1, a: 1}
+  Icon: {fileID: 0}
+  SlotType: 0
+  Category: 0
+  Tier: 1
+  UnlockCost: 0
+  StartsUnlocked: 1
+  Weapon: 0
+  CastTime: 0.75
+  Cooldown: 6
+  Delivery: 2
+  Range: 12
+  Radius: 2.5
+  TargetCount: 5
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 0
+  Hits: 1
+  HitInterval: 0.25
+  HealBase: 0
+  HealCoefficient: 0
+  ProjectileSpeed: 28
+  LeapDistance: 0
+  TargetBuffs: []
+  SelfBuffs: []
+  ShareWithAllies: 0
+  CleanseCount: 0
+  Special: 0
+  EvadesDuringCast: 0
+  Field: 2
+  FieldDuration: 4
+  FieldRadius: 3
+  FieldTickCoefficient: 0
+  Finisher: 0
+  Timeline:
+    Activation: 0.75
+    Aftercast: 0.31363633
+    Hits:
+    - 0.75
+    Projectiles: []
+    Movement: 0
+    MoveDistance: 0
+    Instant: 0
+    Channel: 0
+    Clip: Cast2H
+    AnimScale: 1.3636364
+    VfxCharge: Charge/Wasser/M
+    VfxRelease: Sigil/Wasser/M
+    VfxProjectile: 
+    VfxImpact: GroundCircle/Wasser/M
+    VfxAfter: GroundCircle/Wasser/M
+    SfxCharge: Wasser/Charge
+    SfxRelease: Wasser/Release
+    SfxImpact: Wasser/Buff
+  Chain: []
+  Palette: 1
+  PaletteExplicit: 1
+  WeaponStyleOverride: Sword
+  ClassId: 
+  InitiativeCost: 0
+  Element: -1
+  StealthSeconds: 0
+  StealthAttack: 0
+  ConjureSet: {fileID: 0}
+  TrapLifetime: 0

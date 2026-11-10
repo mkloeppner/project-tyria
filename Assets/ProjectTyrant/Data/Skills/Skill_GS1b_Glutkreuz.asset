@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.SkillDefinition
   Id: GS1b_Glutkreuz
   DisplayName: Glutkreuz
-  Description: Zweiter Hieb der Kette. Verursacht 1 Stapel Verwundbarkeit.
+  Description: Zweites Glied der Kette (71 % Koeffizient).
   ShortLabel: Glut II
   IconColor: {r: 0.95, g: 0.45, b: 0.18, a: 1}
   Icon: {fileID: 0}
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 3.2
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.8
+  ChainBonus: 0
+  ChainRoot: {fileID: 11400000, guid: e79cfaf7a69e817489c836ed3e1eb014, type: 2}
+  Coefficient: 0.706
   Hits: 1
   HitInterval: 0.25
   HealBase: 0

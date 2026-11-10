@@ -35,6 +35,7 @@ namespace ProjectTyrant
 
         void Awake()
         {
+            QaMove = null; QaRmb = false;
             _cc = GetComponent<CharacterController>();
             Combatant = GetComponent<Combatant>();
             Dodge.Endurance.Fill();
@@ -56,15 +57,25 @@ namespace ProjectTyrant
 
             Vector2 m = Vector2.zero; float strafe = 0f;
             if (input != null && !dead && !stunned && !InputBlocked) { m = input.Move; strafe = input.Strafe; }
+            if (QaMove.HasValue && !dead && !stunned) m = QaMove.Value;
+            if (WaypointSafety.BelowWorld(transform.position) && Time.unscaledTime >= _voidRescueAt) { _voidRescueAt = Time.unscaledTime + 3f; var pr = PlayerProfile.Instance; if (pr != null) pr.RescueFromVoid(); }   // QA (Fix-Lauf F1): Bewegungseingabe ohne Tastatur-Fokus
 
             bool faceCamera = rig != null && rig.IsRotating;
-            // A/D drehen den Charakter nicht, sondern strafen (MMO-Standard bei gehaltener Kamera); Q/E strafen immer.
-            float lateral = Mathf.Clamp(m.x + strafe, -1f, 1f);
-            Vector3 wish = camF * m.y + camR * lateral;
-            if (wish.sqrMagnitude > 1f) wish.Normalize();
+            // Lauf 6: Eigene Steuerung schlägt die Blickrichtung zum Ziel – wer läuft oder dreht, darf sich vom Ziel abwenden (außer bei verwurzelten Fertigkeiten)
+            bool steering = (m.sqrMagnitude > 0.01f || Mathf.Abs(strafe) > 0.01f || rmb0()) && CastMoveFactor > 0f;
+            var facingOverride = steering ? null : FacingOverride; PlayerSteering = steering || (input != null && Mathf.Abs(input.Move.x) > 0.01f);
+            // Fix-Lauf F1 (ersetzt M1): GW2-Standard – A/D drehen, Q/E seitwärts; rechte Maustaste/Action-Cam/Reittier/Option „Seitwärts“ = bisheriges Verhalten.
+            var mode = (MovementModel.Mode)(GameOptions.Current != null ? GameOptions.Current.TurnMode : 0);
+            bool rmb = (input != null && input.RotateHeld) || QaRmb;
+            var mv = MovementModel.Compute(mode, rmb, rig != null && rig.ActionCam, MountedControl, m, strafe, transform.eulerAngles.y, camF, dt);
+            Vector3 wish = mv.Wish;
+            TurnInput = mv.Turning ? m.x : 0f;
+            if (mv.Turning && Mathf.Abs(m.x) > 0.1f) LearnHints.Show("ad_drehen", "A/D drehen den Charakter, Q/E gehen seitwärts; mit gehaltener rechter Maustaste werden A/D zu Seitwärts (Optionen › Steuerung).");
+            if (mv.Turning && Mathf.Abs(mv.YawDelta) > 0f && !dead && !Dodge.IsDodging && !facingOverride.HasValue) { transform.rotation = Quaternion.Euler(0f, transform.eulerAngles.y + mv.YawDelta, 0f); QaYawAccum += mv.YawDelta; }
+            if (mv.Turning && rig != null && (Mathf.Abs(m.x) > 0.01f || m.y > 0.01f)) rig.FollowYaw(transform.eulerAngles.y);
 
             float speed = (SpeedOverride > 0f ? SpeedOverride : MoveSpeed) * Combatant.MoveSpeedMultiplier * (downed ? 0.2f : 1f) * CastMoveFactor;
-            if (m.y < 0f && faceCamera) speed *= BackwardFactor;
+            if (m.y < 0f && (faceCamera || mv.Turning)) speed *= BackwardFactor;
 
             // Dodge
             Dodge.Endurance.RegenMultiplier = (Combatant.Effects.Has(EffectType.Vigor) ? EffectRules.VigorEnduranceFactor : 1f) * (Combatant.Effects.Has(EffectType.Weakness) ? EffectRules.WeaknessEnduranceFactor : 1f);
@@ -108,10 +119,10 @@ namespace ProjectTyrant
 
             // Ausrichtung
             Vector3 face = Vector3.zero;
-            if (FacingOverride.HasValue) face = FacingOverride.Value - transform.position;
-            else if (Dodge.IsDodging) face = Dodge.Direction;
+            if (facingOverride.HasValue) face = facingOverride.Value - transform.position;
+            else if (Dodge.IsDodging) face = Vector3.zero;   // Lauf 6: Ausweichen dreht die Figur nicht – sie springt rückwärts/seitwärts und schaut weiter in Kamerarichtung
             else if (faceCamera) face = camF;
-            else if (wish.sqrMagnitude > 0.01f) face = wish;
+            else if (mv.FaceWish && wish.sqrMagnitude > 0.01f) face = wish;
             face.y = 0f;
             if (face.sqrMagnitude > 0.001f && !dead)
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(face), TurnSpeed * dt);
@@ -142,6 +153,11 @@ namespace ProjectTyrant
 
         /// <summary>Lauf 5: Skelett-Animation übernimmt Haltung/Rolle; hier nur noch Sitz-Versatz (Reittier).</summary>
         public bool AnimDriven { get; set; }
+        /// <summary>Fix-Lauf F1: Drehrichtung im Drehmodus (−1 links … +1 rechts), für Dreh-Animation.</summary>
+        public float TurnInput { get; private set; }
+        /// <summary>QA (Fix-Lauf F1): Eingabe-Ersatz für Debug-Läufe ohne Fenster-Fokus; null = echte Eingabe.</summary>
+        public static Vector2? QaMove; public static bool QaRmb; public float QaYawAccum;
+        float _voidRescueAt;
 
         void AnimateVisual(float dt, bool downed, bool dead)
         {
@@ -158,6 +174,10 @@ namespace ProjectTyrant
             {
                 rot = Quaternion.Euler(-80f, 0f, 0f);
                 pos += Vector3.up * 0.25f;
+            }
+            else if (Dodge.IsDodging && GetComponentInChildren<Anim.CharacterAnimator>() != null)
+            {
+                rot = Quaternion.identity;   // Lauf 6: Richtungs-Clips (DodgeF/B/L/R) tragen Sprung und Haltung – keine prozedurale Rolle mehr
             }
             else if (Dodge.IsDodging)
             {
@@ -177,6 +197,9 @@ namespace ProjectTyrant
             Visual.localRotation = Dodge.IsDodging ? rot : Quaternion.Slerp(Visual.localRotation, rot, 1f - Mathf.Exp(-15f * dt));
         }
 
+        /// <summary>Lauf 6: Spieler läuft, dreht oder hält die rechte Maustaste (Auto-Angriff dreht dann nicht zum Ziel).</summary>
+        public bool PlayerSteering { get; private set; }
+        bool rmb0() { var i = InputManager.Instance; return (i != null && i.RotateHeld) || QaRmb; }
         Vector3 _impulse;
         // ---------------- Lauf 4: Reittier-Steuerung ----------------
         /// <summary>Reittier steuert Sprung/Ausweichen selbst (Leertaste, V).</summary>

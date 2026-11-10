@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: schattenklinge_klingenwirbel_W1
   DisplayName: Kreiselaxt
   Description: Grundangriff auf bis zu 18 m; Blutung (1). Projektil-Finisher.
-  ShortLabel: Kreise.
+  ShortLabel: Kreise. I
   IconColor: {r: 0.5, g: 0.88, b: 0.95, a: 1}
   Icon: {fileID: 0}
   SlotType: 0
@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 18
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.72
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 0.984
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -40,7 +42,7 @@ MonoBehaviour:
   TargetBuffs:
   - Type: 13
     Stacks: 1
-    Duration: 4
+    Duration: 6.2
   SelfBuffs: []
   ShareWithAllies: 0
   CleanseCount: 0
@@ -71,7 +73,9 @@ MonoBehaviour:
     SfxCharge: Stahl/Charge
     SfxRelease: Stahl/Swing1
     SfxImpact: Stahl/Impact
-  Chain: []
+  Chain:
+  - {fileID: 11400000, guid: 18dac518e3ce3db44b5336b4a27bbfdc, type: 2}
+  - {fileID: 11400000, guid: 75769dafffae06245b9d14169aa1e7fd, type: 2}
   Palette: 22
   PaletteExplicit: 1
   WeaponStyleOverride: Axe

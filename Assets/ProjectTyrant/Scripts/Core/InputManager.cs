@@ -55,6 +55,8 @@ namespace ProjectTyrant
         /// <summary>Von der UI registriert: schließt das oberste Fenster und gibt true zurück, wenn Esc verbraucht wurde.</summary>
         public static System.Func<bool> EscapeHandler;
         public int SkillPressed { get; private set; } = -1;
+        /// <summary>Fix-Lauf F1: losgelassene Skill-Taste (Bodenziel „Drücken und Loslassen“).</summary>
+        public int SkillReleased { get; private set; } = -1;
         /// <summary>Lauf 5 / M25: F1–F4 Klassenmechanik (0–3), F5 Elite-Mechanik (4); −1 = keine.</summary>
         public int MechanicPressed { get; private set; } = -1;
         /// <summary>Doppeltipp-Richtung im Input-Raum (x = rechts, y = vorne), sonst Vector2.zero.</summary>
@@ -179,6 +181,7 @@ namespace ProjectTyrant
             ShiftHeld = _shift.IsPressed();
             SkillPressed = -1;
             for (int i = 0; i < 10; i++) if (_skills[i].WasPressedThisFrame()) { SkillPressed = i; break; }
+            SkillReleased = -1; for (int i = 0; i < 10; i++) if (_skills[i].WasReleasedThisFrame()) { SkillReleased = i; break; }
         }
 
         void ReadLegacy()
@@ -213,6 +216,7 @@ namespace ProjectTyrant
             ShiftHeld = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
             SkillPressed = -1;
             for (int i = 0; i < 10; i++) if (Input.GetKeyDown(SkillKeyCodes[i])) { SkillPressed = i; break; }
+            SkillReleased = -1; for (int i = 0; i < 10; i++) if (Input.GetKeyUp(SkillKeyCodes[i])) { SkillReleased = i; break; }
         }
 
         void SuppressGameplay()

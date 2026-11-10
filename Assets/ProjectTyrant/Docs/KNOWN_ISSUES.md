@@ -32,12 +32,38 @@
 | 27 | Kein Unity-AudioMixer-Asset: Mixer-Gruppen/Snapshots sind ein eigenes Modell (MixerModel) – Unity-Mixer-Effekte (Hall-Send, Kompressor) stehen deshalb nicht zur Verfügung; Hall ist in die Clips gerendert, Höhlen/Ruinen nutzen noch keine AudioReverbZone. | bewusst (Lauf 5) |
 | 28 | Steuerung in den Optionen nur als Übersicht, keine Umbelegung (laut Auftrag optional). | bewusst (Lauf 5) |
 | 29 | Optionen liegen bis M25 in PlayerPrefs („PT_Options“), nicht im Account-Speicherstand. | behoben (M25, account.json) |
-| 30 | Rüstungsgewicht (leicht/mittel/schwer) ist je Klasse hinterlegt, beschränkt aber noch keine Rüstungsteile – Rüstung ist klassenübergreifend. | offen (M27) |
+| 30 | Rüstungsgewicht (leicht/mittel/schwer) ist je Klasse hinterlegt, beschränkt aber noch keine Rüstungsteile – Rüstung ist klassenübergreifend. | offen → Lauf 8 (Rüstungssystem) |
 | 31 | Klassen-Silhouetten unterscheiden sich nur über Farben und Waffen, nicht über Rüstungsformen. | offen (M27, Meshy) |
-| 32 | Klassen-Duell (ohne Spezialisierungen): Schattenklinge 125 DPS und Elementarweber 223 DPS liegen deutlich unter Wächter (396) und Wildhüter (435); Ziel ±15 %. | offen → M27 Balancing |
+| 32 | Klassen-Duell (ohne Spezialisierungen): Schattenklinge 125 DPS und Elementarweber 223 DPS liegen deutlich unter Wächter (396) und Wildhüter (435); Ziel ±15 %. | erledigt (M27 Balancing, siehe 47–50) |
 | 33 | Ein Debug-Klassentest vor M25-Abschluss hatte Klasse/Waffen des migrierten Wächters überschrieben; aus `save.json` wiederhergestellt, Debug-Wechsel speichern seitdem nicht. | behoben (M25) |
-| 34 | Klassen-/Spezialisierungs-Schaden streut stark (Duell, gleiches Gear: Sturmrufer 327 bis Dornenwächter 1357 DPS; Wildhüter-Schaden kommt großteils vom Gefährten). Ziel ±15 % zum Wächter. | offen → M27 Balancing |
+| 34 | Klassen-/Spezialisierungs-Schaden streut stark (Duell, gleiches Gear: Sturmrufer 327 bis Dornenwächter 1357 DPS; Wildhüter-Schaden kommt großteils vom Gefährten). Ziel ±15 % zum Wächter. | erledigt (M27 Balancing, siehe 47–50) |
 | 35 | Zauber-Posen der Spezialisierungen nutzen die vorhandenen Clips (Cast1H/Cast2H/CastChannel/Schuss je Waffenstil) – keine eigenen Clips je Spezialisierung. | bewusst (Lauf 5) |
 | 36 | Glutbinder-„Elementar-Diener“ sind ortsfeste Felder mit Treffer-Takt, keine beweglichen beschworenen Begleiter. | bewusst (Lauf 5) |
 | 37 | Haupt- und Nebenhand sind keine getrennten Ausrüstungsplätze: Elite-Waffen kommen als ganze Sets (z. B. Zepter & Kriegshorn); beim Elementarweber übernehmen sie die Zepter-Plätze 1–3. | bewusst (Lauf 5, ggf. Lauf 8) |
 | 38 | Duell-Bot: in Einzelläufen entstand ein Gegner an unerreichbarer Stelle (DPS 0, kein Schaden erlitten); Wiederholung lieferte normale Werte. Stellungskorrektur über Sichtlinie ist eingebaut, ein Gegner-Neuplatzieren noch nicht. | offen (QA-Werkzeug) |
+
+## Fix-Lauf F1
+| 39 | ~~Soft-Lock: nach dem Besiegtwerden in einer Zone ohne freigeschaltete Wegmarke bot die Karte keine Wiederbelebung an.~~ Ankunfts-Wegmarke je Eingang (≤ 40 m, Auto-Freischaltung), Builder-Prüfung, Notfall-Wegmarke, Migration alter Spielstände. | erledigt (F1) |
+| 40 | ~~Mausrad-Zoom ohne spürbare Wirkung~~ (Scroll war gebunden, wurde aber als ±1 je Raste normiert und mit 0,0015 multipliziert). Neuer Zoom 1,5–12 m / beritten 2,5–16 m. | erledigt (F1) |
+| 41 | Ego-Perspektive bei minimalem Zoom („FirstPersonAtMinZoom“) ist als Option vorbereitet, aber nicht umgesetzt (Kopf-/Waffen-Clipping der Figur, eigene Kamera-Nähe fehlt). | offen |
+| 42 | Drehen mit A/D nutzt den Lauf-/Leerlauf-Clip; kein eigener Dreh-Clip (Füße gleiten beim Drehen im Stand). | offen (Animation) |
+| 43 | Elementarweber-Auto-Angriffe bleiben einzelne Angriffe (Einstimmungs-Skills wechseln ohnehin); Langbogen bewusst ohne Kette. | bewusst (F1) |
+| 44 | Ankunfts-Wegmarken gibt es für die 4 Zonen; Städte (Lauf 7) brauchen dieselbe Prüfung – der Builder-Test deckt neue Zonen automatisch ab. | offen → Lauf 7 |
+| 45 | Live-Prüfungen in F1 liefen über QA-Hilfen ohne Fenster-Fokus (`PlayerController.QaMove/QaRmb`, `QaDelayedCapture`, `QaChainProbe`); echte Tastatur-Ereignisse kommen bei unfokussiertem Editor nicht an. | bewusst (QA) |
+| 46 | ~~Kein Weltboden: wer neben die Karte gerät (im F1-Dauertest: Duell-Bot stellte in Sonnfurt neben der Karte auf), fiel endlos (y = −37.000).~~ Weltboden y = −150 holt zur ersten Besiegt-Option zurück; Duell-Bot wählt nur Plätze mit Boden. | erledigt (F1) |
+
+## M27
+| 47 | Balancing-Messung streut stark: gleiche Konfiguration 329 vs. 722 DPS (Wildhüter) bzw. 85 vs. 775 (Wächter), weil der Duell-Bot gelegentlich ohne Sichtlinie/Reichweite steht; ausgewertet wird das Maximum aus 2 Durchgängen. | bewusst (Messmethode) |
+| 48 | Elementarweber (Kern) streut nach Faktor 2,0 im Bot zwischen 0 und 667 DPS (Bestwert −14 % zum Wächter 775): der Bot wirkt nur ~0,6–0,9 Skills/s (Bodenziel- und Kanal-Skills vor dem Auto-Angriff); der Auto-Angriff allein liegt mit 1,27–2,68 Koeffizient/s auf Wächter-Niveau (1,41/s). Faktor bewusst nicht über 2,0 (Test-Grenze), Spieler-Rotation erreicht mehr. | offen → Bot-Rotation je Klasse |
+| 49 | Sturmrufer streut 474–718 DPS (Bestwert −7 %): Überladen-Kanal alle 7 s im Bot blockiert die Waffenskills. | beobachten |
+| 50 | Dornenwächter nach Faktor 0,5: 855–856 DPS (+10 %); der Gefährte trägt ~40 % und wird nur mit dem Klassenfaktor skaliert – eine weitere Senkung bräuchte einen Gefährten-Faktor je Spezialisierung. | erledigt (M27) |
+| 51 | Meshy-Helden (3) wie alle bisherigen 8 Meshy-Figuren nicht rissfrei skinnbar → Statuen; Klassen-Silhouetten weiter nur über Farben und Waffen (KNOWN 31). Rüstungsformen kommen mit Lauf 8. | bewusst |
+| 52 | Ladebilder zeigen den Zonennebel stark (Nebelmoor/Glutöde) – gewollt als Biom-Stimmung, aber weniger „Key-Art“ als gemalte Bilder. | bewusst |
+| 53 | Herz „Sonnfurt sichern“ (Mira) und Späher sind in M28 nur als Modell/Objekt-Typ vorhanden; die Inhalte für alle bestehenden Zonen folgen in M29 (Schritt K01_S02 ist bis dahin nicht abschließbar). | erledigt (M29) |
+| 54 | Story-Instanzen spielen am Ort in der offenen Welt; Häuser, Dorfbewohner und Requisiten der Zone bleiben stehen – „Feuer auf dem Hof“ zeigt noch keinen brennenden Hof. Brand-/Zerstörungs-Requisiten je Instanz kommen mit M29. | erledigt (M29, `StoryProps`) |
+| 55 | Gesprächsszene: Figuren stehen frontal mit 50° Drehung, die Kamera ist fest (keine Schnitte zwischen den Sprechern wie im Vorbild). | beobachten |
+| 56 | Gesichter der Story-Figuren wirken hell (Hauttöne aus Standard-Werten, Bühnenlicht); Mira nachjustiert, andere Figuren folgen mit den Meshy-/Farb-Durchgängen in M34. | beobachten |
+| 57 | QA-Screenshots von `QaDelayedCapture` lagen fest unter `Temp/PT_QA/fixlauf_f1`; jetzt `Folder` (Standard „lauf6“). Ältere Lauf-6-Aufnahmen (m28_*) liegen noch im F1-Ordner. | erledigt |
+| 58 | Editor fror am 2026-11-10 05:00 beim Verlassen einer Story-Instanz ein (nach dem Ausblenden auch verbündeter Kämpfer: Karawane, Wachen, Vorräte; vorher TransformStreamHandle-/IndexOutOfRange-Fehler aus Animation Rigging beim Reaktivieren). Ausblenden wieder auf Gegner beschränkt; offene Ereignis-Figuren bleiben in der Instanz sichtbar. Prüfen nach Neustart. | offen |
+| 59 | Sprechblasen liegen über offenen Fenstern (Weltkarte); Späher fehlen in der Legende der Weltkarte. | beobachten |
+| 60 | Herz-Panel der offenen Welt bleibt in Story-Instanzen sichtbar, wenn ein Herz am selben Ort liegt (Gerstenbrunn/„Feuer auf dem Hof“). | beobachten |

@@ -1,0 +1,47 @@
+Id;Sprecher;Emotion;Kamera;Text;Extra
+K05_S01_L01;mira;neutral;rechts;Glutschmiede. Hier riecht alles nach Eisen und schlechter Laune. Drei Leute wollen dich sprechen. Gleichzeitig.;
+K05_S01_L02;haldis;entschlossen;rechts;Kommandantin Haldis, die Wacht. Brennar hat mir von dir geschrieben. Drei Seiten. Er schrieb nie drei Seiten.;
+K05_S01_L03;held;trauernd;links;Er hat mir nie gesagt, dass er schreibt.;
+K05_S01_L04;haldis;neutral;rechts;Er hat auch nie gesagt, dass er stirbt. Er hat es einfach getan. Ordentlich.;
+K05_S01_L05;tovin;amuesiert;rechts;Und ich bin immer noch Tovin. Mit neuen Notizen. Die alten habe ich verbrannt. Versehentlich. Hier ist alles heiß.;
+K05_S01_L06;veyra;neutral;rechts;Veyra. Der Schleier schickt mich nicht. Ich bin trotzdem hier.;
+K05_S01_L07;held;neutral;links;Und was will der Schleier, der dich nicht schickt?;
+K05_S01_L08;veyra;amuesiert;rechts;Den Herold. Lebend wäre nett. Tot ginge auch.;
+K05_S01_C1_A;held;amuesiert;links;Drei Werber, ein Held. Ich hoffe, ihr habt Kuchen mitgebracht.;opt:1|tend:Charme|reply:K05_S01_R1
+K05_S01_C1_B;held;neutral;links;Ich höre euch alle an. Danach entscheide ich.;opt:1|tend:Wuerde|reply:K05_S01_R2
+K05_S01_C1_C;held;zornig;links;Wer mir den Herold bringt, hat mich.;opt:1|tend:Wildheit|reply:K05_S01_R3
+K05_S01_R1;haldis;zornig;rechts;Die Wacht bringt Rationen. Kuchen ist keine Verteidigungsstrategie.;reply
+K05_S01_R2;tovin;neutral;rechts;Vernünftig. Ich notiere: vernünftig. Das kommt selten vor.;reply
+K05_S01_R3;veyra;amuesiert;rechts;Ehrlich. Gefällt mir. Gefährlich, aber gefällt mir.;reply
+K05_S01_L09;haldis;entschlossen;rechts;Erst der Sturm über der Glutöde. Wer dort besteht, darf mitreden.;
+K05_S02_L01;haldis;entschlossen;blase;Die Aschkrallen greifen in Wellen an. Halte die Glutschmiede, bis der Sturm bricht!;
+K05_S02E_L01;tovin;amuesiert;blase;Erstaunlich. Ich habe mitgezählt. Du hast öfter ausgewichen als ich geatmet habe.;
+K05_S02E_L02;veyra;neutral;blase;Der Herold war hier. Er hat die Schmiede beobachtet. Er beobachtet dich.;
+K05_S03_L01;haldis;entschlossen;rechts;Die Aschwacht am Kraterrand. Dort lagern die Aschkrallen ihre Siegelsplitter.;
+K05_S03_L02;held;neutral;links;Siegelsplitter? Vom Pass?;
+K05_S03_L03;tovin;besorgt;rechts;Vom Pass. Und von zwei anderen Siegeln, von denen ich nichts wusste. Das ist unangenehm.;
+K05_S03_L04;veyra;neutral;rechts;Wir nehmen sie ihnen weg. Leise oder laut. Du suchst es aus.;
+K05_S03_C2_A;held;neutral;links;Laut. Sie sollen wissen, wer kommt.;opt:2|tend:Wildheit|flag:k05_laut|reply:K05_S03_R1
+K05_S03_C2_B;held;neutral;links;Leise. Wir holen die Splitter, ohne dass jemand stirbt.;opt:2|tend:Wuerde|flag:k05_leise|reply:K05_S03_R2
+K05_S03_R1;haldis;amuesiert;rechts;Endlich jemand, der Trommeln mag.;reply
+K05_S03_R2;veyra;amuesiert;rechts;Ich wusste, ich mag dich.;reply
+K05_S03E_L01;held;entschlossen;nah;Drei Splitter. Drei Siegel. Und das vierte liegt unter seiner Feste.;
+K05_S03E_L02;tovin;besorgt;rechts;Die Tyrannenfeste. Wenn das vierte Siegel bricht, wacht er auf. Vareth.;
+K05_S03E_L03;haldis;zornig;rechts;Dann halten wir das vierte. Mit allem, was wir haben.;
+K05_S03E_L03@Wacht;haldis;entschlossen;rechts;Dann halten wir das vierte. Mit dir an der Spitze.;
+K05_S04_L01;mira;neutral;rechts;Du musst dich entscheiden. Alle drei wollen dich. Ich will nur, dass du zurückkommst.;
+K05_S04_L02;haldis;entschlossen;rechts;Die Wacht stürmt. Wir stellen eine Linie, und wir halten sie. Wie Brennar.;
+K05_S04_L03;tovin;neutral;rechts;Das Archiv versteht. Wer Vareth war, warum er schläft, wie man ihn wieder einschläfert.;
+K05_S04_L04;veyra;neutral;rechts;Der Schleier ist schon drin. In jedem Lager, jeder Hafenkneipe. Wir finden den Herold, bevor er uns findet.;
+K05_S04_L05;held;neutral;links;Ich habe mich entschieden.;
+K05_S04_C3_A;held;entschlossen;links;Die Wacht. Brennar hat mir gezeigt, wie man eine Linie hält.;opt:3|tend:Wuerde|pact:Wacht|flag:pakt_wacht|reply:K05_S04_RW
+K05_S04_C3_B;held;neutral;links;Das Archiv. Wer seinen Feind versteht, muss ihn nur einmal schlagen.;opt:3|tend:Charme|pact:Archiv|flag:pakt_archiv|reply:K05_S04_RA
+K05_S04_C3_C;held;amuesiert;links;Der Schleier. Der Herold soll mich erst sehen, wenn es zu spät ist.;opt:3|tend:Wildheit|pact:Schleier|flag:pakt_schleier|reply:K05_S04_RS
+K05_S04_RW;haldis;entschlossen;rechts;Willkommen in der Wacht. Du schläfst in Stiefeln ab heute.;reply
+K05_S04_RA;tovin;amuesiert;rechts;Großartig! Ich habe einen Schreibtisch für dich. Er ist unter den Büchern.;reply
+K05_S04_RS;veyra;amuesiert;rechts;Gut. Dann vergiss, dass du mich je gesehen hast. Bis morgen.;reply
+K05_S04_L06;mira;neutral;rechts;Silbermund. Dort sitzen alle drei Bündnisse. Und ich habe schon ein Zimmer reserviert.;
+K05_J;held;entschlossen;;In der Glutöde warben drei Bündnisse um mich. Wir nahmen den Aschkrallen die Siegelsplitter ab. Das vierte Siegel liegt unter der Tyrannenfeste.;journal
+K05_J@Wacht;held;entschlossen;;In der Glutöde warben drei Bündnisse um mich. Ich schwor auf die Wacht, wie Brennar. Das vierte Siegel liegt unter der Tyrannenfeste.;journal
+K05_J@Archiv;held;entschlossen;;In der Glutöde warben drei Bündnisse um mich. Ich ging zum Archiv, zu Tovin. Das vierte Siegel liegt unter der Tyrannenfeste.;journal
+K05_J@Schleier;held;entschlossen;;In der Glutöde warben drei Bündnisse um mich. Ich folgte Veyra in den Schleier. Das vierte Siegel liegt unter der Tyrannenfeste.;journal

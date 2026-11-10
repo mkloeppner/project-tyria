@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 0
   Radius: 2.5
   TargetCount: 5
-  Coefficient: 0.7
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.682
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -60,10 +62,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Scepter_Heavy
     AnimScale: 0.51282054
-    VfxCharge: Charge/Tiefviolett/M
-    VfxRelease: Release/Tiefviolett/M
+    VfxCharge: Charge/Tiefviolett/L
+    VfxRelease: Release/Tiefviolett/L
     VfxProjectile: 
-    VfxImpact: Impact/Tiefviolett/M
+    VfxImpact: Impact/Tiefviolett/L
     VfxAfter: 
     SfxCharge: Tiefviolett/Charge
     SfxRelease: Tiefviolett/Release

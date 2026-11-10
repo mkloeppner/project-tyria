@@ -30,7 +30,9 @@ MonoBehaviour:
   Range: 0
   Radius: 4
   TargetCount: 5
-  Coefficient: 1.1
+  ChainBonus: 0
+  ChainRoot: {fileID: 0}
+  Coefficient: 1.98
   Hits: 1
   HitInterval: 0.25
   HealBase: 0
@@ -40,7 +42,7 @@ MonoBehaviour:
   TargetBuffs:
   - Type: 14
     Stacks: 2
-    Duration: 4
+    Duration: 7.2
   - Type: 24
     Stacks: 2
     Duration: 4
@@ -66,10 +68,10 @@ MonoBehaviour:
     Channel: 0
     Clip: Sword_Heavy
     AnimScale: 0.51282054
-    VfxCharge: Charge/Zwielicht/M
-    VfxRelease: Shockwave/Zwielicht/M
+    VfxCharge: Charge/Zwielicht/L
+    VfxRelease: Shockwave/Zwielicht/L
     VfxProjectile: 
-    VfxImpact: Impact/Zwielicht/M
+    VfxImpact: Impact/Zwielicht/L
     VfxAfter: 
     SfxCharge: Zwielicht/Charge
     SfxRelease: Zwielicht/Release
