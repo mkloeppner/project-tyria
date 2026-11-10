@@ -90,6 +90,21 @@ namespace ProjectTyrant
             GameAudio.Play(VfxIds.Sfx(pal, "Buff"), Player.transform.position);
         }
 
+        /// <summary>Debug/QA: beide Waffenplätze mit exotischen Stufe-30-Waffen der aktuell geführten Arten belegen (gleiches Gear für Klassenvergleiche).</summary>
+        public string DebugExoticWeapons()
+        {
+            var got = new List<string>();
+            for (int set = 0; set < 2; set++)
+            {
+                var k = State.Equipment.WeaponKindOf(set); if (k == WeaponKind.None) continue;
+                string id = k == WeaponKind.Greatsword ? "gs_glut_exo" : k == WeaponKind.Staff ? "st_glut_exo" : ItemIds.Prefix(k) + "_exo";
+                var d = Items != null ? Items.Get(id) : null; if (d == null) continue;
+                State.Equipment.SetDirect(set == 0 ? EquipSlot.Weapon1 : EquipSlot.Weapon2, new ItemInstance(d, 1, false)); got.Add(id);
+            }
+            OnEquipmentChanged();
+            return "Waffen: " + string.Join(", ", got);
+        }
+
         /// <summary>Debug/QA: Spezialisierung sofort vollständig freischalten und aktivieren (Stufe 30, Punkte werden gutgeschrieben).</summary>
         public string DebugActivateElite(string id)
         {
@@ -105,10 +120,11 @@ namespace ProjectTyrant
             for (int t = 1; t <= 3; t++) if (l.Selected[t - 1] < 0) State.Traits.UnlockMajor(l, t, 0, State.Progression, out _);
             State.Traits.SetActiveElite(id, out _);
             RefreshEliteData();
-            // Elite-Waffe in Set 2 anlegen
+            // Elite-Waffe anlegen und aktiv schalten (Elementarweber: Set 1, da im Kampf kein Waffenwechsel)
+            bool noSwap = c != null && !c.SwapInCombat; int set = noSwap ? 0 : 1;
             var d = Items != null && e.Weapon != null ? Items.Get(ItemIds.Recruit(e.Weapon.Kind)) : null;
-            if (d != null) { State.Equipment.SetDirect(EquipSlot.Weapon2, new ItemInstance(d, 1, false)); OnEquipmentChanged(); }
-            var caster = Player.GetComponent<SkillCaster>(); if (caster != null && caster.ActiveSetIndex != 1) caster.TrySwapWeapons();
+            if (d != null) { State.Equipment.SetDirect(set == 0 ? EquipSlot.Weapon1 : EquipSlot.Weapon2, new ItemInstance(d, 1, false)); OnEquipmentChanged(); }
+            var caster = Player.GetComponent<SkillCaster>(); if (caster != null && caster.ActiveSetIndex != set) caster.TrySwapWeapons();
             ApplyEliteToPlayer(true);
             RequestSave("Elite (Debug)");
             return "Elite: " + e.DisplayName;

@@ -13,11 +13,11 @@ namespace ProjectTyrant
     {
         public struct Result
         {
-            public string ClassId; public float Seconds, DamageDealt, DamageTaken; public int Kills, Downs, Casts, Mechanic, Exceptions, Dodges;
+            public string ClassId; public float Seconds, DamageDealt, DamageTaken; public int Kills, Downs, Casts, Mechanic, Exceptions, Dodges, Repositions;
             public float Dps => Seconds > 0f ? DamageDealt / Seconds : 0f;
             public float TakenPerSecond => Seconds > 0f ? DamageTaken / Seconds : 0f;
             public float AvgKill => Kills > 0 ? Seconds / Kills : Seconds;
-            public override string ToString() => ClassId + ": " + Seconds.ToString("0") + " s · Kills " + Kills + " · Ø " + AvgKill.ToString("0.0") + " s/Kill · DPS " + Dps.ToString("0") + " · erlitten " + TakenPerSecond.ToString("0") + "/s · Niederlagen " + Downs + " · Casts " + Casts + " · Ausweichen " + Dodges + " · Mechanik " + Mechanic + " · Exceptions " + Exceptions;
+            public override string ToString() => ClassId + ": " + Seconds.ToString("0") + " s · Kills " + Kills + " · Ø " + AvgKill.ToString("0.0") + " s/Kill · DPS " + Dps.ToString("0") + " · erlitten " + TakenPerSecond.ToString("0") + "/s · Niederlagen " + Downs + " · Casts " + Casts + " · Ausweichen " + Dodges + " · Mechanik " + Mechanic + " · Exceptions " + Exceptions + " · Neuaufstellungen " + Repositions;
         }
 
         public static readonly List<Result> Results = new List<Result>();
@@ -35,7 +35,7 @@ namespace ProjectTyrant
         }
 
         Queue<string> _queue; float _seconds, _scale; string _archetypeId;
-        Result _cur; float _t, _nextAct, _respawnAt, _nextMech, _nextDodge, _nextElite; int _mechStep; Combatant _player, _enemy; SkillCaster _caster; ClassMechanicHost _host;
+        Result _cur; float _t, _nextAct, _respawnAt, _nextMech, _nextDodge, _nextElite, _nextLos; int _mechStep; Combatant _player, _enemy; SkillCaster _caster; ClassMechanicHost _host;
         EnemyArchetype _arch; Vector3 _arena; string _ownClass; bool _active; string _eliteId; bool _sigCast; float _sigShot;
         /// <summary>Captures der Signatur-Skills (Temp/PT_QA/m26_&lt;spez&gt;.png).</summary>
         public static bool CaptureSignatures = true;
@@ -71,6 +71,9 @@ namespace ProjectTyrant
             p.DebugSwitchClass(id); p.SaveSuspended = true; p.DebugUnlockAll();
             p.State.Loadout.FillDefaults(p.CurrentClass.SkillPool);
             if (_eliteId != null) Debug.Log("[ProjectTyrant] Duell-Elite: " + p.DebugActivateElite(_eliteId));
+            // Gleiches Gear für alle (QA-Fund M26: Rekrutenwaffen Stufe 1 machten Direktschaden auf Stufe 30 fast wirkungslos)
+            if (p.State.Progression.Level < AttributeSet.MaxLevel) p.State.Progression.SetLevel(AttributeSet.MaxLevel);
+            Debug.Log("[ProjectTyrant] Duell-Gear: " + p.DebugExoticWeapons());
             _player = gm.Player; _caster = _player.GetComponent<SkillCaster>(); _host = _player.GetComponent<ClassMechanicHost>();
             p.State.Loadout.ApplyTo(_caster);
             for (int i = 0; i < 10; i++) { var s = _caster.GetSkillInSlot(i); if (s != null) _caster.SetCooldown(s, 0f); }
@@ -90,9 +93,11 @@ namespace ProjectTyrant
                 _cur.Seconds = _t; Results.Add(_cur);
                 var list = new List<KeyValuePair<string, float>>(_sources); list.Sort((a, b) => b.Value.CompareTo(a.Value));
                 var sb = new StringBuilder(); for (int i = 0; i < Mathf.Min(4, list.Count); i++) sb.Append(list[i].Key + " " + list[i].Value.ToString("0") + "; ");
-                Debug.Log("[ProjectTyrant] Duell " + _cur + "\n   Schadensquellen: " + sb);
+                var dl = new List<KeyValuePair<string, float>>(_dealt); dl.Sort((a, b) => b.Value.CompareTo(a.Value));
+                var sb2 = new StringBuilder(); for (int i = 0; i < Mathf.Min(6, dl.Count); i++) sb2.Append(dl[i].Key + " " + dl[i].Value.ToString("0") + "; ");
+                Debug.Log("[ProjectTyrant] Duell " + _cur + "\n   Schadensquellen: " + sb + "\n   Ausgeteilt: " + sb2 + " · abgewehrt/verfehlt " + _misses);
             }
-            _sources.Clear();
+            _sources.Clear(); _dealt.Clear(); _misses = 0;
             _active = false;
         }
 
@@ -103,7 +108,13 @@ namespace ProjectTyrant
             var k = d.Source != null ? d.Source.DisplayName + (d.Skill != null ? "/" + d.Skill.DisplayName : "") : "?";
             _sources.TryGetValue(k, out var v); _sources[k] = v + d.Amount;
         }
-        void OnEnemyDamaged(DamageInfo d) { _cur.DamageDealt += d.Amount; }
+        readonly Dictionary<string, float> _dealt = new Dictionary<string, float>(); int _misses;
+        void OnEnemyDamaged(DamageInfo d)
+        {
+            _cur.DamageDealt += d.Amount; if (d.Evaded || d.Blocked || d.Missed) _misses++;
+            var k = (d.Source == _player ? "" : d.Source != null ? d.Source.DisplayName + ":" : "?:") + (d.Skill != null ? d.Skill.DisplayName : d.IsCondition ? "Zustand" : "-");
+            _dealt.TryGetValue(k, out var v); _dealt[k] = v + d.Amount;
+        }
 
         void Update()
         {
@@ -141,6 +152,23 @@ namespace ProjectTyrant
                 if (pc != null) pc.Teleport(ZoneAnchors.GroundAt(target + Vector3.up * 2f), _player.transform.rotation); else _player.transform.position = target;
             }
 
+            // Stellungskorrektur (QA-Fund M26): Gelände/Felsen zwischen Spieler und Gegner oder Knien außer Reichweite → neu aufstellen
+            if (_t >= _nextLos)
+            {
+                _nextLos = _t + 2f;
+                var eye = _player.transform.position + Vector3.up * 1.3f; var tgt = _enemy.transform.position + Vector3.up * 1.0f;
+                bool blocked = false;
+                foreach (var h in Physics.RaycastAll(eye, (tgt - eye).normalized, Vector3.Distance(eye, tgt), ~0, QueryTriggerInteraction.Ignore))
+                    if (h.collider.GetComponentInParent<Combatant>() == null) { blocked = true; break; }
+                if (blocked || to.magnitude > want + 6f)
+                {
+                    var dir = to.sqrMagnitude > 0.01f ? to.normalized : _player.transform.forward;
+                    var place = ZoneAnchors.GroundAt(_enemy.transform.position - dir * Mathf.Min(want, 8f) + Vector3.up * 3f);
+                    var pcx = _player.GetComponent<PlayerController>(); if (pcx != null) pcx.Teleport(place, Quaternion.LookRotation(dir)); else _player.transform.position = place;
+                    _cur.Repositions++;
+                }
+            }
+
             // Ausweichen wie ein aufmerksamer Spieler: bei spätem Gegner-Windup oder einem Boden-Telegraphen kurz vor dem Auslösen
             var pc2 = _player.GetComponent<PlayerController>(); var brain = _enemy.GetComponent<NpcBrain>();
             if (pc2 != null && !pc2.Dodge.IsDodging && _t >= _nextDodge)
@@ -153,9 +181,10 @@ namespace ProjectTyrant
             // Signatur-Skill der Spezialisierung einmal gezielt wirken und festhalten
             if (!_sigCast && _t > 6f && !_caster.IsCasting && _host != null && _host.Elite != null)
             {
-                _sigCast = true; var spec = _host.Elite; SkillDefinition sig = null;
+                var spec = _host.Elite; SkillDefinition sig = null;
                 foreach (var sk in spec.AllSkills()) if (sk != null && sk.Id.EndsWith(spec.SignatureSkill)) sig = sk;
-                if (sig != null && _caster.TryCast(sig, true, sig.IsGroundTargeted ? _enemy.transform.position : (Vector3?)null, true)) { _cur.Casts++; _sigShot = _t + Mathf.Max(0.35f, sig.CastTime + 0.2f); }
+                if (sig != null && _caster.TryCast(sig, true, sig.IsGroundTargeted ? _enemy.transform.position : (Vector3?)null, true)) { _sigCast = true; _cur.Casts++; _sigShot = _t + Mathf.Max(0.35f, sig.CastTime + 0.2f); }
+                else if (_t > 30f) { _sigCast = true; Debug.LogWarning("[ProjectTyrant] Duell: Signatur-Skill nicht wirkbar – " + spec.SignatureSkill); }
             }
             if (_sigShot > 0f && _t >= _sigShot) { _sigShot = -1f; if (CaptureSignatures) ScreenCapture.CaptureScreenshot("Temp/PT_QA/m26_" + _eliteId + ".png"); }
             // Elite-Mechanik (F5) regelmäßig
@@ -192,6 +221,13 @@ namespace ProjectTyrant
                     var p = ZoneAnchors.GroundAt(from + new Vector3(Mathf.Cos(a) * r, 30f, Mathf.Sin(a) * r));
                     bool quiet = true;
                     foreach (var c in Combatant.All) if (c != null && !c.IsDead && c.Team == Team.Enemy && (c.transform.position - p).sqrMagnitude < 45f * 45f) { quiet = false; break; }
+                    // QA-Fund M26: ein Platz in einem Felsen blockierte Geschosse und Nahkampf (DPS ~20) – Platz muss frei von Kollidern sein
+                    if (quiet && Physics.CheckCapsule(p + Vector3.up * 1.1f, p + Vector3.up * 1.8f, 0.55f, ~0, QueryTriggerInteraction.Ignore))
+                    {
+                        foreach (var col in Physics.OverlapCapsule(p + Vector3.up * 1.1f, p + Vector3.up * 1.8f, 0.55f, ~0, QueryTriggerInteraction.Ignore))
+                            if (col.GetComponentInParent<Combatant>() == null) { quiet = false; break; }
+                    }
+                    if (quiet && Physics.Raycast(p + Vector3.up * 1.2f, _player.transform.forward, 9f, ~0, QueryTriggerInteraction.Ignore)) quiet = false;   // freie Sicht zum Gegner-Spawn
                     if (quiet) return p;
                     if (ring == 0) break;
                 }
