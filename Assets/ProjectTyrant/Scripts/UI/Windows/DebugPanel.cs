@@ -40,7 +40,15 @@ namespace ProjectTyrant
             Add("Laden", a => DebugCommands.Load());
             Add("Neues Spiel", a => DebugCommands.NewGame());
             Add("Speicher löschen", a => DebugCommands.DeleteSave());
-            foreach (var e in DebugCommands.Extra) { var run = e.run; Add(e.label, run); }
+            SyncExtras();
+            Window.Opened += SyncExtras;   // Systeme registrieren ihre Befehle teils erst nach dem Aufbau des Panels
+        }
+
+        int _extraAdded;
+        /// <summary>Fügt neu registrierte Befehle aus <see cref="DebugCommands.Extra"/> hinzu (idempotent).</summary>
+        void SyncExtras()
+        {
+            for (; _extraAdded < DebugCommands.Extra.Count; _extraAdded++) { var e = DebugCommands.Extra[_extraAdded]; Add(e.label, e.run); }
         }
 
         static int Int(string s, int def) => int.TryParse(s, out int v) ? v : def;

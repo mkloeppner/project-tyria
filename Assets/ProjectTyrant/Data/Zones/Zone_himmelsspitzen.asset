@@ -24,21 +24,21 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: himmelsspitzen_frostkamm
-    Position: {x: 30, y: 33.039047, z: -460}
+    Position: {x: 30, y: 0, z: -460}
     Yaw: -3.731397
     TargetZone: frostkamm
     TargetPortal: frostkamm_himmelsspitzen
   - Id: himmelsspitzen_silbermund
-    Position: {x: 14, y: 34.09133, z: -410}
+    Position: {x: 14, y: 0, z: -410}
     Yaw: -1.9556814
     TargetZone: silberkueste
     TargetPortal: plaza_himmelsspitzen
   - Id: himmelsspitzen_weisse_stille_k
-    Position: {x: -76.508095, y: 8.943548, z: 412.97278}
+    Position: {x: -76.508095, y: 0, z: 412.97278}
     Yaw: 169.50427
     TargetZone: weisse_stille
     TargetPortal: weisse_stille_himmelsspitzen_k
-  DefaultSpawn: {x: 0, y: 35.983482, z: -420}
+  DefaultSpawn: {x: 0, y: 0, z: -420}
   ContinentRect:
     serializedVersion: 2
     x: 0.32
@@ -46,25 +46,7 @@ MonoBehaviour:
     width: 0.28
     height: 0.24
   ContinentColor: {r: 0.84705883, g: 0.9098039, b: 0.972549, a: 1}
-  Waypoints:
-  - Id: wp_himmel_ankunft
-    Name: Wegmarke Wolkentor
-    Position: {x: 20, y: 33.26753, z: -400}
-  - Id: wp_himmel_nest
-    Name: Wegmarke Greifennester
-    Position: {x: -200, y: 12.172964, z: 80}
-  - Id: wp_himmel_tempel
-    Name: Wegmarke Himmelstempel
-    Position: {x: 10, y: 41.275063, z: 230}
-  - Id: wp_himmel_pirat
-    Name: Wegmarke Piratenbucht
-    Position: {x: 280, y: 23.74226, z: -120}
-  - Id: wp_himmelsspitzen_ankunft_frostkamm
-    Name: Portal-Wegmarke Frostkamm
-    Position: {x: 37.609528, y: 32.998177, z: -454.01273}
-  - Id: wp_himmelsspitzen_ankunft_weisse_stille_k
-    Name: "Portal-Wegmarke Wei\xDFe Stille"
-    Position: {x: -67.41512, y: 9.094488, z: 407.07318}
+  Waypoints: []
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 35.983482, z: -420}

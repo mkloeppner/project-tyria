@@ -215,8 +215,8 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Lauf6\DarknessDirector.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Progression\TraitModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\DangerProfile.cs" />
-    <Compile Include="Assets\ProjectTyrant\Scripts\Inventory\LootRoller.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Regions\LevelBands.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Inventory\LootRoller.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Races\RaceStarter.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Progression\SpecializationDefinition.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\NavMeshDataLoader.cs" />
@@ -289,8 +289,8 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Save\PlayerProfile.Elite.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Zone\ZoneRules.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\StoryProps.cs" />
-    <Compile Include="Assets\ProjectTyrant\Scripts\Events\EventChain.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Regions\JadeBotController.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Events\EventChain.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Items\ItemDatabase.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\BundleTarget.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Save\PlayerProfile.Mastery.cs" />

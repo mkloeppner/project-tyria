@@ -24,16 +24,16 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: gruener_schlund_daemmerwald_k
-    Position: {x: 260.86484, y: 4.5118513, z: 381.30505}
+    Position: {x: 260.86484, y: 0, z: 381.30505}
     Yaw: -145.62253
     TargetZone: daemmerwald
     TargetPortal: daemmerwald_gruener_schlund_k
   - Id: gruener_schlund_schilfmuendung
-    Position: {x: 458.14914, y: 2.1196795, z: -59.52618}
+    Position: {x: 458.14914, y: 0, z: -59.52618}
     Yaw: -82.59717
     TargetZone: schilfmuendung
     TargetPortal: schilfmuendung_gruener_schlund
-  DefaultSpawn: {x: 0, y: 2.7105813, z: -418}
+  DefaultSpawn: {x: 0, y: 0, z: -418}
   ContinentRect:
     serializedVersion: 2
     x: 0.04
@@ -41,28 +41,7 @@ MonoBehaviour:
     width: 0.26
     height: 0.1
   ContinentColor: {r: 0.24705882, g: 0.5411765, b: 0.22745098, a: 1}
-  Waypoints:
-  - Id: wp_gruener_schlund_ankunft
-    Name: "Wegmarke Gr\xFCner Schlund"
-    Position: {x: 12, y: 2.2870584, z: -400}
-  - Id: wp_gruener_schlund_kronendorf
-    Name: Wegmarke Kronendorf
-    Position: {x: 274.93567, y: 4.9126067, z: -250.26672}
-  - Id: wp_gruener_schlund_lianenbruecke
-    Name: "Wegmarke Lianenbr\xFCcke"
-    Position: {x: 206.23672, y: 2, z: 24.619226}
-  - Id: wp_gruener_schlund_wurzeltempel
-    Name: Wegmarke Wurzeltempel
-    Position: {x: 16.693466, y: 2, z: 150.8726}
-  - Id: wp_gruener_schlund_pilzhain
-    Name: Wegmarke Pilzhain
-    Position: {x: -278.31998, y: 2.263852, z: 230.49341}
-  - Id: wp_gruener_schlund_ankunft_daemmerwald_k
-    Name: "Portal-Wegmarke D\xE4mmerwald"
-    Position: {x: 265.477, y: 4.5118513, z: 376.35303}
-  - Id: wp_gruener_schlund_ankunft_schilfmuendung
-    Name: "Portal-Wegmarke Schilfm\xFCndung"
-    Position: {x: 459.12738, y: 2.1196795, z: -54.753113}
+  Waypoints: []
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 2.7105813, z: -418}

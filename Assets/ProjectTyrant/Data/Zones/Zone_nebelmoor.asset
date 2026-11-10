@@ -24,21 +24,21 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: nebelmoor_sonnfurt
-    Position: {x: -30, y: 2.6364026, z: -420}
+    Position: {x: -30, y: 0, z: -420}
     Yaw: 4.085617
     TargetZone: sonnfurt
     TargetPortal: sonnfurt_nebelmoor
   - Id: nebelmoor_frostkamm
-    Position: {x: 20, y: 2.1, z: 420}
+    Position: {x: 20, y: 0, z: 420}
     Yaw: -177.2737
     TargetZone: frostkamm
     TargetPortal: frostkamm_nebelmoor
   - Id: nebelmoor_silbermund
-    Position: {x: 14, y: 2.794667, z: -370}
+    Position: {x: 14, y: 0, z: -370}
     Yaw: -2.1669147
     TargetZone: silberkueste
     TargetPortal: plaza_nebelmoor
-  DefaultSpawn: {x: 0, y: 2.9627912, z: -380}
+  DefaultSpawn: {x: 0, y: 0, z: -380}
   ContinentRect:
     serializedVersion: 2
     x: 0.28
@@ -46,28 +46,7 @@ MonoBehaviour:
     width: 0.3
     height: 0.3
   ContinentColor: {r: 0.37254903, g: 0.47843137, b: 0.32156864, a: 1}
-  Waypoints:
-  - Id: wp_moor_torfsteg
-    Name: Wegmarke Torfsteg
-    Position: {x: 14, y: 2.2021427, z: -352}
-  - Id: wp_moor_schilf
-    Name: Wegmarke Schilfwacht
-    Position: {x: -250, y: 2.1, z: -150}
-  - Id: wp_moor_nebelkreuz
-    Name: Wegmarke Nebelkreuz
-    Position: {x: 60, y: 2.1, z: 20}
-  - Id: wp_moor_kroetenfurt
-    Name: "Wegmarke Kr\xF6tenfurt"
-    Position: {x: 300, y: 2.1, z: -150}
-  - Id: wp_moor_weidenhoehe
-    Name: "Wegmarke Weidenh\xF6he"
-    Position: {x: -120, y: 2.1, z: 300}
-  - Id: wp_nebelmoor_ankunft_sonnfurt
-    Name: Portal-Wegmarke Grenzmark Ashveil
-    Position: {x: -21.572517, y: 2.6495693, z: -414.01526}
-  - Id: wp_nebelmoor_ankunft_frostkamm
-    Name: Portal-Wegmarke Frostkamm
-    Position: {x: 27.71461, y: 2.097721, z: 414.00684}
+  Waypoints: []
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 2.9627912, z: -380}

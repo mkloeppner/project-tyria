@@ -118,9 +118,22 @@ namespace ProjectTyrant.EditorTools
             go.transform.localScale = scale;
             if (euler.HasValue) go.transform.localEulerAngles = euler.Value;
             if (!keepCollider) Object.DestroyImmediate(go.GetComponent<Collider>());
+            else if (type == PrimitiveType.Cylinder) CylinderCollider(go);   // Kapsel würde bei flacher Skalierung zur unsichtbaren Kuppel
             go.GetComponent<MeshRenderer>().sharedMaterial = mat;
             go.layer = parent != null ? parent.gameObject.layer : 0;
             return go;
+        }
+
+        /// <summary>
+        /// Ersetzt den Kapsel-Collider eines Zylinder-Primitivs durch einen Mesh-Collider mit der echten Zylinderform.
+        /// Unity skaliert den Kapsel-Radius mit max(x, z) und die Höhe nie unter 2·Radius – eine flache Scheibe (Platz, Brunnen)
+        /// wird so zur Kugel mit dem Durchmesser der Scheibe, die man nicht betreten kann.
+        /// </summary>
+        public static void CylinderCollider(GameObject go)
+        {
+            var cap = go.GetComponent<CapsuleCollider>(); if (cap != null) Object.DestroyImmediate(cap);
+            var mc = go.GetComponent<MeshCollider>(); if (mc == null) mc = go.AddComponent<MeshCollider>();
+            mc.sharedMesh = go.GetComponent<MeshFilter>().sharedMesh; mc.convex = false;
         }
 
         public static GameObject Child(Transform parent, string name, Vector3 pos)

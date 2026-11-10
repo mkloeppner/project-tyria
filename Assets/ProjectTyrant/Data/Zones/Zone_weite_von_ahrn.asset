@@ -24,16 +24,16 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: weite_von_ahrn_frostkamm_k
-    Position: {x: 284.5798, y: 4.753346, z: 415.96912}
+    Position: {x: 284.5798, y: 0, z: 415.96912}
     Yaw: -145.62253
     TargetZone: frostkamm
     TargetPortal: frostkamm_weite_von_ahrn_k
   - Id: weite_von_ahrn_nebelkamm
-    Position: {x: 499.79904, y: 1.6, z: -64.937645}
+    Position: {x: 499.79904, y: 0, z: -64.937645}
     Yaw: -82.59717
     TargetZone: nebelkamm
     TargetPortal: nebelkamm_weite_von_ahrn
-  DefaultSpawn: {x: 0, y: 4.651695, z: -456}
+  DefaultSpawn: {x: 0, y: 0, z: -456}
   ContinentRect:
     serializedVersion: 2
     x: 0
@@ -41,28 +41,7 @@ MonoBehaviour:
     width: 0.05
     height: 0.05
   ContinentColor: {r: 0.78431374, g: 0.7529412, b: 0.4392157, a: 1}
-  Waypoints:
-  - Id: wp_weite_von_ahrn_ankunft
-    Name: Wegmarke Weite von Ahrn
-    Position: {x: 12, y: 4.578936, z: -438}
-  - Id: wp_weite_von_ahrn_lager_der_ahrn
-    Name: Wegmarke Lager der Ahrn
-    Position: {x: 431.18732, y: 1.6, z: -310.68738}
-  - Id: wp_weite_von_ahrn_hirtenfurt
-    Name: Wegmarke Hirtenfurt
-    Position: {x: 391.2426, y: 1.6142915, z: 36.159153}
-  - Id: wp_weite_von_ahrn_windsaeulen
-    Name: "Wegmarke Winds\xE4ulen"
-    Position: {x: -314.09122, y: 4.88911, z: 9.486923}
-  - Id: wp_weite_von_ahrn_grasmeer
-    Name: Wegmarke Grasmeer
-    Position: {x: -376.40225, y: 2.8650506, z: 219.85526}
-  - Id: wp_weite_von_ahrn_ankunft_frostkamm_k
-    Name: Portal-Wegmarke Frostkamm
-    Position: {x: 289.19196, y: 4.753346, z: 411.0171}
-  - Id: wp_weite_von_ahrn_ankunft_nebelkamm
-    Name: Portal-Wegmarke Nebelkamm
-    Position: {x: 500.77725, y: 1.5999999, z: -60.164574}
+  Waypoints: []
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 4.651695, z: -456}

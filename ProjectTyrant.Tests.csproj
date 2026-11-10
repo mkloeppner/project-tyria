@@ -99,6 +99,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\MasteryTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\EventChainTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\MountTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ColliderShapeTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WaypointSafetyTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ComboTableTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf11SystemsTests.cs" />

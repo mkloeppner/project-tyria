@@ -24,11 +24,11 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: spiegel_der_sonne_sonnentor
-    Position: {x: -346.6342, y: 2.8000002, z: -365.8698}
+    Position: {x: -346.6342, y: 0, z: -365.8698}
     Yaw: 43.45355
     TargetZone: sonnentor
     TargetPortal: sonnentor_spiegel_der_sonne
-  DefaultSpawn: {x: 0, y: 2.8000002, z: -456}
+  DefaultSpawn: {x: 0, y: 0, z: -456}
   ContinentRect:
     serializedVersion: 2
     x: 0.68
@@ -36,25 +36,7 @@ MonoBehaviour:
     width: 0.28
     height: 0.26
   ContinentColor: {r: 0.9411765, g: 0.9411765, b: 0.8784314, a: 1}
-  Waypoints:
-  - Id: wp_spiegel_der_sonne_ankunft
-    Name: Wegmarke Spiegel der Sonne
-    Position: {x: 12, y: 2.8000002, z: -438}
-  - Id: wp_spiegel_der_sonne_salzspiegel
-    Name: Wegmarke Salzspiegel
-    Position: {x: 61.700184, y: 2.8000002, z: -296.9715}
-  - Id: wp_spiegel_der_sonne_archiv_des_ordens
-    Name: Wegmarke Archiv des Ordens
-    Position: {x: 296.4324, y: 2.8000002, z: 29.512367}
-  - Id: wp_spiegel_der_sonne_trugstadt
-    Name: Wegmarke Trugstadt
-    Position: {x: 438.6825, y: 2.8000002, z: 166.88559}
-  - Id: wp_spiegel_der_sonne_kristallkruste
-    Name: Wegmarke Kristallkruste
-    Position: {x: 291.0974, y: 2.8000002, z: 207.60985}
-  - Id: wp_spiegel_der_sonne_ankunft_sonnentor
-    Name: Portal-Wegmarke Sonnentor
-    Position: {x: -334.5076, y: 2.7335384, z: -361.51422}
+  Waypoints: []
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 2.8000002, z: -456}

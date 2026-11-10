@@ -24,16 +24,16 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: klingenschlucht_grosse_leere
-    Position: {x: -317.74802, y: 1.7611175, z: -335.3807}
+    Position: {x: -317.74802, y: 0, z: -335.3807}
     Yaw: 43.45355
     TargetZone: grosse_leere
     TargetPortal: grosse_leere_klingenschlucht
   - Id: klingenschlucht_glutkessel
-    Position: {x: 458.14914, y: 3.1780484, z: -59.52618}
+    Position: {x: 458.14914, y: 0, z: -59.52618}
     Yaw: -82.59717
     TargetZone: glutkessel
     TargetPortal: glutkessel_klingenschlucht
-  DefaultSpawn: {x: 0, y: 7.220649, z: -418}
+  DefaultSpawn: {x: 0, y: 0, z: -418}
   ContinentRect:
     serializedVersion: 2
     x: 0.42
@@ -41,28 +41,7 @@ MonoBehaviour:
     width: 0.26
     height: 0.26
   ContinentColor: {r: 0.7529412, g: 0.4392157, b: 0.2509804, a: 1}
-  Waypoints:
-  - Id: wp_klingenschlucht_ankunft
-    Name: Wegmarke Klingenschlucht
-    Position: {x: 12, y: 7.3443313, z: -400}
-  - Id: wp_klingenschlucht_felsbruecke
-    Name: "Wegmarke Felsbr\xFCcke"
-    Position: {x: -352.96875, y: 8.319135, z: -125.05855}
-  - Id: wp_klingenschlucht_klingenkamm
-    Name: Wegmarke Klingenkamm
-    Position: {x: 45.06135, y: 7.0707173, z: 41.10817}
-  - Id: wp_klingenschlucht_hochplateau_ras
-    Name: Wegmarke Hochplateau Ras
-    Position: {x: -100.667564, y: 1.5, z: -6.408596}
-  - Id: wp_klingenschlucht_schattenschlucht
-    Name: Wegmarke Schattenschlucht
-    Position: {x: 288.31967, y: 9.268286, z: 282.3852}
-  - Id: wp_klingenschlucht_ankunft_grosse_leere
-    Name: "Portal-Wegmarke Gro\xDFe Leere"
-    Position: {x: -305.62143, y: 1.9222986, z: -331.02512}
-  - Id: wp_klingenschlucht_ankunft_glutkessel
-    Name: Portal-Wegmarke Glutkessel
-    Position: {x: 459.12738, y: 3.1780484, z: -54.753113}
+  Waypoints: []
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 7.220649, z: -418}
