@@ -51,8 +51,8 @@ MonoBehaviour:
   ProjectileColor: {r: 0.5, g: 0.9, b: 0.3, a: 1}
   Defiance: 900
   Role: 0
-  CurveExempt: 1
-  PursuitExempt: 1
+  CurveExempt: 0
+  PursuitExempt: 0
   NeutralCreature: 0
   ContributionValue: 120
   Experience: 800

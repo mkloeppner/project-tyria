@@ -38,10 +38,10 @@ MonoBehaviour:
   Coins: 60
   GoldItemRoll: 1
   SetFlagOnSuccess: 
-  SetFlagOnFail: 
+  SetFlagOnFail: dornwacht_fallen
   ClearFlagOnSuccess: dornwacht_fallen
   ClearFlagOnFail: 
-  FlagDuration: 0
+  FlagDuration: 600
   WorldHook: outpost_occupied
   Path: []
   DeliverPoint: {x: 0, y: 0, z: 0}

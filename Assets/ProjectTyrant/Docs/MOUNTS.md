@@ -40,7 +40,7 @@ Lenkung: der Greif folgt der Kamera (A/D ± 70°), 1,8 rad/s.
 | Steigen (Leertaste halten) | 20/s, 5 m/s | – |
 | Schweben (loslassen) | 5/s, Höhe bleibt | 3/s (Flugkondition) |
 | Vorwärtsflug (W) | kostenlos, 1,4 × Lauf, 8 : 1 | – |
-| Sturz (V halten) | 3 × Lauf senkrecht | – |
+| Sprint (V drücken, nur in der Luft) | 4,5 × Lauf waagrecht für 0,45 s, kostet 12 Flugausdauer, 0,9 s Abklingzeit; danach bleibt ~2 × Lauf als Schwung | – |
 | Boden | +25/s | – |
 | Wandhaften | – | an Wänden ≥ 60°: +15/s, höchstens 20 s (Wandhaften) |
 | Aufwinde | wirkungslos | füllen die Ausdauer (Aufwind-Segeln) |
@@ -66,3 +66,7 @@ Fortschritt in `ProfileState.Completed` (`sky_egg`, `sky_stone_0–4`, `sky_hatc
 |---|---|---|---|---|
 | Greif | Flügelkraft (6 000 EP, 1 P) | Aufwindflug (12 000, 1) | Sturzflug-Meister (18 000, 2) | Luftakrobatik (24 000, 2) |
 | Himmelsschuppe | Wandhaften (8 000, 1) | Flugkondition (14 000, 2) | Aufwind-Segeln (18 000, 2) | Vertrauensband (26 000, 3) |
+
+## Schwung (nach Lauf 11)
+- Aufsitzen, Abheben (Leertaste) und Abgehen von Kanten übernehmen das aktuelle Bodentempo und die Laufrichtung; die Himmelsschuppe steigt mit dem Tempo weiter, statt in der Luft stehen zu bleiben. Der Greif startet mit mindestens Gleittempo oder schneller, wenn er schneller lief.
+- Luftwechsel Greif ↔ Himmelsschuppe übernimmt Tempo und Höhe wie bisher.

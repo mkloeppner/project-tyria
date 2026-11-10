@@ -20,7 +20,7 @@ MonoBehaviour:
   Center: {x: -60, y: 2.110483, z: -270}
   Radius: 34
   Duration: 240
-  TargetCount: 5
+  TargetCount: 4
   Triggers:
   - Type: 1
     Delay: 20
@@ -28,13 +28,6 @@ MonoBehaviour:
     Max: 0
     Param: 
     ProximityFactor: 1.4
-    Period: 0
-  - Type: 0
-    Delay: 240
-    Min: 0
-    Max: 0
-    Param: 
-    ProximityFactor: 0.75
     Period: 0
   SuccessNext: 
   FailNext: 

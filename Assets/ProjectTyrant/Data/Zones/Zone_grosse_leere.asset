@@ -24,16 +24,16 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: grosse_leere_sonnentor
-    Position: {x: -375.5204, y: 0, z: -396.359}
+    Position: {x: -375.5204, y: 6.3682866, z: -396.359}
     Yaw: 43.45355
     TargetZone: sonnentor
     TargetPortal: sonnentor_grosse_leere
   - Id: grosse_leere_klingenschlucht
-    Position: {x: 541.449, y: 0, z: -70.34912}
+    Position: {x: 541.449, y: 5.925966, z: -70.34912}
     Yaw: -82.59717
     TargetZone: klingenschlucht
     TargetPortal: klingenschlucht_grosse_leere
-  DefaultSpawn: {x: 0, y: 0, z: -494}
+  DefaultSpawn: {x: 0, y: 1.5, z: -494}
   ContinentRect:
     serializedVersion: 2
     x: 0.06
@@ -41,7 +41,28 @@ MonoBehaviour:
     width: 0.34
     height: 0.3
   ContinentColor: {r: 0.89411765, g: 0.7529412, b: 0.4392157, a: 1}
-  Waypoints: []
+  Waypoints:
+  - Id: wp_grosse_leere_ankunft
+    Name: "Wegmarke Gro\xDFe Leere"
+    Position: {x: 12, y: 1.5, z: -476}
+  - Id: wp_grosse_leere_riesenrippe
+    Name: Wegmarke Riesenrippe
+    Position: {x: 250.84152, y: 2.5689268, z: -150.8809}
+  - Id: wp_grosse_leere_duenenlager
+    Name: "Wegmarke D\xFCnenlager"
+    Position: {x: -185.92514, y: 1.5, z: 44.445496}
+  - Id: wp_grosse_leere_sturmauge
+    Name: Wegmarke Sturmauge
+    Position: {x: 256.56085, y: 1.5, z: -0.03930092}
+  - Id: wp_grosse_leere_wanderduene
+    Name: "Wegmarke Wanderd\xFCne"
+    Position: {x: -470.09528, y: 7.5694237, z: 291.31396}
+  - Id: wp_grosse_leere_ankunft_sonnentor
+    Name: Portal-Wegmarke Sonnentor
+    Position: {x: -363.3938, y: 6.183425, z: -392.00342}
+  - Id: wp_grosse_leere_ankunft_klingenschlucht
+    Name: Portal-Wegmarke Klingenschlucht
+    Position: {x: 542.4272, y: 5.925966, z: -65.57605}
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 1.5, z: -494}

@@ -119,6 +119,7 @@ namespace ProjectTyrant
             }
             else _airVel = horizontal;
             IsMoving = horizontal.sqrMagnitude > 0.1f;
+            HorizontalVelocity = horizontal;
 
             // Ausrichtung
             Vector3 face = Vector3.zero;
@@ -221,6 +222,8 @@ namespace ProjectTyrant
         public bool IsHovering { get; private set; }
         public Vector3 VisualOffset { get; set; }
         public Vector3 LastWish { get; private set; }
+        /// <summary>Waagrechte Geschwindigkeit des letzten Frames (Reittiere übernehmen damit den Schwung beim Aufsitzen/Abheben).</summary>
+        public Vector3 HorizontalVelocity { get; private set; }
         public float VerticalVelocity => _vy;
         public bool Airborne => !(_cc != null && _cc.isGrounded) && !IsHovering;
         Vector3 _launchVel; float _launchTime;

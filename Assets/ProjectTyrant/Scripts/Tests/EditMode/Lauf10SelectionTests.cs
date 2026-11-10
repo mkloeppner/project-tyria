@@ -205,12 +205,18 @@ namespace ProjectTyrant.Tests
             Assert.AreEqual(50f, m.Endurance, 0.5f);
         }
 
-        [Test] public void Skyscale_ClimbsVertically_DiveFast()
+        /// <summary>Geändert nach Lauf 11 (Wunsch): V lässt die Himmelsschuppe nicht mehr stürzen, sondern nach vorn sprinten.</summary>
+        [Test] public void Skyscale_ClimbsVertically_VDashesForward()
         {
             var m = new FlightMotor(FlightParams.Skyscale(0)); m.Step(0.02f, new FlightInput { Jump = true, JumpHeld = true });
-            Assert.AreEqual(FlightState.Climb, m.State); Assert.AreEqual(0f, m.Forward, 0.01f, "senkrechter Start");
+            Assert.AreEqual(FlightState.Climb, m.State); Assert.AreEqual(0f, m.Forward, 0.01f, "senkrechter Start aus dem Stand");
             m.Altitude = 80f; m.Step(0.02f, new FlightInput { Dive = true });
-            Assert.AreEqual(-m.Run * 3f, m.Vertical, 0.01f);
+            Assert.AreNotEqual(FlightState.Dive, m.State, "kein Sturz mehr");
+            float before = m.Endurance;
+            m.Step(0.02f, new FlightInput { Dash = true });
+            Assert.AreEqual(FlightState.Dash, m.State); Assert.AreEqual(m.Run * 4.5f, m.Forward, 0.01f, "schnell: 4,5 × Lauftempo");
+            Assert.AreEqual(0f, m.Vertical, 0.01f, "waagrecht nach vorn");
+            Assert.AreEqual(before - 12f, m.Endurance, 0.2f, "kostet etwas Flugausdauer");
         }
 
         [Test] public void Skyscale_TrustBondRegensInAir()

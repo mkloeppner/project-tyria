@@ -24,16 +24,16 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: schaedelkueste_tyrannenfeste_k
-    Position: {x: 260.86484, y: 0, z: 381.30505}
+    Position: {x: 260.86484, y: 2.2, z: 381.30505}
     Yaw: -145.62253
     TargetZone: tyrannenfeste
     TargetPortal: tyrannenfeste_schaedelkueste_k
   - Id: schaedelkueste_weisse_stille
-    Position: {x: -443.023, y: 0, z: 131.05194}
+    Position: {x: -443.023, y: 3.0842307, z: 131.05194}
     Yaw: 106.4789
     TargetZone: weisse_stille
     TargetPortal: weisse_stille_schaedelkueste
-  DefaultSpawn: {x: 0, y: 0, z: -418}
+  DefaultSpawn: {x: 0, y: 3, z: -418}
   ContinentRect:
     serializedVersion: 2
     x: 0.84
@@ -41,7 +41,28 @@ MonoBehaviour:
     width: 0.12
     height: 0.04
   ContinentColor: {r: 0.3529412, g: 0.2901961, b: 0.41568628, a: 1}
-  Waypoints: []
+  Waypoints:
+  - Id: wp_schaedelkueste_ankunft
+    Name: "Wegmarke Sch\xE4delk\xFCste"
+    Position: {x: 12, y: 2.9379792, z: -400}
+  - Id: wp_schaedelkueste_versunkener_tempel
+    Name: Wegmarke Versunkener Tempel
+    Position: {x: -269.45126, y: 2.3220155, z: -243.13777}
+  - Id: wp_schaedelkueste_schaedelhafen
+    Name: "Wegmarke Sch\xE4delhafen"
+    Position: {x: -390.89792, y: 2.2, z: -143.09393}
+  - Id: wp_schaedelkueste_knochenstrand
+    Name: Wegmarke Knochenstrand
+    Position: {x: 416.10068, y: 3, z: 11.280661}
+  - Id: wp_schaedelkueste_ertrunkene_gasse
+    Name: Wegmarke Ertrunkene Gasse
+    Position: {x: -114.21551, y: 2.2, z: 149.3943}
+  - Id: wp_schaedelkueste_ankunft_tyrannenfeste_k
+    Name: Portal-Wegmarke Tyrannenfeste
+    Position: {x: 265.477, y: 2.2, z: 376.35303}
+  - Id: wp_schaedelkueste_ankunft_weisse_stille
+    Name: "Portal-Wegmarke Wei\xDFe Stille"
+    Position: {x: -429.26947, y: 2.9228904, z: 129.34996}
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 3, z: -418}

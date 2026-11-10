@@ -24,16 +24,16 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: sturmbucht_silberkueste_k
-    Position: {x: 237.14984, y: 0, z: 346.64096}
+    Position: {x: 237.14984, y: 3.7780907, z: 346.64096}
     Yaw: -145.62253
     TargetZone: silberkueste
     TargetPortal: silberkueste_sturmbucht_k
   - Id: sturmbucht_aschenkessel
-    Position: {x: 416.49924, y: 0, z: -54.114708}
+    Position: {x: 416.49924, y: 1.8000001, z: -54.114708}
     Yaw: -82.59717
     TargetZone: aschenkessel
     TargetPortal: aschenkessel_sturmbucht
-  DefaultSpawn: {x: 0, y: 0, z: -380}
+  DefaultSpawn: {x: 0, y: 3.4091587, z: -380}
   ContinentRect:
     serializedVersion: 2
     x: 0
@@ -41,7 +41,28 @@ MonoBehaviour:
     width: 0.04
     height: 0.14
   ContinentColor: {r: 0.49803922, g: 0.6901961, b: 0.78431374, a: 1}
-  Waypoints: []
+  Waypoints:
+  - Id: wp_sturmbucht_ankunft
+    Name: Wegmarke Sturmbucht
+    Position: {x: 12, y: 4.967015, z: -362}
+  - Id: wp_sturmbucht_hafen_weisswasser
+    Name: "Wegmarke Hafen Wei\xDFwasser"
+    Position: {x: 258.3615, y: 1.8000001, z: -201.69002}
+  - Id: wp_sturmbucht_wrackbucht
+    Name: Wegmarke Wrackbucht
+    Position: {x: -135.71902, y: 2.3944492, z: -155.39708}
+  - Id: wp_sturmbucht_moewenklippe
+    Name: "Wegmarke M\xF6wenklippe"
+    Position: {x: -232.47736, y: 2.2820907, z: 17.132282}
+  - Id: wp_sturmbucht_piratennest
+    Name: Wegmarke Piratennest
+    Position: {x: 319.45776, y: 2.5, z: 272.50284}
+  - Id: wp_sturmbucht_ankunft_silberkueste_k
+    Name: "Portal-Wegmarke Silberk\xFCste"
+    Position: {x: 241.762, y: 3.7780907, z: 341.68893}
+  - Id: wp_sturmbucht_ankunft_aschenkessel
+    Name: Portal-Wegmarke Aschenkessel
+    Position: {x: 417.47745, y: 1.8000001, z: -49.34164}
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 3.4091587, z: -380}

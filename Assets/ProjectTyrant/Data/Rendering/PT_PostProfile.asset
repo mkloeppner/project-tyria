@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7231994632346825804
+--- !u!114 &-7622091197288552838
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,45 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
-  m_Name: Vignette
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.Vignette
+  m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
+  m_Name: SplitToning
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.SplitToning
   active: 1
-  color:
+  shadows:
     m_OverrideState: 1
-    m_Value: {r: 0.12, g: 0.08, b: 0.18, a: 1}
-  center:
+    m_Value: {r: 0.35, g: 0.45, b: 0.75, a: 1}
+  highlights:
     m_OverrideState: 1
-    m_Value: {x: 0.5, y: 0.5}
-  intensity:
+    m_Value: {r: 1, g: 0.82, b: 0.6, a: 1}
+  balance:
     m_OverrideState: 1
-    m_Value: 0.28
-  smoothness:
-    m_OverrideState: 1
-    m_Value: 0.45
-  rounded:
-    m_OverrideState: 1
-    m_Value: 0
---- !u!114 &-3249755141790597381
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 221518ef91623a7438a71fef23660601, type: 3}
-  m_Name: WhiteBalance
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.WhiteBalance
-  active: 1
-  temperature:
-    m_OverrideState: 1
-    m_Value: 8
-  tint:
-    m_OverrideState: 1
-    m_Value: 0
---- !u!114 &-1549529759639434729
+    m_Value: -10
+--- !u!114 &-2014494024517496160
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,13 +85,13 @@ MonoBehaviour:
   m_Name: PT_PostProfile
   m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.VolumeProfile
   components:
-  - {fileID: -1549529759639434729}
-  - {fileID: 1263848723065365240}
-  - {fileID: 5091874034029835756}
-  - {fileID: -7231994632346825804}
-  - {fileID: 7318387042132169871}
-  - {fileID: -3249755141790597381}
---- !u!114 &1263848723065365240
+  - {fileID: -2014494024517496160}
+  - {fileID: 3471156276129716881}
+  - {fileID: 6770828957113287867}
+  - {fileID: 5772542551850940282}
+  - {fileID: -7622091197288552838}
+  - {fileID: 7711030761588521594}
+--- !u!114 &3471156276129716881
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +119,35 @@ MonoBehaviour:
   saturation:
     m_OverrideState: 1
     m_Value: 18
---- !u!114 &5091874034029835756
+--- !u!114 &5772542551850940282
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
+  m_Name: Vignette
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.Vignette
+  active: 1
+  color:
+    m_OverrideState: 1
+    m_Value: {r: 0.12, g: 0.08, b: 0.18, a: 1}
+  center:
+    m_OverrideState: 1
+    m_Value: {x: 0.5, y: 0.5}
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.28
+  smoothness:
+    m_OverrideState: 1
+    m_Value: 0.45
+  rounded:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &6770828957113287867
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,7 +187,7 @@ MonoBehaviour:
   maxNits:
     m_OverrideState: 1
     m_Value: 1000
---- !u!114 &7318387042132169871
+--- !u!114 &7711030761588521594
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,16 +196,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
-  m_Name: SplitToning
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.SplitToning
+  m_Script: {fileID: 11500000, guid: 221518ef91623a7438a71fef23660601, type: 3}
+  m_Name: WhiteBalance
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.WhiteBalance
   active: 1
-  shadows:
+  temperature:
     m_OverrideState: 1
-    m_Value: {r: 0.35, g: 0.45, b: 0.75, a: 1}
-  highlights:
+    m_Value: 8
+  tint:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0.82, b: 0.6, a: 1}
-  balance:
-    m_OverrideState: 1
-    m_Value: -10
+    m_Value: 0

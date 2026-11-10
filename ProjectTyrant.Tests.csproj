@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf6WorldTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\LoadingImageTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\MountMomentumTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\StoryModelTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf11LevelTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\SkillTraitTests.cs" />

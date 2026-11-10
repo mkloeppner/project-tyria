@@ -24,11 +24,11 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: zarathis_glutkessel
-    Position: {x: -375.5204, y: 0, z: -396.359}
+    Position: {x: -375.5204, y: 2.7735183, z: -396.359}
     Yaw: 43.45355
     TargetZone: glutkessel
     TargetPortal: glutkessel_zarathis
-  DefaultSpawn: {x: 0, y: 0, z: -494}
+  DefaultSpawn: {x: 0, y: 1.7, z: -494}
   ContinentRect:
     serializedVersion: 2
     x: 0.06
@@ -36,7 +36,25 @@ MonoBehaviour:
     width: 0.34
     height: 0.28
   ContinentColor: {r: 0.47843137, g: 0.22745098, b: 0.16470589, a: 1}
-  Waypoints: []
+  Waypoints:
+  - Id: wp_zarathis_ankunft
+    Name: Wegmarke Zarathis
+    Position: {x: 12, y: 1.7, z: -476}
+  - Id: wp_zarathis_knochenmauer
+    Name: Wegmarke Knochenmauer
+    Position: {x: 4.0689483, y: 9.984023, z: -276.2074}
+  - Id: wp_zarathis_thronviertel
+    Name: Wegmarke Thronviertel
+    Position: {x: 149.28069, y: 4.6437798, z: -41.49179}
+  - Id: wp_zarathis_haendlerviertel
+    Name: "Wegmarke H\xE4ndlerviertel"
+    Position: {x: 412.52295, y: 3.6816711, z: -8.509951}
+  - Id: wp_zarathis_tempelviertel
+    Name: Wegmarke Tempelviertel
+    Position: {x: -141.39107, y: 1.7, z: 391.53757}
+  - Id: wp_zarathis_ankunft_glutkessel
+    Name: Portal-Wegmarke Glutkessel
+    Position: {x: -363.3938, y: 1.205662, z: -392.00342}
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 1.7, z: -494}

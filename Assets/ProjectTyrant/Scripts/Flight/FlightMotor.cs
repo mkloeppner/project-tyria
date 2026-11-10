@@ -3,7 +3,9 @@ using UnityEngine;
 namespace ProjectTyrant.Flight
 {
     public enum FlyerKind { Griffon, Skyscale }
-    public enum FlightState { Ground, Glide, Dive, Climb, Hover, WallCling, Stall, Sink }
+    public enum FlightState { Ground, Glide, Dive, Climb, Hover, WallCling, Stall, Sink, Dash }
+    /// <summary>Ergebnis des letzten Sprint-Versuchs der Himmelsschuppe (für HUD/Hinweise).</summary>
+    public enum DashResult { None, Started, NoEndurance, Cooldown }
 
     /// <summary>Lauf 10: Parameter eines Flug-Reittiers (Tempo relativ zum Laufen, 7 m/s).</summary>
     [System.Serializable]
@@ -14,6 +16,8 @@ namespace ProjectTyrant.Flight
         public int Charges; public float ChargeRegen, AirChargeRegen;
         public float Endurance, ClimbCost, HoverCost, ClimbSpeed, GroundRegen, ClingRegen, ClingMax, SinkSpeed, DiveSinkFactor;
         public bool AirRegen; public float AirRegenRate;
+        /// <summary>Himmelsschuppe, V: Sprint nach vorn (Tempo = Lauf × Faktor für die Dauer), kostet Flugausdauer, Abklingzeit; danach bleibt ein Teil des Tempos.</summary>
+        public float DashFactor, DashTime, DashCost, DashCooldown, DashCarry;
 
         public static FlightParams Griffon(int mastery)
         {
@@ -31,6 +35,7 @@ namespace ProjectTyrant.Flight
                 Kind = FlyerKind.Skyscale, RunSpeed = 7f, GroundFactor = 1.3f, GlideFactor = 1.4f, DiveFactor = 3f, StallFactor = 0f, GlideRatio = 8f,
                 Endurance = mastery >= 2 ? 150f : 100f, ClimbCost = 20f, HoverCost = mastery >= 2 ? 3f : 5f, ClimbSpeed = 5f, GroundRegen = 25f, ClingRegen = 15f, ClingMax = 20f,
                 SinkSpeed = 1.5f, DiveSinkFactor = 3f, AirRegen = mastery >= 4, AirRegenRate = 5f,
+                DashFactor = 4.5f, DashTime = 0.45f, DashCost = 12f, DashCooldown = 0.9f, DashCarry = 0.45f,
             };
         }
     }
@@ -39,6 +44,8 @@ namespace ProjectTyrant.Flight
     public struct FlightInput
     {
         public bool Jump, JumpHeld, Dive;
+        /// <summary>Himmelsschuppe: V gedrückt (Flanke) = Sprint nach vorn.</summary>
+        public bool Dash;
         /// <summary>−1 (Nase runter/Bremsen) … +1 (Nase hoch/Vorwärts).</summary>
         public float Pitch, Turn;
         public bool NearWall; public float WallSlope;
@@ -54,6 +61,10 @@ namespace ProjectTyrant.Flight
         public FlightParams P;
         public FlightState State = FlightState.Ground;
         public float Altitude, Forward, Vertical, Endurance, ClingTime;
+        /// <summary>Tatsächliches Bodentempo vor dem Abheben (vom Controller je Frame gesetzt) – Abheben und Kanten übernehmen den Schwung.</summary>
+        public float GroundSpeed;
+        public float DashTime, DashCooldown;
+        public DashResult LastDash;
         public int Charges;
         float _chargeT;
         public float Ceiling = 150f;
@@ -70,8 +81,8 @@ namespace ProjectTyrant.Flight
         public void TakeOff()
         {
             if (Banned) return;
-            if (P.Kind == FlyerKind.Griffon) { Vertical = P.FlapImpulse; Forward = Mathf.Max(Forward, Run * P.GlideFactor); State = FlightState.Glide; }
-            else { State = FlightState.Climb; Vertical = P.ClimbSpeed; }
+            if (P.Kind == FlyerKind.Griffon) { Vertical = P.FlapImpulse; Forward = Mathf.Max(GroundSpeed, Run * P.GlideFactor); State = FlightState.Glide; }
+            else { State = FlightState.Climb; Vertical = P.ClimbSpeed; Forward = GroundSpeed; }   // Schwung vom Boden bleibt erhalten
         }
 
         public void Step(float dt, FlightInput i)
@@ -89,7 +100,7 @@ namespace ProjectTyrant.Flight
         public void Touchdown() { if (Airborne) Land(); }
 
         /// <summary>Von einer Kante gelaufen: Greif gleitet, Himmelsschuppe schwebt.</summary>
-        public void LeaveGround() { if (Airborne || Banned) return; if (P.Kind == FlyerKind.Griffon) { State = FlightState.Glide; Forward = Mathf.Max(Forward, Run * P.GlideFactor); } else State = FlightState.Hover; Vertical = 0f; }
+        public void LeaveGround() { if (Airborne || Banned) return; if (P.Kind == FlyerKind.Griffon) { State = FlightState.Glide; Forward = Mathf.Max(Mathf.Max(Forward, GroundSpeed), Run * P.GlideFactor); } else { State = FlightState.Hover; Forward = Mathf.Max(Forward, GroundSpeed); } Vertical = 0f; }
 
         void Land() { State = FlightState.Ground; Vertical = 0f; Forward = Mathf.Min(Forward, Run * P.GroundFactor); }
 
@@ -151,7 +162,21 @@ namespace ProjectTyrant.Flight
                 return;
             }
             if (i.JumpHeld && i.NearWall && i.WallSlope >= 60f && State != FlightState.Dive) { State = FlightState.WallCling; ClingTime = 0f; return; }
-            if (i.Dive) { State = FlightState.Dive; Vertical = -Run * P.DiveSinkFactor; Forward = Run; return; }
+            // V: Sprint nach vorn statt Sturz (Wunsch nach Lauf 11) – schnell, kostet etwas Flugausdauer
+            LastDash = DashResult.None;
+            if (DashCooldown > 0f) DashCooldown -= dt;
+            if (i.Dash)
+            {
+                if (DashTime > 0f || DashCooldown > 0f) LastDash = DashResult.Cooldown;
+                else if (Endurance < P.DashCost) LastDash = DashResult.NoEndurance;
+                else { Endurance -= P.DashCost; DashTime = P.DashTime; DashCooldown = P.DashCooldown; LastDash = DashResult.Started; }
+            }
+            if (DashTime > 0f)
+            {
+                DashTime -= dt; State = FlightState.Dash; Forward = Run * P.DashFactor; Vertical = 0f;
+                if (DashTime <= 0f) { DashTime = 0f; Forward = Run * P.DashFactor * P.DashCarry; State = FlightState.Hover; }   // Schwung klingt danach normal ab
+                return;
+            }
             if (Endurance <= 0f) { State = FlightState.Sink; Vertical = -P.SinkSpeed; Forward = Mathf.MoveTowards(Forward, Run * 0.5f, 3f * dt); return; }
             if (i.JumpHeld) { State = FlightState.Climb; Vertical = P.ClimbSpeed; Endurance = Mathf.Max(0f, Endurance - P.ClimbCost * dt); }
             else if (i.Pitch > 0.1f) { State = FlightState.Glide; Forward = Mathf.MoveTowards(Forward, Run * P.GlideFactor, 6f * dt); Vertical = -Forward / P.GlideRatio; }

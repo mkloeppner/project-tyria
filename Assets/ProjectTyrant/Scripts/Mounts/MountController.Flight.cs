@@ -7,11 +7,14 @@ namespace ProjectTyrant
     /// Lauf 10: Flug für Greif und Himmelsschuppe. Der reine <see cref="FlightMotor"/> rechnet Tempo und Steigrate,
     /// der <see cref="PlayerController"/> bewegt (keine Rigidbody-Physik). Flugregeln je Ort über <see cref="FlightRules"/>.
     /// Greif: Leertaste = Abheben/Flügelschlag (Auftrieb-Ladung), V halten = Sturzflug, loslassen = Abfangen; W/S = Nase runter/hoch, Kamera lenkt.
-    /// Himmelsschuppe: Leertaste halten = steigen, loslassen = schweben, W = Vorwärtsflug, V halten = Sturz; an steilen Wänden haften.
+    /// Himmelsschuppe: Leertaste halten = steigen, loslassen = schweben, W = Vorwärtsflug, V = Sprint nach vorn (kostet Flugausdauer); an steilen Wänden haften.
+    /// Abheben, Kanten und Aufsitzen übernehmen das aktuelle Bodentempo (kein Neustart bei 0).
     /// </summary>
     public partial class MountController
     {
         public const float GriffonTurnRate = 1.8f, SkyscaleTurnRate = 3.2f;
+        float _dashHintAt;
+        static Vector3 Flat3(Vector3 v) { v.y = 0f; return v; }
 
         static FlightParams ParamsFor(MountKind k)
         {
@@ -23,6 +26,7 @@ namespace ProjectTyrant
         {
             Flight = FlightRules.IsFlyer(k) ? new FlightMotor(ParamsFor(k)) : null;
             _heading = Flat(transform.forward); _ruleT = 0f; _airT = 0f; _wasBanned = false;
+            if (Flight != null && _pc != null) Flight.GroundSpeed = Flat3(_pc.HorizontalVelocity).magnitude;   // Schwung beim Aufsitzen bleibt
         }
 
         float _pullBanT;
@@ -135,18 +139,29 @@ namespace ProjectTyrant
             if (_updraftT > 0f) _updraftT -= dt;
             var fi = new FlightInput
             {
-                Jump = input.JumpPressed, JumpHeld = input.JumpHeld, Dive = input.DodgeHeld && f.Airborne,
+                Jump = input.JumpPressed, JumpHeld = input.JumpHeld,
+                Dive = input.DodgeHeld && f.Airborne && f.P.Kind == FlyerKind.Griffon,     // Greif: V halten = Sturzflug
+                Dash = input.DodgePressed && f.Airborne && f.P.Kind == FlyerKind.Skyscale, // Himmelsschuppe: V = Sprint nach vorn
                 Pitch = input.Move.y, Turn = turn, NearWall = nearWall, WallSlope = slope, InUpdraft = _updraftT > 0f,
             };
             if (f.Banned && !f.Airborne) { fi.Jump = false; fi.JumpHeld = false; }
+            if (!f.Airborne)
+            {
+                // Bodentempo und Laufrichtung merken: Abheben/Kante übernimmt Schwung und Richtung statt bei 0 zu beginnen
+                var hv = Flat3(_pc.HorizontalVelocity);
+                f.GroundSpeed = hv.magnitude;
+                if (hv.sqrMagnitude > 0.25f) _heading = hv.normalized;
+            }
             bool wasAir = f.Airborne;
             f.Step(dt, fi);
+            if (f.LastDash == DashResult.Started) SkillExecutor.VfxPulse(transform.position, 1.4f, new Color(0.75f, 0.55f, 1f));
+            else if (f.LastDash == DashResult.NoEndurance && Time.time >= _dashHintAt) { _dashHintAt = Time.time + 2f; GameEventBus.Notify("Zu wenig Flugausdauer für den Sprint", new Color(1f, 0.7f, 0.4f)); }
             if (!wasAir && f.Airborne) { _airT = 0f; SkillExecutor.VfxPulse(transform.position, 1.6f, new Color(0.9f, 0.95f, 1f)); }
 
             if (!f.Airborne)
             {
                 _pc.FlightVelocity = null; _pc.GravityScale = 1f; _pc.MaxFallSpeed = 0f;
-                _heading = Flat(transform.forward);
+                if (Flat3(_pc.HorizontalVelocity).sqrMagnitude <= 0.25f) _heading = Flat(transform.forward);
                 return;
             }
             // Modell → Welt

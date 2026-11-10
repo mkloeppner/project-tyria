@@ -24,16 +24,16 @@ MonoBehaviour:
   LegacyLayout: 0
   Portals:
   - Id: schilfmuendung_duenenmeer_k
-    Position: {x: 260.86484, y: 0, z: 381.30505}
+    Position: {x: 260.86484, y: 2.4984734, z: 381.30505}
     Yaw: -145.62253
     TargetZone: duenenmeer
     TargetPortal: duenenmeer_schilfmuendung_k
   - Id: schilfmuendung_gruener_schlund
-    Position: {x: -443.023, y: 0, z: 131.05194}
+    Position: {x: -443.023, y: 2.3000002, z: 131.05194}
     Yaw: 106.4789
     TargetZone: gruener_schlund
     TargetPortal: gruener_schlund_schilfmuendung
-  DefaultSpawn: {x: 0, y: 0, z: -418}
+  DefaultSpawn: {x: 0, y: 2.3000002, z: -418}
   ContinentRect:
     serializedVersion: 2
     x: 0.62
@@ -41,7 +41,28 @@ MonoBehaviour:
     width: 0.16
     height: 0.04
   ContinentColor: {r: 0.41568628, g: 0.6039216, b: 0.47843137, a: 1}
-  Waypoints: []
+  Waypoints:
+  - Id: wp_schilfmuendung_ankunft
+    Name: "Wegmarke Schilfm\xFCndung"
+    Position: {x: 12, y: 2.3000002, z: -400}
+  - Id: wp_schilfmuendung_floesserhafen
+    Name: "Wegmarke Fl\xF6\xDFerhafen"
+    Position: {x: 210.39139, y: 2.3000002, z: -394.9087}
+  - Id: wp_schilfmuendung_mangrovenguertel
+    Name: "Wegmarke Mangroveng\xFCrtel"
+    Position: {x: 230.17494, y: 2.3000002, z: -72.45708}
+  - Id: wp_schilfmuendung_schilfinseln
+    Name: Wegmarke Schilfinseln
+    Position: {x: -366.0076, y: 2.3000002, z: 68.66849}
+  - Id: wp_schilfmuendung_rohrdommelbank
+    Name: Wegmarke Rohrdommelbank
+    Position: {x: 169.05028, y: 2.3000002, z: 313.3566}
+  - Id: wp_schilfmuendung_ankunft_duenenmeer_k
+    Name: "Portal-Wegmarke D\xFCnenmeer"
+    Position: {x: 265.477, y: 2.4984734, z: 376.35303}
+  - Id: wp_schilfmuendung_ankunft_gruener_schlund
+    Name: "Portal-Wegmarke Gr\xFCner Schlund"
+    Position: {x: -429.26947, y: 1.7860163, z: 129.34996}
   Arrivals:
   - Entrance: spawn
     Position: {x: 0, y: 2.3000002, z: -418}
