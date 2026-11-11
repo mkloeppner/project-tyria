@@ -13,6 +13,20 @@ namespace ProjectTyrant
         class Floating { public TextMeshProUGUI Text; public Vector3 World; public float Age, Life; public Vector2 Drift; public float Rot, Arc = 70f; }
         class BannerItem { public string Title, Sub; public Color Color; }
 
+        readonly System.Collections.Generic.List<Image> _endDividers = new System.Collections.Generic.List<Image>(); int _endSegments = -1;
+        /// <summary>Ausweich-Leiste in Balken teilen (2 normal, 3 auf dem Greif bzw. mit Phantomtanz).</summary>
+        void LayoutEnduranceDividers(EnduranceModel e)
+        {
+            int n = Mathf.Max(1, Mathf.RoundToInt(e.Max / Mathf.Max(1f, e.DodgeCost)));
+            if (n == _endSegments) return; _endSegments = n;
+            while (_endDividers.Count < n - 1) _endDividers.Add(UiFactory.Image("Divider", _end.Root.transform, new Color(0, 0, 0, 0.8f)));
+            for (int i = 0; i < _endDividers.Count; i++)
+            {
+                bool on = i < n - 1; _endDividers[i].gameObject.SetActive(on); if (!on) continue;
+                float x = (i + 1f) / n; _endDividers[i].rectTransform.Place(new Vector2(x, 0), new Vector2(x, 1), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(3, 0));
+            }
+            _end.Root.GetComponent<RectTransform>().sizeDelta = new Vector2(65f * n, 10f);   // je Balken gleich breit
+        }
         Bar _end, _xp, _cast, _downedBar, _targetHp, _eventBar, _channel;
         readonly Slot[] _slots = new Slot[SkillCaster.SlotCount];
         TextMeshProUGUI _swapText, _targetName, _crosshair, _help, _rewards, _evTitle, _evDesc, _evTimer, _evMedal, _downedHint, _comboHint;
@@ -63,7 +77,7 @@ namespace ProjectTyrant
 
             // ---- Ausdauer über dem Kreis, Erfahrung über der Leiste ----
             _end = MakeBar("Endurance", hud, new Vector2(0.5f, 0f), new Vector2(0, 138), new Vector2(130, 10), new Color(1f, 0.82f, 0.25f), 0);
-            UiFactory.Image("Divider", _end.Root.transform, new Color(0, 0, 0, 0.8f)).rectTransform.Place(new Vector2(0.5f, 0), new Vector2(0.5f, 1), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(3, 0));
+            _endDividers.Add(UiFactory.Image("Divider", _end.Root.transform, new Color(0, 0, 0, 0.8f)));
             _xp = MakeBar("Experience", hud, new Vector2(0.5f, 0f), new Vector2(0, 108), new Vector2(980, 7), new Color(0.75f, 0.45f, 1f), 0);
             _xp.Root.GetComponent<Image>().raycastTarget = true;
             _xp.Root.AddComponent<UiTooltipTrigger>().Provider = XpTooltip;
@@ -240,7 +254,7 @@ namespace ProjectTyrant
                 _lastLevel = Player.Level; _lastRealLevel = realLevel;
                 _orbLevel.text = realLevel == _lastLevel ? CdStrings[Mathf.Clamp(_lastLevel, 0, 199)] : realLevel + "<size=55%> (" + _lastLevel + ")</size>";   // Herabstufung: „30 (18)“
             }
-            if (_pc != null) SetBar(_end, _pc.Dodge.Endurance.Fraction);
+            if (_pc != null) { SetBar(_end, _pc.Dodge.Endurance.Fraction); LayoutEnduranceDividers(_pc.Dodge.Endurance); }
             var prof = PlayerProfile.Instance;
             if (prof != null)
             {

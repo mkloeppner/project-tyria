@@ -108,7 +108,7 @@ namespace ProjectTyrant
         public static float LavaFactor(MasteryModel m) => m.Has(MasteryLine.Umwelt, 3) ? 0f : 1f;
         public static bool SeesHiddenChests(MasteryModel m) => m.Has(MasteryLine.Umwelt, 4);
         public static bool AutoLoot(MasteryModel m) => m.Has(MasteryLine.Kommandant, 1);
-        // Lauf 10: Greif 1 Flügelkraft (+2 Auftrieb), 2 Aufwindflug, 3 Sturzflug-Meister (85 % Abfangen), 4 Luftakrobatik (Ausweichrolle in der Luft)
+        // Lauf 10: Greif 1 Flügelkraft (+2 Auftrieb), 2 Aufwindflug, 3 Sturzflug-Meister (schnellerer Sturz, Energie hält länger), 4 Luftakrobatik (Ausweichrolle in der Luft)
         public static int GriffonRank(MasteryModel m) => m == null ? 0 : m.Rank(MasteryLine.Greif);
         public static bool GriffonUpdrafts(MasteryModel m) => m.Has(MasteryLine.Greif, 2);
         public static bool GriffonAirDodge(MasteryModel m) => m.Has(MasteryLine.Greif, 4);

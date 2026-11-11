@@ -31,7 +31,7 @@ namespace ProjectTyrant.EditorTools
                 R("Reisemeister", "Wegmarken-Reisen −40 %", 15000, 2) });
             Line(MasteryLine.Greif, "Greif", "Der Greif der Himmelswächter (Persönliche Geschichte, Kapitel 9).", "mount_griffon", new Color(0.98f, 0.9f, 0.6f), new[] {
                 R("Flügelkraft", "+2 Auftrieb-Ladungen (5 statt 3)", 6000, 1), R("Aufwindflug", "Aufwinde heben den Greif und füllen den Auftrieb", 12000, 1),
-                R("Sturzflug-Meister", "Abfangen wandelt 85 % statt 60 % des Sturz-Tempos in Höhe; Sturz bis 4,6× Lauftempo", 18000, 2), R("Luftakrobatik", "Ausweichrolle in der Luft (V) ohne Tempoverlust", 24000, 2) });
+                R("Sturzflug-Meister", "Sturzflug beschleunigt schneller (16 statt 12 m/s²); Sturz-Energie hält länger (2 % statt 5 % Verlust je Sekunde)", 18000, 2), R("Luftakrobatik", "Ausweichrolle in der Luft (V) ohne Tempoverlust", 24000, 2) });
             Line(MasteryLine.Himmelsschuppe, "Himmelsschuppe", "Der junge Himmelsdrache: senkrechter Flug, Schweben, Feuerstoß (Sammlung in den Himmelsspitzen).", "mount_skyscale", new Color(0.55f, 0.75f, 1f), new[] {
                 R("Wandhaften", "An steilen Wänden (≥ 60°) festhalten und Flugausdauer regenerieren (max. 20 s)", 8000, 1), R("Flugkondition", "Flugausdauer 150 statt 100, Schweben kostet 3/s statt 5/s", 14000, 2),
                 R("Aufwind-Segeln", "Aufwinde füllen die Flugausdauer sofort", 18000, 2), R("Vertrauensband", "In der Luft zwischen Greif und Himmelsschuppe wechseln; Flugausdauer regeneriert 5/s im Flug", 26000, 3) });

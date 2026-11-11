@@ -26,8 +26,10 @@ Kinematisch und deterministisch (fester Zeitschritt in den Tests, keine Rigidbod
 | Auftrieb-Ladungen | 3 (am Boden 1 je 0,5 s) | 5 (Flügelkraft) |
 | Gleiten | 1,6 × Lauf, Gleitverhältnis 6 : 1 (aus 100 m ≈ 600 m, ≈ 54 s) | – |
 | W / S | Nase runter (bis 2 × Lauf) / Nase hoch (bis 1,2 × Lauf) | – |
-| Sturzflug (V halten) | bis 4 × Lauf | bis 4,6 × (Sturzflug-Meister) |
-| Abfangen (V loslassen) | 60 % der verlorenen Höhe zurück, Tempo bleibt zu 70 % | 85 % (Sturzflug-Meister) |
+| Sturzflug (V halten) | steil (80°), Greif neigt sich mit, beschleunigt mit 12 m/s² bis 3 × Lauf; Leertaste im Sturz (frühestens alle 1 s, kostet 1 Ausweich-Balken): 4 × bzw. 5 × Lauf | Beschleunigung 16 m/s² (Sturzflug-Meister) |
+| V loslassen | abfangen, kein automatisches Hochziehen, danach leichtes Sinken (1 m/s); Höchstmarke = Höhe beim Loslassen + Rückgewinn wird gemerkt, S steigt nie darüber; das Sturz-Tempo bleibt als Sturz-Energie (= gestürzte Höhe), Verlust 5 %/s | 2 %/s (Sturzflug-Meister) |
+| S mit Sturz-Energie | steiler Aufschwung (50°), verbraucht Energie 1 m je Meter; Rückgewinn nach erreichtem Sturz-Tempo: 3 × = 90 % (knapp unter der Ausgangshöhe), 4 × = 100 % (genau), 5 × = 110 % (etwas darüber); das Tempo sinkt dabei auf Gleittempo | – |
+| HUD | Tempoleiste über der Fertigkeitenleiste (0–5 × Lauf, Marken 3×/4×/5×, Farbe je Stufe) mit „zurück: … m“ im Sturz bzw. „Reserve: … m“ im Energieflug | – |
 | Strömungsabriss | unter 0,6 × Lauf: sackt ab, bis wieder 0,72 × | – |
 | Aufwinde | wirkungslos | heben und füllen den Auftrieb (Aufwindflug) |
 | Luftakrobatik | – | 1 Auftrieb-Ladung je 4 s Gleiten |
@@ -70,3 +72,10 @@ Fortschritt in `ProfileState.Completed` (`sky_egg`, `sky_stone_0–4`, `sky_hatc
 ## Schwung (nach Lauf 11)
 - Aufsitzen, Abheben (Leertaste) und Abgehen von Kanten übernehmen das aktuelle Bodentempo und die Laufrichtung; die Himmelsschuppe steigt mit dem Tempo weiter, statt in der Luft stehen zu bleiben. Der Greif startet mit mindestens Gleittempo oder schneller, wenn er schneller lief.
 - Luftwechsel Greif ↔ Himmelsschuppe übernimmt Tempo und Höhe wie bisher.
+- **C halten (Himmelsschuppe in der Luft): Sinken** mit 6 m/s, lädt dabei 20 Flugausdauer/s (auch aus 0); W hält etwas Vorwärtsfahrt. Solange die Himmelsschuppe fliegt, schaltet C nicht die Action-Kamera um.
+- **Aufsitzen in der Luft**: Greif und Himmelsschuppe lassen sich im Sprung, Fall oder beim Gleiten sofort rufen (X, Radial oder Direkttaste) – ohne Aufsitz-Kanal, Schwung bleibt, der Fall wird abgefangen (kein Fallschaden). Andere Reittiere: Hinweis „In der Luft nur Greif oder Himmelsschuppe“. Flugverbote und die Kampfregel gelten weiter.
+
+## Greif: Flügelschläge über die Ausweich-Leiste (nach Lauf 11)
+- Auf dem Greif hat die Ausweich-Leiste 3 Balken (sonst 2); Regeneration unverändert (10/s).
+- Jeder Flügelschlag in der Luft (Leertaste) und jeder Flügelschlag im Sturz kostet 1 Balken; Abheben vom Boden ist frei. Aufwinde und Luftakrobatik füllen Balken auf.
+- Die frühere Anzeige „Auftrieb x/y“ entfällt; die Tempoleiste bleibt.

@@ -154,7 +154,9 @@ namespace ProjectTyrant.Tests
             Assert.AreEqual(3, FlightParams.Griffon(MasteryEffects.GriffonRank(Ranked(MasteryLine.Greif, 0))).Charges);
             Assert.AreEqual(5, FlightParams.Griffon(MasteryEffects.GriffonRank(Ranked(MasteryLine.Greif, 1))).Charges, "Flügelkraft");
             Assert.IsFalse(MasteryEffects.GriffonUpdrafts(Ranked(MasteryLine.Greif, 1))); Assert.IsTrue(MasteryEffects.GriffonUpdrafts(Ranked(MasteryLine.Greif, 2)));
-            Assert.AreEqual(0.6f, FlightParams.Griffon(2).PullUpEfficiency, 1e-4f); Assert.AreEqual(0.85f, FlightParams.Griffon(3).PullUpEfficiency, 1e-4f);
+            // Nach Lauf 11: Sturzflug-Meister = schnellere Sturz-Beschleunigung + langsamerer Energieverlust (statt 60/85 % Abfangen)
+            Assert.AreEqual(12f, FlightParams.Griffon(2).DiveAccel, 1e-4f); Assert.AreEqual(16f, FlightParams.Griffon(3).DiveAccel, 1e-4f);
+            Assert.Greater(FlightParams.Griffon(2).EnergyDecay, FlightParams.Griffon(3).EnergyDecay);
             Assert.AreEqual(0f, FlightParams.Griffon(3).AirChargeRegen); Assert.Greater(FlightParams.Griffon(4).AirChargeRegen, 0f, "Luftakrobatik");
         }
 
@@ -195,7 +197,11 @@ namespace ProjectTyrant.Tests
             var m = new FlightMotor(FlightParams.Griffon(0)); m.Step(0.02f, new FlightInput { Jump = true }); m.Altitude = 300f;
             Assert.AreEqual(0f, m.EngageFactor);
             for (int i = 0; i < 400; i++) m.Step(0.02f, new FlightInput { Dive = true });
-            Assert.Greater(m.EngageFactor, 0.9f);
+            Assert.AreEqual(0.6f, m.EngageFactor, 0.01f, "3 × von höchstens 5 × Lauf");
+            m.Altitude = 2000f; m.Ceiling = 9999f;
+            m.Step(0.02f, new FlightInput { Dive = true, Jump = true }); for (int i = 0; i < 60; i++) m.Step(0.02f, new FlightInput { Dive = true }); m.Step(0.02f, new FlightInput { Dive = true, Jump = true });
+            for (int i = 0; i < 400; i++) m.Step(0.02f, new FlightInput { Dive = true });
+            Assert.Greater(m.EngageFactor, 0.99f, "mit zwei Flügelschlägen volle Wucht");
         }
 
         [Test] public void Skyscale_GroundRegen25PerSecond()

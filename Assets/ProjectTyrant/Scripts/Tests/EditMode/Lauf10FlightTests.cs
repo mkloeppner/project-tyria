@@ -38,37 +38,136 @@ namespace ProjectTyrant.Tests
             Assert.That(t, Is.InRange(45f, 62f), "600 m bei 1,6 × 7 m/s ≈ 54 s reines Gleiten aus 100 m");
         }
 
-        [Test] public void Griffon_DiveCapsSpeed()
+        // Nach Lauf 11 (Spieler-Wunsch) neu gefasst: senkrechter Sturz, kein automatisches Hochziehen, S wandelt Sturz-Energie in Höhe,
+        // Flügelschläge im Sturz heben das Höchsttempo auf 4× / 5×. Ersetzt Griffon_DiveCapsSpeed / _PullUpRecoversHeight_WithLoss / _RhythmTravelsFaster_MasteryKeepsHeight.
+        [Test] public void Griffon_DiveAt80Degrees_CapsAt3xRun()
         {
-            var m = Air(FlightParams.Griffon(0), 300f);
-            for (int i = 0; i < 1000 && m.Airborne; i++) m.Step(Dt, new FlightInput { Dive = true });
-            Assert.LessOrEqual(m.Forward, m.Run * 4f + 0.01f);
-            Assert.Greater(m.Forward, m.Run * 3.5f);
+            var m = Air(FlightParams.Griffon(0), 400f); m.Ceiling = 999f;
+            for (int i = 0; i < 300 && m.Airborne; i++) m.Step(Dt, new FlightInput { Dive = true });   // 6 s
+            Assert.AreEqual(FlightState.Dive, m.State);
+            Assert.AreEqual(m.Run * 3f, m.DiveSpeed, 0.01f, "ohne Flügelschlag 3 × Lauf");
+            float angle = UnityEngine.Mathf.Atan2(-m.Vertical, m.Forward) * UnityEngine.Mathf.Rad2Deg;
+            Assert.AreEqual(80f, angle, 0.1f, "steil, aber nicht senkrecht");
+            Assert.AreEqual(m.DiveSpeed, UnityEngine.Mathf.Sqrt(m.Forward * m.Forward + m.Vertical * m.Vertical), 0.01f);
         }
 
-        [Test] public void Griffon_PullUpRecoversHeight_WithLoss()
+        [Test] public void Griffon_DiveFlaps_Reach4xAnd5x_OncePerSecond()
         {
-            var m = Air(FlightParams.Griffon(0), 200f); m.Ceiling = 999f;   // ohne Höhendecke messen
-            for (int i = 0; i < 300; i++) m.Step(Dt, new FlightInput { Dive = true });
-            float low = m.Altitude, lost = 200f - low;
+            var m = Air(FlightParams.Griffon(0), 900f); m.Ceiling = 9999f; int charges = m.Charges;
+            for (int i = 0; i < 25; i++) m.Step(Dt, new FlightInput { Dive = true });                 // 0,5 s
+            m.Step(Dt, new FlightInput { Dive = true, Jump = true });
+            Assert.AreEqual(0, m.DiveFlaps, "erst nach 1 s Sturz");
+            for (int i = 0; i < 30; i++) m.Step(Dt, new FlightInput { Dive = true });
+            m.Step(Dt, new FlightInput { Dive = true, Jump = true });
+            Assert.AreEqual(1, m.DiveFlaps);
+            m.Step(Dt, new FlightInput { Dive = true, Jump = true });
+            Assert.AreEqual(1, m.DiveFlaps, "höchstens ein Schlag je Sekunde");
+            for (int i = 0; i < 400; i++) m.Step(Dt, new FlightInput { Dive = true });
+            Assert.AreEqual(m.Run * 4f, m.DiveSpeed, 0.01f, "ein Schlag: 4 × Lauf");
+            m.Step(Dt, new FlightInput { Dive = true, Jump = true });
+            for (int i = 0; i < 400; i++) m.Step(Dt, new FlightInput { Dive = true });
+            Assert.AreEqual(m.Run * 5f, m.DiveSpeed, 0.01f, "zwei Schläge: 5 × Lauf");
+            for (int i = 0; i < 60; i++) m.Step(Dt, new FlightInput { Dive = true, Jump = i % 55 == 0 });
+            Assert.AreEqual(2, m.DiveFlaps); Assert.AreEqual(m.Run * 5f, m.DiveSpeed, 0.01f, "nicht über 5 ×");
+            Assert.AreEqual(charges - 2, m.Charges, "je Flügelschlag eine Ladung (im Spiel: 1 Ausweich-Balken)");
+        }
+
+        [Test] public void Griffon_DiveFlap_NeedsCharge()
+        {
+            var m = Air(FlightParams.Griffon(0), 900f); m.Ceiling = 9999f; m.Charges = 0;
+            for (int i = 0; i < 60; i++) m.Step(Dt, new FlightInput { Dive = true });
+            m.Step(Dt, new FlightInput { Dive = true, Jump = true });
+            Assert.AreEqual(0, m.DiveFlaps, "ohne Balken kein Flügelschlag");
+        }
+
+        [Test] public void Griffon_ReleaseKeepsSpeed_NoAutoLift()
+        {
+            var m = Air(FlightParams.Griffon(0), 300f); m.Ceiling = 999f;
+            for (int i = 0; i < 150; i++) m.Step(Dt, new FlightInput { Dive = true });   // 3 s
+            float speed = m.DiveSpeed, low = m.Altitude;
             m.Step(Dt, new FlightInput());
+            Assert.AreEqual(FlightState.Glide, m.State);
+            Assert.AreEqual(speed, m.Forward, 0.5f, "Sturz-Tempo bleibt erhalten");
             float peak = m.Altitude;
-            for (int i = 0; i < 400; i++) { m.Step(Dt, new FlightInput()); peak = System.Math.Max(peak, m.Altitude); }
-            Assert.Greater(peak - low, lost * 0.4f); Assert.LessOrEqual(peak - low, lost * 0.65f, "höchstens ≈ 60 %");
+            for (int i = 0; i < 100; i++) { m.Step(Dt, new FlightInput()); peak = System.Math.Max(peak, m.Altitude); }
+            Assert.LessOrEqual(peak, low + 0.01f, "kein automatisches Hochziehen");
+            Assert.Greater(m.Forward, speed * 0.85f, "Tempo hält sich (nur langsamer Verlust)");
+            Assert.Less(m.Altitude, low - 0.5f, "verliert leicht an Höhe"); Assert.Greater(m.Altitude, low - 3f, "nur leicht (≈ 1 m/s)");
         }
 
-        [Test] public void Griffon_RhythmTravelsFaster_MasteryKeepsHeight()
+        /// <summary>Sturz bis zur Stufe (0/1/2 Flügelschläge = 3×/4×/5×), loslassen, S halten bis die Energie verbraucht ist → Endhöhe, Ausgangshöhe.</summary>
+        static float[] DiveAndPull(int flaps)
         {
-            System.Func<int, bool, float[]> run = (rank, rhythm) =>
+            var m = Air(FlightParams.Griffon(0), 600f); m.Ceiling = 9999f; float start = m.Altitude;
+            for (int i = 0; i < 60; i++) m.Step(Dt, new FlightInput { Dive = true });
+            for (int k = 0; k < flaps; k++) { m.Step(Dt, new FlightInput { Dive = true, Jump = true }); for (int i = 0; i < 55; i++) m.Step(Dt, new FlightInput { Dive = true }); }
+            for (int i = 0; i < 200; i++) m.Step(Dt, new FlightInput { Dive = true });
+            float times = m.DiveSpeed / m.Run, low = m.Altitude, energy = m.Energy;
+            for (int i = 0; i < 3000 && (m.Energy > 0f || i == 0); i++) m.Step(Dt, new FlightInput { Pitch = -1f });
+            return new[] { m.Altitude, start, times, start - low, energy, m.Forward };
+        }
+
+        [Test] public void Griffon_SConvertsEnergy_3xBelow_4xExact_5xAbove()
+        {
+            var r3 = DiveAndPull(0); var r4 = DiveAndPull(1); var r5 = DiveAndPull(2);
+            Assert.AreEqual(3f, r3[2], 0.01f); Assert.AreEqual(4f, r4[2], 0.01f); Assert.AreEqual(5f, r5[2], 0.01f);
+            Assert.AreEqual(r3[3], r3[4], 0.5f, "Energie = gestürzte Höhe");
+            Assert.Less(r3[0], r3[1] - 2f, "3 ×: knapp unter der Ausgangshöhe"); Assert.Greater(r3[0], r3[1] - r3[3] * 0.15f);
+            Assert.AreEqual(r4[1], r4[0], 1f, "4 ×: genau zurück auf die Ausgangshöhe");
+            Assert.Greater(r5[0], r5[1] + 2f, "5 ×: etwas über der Ausgangshöhe"); Assert.Less(r5[0], r5[1] + r5[3] * 0.15f);
+            Assert.AreEqual(new FlightMotor(FlightParams.Griffon(0)).Run * 1.6f, r4[5], 0.5f, "Energie verbraucht → Gleittempo");
+        }
+
+        [Test] public void Griffon_WaitingBeforeS_CostsHeight_NeverAbovePeak()
+        {
+            float now = DiveWaitPull(0f, out float peakNow, out float startNow), late = DiveWaitPull(3f, out float peakLate, out float startLate);
+            Assert.AreEqual(peakNow, now, 1f, "sofort S: bis zur gemerkten Höchstmarke");
+            Assert.Less(late, now - 3f, "warten kostet Höhe (Sinken + Tempoverlust)");
+            Assert.LessOrEqual(late, peakLate + 0.01f, "nie über die Höchstmarke");
+        }
+
+        static float DiveWaitPull(float wait, out float peak, out float start)
+        {
+            var m = Air(FlightParams.Griffon(0), 400f); m.Ceiling = 9999f; start = m.Altitude;
+            for (int i = 0; i < 200; i++) m.Step(Dt, new FlightInput { Dive = true });
+            m.Step(Dt, new FlightInput()); peak = m.PeakAltitude;
+            for (float t = 0f; t < wait; t += Dt) m.Step(Dt, new FlightInput());
+            for (int i = 0; i < 3000 && m.Energy > 0f; i++) m.Step(Dt, new FlightInput { Pitch = -1f });
+            return m.Altitude;
+        }
+
+        [Test] public void Griffon_SPullUpIs50Degrees()
+        {
+            var m = Air(FlightParams.Griffon(0), 300f); m.Ceiling = 999f;
+            for (int i = 0; i < 150; i++) m.Step(Dt, new FlightInput { Dive = true });
+            for (int i = 0; i < 40; i++) m.Step(Dt, new FlightInput { Pitch = -1f });   // Steigen eingeschwungen
+            float angle = UnityEngine.Mathf.Atan2(m.Vertical, m.Forward) * UnityEngine.Mathf.Rad2Deg;
+            Assert.AreEqual(50f, angle, 1.5f, "steiler Aufschwung");
+            Assert.AreEqual(m.EnergySpeed, UnityEngine.Mathf.Sqrt(m.Forward * m.Forward + m.Vertical * m.Vertical), 0.05f, "Tempo verteilt sich, bleibt erhalten");
+        }
+
+        [Test] public void Griffon_DiveAndConvert_TravelsFarther_MasteryKeepsEnergy()
+        {
+            System.Func<int, bool, float> run = (rank, diveConvert) =>
             {
-                var m = Air(FlightParams.Griffon(rank), 150f);
+                var m = Air(FlightParams.Griffon(rank), 150f); m.Ceiling = 999f;
                 float t = 0f, dist = 0f;
-                while (m.Airborne && t < 30f) { m.Step(Dt, new FlightInput { Dive = rhythm && (t % 9f) < 3f }); dist += m.Forward * Dt; t += Dt; }
-                return new[] { dist, m.Altitude };
+                while (m.Airborne && t < 30f)
+                {
+                    float c = t % 10f;
+                    var i = !diveConvert ? new FlightInput() : c < 2f ? new FlightInput { Dive = true } : new FlightInput { Pitch = c > 8f ? -1f : 0f };
+                    m.Step(Dt, i); dist += m.Speed * Dt * (m.State == FlightState.Dive ? 0f : 1f); t += Dt;
+                }
+                return dist;
             };
-            var plain = run(0, false); var r0 = run(0, true); var r3 = run(3, true);
-            Assert.Greater(r0[0], plain[0] * 1.4f, "Sturz-Rhythmus legt in 30 s deutlich mehr Strecke zurück");
-            Assert.Greater(r3[1], r0[1] + 5f, "Sturzflug-Meister (85 %) hält mehr Höhe als 60 %");
+            Assert.Greater(run(0, true), run(0, false) * 1.2f, "Sturz + Energie-Flug legt mehr Strecke zurück als reines Gleiten");
+            var a = Air(FlightParams.Griffon(0), 300f); var b = Air(FlightParams.Griffon(3), 300f); a.Ceiling = b.Ceiling = 999f;
+            for (int i = 0; i < 100; i++) { a.Step(Dt, new FlightInput { Dive = true }); b.Step(Dt, new FlightInput { Dive = true }); }
+            float ea0 = 0f, eb0 = 0f;
+            a.Step(Dt, new FlightInput()); b.Step(Dt, new FlightInput()); ea0 = a.Energy; eb0 = b.Energy;
+            for (int i = 0; i < 500; i++) { a.Step(Dt, new FlightInput()); b.Step(Dt, new FlightInput()); }
+            Assert.Greater(b.Energy / eb0, a.Energy / ea0 + 0.1f, "Sturzflug-Meister verliert die Energie langsamer");
+            Assert.Greater(eb0, ea0, "Sturzflug-Meister beschleunigt schneller");
         }
 
         [Test] public void Griffon_StallBelowThreshold()

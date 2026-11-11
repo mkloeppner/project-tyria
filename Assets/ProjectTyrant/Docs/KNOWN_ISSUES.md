@@ -83,3 +83,4 @@
 72. **Lauf 11 – Bounty-Eigenschaften vereinfacht**: Spiegelbilder/Orbkranz beschwören die Begleiter des Archetyps, Trotzleisten-Fenster ist nur ein Hinweis; Lösbarkeit über Druck-Budget statt Lauf-9-Simulator (nicht vorhanden).
 73. **Lauf 11 – Verwaiste Sprachdateien** `K18_S02E_Q1/C1_*`, `K25_S02_Q2/C2_*` (Wahl-Stellen verschoben); `device_bash` darf nicht löschen, die Dateien werden nicht referenziert und stören nicht.
 74. **Lauf 11 – Admin-Abschluss von Gesprächs-Schritten** spielt (wie in Lauf 10) nur die Endszene; Wahl-Flags der Einstiegsszene entstehen dabei nicht. Im echten Gespräch werden sie gesetzt (Modell-Test `StoryPathTests`).
+75. **Greif-Beherrschung „Flügelkraft“ (+2 Auftrieb) ohne Wirkung**, seit Flügelschläge die Ausweich-Leiste (fest 3 Balken) nutzen. Vorschlag: +1 Balken oder schnellere Regeneration auf dem Greif – Entscheidung des Auftraggebers.

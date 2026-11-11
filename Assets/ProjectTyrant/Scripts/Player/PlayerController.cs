@@ -171,7 +171,7 @@ namespace ProjectTyrant
             if (AnimDriven)
             {
                 Visual.localPosition = Vector3.Lerp(Visual.localPosition, _visualBasePos + VisualOffset, 1f - Mathf.Exp(-20f * dt));
-                Visual.localRotation = Quaternion.identity;
+                Visual.localRotation = VisualTilt;   // Reittier-Neigung (Greif im Sturz/Steigen)
                 return;
             }
             Quaternion rot = Quaternion.identity;
@@ -200,6 +200,7 @@ namespace ProjectTyrant
                 rot = Quaternion.Euler(6f, 0f, Mathf.Sin(_bobPhase) * 3f);
             }
             Visual.localPosition = Vector3.Lerp(Visual.localPosition, pos, 1f - Mathf.Exp(-20f * dt));
+            rot = VisualTilt * rot;
             Visual.localRotation = Dodge.IsDodging ? rot : Quaternion.Slerp(Visual.localRotation, rot, 1f - Mathf.Exp(-15f * dt));
         }
 
@@ -221,6 +222,8 @@ namespace ProjectTyrant
         public float? HoverFloor { get; set; }
         public bool IsHovering { get; private set; }
         public Vector3 VisualOffset { get; set; }
+        /// <summary>Neigung der Figur (z. B. Greif im Sturzflug); Standard keine.</summary>
+        public Quaternion VisualTilt { get; set; } = Quaternion.identity;
         public Vector3 LastWish { get; private set; }
         /// <summary>Waagrechte Geschwindigkeit des letzten Frames (Reittiere übernehmen damit den Schwung beim Aufsitzen/Abheben).</summary>
         public Vector3 HorizontalVelocity { get; private set; }

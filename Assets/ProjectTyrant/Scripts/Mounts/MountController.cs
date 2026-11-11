@@ -24,6 +24,8 @@ namespace ProjectTyrant
         Combatant _self;
         SkillCaster _caster;
         GameObject _visual;
+        float _savedEnduranceMax = -1f;
+        public const int GriffonEnduranceBars = 3;
         float _holdTime;
         bool _radialOpen;
         float _orbitalRadius = -1f;
@@ -182,8 +184,33 @@ namespace ProjectTyrant
             if (!Motor.BeginMount(StatsFor(k), true, true)) return;
             for (int i = 0; i < 20 && Motor.IsChanneling; i++) Motor.Tick(0.1f);   // Luftwechsel ohne Aufsitz-Kanal
             ApplyMount();
-            if (Flight != null && old != null) { Flight.Forward = old.Forward; Flight.Vertical = old.Vertical; Flight.Altitude = old.Altitude; Flight.LeaveGround(); }
+            if (Flight != null && old != null) { Flight.Forward = old.Speed; Flight.Vertical = old.Vertical; Flight.Altitude = old.Altitude; Flight.LeaveGround(); }
             GameEventBus.Notify("Luftwechsel: " + (Def(k) != null ? Def(k).DisplayName : k.ToString()), new Color(0.75f, 0.9f, 1f));
+        }
+
+        /// <summary>Nach Lauf 11: Flugreittier in der Luft rufen – sofort aufsitzen, Schwung und Höhe übernehmen, Fall abfangen.</summary>
+        bool AirMount(MountKind k)
+        {
+            var rule = EvaluateFlightHere();
+            if (!rule.Allowed && !FlightDebug.RulesOff) { GameEventBus.Notify(rule.Reason, new Color(1f, 0.7f, 0.4f)); return false; }
+            if (!Motor.BeginMount(StatsFor(k), true, true))
+            {
+                if (Motor.RemountBlock > 0f) GameEventBus.Notify("Reittier erholt sich noch", new Color(1f, 0.7f, 0.4f));
+                return false;
+            }
+            var glide = GetComponent<MasteryAbilities>(); if (glide != null) glide.StopGlide();   // Gleitschirm weg, Reittier übernimmt
+            for (int i = 0; i < 20 && Motor.IsChanneling; i++) Motor.Tick(0.1f);   // kein Aufsitz-Kanal in der Luft
+            ApplyMount();   // setzt GroundSpeed aus dem aktuellen Tempo
+            if (Flight != null)
+            {
+                Flight.Altitude = Mathf.Max(0f, transform.position.y - GroundBelow());
+                Flight.LeaveGround();
+                if (Flight.P.Kind == FlyerKind.Griffon) Flight.Vertical = Mathf.Clamp(_pc.VerticalVelocity, -6f, 4f);   // Greif fängt den Fall im Gleiten ab
+                _airT = 0f;
+            }
+            _pc.ResetFallTracking();
+            SkillExecutor.VfxPulse(transform.position, 1.8f, new Color(0.85f, 0.9f, 1f));
+            return true;
         }
 
         public bool TryMount(MountKind k)
@@ -199,7 +226,14 @@ namespace ProjectTyrant
             if (!Balance.BalanceWorld.Legacy && regen != null && regen.InCombat && !Motor.IsMounted) { GameEventBus.Notify("Im Kampf kein Aufsitzen – erst 5 s ohne Schaden", new Color(1f, 0.7f, 0.4f)); return false; }   // Balance B1: GW2-Regel
             if (k == MountKind.Skiff && !NearWater()) { GameEventBus.Notify("Das Boot lässt sich nur auf Wasser rufen", new Color(1f, 0.7f, 0.4f)); return false; }   // Lauf 11
             if (InDeepWater && k != MountKind.Skimmer && k != MountKind.Skiff) { GameEventBus.Notify("Im tiefen Wasser nur mit dem Skimmer", new Color(1f, 0.7f, 0.4f)); return false; }
-            if (!Motor.BeginMount(StatsFor(k), _pc.IsGrounded || _pc.IsHovering || k == MountKind.Skiff, true))
+            bool groundedNow = _pc.IsGrounded || _pc.IsHovering;
+            if (!groundedNow && k != MountKind.Skiff && !Motor.IsMounted)
+            {
+                // Nach Lauf 11: Greif und Himmelsschuppe lassen sich im Sprung/Fall/Gleiten sofort rufen (ohne Aufsitz-Kanal)
+                if (!FlightRules.IsFlyer(k)) { GameEventBus.Notify("In der Luft nur Greif oder Himmelsschuppe", new Color(1f, 0.7f, 0.4f)); return false; }
+                return AirMount(k);
+            }
+            if (!Motor.BeginMount(StatsFor(k), groundedNow || k == MountKind.Skiff, true))
             {
                 if (Motor.RemountBlock > 0f) GameEventBus.Notify("Reittier erholt sich noch", new Color(1f, 0.7f, 0.4f));
                 return false;
@@ -213,7 +247,7 @@ namespace ProjectTyrant
             var d = Def(Motor.Mounted);
             _pc.MountedControl = true;
             _pc.SpeedOverride = Motor.Stats.Speed;
-            _pc.VisualOffset = new Vector3(0f, d != null ? d.SeatHeight : 1.1f, -0.1f);
+            _pc.VisualOffset = new Vector3(0f, d != null ? d.SeatHeight : 1.1f, -0.1f); _seat = _pc.VisualOffset; _tilt = 0f;
             _pc.FallDamageHeight = 30f;
             if (_caster != null) { _caster.InputSuppressed = true; _caster.CancelCast(); }
             if (_visual != null) Destroy(_visual);
@@ -226,6 +260,7 @@ namespace ProjectTyrant
             if (rig != null && rig.Orbital != null) { _orbitalRadius = rig.Orbital.Radius; rig.Orbital.Radius = _orbitalRadius * 1.3f; }
             SkillExecutor.VfxPulse(transform.position, 2.2f, new Color(1f, 0.85f, 0.5f));
             BeginFlight(Motor.Mounted);   // Lauf 10
+            if (Motor.Mounted == MountKind.Griffon) { var e = _pc.Dodge.Endurance; _savedEnduranceMax = e.Max; e.Max = GriffonEnduranceBars * e.DodgeCost; }   // 3 Ausweich-Balken auf dem Greif
             var pr = PlayerProfile.Instance;
             if (pr != null) { var sel = pr.State.MountSelection(); sel.Used(Motor.Mounted); pr.State.StoreMountSelection(sel); }
             MountChanged?.Invoke(Motor.Mounted);
@@ -237,11 +272,12 @@ namespace ProjectTyrant
             if (was) Motor.Dismount();
             _pc.MountedControl = false;
             _pc.SpeedOverride = 0f;
-            _pc.VisualOffset = Vector3.zero;
+            _pc.VisualOffset = Vector3.zero; _pc.VisualTilt = Quaternion.identity; _tilt = 0f;
             _pc.HoverFloor = null;
             _pc.FallDamageHeight = _baseFallHeight;
             _pc.MaxFallSpeed = 0f; Griffon.Land();   // Lauf 6
             EndFlight();   // Lauf 10
+            if (_savedEnduranceMax > 0f) { var e = _pc.Dodge.Endurance; e.Max = _savedEnduranceMax; e.Current = Mathf.Min(e.Current, e.Max); _savedEnduranceMax = -1f; }
             if (_caster != null) _caster.InputSuppressed = false;
             if (_visual != null) { Destroy(_visual); _visual = null; }
             var rig = ThirdPersonCameraRig.Current;

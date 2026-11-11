@@ -13,6 +13,7 @@ namespace ProjectTyrant
         MountKind _radialHover;
         TextMeshProUGUI _radialLabel;
         TextMeshProUGUI _flightText;   // Lauf 10: Auftrieb / Flugausdauer
+        RectTransform _spdRoot; Image _spdFill; TextMeshProUGUI _spdLabel;   // Greif-Tempoleiste (Sturz 3×/4×/5×)
         Image _mountIcon; MountKind _mountIconKind = (MountKind)(-1); bool _mountIconMounted;   // Lauf 10: HUD-Symbol des X-Reittiers
 
         void EnsureMountHud()
@@ -25,6 +26,22 @@ namespace ProjectTyrant
             _flightText = UiFactory.Text("FlightText", HudLayer, "", 16, TextAlignmentOptions.Center, new Color(0.85f, 0.93f, 1f));
             _flightText.rectTransform.Place(new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0, 176), new Vector2(520, 44));
             _flightText.gameObject.SetActive(false);
+            // Greif-Tempoleiste: 0 … 5 × Lauf, Marken bei Gleiten (1,6×) und 3× / 4× / 5×
+            var sbg = UiFactory.Image("GriffonSpeed", HudLayer, new Color(0.05f, 0.05f, 0.08f, 0.85f), UiFactory.Sprite("ui_round"));
+            _spdRoot = sbg.rectTransform.Place(new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0, 268), new Vector2(420, 14));
+            _spdFill = UiFactory.Image("Fill", _spdRoot, new Color(1f, 0.82f, 0.4f), UiFactory.Sprite("ui_round"));
+            _spdFill.rectTransform.anchorMin = Vector2.zero; _spdFill.rectTransform.anchorMax = new Vector2(0f, 1f); _spdFill.rectTransform.offsetMin = Vector2.zero; _spdFill.rectTransform.offsetMax = Vector2.zero;
+            foreach (var (frac, label) in new[] { (1.6f / 5f, ""), (0.6f, "3×"), (0.8f, "4×"), (1f, "5×") })
+            {
+                var tick = UiFactory.Image("Tick", _spdRoot, new Color(1f, 1f, 1f, 0.85f));
+                tick.rectTransform.Place(new Vector2(frac, 0f), new Vector2(frac, 1f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(2, 6));
+                if (label.Length == 0) continue;
+                var tl = UiFactory.Text("TickLabel", _spdRoot, label, 13, TextAlignmentOptions.Center, new Color(0.9f, 0.9f, 0.95f));
+                tl.rectTransform.Place(new Vector2(frac, 1f), new Vector2(frac, 1f), new Vector2(0.5f, 0f), new Vector2(0, 2), new Vector2(40, 16));
+            }
+            _spdLabel = UiFactory.Text("SpeedLabel", _spdRoot, "", 14, TextAlignmentOptions.Left, new Color(0.9f, 0.95f, 1f));
+            _spdLabel.rectTransform.Place(new Vector2(1f, 0.5f), new Vector2(1f, 0.5f), new Vector2(0f, 0.5f), new Vector2(10, 0), new Vector2(260, 22));
+            _spdRoot.gameObject.SetActive(false);
             _mountIcon = UiFactory.Image("MountIcon", HudLayer, Color.white);
             _mountIcon.rectTransform.Place(new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(-470, 30), new Vector2(46, 46));
             _mountIcon.gameObject.SetActive(false);
@@ -66,6 +83,15 @@ namespace ProjectTyrant
             bool fs = !string.IsNullOrEmpty(ft);
             if (_flightText.gameObject.activeSelf != fs) _flightText.gameObject.SetActive(fs);
             if (fs) _flightText.text = ft;
+            bool gs = mc.GriffonSpeed(out float frac, out float times, out float energy, out bool diving);
+            bool sp = gs && m.IsMounted && !HudHidden;
+            if (_spdRoot.gameObject.activeSelf != sp) _spdRoot.gameObject.SetActive(sp);
+            if (sp)
+            {
+                _spdFill.rectTransform.anchorMax = new Vector2(frac, 1f);
+                _spdFill.color = times >= 4.95f ? new Color(1f, 0.4f, 0.3f) : times >= 3.95f ? new Color(1f, 0.6f, 0.3f) : times >= 2.95f ? new Color(1f, 0.82f, 0.4f) : new Color(0.7f, 0.85f, 1f);
+                _spdLabel.text = times.ToString("0.0") + "× " + (energy > 0.5f ? (diving ? "· zurück: " : "· Reserve: ") + Mathf.RoundToInt(energy) + " m" : "");
+            }
             UpdateMountIcon(mc);
         }
 

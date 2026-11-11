@@ -53,7 +53,7 @@ namespace ProjectTyrant
             var input = InputManager.Instance;
             if (input == null || Orbital == null) return;
 
-            if (input.ActionCamPressed) SetActionCam(!ActionCam);
+            if (input.ActionCamPressed && !(MountController.Local != null && MountController.Local.UsesDescendKey)) SetActionCam(!ActionCam);   // C = Sinken auf der fliegenden Himmelsschuppe
             if (input.EscapeForWorld && ActionCam && !UiWantsCursor) SetActionCam(false);
 
             bool rotating = IsRotating;

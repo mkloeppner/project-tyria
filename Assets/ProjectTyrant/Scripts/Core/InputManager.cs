@@ -44,6 +44,8 @@ namespace ProjectTyrant
         public bool TabPressed { get; private set; }
         public bool SwapPressed { get; private set; }
         public bool ActionCamPressed { get; private set; }
+        /// <summary>C gehalten – auf der fliegenden Himmelsschuppe „Sinken“ (statt Action-Kamera).</summary>
+        public bool DescendHeld { get; private set; }
         public bool EscapePressed { get; private set; }
         public bool InteractPressed { get; private set; }
         public bool InventoryPressed { get; private set; }
@@ -176,7 +178,7 @@ namespace ProjectTyrant
             DodgePressed = _dodge.WasPressedThisFrame(); DodgeHeld = _dodge.IsPressed();
             TabPressed = _tab.WasPressedThisFrame();
             SwapPressed = _swap.WasPressedThisFrame();
-            ActionCamPressed = _actionCam.WasPressedThisFrame();
+            ActionCamPressed = _actionCam.WasPressedThisFrame(); DescendHeld = _actionCam.IsPressed();
             EscapePressed = _escape.WasPressedThisFrame();
             InteractPressed = _interact.WasPressedThisFrame();
             InventoryPressed = _inventory.WasPressedThisFrame();
@@ -211,7 +213,7 @@ namespace ProjectTyrant
             DodgePressed = Input.GetKeyDown(KeyCode.V); DodgeHeld = Input.GetKey(KeyCode.V);
             TabPressed = Input.GetKeyDown(KeyCode.Tab);
             SwapPressed = Input.GetKeyDown(KeyCode.BackQuote) || Input.GetKeyDown(KeyCode.Y);
-            ActionCamPressed = Input.GetKeyDown(KeyCode.C);
+            ActionCamPressed = Input.GetKeyDown(KeyCode.C); DescendHeld = Input.GetKey(KeyCode.C);
             EscapePressed = Input.GetKeyDown(KeyCode.Escape);
             InteractPressed = Input.GetKeyDown(KeyCode.F);
             InventoryPressed = Input.GetKeyDown(KeyCode.I);
@@ -233,7 +235,7 @@ namespace ProjectTyrant
         {
             Move = Vector2.zero; Strafe = 0f; JumpPressed = false; DodgePressed = false; DodgeHeld = false; TabPressed = false; SwapPressed = false;
             JumpHeld = false; JumpReleased = false; MountHeld = false; MountPressed = false; MountReleased = false;
-            ActionCamPressed = false; InteractPressed = false; InventoryPressed = false; HeroPressed = false; MapPressed = false;
+            ActionCamPressed = false; DescendHeld = false; InteractPressed = false; InventoryPressed = false; HeroPressed = false; MapPressed = false;
             ZoomInPressed = false; ZoomOutPressed = false; SkillPressed = -1; DoubleTapDirection = Vector2.zero; PrimaryClick = false; HelpPressed = false; MechanicPressed = -1;
         }
 

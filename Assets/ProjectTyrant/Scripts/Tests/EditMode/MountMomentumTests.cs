@@ -70,5 +70,31 @@ namespace ProjectTyrant.Tests
             Assert.AreEqual(FlightState.Ground, m.State);
             Assert.AreEqual(DashResult.None, m.LastDash);
         }
+        [Test] public void Skyscale_DescendWithC_SinksAndRegensEndurance()
+        {
+            var m = Sky(0f); m.Step(0.02f, new FlightInput { Jump = true }); m.Altitude = 60f; m.Endurance = 0f;
+            for (int i = 0; i < 50; i++) m.Step(0.02f, new FlightInput { Descend = true });   // 1 s
+            Assert.AreEqual(FlightState.Descend, m.State);
+            Assert.AreEqual(-m.P.DescendSpeed, m.Vertical, 0.01f, "sinkt kontrolliert");
+            Assert.AreEqual(54f, m.Altitude, 0.3f, "6 m/s");
+            Assert.AreEqual(20f, m.Endurance, 0.5f, "lädt Flugausdauer, auch aus 0");
+            m.Step(0.02f, new FlightInput());
+            Assert.AreNotEqual(FlightState.Descend, m.State, "Loslassen beendet das Sinken");
+        }
+
+        [Test] public void Skyscale_Descend_RegenCappedAndLandsOnGround()
+        {
+            var m = Sky(0f); m.Step(0.02f, new FlightInput { Jump = true }); m.Altitude = 3f;
+            for (int i = 0; i < 100; i++) m.Step(0.02f, new FlightInput { Descend = true });
+            Assert.AreEqual(FlightState.Ground, m.State, "landet");
+            Assert.LessOrEqual(m.Endurance, m.P.Endurance);
+        }
+
+        [Test] public void Griffon_IgnoresDescend()
+        {
+            var g = new FlightMotor(FlightParams.Griffon(0)); g.Step(0.02f, new FlightInput { Jump = true }); g.Altitude = 50f;
+            g.Step(0.02f, new FlightInput { Descend = true });
+            Assert.AreNotEqual(FlightState.Descend, g.State);
+        }
     }
 }
