@@ -42,6 +42,10 @@ namespace ProjectTyrant
                 new AchievementDef("fish_50", "Angler", AchievementCategory.Angeln, 50, 10, "Fange 50 Fische.", "Angler", 1),
                 new AchievementDef("fish_legend", "Legendärer Fang", AchievementCategory.Angeln, 1, 15, "Fange einen legendären Fisch."),
                 new AchievementDef("boss_new4", "Neue Riesen", AchievementCategory.Weltbosse, 4, 15, "Besiege die vier neuen Weltbosse.", null, 2),
+                new AchievementDef("w1_landmarks", "Wahrzeichen-Sammler", AchievementCategory.Erkundung, 30, 20, "Besuche die Haupt-Wahrzeichen aller 30 Zonen.", "Weltenwanderer", 2),   // Welt-Lauf W1
+                new AchievementDef("w1_summits", "Gipfelstürmer", AchievementCategory.Erkundung, 10, 15, "Erreiche zehn Gipfel über die Aufstiege.", "Gipfelstürmer", 1),
+                new AchievementDef("w1_secrets", "Schatzsucher", AchievementCategory.Erkundung, 50, 15, "Finde 50 Geheim-Truhen.", "Schatzsucher", 1),
+                new AchievementDef("w1_lore", "Chronist", AchievementCategory.Erkundung, 60, 15, "Lies 60 Lore-Tafeln.", "Chronist", 1),
                 new AchievementDef("boss_metas", "Fall und Erwachen", AchievementCategory.Weltbosse, 2, 20, "Schließe die Metas Zarathis und Drachenende ab.", "Bezwinger der Flut", 2),
             };
             foreach (var z in FishCatalog.FishingZones) l.Add(new AchievementDef("fishcol_" + z, "Fischsammlung: " + z, AchievementCategory.Sammlungen, FishCatalog.For(z).Count, 5, "Fange alle Fische der Zone."));

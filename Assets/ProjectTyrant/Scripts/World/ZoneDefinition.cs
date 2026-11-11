@@ -74,6 +74,7 @@ namespace ProjectTyrant
         [Header("Lauf 11")]
         [Tooltip("Region der Kontinentkarte (Reiter)")] public WorldRegion Region = WorldRegion.Kernland;
         [Tooltip("Hauptstadt/Hub der Region (Gefahrenstufe 0)")] public bool IsHub;
+        [Tooltip("Welt-Lauf W1: Wahrzeichen, Terrain-Operationen, Hürden, Aufstiege, Geheimnisse, Lore (vom Planer, reproduzierbar)")] public Landmarks.ZoneWorldPlan WorldPlan = new Landmarks.ZoneWorldPlan();
 
         public string LevelText => LevelMin == LevelMax ? LevelMin.ToString() : LevelMin + "–" + LevelMax;
         public PortalDef Portal(string id) => Portals.Find(p => p.Id == id);

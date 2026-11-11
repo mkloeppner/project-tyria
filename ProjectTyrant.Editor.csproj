@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldStoryBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.EliteData.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldW1Capture.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\DataBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\MapBaker.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.Balance.cs" />
@@ -80,19 +81,23 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\SkinMesh.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\StoryBuilder.Bundles.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\BiomeZoneBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldW1Gallery.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ZoneEventBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\VoiceBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.Traits.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\StoryBuilder.Chapters.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\AudioSynth.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldPlanner.Content.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\EventPopulator.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.Chains.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\PTEditorUtil.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldPlanner.Specs.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\VfxGalleryCapture.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\VfxGalleryBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\LoadingImageBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\CreatureBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldW1Menu.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ZoneContentBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ItemBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\Lauf10Builder.cs" />
@@ -101,6 +106,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\IconPainter.Story.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\Lauf11Builder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\MasteryBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldW1Builder.Parts.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\StoryBuilder.Expansions.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\StoryBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldBuilder.Lauf11.cs" />
@@ -124,6 +130,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ZoneExtrasBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\StoryBuilder.Chapters2.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\EventDefinitionBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldW1Builder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.Ranger.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClassBuilder.Weaver.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldEnemyBuilder.cs" />
@@ -134,7 +141,9 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ArrivalWaypointBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ClipBuilder.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\AnimGalleryBuilder.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldPlanner.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Editor\ZoneEventBuilder.Lauf11.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Editor\WorldW1FootLinks.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ProjectTyrant\Scripts\Editor\ProjectTyrant.Editor.asmdef" />

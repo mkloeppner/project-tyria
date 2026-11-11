@@ -186,3 +186,449 @@ MonoBehaviour:
   - heart_gruene_flut_3
   Region: 2
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 1
+      Center: {x: -483, y: -243}
+      Radius: 122
+      Height: 150
+      Param: 0
+      Yaw: 281
+    - Kind: 1
+      Center: {x: -5, y: 435}
+      Radius: 85
+      Height: 30
+      Param: 0
+      Yaw: 35
+    - Kind: 6
+      Center: {x: 93, y: -107}
+      Radius: 34
+      Height: 0
+      Param: 2.2
+      Yaw: 0
+    - Kind: 6
+      Center: {x: -162, y: 98}
+      Radius: 46
+      Height: 0
+      Param: 2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: -162, y: 98}
+      Radius: 6
+      Height: 3
+      Param: 2.5
+      Yaw: 0
+    - Kind: 7
+      Center: {x: 42, y: 102}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 278
+    Landmarks:
+    - Id: gruene_flut_wz_haupt
+      Name: Jadekathedrale
+      Lore: "Die Kathedrale war aus Stein, bis die Jade-Flut sie ber\xFChrte. Jetzt ist sie aus Licht."
+      Kind: 0
+      Main: 1
+      Position: {x: -44.919983, y: 2.6, z: 55.080017}
+      Height: 120
+      Footprint: 50.08
+      Yaw: 140.80136
+      BuildHeight: 120
+      Primary: {r: 0.22745098, g: 0.6901961, b: 0.5411765, a: 1}
+      Accent: {r: 0.7529412, g: 1, b: 0.9098039, a: 1}
+      Interior: 1
+      LightProfile: "Lichtsch\xE4chte"
+      SoundProfile: SFX_Amb_Bell_0
+      Stages:
+      - Index: 1
+        Name: Galerie
+        Position: {x: -36.436794, y: 11.6, z: 58.12723}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -36.436794, y: 11.6, z: 58.12723}
+      - Index: 2
+        Name: Turmgalerie
+        Position: {x: -56.42077, y: 90.92, z: 82.028885}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -56.42077, y: 90.92, z: 82.028885}
+      - Index: 3
+        Name: Turmspitze
+        Position: {x: -48.264626, y: 99.2, z: 84.56046}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -48.264626, y: 99.2, z: 84.56046}
+      - Index: 4
+        Name: Krypta
+        Position: {x: -20.271557, y: 3, z: 24.856598}
+        Gate:
+          Keys: 4
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -20.271557, y: 3, z: 24.856598}
+    - Id: gruene_flut_wz_1
+      Name: Wrack des Riesenschiffs
+      Lore: "Das Schiff war zu gro\xDF f\xFCr jeden Hafen. Also strandete es hier \u2013 mit Absicht, sagen manche."
+      Kind: 8
+      Main: 0
+      Position: {x: 93, y: 1.4, z: -107}
+      Height: 35
+      Footprint: 48
+      Yaw: -40.995827
+      BuildHeight: 35
+      Primary: {r: 0.3529412, g: 0.2901961, b: 0.22745098, a: 1}
+      Accent: {r: 0.5019608, g: 0.8784314, b: 0.7529412, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_Bell_0
+      Stages:
+      - Index: 1
+        Name: Halle
+        Position: {x: 116.61615, y: 1.8, z: -134.17126}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 116.61615, y: 1.8, z: -134.17126}
+      - Index: 2
+        Name: "D\xE4cher"
+        Position: {x: 106.58563, y: 9.4, z: -95.191925}
+        Gate:
+          Keys: 5
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 106.58563, y: 9.4, z: -95.191925}
+      - Index: 3
+        Name: Turm
+        Position: {x: 73.31988, y: 33.800003, z: -84.35728}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 73.31988, y: 33.800003, z: -84.35728}
+    Hazards:
+    - Id: gruene_flut_h1
+      Kind: 1
+      Center: {x: -162, y: 1.4, z: 98}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 28
+      Circular: 1
+    Climbs:
+    - Id: gruene_flut_aufstieg
+      Name: Hochpfad
+      Base: {x: -364.09683, y: 1.9, z: -304.79025}
+      Peak: {x: -483, y: 150, z: -243}
+      LaunchTower: {x: -348.12476, y: 1.9, z: -313.09042}
+      DescentTarget: {x: -363.3938, y: 2.6, z: -392.00342}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: -429.95493, y: 53.625088, z: -270.56586}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -380.56134, y: 14.831272, z: -296.23416}
+        - {x: -397.02588, y: 27.762545, z: -287.67804}
+        - {x: -413.49042, y: 40.693817, z: -279.12195}
+        - {x: -429.95493, y: 53.625088, z: -270.56586}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: -455.93613, y: 99.39252, z: -257.06424}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -436.45023, y: 65.06695, z: -267.19046}
+        - {x: -442.94553, y: 76.508804, z: -263.81506}
+        - {x: -449.44083, y: 87.95066, z: -260.43964}
+        - {x: -455.93613, y: 99.39252, z: -257.06424}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: -483, y: 150, z: -243}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -449.8228, y: 100.280365, z: -235.56482}
+        - {x: -500.27072, y: 115.373825, z: -261.76102}
+        - {x: -480.66498, y: 130.46729, z: -226.16109}
+        - {x: -479.16196, y: 145.56075, z: -250.58417}
+        - {x: -483, y: 150, z: -243}
+      FootPath:
+      - {x: -369.42084, y: 1.9, z: -302.02353}
+      - {x: -369.08246, y: 8.365636, z: -206.99336}
+      - {x: -431.84088, y: 14.831271, z: -144.55438}
+      - {x: -513.8666, y: 21.296907, z: -145.34448}
+      - {x: -566.3121, y: 27.762543, z: -199.70532}
+      - {x: -564.3935, y: 34.22818, z: -268.7266}
+      - {x: -518.4303, y: 40.693813, z: -311.1786}
+      - {x: -462.41345, y: 47.15945, z: -308.13153}
+      - {x: -429.95493, y: 53.625088, z: -270.56586}
+      - {x: -429.95493, y: 53.625088, z: -270.56586}
+      - {x: -427.74435, y: 56.485554, z: -225.535}
+      - {x: -457.12186, y: 59.346016, z: -193.20258}
+      - {x: -499.36194, y: 62.206482, z: -191.2342}
+      - {x: -529.5498, y: 65.06695, z: -218.80954}
+      - {x: -531.27594, y: 67.92741, z: -258.2589}
+      - {x: -505.50275, y: 70.78787, z: -286.30212}
+      - {x: -468.84415, y: 73.64834, z: -287.78616}
+      - {x: -442.94553, y: 76.508804, z: -263.81503}
+      - {x: -441.70367, y: 79.36927, z: -229.9472}
+      - {x: -463.87265, y: 82.22973, z: -206.19318}
+      - {x: -494.94977, y: 85.090195, z: -205.19348}
+      - {x: -516.55914, y: 87.95066, z: -225.56036}
+      - {x: -517.3167, y: 90.81113, z: -253.84673}
+      - {x: -498.75192, y: 93.671585, z: -273.31152}
+      - {x: -473.25635, y: 96.53205, z: -273.8269}
+      - {x: -455.93613, y: 99.39252, z: -257.06424}
+      SpringerLedges:
+      - {x: -374.3012, y: 12.932502, z: -299.48737}
+      - {x: -384.50555, y: 23.765005, z: -294.18448}
+      - {x: -394.70993, y: 34.597507, z: -288.8816}
+      - {x: -404.9143, y: 45.430008, z: -283.5787}
+      - {x: -415.11865, y: 56.262512, z: -278.2758}
+      - {x: -425.32303, y: 67.09501, z: -272.9729}
+      - {x: -435.5274, y: 77.92751, z: -267.67}
+      - {x: -445.73175, y: 88.76001, z: -262.36713}
+      - {x: -455.93613, y: 99.592514, z: -257.06424}
+      ClimbPath:
+      - {x: -449.8228, y: 100.280365, z: -235.56482}
+      - {x: -452.70395, y: 101.16822, z: -228.70294}
+      - {x: -456.95828, y: 102.05607, z: -222.73093}
+      - {x: -462.33893, y: 102.94392, z: -217.91264}
+      - {x: -468.5509, y: 103.83177, z: -214.44778}
+      - {x: -475.26718, y: 104.71962, z: -212.4638}
+      - {x: -482.1458, y: 105.60747, z: -212.01169}
+      - {x: -488.8472, y: 106.49532, z: -213.06564}
+      - {x: -495.0509, y: 107.38317, z: -215.52672}
+      - {x: -500.47098, y: 108.27103, z: -219.22986}
+      - {x: -504.86914, y: 109.158875, z: -223.95413}
+      - {x: -508.06506, y: 110.04672, z: -229.43547}
+      - {x: -509.94357, y: 110.93458, z: -235.38107}
+      - {x: -510.4583, y: 111.822426, z: -241.48508}
+      - {x: -509.63184, y: 112.71027, z: -247.44408}
+      - {x: -507.55215, y: 113.59813, z: -252.97223}
+      - {x: -504.36627, y: 114.48598, z: -257.81506}
+      - {x: -500.27072, y: 115.373825, z: -261.76102}
+      - {x: -495.50003, y: 116.26168, z: -264.6507}
+      - {x: -490.31363, y: 117.14953, z: -266.383}
+      - {x: -484.9819, y: 118.03738, z: -266.9181}
+      - {x: -479.7722, y: 118.92523, z: -266.27734}
+      - {x: -474.9353, y: 119.81308, z: -264.53983}
+      - {x: -470.69363, y: 120.70093, z: -261.8363}
+      - {x: -467.23074, y: 121.58878, z: -258.34058}
+      - {x: -464.6837, y: 122.47663, z: -254.259}
+      - {x: -463.1378, y: 123.36449, z: -249.8187}
+      - {x: -462.62436, y: 124.252335, z: -245.25517}
+      - {x: -463.12134, y: 125.14018, z: -240.79982}
+      - {x: -464.55652, y: 126.02804, z: -236.66833}
+      - {x: -466.8135, y: 126.915886, z: -233.05019}
+      - {x: -469.7395, y: 127.803734, z: -230.09998}
+      - {x: -473.1549, y: 128.69159, z: -227.93097}
+      - {x: -476.86383, y: 129.57944, z: -226.61101}
+      - {x: -480.66498, y: 130.46729, z: -226.16109}
+      - {x: -484.36255, y: 131.35513, z: -226.55632}
+      - {x: -487.77628, y: 132.243, z: -227.72949}
+      - {x: -490.75003, y: 133.13084, z: -229.57658}
+      - {x: -493.15924, y: 134.01869, z: -231.96413}
+      - {x: -494.9158, y: 134.90654, z: -234.73778}
+      - {x: -495.97095, y: 135.79439, z: -237.73166}
+      - {x: -496.31592, y: 136.68224, z: -240.77797}
+      - {x: -495.9803, y: 137.57008, z: -243.71614}
+      - {x: -495.02838, y: 138.45795, z: -246.4013}
+      - {x: -493.5537, y: 139.3458, z: -248.71138}
+      - {x: -491.67224, y: 140.23364, z: -250.55266}
+      - {x: -489.5146, y: 141.12149, z: -251.86343}
+      - {x: -487.2178, y: 142.00934, z: -252.61563}
+      - {x: -484.9171, y: 142.8972, z: -252.81453}
+      - {x: -482.73822, y: 143.78505, z: -252.4964}
+      - {x: -480.79062, y: 144.6729, z: -251.72461}
+      - {x: -479.16196, y: 145.56075, z: -250.58417}
+      - {x: -477.9142, y: 146.4486, z: -249.17534}
+      - {x: -477.08145, y: 147.33646, z: -247.6066}
+      - {x: -476.6695, y: 148.2243, z: -245.98743}
+      - {x: -476.65732, y: 149.11215, z: -244.42143}
+      - {x: -477, y: 150, z: -243}
+      LandmarkId: 
+    Secrets:
+    - Id: gruene_flut_h1_insel
+      Name: Insel im Giftwasser
+      Hint: "Etwas glitzert in der Mitte \u2013 Giftwasser sch\xFCtzt es."
+      Position: {x: -162, y: 3, z: 98}
+      Gate:
+        Keys: 28
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: gruene_flut_wz_haupt_4
+      Name: 'Jadekathedrale: Krypta'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste in der Krypta."
+      Position: {x: -20.271557, y: 3, z: 24.856598}
+      Gate:
+        Keys: 4
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: gruene_flut_wz_1_2
+      Name: "Wrack des Riesenschiffs: D\xE4cher"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Wrack des Riesenschiffs."
+      Position: {x: 106.58563, y: 9.4, z: -95.191925}
+      Gate:
+        Keys: 5
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: gruene_flut_aufstieg_gipfel
+      Name: 'Hochpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -483, y: 150.4, z: -243}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: gruene_flut_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 42, y: 0.6289607, z: 102}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: gruene_flut_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -28, y: -0.07737364, z: 192}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: gruene_flut_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -108, y: -0.73363644, z: 272}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: gruene_flut_lore_szene1
+      Title: Wrack am Ufer
+      Text: "Das Wrack liegt mit dem Kiel nach oben. Im Logbuch steht nur ein Satz: \u201EKurs auf Jadekathedrale.\u201C Lin Sao kannte den Kapit\xE4n."
+      Figure: Lin Sao
+      Position: {x: 79, y: 2.144079, z: -22}
+    - Id: gruene_flut_lore_szene2
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Lin Sao: \u201EWir sind zum Jadekathedrale gegangen. Folge dem Rauch.\u201C"
+      Figure: Lin Sao
+      Position: {x: -301, y: 0.87425584, z: 58}
+    - Id: gruene_flut_lore_szene3
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Jadekathedrale. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Lin Sao
+      Position: {x: -81, y: -0.743297, z: 138}
+    - Id: gruene_flut_wz_haupt_lore
+      Title: Jadekathedrale
+      Text: "Die Kathedrale war aus Stein, bis die Jade-Flut sie ber\xFChrte. Jetzt ist sie aus Licht."
+      Figure: Lin Sao
+      Position: {x: -63.845375, y: 0.44192374, z: 71.956955}
+    - Id: gruene_flut_wz_1_lore
+      Title: Wrack des Riesenschiffs
+      Text: "Das Schiff war zu gro\xDF f\xFCr jeden Hafen. Also strandete es hier \u2013 mit Absicht, sagen manche."
+      Figure: Lin Sao
+      Position: {x: 111.76312, y: 1.5138104, z: -122.49016}
+    - Id: gruene_flut_aufstieg_lore
+      Title: Hochpfad
+      Text: "Wer den Hochpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Lin Sao
+      Position: {x: -427.45493, y: 53.625088, z: -268.06586}
+    Loops:
+    - Id: gruene_flut_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: gruene_flut_h1_insel
+      TriggerPos: {x: -162, y: 3, z: 98}
+      TargetPos: {x: -162, y: 3, z: 98}
+      NextGoal: {x: -20.271557, y: 3, z: 24.856598}
+    - Id: gruene_flut_schleife2
+      TriggerKind: Lichtstrahl
+      Target: gruene_flut_wz_haupt_4
+      TriggerPos: {x: -20.271557, y: 3, z: 24.856598}
+      TargetPos: {x: -20.271557, y: 3, z: 24.856598}
+      NextGoal: {x: 106.58563, y: 9.4, z: -95.191925}
+    - Id: gruene_flut_schleife3
+      TriggerKind: Vogelschwarm
+      Target: gruene_flut_wz_1_2
+      TriggerPos: {x: 106.58563, y: 9.4, z: -95.191925}
+      TargetPos: {x: 106.58563, y: 9.4, z: -95.191925}
+      NextGoal: {x: -483, y: 150.4, z: -243}
+    - Id: gruene_flut_schleife4
+      TriggerKind: Glocke
+      Target: gruene_flut_aufstieg_gipfel
+      TriggerPos: {x: -483, y: 150.4, z: -243}
+      TargetPos: {x: -483, y: 150.4, z: -243}
+      NextGoal: {x: 42, y: 0.6289607, z: 102}
+    - Id: gruene_flut_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: gruene_flut_hoehle
+      TriggerPos: {x: 42, y: 0.6289607, z: 102}
+      TargetPos: {x: 42, y: 0.6289607, z: 102}
+      NextGoal: {x: -44.919983, y: 122.6, z: 55.080017}
+    Shortcuts:
+    - Id: gruene_flut_abk_hang
+      Name: Springer-Wand am Hochpfad
+      Key: 2
+      From: {x: -364.09683, y: 1.9, z: -304.79025}
+      To: {x: -455.93613, y: 99.39252, z: -257.06424}
+      FootPath: 1136.3221
+      MountPath: 170.62389
+    Scenes:
+    - Id: gruene_flut_szene1
+      Kind: Wrack
+      LoreId: gruene_flut_lore_szene1
+      Position: {x: 76, y: 2.144079, z: -24}
+    - Id: gruene_flut_szene2
+      Kind: Lager
+      LoreId: gruene_flut_lore_szene2
+      Position: {x: -304, y: 0.87425584, z: 56}
+    - Id: gruene_flut_szene3
+      Kind: Grab
+      LoreId: gruene_flut_lore_szene3
+      Position: {x: -84, y: -0.743297, z: 136}
+    FootLinks: []
+    Pads:
+    - {x: -44.919983, y: 55.080017, z: 42.568005, w: 2.6}
+    MainVisibility: 0.976
+    CompactZone: 0

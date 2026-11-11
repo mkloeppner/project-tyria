@@ -158,3 +158,49 @@ Befund vor Beginn (Abweichung vom erwarteten Ist-Stand, Details KNOWN_ISSUES 67)
 | M63/M65 Story Glutwüste + Dracheninseln | Modell-Durchlauf grün, Live-Stichprobe | 2026-11-10 20:40 | 26 Kapitel · 90 Schritte · 982 Zeilen · 260 Szenen · 66 Briefe · 37 Hinweise · 0 Warnungen; 1.243 Sprachdateien. Jedes Kapitel 11–26 hat ≥ 3 Wahl-Stellen (eine mit Flag) und 3–5 Schritte (neu: Epilog-Schritte K18_S03 Gedenkstein, K19_S03 Schiff nach Osten, K25_S03 Vor dem Erwachen). `StoryPathTests` auf 26 Kapitel erweitert: alle 27 Kombinationen bis Finale, Varianten K17/K23 je nach Wahl, keine fremde Variante. Live: Sprung K25 S3 → Lin Sao steht an der Zielstelle, Abschluss führt nach K26/Herz der Flut, 0 Exceptions. Fehler gefunden + behoben: `DebugSetChapter` setzte den Schritt nicht (Kommentar hatte die Anweisung verschluckt) |
 | Zwischenbericht 1–3 | im Chat gesendet (zusammengefasst) | 2026-11-10 20:25 | Zonen 30 (20 neu), Tests 493/493, Konsole 0/0 |
 | Live-Stichprobe Welt | Play Mode, Level 80 | 2026-11-10 20:28 | Weite von Ahrn 123 FPS / 28 Kämpfer / Ladezeit 0,5 s · Sonnentor 127 / 4 / 0,4 s · Zarathis 121 / 28 / 0,6 s · Jadehafen 119 / 4 / 0,4 s (3 Aufzüge) · Herz der Flut 120 / 28 / 0,4 s; Spieler jeweils am Boden, 0 Exceptions (Editor-Messung, `1/smoothDeltaTime`) |
+
+
+## Welt-Lauf W1 – Wahrzeichen, Vertikalität und Reittier-Hürden (Start 2026-11-11 01:20)
+Befund vor Beginn (Inventur, alle 30 Zonen): keine Wahrzeichen aus einem Baukasten (nur Szenen-Bauten der Läufe 3–11: Weiler, Ruinen, Aussichtstreppen, Silbermund-Portalring), keine Gelände-Operationen (Biom-Rauschen + Merkmale „Tafelberg/Insel/Lavaring“), Hürden nur als Biom-Wasser bzw. Lava, keine Geheim-Truhen, keine Lore-Tafeln, keine Entdeckungsschleifen, keine Umwelt-Szenen, Sprungrätsel ohne Kontrollpunkte. Drei Pflicht-Sehenswürdigkeiten verlangten ein Reittier (Insel der Irrlichter: Skimmer, Adlerhorst: Springer, Verlassene Esse: Raptor). `NpcRescue` lag in `WorldHelp.cs` → fehlendes Skript am Spieler (Ursache der alten Warnung).
+
+**Nachher (Plan, vom Validator geprüft; Spalten: Haupt-Wahrzeichen · Neben-Wahrzeichen · Gelände-Operationen · Hürden · Aufstieg · Geheimnisse · Lore · Schleifen · Szenen · beste Abkürzung · Tore/Rückkehr-Tore · Sichtbarkeit · neue Fußwege):**
+
+| Zone | Stufe | Haupt-Wahrzeichen | Neben | Ops | Hürden | Aufstieg | Geh. | Lore | Schl. | Sz. | Abk. | Tore | Sicht | Fußweg |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Grenzmark Ashveil | 1–15 | Leuchtfeuerturm Sonnfurt (Turm, 60 m) | 0 | 0 | Dornenhecke, Abgrund | 56 m (Bau) | 7 | 5 | 5 | 3 | – (kompakt) | 8/5 | 100 % | 0 |
+| Nebelmoor | 15–25 | Versunkene Kathedrale (Kathedrale, 90 m) | 1 | 7 | Giftwasser, Giftwasser | 149 m | 7 | 6 | 5 | 3 | 128 s | 15/4 | 97 % | 1 |
+| Frostkamm | 25–35 | Eiszitadelle (Zitadelle, 120 m) | 1 | 5 | Eiswasser, Windwand, Steilwand | 206 m | 7 | 6 | 5 | 3 | 138 s | 11/5 | 93 % | 1 |
+| Glutöde | 35–45 | Obsidianpyramide (Pyramide, 100 m) | 1 | 5 | Lava, Windwand | 156 m | 7 | 6 | 5 | 3 | 129 s | 11/6 | 96 % | 1 |
+| Silberküste | 40–50 | Leuchtturm Silbermund (Turm, 70 m) | 1 | 3 | Abgrund, Steilwand | 148 m | 7 | 6 | 5 | 3 | 147 s | 11/3 | 93 % | 0 |
+| Dämmerwald | 50–60 | Dämmerkathedrale (Kathedrale, 140 m) | 1 | 3 | Dornenhecke, Verderbnis-Feld, Dornenhecke | 159 m | 7 | 6 | 5 | 3 | 107 s | 16/4 | 97 % | 0 |
+| Dünenmeer | 60–70 | Pyramide des Sandkönigs (Pyramide, 90 m) | 2 | 6 | Treibsand, Windwand | 158 m | 7 | 7 | 5 | 3 | 162 s | 17/8 | 97 % | 0 |
+| Kristalltiefe | 65–75 | Kristallkathedrale (Kathedrale, 90 m) | 1 | 3 | Abgrund, Steilwand | 169 m | 7 | 6 | 5 | 3 | 97 s | 10/0 | 97 % | 0 |
+| Himmelsspitzen | 75–80 | Wolkenthron (Himmelsinsel, 240 m) | 1 | 3 | Windwand, Abgrund, Steilwand | 293 m | 7 | 6 | 5 | 3 | 257 s | 11/0 | 94 % | 0 |
+| Tyrannenfeste | 80 | Thronturm (Zitadelle, 150 m) | 1 | 5 | Verderbnis-Feld, Lava | 159 m | 7 | 6 | 5 | 3 | 146 s | 11/0 | 98 % | 0 |
+| Weite von Ahrn | 30–40 | Liegender Steinriese (Steinriese, 100 m) | 1 | 3 | Abgrund, Steilwand | 148 m | 7 | 6 | 5 | 3 | 131 s | 10/5 | 97 % | 0 |
+| Nebelkamm | 30–40 | Nebelkathedrale (Kathedrale, 85 m) | 1 | 6 | Giftwasser, Steilwand | 168 m | 7 | 6 | 5 | 3 | 131 s | 13/3 | 94 % | 0 |
+| Sturmbucht | 40–50 | Klippenkathedrale über dem Meer (Kathedrale, 110 m) | 1 | 4 | Abgrund, Steilwand | 158 m | 7 | 6 | 5 | 3 | 145 s | 12/3 | 97 % | 0 |
+| Aschenkessel | 50–60 | Feuertempel im Krater (Pyramide, 70 m) | 1 | 5 | Lava, Lava, Windwand | 156 m | 7 | 6 | 5 | 3 | 125 s | 14/7 | 89 % | 0 |
+| Grüner Schlund | 55–65 | Weltenbaum (Riesenbaum, 200 m) | 1 | 3 | Dornenhecke, Abgrund | 154 m | 7 | 6 | 5 | 3 | 128 s | 14/4 | 98 % | 0 |
+| Schilfmündung | 60–70 | Delta-Tempel auf Pfählen (Pagode, 70 m) | 1 | 6 | Giftwasser, Giftwasser | 148 m | 7 | 6 | 5 | 3 | 108 s | 13/4 | 100 % | 0 |
+| Weiße Stille | 70–80 | Eispyramide (Pyramide, 120 m) | 2 | 5 | Eiswasser, Windwand, Steilwand | 190 m | 7 | 7 | 5 | 3 | 175 s | 14/0 | 89 % | 0 |
+| Schädelküste | 75–80 | Versunkene Kathedrale der alten Hauptstadt (Kathedrale, 100 m) | 1 | 6 | Giftwasser, Verderbnis-Feld, Abgrund | 148 m | 7 | 6 | 5 | 3 | 145 s | 14/0 | 99 % | 0 |
+| Sonnentor (Stadt) | 80 | Oasenpalast (Zitadelle, 70 m) | 1 | 1 | – | 71 m (Bau) | 7 | 6 | 5 | 3 | – (kompakt) | 8/0 | 100 % | 0 |
+| Große Leere | 80 | Große Pyramide von Zarathis (Pyramide, 120 m) | 1 | 5 | Treibsand, Windwand, Sandportal | 159 m | 7 | 6 | 5 | 3 | 142 s | 13/0 | 96 % | 0 |
+| Klingenschlucht | 80 | Felsbrücken-Kathedrale (Kathedrale, 100 m) | 1 | 2 | Abgrund, Windwand, Sandportal | 169 m | 7 | 6 | 5 | 3 | 132 s | 13/0 | 96 % | 0 |
+| Spiegel der Sonne | 80 | Spiegeltempel (Pagode, 70 m) | 1 | 6 | Treibsand | 148 m | 7 | 6 | 5 | 3 | 125 s | 10/0 | 96 % | 0 |
+| Glutkessel | 80 | Flammentempel (Pyramide, 80 m) | 1 | 5 | Lava, Lava | 156 m | 7 | 6 | 5 | 3 | 143 s | 12/0 | 93 % | 0 |
+| Zarathis | 80 | Thronpyramide (Pyramide, 110 m) | 1 | 7 | Treibsand, Lava, Sandportal | 145 m | 7 | 6 | 5 | 3 | 141 s | 15/0 | 92 % | 0 |
+| Jadehafen (Stadt) | 80 | Hafenpagode (Pagode, 90 m) | 1 | 1 | – | 90 m (Bau) | 7 | 6 | 5 | 3 | – (kompakt) | 8/0 | 100 % | 0 |
+| Grüne Flut | 80 | Jadekathedrale (Kathedrale, 120 m) | 1 | 6 | Giftwasser | 148 m | 7 | 6 | 5 | 3 | 142 s | 12/0 | 98 % | 0 |
+| Flüsterhain | 80 | Große Pagode (Pagode, 110 m) | 1 | 3 | Abgrund, Steilwand | 178 m | 7 | 6 | 5 | 3 | 155 s | 11/0 | 99 % | 0 |
+| Sonnenstufen | 80 | Kaiserpalast (Zitadelle, 100 m) | 1 | 3 | Abgrund | 149 m | 7 | 6 | 5 | 3 | 143 s | 9/0 | 98 % | 0 |
+| Nebelküste | 80 | Drachenknochen-Bogen (Steinriese, 160 m) | 1 | 3 | Abgrund, Windwand | 148 m | 7 | 6 | 5 | 3 | 145 s | 9/0 | 94 % | 0 |
+| Herz der Flut | 80 | Drachenarena (Himmelsinsel, 110 m) | 1 | 3 | Abgrund | 148 m | 7 | 6 | 5 | 3 | 162 s | 9/0 | 89 % | 0 |
+
+| Meilenstein | Status | Ende | Nachweis |
+|---|---|---|---|
+| W1 Werkzeuge | fertig | 2026-11-11 02:15 | Laufzeit `Scripts/World/Landmarks/` (TerrainOps 11 Arten, HazardRules/Exposure 10 Hürden mit Rettungsfenster ≥ 4 s, GateRules nach Band, LandmarkKit 11 Typen mit Rampen ≤ 32°/Vorsprüngen ≤ 13 m/Innenraum/Ankern, ClimbTemplate + CheckpointTracker, Visibility/Shortcut/InteriorCulling/SecretRules, WorldValidator, Komponenten je eigene Datei), Editor `WorldPlanner` (30 Zonen-Steckbriefe), `WorldW1Builder` (Bau, LOD/Impostor, Innenraum-Culling, Stufen-Belohnungen, Hürden mit Randmarkierung + Schild, Aufstieg mit Startturm/Aufwind, Truhen, Lore, Schleifen-Auslöser, Szenen, Fußwege), Haken in BiomeZoneBuilder/ZoneBuilder, Menü „Welt W1“, Galerie `PT_LandmarkGallery`, Admin `/landmark tp|list`, `/hazard show`, `/climb stage N`, Karten-Höhenlinien (jede 5. kräftiger). Konsole 0/0. Alle 30 Pläne validieren (Probe-Bau Nebelmoor: Validator OK, 7 Truhen, 8 Lore-Tafeln) |
+| W2–W5 Zonen (bestehend, Städte, Kernland, Erweiterungen) | fertig | 2026-11-11 02:39 | Rebuild Everything (≈ 19 min, 30 Zonen + Core/Galerien) mit W1-Bau; „Gebaute Zonen prüfen“ auf den gespeicherten Szenen: **30/30 ohne Fehler**, je Zone 7 Truhen, 6–12 Lore-Tafeln, 1 Aufstieg, 1–3 Wahrzeichen, 0 fehlende Skripte. Fußwege: Insel der Irrlichter (Bohlenweg), Adlerhorst (Felsrampe), Verlassene Esse (Steinbrücke) – Flutfüllung „zu Fuß erreichbar“. 178 Aufnahmen unter `Temp/PT_QA/W1/<Szene>/` (Wahrzeichen vom Spawn, nah, Luftbild ohne Nebel, Aufstieg, Gipfelblick, Hürde) + Galerie + Live |
+| W6 Erfolge, Leistung, Doku | fertig (Meshy offen) | 2026-11-11 02:50 | 4 Erfolge (Wahrzeichen-Sammler 30, Gipfelstürmer 10, Schatzsucher 50, Chronist 60) mit Haken in Wahrzeichen/Aufstieg/Truhe/Tafel. Live (Play Mode, Startzone, Level 80): `/landmark tp haupt` → vor dem Leuchtfeuerturm, Entdeckung + Erfolg 1/30, `/climb stage 3` → Laterne (59 m) mit Aussichts-Prompt, 120 FPS, 0 Exceptions. Wahrzeichen je Material vereint + Impostor-LOD. **766/766 EditMode** (+253 W1), Konsole 0 Fehler / 0 Warnungen (alte „missing script“-Warnung behoben). Doku: LANDMARKS (neu), ADMIN, MOUNTS, MECHANICS, BALANCE, GW2_ABGLEICH, EXPANSIONS, PLACEHOLDERS, README, DECISIONS, KNOWN_ISSUES 76–80. Meshy (Budget 6) nicht genutzt – KNOWN_ISSUES 79 |
+| Fix nach W1: Start auf dem Leuchtturm-Dach | fertig | 2026-11-11 08:40 | Ursache: die Live-Prüfung (`/climb stage 3`) hatte die Spielerposition auf der Dachkappe des Leuchtfeuerturms (63 m) gespeichert, und der Admin-Teleport suchte den Boden von oben (Dach statt Laternen-Galerie). Behoben: Spieler auf die Sonnfurt-Wegmarke zurückgesetzt und gespeichert; Admin-Teleporte setzen exakt; Laternen-Boden der Türme hat eine Luke über dem Treppen-Ende (vorher endete die Wendelrampe unter dem Boden). 8 Zonen mit Türmen neu gebaut, 30/30 Zonen ohne Fehler, 767/767 EditMode (+1 Test „Treppe öffnet sich in die Laterne“). Live: WASD vom Start 16 m in 2 s, `/climb stage 3` landet auf dem Laternen-Boden |

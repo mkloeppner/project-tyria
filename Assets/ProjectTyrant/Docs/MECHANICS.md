@@ -34,3 +34,6 @@ Gelber Name = neutral: greift erst an, wenn angegriffen (danach rot bis zur Rüc
 
 ## Hilfe in der Welt (Stufe 0–2)
 Wachen-Patrouillen auf den Wegen der Startzone übernehmen die Aggro (Stufe 0–2). Downed-Gnade: Stufe 0 Gegner wechseln auf Wachen oder brechen nach 6 s ab, Stufe 1 wechseln auf Wachen, ab Stufe 4 stampfen Veteranen auf Downed-Spieler (doppelter Schaden). NPC-Wiederbelebung in Stufe 0–1: „Hilfe ist unterwegs“, Wiederbelebung nach 8 s ohne Gegner in 15 m, spätestens 20 s.
+
+## Hürden und Aufstiege (Welt-Lauf W1)
+Treibsand verlangsamt auf 40 %, ab 4 s Versinken, nach 8 s tot (Ausweichen kauft 1 s). Giftwasser 6 % HP/s + Gift, Lava 10 % HP/s + Brennen (Tod nach 10 s), Eiswasser Kälte + Versinken, Verderbnis-Feld Qual 3 % HP/s (Deckel 10 % je Tick), Windwand drückt zurück, Dornenhecke und Steilwand blockieren. Jede Hürde lässt ≥ 4 s zum Umkehren. Aufstiege haben Kontrollpunkte alle ≈ 15 Höhenmeter: Wer abstürzt (Fallgeschwindigkeit > 12 m/s, unter Kontrollpunkt − 6 m), steht am letzten Kontrollpunkt statt an der Wegmarke. Details LANDMARKS.md.

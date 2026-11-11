@@ -187,3 +187,542 @@ MonoBehaviour:
   - heart_weisse_stille_3
   Region: 0
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 0
+      Center: {x: -215, y: 145}
+      Radius: 140
+      Height: 200
+      Param: 0
+      Yaw: 330
+    - Kind: 0
+      Center: {x: -15, y: 405}
+      Radius: 85
+      Height: 30
+      Param: 0
+      Yaw: 145
+    - Kind: 6
+      Center: {x: -452, y: -472}
+      Radius: 46
+      Height: 0
+      Param: 2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: -452, y: -472}
+      Radius: 6
+      Height: -98.4
+      Param: 2.5
+      Yaw: 0
+    - Kind: 7
+      Center: {x: -428, y: 92}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 103
+    Landmarks:
+    - Id: weisse_stille_wz_haupt
+      Name: Eispyramide
+      Lore: "Die Pyramide ist nicht aus Eis gebaut \u2013 sie wurde vom Eis begraben. Ihre Spitze ist das Einzige, was der Gletscher freigab."
+      Kind: 1
+      Main: 1
+      Position: {x: -241.14691, y: 5, z: -441.1469}
+      Height: 120
+      Footprint: 135.85307
+      Yaw: 28.662617
+      BuildHeight: 120
+      Primary: {r: 0.84705883, g: 0.9254902, b: 0.972549, a: 1}
+      Accent: {r: 0.47843137, g: 0.7529412, b: 1, a: 1}
+      Interior: 1
+      LightProfile: Spitzenkristall
+      SoundProfile: SFX_Amb_Torch_0
+      Stages:
+      - Index: 1
+        Name: "Halbe H\xF6he"
+        Position: {x: -236.61069, y: 65.3, z: -507.90305}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -236.61069, y: 65.3, z: -507.90305}
+      - Index: 2
+        Name: Flanke
+        Position: {x: -241.14691, y: 113.3, z: -441.1469}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -241.14691, y: 113.3, z: -441.1469}
+      - Index: 3
+        Name: Spitze
+        Position: {x: -241.14691, y: 126.6, z: -441.1469}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -241.14691, y: 126.6, z: -441.1469}
+      - Index: 4
+        Name: "K\xF6nigskammer"
+        Position: {x: -228.19633, y: 8.2, z: -417.4555}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -228.19633, y: 8.2, z: -417.4555}
+      - Index: 5
+        Name: Spitzenkammer
+        Position: {x: -241.14691, y: 113.4, z: -441.1469}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -241.14691, y: 113.4, z: -441.1469}
+    - Id: weisse_stille_wz_1
+      Name: Gletscherpalast der Stille
+      Lore: "Im Palast spricht niemand. Wer spricht, h\xF6rt seine Stimme zehnmal zur\xFCck."
+      Kind: 7
+      Main: 0
+      Position: {x: 17.399994, y: 0, z: 137.4}
+      Height: 45
+      Footprint: 62.4
+      Yaw: -172.78262
+      BuildHeight: 45
+      Primary: {r: 0.6901961, g: 0.84705883, b: 0.9411765, a: 1}
+      Accent: {r: 1, g: 1, b: 1, a: 1}
+      Interior: 1
+      LightProfile: Eisblau
+      SoundProfile: SFX_Amb_Water_0
+      Stages:
+      - Index: 1
+        Name: Halle
+        Position: {x: 17.399994, y: 0.4, z: 137.4}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 17.399994, y: 0.4, z: 137.4}
+      - Index: 2
+        Name: "Eisbr\xFCcke"
+        Position: {x: -31.509384, y: 1, z: 143.59375}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -31.509384, y: 1, z: 143.59375}
+      - Index: 3
+        Name: Decke
+        Position: {x: 17.399994, y: 22.449999, z: 137.4}
+        Gate:
+          Keys: 16
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 17.399994, y: 22.449999, z: 137.4}
+    - Id: weisse_stille_wz_2
+      Name: Heiligtum der Urskai
+      Lore: "Die Urskai z\xFCnden hier ein Licht f\xFCr jeden, der im Schnee blieb."
+      Kind: 6
+      Main: 0
+      Position: {x: -23.799988, y: 5, z: 36.200012}
+      Height: 30
+      Footprint: 21.2
+      Yaw: 146.67676
+      BuildHeight: 30
+      Primary: {r: 0.8784314, g: 0.9098039, b: 0.9411765, a: 1}
+      Accent: {r: 1, g: 0.8156863, b: 0.4392157, a: 1}
+      Interior: 1
+      LightProfile: Laterne
+      SoundProfile: SFX_Amb_Water_0
+      Stages:
+      - Index: 1
+        Name: Treppe
+        Position: {x: -27.309443, y: 5.4, z: 33.892693}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -27.309443, y: 5.4, z: 33.892693}
+      - Index: 2
+        Name: "Au\xDFengalerie"
+        Position: {x: -31.403809, y: 19, z: 31.200819}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -31.403809, y: 19, z: 31.200819}
+      - Index: 3
+        Name: Laterne
+        Position: {x: -28.771717, y: 33, z: 32.93131}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -28.771717, y: 33, z: 32.93131}
+    Hazards:
+    - Id: weisse_stille_h1
+      Kind: 3
+      Center: {x: -452, y: -100, z: -472}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 28
+      Circular: 1
+    - Id: weisse_stille_h2
+      Kind: 6
+      Center: {x: -207.64355, y: 173.33333, z: 124.4362}
+      Size: {x: 40, y: 14}
+      Yaw: 160.31596
+      Keys: 24
+      Circular: 0
+    - Id: weisse_stille_h3
+      Kind: 5
+      Center: {x: -194.9584, y: 105.565186, z: 88.976845}
+      Size: {x: 30, y: 10}
+      Yaw: -19.683973
+      Keys: 26
+      Circular: 0
+    Climbs:
+    - Id: weisse_stille_aufstieg
+      Name: Gipfelpfad
+      Base: {x: -163.80145, y: 10, z: 1.8821869}
+      Peak: {x: -215, y: 200, z: 145}
+      LaunchTower: {x: -157.73846, y: 10, z: -15.065975}
+      DescentTarget: {x: 80.24894, y: -4.9940987, z: 36.12093}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: -193.30794, y: 77.79704, z: 84.36318}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -169.70276, y: 23.559408, z: 18.378386}
+        - {x: -175.60405, y: 37.118816, z: 34.874584}
+        - {x: -181.50536, y: 50.678226, z: 51.37078}
+        - {x: -187.40665, y: 64.23763, z: 67.86698}
+        - {x: -193.30795, y: 77.79704, z: 84.363174}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: -196.60889, y: 133.33333, z: 93.59051}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -194.1332, y: 91.681114, z: 86.670006}
+        - {x: -194.95844, y: 105.565186, z: 88.97684}
+        - {x: -195.78368, y: 119.44926, z: 91.28367}
+        - {x: -196.60892, y: 133.33333, z: 93.5905}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: -215, y: 200, z: 145}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -157.91206, y: 134.22221, z: 154.6557}
+        - {x: -260.61353, y: 149.33333, z: 150.76233}
+        - {x: -183.89069, y: 164.44444, z: 131.14925}
+        - {x: -231.75282, y: 179.55556, z: 159.46065}
+        - {x: -209.53027, y: 194.66667, z: 136.3811}
+        - {x: -215, y: 200, z: 145}
+      FootPath:
+      - {x: -165.82245, y: 10, z: 7.5315742}
+      - {x: -92.24178, y: 18.47463, z: 86.93055}
+      - {x: -96.739456, y: 26.94926, z: 187.30618}
+      - {x: -165.65378, y: 35.42389, z: 249.31738}
+      - {x: -250.43481, y: 43.89852, z: 244.05263}
+      - {x: -300.87656, y: 52.373154, z: 185.62297}
+      - {x: -294.84473, y: 60.847782, z: 116.43658}
+      - {x: -246.89972, y: 69.32241, z: 77.56427}
+      - {x: -193.30794, y: 77.79704, z: 84.36318}
+      - {x: -193.30794, y: 77.79704, z: 84.36318}
+      - {x: -157.33836, y: 81.26806, z: 117.72381}
+      - {x: -155.51659, y: 84.739075, z: 166.27945}
+      - {x: -188.24763, y: 88.2101, z: 201.55426}
+      - {x: -235.86682, y: 91.681114, z: 203.32999}
+      - {x: -270.44693, y: 95.15213, z: 171.22852}
+      - {x: -272.17657, y: 98.62315, z: 124.5458}
+      - {x: -240.70471, y: 102.09417, z: 90.660416}
+      - {x: -194.9584, y: 105.565186, z: 88.97685}
+      - {x: -161.76779, y: 109.0362, z: 119.8191}
+      - {x: -160.13026, y: 112.50722, z: 164.62898}
+      - {x: -190.34296, y: 115.97824, z: 197.12488}
+      - {x: -234.21634, y: 119.44926, z: 198.71632}
+      - {x: -266.01752, y: 122.92027, z: 169.13324}
+      - {x: -267.5629, y: 126.3913, z: 126.19625}
+      - {x: -238.60944, y: 129.8623, z: 95.08985}
+      - {x: -196.60889, y: 133.33333, z: 93.59051}
+      SpringerLedges:
+      - {x: -166.78395, y: 21.412123, z: 10.219307}
+      - {x: -169.76643, y: 32.624245, z: 18.556427}
+      - {x: -172.74893, y: 43.836365, z: 26.893547}
+      - {x: -175.73143, y: 55.048485, z: 35.230667}
+      - {x: -178.71393, y: 66.260605, z: 43.567787}
+      - {x: -181.69641, y: 77.472725, z: 51.904907}
+      - {x: -184.67891, y: 88.68484, z: 60.242027}
+      - {x: -187.6614, y: 99.896965, z: 68.57915}
+      - {x: -190.6439, y: 111.109085, z: 76.91627}
+      - {x: -193.62639, y: 122.321205, z: 85.25339}
+      - {x: -196.60889, y: 133.53333, z: 93.59051}
+      ClimbPath:
+      - {x: -157.91206, y: 134.22221, z: 154.6557}
+      - {x: -160.98412, y: 135.1111, z: 163.81032}
+      - {x: -165.49211, y: 136, z: 172.2172}
+      - {x: -171.27403, y: 136.88889, z: 179.65678}
+      - {x: -178.13531, y: 137.77777, z: 185.94238}
+      - {x: -185.85527, y: 138.66666, z: 190.92474}
+      - {x: -194.194, y: 139.55556, z: 194.49551}
+      - {x: -202.89983, y: 140.44444, z: 196.58937}
+      - {x: -211.71681, y: 141.33333, z: 197.18489}
+      - {x: -220.39229, y: 142.22221, z: 196.30414}
+      - {x: -228.68408, y: 143.1111, z: 194.01091}
+      - {x: -236.36734, y: 144, z: 190.4079}
+      - {x: -243.24046, y: 144.88889, z: 185.6327}
+      - {x: -249.13057, y: 145.77777, z: 179.85297}
+      - {x: -253.8976, y: 146.66666, z: 173.26074}
+      - {x: -257.43768, y: 147.55556, z: 166.06624}
+      - {x: -259.68518, y: 148.44444, z: 158.49124}
+      - {x: -260.61353, y: 149.33333, z: 150.76233}
+      - {x: -260.23502, y: 150.22221, z: 143.1041}
+      - {x: -258.59937, y: 151.11111, z: 135.73265}
+      - {x: -255.7912, y: 152, z: 128.84962}
+      - {x: -251.9267, y: 152.88889, z: 122.636406}
+      - {x: -247.14911, y: 153.77777, z: 117.249626}
+      - {x: -241.62395, y: 154.66666, z: 112.817154}
+      - {x: -235.53336, y: 155.55556, z: 109.43517}
+      - {x: -229.07024, y: 156.44444, z: 107.16625}
+      - {x: -222.43228, y: 157.33333, z: 106.038506}
+      - {x: -215.81596, y: 158.22221, z: 106.04583}
+      - {x: -209.41066, y: 159.11111, z: 107.14907}
+      - {x: -203.3933, y: 160, z: 109.278275}
+      - {x: -197.92351, y: 160.88889, z: 112.33568}
+      - {x: -193.13927, y: 161.77777, z: 116.19958}
+      - {x: -189.15366, y: 162.66666, z: 120.728676}
+      - {x: -186.05206, y: 163.55556, z: 125.767044}
+      - {x: -183.89069, y: 164.44444, z: 131.14925}
+      - {x: -182.69577, y: 165.33333, z: 136.70569}
+      - {x: -182.4638, y: 166.22221, z: 142.26787}
+      - {x: -183.16267, y: 167.11111, z: 147.67345}
+      - {x: -184.73367, y: 168, z: 152.77107}
+      - {x: -187.09421, y: 168.88889, z: 157.42448}
+      - {x: -190.14117, y: 169.77777, z: 161.51619}
+      - {x: -193.75491, y: 170.66667, z: 164.95047}
+      - {x: -197.80357, y: 171.55556, z: 167.65546}
+      - {x: -202.14754, y: 172.44444, z: 169.5845}
+      - {x: -206.6442, y: 173.33333, z: 170.7166}
+      - {x: -211.15237, y: 174.22221, z: 171.05614}
+      - {x: -215.53691, y: 175.11111, z: 170.63174}
+      - {x: -219.67256, y: 176, z: 169.49434}
+      - {x: -223.44754, y: 176.88889, z: 167.71474}
+      - {x: -226.76668, y: 177.77777, z: 165.38048}
+      - {x: -229.5537, y: 178.66667, z: 162.59236}
+      - {x: -231.75282, y: 179.55556, z: 159.46065}
+      - {x: -233.32991, y: 180.44444, z: 156.10098}
+      - {x: -234.27243, y: 181.33333, z: 152.63048}
+      - {x: -234.58905, y: 182.22223, z: 149.16377}
+      - {x: -234.3084, y: 183.11111, z: 145.80925}
+      - {x: -233.47716, y: 184, z: 142.66579}
+      - {x: -232.15773, y: 184.88889, z: 139.81976}
+      - {x: -230.42535, y: 185.77777, z: 137.34277}
+      - {x: -228.36497, y: 186.66667, z: 135.28978}
+      - {x: -226.06775, y: 187.55556, z: 133.69798}
+      - {x: -223.62767, y: 188.44444, z: 132.5864}
+      - {x: -221.13805, y: 189.33333, z: 131.95601}
+      - {x: -218.68814, y: 190.22223, z: 131.79053}
+      - {x: -216.36026, y: 191.11111, z: 132.05794}
+      - {x: -214.22691, y: 192, z: 132.71228}
+      - {x: -212.3487, y: 192.88889, z: 133.69609}
+      - {x: -210.77246, y: 193.77779, z: 134.94308}
+      - {x: -209.53027, y: 194.66667, z: 136.3811}
+      - {x: -208.6388, y: 195.55556, z: 137.93517}
+      - {x: -208.09932, y: 196.44444, z: 139.53058}
+      - {x: -207.8984, y: 197.33333, z: 141.09587}
+      - {x: -208.0091, y: 198.22223, z: 142.5655}
+      - {x: -208.39252, y: 199.11111, z: 143.88243}
+      - {x: -209, y: 200, z: 145}
+      LandmarkId: 
+    Secrets:
+    - Id: weisse_stille_h1_insel
+      Name: Insel im Eiswasser
+      Hint: "Etwas glitzert in der Mitte \u2013 Eiswasser sch\xFCtzt es."
+      Position: {x: -452, y: -98.4, z: -472}
+      Gate:
+        Keys: 28
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: weisse_stille_wz_haupt_5
+      Name: 'Eispyramide: Spitzenkammer'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Eispyramide."
+      Position: {x: -241.14691, y: 113.4, z: -441.1469}
+      Gate:
+        Keys: 24
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: weisse_stille_wz_1_2
+      Name: "Gletscherpalast der Stille: Eisbr\xFCcke"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Gletscherpalast der Stille."
+      Position: {x: -31.509384, y: 1, z: 143.59375}
+      Gate:
+        Keys: 0
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: weisse_stille_wz_2_2
+      Name: "Heiligtum der Urskai: Au\xDFengalerie"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Heiligtum der Urskai."
+      Position: {x: -31.403809, y: 19, z: 31.200819}
+      Gate:
+        Keys: 2
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: weisse_stille_aufstieg_gipfel
+      Name: 'Gipfelpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -215, y: 200.4, z: 145}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: weisse_stille_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: -428, y: -4.159963, z: 92}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: weisse_stille_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -38, y: 5, z: 202}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: weisse_stille_lore_szene1
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Brennar: \u201EWir sind zum Eispyramide gegangen. Folge dem Rauch.\u201C"
+      Figure: Brennar
+      Position: {x: -211, y: 5, z: 368}
+    - Id: weisse_stille_lore_szene2
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Brennar sp\xE4ter fand."
+      Figure: Brennar
+      Position: {x: 29, y: -1.1064756, z: 48}
+    - Id: weisse_stille_lore_szene3
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Eispyramide. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Brennar
+      Position: {x: -91, y: 5, z: -252}
+    - Id: weisse_stille_wz_haupt_lore
+      Title: Eispyramide
+      Text: "Die Pyramide ist nicht aus Eis gebaut \u2013 sie wurde vom Eis begraben. Ihre Spitze ist das Einzige, was der Gletscher freigab."
+      Figure: Brennar
+      Position: {x: -270.2181, y: 0, z: -502.66827}
+    - Id: weisse_stille_wz_1_lore
+      Title: Gletscherpalast der Stille
+      Text: "Im Palast spricht niemand. Wer spricht, h\xF6rt seine Stimme zehnmal zur\xFCck."
+      Figure: Brennar
+      Position: {x: 17.35147, y: 0, z: 168.85532}
+    - Id: weisse_stille_wz_2_lore
+      Title: Heiligtum der Urskai
+      Text: "Die Urskai z\xFCnden hier ein Licht f\xFCr jeden, der im Schnee blieb."
+      Figure: Brennar
+      Position: {x: -32.96556, y: 5, z: 42.859764}
+    - Id: weisse_stille_aufstieg_lore
+      Title: Gipfelpfad
+      Text: "Wer den Gipfelpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Brennar
+      Position: {x: -190.80794, y: 77.79704, z: 86.86318}
+    Loops:
+    - Id: weisse_stille_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: weisse_stille_h1_insel
+      TriggerPos: {x: -452, y: -98.4, z: -472}
+      TargetPos: {x: -452, y: -98.4, z: -472}
+      NextGoal: {x: -241.14691, y: 113.4, z: -441.1469}
+    - Id: weisse_stille_schleife2
+      TriggerKind: Lichtstrahl
+      Target: weisse_stille_wz_haupt_5
+      TriggerPos: {x: -241.14691, y: 113.4, z: -441.1469}
+      TargetPos: {x: -241.14691, y: 113.4, z: -441.1469}
+      NextGoal: {x: -31.509384, y: 1, z: 143.59375}
+    - Id: weisse_stille_schleife3
+      TriggerKind: Vogelschwarm
+      Target: weisse_stille_wz_1_2
+      TriggerPos: {x: -31.509384, y: 1, z: 143.59375}
+      TargetPos: {x: -31.509384, y: 1, z: 143.59375}
+      NextGoal: {x: -31.403809, y: 19, z: 31.200819}
+    - Id: weisse_stille_schleife4
+      TriggerKind: Glocke
+      Target: weisse_stille_wz_2_2
+      TriggerPos: {x: -31.403809, y: 19, z: 31.200819}
+      TargetPos: {x: -31.403809, y: 19, z: 31.200819}
+      NextGoal: {x: -215, y: 200.4, z: 145}
+    - Id: weisse_stille_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: weisse_stille_aufstieg_gipfel
+      TriggerPos: {x: -215, y: 200.4, z: 145}
+      TargetPos: {x: -215, y: 200.4, z: 145}
+      NextGoal: {x: -241.14691, y: 125, z: -441.1469}
+    Shortcuts:
+    - Id: weisse_stille_abk_hang
+      Name: Springer-Wand am Gipfelpfad
+      Key: 2
+      From: {x: -163.80145, y: 10, z: 1.8821869}
+      To: {x: -196.60889, y: 133.33333, z: 93.59051}
+      FootPath: 1383.2825
+      MountPath: 188.58661
+    Scenes:
+    - Id: weisse_stille_szene1
+      Kind: Lager
+      LoreId: weisse_stille_lore_szene1
+      Position: {x: -214, y: 5, z: 366}
+    - Id: weisse_stille_szene2
+      Kind: Schlachtfeld
+      LoreId: weisse_stille_lore_szene2
+      Position: {x: 26, y: -1.1064756, z: 46}
+    - Id: weisse_stille_szene3
+      Kind: Grab
+      LoreId: weisse_stille_lore_szene3
+      Position: {x: -94, y: 5, z: -254}
+    FootLinks: []
+    Pads:
+    - {x: -241.14691, y: -441.1469, z: 115.47511, w: 5}
+    - {x: 17.399994, y: 137.4, z: 53.04, w: 0}
+    - {x: -23.799988, y: 36.200012, z: 18.02, w: 5}
+    MainVisibility: 0.886
+    CompactZone: 0

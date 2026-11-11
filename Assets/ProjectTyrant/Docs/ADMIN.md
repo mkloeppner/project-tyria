@@ -36,3 +36,11 @@ Jeder per Admin abgeschlossene Schritt wird gekennzeichnet (`story:K03_S02`, Spr
 
 ## Ältere Befehle
 „Welt: …“ (Zonen, Level-Cap, Reittiere ohne Kennzeichnung, Beherrschungs-EP), „Story: …“ (Kapitel setzen, Szene abspielen, Flags), „Balance: …“ (Gefahren-Overlay, Messungen) bleiben unverändert.
+
+## Welt-Lauf W1 (Wahrzeichen)
+| Befehl | Parameter | Wirkung |
+|---|---|---|
+| Welt W1: /landmark tp | Name (Teil), `haupt` oder Nummer aus der Liste | Teleport vor das Wahrzeichen |
+| Welt W1: /landmark list | – | Wahrzeichen der Zone mit erreichten Stufen |
+| Welt W1: /hazard show | – | Lichtsäulen über den sechs nächsten Hürden, Liste mit Entfernung und Schlüssel |
+| Welt W1: /climb stage N | 1–3 (leer = 3) | Teleport auf die Stufe des nächsten Aufstiegs |

@@ -2,7 +2,7 @@
 
 **Start:** `Assets/ProjectTyrant/Scenes/PT_Core.unity` öffnen → Play. Die Core-Szene lädt die Zone aus dem Speicherstand (sonst die Startzone) additiv. Zonen-Szenen liegen unter `Scenes/Zones/`; ist eine schon geöffnet, wird sie übernommen.
 **Neu bauen:** Menü **Project Tyrant → Rebuild Everything** (≈ 85 s) – Icons, Daten, Gegner/Tiere, Reittiere, Beherrschungen, Zonen-Definitionen, 4 Zonen-Szenen (Gelände, Vegetation, Inhalte, Ereignisse, NavMesh, Karte), Core-Szene, Build-Einstellungen. Einzelne Zone: **Project Tyrant → Rebuild Zone → <Name>**; **Build Core Scene**.
-**Tests:** Test Runner → EditMode → `ProjectTyrant.Tests` (126 Tests, ~3 s).
+**Tests:** Test Runner → EditMode → `ProjectTyrant.Tests` (766 Tests, ≈ 30 s; Welt-Lauf W1: `WorldW1Tests`, `WorldW1ZoneTests`).
 **Build-Check:** Windows64 nach `Temp/PT_BuildCheck/ProjectTyrant.exe` (außerhalb von Assets, siehe PROGRESS).
 
 ## Steuerung
@@ -116,3 +116,7 @@ Weitere Doku: WORLD · DECISIONS · PROGRESS · KNOWN_ISSUES · GW2_ABGLEICH · 
 - **Hilfe:** Wachen patrouillieren die Wege der Startzone und lenken Verfolger ab; in Stufe 0–1 belebt dich ein Dorfbewohner oder eine Wache wieder („Hilfe ist unterwegs“).
 - **Debug-Panel (F9), Parameterfeld + Knopf:** „Balance: Stufe hier / Overlay“ (/danger show, Stufen auf der Minimap) · „Stufe setzen (Gebiet Stufe)“ · „Verfolgungsprofil (Stufe)“ · „Neutral (all/none/data)“ · „Telemetrie (start/stop)“ · „Heatmaps (deaths/escapes)“ · „Bot (beginner|experienced Stufe Minuten Seed)“ · „Event-Stufe (Id Stufe)“ · „Zielwerte auswerten“ · „TTD-Messung (Stufe Anzahl)“.
 - Details: MECHANICS.md (Verfolgung), BALANCE.md (Stufen, Kurve, Zielwerte), WORLD.md (Stufen je Gebiet).
+
+
+## Welt-Lauf W1
+Wahrzeichen, Gelände-Operationen, Hürden, Aufstiege, Geheimnisse und Lore je Zone – siehe `Docs/LANDMARKS.md`. Menü *Project Tyrant → Welt W1*, Galerie `Scenes/QA/PT_LandmarkGallery.unity`, Admin-Befehle unter „Welt W1:“ im Debug-Panel (F9).

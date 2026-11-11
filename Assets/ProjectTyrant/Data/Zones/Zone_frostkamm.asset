@@ -221,3 +221,501 @@ MonoBehaviour:
   - heart_frost_elva
   Region: 0
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 0
+      Center: {x: 287, y: -393}
+      Radius: 112
+      Height: 220
+      Param: 0
+      Yaw: 243
+    - Kind: 0
+      Center: {x: -205, y: 375}
+      Radius: 85
+      Height: 30
+      Param: 0
+      Yaw: 163
+    - Kind: 6
+      Center: {x: -182, y: -22}
+      Radius: 46
+      Height: 0
+      Param: 2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: -182, y: -22}
+      Radius: 6
+      Height: -98.4
+      Param: 2.5
+      Yaw: 0
+    - Kind: 7
+      Center: {x: -438, y: 82}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 275
+    Landmarks:
+    - Id: frostkamm_wz_haupt
+      Name: Eiszitadelle
+      Lore: "Die Zitadelle wurde gegen einen Feind gebaut, der nie kam. Ihre W\xE4chter erfroren auf den Zinnen, den Blick nach Norden."
+      Kind: 2
+      Main: 1
+      Position: {x: -51, y: 6.82256, z: -71}
+      Height: 120
+      Footprint: 64
+      Yaw: 35.69006
+      BuildHeight: 120
+      Primary: {r: 0.78431374, g: 0.84705883, b: 0.9098039, a: 1}
+      Accent: {r: 0.47843137, g: 0.72156864, b: 1, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_Torch_0
+      Stages:
+      - Index: 1
+        Name: Wehrgang
+        Position: {x: -93.03223, y: 18.82256, z: -45.525093}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -93.03223, y: 18.82256, z: -45.525093}
+      - Index: 2
+        Name: Zinnen
+        Position: {x: 1.5575027, y: 19.12256, z: -44.112106}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 1.5575027, y: 19.12256, z: -44.112106}
+      - Index: 3
+        Name: Bergfried-Dach
+        Position: {x: -43.439133, y: 127.82256, z: -60.474087}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: -43.439133, y: 127.82256, z: -60.474087}
+      - Index: 4
+        Name: Halle
+        Position: {x: -43.439133, y: 7.22256, z: -60.474087}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -43.439133, y: 7.22256, z: -60.474087}
+    - Id: frostkamm_wz_1
+      Name: Gletscherpalast
+      Lore: "Unter dem Gletscher liegt ein Palast aus Eis. Wer seine Br\xFCcken \xFCberquert, h\xF6rt das Eis knacken \u2013 und manchmal Stimmen."
+      Kind: 7
+      Main: 0
+      Position: {x: 87.399994, y: 22.481773, z: 87.399994}
+      Height: 45
+      Footprint: 62.4
+      Yaw: -135
+      BuildHeight: 45
+      Primary: {r: 0.65882355, g: 0.84705883, b: 0.9411765, a: 1}
+      Accent: {r: 0.9098039, g: 0.972549, b: 1, a: 1}
+      Interior: 1
+      LightProfile: Eisblau
+      SoundProfile: SFX_Amb_Water_0
+      Stages:
+      - Index: 1
+        Name: Halle
+        Position: {x: 87.399994, y: 22.881773, z: 87.399994}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 87.399994, y: 22.881773, z: 87.399994}
+      - Index: 2
+        Name: "Eisbr\xFCcke"
+        Position: {x: 52.539635, y: 23.481773, z: 122.26036}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 52.539635, y: 23.481773, z: 122.26036}
+      - Index: 3
+        Name: Decke
+        Position: {x: 87.399994, y: 44.93177, z: 87.399994}
+        Gate:
+          Keys: 16
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: 87.399994, y: 44.93177, z: 87.399994}
+    Hazards:
+    - Id: frostkamm_h1
+      Kind: 3
+      Center: {x: -182, y: -100, z: -22}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 28
+      Circular: 1
+    - Id: frostkamm_h2
+      Kind: 6
+      Center: {x: 272.4103, y: 191.56558, z: -395.38925}
+      Size: {x: 40, y: 14}
+      Yaw: -99.30038
+      Keys: 24
+      Circular: 0
+    - Id: frostkamm_h3
+      Kind: 5
+      Center: {x: 240.57828, y: 117.542786, z: -400.60217}
+      Size: {x: 30, y: 20.159983}
+      Yaw: 80.69964
+      Keys: 26
+      Circular: 0
+    Climbs:
+    - Id: frostkamm_aufstieg
+      Name: Gipfelpfad
+      Base: {x: 164.63002, y: 14, z: -413.03967}
+      Peak: {x: 287, y: 220, z: -393}
+      LaunchTower: {x: 146.86664, y: 14, z: -415.94867}
+      DescentTarget: {x: 380, y: 28, z: -260}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: 230.6308, y: 86.17162, z: -402.2312}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 177.83018, y: 28.434324, z: -410.878}
+        - {x: 191.03033, y: 42.86865, z: -408.71628}
+        - {x: 204.2305, y: 57.302975, z: -406.5546}
+        - {x: 217.43065, y: 71.7373, z: -404.39288}
+        - {x: 230.63081, y: 86.17162, z: -402.2312}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: 250.52577, y: 148.91394, z: -398.97314}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 234.6098, y: 98.720085, z: -401.5796}
+        - {x: 238.5888, y: 111.26855, z: -400.92798}
+        - {x: 242.5678, y: 123.81702, z: -400.27637}
+        - {x: 246.5468, y: 136.36548, z: -399.62476}
+        - {x: 250.52579, y: 148.91394, z: -398.97314}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: 287, y: 220, z: -393}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: 327.006, y: 149.81377, z: -386.5821}
+        - {x: 255.27563, y: 165.11076, z: -383.93353}
+        - {x: 306.21985, y: 180.40776, z: -409.715}
+        - {x: 279.72147, y: 195.70477, z: -376.5937}
+        - {x: 286.79272, y: 211.00177, z: -403.42328}
+        - {x: 287, y: 220, z: -393}
+      FootPath:
+      - {x: 170.55115, y: 14, z: -412.07}
+      - {x: 222.58347, y: 23.021454, z: -482.64633}
+      - {x: 303.61032, y: 32.042908, z: -494.42896}
+      - {x: 364.28638, y: 41.064358, z: -448.53513}
+      - {x: 373.40903, y: 50.08581, z: -378.8494}
+      - {x: 333.65372, y: 59.107265, z: -328.07358}
+      - {x: 275.3091, y: 68.128716, z: -321.6109}
+      - {x: 234.43355, y: 77.15017, z: -355.22772}
+      - {x: 230.6308, y: 86.17162, z: -402.2312}
+      - {x: 230.63081, y: 86.17162, z: -402.2312}
+      - {x: 254.40367, y: 90.09302, z: -438.36325}
+      - {x: 295.82394, y: 94.01441, z: -446.88232}
+      - {x: 330.3168, y: 97.93581, z: -424.12582}
+      - {x: 338.39545, y: 101.8572, z: -384.5833}
+      - {x: 316.6553, y: 105.778595, z: -351.72968}
+      - {x: 278.99057, y: 109.69999, z: -344.09143}
+      - {x: 247.77611, y: 113.62138, z: -364.81522}
+      - {x: 240.5783, y: 117.542786, z: -400.60217}
+      - {x: 260.2857, y: 121.46418, z: -430.17743}
+      - {x: 294.19492, y: 125.385574, z: -436.9348}
+      - {x: 322.13098, y: 129.30696, z: -418.24377}
+      - {x: 328.44797, y: 133.22836, z: -386.21234}
+      - {x: 310.77325, y: 137.14975, z: -359.9155}
+      - {x: 280.61957, y: 141.07115, z: -354.0389}
+      - {x: 255.96196, y: 144.99254, z: -370.69724}
+      - {x: 250.52577, y: 148.91394, z: -398.97314}
+      SpringerLedges:
+      - {x: 171.788, y: 25.44283, z: -411.86746}
+      - {x: 178.94598, y: 36.685658, z: -410.69525}
+      - {x: 186.10396, y: 47.928486, z: -409.52304}
+      - {x: 193.26193, y: 59.171314, z: -408.35083}
+      - {x: 200.41992, y: 70.41414, z: -407.17862}
+      - {x: 207.5779, y: 81.65697, z: -406.0064}
+      - {x: 214.73587, y: 92.899796, z: -404.8342}
+      - {x: 221.89386, y: 104.142624, z: -403.662}
+      - {x: 229.05183, y: 115.38545, z: -402.48978}
+      - {x: 236.20981, y: 145.2311, z: -401.31757}
+      - {x: 243.3678, y: 146.86667, z: -400.14536}
+      - {x: 250.52577, y: 149.11394, z: -398.97314}
+      ClimbPath:
+      - {x: 327.006, y: 149.81377, z: -386.5821}
+      - {x: 325.06406, y: 150.7136, z: -380.46466}
+      - {x: 322.20483, y: 151.6134, z: -374.7969}
+      - {x: 318.52112, y: 152.51323, z: -369.7133}
+      - {x: 314.12482, y: 153.41306, z: -365.3304}
+      - {x: 309.14374, y: 154.31288, z: -361.74432}
+      - {x: 303.71796, y: 155.2127, z: -359.02844}
+      - {x: 297.99582, y: 156.11253, z: -357.2322}
+      - {x: 292.13007, y: 157.01236, z: -356.3803}
+      - {x: 286.27362, y: 157.91217, z: -356.47247}
+      - {x: 280.57565, y: 158.812, z: -357.48416}
+      - {x: 275.1779, y: 159.71182, z: -359.3676}
+      - {x: 270.21085, y: 160.61165, z: -362.0538}
+      - {x: 265.791, y: 161.51147, z: -365.4545}
+      - {x: 262.0177, y: 162.4113, z: -369.46515}
+      - {x: 258.9713, y: 163.31111, z: -373.96802}
+      - {x: 256.7114, y: 164.21094, z: -378.83545}
+      - {x: 255.27563, y: 165.11076, z: -383.93353}
+      - {x: 254.67943, y: 166.01059, z: -389.12573}
+      - {x: 254.91597, y: 166.91042, z: -394.27655}
+      - {x: 255.95703, y: 167.81024, z: -399.2551}
+      - {x: 257.7542, y: 168.71005, z: -403.93823}
+      - {x: 260.24075, y: 169.60988, z: -408.2139}
+      - {x: 263.33362, y: 170.5097, z: -411.98352}
+      - {x: 266.93634, y: 171.40953, z: -415.16452}
+      - {x: 270.9417, y: 172.30936, z: -417.69177}
+      - {x: 275.23502, y: 173.20917, z: -419.5191}
+      - {x: 279.69727, y: 174.109, z: -420.62006}
+      - {x: 284.20834, y: 175.00882, z: -420.98773}
+      - {x: 288.6504, y: 175.90865, z: -420.63486}
+      - {x: 292.91086, y: 176.80847, z: -419.59256}
+      - {x: 296.8852, y: 177.7083, z: -417.90924}
+      - {x: 300.47964, y: 178.60812, z: -415.6487}
+      - {x: 303.61328, y: 179.50793, z: -412.888}
+      - {x: 306.21985, y: 180.40776, z: -409.715}
+      - {x: 308.2491, y: 181.30759, z: -406.22577}
+      - {x: 309.6678, y: 182.20741, z: -402.52158}
+      - {x: 310.4598, y: 183.10724, z: -398.70624}
+      - {x: 310.62637, y: 184.00706, z: -394.88306}
+      - {x: 310.18524, y: 184.90688, z: -391.15207}
+      - {x: 309.16983, y: 185.8067, z: -387.6075}
+      - {x: 307.62778, y: 186.70653, z: -384.3353}
+      - {x: 305.6192, y: 187.60635, z: -381.41113}
+      - {x: 303.21457, y: 188.50618, z: -378.8986}
+      - {x: 300.49252, y: 189.406, z: -376.8479}
+      - {x: 297.53738, y: 190.30582, z: -375.2949}
+      - {x: 294.43668, y: 191.20564, z: -374.26065}
+      - {x: 291.2785, y: 192.10547, z: -373.75125}
+      - {x: 288.14914, y: 193.0053, z: -373.7583}
+      - {x: 285.1307, y: 193.90512, z: -374.25955}
+      - {x: 282.29898, y: 194.80495, z: -375.22006}
+      - {x: 279.72147, y: 195.70477, z: -376.5937}
+      - {x: 277.4559, y: 196.60458, z: -378.3247}
+      - {x: 275.54883, y: 197.50441, z: -380.3498}
+      - {x: 274.03485, y: 198.40424, z: -382.60025}
+      - {x: 272.9359, y: 199.30406, z: -385.0039}
+      - {x: 272.2614, y: 200.20389, z: -387.4876}
+      - {x: 272.00812, y: 201.10371, z: -389.9792}
+      - {x: 272.1611, y: 202.00352, z: -392.4096}
+      - {x: 272.6943, y: 202.90335, z: -394.7148}
+      - {x: 273.57202, y: 203.80318, z: -396.8376}
+      - {x: 274.75027, y: 204.703, z: -398.72864}
+      - {x: 276.17844, y: 205.60283, z: -400.34805}
+      - {x: 277.8011, y: 206.50266, z: -401.66595}
+      - {x: 279.55984, y: 207.40247, z: -402.663}
+      - {x: 281.39542, y: 208.30229, z: -403.33054}
+      - {x: 283.24927, y: 209.20212, z: -403.67038}
+      - {x: 285.06555, y: 210.10194, z: -403.6943}
+      - {x: 286.79272, y: 211.00177, z: -403.42328}
+      - {x: 288.38498, y: 211.9016, z: -402.88626}
+      - {x: 289.8034, y: 212.8014, z: -402.11908}
+      - {x: 291.01706, y: 213.70123, z: -401.16284}
+      - {x: 292.0035, y: 214.60106, z: -400.06238}
+      - {x: 292.7492, y: 215.50089, z: -398.8647}
+      - {x: 293.24963, y: 216.40071, z: -397.617}
+      - {x: 293.50897, y: 217.30054, z: -396.36554}
+      - {x: 293.53958, y: 218.20035, z: -395.15363}
+      - {x: 293.3612, y: 219.10017, z: -394.02048}
+      - {x: 293, y: 220, z: -393}
+      LandmarkId: 
+    Secrets:
+    - Id: frostkamm_h1_insel
+      Name: Insel im Eiswasser
+      Hint: "Etwas glitzert in der Mitte \u2013 Eiswasser sch\xFCtzt es."
+      Position: {x: -182, y: -98.4, z: -22}
+      Gate:
+        Keys: 28
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: frostkamm_wz_haupt_3
+      Name: 'Eiszitadelle: Bergfried-Dach'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Eiszitadelle."
+      Position: {x: -43.439133, y: 127.82256, z: -60.474087}
+      Gate:
+        Keys: 8
+        FootAlternative: 0
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: frostkamm_wz_1_2
+      Name: "Gletscherpalast: Eisbr\xFCcke"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Gletscherpalast."
+      Position: {x: 52.539635, y: 23.481773, z: 122.26036}
+      Gate:
+        Keys: 0
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: frostkamm_aufstieg_gipfel
+      Name: 'Gipfelpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: 287, y: 220.4, z: -393}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: frostkamm_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: -438, y: 7, z: 82}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: frostkamm_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -28, y: 18.57625, z: 172}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: frostkamm_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -108, y: 7, z: -288}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: frostkamm_lore_szene1
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Brennar: \u201EWir sind zum Eiszitadelle gegangen. Folge dem Rauch.\u201C"
+      Figure: Brennar
+      Position: {x: 99, y: 14.351543, z: -2}
+    - Id: frostkamm_lore_szene2
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Brennar sp\xE4ter fand."
+      Figure: Brennar
+      Position: {x: -1, y: 21, z: 58}
+    - Id: frostkamm_lore_szene3
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Eiszitadelle. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Brennar
+      Position: {x: -81, y: 14, z: 138}
+    - Id: frostkamm_wz_haupt_lore
+      Title: Eiszitadelle
+      Text: "Die Zitadelle wurde gegen einen Feind gebaut, der nie kam. Ihre W\xE4chter erfroren auf den Zinnen, den Blick nach Norden."
+      Figure: Brennar
+      Position: {x: -66.420074, y: 7, z: -99.32352}
+    - Id: frostkamm_wz_1_lore
+      Title: Gletscherpalast
+      Text: "Unter dem Gletscher liegt ein Palast aus Eis. Wer seine Br\xFCcken \xFCberquert, h\xF6rt das Eis knacken \u2013 und manchmal Stimmen."
+      Figure: Brennar
+      Position: {x: 106.6333, y: 21, z: 112.29015}
+    - Id: frostkamm_aufstieg_lore
+      Title: Gipfelpfad
+      Text: "Wer den Gipfelpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Brennar
+      Position: {x: 233.1308, y: 86.17162, z: -399.7312}
+    Loops:
+    - Id: frostkamm_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: frostkamm_h1_insel
+      TriggerPos: {x: -182, y: -98.4, z: -22}
+      TargetPos: {x: -182, y: -98.4, z: -22}
+      NextGoal: {x: -43.439133, y: 127.82256, z: -60.474087}
+    - Id: frostkamm_schleife2
+      TriggerKind: Lichtstrahl
+      Target: frostkamm_wz_haupt_3
+      TriggerPos: {x: -43.439133, y: 127.82256, z: -60.474087}
+      TargetPos: {x: -43.439133, y: 127.82256, z: -60.474087}
+      NextGoal: {x: 52.539635, y: 23.481773, z: 122.26036}
+    - Id: frostkamm_schleife3
+      TriggerKind: Vogelschwarm
+      Target: frostkamm_wz_1_2
+      TriggerPos: {x: 52.539635, y: 23.481773, z: 122.26036}
+      TargetPos: {x: 52.539635, y: 23.481773, z: 122.26036}
+      NextGoal: {x: 287, y: 220.4, z: -393}
+    - Id: frostkamm_schleife4
+      TriggerKind: Glocke
+      Target: frostkamm_aufstieg_gipfel
+      TriggerPos: {x: 287, y: 220.4, z: -393}
+      TargetPos: {x: 287, y: 220.4, z: -393}
+      NextGoal: {x: -438, y: 7, z: 82}
+    - Id: frostkamm_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: frostkamm_hoehle
+      TriggerPos: {x: -438, y: 7, z: 82}
+      TargetPos: {x: -438, y: 7, z: 82}
+      NextGoal: {x: -51, y: 126.82256, z: -71}
+    Shortcuts:
+    - Id: frostkamm_abk_hang
+      Name: Springer-Wand am Gipfelpfad
+      Key: 2
+      From: {x: 164.63002, y: 14, z: -413.03967}
+      To: {x: 250.52577, y: 148.91394, z: -398.97314}
+      FootPath: 1124.0037
+      MountPath: 192.6653
+    Scenes:
+    - Id: frostkamm_szene1
+      Kind: Lager
+      LoreId: frostkamm_lore_szene1
+      Position: {x: 96, y: 14.351543, z: -4}
+    - Id: frostkamm_szene2
+      Kind: Schlachtfeld
+      LoreId: frostkamm_lore_szene2
+      Position: {x: -4, y: 21, z: 56}
+    - Id: frostkamm_szene3
+      Kind: Grab
+      LoreId: frostkamm_lore_szene3
+      Position: {x: -84, y: 14, z: 136}
+    FootLinks:
+    - Id: poi_frost_horst
+      Name: Adlerhorst
+      Kind: Felsrampe
+      Points:
+      - {x: 218.60243, y: 7, z: 92.249405}
+      - {x: 220.50203, y: 7, z: 96.874504}
+      - {x: 239.46748, y: 10.206682, z: 97.33541}
+      - {x: 252.3161, y: 13.413365, z: 110.83446}
+      - {x: 251.8572, y: 16.620049, z: 129.13022}
+      - {x: 238.83311, y: 19.82673, z: 141.50671}
+      - {x: 221.20705, y: 23.033413, z: 141.0498}
+      - {x: 209.30269, y: 26.240097, z: 128.50069}
+      - {x: 209.7576, y: 29.44678, z: 111.544304}
+      - {x: 221.83174, y: 32.65346, z: 100.112076}
+      - {x: 230, y: 32.65346, z: 120}
+    Pads:
+    - {x: -51, y: -71, z: 54.4, w: 6.82256}
+    - {x: 87.399994, y: 87.399994, z: 53.04, w: 22.481773}
+    MainVisibility: 0.926
+    CompactZone: 0

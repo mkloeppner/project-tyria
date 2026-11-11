@@ -186,3 +186,460 @@ MonoBehaviour:
   - heart_klingenschlucht_3
   Region: 1
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 0
+      Center: {x: 227, y: -193}
+      Radius: 112
+      Height: 170
+      Param: 0
+      Yaw: 81
+    - Kind: 7
+      Center: {x: 62, y: 122}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 293
+    Landmarks:
+    - Id: klingenschlucht_wz_haupt
+      Name: "Felsbr\xFCcken-Kathedrale"
+      Lore: "Der Wind formte die B\xF6gen, die Priester nur die Fenster. Es ist die einzige Kathedrale, die nie ein Dach hatte."
+      Kind: 0
+      Main: 1
+      Position: {x: 400.20178, y: 8.647453, z: 310.6897}
+      Height: 100
+      Footprint: 44.4
+      Yaw: -127.82336
+      BuildHeight: 100
+      Primary: {r: 0.6901961, g: 0.4392157, b: 0.3137255, a: 1}
+      Accent: {r: 1, g: 0.8156863, b: 0.5019608, a: 1}
+      Interior: 1
+      LightProfile: "Lichtsch\xE4chte"
+      SoundProfile: SFX_Amb_Bell_0
+      Stages:
+      - Index: 1
+        Name: Galerie
+        Position: {x: 402.213, y: 17.647453, z: 304.02225}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 402.213, y: 17.647453, z: 304.02225}
+      - Index: 2
+        Name: Turmgalerie
+        Position: {x: 426.42966, y: 82.24745, z: 320.52737}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 426.42966, y: 82.24745, z: 320.52737}
+      - Index: 3
+        Name: Turmspitze
+        Position: {x: 424.72644, y: 89.24745, z: 313.01813}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 424.72644, y: 89.24745, z: 313.01813}
+      - Index: 4
+        Name: Krypta
+        Position: {x: 373.345, y: 9.047453, z: 289.8399}
+        Gate:
+          Keys: 1
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 373.345, y: 9.047453, z: 289.8399}
+    - Id: klingenschlucht_wz_1
+      Name: Hochplateau-Festung
+      Lore: Die Festung bewacht die Schlucht von oben. Ihre Mauern sind aus der Klippe selbst gehauen.
+      Kind: 2
+      Main: 0
+      Position: {x: 105, y: 2.8415697, z: -35}
+      Height: 40
+      Footprint: 40
+      Yaw: -71.56505
+      BuildHeight: 40
+      Primary: {r: 0.5647059, g: 0.3764706, b: 0.3137255, a: 1}
+      Accent: {r: 0.8784314, g: 0.2901961, b: 0.16470589, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_Torch_0
+      Stages:
+      - Index: 1
+        Name: Wehrgang
+        Position: {x: 87.06794, y: 14.84157, z: -55.374958}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 87.06794, y: 14.84157, z: -55.374958}
+      - Index: 2
+        Name: Zinnen
+        Position: {x: 82.70595, y: 15.14157, z: -11.757257}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 82.70595, y: 15.14157, z: -11.757257}
+      - Index: 3
+        Name: Bergfried-Dach
+        Position: {x: 98.16948, y: 43.841568, z: -32.72316}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 98.16948, y: 43.841568, z: -32.72316}
+      - Index: 4
+        Name: Halle
+        Position: {x: 98.16948, y: 3.2415698, z: -32.72316}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 98.16948, y: 3.2415698, z: -32.72316}
+    Hazards:
+    - Id: klingenschlucht_h1
+      Kind: 4
+      Center: {x: 251.74918, y: 141.44102, z: -190.60014}
+      Size: {x: 40, y: 40}
+      Yaw: 0
+      Keys: 25
+      Circular: 1
+    - Id: klingenschlucht_h2
+      Kind: 6
+      Center: {x: 215.54543, y: 146.79582, z: -204.35367}
+      Size: {x: 40, y: 14}
+      Yaw: -134.74652
+      Keys: 24
+      Circular: 0
+    - Id: klingenschlucht_h3
+      Kind: 7
+      Center: {x: 430, y: 3.8205636, z: 390}
+      Size: {x: 6, y: 6}
+      Yaw: 0
+      Keys: 32
+      Circular: 1
+    Climbs:
+    - Id: klingenschlucht_aufstieg
+      Name: Gipfelpfad
+      Base: {x: 138.93164, y: 0.8, z: -280.29242}
+      Peak: {x: 227, y: 170, z: -193}
+      LaunchTower: {x: 126.14752, y: 0.8, z: -292.9639}
+      DescentTarget: {x: 459.12738, y: 3.1780484, z: -54.753113}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: 192.79535, y: 61.221817, z: -226.9033}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 149.70438, y: 12.884363, z: -269.6146}
+        - {x: 160.47713, y: 24.968727, z: -258.93677}
+        - {x: 171.24986, y: 37.053093, z: -248.25894}
+        - {x: 182.02261, y: 49.137455, z: -237.58112}
+        - {x: 192.79535, y: 61.221817, z: -226.90329}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: 198.36356, y: 111.98956, z: -221.38417}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 194.1874, y: 73.91376, z: -225.5235}
+        - {x: 195.57944, y: 86.60569, z: -224.14372}
+        - {x: 196.97148, y: 99.29762, z: -222.76395}
+        - {x: 198.36353, y: 111.98956, z: -221.38416}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: 227, y: 170, z: -193}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 269.91583, y: 112.882034, z: -184.59819}
+        - {x: 195.20251, y: 128.05399, z: -204.18808}
+        - {x: 247.97307, y: 143.22595, z: -181.99248}
+        - {x: 215.94559, y: 158.39792, z: -201.03151}
+        - {x: 227, y: 170, z: -193}
+      FootPath:
+      - {x: 143.19301, y: 0.8, z: -276.06857}
+      - {x: 226.5165, y: 8.352727, z: -302.26892}
+      - {x: 297.77725, y: 15.905455, z: -264.4064}
+      - {x: 318.8091, y: 23.458181, z: -193.40625}
+      - {x: 286.00583, y: 31.010908, z: -134.51407}
+      - {x: 227.32898, y: 38.563637, z: -118.65069}
+      - {x: 180.80537, y: 46.116364, z: -146.39476}
+      - {x: 170.1105, y: 53.66909, z: -192.74829}
+      - {x: 192.79535, y: 61.221817, z: -226.9033}
+      - {x: 192.79535, y: 61.221817, z: -226.9033}
+      - {x: 226.78908, y: 64.3948, z: -240.6696}
+      - {x: 260.2134, y: 67.56779, z: -226.50862}
+      - {x: 273.6896, y: 70.74077, z: -193.20659}
+      - {x: 259.8126, y: 73.91376, z: -160.47649}
+      - {x: 227.20224, y: 77.08674, z: -147.29039}
+      - {x: 195.16638, y: 80.25972, z: -160.88342}
+      - {x: 182.27037, y: 83.43271, z: -192.8021}
+      - {x: 195.57947, y: 86.60569, z: -224.14374}
+      - {x: 226.80643, y: 89.77867, z: -236.74965}
+      - {x: 257.45386, y: 92.95166, z: -223.72452}
+      - {x: 269.76965, y: 96.12464, z: -193.18921}
+      - {x: 257.0285, y: 99.29762, z: -163.23605}
+      - {x: 227.18489, y: 102.47061, z: -151.21034}
+      - {x: 197.92592, y: 105.64359, z: -163.66754}
+      - {x: 186.19034, y: 108.81658, z: -192.81943}
+      - {x: 198.36356, y: 111.98956, z: -221.38417}
+      SpringerLedges:
+      - {x: 144.87483, y: 12.118957, z: -274.40158}
+      - {x: 150.81802, y: 23.237913, z: -268.51077}
+      - {x: 156.76122, y: 34.356873, z: -262.61993}
+      - {x: 162.7044, y: 45.475826, z: -256.72913}
+      - {x: 168.6476, y: 56.594784, z: -250.83829}
+      - {x: 174.59079, y: 67.71374, z: -244.94746}
+      - {x: 180.53398, y: 78.83269, z: -239.05664}
+      - {x: 186.47717, y: 89.951645, z: -233.16582}
+      - {x: 192.42036, y: 101.0706, z: -227.275}
+      - {x: 198.36356, y: 112.18973, z: -221.38417}
+      ClimbPath:
+      - {x: 269.91583, y: 112.882034, z: -184.59819}
+      - {x: 266.9561, y: 113.7745, z: -176.73175}
+      - {x: 262.59302, y: 114.66697, z: -169.68127}
+      - {x: 257.0279, y: 115.55943, z: -163.68913}
+      - {x: 250.50218, y: 116.451904, z: -158.9512}
+      - {x: 243.28722, y: 117.344376, z: -155.61061}
+      - {x: 235.67308, y: 118.23684, z: -153.75362}
+      - {x: 227.95697, y: 119.12931, z: -153.4078}
+      - {x: 220.43167, y: 120.021774, z: -154.54268}
+      - {x: 213.37442, y: 120.914246, z: -157.07231}
+      - {x: 207.03665, y: 121.80672, z: -160.86028}
+      - {x: 201.63515, y: 122.69918, z: -165.72623}
+      - {x: 197.34462, y: 123.59165, z: -171.45412}
+      - {x: 194.2922, y: 124.484116, z: -177.80153}
+      - {x: 192.55392, y: 125.37659, z: -184.50981}
+      - {x: 192.1533, y: 126.26906, z: -191.31447}
+      - {x: 193.06201, y: 127.16152, z: -197.95569}
+      - {x: 195.20251, y: 128.05399, z: -204.18808}
+      - {x: 198.45259, y: 128.94646, z: -209.78992}
+      - {x: 202.65149, y: 129.83893, z: -214.5709}
+      - {x: 207.60739, y: 130.7314, z: -218.3786}
+      - {x: 213.10587, y: 131.62387, z: -221.10316}
+      - {x: 218.91896, y: 132.51633, z: -222.6802}
+      - {x: 224.81458, y: 133.4088, z: -223.09186}
+      - {x: 230.56567, y: 134.30127, z: -222.36589}
+      - {x: 235.95903, y: 135.19374, z: -220.57307}
+      - {x: 240.80315, y: 136.08621, z: -217.82288}
+      - {x: 244.93498, y: 136.97867, z: -214.25787}
+      - {x: 248.22542, y: 137.87114, z: -210.04689}
+      - {x: 250.58313, y: 138.76361, z: -205.37738}
+      - {x: 251.95688, y: 139.65608, z: -200.44727}
+      - {x: 252.33597, y: 140.54855, z: -195.45674}
+      - {x: 251.74918, y: 141.44102, z: -190.60014}
+      - {x: 250.2621, y: 142.33348, z: -186.05844}
+      - {x: 247.97307, y: 143.22595, z: -181.99248}
+      - {x: 245.00786, y: 144.11842, z: -178.53722}
+      - {x: 241.51352, y: 145.0109, z: -175.79745}
+      - {x: 237.65157, y: 145.90335, z: -173.84474}
+      - {x: 233.59071, y: 146.79582, z: -172.71584}
+      - {x: 229.49974, y: 147.6883, z: -172.41272}
+      - {x: 225.54051, y: 148.58076, z: -172.90398}
+      - {x: 221.86159, y: 149.47324, z: -174.12761}
+      - {x: 218.59271, y: 150.36569, z: -175.9949}
+      - {x: 215.84015, y: 151.25816, z: -178.3954}
+      - {x: 213.6834, y: 152.15063, z: -181.20253}
+      - {x: 212.17303, y: 153.0431, z: -184.27966}
+      - {x: 211.32997, y: 153.93558, z: -187.48645}
+      - {x: 211.14595, y: 154.82803, z: -190.68498}
+      - {x: 211.58539, y: 155.7205, z: -193.7456}
+      - {x: 212.58823, y: 156.61298, z: -196.55219}
+      - {x: 214.07382, y: 157.50545, z: -199.00647}
+      - {x: 215.94559, y: 158.39792, z: -201.03151}
+      - {x: 218.09608, y: 159.29037, z: -202.57404}
+      - {x: 220.41245, y: 160.18285, z: -203.60556}
+      - {x: 222.78185, y: 161.07532, z: -204.12239}
+      - {x: 225.09659, y: 161.96779, z: -204.14449}
+      - {x: 227.25896, y: 162.86026, z: -203.71318}
+      - {x: 229.18521, y: 163.75272, z: -202.8882}
+      - {x: 230.80884, y: 164.64519, z: -201.74367}
+      - {x: 232.08287, y: 165.53766, z: -200.36382}
+      - {x: 232.9811, y: 166.43013, z: -198.83827}
+      - {x: 233.49821, y: 167.3226, z: -197.2573}
+      - {x: 233.64908, y: 168.21506, z: -195.7072}
+      - {x: 233.46678, y: 169.10753, z: -194.26602}
+      - {x: 233, y: 170, z: -193}
+      LandmarkId: 
+    Secrets:
+    - Id: klingenschlucht_wz_haupt_4
+      Name: "Felsbr\xFCcken-Kathedrale: Krypta"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste in der Krypta."
+      Position: {x: 373.345, y: 9.047453, z: 289.8399}
+      Gate:
+        Keys: 1
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: klingenschlucht_wz_1_3
+      Name: 'Hochplateau-Festung: Bergfried-Dach'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Hochplateau-Festung."
+      Position: {x: 98.16948, y: 43.841568, z: -32.72316}
+      Gate:
+        Keys: 8
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: klingenschlucht_aufstieg_gipfel
+      Name: 'Gipfelpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: 227, y: 170.4, z: -193}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: klingenschlucht_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 62, y: 5.029023, z: 122}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: klingenschlucht_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -48, y: 6.051372, z: 212}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: klingenschlucht_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -108, y: 2.751655, z: 272}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: klingenschlucht_versteck4
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -188, y: 2.6241546, z: -208}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: klingenschlucht_lore_szene1
+      Title: Gestrandete Karawane
+      Text: "Die Karawane blieb im Sand stecken. Die Kisten sind leer \u2013 bis auf eine, und die zeigt mit ihren Spuren zum Felsbr\xFCcken-Kathedrale."
+      Figure: Ilyas
+      Position: {x: -221, y: 4.954872, z: -2}
+    - Id: klingenschlucht_lore_szene2
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Felsbr\xFCcken-Kathedrale. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Ilyas
+      Position: {x: -1, y: 4.2683606, z: 78}
+    - Id: klingenschlucht_lore_szene3
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Ilyas sp\xE4ter fand."
+      Figure: Ilyas
+      Position: {x: -81, y: 4.372208, z: 118}
+    - Id: klingenschlucht_wz_haupt_lore
+      Title: "Felsbr\xFCcken-Kathedrale"
+      Text: "Der Wind formte die B\xF6gen, die Priester nur die Fenster. Es ist die einzige Kathedrale, die nie ein Dach hatte."
+      Figure: Ilyas
+      Position: {x: 415.28476, y: 7.505894, z: 327.463}
+    - Id: klingenschlucht_wz_1_lore
+      Title: Hochplateau-Festung
+      Text: Die Festung bewacht die Schlucht von oben. Ihre Mauern sind aus der Klippe selbst gehauen.
+      Figure: Ilyas
+      Position: {x: 125.23858, y: 4.2871675, z: -37.529823}
+    - Id: klingenschlucht_aufstieg_lore
+      Title: Gipfelpfad
+      Text: "Wer den Gipfelpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Ilyas
+      Position: {x: 195.29535, y: 61.221817, z: -224.4033}
+    Loops:
+    - Id: klingenschlucht_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: klingenschlucht_wz_haupt_4
+      TriggerPos: {x: 373.345, y: 9.047453, z: 289.8399}
+      TargetPos: {x: 373.345, y: 9.047453, z: 289.8399}
+      NextGoal: {x: 98.16948, y: 43.841568, z: -32.72316}
+    - Id: klingenschlucht_schleife2
+      TriggerKind: Lichtstrahl
+      Target: klingenschlucht_wz_1_3
+      TriggerPos: {x: 98.16948, y: 43.841568, z: -32.72316}
+      TargetPos: {x: 98.16948, y: 43.841568, z: -32.72316}
+      NextGoal: {x: 227, y: 170.4, z: -193}
+    - Id: klingenschlucht_schleife3
+      TriggerKind: Vogelschwarm
+      Target: klingenschlucht_aufstieg_gipfel
+      TriggerPos: {x: 227, y: 170.4, z: -193}
+      TargetPos: {x: 227, y: 170.4, z: -193}
+      NextGoal: {x: 62, y: 5.029023, z: 122}
+    - Id: klingenschlucht_schleife4
+      TriggerKind: Glocke
+      Target: klingenschlucht_hoehle
+      TriggerPos: {x: 62, y: 5.029023, z: 122}
+      TargetPos: {x: 62, y: 5.029023, z: 122}
+      NextGoal: {x: -48, y: 6.051372, z: 212}
+    - Id: klingenschlucht_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: klingenschlucht_versteck2
+      TriggerPos: {x: -48, y: 6.051372, z: 212}
+      TargetPos: {x: -48, y: 6.051372, z: 212}
+      NextGoal: {x: 400.20178, y: 108.64745, z: 310.6897}
+    Shortcuts:
+    - Id: klingenschlucht_abk_hang
+      Name: Springer-Wand am Gipfelpfad
+      Key: 2
+      From: {x: 138.93164, y: 0.8, z: -280.29242}
+      To: {x: 198.36356, y: 111.98956, z: -221.38417}
+      FootPath: 1060.9746
+      MountPath: 166.99178
+    Scenes:
+    - Id: klingenschlucht_szene1
+      Kind: Karawane
+      LoreId: klingenschlucht_lore_szene1
+      Position: {x: -224, y: 4.954872, z: -4}
+    - Id: klingenschlucht_szene2
+      Kind: Grab
+      LoreId: klingenschlucht_lore_szene2
+      Position: {x: -4, y: 4.2683606, z: 76}
+    - Id: klingenschlucht_szene3
+      Kind: Schlachtfeld
+      LoreId: klingenschlucht_lore_szene3
+      Position: {x: -84, y: 4.372208, z: 116}
+    FootLinks: []
+    Pads:
+    - {x: 400.20178, y: 310.6897, z: 37.74, w: 8.647453}
+    - {x: 105, y: -35, z: 34, w: 2.8415697}
+    MainVisibility: 0.956
+    CompactZone: 0

@@ -186,3 +186,457 @@ MonoBehaviour:
   - heart_schilfmuendung_3
   Region: 0
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 1
+      Center: {x: -411, y: -71}
+      Radius: 94
+      Height: 150
+      Param: 0
+      Yaw: 35
+    - Kind: 6
+      Center: {x: -82, y: -122}
+      Radius: 46
+      Height: 0
+      Param: 2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: -82, y: -122}
+      Radius: 6
+      Height: 2.7
+      Param: 2.5
+      Yaw: 0
+    - Kind: 6
+      Center: {x: 98, y: -22}
+      Radius: 46
+      Height: 0
+      Param: 2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: 98, y: -22}
+      Radius: 6
+      Height: 2.7
+      Param: 2.5
+      Yaw: 0
+    - Kind: 7
+      Center: {x: 42, y: 82}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 160
+    Landmarks:
+    - Id: schilfmuendung_wz_haupt
+      Name: "Delta-Tempel auf Pf\xE4hlen"
+      Lore: "Der Tempel steht auf tausend Pf\xE4hlen. Jedes Jahr sinkt er eine Handbreit \u2013 und jedes Jahr setzen die M\xF6nche einen Pfahl nach."
+      Kind: 3
+      Main: 1
+      Position: {x: -9.320007, y: 2.7090511, z: -49.320007}
+      Height: 70
+      Footprint: 25.68
+      Yaw: 10.701004
+      BuildHeight: 70
+      Primary: {r: 0.5411765, g: 0.41568628, b: 0.2901961, a: 1}
+      Accent: {r: 0.8784314, g: 0.7529412, b: 0.3764706, a: 1}
+      Interior: 1
+      LightProfile: Laternen
+      SoundProfile: SFX_Amb_Bell_2
+      Stages:
+      - Index: 1
+        Name: Ebene 3
+        Position: {x: -9.320007, y: 18.664606, z: -49.320007}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -9.320007, y: 18.664606, z: -49.320007}
+      - Index: 2
+        Name: Balkon
+        Position: {x: 0.58469677, y: 33.82016, z: -51.1917}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 0.58469677, y: 33.82016, z: -51.1917}
+      - Index: 3
+        Name: Spitze
+        Position: {x: -8.69611, y: 73.109055, z: -46.01844}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: -8.69611, y: 73.109055, z: -46.01844}
+    - Id: schilfmuendung_wz_1
+      Name: Mangroven-Kathedrale
+      Lore: "Die Mangroven wuchsen zu B\xF6gen, die B\xF6gen zu einem Dach. Gebetet wird hier bei Ebbe."
+      Kind: 4
+      Main: 0
+      Position: {x: 55, y: 2.3000002, z: 155}
+      Height: 45
+      Footprint: 30
+      Yaw: -160.46335
+      BuildHeight: 45
+      Primary: {r: 0.22745098, g: 0.3529412, b: 0.22745098, a: 1}
+      Accent: {r: 0.7529412, g: 0.8784314, b: 0.5019608, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_BirdCall_0
+      Stages:
+      - Index: 1
+        Name: Wurzelhalle
+        Position: {x: 55, y: 2.7000003, z: 155}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 55, y: 2.7000003, z: 155}
+      - Index: 2
+        Name: "\xC4ste"
+        Position: {x: 51.266907, y: 25.05, z: 149.67891}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 51.266907, y: 25.05, z: 149.67891}
+      - Index: 3
+        Name: Kronendorf
+        Position: {x: 44.44481, y: 35.3, z: 158.74539}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 44.44481, y: 35.3, z: 158.74539}
+      - Index: 4
+        Name: Krone
+        Position: {x: 55, y: 56.6, z: 155}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: 55, y: 56.6, z: 155}
+    Hazards:
+    - Id: schilfmuendung_h1
+      Kind: 1
+      Center: {x: -82, y: 1.1, z: -122}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 28
+      Circular: 1
+    - Id: schilfmuendung_h2
+      Kind: 1
+      Center: {x: 98, y: 1.1, z: -22}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 28
+      Circular: 1
+    Climbs:
+    - Id: schilfmuendung_aufstieg
+      Name: Hochpfad
+      Base: {x: -330.00635, y: 2.3954468, z: -139.3815}
+      Peak: {x: -411, y: 150, z: -71}
+      LaunchTower: {x: -316.25272, y: 2.3954468, z: -150.99345}
+      DescentTarget: {x: -366.0076, y: 2.3000002, z: 68.66849}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: -375.80594, y: 53.625095, z: -100.71371}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -341.45624, y: 15.202859, z: -129.71455}
+        - {x: -352.90613, y: 28.010271, z: -120.04761}
+        - {x: -364.35605, y: 40.817684, z: -110.38067}
+        - {x: -375.80594, y: 53.625095, z: -100.71372}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: -393.0438, y: 99.39256, z: -86.16008}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -380.11542, y: 65.06696, z: -97.07532}
+        - {x: -384.42487, y: 76.50883, z: -93.436905}
+        - {x: -388.73434, y: 87.9507, z: -89.7985}
+        - {x: -393.04382, y: 99.39256, z: -86.160095}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: -411, y: 150, z: -71}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: -384.5336, y: 100.28041, z: -65.06874}
+        - {x: -425.0269, y: 115.373856, z: -86.23726}
+        - {x: -409.03607, y: 130.4673, z: -56.83725}
+        - {x: -407.43924, y: 145.56075, z: -78.03629}
+        - {x: -411, y: 150, z: -71}
+      FootPath:
+      - {x: -334.5909, y: 2.3954468, z: -135.51085}
+      - {x: -318.07312, y: 8.799152, z: -63.15394}
+      - {x: -355.18845, y: 15.202859, z: -4.8946605}
+      - {x: -417.71152, y: 21.606565, z: 8.489679}
+      - {x: -466.8016, y: 28.010271, z: -23.887716}
+      - {x: -477.0525, y: 34.41398, z: -76.577}
+      - {x: -449.413, y: 40.817684, z: -116.49782}
+      - {x: -406.55753, y: 47.22139, z: -123.61532}
+      - {x: -375.80594, y: 53.625095, z: -100.71371}
+      - {x: -375.80594, y: 53.625095, z: -100.71371}
+      - {x: -366.50827, y: 56.48556, z: -67.24344}
+      - {x: -383.1055, y: 59.346027, z: -37.960667}
+      - {x: -414.51932, y: 62.206497, z: -29.318266}
+      - {x: -441.88458, y: 65.06696, z: -44.924694}
+      - {x: -449.87173, y: 67.92743, z: -74.28207}
+      - {x: -435.2561, y: 70.787895, z: -99.729866}
+      - {x: -407.9552, y: 73.64836, z: -107.06174}
+      - {x: -384.42487, y: 76.50883, z: -93.4369}
+      - {x: -377.74826, y: 79.36929, z: -68.19246}
+      - {x: -390.3823, y: 82.22976, z: -46.57961}
+      - {x: -413.5703, y: 85.09023, z: -40.558258}
+      - {x: -433.26566, y: 87.9507, z: -52.201515}
+      - {x: -438.6317, y: 90.811165, z: -73.333046}
+      - {x: -427.97925, y: 93.67163, z: -91.11094}
+      - {x: -408.90424, y: 96.5321, z: -95.82174}
+      - {x: -393.0438, y: 99.39256, z: -86.16008}
+      SpringerLedges:
+      - {x: -337.0105, y: 13.372904, z: -133.468}
+      - {x: -344.01468, y: 24.150362, z: -127.55452}
+      - {x: -351.01883, y: 34.927822, z: -121.64103}
+      - {x: -358.02298, y: 45.705276, z: -115.72754}
+      - {x: -365.02716, y: 56.48274, z: -109.81404}
+      - {x: -372.0313, y: 67.26019, z: -103.90055}
+      - {x: -379.03546, y: 78.03764, z: -97.98706}
+      - {x: -386.03964, y: 88.8151, z: -92.07357}
+      - {x: -393.0438, y: 99.59256, z: -86.16008}
+      ClimbPath:
+      - {x: -384.5336, y: 100.28041, z: -65.06874}
+      - {x: -386.81235, y: 101.16826, z: -59.58558}
+      - {x: -390.19156, y: 102.056114, z: -54.804146}
+      - {x: -394.4767, y: 102.94396, z: -50.936893}
+      - {x: -399.4344, y: 103.83181, z: -48.145718}
+      - {x: -404.80472, y: 104.71966, z: -46.535347}
+      - {x: -410.315, y: 105.60751, z: -46.14974}
+      - {x: -415.69357, y: 106.49536, z: -46.971607}
+      - {x: -420.68298, y: 107.38321, z: -48.925}
+      - {x: -425.05264, y: 108.27106, z: -51.88071}
+      - {x: -428.6091, y: 109.15891, z: -55.664234}
+      - {x: -431.2048, y: 110.04676, z: -60.065716}
+      - {x: -432.74393, y: 110.93461, z: -64.8514}
+      - {x: -433.1856, y: 111.82246, z: -69.775986}
+      - {x: -432.54425, y: 112.71031, z: -74.5951}
+      - {x: -430.88715, y: 113.59816, z: -79.07747}
+      - {x: -428.32947, y: 114.48601, z: -83.015976}
+      - {x: -425.0269, y: 115.373856, z: -86.23726}
+      - {x: -421.1667, y: 116.26171, z: -88.609215}
+      - {x: -416.9572, y: 117.14956, z: -90.04628}
+      - {x: -412.61682, y: 118.03741, z: -90.512115}
+      - {x: -408.36255, y: 118.925255, z: -90.0198}
+      - {x: -404.39938, y: 119.81311, z: -88.62945}
+      - {x: -400.91022, y: 120.70096, z: -86.44354}
+      - {x: -398.04758, y: 121.588806, z: -83.600296}
+      - {x: -395.92697, y: 122.476654, z: -80.26536}
+      - {x: -394.6224, y: 123.36451, z: -76.62243}
+      - {x: -394.16418, y: 124.25236, z: -72.86339}
+      - {x: -394.5391, y: 125.140205, z: -69.17809}
+      - {x: -395.69266, y: 126.02805, z: -65.74498}
+      - {x: -397.5337, y: 126.91591, z: -62.72227}
+      - {x: -399.94016, y: 127.80376, z: -60.24081}
+      - {x: -402.76697, y: 128.6916, z: -58.398422}
+      - {x: -405.85425, y: 129.57945, z: -57.256264}
+      - {x: -409.03607, y: 130.4673, z: -56.83725}
+      - {x: -412.1496, y: 131.35515, z: -57.126472}
+      - {x: -415.04306, y: 132.24301, z: -58.073658}
+      - {x: -417.58334, y: 133.13086, z: -59.597317}
+      - {x: -419.66208, y: 134.0187, z: -61.59047}
+      - {x: -421.20016, y: 134.90656, z: -63.92738}
+      - {x: -422.15045, y: 135.7944, z: -66.47108}
+      - {x: -422.4989, y: 136.68225, z: -69.08117}
+      - {x: -422.26358, y: 137.5701, z: -71.62143}
+      - {x: -421.4921, y: 138.45795, z: -73.96689}
+      - {x: -420.25763, y: 139.34581, z: -76.00998}
+      - {x: -418.65353, y: 140.23366, z: -77.66547}
+      - {x: -416.7873, y: 141.1215, z: -78.87389}
+      - {x: -414.77383, y: 142.00935, z: -79.60346}
+      - {x: -412.72876, y: 142.8972, z: -79.85029}
+      - {x: -410.76193, y: 143.78505, z: -79.63708}
+      - {x: -408.9715, y: 144.6729, z: -79.010315}
+      - {x: -407.43924, y: 145.56075, z: -78.03629}
+      - {x: -406.2265, y: 146.44861, z: -76.79614}
+      - {x: -405.37216, y: 147.33646, z: -75.3803}
+      - {x: -404.89163, y: 148.2243, z: -73.88261}
+      - {x: -404.77716, y: 149.11215, z: -72.39457}
+      - {x: -405, y: 150, z: -71}
+      LandmarkId: 
+    Secrets:
+    - Id: schilfmuendung_h1_insel
+      Name: Insel im Giftwasser
+      Hint: "Etwas glitzert in der Mitte \u2013 Giftwasser sch\xFCtzt es."
+      Position: {x: -82, y: 2.7, z: -122}
+      Gate:
+        Keys: 28
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: schilfmuendung_h2_insel
+      Name: Insel im Giftwasser
+      Hint: "Etwas glitzert in der Mitte \u2013 Giftwasser sch\xFCtzt es."
+      Position: {x: 98, y: 2.7, z: -22}
+      Gate:
+        Keys: 28
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: schilfmuendung_wz_1_3
+      Name: 'Mangroven-Kathedrale: Kronendorf'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Mangroven-Kathedrale."
+      Position: {x: 44.44481, y: 35.3, z: 158.74539}
+      Gate:
+        Keys: 2
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: schilfmuendung_aufstieg_gipfel
+      Name: 'Hochpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -411, y: 150.4, z: -71}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: schilfmuendung_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 42, y: 1.7144665, z: 82}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: schilfmuendung_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -28, y: 0.3555046, z: 172}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: schilfmuendung_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -108, y: 0.6361148, z: 272}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: schilfmuendung_lore_szene1
+      Title: Wrack am Ufer
+      Text: "Das Wrack liegt mit dem Kiel nach oben. Im Logbuch steht nur ein Satz: \u201EKurs auf Delta-Tempel auf Pf\xE4hlen.\u201C Noam kannte den Kapit\xE4n."
+      Figure: Noam
+      Position: {x: -221, y: 1.057688, z: -22}
+    - Id: schilfmuendung_lore_szene2
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Delta-Tempel auf Pf\xE4hlen. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Noam
+      Position: {x: -1, y: 0.698217, z: 78}
+    - Id: schilfmuendung_lore_szene3
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Noam: \u201EWir sind zum Delta-Tempel auf Pf\xE4hlen gegangen. Folge dem Rauch.\u201C"
+      Figure: Noam
+      Position: {x: -81, y: 1.8266073, z: 118}
+    - Id: schilfmuendung_wz_haupt_lore
+      Title: "Delta-Tempel auf Pf\xE4hlen"
+      Text: "Der Tempel steht auf tausend Pf\xE4hlen. Jedes Jahr sinkt er eine Handbreit \u2013 und jedes Jahr setzen die M\xF6nche einen Pfahl nach."
+      Figure: Noam
+      Position: {x: -7.7737494, y: 2.7978191, z: -62.67945}
+    - Id: schilfmuendung_wz_1_lore
+      Title: Mangroven-Kathedrale
+      Text: "Die Mangroven wuchsen zu B\xF6gen, die B\xF6gen zu einem Dach. Gebetet wird hier bei Ebbe."
+      Figure: Noam
+      Position: {x: 56.246437, y: 1.0586201, z: 170.47406}
+    - Id: schilfmuendung_aufstieg_lore
+      Title: Hochpfad
+      Text: "Wer den Hochpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Noam
+      Position: {x: -373.30594, y: 53.625095, z: -98.21371}
+    Loops:
+    - Id: schilfmuendung_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: schilfmuendung_h1_insel
+      TriggerPos: {x: -82, y: 2.7, z: -122}
+      TargetPos: {x: -82, y: 2.7, z: -122}
+      NextGoal: {x: 98, y: 2.7, z: -22}
+    - Id: schilfmuendung_schleife2
+      TriggerKind: Lichtstrahl
+      Target: schilfmuendung_h2_insel
+      TriggerPos: {x: 98, y: 2.7, z: -22}
+      TargetPos: {x: 98, y: 2.7, z: -22}
+      NextGoal: {x: 44.44481, y: 35.3, z: 158.74539}
+    - Id: schilfmuendung_schleife3
+      TriggerKind: Vogelschwarm
+      Target: schilfmuendung_wz_1_3
+      TriggerPos: {x: 44.44481, y: 35.3, z: 158.74539}
+      TargetPos: {x: 44.44481, y: 35.3, z: 158.74539}
+      NextGoal: {x: -411, y: 150.4, z: -71}
+    - Id: schilfmuendung_schleife4
+      TriggerKind: Glocke
+      Target: schilfmuendung_aufstieg_gipfel
+      TriggerPos: {x: -411, y: 150.4, z: -71}
+      TargetPos: {x: -411, y: 150.4, z: -71}
+      NextGoal: {x: 42, y: 1.7144665, z: 82}
+    - Id: schilfmuendung_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: schilfmuendung_hoehle
+      TriggerPos: {x: 42, y: 1.7144665, z: 82}
+      TargetPos: {x: 42, y: 1.7144665, z: 82}
+      NextGoal: {x: -9.320007, y: 72.70905, z: -49.320007}
+    Shortcuts:
+    - Id: schilfmuendung_abk_hang
+      Name: Springer-Wand am Hochpfad
+      Key: 2
+      From: {x: -330.00635, y: 2.3954468, z: -139.3815}
+      To: {x: -393.0438, y: 99.39256, z: -86.16008}
+      FootPath: 882.0786
+      MountPath: 152.80426
+    Scenes:
+    - Id: schilfmuendung_szene1
+      Kind: Wrack
+      LoreId: schilfmuendung_lore_szene1
+      Position: {x: -224, y: 1.057688, z: -24}
+    - Id: schilfmuendung_szene2
+      Kind: Grab
+      LoreId: schilfmuendung_lore_szene2
+      Position: {x: -4, y: 0.698217, z: 76}
+    - Id: schilfmuendung_szene3
+      Kind: Lager
+      LoreId: schilfmuendung_lore_szene3
+      Position: {x: -84, y: 1.8266073, z: 116}
+    FootLinks: []
+    Pads:
+    - {x: -9.320007, y: -49.320007, z: 21.828001, w: 2.7090511}
+    - {x: 55, y: 155, z: 25.5, w: 2.3000002}
+    MainVisibility: 0.998
+    CompactZone: 0

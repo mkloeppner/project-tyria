@@ -190,3 +190,507 @@ MonoBehaviour:
   - heart_himmel_kinder
   Region: 0
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 0
+      Center: {x: -295, y: -295}
+      Radius: 140
+      Height: 300
+      Param: 0
+      Yaw: 160
+    - Kind: 1
+      Center: {x: 305, y: 325}
+      Radius: 85
+      Height: 30
+      Param: 0
+      Yaw: 130
+    - Kind: 7
+      Center: {x: 32, y: 92}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 222
+    Landmarks:
+    - Id: himmelsspitzen_wz_haupt
+      Name: Wolkenthron
+      Lore: "Ein Tempel, der nie den Boden ber\xFChrte. Die Greifen kennen den Weg \u2013 die Menschen nur die Legende."
+      Kind: 9
+      Main: 1
+      Position: {x: -35, y: 24, z: -35}
+      Height: 240
+      Footprint: 30
+      Yaw: 45
+      BuildHeight: 220
+      Primary: {r: 0.9098039, g: 0.9098039, b: 0.9411765, a: 1}
+      Accent: {r: 0.6039216, g: 0.8156863, b: 1, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_WindHigh_0
+      Stages:
+      - Index: 1
+        Name: Tempel
+        Position: {x: -35, y: 245.9, z: -35}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -35, y: 245.9, z: -35}
+      - Index: 2
+        Name: Windorgel
+        Position: {x: -18.029438, y: 262, z: -35}
+        Gate:
+          Keys: 16
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -18.029438, y: 262, z: -35}
+    - Id: himmelsspitzen_wz_1
+      Name: Windorgel-Nadel
+      Lore: Der Wind spielt auf der Nadel eine Melodie, die niemand aufgeschrieben hat. Die Himmelsschuppen nisten in ihren Pfeifen.
+      Kind: 6
+      Main: 0
+      Position: {x: 196.20001, y: 36, z: 76.20001}
+      Height: 50
+      Footprint: 21.2
+      Yaw: -111.225136
+      BuildHeight: 50
+      Primary: {r: 0.7529412, g: 0.78431374, b: 0.84705883, a: 1}
+      Accent: {r: 1, g: 1, b: 1, a: 1}
+      Interior: 1
+      LightProfile: Laterne
+      SoundProfile: SFX_Amb_Water_0
+      Stages:
+      - Index: 1
+        Name: Treppe
+        Position: {x: 194.67947, y: 36.4, z: 80.115105}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 194.67947, y: 36.4, z: 80.115105}
+      - Index: 2
+        Name: "Au\xDFengalerie"
+        Position: {x: 192.9055, y: 50, z: 84.68272}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 192.9055, y: 50, z: 84.68272}
+      - Index: 3
+        Name: Laterne
+        Position: {x: 194.04591, y: 82.4, z: 81.74639}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 194.04591, y: 82.4, z: 81.74639}
+    Hazards:
+    - Id: himmelsspitzen_h1
+      Kind: 6
+      Center: {x: -274.89075, y: 259.17776, z: -303.52084}
+      Size: {x: 40, y: 14}
+      Yaw: 112.96371
+      Keys: 24
+      Circular: 0
+    - Id: himmelsspitzen_h2
+      Kind: 4
+      Center: {x: -263.3546, y: 249.86743, z: -291.49747}
+      Size: {x: 40, y: 40}
+      Yaw: 0
+      Keys: 25
+      Circular: 1
+    - Id: himmelsspitzen_h3
+      Kind: 5
+      Center: {x: -240.85971, y: 157.0585, z: -317.94073}
+      Size: {x: 30, y: 10}
+      Yaw: -67.035995
+      Keys: 26
+      Circular: 0
+    Climbs:
+    - Id: himmelsspitzen_aufstieg
+      Name: Gipfelpfad
+      Base: {x: -155.04573, y: 7.433458, z: -354.30264}
+      Peak: {x: -295, y: 300, z: -295}
+      LaunchTower: {x: -138.4722, y: 7.433458, z: -361.32532}
+      DescentTarget: {x: 20, y: 33.26753, z: -400}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: -236.99255, y: 116.17258, z: -319.57938}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -165.2891, y: 21.025848, z: -349.96225}
+        - {x: -175.53244, y: 34.618237, z: -345.62183}
+        - {x: -185.77579, y: 48.21063, z: -341.28143}
+        - {x: -196.01915, y: 61.803017, z: -336.94104}
+        - {x: -206.26251, y: 75.39541, z: -332.60062}
+        - {x: -216.50586, y: 88.9878, z: -328.26022}
+        - {x: -226.7492, y: 102.580185, z: -323.9198}
+        - {x: -236.99257, y: 116.17258, z: -319.5794}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: -244.72685, y: 197.94441, z: -316.3021}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -238.28162, y: 129.80122, z: -319.0332}
+        - {x: -239.57068, y: 143.42986, z: -318.487}
+        - {x: -240.85973, y: 157.0585, z: -317.9408}
+        - {x: -242.14877, y: 170.68713, z: -317.3946}
+        - {x: -243.43784, y: 184.31577, z: -316.8484}
+        - {x: -244.72688, y: 197.94441, z: -316.3022}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: -295, y: 300, z: -295}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -237.21417, y: 198.83963, z: -288.60428}
+        - {x: -315.2032, y: 214.05846, z: -248.94136}
+        - {x: -327.01254, y: 229.27727, z: -322.87973}
+        - {x: -265.51758, y: 244.49608, z: -313.1228}
+        - {x: -288.43005, y: 259.7149, z: -269.05576}
+        - {x: -313.8906, y: 274.93372, z: -296.04224}
+        - {x: -291.11652, y: 290.15253, z: -305.37228}
+        - {x: -295, y: 300, z: -295}
+      FootPath:
+      - {x: -160.57025, y: 7.433458, z: -351.96176}
+      - {x: -164.4743, y: 14.229652, z: -242.16817}
+      - {x: -242.08604, y: 21.025848, z: -170.12303}
+      - {x: -343.9392, y: 27.822042, z: -174.09137}
+      - {x: -410.32416, y: 34.618237, z: -246.13383}
+      - {x: -406.29156, y: 41.414433, z: -340.0466}
+      - {x: -339.81836, y: 48.21063, z: -400.7714}
+      - {x: -253.846, y: 55.006824, z: -396.67447}
+      - {x: -198.7814, y: 61.803017, z: -335.77054}
+      - {x: -202.94257, y: 68.59921, z: -257.73865}
+      - {x: -258.27725, y: 75.39541, z: -208.33418}
+      - {x: -328.3688, y: 82.191605, z: -212.55965}
+      - {x: -372.113, y: 88.9878, z: -262.325}
+      - {x: -367.8233, y: 95.784, z: -324.47614}
+      - {x: -323.62714, y: 102.580185, z: -362.56024}
+      - {x: -269.4165, y: 109.37638, z: -358.20624}
+      - {x: -236.99255, y: 116.17258, z: -319.57938}
+      - {x: -236.99255, y: 116.17258, z: -319.57938}
+      - {x: -237.08896, y: 121.28332, z: -271.55975}
+      - {x: -270.8303, y: 126.39406, z: -237.95935}
+      - {x: -318.0463, y: 131.50479, z: -238.06224}
+      - {x: -351.07388, y: 136.61554, z: -271.23993}
+      - {x: -350.96445, y: 141.72627, z: -317.6523}
+      - {x: -318.3504, y: 146.83702, z: -350.10706}
+      - {x: -272.7416, y: 151.94775, z: -349.99118}
+      - {x: -240.85971, y: 157.0585, z: -317.94077}
+      - {x: -240.9821, y: 162.16924, z: -273.13556}
+      - {x: -272.46893, y: 167.27997, z: -241.82649}
+      - {x: -316.4705, y: 172.39072, z: -241.95543}
+      - {x: -347.2067, y: 177.50145, z: -272.87857}
+      - {x: -347.0713, y: 182.6122, z: -316.07654}
+      - {x: -316.71176, y: 187.72293, z: -346.23993}
+      - {x: -274.31744, y: 192.83368, z: -346.098}
+      - {x: -244.72685, y: 197.94441, z: -316.3021}
+      SpringerLedges:
+      - {x: -160.6508, y: 19.540394, z: -351.9276}
+      - {x: -166.25587, y: 31.447329, z: -349.55258}
+      - {x: -171.86095, y: 43.354263, z: -347.17755}
+      - {x: -177.466, y: 55.261196, z: -344.8025}
+      - {x: -183.07108, y: 67.16813, z: -342.42746}
+      - {x: -188.67615, y: 79.075066, z: -340.05243}
+      - {x: -194.28122, y: 90.981995, z: -337.6774}
+      - {x: -199.88629, y: 102.88893, z: -335.30237}
+      - {x: -205.49136, y: 114.79587, z: -332.92734}
+      - {x: -211.09644, y: 126.702805, z: -330.5523}
+      - {x: -216.7015, y: 138.60974, z: -328.17728}
+      - {x: -222.30658, y: 150.51668, z: -325.80225}
+      - {x: -227.91164, y: 162.4236, z: -323.4272}
+      - {x: -233.51671, y: 174.33054, z: -321.05215}
+      - {x: -239.12178, y: 186.23747, z: -318.67712}
+      - {x: -244.72685, y: 198.14441, z: -316.3021}
+      ClimbPath:
+      - {x: -237.21417, y: 198.83963, z: -288.60428}
+      - {x: -238.71872, y: 199.73486, z: -282.3871}
+      - {x: -240.88425, y: 200.63008, z: -276.42203}
+      - {x: -243.67369, y: 201.52531, z: -270.77853}
+      - {x: -247.04285, y: 202.42053, z: -265.52084}
+      - {x: -250.94098, y: 203.31577, z: -260.7075}
+      - {x: -255.31157, y: 204.21098, z: -256.3905}
+      - {x: -260.09314, y: 205.1062, z: -252.61494}
+      - {x: -265.22006, y: 206.00143, z: -249.41843}
+      - {x: -270.6235, y: 206.89665, z: -246.83072}
+      - {x: -276.23224, y: 207.79189, z: -244.87357}
+      - {x: -281.97375, y: 208.6871, z: -243.56049}
+      - {x: -287.77496, y: 209.58234, z: -242.89673}
+      - {x: -293.5633, y: 210.47755, z: -242.87936}
+      - {x: -299.26764, y: 211.37277, z: -243.49748}
+      - {x: -304.81897, y: 212.268, z: -244.73239}
+      - {x: -310.1515, y: 213.16322, z: -246.55801}
+      - {x: -315.2032, y: 214.05846, z: -248.94136}
+      - {x: -319.91672, y: 214.95367, z: -251.843}
+      - {x: -324.23984, y: 215.8489, z: -255.21777}
+      - {x: -328.12625, y: 216.74413, z: -259.01532}
+      - {x: -331.53586, y: 217.63934, z: -263.1809}
+      - {x: -334.4353, y: 218.53458, z: -267.6562}
+      - {x: -336.79822, y: 219.4298, z: -272.37994}
+      - {x: -338.60544, y: 220.32503, z: -277.289}
+      - {x: -339.84512, y: 221.22025, z: -282.319}
+      - {x: -340.51285, y: 222.11548, z: -287.40524}
+      - {x: -340.6114, y: 223.0107, z: -292.48355}
+      - {x: -340.1507, y: 223.90593, z: -297.49106}
+      - {x: -339.14752, y: 224.80115, z: -302.3669}
+      - {x: -337.62515, y: 225.69637, z: -307.05325}
+      - {x: -335.613, y: 226.5916, z: -311.49557}
+      - {x: -333.14606, y: 227.48682, z: -315.64362}
+      - {x: -330.2644, y: 228.38205, z: -319.4518}
+      - {x: -327.01254, y: 229.27727, z: -322.87973}
+      - {x: -323.43875, y: 230.17249, z: -325.8927}
+      - {x: -319.5944, y: 231.06772, z: -328.46194}
+      - {x: -315.53336, y: 231.96294, z: -330.56482}
+      - {x: -311.31097, y: 232.85817, z: -332.18527}
+      - {x: -306.98355, y: 233.75339, z: -333.31357}
+      - {x: -302.60757, y: 234.64862, z: -333.94647}
+      - {x: -298.23886, y: 235.54384, z: -334.08716}
+      - {x: -293.932, y: 236.43906, z: -333.745}
+      - {x: -289.7396, y: 237.33429, z: -332.9353}
+      - {x: -285.71158, y: 238.2295, z: -331.6791}
+      - {x: -281.89474, y: 239.12474, z: -330.00256}
+      - {x: -278.33206, y: 240.01996, z: -327.93674}
+      - {x: -275.06226, y: 240.91519, z: -325.51697}
+      - {x: -272.11948, y: 241.81041, z: -322.78226}
+      - {x: -269.5328, y: 242.70563, z: -319.77487}
+      - {x: -267.32605, y: 243.60086, z: -316.5395}
+      - {x: -265.51758, y: 244.49608, z: -313.1228}
+      - {x: -264.12012, y: 245.39131, z: -309.57254}
+      - {x: -263.14084, y: 246.28653, z: -305.93726}
+      - {x: -262.58127, y: 247.18176, z: -302.2652}
+      - {x: -262.43738, y: 248.07698, z: -298.60403}
+      - {x: -262.69995, y: 248.9722, z: -295}
+      - {x: -263.3546, y: 249.86743, z: -291.49747}
+      - {x: -264.3822, y: 250.76265, z: -288.1384}
+      - {x: -265.75928, y: 251.65788, z: -284.96164}
+      - {x: -267.4583, y: 252.5531, z: -282.00278}
+      - {x: -269.44836, y: 253.44833, z: -279.29346}
+      - {x: -271.6954, y: 254.34355, z: -276.8613}
+      - {x: -274.163, y: 255.23878, z: -274.72943}
+      - {x: -276.81268, y: 256.134, z: -272.91638}
+      - {x: -279.60483, y: 257.02924, z: -271.43594}
+      - {x: -282.49887, y: 257.92444, z: -270.29706}
+      - {x: -285.45404, y: 258.81967, z: -269.50385}
+      - {x: -288.43005, y: 259.7149, z: -269.05576}
+      - {x: -291.38736, y: 260.6101, z: -268.9475}
+      - {x: -294.288, y: 261.50534, z: -269.16943}
+      - {x: -297.09576, y: 262.40057, z: -269.7077}
+      - {x: -299.77698, y: 263.2958, z: -270.54462}
+      - {x: -302.30057, y: 264.191, z: -271.6589}
+      - {x: -304.63858, y: 265.08624, z: -273.02625}
+      - {x: -306.7667, y: 265.98148, z: -274.6195}
+      - {x: -308.66403, y: 266.8767, z: -276.40942}
+      - {x: -310.31372, y: 267.7719, z: -278.36487}
+      - {x: -311.70282, y: 268.66714, z: -280.4535}
+      - {x: -312.8225, y: 269.56238, z: -282.64215}
+      - {x: -313.668, y: 270.45758, z: -284.89737}
+      - {x: -314.2386, y: 271.3528, z: -287.18594}
+      - {x: -314.53745, y: 272.24805, z: -289.47534}
+      - {x: -314.5715, y: 273.14328, z: -291.7341}
+      - {x: -314.3513, y: 274.03848, z: -293.93237}
+      - {x: -313.8906, y: 274.93372, z: -296.04224}
+      - {x: -313.20618, y: 275.82895, z: -298.0381}
+      - {x: -312.31747, y: 276.72415, z: -299.8969}
+      - {x: -311.2462, y: 277.6194, z: -301.59863}
+      - {x: -310.01587, y: 278.51462, z: -303.1262}
+      - {x: -308.6516, y: 279.40985, z: -304.46582}
+      - {x: -307.1795, y: 280.30505, z: -305.60715}
+      - {x: -305.62622, y: 281.2003, z: -306.54312}
+      - {x: -304.0186, y: 282.09552, z: -307.27026}
+      - {x: -302.38333, y: 282.99072, z: -307.78833}
+      - {x: -300.74637, y: 283.88596, z: -308.1004}
+      - {x: -299.1326, y: 284.7812, z: -308.21268}
+      - {x: -297.56555, y: 285.67642, z: -308.13425}
+      - {x: -296.067, y: 286.57162, z: -307.87692}
+      - {x: -294.65668, y: 287.46686, z: -307.45493}
+      - {x: -293.352, y: 288.3621, z: -306.88452}
+      - {x: -292.16788, y: 289.2573, z: -306.18384}
+      - {x: -291.11652, y: 290.15253, z: -305.37228}
+      - {x: -290.2074, y: 291.04776, z: -304.47043}
+      - {x: -289.44702, y: 291.943, z: -303.49945}
+      - {x: -288.83905, y: 292.8382, z: -302.4808}
+      - {x: -288.38422, y: 293.73343, z: -301.43594}
+      - {x: -288.08047, y: 294.62866, z: -300.38568}
+      - {x: -287.9231, y: 295.52386, z: -299.35016}
+      - {x: -287.90475, y: 296.4191, z: -298.34833}
+      - {x: -288.01587, y: 297.31433, z: -297.39764}
+      - {x: -288.24475, y: 298.20956, z: -296.5139}
+      - {x: -288.57782, y: 299.10477, z: -295.71082}
+      - {x: -289, y: 300, z: -295}
+      LandmarkId: 
+    Secrets:
+    - Id: himmelsspitzen_wz_haupt_2
+      Name: 'Wolkenthron: Windorgel'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Wolkenthron."
+      Position: {x: -18.029438, y: 262, z: -35}
+      Gate:
+        Keys: 16
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: himmelsspitzen_wz_1_2
+      Name: "Windorgel-Nadel: Au\xDFengalerie"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Windorgel-Nadel."
+      Position: {x: 192.9055, y: 50, z: 84.68272}
+      Gate:
+        Keys: 2
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: himmelsspitzen_aufstieg_gipfel
+      Name: 'Gipfelpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -295, y: 300.4, z: -295}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: himmelsspitzen_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 32, y: 36, z: 92}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: himmelsspitzen_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -58, y: 36, z: 202}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: himmelsspitzen_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -118, y: 31.629528, z: 262}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: himmelsspitzen_versteck4
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -178, y: 12, z: -178}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: himmelsspitzen_lore_szene1
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Veyra: \u201EWir sind zum Wolkenthron gegangen. Folge dem Rauch.\u201C"
+      Figure: Veyra
+      Position: {x: -231, y: 4.948961, z: 8}
+    - Id: himmelsspitzen_lore_szene2
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Veyra sp\xE4ter fand."
+      Figure: Veyra
+      Position: {x: -11, y: 36, z: 68}
+    - Id: himmelsspitzen_lore_szene3
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Wolkenthron. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Veyra
+      Position: {x: -91, y: 6.2185245, z: 88}
+    - Id: himmelsspitzen_wz_haupt_lore
+      Title: Wolkenthron
+      Text: "Ein Tempel, der nie den Boden ber\xFChrte. Die Greifen kennen den Weg \u2013 die Menschen nur die Legende."
+      Figure: Veyra
+      Position: {x: -42.778175, y: 24, z: -48.435028}
+    - Id: himmelsspitzen_wz_1_lore
+      Title: Windorgel-Nadel
+      Text: Der Wind spielt auf der Nadel eine Melodie, die niemand aufgeschrieben hat. Die Himmelsschuppen nisten in ihren Pfeifen.
+      Figure: Veyra
+      Position: {x: 204.63283, y: 36, z: 83.76623}
+    - Id: himmelsspitzen_aufstieg_lore
+      Title: Gipfelpfad
+      Text: "Wer den Gipfelpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Veyra
+      Position: {x: -234.49255, y: 116.17258, z: -317.07938}
+    Loops:
+    - Id: himmelsspitzen_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: himmelsspitzen_wz_haupt_2
+      TriggerPos: {x: -18.029438, y: 262, z: -35}
+      TargetPos: {x: -18.029438, y: 262, z: -35}
+      NextGoal: {x: 192.9055, y: 50, z: 84.68272}
+    - Id: himmelsspitzen_schleife2
+      TriggerKind: Lichtstrahl
+      Target: himmelsspitzen_wz_1_2
+      TriggerPos: {x: 192.9055, y: 50, z: 84.68272}
+      TargetPos: {x: 192.9055, y: 50, z: 84.68272}
+      NextGoal: {x: -295, y: 300.4, z: -295}
+    - Id: himmelsspitzen_schleife3
+      TriggerKind: Vogelschwarm
+      Target: himmelsspitzen_aufstieg_gipfel
+      TriggerPos: {x: -295, y: 300.4, z: -295}
+      TargetPos: {x: -295, y: 300.4, z: -295}
+      NextGoal: {x: 32, y: 36, z: 92}
+    - Id: himmelsspitzen_schleife4
+      TriggerKind: Glocke
+      Target: himmelsspitzen_hoehle
+      TriggerPos: {x: 32, y: 36, z: 92}
+      TargetPos: {x: 32, y: 36, z: 92}
+      NextGoal: {x: -58, y: 36, z: 202}
+    - Id: himmelsspitzen_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: himmelsspitzen_versteck2
+      TriggerPos: {x: -58, y: 36, z: 202}
+      TargetPos: {x: -58, y: 36, z: 202}
+      NextGoal: {x: -35, y: 264, z: -35}
+    Shortcuts:
+    - Id: himmelsspitzen_abk_hang
+      Name: Springer-Wand am Gipfelpfad
+      Key: 2
+      From: {x: -155.04573, y: 7.433458, z: -354.30264}
+      To: {x: -244.72685, y: 197.94441, z: -316.3021}
+      FootPath: 2011.7214
+      MountPath: 256.75842
+    Scenes:
+    - Id: himmelsspitzen_szene1
+      Kind: Lager
+      LoreId: himmelsspitzen_lore_szene1
+      Position: {x: -234, y: 4.948961, z: 6}
+    - Id: himmelsspitzen_szene2
+      Kind: Schlachtfeld
+      LoreId: himmelsspitzen_lore_szene2
+      Position: {x: -14, y: 36, z: 66}
+    - Id: himmelsspitzen_szene3
+      Kind: Grab
+      LoreId: himmelsspitzen_lore_szene3
+      Position: {x: -94, y: 6.2185245, z: 86}
+    FootLinks: []
+    Pads:
+    - {x: -35, y: -35, z: 25.5, w: 24}
+    - {x: 196.20001, y: 76.20001, z: 18.02, w: 36}
+    MainVisibility: 0.938
+    CompactZone: 0

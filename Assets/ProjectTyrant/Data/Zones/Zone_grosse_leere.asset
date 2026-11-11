@@ -186,3 +186,481 @@ MonoBehaviour:
   - heart_grosse_leere_3
   Region: 1
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 1
+      Center: {x: 397, y: 377}
+      Radius: 122
+      Height: 160
+      Param: 0
+      Yaw: 44
+    - Kind: 1
+      Center: {x: -5, y: 455}
+      Radius: 85
+      Height: 30
+      Param: 0
+      Yaw: 134
+    - Kind: 6
+      Center: {x: -202, y: -282}
+      Radius: 46
+      Height: 0
+      Param: 1.2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: -202, y: -282}
+      Radius: 6
+      Height: 1.9000001
+      Param: 2.5
+      Yaw: 0
+    - Kind: 7
+      Center: {x: 42, y: 82}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 211
+    Landmarks:
+    - Id: grosse_leere_wz_haupt
+      Name: "Gro\xDFe Pyramide von Zarathis"
+      Lore: "Zarathis lie\xDF die Pyramide inmitten von Treibsand bauen, damit niemand sie betritt, der nicht eingeladen ist. Eingeladen wurde nie jemand."
+      Kind: 1
+      Main: 1
+      Position: {x: -185.14691, y: 1.5, z: -485.1469}
+      Height: 120
+      Footprint: 135.85307
+      Yaw: 20.888386
+      BuildHeight: 120
+      Primary: {r: 0.9098039, g: 0.78431374, b: 0.53333336, a: 1}
+      Accent: {r: 1, g: 0.3529412, b: 0.16470589, a: 1}
+      Interior: 1
+      LightProfile: Spitzenkristall
+      SoundProfile: SFX_Amb_Torch_0
+      Stages:
+      - Index: 1
+        Name: "Halbe H\xF6he"
+        Position: {x: -171.62228, y: 61.8, z: -550.6759}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -171.62228, y: 61.8, z: -550.6759}
+      - Index: 2
+        Name: Flanke
+        Position: {x: -185.14691, y: 109.8, z: -485.1469}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -185.14691, y: 109.8, z: -485.1469}
+      - Index: 3
+        Name: Spitze
+        Position: {x: -185.14691, y: 123.1, z: -485.1469}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -185.14691, y: 123.1, z: -485.1469}
+      - Index: 4
+        Name: "K\xF6nigskammer"
+        Position: {x: -175.5201, y: 4.7, z: -459.92145}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -175.5201, y: 4.7, z: -459.92145}
+      - Index: 5
+        Name: Schatzkammer
+        Position: {x: -143.32417, y: 1.9, z: -466.42853}
+        Gate:
+          Keys: 32
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -143.32417, y: 1.9, z: -466.42853}
+    - Id: grosse_leere_wz_1
+      Name: Riesen-Skelett
+      Lore: "Der Riese starb im Sand und wurde nie begraben. Die L\xE4ufer jagen zwischen seinen Rippen."
+      Kind: 5
+      Main: 0
+      Position: {x: -39, y: 12.477086, z: -39}
+      Height: 60
+      Footprint: 36
+      Yaw: 45
+      BuildHeight: 60
+      Primary: {r: 0.9098039, g: 0.8784314, b: 0.78431374, a: 1}
+      Accent: {r: 0.7529412, g: 0.5019608, b: 0.2509804, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_WindHigh_0
+      Stages:
+      - Index: 1
+        Name: Brust
+        Position: {x: -32.10939, y: 28.928871, z: -42.37658}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -32.10939, y: 28.928871, z: -42.37658}
+      - Index: 2
+        Name: Schulter
+        Position: {x: -36.757576, y: 38.572285, z: -25.183653}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -36.757576, y: 38.572285, z: -25.183653}
+      - Index: 3
+        Name: Kopf
+        Position: {x: -26.334515, y: 49.949936, z: -26.334517}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -26.334515, y: 49.949936, z: -26.334517}
+      - Index: 4
+        Name: Brustkammer
+        Position: {x: -44.091167, y: 12.877086, z: -44.091167}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -44.091167, y: 12.877086, z: -44.091167}
+    Hazards:
+    - Id: grosse_leere_h1
+      Kind: 0
+      Center: {x: -202, y: 0.3, z: -282}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 28
+      Circular: 1
+    - Id: grosse_leere_h2
+      Kind: 6
+      Center: {x: 391.94006, y: 138.40749, z: 365.89874}
+      Size: {x: 40, y: 14}
+      Yaw: -155.49658
+      Keys: 24
+      Circular: 0
+    - Id: grosse_leere_h3
+      Kind: 7
+      Center: {x: -310, y: 12.779245, z: -610}
+      Size: {x: 6, y: 6}
+      Yaw: 0
+      Keys: 32
+      Circular: 1
+    Climbs:
+    - Id: grosse_leere_aufstieg
+      Name: Hochpfad
+      Base: {x: 341.42386, y: 0.8, z: 255.06848}
+      Peak: {x: 397, y: 160, z: 377}
+      LaunchTower: {x: 333.9584, y: 0.8, z: 238.68962}
+      DescentTarget: {x: 256.56085, y: 1.5, z: -0.03930092}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: 372.2064, y: 57.200127, z: 322.60394}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 349.1195, y: 14.900032, z: 271.95233}
+        - {x: 356.81512, y: 29.000063, z: 288.8362}
+        - {x: 364.51074, y: 43.100094, z: 305.7201}
+        - {x: 372.2064, y: 57.200127, z: 322.60394}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: 384.35016, y: 106.018715, z: 349.24686}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 375.24234, y: 69.40477, z: 329.26468}
+        - {x: 378.27826, y: 81.60942, z: 335.9254}
+        - {x: 381.3142, y: 93.81407, z: 342.58612}
+        - {x: 384.35016, y: 106.018715, z: 349.24686}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: 397, y: 160, z: 377}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 430.28156, y: 106.9184, z: 384.07422}
+        - {x: 376.00595, y: 122.213104, z: 361.74692}
+        - {x: 405.93753, y: 137.5078, z: 392.48022}
+        - {x: 395.97562, y: 152.80249, z: 367.25366}
+        - {x: 397, y: 160, z: 377}
+      FootPath:
+      - {x: 343.91235, y: 0.8, z: 260.5281}
+      - {x: 438.83353, y: 7.850016, z: 265.09094}
+      - {x: 497.95294, y: 14.900032, z: 330.98587}
+      - {x: 492.93378, y: 21.950048, z: 412.8617}
+      - {x: 435.9406, y: 29.000063, z: 462.43396}
+      - {x: 367.11014, y: 36.05008, z: 456.9585}
+      - {x: 327.085, y: 43.100094, z: 408.86713}
+      - {x: 333.01678, y: 50.150112, z: 353.08197}
+      - {x: 372.2064, y: 57.200127, z: 322.60394}
+      - {x: 372.2064, y: 57.200127, z: 322.60394}
+      - {x: 417.29132, y: 60.25129, z: 322.7186}
+      - {x: 448.0657, y: 63.302452, z: 353.72437}
+      - {x: 447.8531, y: 66.353615, z: 396.00977}
+      - {x: 418.75766, y: 69.40477, z: 424.73532}
+      - {x: 379.2718, y: 72.45593, z: 424.4248}
+      - {x: 352.59503, y: 75.507095, z: 397.2397}
+      - {x: 353.00348, y: 78.55826, z: 360.55334}
+      - {x: 378.2783, y: 81.60942, z: 335.92538}
+      - {x: 412.1651, y: 84.66058, z: 336.43176}
+      - {x: 434.74423, y: 87.71175, z: 359.79626}
+      - {x: 434.13995, y: 90.76291, z: 390.88358}
+      - {x: 412.68576, y: 93.81407, z: 411.41388}
+      - {x: 384.39798, y: 96.86523, z: 410.71167}
+      - {x: 365.91647, y: 99.91639, z: 391.1678}
+      - {x: 366.71664, y: 102.96755, z: 365.67957}
+      - {x: 384.35016, y: 106.018715, z: 349.24686}
+      SpringerLedges:
+      - {x: 346.19345, y: 12.6909685, z: 265.53275}
+      - {x: 350.96304, y: 24.381937, z: 275.997}
+      - {x: 355.73264, y: 36.072906, z: 286.46127}
+      - {x: 360.50223, y: 47.763874, z: 296.92554}
+      - {x: 365.2718, y: 59.454845, z: 307.3898}
+      - {x: 370.04138, y: 71.145805, z: 317.85406}
+      - {x: 374.81097, y: 82.83678, z: 328.31833}
+      - {x: 379.58057, y: 94.52774, z: 338.7826}
+      - {x: 384.35016, y: 106.21871, z: 349.24686}
+      ClimbPath:
+      - {x: 430.28156, y: 106.9184, z: 384.07422}
+      - {x: 427.64954, y: 107.81809, z: 390.64606}
+      - {x: 423.7583, y: 108.71778, z: 396.44104}
+      - {x: 418.81372, y: 109.61747, z: 401.2266}
+      - {x: 413.06253, y: 110.51716, z: 404.82114}
+      - {x: 406.78043, y: 111.41685, z: 407.101}
+      - {x: 400.25867, y: 112.31653, z: 408.0043}
+      - {x: 393.79095, y: 113.21622, z: 407.5319}
+      - {x: 387.65994, y: 114.115906, z: 405.74576}
+      - {x: 382.12497, y: 115.015594, z: 402.7643}
+      - {x: 377.41116, y: 115.91528, z: 398.7556}
+      - {x: 373.70026, y: 116.81497, z: 393.92825}
+      - {x: 371.12375, y: 117.71466, z: 388.52084}
+      - {x: 369.7585, y: 118.61435, z: 382.79034}
+      - {x: 369.62494, y: 119.51404, z: 377}
+      - {x: 370.68777, y: 120.41373, z: 371.40717}
+      - {x: 372.8595, y: 121.313416, z: 366.25195}
+      - {x: 376.00595, y: 122.213104, z: 361.74692}
+      - {x: 379.95386, y: 123.112785, z: 358.06833}
+      - {x: 384.49997, y: 124.012474, z: 355.3493}
+      - {x: 389.42133, y: 124.91216, z: 353.6753}
+      - {x: 394.48608, y: 125.81185, z: 353.0817}
+      - {x: 399.46426, y: 126.71154, z: 353.55408}
+      - {x: 404.1383, y: 127.61123, z: 355.03055}
+      - {x: 408.31253, y: 128.51091, z: 357.40613}
+      - {x: 411.8213, y: 129.4106, z: 360.5393}
+      - {x: 414.5355, y: 130.31029, z: 364.25974}
+      - {x: 416.36722, y: 131.20998, z: 368.37717}
+      - {x: 417.27216, y: 132.10966, z: 372.691}
+      - {x: 417.25006, y: 133.00935, z: 377}
+      - {x: 416.34293, y: 133.90904, z: 381.11145}
+      - {x: 414.63147, y: 134.80873, z: 384.85004}
+      - {x: 412.22977, y: 135.70842, z: 388.0651}
+      - {x: 409.27856, y: 136.60811, z: 390.63675}
+      - {x: 405.93753, y: 137.5078, z: 392.48022}
+      - {x: 402.3769, y: 138.40749, z: 393.54843}
+      - {x: 398.76913, y: 139.30717, z: 393.8323}
+      - {x: 395.2805, y: 140.20686, z: 393.35992}
+      - {x: 392.06345, y: 141.10655, z: 392.19318}
+      - {x: 389.24997, y: 142.00624, z: 390.42343}
+      - {x: 386.9463, y: 142.90593, z: 388.16577}
+      - {x: 385.2288, y: 143.80562, z: 385.5523}
+      - {x: 384.1418, y: 144.7053, z: 382.72482}
+      - {x: 383.69717, y: 145.605, z: 379.8276}
+      - {x: 383.87497, y: 146.50468, z: 377}
+      - {x: 384.6264, y: 147.40437, z: 374.3699}
+      - {x: 385.87756, y: 148.30406, z: 372.04797}
+      - {x: 387.5345, y: 149.20375, z: 370.1229}
+      - {x: 389.48898, y: 150.10342, z: 368.65817}
+      - {x: 391.625, y: 151.00311, z: 367.69022}
+      - {x: 393.82486, y: 151.9028, z: 367.22787}
+      - {x: 395.97562, y: 152.80249, z: 367.25366}
+      - {x: 397.97473, y: 153.70218, z: 367.72607}
+      - {x: 399.7348, y: 154.60187, z: 368.58313}
+      - {x: 401.1875, y: 155.50156, z: 369.74704}
+      - {x: 402.28613, y: 156.40125, z: 371.12915}
+      - {x: 403.00696, y: 157.30093, z: 372.63568}
+      - {x: 403.34915, y: 158.20062, z: 374.1732}
+      - {x: 403.3335, y: 159.10031, z: 375.65378}
+      - {x: 403, y: 160, z: 377}
+      LandmarkId: 
+    Secrets:
+    - Id: grosse_leere_h1_insel
+      Name: Insel im Treibsand
+      Hint: "Etwas glitzert in der Mitte \u2013 Treibsand sch\xFCtzt es."
+      Position: {x: -202, y: 1.9000001, z: -282}
+      Gate:
+        Keys: 28
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: grosse_leere_wz_haupt_5
+      Name: "Gro\xDFe Pyramide von Zarathis: Schatzkammer"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Gro\xDFe Pyramide von Zarathis."
+      Position: {x: -143.32417, y: 1.9, z: -466.42853}
+      Gate:
+        Keys: 32
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: grosse_leere_wz_1_4
+      Name: 'Riesen-Skelett: Brustkammer'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Riesen-Skelett."
+      Position: {x: -44.091167, y: 12.877086, z: -44.091167}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: grosse_leere_aufstieg_gipfel
+      Name: 'Hochpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: 397, y: 160.4, z: 377}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: grosse_leere_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 42, y: -1.0569308, z: 82}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: grosse_leere_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -28, y: -1.2420027, z: 172}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: grosse_leere_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -108, y: 0.04149192, z: 272}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: grosse_leere_lore_szene1
+      Title: Gestrandete Karawane
+      Text: "Die Karawane blieb im Sand stecken. Die Kisten sind leer \u2013 bis auf eine, und die zeigt mit ihren Spuren zum Gro\xDFe Pyramide von Zarathis."
+      Figure: Zarath
+      Position: {x: 79, y: 1.0978934, z: 378}
+    - Id: grosse_leere_lore_szene2
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Gro\xDFe Pyramide von Zarathis. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Zarath
+      Position: {x: -1, y: -0.0644256, z: 58}
+    - Id: grosse_leere_lore_szene3
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Zarath sp\xE4ter fand."
+      Figure: Zarath
+      Position: {x: -81, y: -1.9757646, z: 118}
+    - Id: grosse_leere_wz_haupt_lore
+      Title: "Gro\xDFe Pyramide von Zarathis"
+      Text: "Zarathis lie\xDF die Pyramide inmitten von Treibsand bauen, damit niemand sie betritt, der nicht eingeladen ist. Eingeladen wurde nie jemand."
+      Figure: Zarath
+      Position: {x: -205.62892, y: -11.941086, z: -550.0353}
+    - Id: grosse_leere_wz_1_lore
+      Title: Riesen-Skelett
+      Text: "Der Riese starb im Sand und wurde nie begraben. Die L\xE4ufer jagen zwischen seinen Rippen."
+      Figure: Zarath
+      Position: {x: -48.899498, y: 13.447333, z: -54.55635}
+    - Id: grosse_leere_aufstieg_lore
+      Title: Hochpfad
+      Text: "Wer den Hochpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Zarath
+      Position: {x: 374.7064, y: 57.200127, z: 325.10394}
+    Loops:
+    - Id: grosse_leere_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: grosse_leere_h1_insel
+      TriggerPos: {x: -202, y: 1.9000001, z: -282}
+      TargetPos: {x: -202, y: 1.9000001, z: -282}
+      NextGoal: {x: -143.32417, y: 1.9, z: -466.42853}
+    - Id: grosse_leere_schleife2
+      TriggerKind: Lichtstrahl
+      Target: grosse_leere_wz_haupt_5
+      TriggerPos: {x: -143.32417, y: 1.9, z: -466.42853}
+      TargetPos: {x: -143.32417, y: 1.9, z: -466.42853}
+      NextGoal: {x: -44.091167, y: 12.877086, z: -44.091167}
+    - Id: grosse_leere_schleife3
+      TriggerKind: Vogelschwarm
+      Target: grosse_leere_wz_1_4
+      TriggerPos: {x: -44.091167, y: 12.877086, z: -44.091167}
+      TargetPos: {x: -44.091167, y: 12.877086, z: -44.091167}
+      NextGoal: {x: 397, y: 160.4, z: 377}
+    - Id: grosse_leere_schleife4
+      TriggerKind: Glocke
+      Target: grosse_leere_aufstieg_gipfel
+      TriggerPos: {x: 397, y: 160.4, z: 377}
+      TargetPos: {x: 397, y: 160.4, z: 377}
+      NextGoal: {x: 42, y: -1.0569308, z: 82}
+    - Id: grosse_leere_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: grosse_leere_hoehle
+      TriggerPos: {x: 42, y: -1.0569308, z: 82}
+      TargetPos: {x: 42, y: -1.0569308, z: 82}
+      NextGoal: {x: -185.14691, y: 121.5, z: -485.1469}
+    Shortcuts:
+    - Id: grosse_leere_abk_hang
+      Name: Springer-Wand am Hochpfad
+      Key: 2
+      From: {x: 341.42386, y: 0.8, z: 255.06848}
+      To: {x: 384.35016, y: 106.018715, z: 349.24686}
+      FootPath: 1137.0457
+      MountPath: 177.10965
+    Scenes:
+    - Id: grosse_leere_szene1
+      Kind: Karawane
+      LoreId: grosse_leere_lore_szene1
+      Position: {x: 76, y: 1.0978934, z: 376}
+    - Id: grosse_leere_szene2
+      Kind: Grab
+      LoreId: grosse_leere_lore_szene2
+      Position: {x: -4, y: -0.0644256, z: 56}
+    - Id: grosse_leere_szene3
+      Kind: Schlachtfeld
+      LoreId: grosse_leere_lore_szene3
+      Position: {x: -84, y: -1.9757646, z: 116}
+    FootLinks: []
+    Pads:
+    - {x: -185.14691, y: -485.1469, z: 115.47511, w: 1.5}
+    - {x: -39, y: -39, z: 30.6, w: 12.477086}
+    MainVisibility: 0.96
+    CompactZone: 0

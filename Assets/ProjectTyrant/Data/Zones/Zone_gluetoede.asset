@@ -225,3 +225,462 @@ MonoBehaviour:
   - heart_glut_brann
   Region: 0
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 1
+      Center: {x: -382, y: 398}
+      Radius: 153
+      Height: 160
+      Param: 0
+      Yaw: 356
+    - Kind: 2
+      Center: {x: 425, y: 165}
+      Radius: 55
+      Height: 48.5
+      Param: 4
+      Yaw: 13
+    - Kind: 6
+      Center: {x: 48, y: -252}
+      Radius: 46
+      Height: 0
+      Param: 2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: 48, y: -252}
+      Radius: 6
+      Height: 2
+      Param: 2.5
+      Yaw: 0
+    - Kind: 7
+      Center: {x: 52, y: 92}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 283
+    Landmarks:
+    - Id: gluetoede_wz_haupt
+      Name: Obsidianpyramide
+      Lore: "Schwarzes Glas, aus Lava gegossen von einem Volk ohne Namen. In der Spitze gl\xFCht ein Kristall, der nicht erlischt."
+      Kind: 1
+      Main: 1
+      Position: {x: 7.076355, y: 3.5, z: -432.92365}
+      Height: 100
+      Footprint: 112.076355
+      Yaw: -0.936445
+      BuildHeight: 100
+      Primary: {r: 0.16470589, g: 0.13333334, b: 0.15686275, a: 1}
+      Accent: {r: 1, g: 0.41568628, b: 0.16470589, a: 1}
+      Interior: 1
+      LightProfile: Spitzenkristall
+      SoundProfile: SFX_Amb_Torch_0
+      Stages:
+      - Index: 1
+        Name: "Halbe H\xF6he"
+        Position: {x: 37.90177, y: 48.244442, z: -483.17657}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 37.90177, y: 48.244442, z: -483.17657}
+      - Index: 2
+        Name: Flanke
+        Position: {x: 7.076355, y: 92.68889, z: -432.92365}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 7.076355, y: 92.68889, z: -432.92365}
+      - Index: 3
+        Name: Spitze
+        Position: {x: 7.076355, y: 105.1, z: -432.92365}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: 7.076355, y: 105.1, z: -432.92365}
+      - Index: 4
+        Name: "K\xF6nigskammer"
+        Position: {x: 6.70863, y: 6.7, z: -410.42664}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 6.70863, y: 6.7, z: -410.42664}
+      - Index: 5
+        Name: Spitzenkammer
+        Position: {x: 7.076355, y: 92.78889, z: -432.92365}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: 7.076355, y: 92.78889, z: -432.92365}
+    - Id: gluetoede_wz_1
+      Name: Glutkristall-Nadeln
+      Lore: "Die Nadeln wuchsen aus der Erde, als die Glut\xF6de noch Wald war. Sie singen, wenn der hei\xDFe Wind durch sie f\xE4hrt."
+      Kind: 7
+      Main: 0
+      Position: {x: -42.600006, y: 3.3760533, z: -82.600006}
+      Height: 45
+      Footprint: 62.4
+      Yaw: 27.281902
+      BuildHeight: 45
+      Primary: {r: 1, g: 0.47843137, b: 0.22745098, a: 1}
+      Accent: {r: 1, g: 0.8156863, b: 0.5019608, a: 1}
+      Interior: 1
+      LightProfile: Eisblau
+      SoundProfile: SFX_Amb_Water_0
+      Stages:
+      - Index: 1
+        Name: Halle
+        Position: {x: -42.600006, y: 3.7760534, z: -82.600006}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -42.600006, y: 3.7760534, z: -82.600006}
+      - Index: 2
+        Name: "Eisbr\xFCcke"
+        Position: {x: 1.2159615, y: 4.3760533, z: -105.197586}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 1.2159615, y: 4.3760533, z: -105.197586}
+      - Index: 3
+        Name: Decke
+        Position: {x: -42.600006, y: 25.826052, z: -82.600006}
+        Gate:
+          Keys: 16
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: -42.600006, y: 25.826052, z: -82.600006}
+    Hazards:
+    - Id: gluetoede_h1
+      Kind: 2
+      Center: {x: 48, y: 0.4, z: -252}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 536
+      Circular: 1
+    - Id: gluetoede_h2
+      Kind: 6
+      Center: {x: -385.30316, y: 138.40747, z: 383.06076}
+      Size: {x: 40, y: 14}
+      Yaw: -167.53212
+      Keys: 24
+      Circular: 0
+    Climbs:
+    - Id: gluetoede_aufstieg
+      Name: Hochpfad
+      Base: {x: -417.62207, y: 3.882603, z: 236.89113}
+      Peak: {x: -382, y: 160, z: 398}
+      LaunchTower: {x: -421.50812, y: 3.882603, z: 219.31561}
+      DescentTarget: {x: -436, y: 1.6, z: 30}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: -397.85507, y: 59.005157, z: 326.29184}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -412.68033, y: 17.663242, z: 259.2413}
+        - {x: -407.7386, y: 31.44388, z: 281.5915}
+        - {x: -402.7968, y: 45.224518, z: 303.94165}
+        - {x: -397.85507, y: 59.005157, z: 326.29184}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: -390.25787, y: 106.01869, z: 360.65192}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -395.95578, y: 70.758545, z: 334.88187}
+        - {x: -394.05646, y: 82.511925, z: 343.47186}
+        - {x: -392.15717, y: 94.265305, z: 352.0619}
+        - {x: -390.25787, y: 106.01869, z: 360.65192}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: -382, y: 160, z: 398}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: -341.2641, y: 106.91838, z: 406.6587}
+        - {x: -407.38297, y: 122.21308, z: 379.55817}
+        - {x: -371.44788, y: 137.50778, z: 416.2768}
+        - {x: -383.1324, y: 152.80249, z: 387.22598}
+        - {x: -382, y: 160, z: 398}
+      FootPath:
+      - {x: -416.32672, y: 3.882603, z: 242.74963}
+      - {x: -302.24554, y: 10.7729225, z: 272.9656}
+      - {x: -247.63521, y: 17.663242, z: 368.2912}
+      - {x: -274.99927, y: 24.55356, z: 466.2515}
+      - {x: -356.90912, y: 31.44388, z: 511.47928}
+      - {x: -438.74857, y: 38.334198, z: 486.96707}
+      - {x: -474.59372, y: 45.224518, z: 418.473}
+      - {x: -452.93338, y: 52.114838, z: 352.7544}
+      - {x: -397.85507, y: 59.005157, z: 326.29184}
+      - {x: -397.85507, y: 59.005157, z: 326.29184}
+      - {x: -344.87143, y: 64.88185, z: 339.792}
+      - {x: -318.88187, y: 70.758545, z: 384.04422}
+      - {x: -331.20905, y: 76.63523, z: 430.39752}
+      - {x: -369.94354, y: 82.511925, z: 452.5281}
+      - {x: -409.66647, y: 88.38862, z: 441.37387}
+      - {x: -427.9381, y: 94.265305, z: 408.15717}
+      - {x: -417.95682, y: 100.142, z: 375.06458}
+      - {x: -390.25787, y: 106.01869, z: 360.65192}
+      SpringerLedges:
+      - {x: -414.5816, y: 15.431057, z: 250.64233}
+      - {x: -411.54114, y: 26.779512, z: 264.39352}
+      - {x: -408.50067, y: 38.127968, z: 278.1447}
+      - {x: -405.4602, y: 49.47642, z: 291.89594}
+      - {x: -402.41974, y: 60.82488, z: 305.64713}
+      - {x: -399.37927, y: 72.173325, z: 319.39832}
+      - {x: -396.3388, y: 83.52178, z: 333.1495}
+      - {x: -393.29834, y: 94.87023, z: 346.90073}
+      - {x: -390.25787, y: 106.21869, z: 360.65192}
+      ClimbPath:
+      - {x: -341.2641, y: 106.91838, z: 406.6587}
+      - {x: -344.50647, y: 107.81807, z: 414.6932}
+      - {x: -349.28528, y: 108.71776, z: 421.76865}
+      - {x: -355.34622, y: 109.61745, z: 427.60202}
+      - {x: -362.38538, y: 110.517136, z: 431.97354}
+      - {x: -370.06418, y: 111.416824, z: 434.73465}
+      - {x: -378.02573, y: 112.31651, z: 435.81265}
+      - {x: -385.91113, y: 113.2162, z: 435.2118}
+      - {x: -393.37573, y: 114.11589, z: 433.01086}
+      - {x: -400.10422, y: 115.01558, z: 429.35742}
+      - {x: -405.8239, y: 115.91527, z: 424.45914}
+      - {x: -410.31567, y: 116.81496, z: 418.57254}
+      - {x: -413.42224, y: 117.714645, z: 411.99008}
+      - {x: -415.0533, y: 118.614334, z: 405.0257}
+      - {x: -415.1876, y: 119.51402, z: 398}
+      - {x: -413.8714, y: 120.41371, z: 391.22552}
+      - {x: -411.2145, y: 121.31339, z: 384.99286}
+      - {x: -407.38297, y: 122.21308, z: 379.55817}
+      - {x: -402.58975, y: 123.11277, z: 375.13275}
+      - {x: -397.08337, y: 124.01246, z: 371.87482}
+      - {x: -391.13535, y: 124.91215, z: 369.8843}
+      - {x: -385.02698, y: 125.81184, z: 369.20023}
+      - {x: -379.03616, y: 126.711525, z: 369.8011}
+      - {x: -373.42474, y: 127.61121, z: 371.60812}
+      - {x: -368.42706, y: 128.51091, z: 374.49097}
+      - {x: -364.2401, y: 129.4106, z: 378.27563}
+      - {x: -361.01608, y: 130.31029, z: 382.75427}
+      - {x: -358.85678, y: 131.20998, z: 387.69598}
+      - {x: -357.81116, y: 132.10965, z: 392.8585}
+      - {x: -357.87494, y: 133.00934, z: 398}
+      - {x: -358.9931, y: 133.90903, z: 402.89026}
+      - {x: -361.06454, y: 134.80873, z: 407.32108}
+      - {x: -363.94876, y: 135.7084, z: 411.115}
+      - {x: -367.47424, y: 136.6081, z: 414.13248}
+      - {x: -371.44788, y: 137.50778, z: 416.2768}
+      - {x: -375.66516, y: 138.40747, z: 417.4967}
+      - {x: -379.92032, y: 139.30716, z: 417.7869}
+      - {x: -384.01654, y: 140.20685, z: 417.18604}
+      - {x: -387.77475, y: 141.10654, z: 415.77292}
+      - {x: -391.0417, y: 142.00623, z: 413.66064}
+      - {x: -393.69586, y: 142.90591, z: 410.9896}
+      - {x: -395.6522, y: 143.8056, z: 407.9189}
+      - {x: -396.86417, y: 144.70529, z: 404.61795}
+      - {x: -397.32434, y: 145.60498, z: 401.2573}
+      - {x: -397.06253, y: 146.50467, z: 398}
+      - {x: -396.14243, y: 147.40436, z: 394.99393}
+      - {x: -394.65643, y: 148.30405, z: 392.365}
+      - {x: -392.71948, y: 149.20374, z: 390.21182}
+      - {x: -390.46173, y: 150.10342, z: 388.6023}
+      - {x: -388.02084, y: 151.00311, z: 387.5716}
+      - {x: -385.5344, y: 151.9028, z: 387.12228}
+      - {x: -383.1324, y: 152.80249, z: 387.22598}
+      - {x: -380.93076, y: 153.70218, z: 387.82684}
+      - {x: -379.0257, y: 154.60187, z: 388.84607}
+      - {x: -377.48956, y: 155.50156, z: 390.1877}
+      - {x: -376.36813, y: 156.40125, z: 391.74518}
+      - {x: -375.67953, y: 157.30093, z: 393.40793}
+      - {x: -375.41486, y: 158.20062, z: 395.0681}
+      - {x: -375.54016, y: 159.10031, z: 396.62692}
+      - {x: -376, y: 160, z: 398}
+      LandmarkId: 
+    Secrets:
+    - Id: gluetoede_h1_insel
+      Name: Insel im Lava
+      Hint: "Etwas glitzert in der Mitte \u2013 Lava sch\xFCtzt es."
+      Position: {x: 48, y: 2, z: -252}
+      Gate:
+        Keys: 536
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: gluetoede_wz_haupt_5
+      Name: 'Obsidianpyramide: Spitzenkammer'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Obsidianpyramide."
+      Position: {x: 7.076355, y: 92.78889, z: -432.92365}
+      Gate:
+        Keys: 24
+        FootAlternative: 0
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: gluetoede_wz_1_2
+      Name: "Glutkristall-Nadeln: Eisbr\xFCcke"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Glutkristall-Nadeln."
+      Position: {x: 1.2159615, y: 4.3760533, z: -105.197586}
+      Gate:
+        Keys: 0
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: gluetoede_aufstieg_gipfel
+      Name: 'Hochpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -382, y: 160.4, z: 398}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: gluetoede_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 52, y: 3.4090543, z: 92}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: gluetoede_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -38, y: -0.045644082, z: 182}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: gluetoede_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -118, y: 3.650959, z: 262}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: gluetoede_lore_szene1
+      Title: Gestrandete Karawane
+      Text: "Die Karawane blieb im Sand stecken. Die Kisten sind leer \u2013 bis auf eine, und die zeigt mit ihren Spuren zum Obsidianpyramide."
+      Figure: Kael
+      Position: {x: -211, y: 1.6995232, z: 8}
+    - Id: gluetoede_lore_szene2
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Obsidianpyramide. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Kael
+      Position: {x: 289, y: 2.4469633, z: 68}
+    - Id: gluetoede_lore_szene3
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Kael sp\xE4ter fand."
+      Figure: Kael
+      Position: {x: 209, y: 0, z: 128}
+    - Id: gluetoede_wz_haupt_lore
+      Title: Obsidianpyramide
+      Text: "Schwarzes Glas, aus Lava gegossen von einem Volk ohne Namen. In der Spitze gl\xFCht ein Kristall, der nicht erlischt."
+      Figure: Kael
+      Position: {x: 11.991671, y: 3.5635233, z: -488.88898}
+    - Id: gluetoede_wz_1_lore
+      Title: Glutkristall-Nadeln
+      Text: "Die Nadeln wuchsen aus der Erde, als die Glut\xF6de noch Wald war. Sie singen, wenn der hei\xDFe Wind durch sie f\xE4hrt."
+      Figure: Kael
+      Position: {x: -53.346066, y: 3.5, z: -112.16286}
+    - Id: gluetoede_aufstieg_lore
+      Title: Hochpfad
+      Text: "Wer den Hochpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Kael
+      Position: {x: -395.35507, y: 59.005157, z: 328.79184}
+    Loops:
+    - Id: gluetoede_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: gluetoede_h1_insel
+      TriggerPos: {x: 48, y: 2, z: -252}
+      TargetPos: {x: 48, y: 2, z: -252}
+      NextGoal: {x: 7.076355, y: 92.78889, z: -432.92365}
+    - Id: gluetoede_schleife2
+      TriggerKind: Lichtstrahl
+      Target: gluetoede_wz_haupt_5
+      TriggerPos: {x: 7.076355, y: 92.78889, z: -432.92365}
+      TargetPos: {x: 7.076355, y: 92.78889, z: -432.92365}
+      NextGoal: {x: 1.2159615, y: 4.3760533, z: -105.197586}
+    - Id: gluetoede_schleife3
+      TriggerKind: Vogelschwarm
+      Target: gluetoede_wz_1_2
+      TriggerPos: {x: 1.2159615, y: 4.3760533, z: -105.197586}
+      TargetPos: {x: 1.2159615, y: 4.3760533, z: -105.197586}
+      NextGoal: {x: -382, y: 160.4, z: 398}
+    - Id: gluetoede_schleife4
+      TriggerKind: Glocke
+      Target: gluetoede_aufstieg_gipfel
+      TriggerPos: {x: -382, y: 160.4, z: 398}
+      TargetPos: {x: -382, y: 160.4, z: 398}
+      NextGoal: {x: 52, y: 3.4090543, z: 92}
+    - Id: gluetoede_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: gluetoede_hoehle
+      TriggerPos: {x: 52, y: 3.4090543, z: 92}
+      TargetPos: {x: 52, y: 3.4090543, z: 92}
+      NextGoal: {x: 7.076355, y: 103.5, z: -432.92365}
+    Shortcuts:
+    - Id: gluetoede_abk_hang
+      Name: Springer-Wand am Hochpfad
+      Key: 2
+      From: {x: -417.62207, y: 3.882603, z: 236.89113}
+      To: {x: -390.25787, y: 106.01869, z: 360.65192}
+      FootPath: 1065.2473
+      MountPath: 195.33595
+    Scenes:
+    - Id: gluetoede_szene1
+      Kind: Karawane
+      LoreId: gluetoede_lore_szene1
+      Position: {x: -214, y: 1.6995232, z: 6}
+    - Id: gluetoede_szene2
+      Kind: Grab
+      LoreId: gluetoede_lore_szene2
+      Position: {x: 286, y: 2.4469633, z: 66}
+    - Id: gluetoede_szene3
+      Kind: Schlachtfeld
+      LoreId: gluetoede_lore_szene3
+      Position: {x: 206, y: 0, z: 126}
+    FootLinks:
+    - Id: poi_glut_esse
+      Name: Verlassene Esse
+      Kind: "Steinbr\xFCcke"
+      Points:
+      - {x: -86.42563, y: 6.5625157, z: -261.95322}
+      - {x: -60, y: 1.9, z: -280}
+    Pads:
+    - {x: 7.076355, y: -432.92365, z: 95.26491, w: 3.5}
+    - {x: -42.600006, y: -82.600006, z: 53.04, w: 3.3760533}
+    MainVisibility: 0.958
+    CompactZone: 0

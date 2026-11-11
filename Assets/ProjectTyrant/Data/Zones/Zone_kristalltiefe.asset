@@ -177,3 +177,450 @@ MonoBehaviour:
   - heart_tiefe_laternen
   Region: 0
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 0
+      Center: {x: -177, y: -277}
+      Radius: 108
+      Height: 170
+      Param: 0
+      Yaw: 129
+    - Kind: 0
+      Center: {x: 175, y: 315}
+      Radius: 85
+      Height: 30
+      Param: 0
+      Yaw: 25
+    - Kind: 7
+      Center: {x: 62, y: 62}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 213
+    Landmarks:
+    - Id: kristalltiefe_wz_haupt
+      Name: Kristallkathedrale
+      Lore: "Niemand hat sie gebaut. Die Kristalle wuchsen so, wie Menschen beten \u2013 nach oben, dem Licht entgegen."
+      Kind: 0
+      Main: 1
+      Position: {x: -115.636734, y: 1.7, z: 359.83252}
+      Height: 90
+      Footprint: 44.4
+      Yaw: 162.18454
+      BuildHeight: 90
+      Primary: {r: 0.47843137, g: 0.7529412, b: 0.8784314, a: 1}
+      Accent: {r: 0.8784314, g: 0.972549, b: 1, a: 1}
+      Interior: 1
+      LightProfile: "Lichtsch\xE4chte"
+      SoundProfile: SFX_Amb_Bell_0
+      Stages:
+      - Index: 1
+        Name: Galerie
+        Position: {x: -108.76003, y: 10.7, z: 359.6791}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -108.76003, y: 10.7, z: 359.6791}
+      - Index: 2
+        Name: Turmgalerie
+        Position: {x: -112.35041, y: 67.939995, z: 388.05627}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -112.35041, y: 67.939995, z: 388.05627}
+      - Index: 3
+        Name: Turmspitze
+        Position: {x: -108.66864, y: 74.299995, z: 381.29355}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -108.66864, y: 74.299995, z: 381.29355}
+      - Index: 4
+        Name: Krypta
+        Position: {x: -105.99924, y: 2.1000001, z: 329.84305}
+        Gate:
+          Keys: 1
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -105.99924, y: 2.1000001, z: 329.84305}
+    - Id: kristalltiefe_wz_1
+      Name: "Kristallbr\xFCcken"
+      Lore: "Die Br\xFCcken tragen nur den, der nicht z\xF6gert. Wer stehen bleibt, h\xF6rt das Kristall singen."
+      Kind: 7
+      Main: 0
+      Position: {x: -16.200012, y: 1.7, z: -56.200012}
+      Height: 40
+      Footprint: 58.8
+      Yaw: 16.079964
+      BuildHeight: 40
+      Primary: {r: 0.627451, g: 0.8784314, b: 1, a: 1}
+      Accent: {r: 1, g: 1, b: 1, a: 1}
+      Interior: 1
+      LightProfile: Eisblau
+      SoundProfile: SFX_Amb_Water_0
+      Stages:
+      - Index: 1
+        Name: Halle
+        Position: {x: -16.200012, y: 2.1000001, z: -56.200012}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -16.200012, y: 2.1000001, z: -56.200012}
+      - Index: 2
+        Name: "Eisbr\xFCcke"
+        Position: {x: 28.576817, y: 2.7, z: -69.107216}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 28.576817, y: 2.7, z: -69.107216}
+      - Index: 3
+        Name: Decke
+        Position: {x: -16.200012, y: 21.9, z: -56.200012}
+        Gate:
+          Keys: 16
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -16.200012, y: 21.9, z: -56.200012}
+    Hazards:
+    - Id: kristalltiefe_h1
+      Kind: 4
+      Center: {x: -160.23457, y: 141.57443, z: -273.76874}
+      Size: {x: 40, y: 40}
+      Yaw: 0
+      Keys: 25
+      Circular: 1
+    - Id: kristalltiefe_h2
+      Kind: 5
+      Center: {x: -151.79666, y: 86.77645, z: -291.66635}
+      Size: {x: 30, y: 10}
+      Yaw: -59.803936
+      Keys: 26
+      Circular: 0
+    Climbs:
+    - Id: kristalltiefe_aufstieg
+      Name: Gipfelpfad
+      Base: {x: -73.28282, y: 1, z: -337.3552}
+      Peak: {x: -177, y: 170, z: -277}
+      LaunchTower: {x: -57.725246, y: 1, z: -346.40848}
+      DescentTarget: {x: 10, y: 1.7, z: -360}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: -148.06285, y: 62.180626, z: -293.83914}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -88.23883, y: 13.236125, z: -328.65198}
+        - {x: -103.19483, y: 25.47225, z: -319.94876}
+        - {x: -118.15084, y: 37.708378, z: -311.24557}
+        - {x: -133.10684, y: 49.9445, z: -302.54236}
+        - {x: -148.06285, y: 62.180626, z: -293.83914}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: -155.53049, y: 111.37228, z: -289.49356}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -149.92976, y: 74.47854, z: -292.75275}
+        - {x: -151.79666, y: 86.77645, z: -291.66635}
+        - {x: -153.66357, y: 99.07436, z: -290.57996}
+        - {x: -155.53049, y: 111.37228, z: -289.49356}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: -177, y: 170, z: -277}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -149.02092, y: 112.260574, z: -271.60748}
+        - {x: -198.69505, y: 127.36166, z: -283.37024}
+        - {x: -161.47034, y: 142.46274, z: -270.78287}
+        - {x: -186.6393, y: 157.56381, z: -281.96942}
+        - {x: -177, y: 170, z: -277}
+      FootPath:
+      - {x: -78.46869, y: 1, z: -334.33743}
+      - {x: -76.51505, y: 8.647578, z: -250.44327}
+      - {x: -129.78714, y: 16.295156, z: -195.86722}
+      - {x: -198.41327, y: 23.942734, z: -195.97684}
+      - {x: -240.73424, y: 31.590313, z: -239.91171}
+      - {x: -238.56139, y: 39.237892, z: -293.2698}
+      - {x: -203.9637, y: 46.885468, z: -323.3357}
+      - {x: -165.87366, y: 54.533047, z: -319.0996}
+      - {x: -148.06285, y: 62.180626, z: -293.83914}
+      - {x: -148.06285, y: 62.180626, z: -293.83914}
+      - {x: -145.15335, y: 65.255104, z: -268.5834}
+      - {x: -160.70406, y: 68.32958, z: -248.9963}
+      - {x: -185.14066, y: 71.40406, z: -246.1975}
+      - {x: -204.07024, y: 74.47854, z: -261.24725}
+      - {x: -206.75835, y: 77.55302, z: -284.86472}
+      - {x: -192.20955, y: 80.627495, z: -303.13678}
+      - {x: -169.41125, y: 83.70197, z: -305.7142}
+      - {x: -151.79668, y: 86.77645, z: -291.66635}
+      - {x: -149.32996, y: 89.85093, z: -269.6872}
+      - {x: -162.87685, y: 92.92541, z: -252.73012}
+      - {x: -184.03685, y: 95.999886, z: -250.37411}
+      - {x: -200.33641, y: 99.07436, z: -263.42004}
+      - {x: -202.58174, y: 102.14884, z: -283.7609}
+      - {x: -190.03676, y: 105.22332, z: -299.40298}
+      - {x: -170.51506, y: 108.2978, z: -301.5376}
+      - {x: -155.53049, y: 111.37228, z: -289.49356}
+      SpringerLedges:
+      - {x: -81.50759, y: 12.237227, z: -332.56903}
+      - {x: -89.73235, y: 23.274456, z: -327.78287}
+      - {x: -97.95712, y: 34.311684, z: -322.9967}
+      - {x: -106.181885, y: 45.34891, z: -318.21054}
+      - {x: -114.406654, y: 56.38614, z: -313.42438}
+      - {x: -122.631424, y: 67.42336, z: -308.6382}
+      - {x: -130.85619, y: 78.46059, z: -303.85205}
+      - {x: -139.08095, y: 89.49782, z: -299.0659}
+      - {x: -147.30573, y: 100.53504, z: -294.27972}
+      - {x: -155.53049, y: 111.57227, z: -289.49356}
+      ClimbPath:
+      - {x: -149.02092, y: 112.260574, z: -271.60748}
+      - {x: -150.86835, y: 113.14887, z: -266.53845}
+      - {x: -153.61157, y: 114.03717, z: -261.96918}
+      - {x: -157.12929, y: 114.92547, z: -258.0533}
+      - {x: -161.2748, y: 115.813774, z: -254.91704}
+      - {x: -165.88196, y: 116.70207, z: -252.65488}
+      - {x: -170.7718, y: 117.59037, z: -251.32704}
+      - {x: -175.75948, y: 118.47867, z: -250.95796}
+      - {x: -180.66113, y: 119.36697, z: -251.53633}
+      - {x: -185.30081, y: 120.255264, z: -253.0164}
+      - {x: -189.5167, y: 121.14356, z: -255.32045}
+      - {x: -193.16676, y: 122.03186, z: -258.34256}
+      - {x: -196.13353, y: 122.92016, z: -261.95322}
+      - {x: -198.32779, y: 123.808464, z: -266.00476}
+      - {x: -199.6912, y: 124.69676, z: -270.33728}
+      - {x: -200.19757, y: 125.58506, z: -274.7849}
+      - {x: -199.85307, y: 126.47336, z: -279.1822}
+      - {x: -198.69505, y: 127.36166, z: -283.37024}
+      - {x: -196.78983, y: 128.24995, z: -287.20236}
+      - {x: -194.22937, y: 129.13826, z: -290.54932}
+      - {x: -191.12717, y: 130.02655, z: -293.30362}
+      - {x: -187.61336, y: 130.91486, z: -295.38287}
+      - {x: -183.82939, y: 131.80315, z: -296.73224}
+      - {x: -179.92236, y: 132.69145, z: -297.3256}
+      - {x: -176.0394, y: 133.57974, z: -297.16565}
+      - {x: -172.32195, y: 134.46805, z: -296.28314}
+      - {x: -168.9009, y: 135.35634, z: -294.73456}
+      - {x: -165.89171, y: 136.24464, z: -292.5994}
+      - {x: -163.3907, y: 137.13295, z: -289.97644}
+      - {x: -161.47195, y: 138.02124, z: -286.97925}
+      - {x: -160.18526, y: 138.90955, z: -283.7316}
+      - {x: -159.55496, y: 139.79784, z: -280.36224}
+      - {x: -159.57997, y: 140.68614, z: -277}
+      - {x: -160.23457, y: 141.57443, z: -273.76874}
+      - {x: -161.47034, y: 142.46274, z: -270.78287}
+      - {x: -163.21872, y: 143.35103, z: -268.1433}
+      - {x: -165.39435, y: 144.23933, z: -265.93405}
+      - {x: -167.89906, y: 145.12762, z: -264.2195}
+      - {x: -170.626, y: 146.01593, z: -263.0429}
+      - {x: -173.46419, y: 146.90424, z: -262.42514}
+      - {x: -176.30286, y: 147.79253, z: -262.36505}
+      - {x: -179.03589, y: 148.68083, z: -262.84012}
+      - {x: -181.56567, y: 149.56912, z: -263.80835}
+      - {x: -183.80669, y: 150.45743, z: -265.21048}
+      - {x: -185.68823, y: 151.34572, z: -266.97324}
+      - {x: -187.15678, y: 152.23402, z: -269.01263}
+      - {x: -188.17726, y: 153.12231, z: -271.23773}
+      - {x: -188.73375, y: 154.01062, z: -273.55466}
+      - {x: -188.82924, y: 154.89893, z: -275.87045}
+      - {x: -188.48474, y: 155.78722, z: -278.09665}
+      - {x: -187.73761, y: 156.67552, z: -280.15286}
+      - {x: -186.6393, y: 157.56381, z: -281.96942}
+      - {x: -185.25261, y: 158.45212, z: -283.48993}
+      - {x: -183.64864, y: 159.34041, z: -284.67294}
+      - {x: -181.90334, y: 160.22871, z: -285.49283}
+      - {x: -180.09425, y: 161.11702, z: -285.94028}
+      - {x: -178.29713, y: 162.00531, z: -286.0218}
+      - {x: -176.58278, y: 162.89362, z: -285.75858}
+      - {x: -175.01433, y: 163.7819, z: -285.18503}
+      - {x: -173.64494, y: 164.67021, z: -284.34653}
+      - {x: -172.51598, y: 165.5585, z: -283.29694}
+      - {x: -171.65578, y: 166.44681, z: -282.0957}
+      - {x: -171.0791, y: 167.3351, z: -280.8051}
+      - {x: -170.78725, y: 168.2234, z: -279.4872}
+      - {x: -170.76862, y: 169.11171, z: -278.201}
+      - {x: -171, y: 170, z: -277}
+      LandmarkId: 
+    Secrets:
+    - Id: kristalltiefe_wz_haupt_4
+      Name: 'Kristallkathedrale: Krypta'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste in der Krypta."
+      Position: {x: -105.99924, y: 2.1000001, z: 329.84305}
+      Gate:
+        Keys: 1
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: kristalltiefe_wz_1_2
+      Name: "Kristallbr\xFCcken: Eisbr\xFCcke"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Kristallbr\xFCcken."
+      Position: {x: 28.576817, y: 2.7, z: -69.107216}
+      Gate:
+        Keys: 0
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: kristalltiefe_aufstieg_gipfel
+      Name: 'Gipfelpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -177, y: 170.4, z: -277}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: kristalltiefe_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 62, y: -4, z: 62}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: kristalltiefe_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -28, y: 4, z: 172}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: kristalltiefe_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -108, y: -4, z: 272}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: kristalltiefe_versteck4
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: 292, y: -4, z: -208}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: kristalltiefe_lore_szene1
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Tovin: \u201EWir sind zum Kristallkathedrale gegangen. Folge dem Rauch.\u201C"
+      Figure: Tovin
+      Position: {x: 79, y: 0, z: -2}
+    - Id: kristalltiefe_lore_szene2
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Tovin sp\xE4ter fand."
+      Figure: Tovin
+      Position: {x: -1, y: -4, z: 38}
+    - Id: kristalltiefe_lore_szene3
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Kristallkathedrale. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Tovin
+      Position: {x: 219, y: -3.937423, z: 138}
+    - Id: kristalltiefe_wz_haupt_lore
+      Title: Kristallkathedrale
+      Text: "Niemand hat sie gebaut. Die Kristalle wuchsen so, wie Menschen beten \u2013 nach oben, dem Licht entgegen."
+      Figure: Tovin
+      Position: {x: -126.23706, y: -2.4577727, z: 379.74414}
+    - Id: kristalltiefe_wz_1_lore
+      Title: "Kristallbr\xFCcken"
+      Text: "Die Br\xFCcken tragen nur den, der nicht z\xF6gert. Wer stehen bleibt, h\xF6rt das Kristall singen."
+      Figure: Tovin
+      Position: {x: -20.499681, y: 0.03922146, z: -85.55768}
+    - Id: kristalltiefe_aufstieg_lore
+      Title: Gipfelpfad
+      Text: "Wer den Gipfelpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Tovin
+      Position: {x: -145.56285, y: 62.180626, z: -291.33914}
+    Loops:
+    - Id: kristalltiefe_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: kristalltiefe_wz_haupt_4
+      TriggerPos: {x: -105.99924, y: 2.1000001, z: 329.84305}
+      TargetPos: {x: -105.99924, y: 2.1000001, z: 329.84305}
+      NextGoal: {x: 28.576817, y: 2.7, z: -69.107216}
+    - Id: kristalltiefe_schleife2
+      TriggerKind: Lichtstrahl
+      Target: kristalltiefe_wz_1_2
+      TriggerPos: {x: 28.576817, y: 2.7, z: -69.107216}
+      TargetPos: {x: 28.576817, y: 2.7, z: -69.107216}
+      NextGoal: {x: -177, y: 170.4, z: -277}
+    - Id: kristalltiefe_schleife3
+      TriggerKind: Vogelschwarm
+      Target: kristalltiefe_aufstieg_gipfel
+      TriggerPos: {x: -177, y: 170.4, z: -277}
+      TargetPos: {x: -177, y: 170.4, z: -277}
+      NextGoal: {x: 62, y: -4, z: 62}
+    - Id: kristalltiefe_schleife4
+      TriggerKind: Glocke
+      Target: kristalltiefe_hoehle
+      TriggerPos: {x: 62, y: -4, z: 62}
+      TargetPos: {x: 62, y: -4, z: 62}
+      NextGoal: {x: -28, y: 4, z: 172}
+    - Id: kristalltiefe_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: kristalltiefe_versteck2
+      TriggerPos: {x: -28, y: 4, z: 172}
+      TargetPos: {x: -28, y: 4, z: 172}
+      NextGoal: {x: -115.636734, y: 91.7, z: 359.83252}
+    Shortcuts:
+    - Id: kristalltiefe_abk_hang
+      Name: Springer-Wand am Gipfelpfad
+      Key: 2
+      From: {x: -73.28282, y: 1, z: -337.3552}
+      To: {x: -155.53049, y: 111.37228, z: -289.49356}
+      FootPath: 823.35785
+      MountPath: 174.87692
+    Scenes:
+    - Id: kristalltiefe_szene1
+      Kind: Lager
+      LoreId: kristalltiefe_lore_szene1
+      Position: {x: 76, y: 0, z: -4}
+    - Id: kristalltiefe_szene2
+      Kind: Schlachtfeld
+      LoreId: kristalltiefe_lore_szene2
+      Position: {x: -4, y: -4, z: 36}
+    - Id: kristalltiefe_szene3
+      Kind: Grab
+      LoreId: kristalltiefe_lore_szene3
+      Position: {x: 216, y: -3.937423, z: 136}
+    FootLinks: []
+    Pads:
+    - {x: -115.636734, y: 359.83252, z: 37.74, w: 1.7}
+    - {x: -16.200012, y: -56.200012, z: 49.98, w: 1.7}
+    MainVisibility: 0.972
+    CompactZone: 0

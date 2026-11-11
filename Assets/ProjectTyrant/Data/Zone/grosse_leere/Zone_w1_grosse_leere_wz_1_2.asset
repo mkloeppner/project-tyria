@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631f4299acbe61548b68a43d14115eb0, type: 3}
+  m_Name: Zone_w1_grosse_leere_wz_1_2
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.ZoneObjectDefinition
+  Id: w1_grosse_leere_wz_1_2
+  Kind: 2
+  DisplayName: "Riesen-Skelett \u2013 Schulter"
+  Description: Aussicht von Riesen-Skelett.
+  Position: {x: -36.757576, y: 38.572285, z: -25.183653}
+  Radius: 3
+  Experience: 782
+  Karma: 0
+  Copper: 0
+  HeroPoints: 0
+  Requires: 2
+  HeartTask: 
+  KillValue: 0
+  TaskValue: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ProjectTyrant
 {
-    public enum MapMarkerKind { Waypoint, PointOfInterest, Vista, HeroChallenge, Heart, Vendor, Event, EventBoss, Ally, Target, Personal, Portal, Insight, WorldBoss, Story, Scout }
+    public enum MapMarkerKind { Waypoint, PointOfInterest, Vista, HeroChallenge, Heart, Vendor, Event, EventBoss, Ally, Target, Personal, Portal, Insight, WorldBoss, Story, Scout, Landmark }
     public enum MarkerState { Open, Done, Undiscovered, Contested, Inactive }
 
     /// <summary>Momentaufnahme eines Markers (Struct, keine Allokation je Frame).</summary>
@@ -71,6 +71,7 @@ namespace ProjectTyrant
                 case MapMarkerKind.WorldBoss: return "Weltboss";
                 case MapMarkerKind.Story: return "Persönliche Geschichte";
                 case MapMarkerKind.Scout: return "Späher";
+                case MapMarkerKind.Landmark: return "Wahrzeichen";
             }
             return "";
         }
@@ -96,6 +97,7 @@ namespace ProjectTyrant
                 case MapMarkerKind.WorldBoss: return "map_worldboss";
                 case MapMarkerKind.Story: return "map_story";
                 case MapMarkerKind.Scout: return "map_scout";
+                case MapMarkerKind.Landmark: return "map_landmark";
             }
             return "map_poi";
         }

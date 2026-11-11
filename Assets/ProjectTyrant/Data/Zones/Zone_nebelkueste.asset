@@ -186,3 +186,439 @@ MonoBehaviour:
   - heart_nebelkueste_3
   Region: 2
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 1
+      Center: {x: 179, y: -341}
+      Radius: 124
+      Height: 150
+      Param: 0
+      Yaw: 176
+    - Kind: 5
+      Center: {x: -205, y: 315}
+      Radius: 85
+      Height: 60
+      Param: 0
+      Yaw: 27
+    - Kind: 7
+      Center: {x: 62, y: 82}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 219
+    Landmarks:
+    - Id: nebelkueste_wz_haupt
+      Name: Drachenknochen-Bogen
+      Lore: "Die Knochen eines Drachen, \xE4lter als das Meer. Der Bogen ist sein R\xFCckgrat \u2013 und manchmal knarrt er."
+      Kind: 5
+      Main: 1
+      Position: {x: 415, y: 2, z: 295}
+      Height: 160
+      Footprint: 96
+      Yaw: -125.40687
+      BuildHeight: 160
+      Primary: {r: 0.9098039, g: 0.8784314, b: 0.8156863, a: 1}
+      Accent: {r: 0.5019608, g: 0.7529412, b: 0.8156863, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_WindHigh_0
+      Stages:
+      - Index: 1
+        Name: Brust
+        Position: {x: 398.38254, y: 45.204765, z: 306.9405}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 398.38254, y: 45.204765, z: 306.9405}
+      - Index: 2
+        Name: Schulter
+        Position: {x: 402.9638, y: 71.5872, z: 259.66815}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 402.9638, y: 71.5872, z: 259.66815}
+      - Index: 3
+        Name: Kopf
+        Position: {x: 376.06912, y: 101.92761, z: 267.32623}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 376.06912, y: 101.92761, z: 267.32623}
+      - Index: 4
+        Name: Brustkammer
+        Position: {x: 430.6491, y: 2.4, z: 306.12408}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 430.6491, y: 2.4, z: 306.12408}
+    - Id: nebelkueste_wz_1
+      Name: Nebelturm
+      Lore: "Der Turm warnt Schiffe vor dem Bogen. Die Schiffe, die ihn nicht h\xF6rten, liegen darunter."
+      Kind: 6
+      Main: 0
+      Position: {x: 6.200012, y: 8, z: 86.20001}
+      Height: 50
+      Footprint: 21.2
+      Yaw: -175.88603
+      BuildHeight: 50
+      Primary: {r: 0.627451, g: 0.65882355, b: 0.6901961, a: 1}
+      Accent: {r: 0.7529412, g: 0.8784314, b: 1, a: 1}
+      Interior: 1
+      LightProfile: Laterne
+      SoundProfile: SFX_Amb_Water_0
+      Stages:
+      - Index: 1
+        Name: Treppe
+        Position: {x: 2.0108347, y: 8.4, z: 86.50132}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 2.0108347, y: 8.4, z: 86.50132}
+      - Index: 2
+        Name: "Au\xDFengalerie"
+        Position: {x: -2.8765392, y: 22, z: 86.85285}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -2.8765392, y: 22, z: 86.85285}
+      - Index: 3
+        Name: Laterne
+        Position: {x: 0.2653432, y: 54.4, z: 86.62687}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 0.2653432, y: 54.4, z: 86.62687}
+    Hazards:
+    - Id: nebelkueste_h1
+      Kind: 4
+      Center: {x: 199.12279, y: 125.14019, z: -338.7728}
+      Size: {x: 40, y: 40}
+      Yaw: 0
+      Keys: 25
+      Circular: 1
+    - Id: nebelkueste_h2
+      Kind: 6
+      Center: {x: 167.60916, y: 129.757, z: -345.89996}
+      Size: {x: 40, y: 14}
+      Yaw: -113.27579
+      Keys: 24
+      Circular: 0
+    Climbs:
+    - Id: nebelkueste_aufstieg
+      Name: Hochpfad
+      Base: {x: 54.06859, y: 2.07403, z: -394.74146}
+      Peak: {x: 179, y: 150, z: -341}
+      LaunchTower: {x: 37.533546, y: 2.07403, z: -401.8543}
+      DescentTarget: {x: 12, y: 2, z: -400}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: 123.185005, y: 53.62509, z: -365.00983}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 71.34769, y: 14.961796, z: -387.30853}
+        - {x: 88.62679, y: 27.849564, z: -379.8756}
+        - {x: 105.9059, y: 40.737328, z: -372.44272}
+        - {x: 123.185, y: 53.625095, z: -365.0098}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: 150.5229, y: 99.392525, z: -353.24994}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 130.01947, y: 65.066956, z: -362.06982}
+        - {x: 136.85394, y: 76.50881, z: -359.12988}
+        - {x: 143.68843, y: 87.95067, z: -356.1899}
+        - {x: 150.5229, y: 99.392525, z: -353.24994}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: 179, y: 150, z: -341}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 212.65651, y: 100.28037, z: -333.4574}
+        - {x: 161.49757, y: 115.37383, z: -360.0127}
+        - {x: 181.36153, y: 130.46729, z: -323.96994}
+        - {x: 182.85783, y: 145.56075, z: -348.6233}
+        - {x: 179, y: 150, z: -341}
+      FootPath:
+      - {x: 59.580276, y: 2.07403, z: -392.3705}
+      - {x: 134.08551, y: 8.517913, z: -453.72665}
+      - {x: 223.53035, y: 14.961796, z: -444.51855}
+      - {x: 275.6461, y: 21.405678, z: -379.50742}
+      - {x: 266.61737, y: 27.849562, z: -303.30984}
+      - {x: 211.1003, y: 34.293446, z: -260.43448}
+      - {x: 148.15001, y: 40.737328, z: -269.2838}
+      - {x: 114.51504, y: 47.18121, z: -315.30682}
+      - {x: 123.185005, y: 53.62509, z: -365.00983}
+      - {x: 123.18501, y: 53.625095, z: -365.00983}
+      - {x: 157.1988, y: 56.48556, z: -395.71677}
+      - {x: 201.53984, y: 59.346024, z: -393.39777}
+      - {x: 230.26099, y: 62.20649, z: -361.42426}
+      - {x: 227.98051, y: 65.066956, z: -319.93015}
+      - {x: 198.04736, y: 67.927414, z: -293.19482}
+      - {x: 159.40013, y: 70.78788, z: -295.43674}
+      - {x: 134.65059, y: 73.648346, z: -323.32956}
+      - {x: 136.85396, y: 76.50881, z: -359.12988}
+      - {x: 162.70647, y: 79.36928, z: -381.89362}
+      - {x: 195.65991, y: 82.22974, z: -379.72882}
+      - {x: 216.43785, y: 85.0902, z: -355.9166}
+      - {x: 214.31157, y: 87.95067, z: -325.8101}
+      - {x: 192.5397, y: 90.811134, z: -307.01794}
+      - {x: 165.28004, y: 93.67159, z: -309.10568}
+      - {x: 148.47374, y: 96.53206, z: -328.83722}
+      - {x: 150.5229, y: 99.392525, z: -353.24994}
+      SpringerLedges:
+      - {x: 64.785736, y: 13.087196, z: -390.1313}
+      - {x: 75.502884, y: 23.900364, z: -385.52112}
+      - {x: 86.220024, y: 34.71353, z: -380.91095}
+      - {x: 96.93717, y: 45.526695, z: -376.30078}
+      - {x: 107.65432, y: 56.339863, z: -371.6906}
+      - {x: 118.37147, y: 67.15302, z: -367.08044}
+      - {x: 129.08861, y: 77.966194, z: -362.47028}
+      - {x: 139.80576, y: 88.77936, z: -357.8601}
+      - {x: 150.5229, y: 99.59252, z: -353.24994}
+      ClimbPath:
+      - {x: 212.65651, y: 100.28037, z: -333.4574}
+      - {x: 209.73236, y: 101.16823, z: -326.49704}
+      - {x: 205.41551, y: 102.056076, z: -320.43997}
+      - {x: 199.95663, y: 102.943924, z: -315.55377}
+      - {x: 193.65508, y: 103.83178, z: -312.0408}
+      - {x: 186.84264, y: 104.71963, z: -310.03012}
+      - {x: 179.86627, y: 105.607475, z: -309.57324}
+      - {x: 173.0704, y: 106.49533, z: -310.6438}
+      - {x: 166.77997, y: 107.38318, z: -313.14114}
+      - {x: 161.28484, y: 108.27103, z: -316.89767}
+      - {x: 156.82655, y: 109.15888, z: -321.68915}
+      - {x: 153.58777, y: 110.04673, z: -327.2476}
+      - {x: 151.68503, y: 110.93458, z: -333.27606}
+      - {x: 151.16507, y: 111.82243, z: -339.4643}
+      - {x: 152.00478, y: 112.71028, z: -345.5047}
+      - {x: 154.11462, y: 113.59813, z: -351.10757}
+      - {x: 157.34538, y: 114.485985, z: -356.01498}
+      - {x: 161.49757, y: 115.37383, z: -360.0127}
+      - {x: 166.3333, y: 116.26168, z: -362.93936}
+      - {x: 171.5895, y: 117.149536, z: -364.69275}
+      - {x: 176.992, y: 118.037384, z: -365.2328}
+      - {x: 182.26999, y: 118.92523, z: -364.58145}
+      - {x: 187.16927, y: 119.81309, z: -362.81912}
+      - {x: 191.4647, y: 120.700935, z: -360.0786}
+      - {x: 194.97046, y: 121.58878, z: -356.5363}
+      - {x: 197.54797, y: 122.47664, z: -352.4014}
+      - {x: 199.11111, y: 123.36449, z: -347.90414}
+      - {x: 199.62848, y: 124.252335, z: -343.28314}
+      - {x: 199.12279, y: 125.14019, z: -338.7728}
+      - {x: 197.66748, y: 126.02804, z: -334.59143}
+      - {x: 195.3808, y: 126.915886, z: -330.93076}
+      - {x: 192.4177, y: 127.80374, z: -327.94705}
+      - {x: 188.96024, y: 128.69159, z: -325.75473}
+      - {x: 185.20691, y: 129.57944, z: -324.42206}
+      - {x: 181.36153, y: 130.46729, z: -323.96994}
+      - {x: 177.62222, y: 131.35513, z: -324.37274}
+      - {x: 174.17137, y: 132.243, z: -325.56204}
+      - {x: 171.16664, y: 133.13084, z: -327.43225}
+      - {x: 168.73381, y: 134.01869, z: -329.84796}
+      - {x: 166.96165, y: 134.90654, z: -332.6528}
+      - {x: 165.89902, y: 135.79439, z: -335.67883}
+      - {x: 165.5543, y: 136.68224, z: -338.75632}
+      - {x: 165.8971, y: 137.5701, z: -341.7229}
+      - {x: 166.8619, y: 138.45795, z: -344.43234}
+      - {x: 168.35373, y: 139.3458, z: -346.76147}
+      - {x: 170.255, y: 140.23364, z: -348.61603}
+      - {x: 172.43346, y: 141.12149, z: -349.9341}
+      - {x: 174.75049, y: 142.00935, z: -350.68793}
+      - {x: 177.06944, y: 142.8972, z: -350.8834}
+      - {x: 179.26346, y: 143.78505, z: -350.5578}
+      - {x: 181.22229, y: 144.6729, z: -349.77563}
+      - {x: 182.85783, y: 145.56075, z: -348.6233}
+      - {x: 184.10811, y: 146.4486, z: -347.20242}
+      - {x: 184.93933, y: 147.33646, z: -345.62274}
+      - {x: 185.34637, y: 148.2243, z: -343.9949}
+      - {x: 185.35124, y: 149.11215, z: -342.42334}
+      - {x: 185, y: 150, z: -341}
+      LandmarkId: 
+    Secrets:
+    - Id: nebelkueste_wz_haupt_4
+      Name: 'Drachenknochen-Bogen: Brustkammer'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Drachenknochen-Bogen."
+      Position: {x: 430.6491, y: 2.4, z: 306.12408}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelkueste_wz_1_2
+      Name: "Nebelturm: Au\xDFengalerie"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Nebelturm."
+      Position: {x: -2.8765392, y: 22, z: 86.85285}
+      Gate:
+        Keys: 2
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelkueste_aufstieg_gipfel
+      Name: 'Hochpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: 179, y: 150.4, z: -341}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelkueste_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 62, y: 4, z: 82}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelkueste_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -28, y: 4, z: 172}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelkueste_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -108, y: 8, z: 252}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelkueste_versteck4
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -188, y: 0, z: -188}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: nebelkueste_lore_szene1
+      Title: Wrack am Ufer
+      Text: "Das Wrack liegt mit dem Kiel nach oben. Im Logbuch steht nur ein Satz: \u201EKurs auf Drachenknochen-Bogen.\u201C Kael kannte den Kapit\xE4n."
+      Figure: Kael
+      Position: {x: -221, y: 0, z: -2}
+    - Id: nebelkueste_lore_szene2
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Drachenknochen-Bogen. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Kael
+      Position: {x: -1, y: 0, z: -302}
+    - Id: nebelkueste_lore_szene3
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Kael: \u201EWir sind zum Drachenknochen-Bogen gegangen. Folge dem Rauch.\u201C"
+      Figure: Kael
+      Position: {x: -81, y: 0, z: 98}
+    - Id: nebelkueste_wz_haupt_lore
+      Title: Drachenknochen-Bogen
+      Text: "Die Knochen eines Drachen, \xE4lter als das Meer. Der Bogen ist sein R\xFCckgrat \u2013 und manchmal knarrt er."
+      Figure: Kael
+      Position: {x: 451.8053, y: 0, z: 326.0704}
+    - Id: nebelkueste_wz_1_lore
+      Title: Nebelturm
+      Text: "Der Turm warnt Schiffe vor dem Bogen. Die Schiffe, die ihn nicht h\xF6rten, liegen darunter."
+      Figure: Kael
+      Position: {x: 2.9707694, y: 7.137499, z: 97.05966}
+    - Id: nebelkueste_aufstieg_lore
+      Title: Hochpfad
+      Text: "Wer den Hochpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Kael
+      Position: {x: 125.685005, y: 53.62509, z: -362.50983}
+    Loops:
+    - Id: nebelkueste_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: nebelkueste_wz_haupt_4
+      TriggerPos: {x: 430.6491, y: 2.4, z: 306.12408}
+      TargetPos: {x: 430.6491, y: 2.4, z: 306.12408}
+      NextGoal: {x: -2.8765392, y: 22, z: 86.85285}
+    - Id: nebelkueste_schleife2
+      TriggerKind: Lichtstrahl
+      Target: nebelkueste_wz_1_2
+      TriggerPos: {x: -2.8765392, y: 22, z: 86.85285}
+      TargetPos: {x: -2.8765392, y: 22, z: 86.85285}
+      NextGoal: {x: 179, y: 150.4, z: -341}
+    - Id: nebelkueste_schleife3
+      TriggerKind: Vogelschwarm
+      Target: nebelkueste_aufstieg_gipfel
+      TriggerPos: {x: 179, y: 150.4, z: -341}
+      TargetPos: {x: 179, y: 150.4, z: -341}
+      NextGoal: {x: 62, y: 4, z: 82}
+    - Id: nebelkueste_schleife4
+      TriggerKind: Glocke
+      Target: nebelkueste_hoehle
+      TriggerPos: {x: 62, y: 4, z: 82}
+      TargetPos: {x: 62, y: 4, z: 82}
+      NextGoal: {x: -28, y: 4, z: 172}
+    - Id: nebelkueste_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: nebelkueste_versteck2
+      TriggerPos: {x: -28, y: 4, z: 172}
+      TargetPos: {x: -28, y: 4, z: 172}
+      NextGoal: {x: 415, y: 162, z: 295}
+    Shortcuts:
+    - Id: nebelkueste_abk_hang
+      Name: Springer-Wand am Hochpfad
+      Key: 2
+      From: {x: 54.06859, y: 2.07403, z: -394.74146}
+      To: {x: 150.5229, y: 99.392525, z: -353.24994}
+      FootPath: 1154.4839
+      MountPath: 171.79655
+    Scenes:
+    - Id: nebelkueste_szene1
+      Kind: Wrack
+      LoreId: nebelkueste_lore_szene1
+      Position: {x: -224, y: 0, z: -4}
+    - Id: nebelkueste_szene2
+      Kind: Grab
+      LoreId: nebelkueste_lore_szene2
+      Position: {x: -4, y: 0, z: -304}
+    - Id: nebelkueste_szene3
+      Kind: Lager
+      LoreId: nebelkueste_lore_szene3
+      Position: {x: -84, y: 0, z: 96}
+    FootLinks: []
+    Pads:
+    - {x: 415, y: 295, z: 81.600006, w: 2}
+    - {x: 6.200012, y: 86.20001, z: 18.02, w: 8}
+    MainVisibility: 0.938
+    CompactZone: 0

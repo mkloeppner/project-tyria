@@ -5,7 +5,13 @@ using UnityEngine;
 namespace ProjectTyrant
 {
     /// <summary>Fortbewegungs-Fähigkeiten, die Gelände freischalten (Reittiere; Gleiten wird nicht als Pflicht verwendet).</summary>
-    [Flags] public enum Traversal { None = 0, Raptor = 1, Springer = 2, Skimmer = 4 }
+    [Flags] public enum Traversal
+    {
+        None = 0, Raptor = 1, Springer = 2, Skimmer = 4,
+        // Welt-Lauf W1: weitere Schlüssel für Reittier-Tore (Flutfüllung nutzt nur die ersten drei)
+        Griffon = 8, Skyscale = 16, DuneRunner = 32, Boat = 64, JadeBot = 128, CorruptionWard = 256, LavaSkimmer = 512,
+        All = 1023
+    }
 
     /// <summary>Gelände-Raster für die Erreichbarkeit: Höhe + Art (Land, tiefes Wasser, Lava).</summary>
     public class ReachabilityGrid
@@ -158,6 +164,13 @@ namespace ProjectTyrant
             if ((t & Traversal.Raptor) != 0) parts.Add("Raptor");
             if ((t & Traversal.Springer) != 0) parts.Add("Springer");
             if ((t & Traversal.Skimmer) != 0) parts.Add("Skimmer");
+            if ((t & Traversal.LavaSkimmer) != 0) parts.Add("Skimmer mit Glutschritt");
+            if ((t & Traversal.Griffon) != 0) parts.Add("Greif");
+            if ((t & Traversal.Skyscale) != 0) parts.Add("Himmelsschuppe");
+            if ((t & Traversal.DuneRunner) != 0) parts.Add("Dünenläufer");
+            if ((t & Traversal.Boat) != 0) parts.Add("Boot");
+            if ((t & Traversal.JadeBot) != 0) parts.Add("Jadegeist");
+            if ((t & Traversal.CorruptionWard) != 0) parts.Add("Verderbnis-Widerstand");
             return string.Join(" + ", parts);
         }
     }

@@ -173,3 +173,439 @@ MonoBehaviour:
   - heart_spiegel_der_sonne_3
   Region: 1
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 1
+      Center: {x: -187, y: 433}
+      Radius: 108
+      Height: 150
+      Param: 0
+      Yaw: 163
+    - Kind: 2
+      Center: {x: 85, y: 425}
+      Radius: 55
+      Height: 47.60973
+      Param: 4
+      Yaw: 125
+    - Kind: 6
+      Center: {x: -97, y: -137}
+      Radius: 34
+      Height: 0
+      Param: 2.2
+      Yaw: 0
+    - Kind: 6
+      Center: {x: 148, y: 28}
+      Radius: 46
+      Height: 0
+      Param: 1.2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: 148, y: 28}
+      Radius: 6
+      Height: 3.2
+      Param: 2.5
+      Yaw: 0
+    - Kind: 7
+      Center: {x: 32, y: 92}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 289
+    Landmarks:
+    - Id: spiegel_der_sonne_wz_haupt
+      Name: Spiegeltempel
+      Lore: "Der Tempel spiegelt sich im Salz so klar, dass Pilger zum falschen gingen \u2013 und nie ankamen."
+      Kind: 3
+      Main: 1
+      Position: {x: 40.679993, y: 2.8000002, z: 20.679993}
+      Height: 70
+      Footprint: 25.68
+      Yaw: -116.94687
+      BuildHeight: 70
+      Primary: {r: 0.9411765, g: 0.9098039, b: 0.84705883, a: 1}
+      Accent: {r: 1, g: 0.8156863, b: 0.2509804, a: 1}
+      Interior: 1
+      LightProfile: Laternen
+      SoundProfile: SFX_Amb_Bell_2
+      Stages:
+      - Index: 1
+        Name: Ebene 3
+        Position: {x: 40.679993, y: 18.755554, z: 20.679993}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 40.679993, y: 18.755554, z: 20.679993}
+      - Index: 2
+        Name: Balkon
+        Position: {x: 36.1121, y: 33.91111, z: 29.665577}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 36.1121, y: 33.91111, z: 29.665577}
+      - Index: 3
+        Name: Spitze
+        Position: {x: 37.6848, y: 73.200005, z: 19.157362}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 37.6848, y: 73.200005, z: 19.157362}
+    - Id: spiegel_der_sonne_wz_1
+      Name: Versunkene Salzstadt
+      Lore: "Die Stadt versank im Salz, nicht im Wasser. Die H\xE4user stehen noch, nur tiefer."
+      Kind: 8
+      Main: 0
+      Position: {x: -97, y: 1.6, z: -137}
+      Height: 30
+      Footprint: 48
+      Yaw: 35.29961
+      BuildHeight: 30
+      Primary: {r: 0.8784314, g: 0.84705883, b: 0.78431374, a: 1}
+      Accent: {r: 0.627451, g: 0.7529412, b: 0.8156863, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_Bell_0
+      Stages:
+      - Index: 1
+        Name: Halle
+        Position: {x: -117.80267, y: 2, z: -166.3811}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -117.80267, y: 2, z: -166.3811}
+      - Index: 2
+        Name: "D\xE4cher"
+        Position: {x: -82.30945, y: 9.6, z: -147.40134}
+        Gate:
+          Keys: 5
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -82.30945, y: 9.6, z: -147.40134}
+      - Index: 3
+        Name: Turm
+        Position: {x: -79.66444, y: 29, z: -112.515755}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -79.66444, y: 29, z: -112.515755}
+    Hazards:
+    - Id: spiegel_der_sonne_h1
+      Kind: 0
+      Center: {x: 148, y: 1.6, z: 28}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 28
+      Circular: 1
+    Climbs:
+    - Id: spiegel_der_sonne_aufstieg
+      Name: Hochpfad
+      Base: {x: -162.2987, y: 2.481628, z: 315.56982}
+      Peak: {x: -187, y: 150, z: 433}
+      LaunchTower: {x: -158.5935, y: 2.481628, z: 297.9553}
+      DescentTarget: {x: 291.0974, y: 2.8000002, z: 207.60985}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: -176.1067, y: 53.62508, z: 381.21323}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -165.7507, y: 15.267491, z: 331.98068}
+        - {x: -169.20271, y: 28.053354, z: 348.39154}
+        - {x: -172.65472, y: 40.83922, z: 364.80237}
+        - {x: -176.10672, y: 53.62508, z: 381.21323}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: -181.44218, y: 99.392525, z: 406.57812}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -177.44058, y: 65.06694, z: 387.55444}
+        - {x: -178.77446, y: 76.508804, z: 393.8957}
+        - {x: -180.10834, y: 87.95066, z: 400.2369}
+        - {x: -181.4422, y: 99.392525, z: 406.57812}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: -187, y: 150, z: 433}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -157.1782, y: 100.28037, z: 439.68323}
+        - {x: -202.6488, y: 115.37383, z: 416.00085}
+        - {x: -184.85052, y: 130.46729, z: 448.50082}
+        - {x: -183.3006, y: 145.56075, z: 425.68976}
+        - {x: -187, y: 150, z: 433}
+      FootPath:
+      - {x: -163.53377, y: 2.481628, z: 321.44135}
+      - {x: -97.91741, y: 8.874559, z: 374.88107}
+      - {x: -90.384285, y: 15.26749, z: 453.323}
+      - {x: -137.22476, y: 21.660423, z: 509.2937}
+      - {x: -204.17976, y: 28.053354, z: 514.6727}
+      - {x: -250.50484, y: 34.446285, z: 474.43155}
+      - {x: -253.72975, y: 40.83922, z: 418.96347}
+      - {x: -220.08788, y: 47.232147, z: 382.28406}
+      - {x: -176.1067, y: 53.62508, z: 381.21323}
+      - {x: -176.1067, y: 53.62508, z: 381.21323}
+      - {x: -144.03528, y: 56.485546, z: 404.96912}
+      - {x: -138.38385, y: 59.346012, z: 443.22635}
+      - {x: -160.73949, y: 62.206474, z: 473.25116}
+      - {x: -196.55942, y: 65.06694, z: 478.44553}
+      - {x: -224.53763, y: 67.92741, z: 457.4901}
+      - {x: -229.27493, y: 70.78787, z: 424.1075}
+      - {x: -209.71977, y: 73.64834, z: 398.17593}
+      - {x: -178.77444, y: 76.508804, z: 393.89566}
+      - {x: -154.8895, y: 79.36927, z: 412.0506}
+      - {x: -151.06628, y: 82.22974, z: 440.55862}
+      - {x: -167.82098, y: 85.090195, z: 462.39694}
+      - {x: -193.89168, y: 87.95066, z: 465.7631}
+      - {x: -213.68338, y: 90.81113, z: 450.40866}
+      - {x: -216.59248, y: 93.67159, z: 426.77524}
+      - {x: -202.6383, y: 96.53206, z: 409.03018}
+      - {x: -181.44218, y: 99.392525, z: 406.57812}
+      SpringerLedges:
+      - {x: -164.42577, y: 13.449505, z: 325.68185}
+      - {x: -166.55281, y: 24.217384, z: 335.79388}
+      - {x: -168.67987, y: 34.985264, z: 345.9059}
+      - {x: -170.80692, y: 45.75314, z: 356.01794}
+      - {x: -172.93398, y: 56.52102, z: 366.13}
+      - {x: -175.06102, y: 67.288895, z: 376.24203}
+      - {x: -177.18808, y: 78.05677, z: 386.35406}
+      - {x: -179.31512, y: 88.824646, z: 396.4661}
+      - {x: -181.44218, y: 99.59252, z: 406.57812}
+      ClimbPath:
+      - {x: -157.1782, y: 100.28037, z: 439.68323}
+      - {x: -159.75815, y: 101.16823, z: 445.85574}
+      - {x: -163.57492, y: 102.056076, z: 451.23248}
+      - {x: -168.40782, y: 102.943924, z: 455.57523}
+      - {x: -173.99263, y: 103.83178, z: 458.70325}
+      - {x: -180.03595, y: 104.71963, z: 460.50043}
+      - {x: -186.23041, y: 105.607475, z: 460.91928}
+      - {x: -192.27037, y: 106.49533, z: 459.98138}
+      - {x: -197.86694, y: 107.38318, z: 457.77414}
+      - {x: -202.76181, y: 108.27103, z: 454.4447}
+      - {x: -206.73912, y: 109.15888, z: 450.19083}
+      - {x: -209.63493, y: 110.04673, z: 445.24942}
+      - {x: -211.34375, y: 110.93458, z: 439.88376}
+      - {x: -211.82196, y: 111.82243, z: 434.36948}
+      - {x: -211.08804, y: 112.71028, z: 428.9804}
+      - {x: -209.21967, y: 113.59813, z: 423.97516}
+      - {x: -206.34787, y: 114.485985, z: 419.58447}
+      - {x: -202.6488, y: 115.37383, z: 416.00085}
+      - {x: -198.33336, y: 116.26168, z: 413.37003}
+      - {x: -193.63542, y: 117.149536, z: 411.78537}
+      - {x: -188.79936, y: 118.037384, z: 411.28488}
+      - {x: -184.06737, y: 118.92523, z: 411.85144}
+      - {x: -179.66734, y: 119.81309, z: 413.41537}
+      - {x: -175.80193, y: 120.700935, z: 415.86008}
+      - {x: -172.63916, y: 121.58878, z: 419.02957}
+      - {x: -170.30533, y: 122.47664, z: 422.73782}
+      - {x: -168.88008, y: 123.36449, z: 426.77945}
+      - {x: -168.39427, y: 124.252335, z: 430.94073}
+      - {x: -168.83022, y: 125.14019, z: 435.01105}
+      - {x: -170.12459, y: 126.02804, z: 438.79333}
+      - {x: -172.17358, y: 126.915886, z: 442.11377}
+      - {x: -174.83983, y: 127.80374, z: 444.82962}
+      - {x: -177.96094, y: 128.69159, z: 446.8353}
+      - {x: -181.35902, y: 129.57944, z: 448.06638}
+      - {x: -184.85052, y: 130.46729, z: 448.50082}
+      - {x: -188.25607, y: 131.35513, z: 448.1586}
+      - {x: -191.40967, y: 132.243, z: 447.09842}
+      - {x: -194.16669, y: 133.13084, z: 445.41306}
+      - {x: -196.41068, y: 134.01869, z: 443.22272}
+      - {x: -198.05798, y: 134.90654, z: 440.66742}
+      - {x: -199.0607, y: 135.79439, z: 437.89862}
+      - {x: -199.40741, y: 136.68224, z: 435.07043}
+      - {x: -199.12193, y: 137.5701, z: 432.3312}
+      - {x: -198.26024, y: 138.45795, z: 429.81592}
+      - {x: -196.90567, y: 139.3458, z: 427.6393}
+      - {x: -195.16289, y: 140.23364, z: 425.89093}
+      - {x: -193.15094, y: 141.12149, z: 424.63135}
+      - {x: -190.9958, y: 142.00935, z: 423.89044}
+      - {x: -188.82294, y: 142.8972, z: 423.6676}
+      - {x: -186.75008, y: 143.78505, z: 423.93326}
+      - {x: -184.88107, y: 144.6729, z: 424.63254}
+      - {x: -183.3006, y: 145.56075, z: 425.68976}
+      - {x: -182.07034, y: 146.4486, z: 427.01425}
+      - {x: -181.2268, y: 147.33646, z: 428.50656}
+      - {x: -180.78055, y: 148.2243, z: 430.06497}
+      - {x: -180.71724, y: 149.11215, z: 431.592}
+      - {x: -181, y: 150, z: 433}
+      LandmarkId: 
+    Secrets:
+    - Id: spiegel_der_sonne_h1_insel
+      Name: Insel im Treibsand
+      Hint: "Etwas glitzert in der Mitte \u2013 Treibsand sch\xFCtzt es."
+      Position: {x: 148, y: 3.2, z: 28}
+      Gate:
+        Keys: 28
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: spiegel_der_sonne_wz_1_2
+      Name: "Versunkene Salzstadt: D\xE4cher"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Versunkene Salzstadt."
+      Position: {x: -82.30945, y: 9.6, z: -147.40134}
+      Gate:
+        Keys: 5
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: spiegel_der_sonne_aufstieg_gipfel
+      Name: 'Hochpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -187, y: 150.4, z: 433}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: spiegel_der_sonne_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 32, y: 2.9460645, z: 92}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: spiegel_der_sonne_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -38, y: 2.531929, z: 182}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: spiegel_der_sonne_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -118, y: 2.2185516, z: 262}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: spiegel_der_sonne_versteck4
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -178, y: 2.6190193, z: -198}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: spiegel_der_sonne_lore_szene1
+      Title: Gestrandete Karawane
+      Text: "Die Karawane blieb im Sand stecken. Die Kisten sind leer \u2013 bis auf eine, und die zeigt mit ihren Spuren zum Spiegeltempel."
+      Figure: Ilyas
+      Position: {x: -211, y: 2.4934814, z: 8}
+    - Id: spiegel_der_sonne_lore_szene2
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Spiegeltempel. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Ilyas
+      Position: {x: -11, y: 2.2816772, z: 48}
+    - Id: spiegel_der_sonne_lore_szene3
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Ilyas sp\xE4ter fand."
+      Figure: Ilyas
+      Position: {x: -91, y: 2.6650848, z: 128}
+    - Id: spiegel_der_sonne_wz_haupt_lore
+      Title: Spiegeltempel
+      Text: "Der Tempel spiegelt sich im Salz so klar, dass Pilger zum falschen gingen \u2013 und nie ankamen."
+      Figure: Ilyas
+      Position: {x: 50.313263, y: 2.6161027, z: 30.064327}
+    - Id: spiegel_der_sonne_wz_1_lore
+      Title: Versunkene Salzstadt
+      Text: "Die Stadt versank im Salz, nicht im Wasser. Die H\xE4user stehen noch, nur tiefer."
+      Figure: Ilyas
+      Position: {x: -107.60388, y: 1.9753281, z: -158.8988}
+    - Id: spiegel_der_sonne_aufstieg_lore
+      Title: Hochpfad
+      Text: "Wer den Hochpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Ilyas
+      Position: {x: -173.6067, y: 53.62508, z: 383.71323}
+    Loops:
+    - Id: spiegel_der_sonne_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: spiegel_der_sonne_h1_insel
+      TriggerPos: {x: 148, y: 3.2, z: 28}
+      TargetPos: {x: 148, y: 3.2, z: 28}
+      NextGoal: {x: -82.30945, y: 9.6, z: -147.40134}
+    - Id: spiegel_der_sonne_schleife2
+      TriggerKind: Lichtstrahl
+      Target: spiegel_der_sonne_wz_1_2
+      TriggerPos: {x: -82.30945, y: 9.6, z: -147.40134}
+      TargetPos: {x: -82.30945, y: 9.6, z: -147.40134}
+      NextGoal: {x: -187, y: 150.4, z: 433}
+    - Id: spiegel_der_sonne_schleife3
+      TriggerKind: Vogelschwarm
+      Target: spiegel_der_sonne_aufstieg_gipfel
+      TriggerPos: {x: -187, y: 150.4, z: 433}
+      TargetPos: {x: -187, y: 150.4, z: 433}
+      NextGoal: {x: 32, y: 2.9460645, z: 92}
+    - Id: spiegel_der_sonne_schleife4
+      TriggerKind: Glocke
+      Target: spiegel_der_sonne_hoehle
+      TriggerPos: {x: 32, y: 2.9460645, z: 92}
+      TargetPos: {x: 32, y: 2.9460645, z: 92}
+      NextGoal: {x: -38, y: 2.531929, z: 182}
+    - Id: spiegel_der_sonne_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: spiegel_der_sonne_versteck2
+      TriggerPos: {x: -38, y: 2.531929, z: 182}
+      TargetPos: {x: -38, y: 2.531929, z: 182}
+      NextGoal: {x: 40.679993, y: 72.8, z: 20.679993}
+    Shortcuts:
+    - Id: spiegel_der_sonne_abk_hang
+      Name: Springer-Wand am Hochpfad
+      Key: 2
+      From: {x: -162.2987, y: 2.481628, z: 315.56982}
+      To: {x: -181.44218, y: 99.392525, z: 406.57812}
+      FootPath: 1009.0892
+      MountPath: 161.17883
+    Scenes:
+    - Id: spiegel_der_sonne_szene1
+      Kind: Karawane
+      LoreId: spiegel_der_sonne_lore_szene1
+      Position: {x: -214, y: 2.4934814, z: 6}
+    - Id: spiegel_der_sonne_szene2
+      Kind: Grab
+      LoreId: spiegel_der_sonne_lore_szene2
+      Position: {x: -14, y: 2.2816772, z: 46}
+    - Id: spiegel_der_sonne_szene3
+      Kind: Schlachtfeld
+      LoreId: spiegel_der_sonne_lore_szene3
+      Position: {x: -94, y: 2.6650848, z: 126}
+    FootLinks: []
+    Pads:
+    - {x: 40.679993, y: 20.679993, z: 21.828001, w: 2.8000002}
+    MainVisibility: 0.96
+    CompactZone: 0

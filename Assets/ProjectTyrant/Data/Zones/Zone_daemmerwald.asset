@@ -203,3 +203,460 @@ MonoBehaviour:
   - heart_wald_laternen
   Region: 0
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 0
+      Center: {x: -285, y: -345}
+      Radius: 110
+      Height: 160
+      Param: 0
+      Yaw: 67
+    - Kind: 1
+      Center: {x: -155, y: 305}
+      Radius: 85
+      Height: 30
+      Param: 0
+      Yaw: 176
+    - Kind: 7
+      Center: {x: 32, y: 112}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 196
+    Landmarks:
+    - Id: daemmerwald_wz_haupt
+      Name: "D\xE4mmerkathedrale"
+      Lore: "Wurzeln drangen durch den Boden der Kathedrale, als die Verderbnis kam. Die M\xF6nche blieben \u2013 in der Krypta, hei\xDFt es, wachen sie noch."
+      Kind: 0
+      Main: 1
+      Position: {x: 70.76001, y: -1.1469597, z: 30.76001}
+      Height: 140
+      Footprint: 55.76
+      Yaw: -113.49502
+      BuildHeight: 140
+      Primary: {r: 0.2901961, g: 0.26666668, b: 0.34509805, a: 1}
+      Accent: {r: 0.6901961, g: 0.5019608, b: 1, a: 1}
+      Interior: 1
+      LightProfile: "Lichtsch\xE4chte"
+      SoundProfile: SFX_Amb_Bell_0
+      Stages:
+      - Index: 1
+        Name: Galerie
+        Position: {x: 71.736206, y: 7.85304, z: 19.735172}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 71.736206, y: 7.85304, z: 19.735172}
+      - Index: 2
+        Name: Turmgalerie
+        Position: {x: 100.276054, y: 101.89304, z: 33.162395}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 100.276054, y: 101.89304, z: 33.162395}
+      - Index: 3
+        Name: Turmspitze
+        Position: {x: 104.99269, y: 111.45304, z: 25.054514}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: 104.99269, y: 111.45304, z: 25.054514}
+      - Index: 4
+        Name: Krypta
+        Position: {x: 30.40784, y: -0.7469597, z: 13.218557}
+        Gate:
+          Keys: 3
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 30.40784, y: -0.7469597, z: 13.218557}
+    - Id: daemmerwald_wz_1
+      Name: "H\xE4ngende G\xE4rten"
+      Lore: "Die G\xE4rten hingen einst \xFCber dem Kreuzgang. Jetzt h\xE4ngen sie \xFCber dem Nichts."
+      Kind: 4
+      Main: 0
+      Position: {x: -135, y: 4.3153634, z: 45}
+      Height: 55
+      Footprint: 30
+      Yaw: 108.43495
+      BuildHeight: 55
+      Primary: {r: 0.2901961, g: 0.41568628, b: 0.22745098, a: 1}
+      Accent: {r: 0.8784314, g: 0.627451, b: 1, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_BirdCall_0
+      Stages:
+      - Index: 1
+        Name: Wurzelhalle
+        Position: {x: -135, y: 4.7153635, z: 45}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -135, y: 4.7153635, z: 45}
+      - Index: 2
+        Name: "\xC4ste"
+        Position: {x: -129.60811, y: 30.565363, z: 41.36991}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -129.60811, y: 30.565363, z: 41.36991}
+      - Index: 3
+        Name: Kronendorf
+        Position: {x: -138.54175, y: 44.515366, z: 34.37475}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -138.54175, y: 44.515366, z: 34.37475}
+      - Index: 4
+        Name: Krone
+        Position: {x: -135, y: 68.015366, z: 45}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: -135, y: 68.015366, z: 45}
+    Hazards:
+    - Id: daemmerwald_h1
+      Kind: 8
+      Center: {x: -14, y: -0.56269807, z: -54}
+      Size: {x: 20, y: 20}
+      Yaw: 0
+      Keys: 27
+      Circular: 1
+    - Id: daemmerwald_h2
+      Kind: 9
+      Center: {x: 30.40784, y: -0.7469597, z: 13.218557}
+      Size: {x: 26, y: 26}
+      Yaw: 0
+      Keys: 280
+      Circular: 1
+    - Id: daemmerwald_h3
+      Kind: 8
+      Center: {x: 106, y: 4.268134, z: 146}
+      Size: {x: 20, y: 20}
+      Yaw: 0
+      Keys: 27
+      Circular: 1
+    Climbs:
+    - Id: daemmerwald_aufstieg
+      Name: Gipfelpfad
+      Base: {x: -167.0169, y: 1.042482, z: -376.0482}
+      Peak: {x: -285, y: 160, z: -345}
+      LaunchTower: {x: -149.60956, y: 1.042482, z: -380.62906}
+      DescentTarget: {x: -160, y: 3.5061016, z: -180}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: -248.83134, y: 59.189114, z: -354.51807}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -187.47052, y: 15.57914, z: -370.66565}
+        - {x: -207.92413, y: 30.115797, z: -365.28314}
+        - {x: -228.37773, y: 44.652454, z: -359.9006}
+        - {x: -248.83134, y: 59.189114, z: -354.51807}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: -257.34158, y: 105.99166, z: -352.27853}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -250.95891, y: 70.88975, z: -353.9582}
+        - {x: -253.08646, y: 82.590385, z: -353.39832}
+        - {x: -255.21402, y: 94.29102, z: -352.8384}
+        - {x: -257.34158, y: 105.99166, z: -352.27853}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: -285, y: 160, z: -345}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: -253.51607, y: 106.877045, z: -338.42078}
+        - {x: -305.8842, y: 121.92855, z: -358.28372}
+        - {x: -274.59363, y: 136.98006, z: -331.1326}
+        - {x: -287.77377, y: 152.03156, z: -354.5291}
+        - {x: -285, y: 160, z: -345}
+      FootPath:
+      - {x: -172.81935, y: 1.042482, z: -374.52124}
+      - {x: -193.28827, y: 8.310811, z: -291.5015}
+      - {x: -260.47955, y: 15.579141, z: -251.82236}
+      - {x: -328.59744, y: 22.84747, z: -270.2615}
+      - {x: -359.17465, y: 30.115799, z: -325.48035}
+      - {x: -342.76523, y: 37.38413, z: -378.6964}
+      - {x: -299.51886, y: 44.65246, z: -400.17166}
+      - {x: -261.20465, y: 51.920788, z: -385.79202}
+      - {x: -248.83134, y: 59.189114, z: -354.51807}
+      - {x: -248.83134, y: 59.189114, z: -354.51807}
+      - {x: -253.16968, y: 62.114273, z: -326.4323}
+      - {x: -275.76187, y: 65.03943, z: -309.8951}
+      - {x: -303.01343, y: 67.96459, z: -314.11984}
+      - {x: -319.0411, y: 70.88975, z: -336.0418}
+      - {x: -314.93002, y: 73.81491, z: -362.45917}
+      - {x: -293.67822, y: 76.74007, z: -377.9773}
+      - {x: -268.09506, y: 79.66523, z: -373.97986}
+      - {x: -253.08647, y: 82.590385, z: -353.3983}
+      - {x: -256.9703, y: 85.51555, z: -328.64935}
+      - {x: -276.88165, y: 88.440704, z: -314.15024}
+      - {x: -300.79642, y: 91.36587, z: -317.92047}
+      - {x: -314.78598, y: 94.29102, z: -337.1616}
+      - {x: -311.1294, y: 97.21619, z: -360.24216}
+      - {x: -292.55844, y: 100.14134, z: -373.7222}
+      - {x: -270.31213, y: 103.066505, z: -370.17923}
+      - {x: -257.34158, y: 105.99166, z: -352.27853}
+      SpringerLedges:
+      - {x: -177.05298, y: 12.9035015, z: -373.4071}
+      - {x: -187.08905, y: 24.564524, z: -370.76605}
+      - {x: -197.12514, y: 36.225544, z: -368.12497}
+      - {x: -207.16121, y: 47.886562, z: -365.4839}
+      - {x: -217.19728, y: 59.547585, z: -362.84283}
+      - {x: -227.23335, y: 71.2086, z: -360.20175}
+      - {x: -237.26944, y: 82.86962, z: -357.56067}
+      - {x: -247.30551, y: 94.53064, z: -354.91962}
+      - {x: -257.34158, y: 106.19166, z: -352.27853}
+      ClimbPath:
+      - {x: -253.51607, y: 106.877045, z: -338.42078}
+      - {x: -255.92714, y: 107.76243, z: -332.2944}
+      - {x: -259.49622, y: 108.64781, z: -326.8688}
+      - {x: -264.04047, y: 109.53319, z: -322.35538}
+      - {x: -269.34012, y: 110.41857, z: -318.9207}
+      - {x: -275.14908, y: 111.303955, z: -316.68073}
+      - {x: -281.20615, y: 112.18934, z: -315.69696}
+      - {x: -287.2467, y: 113.07472, z: -315.97528}
+      - {x: -293.0144, y: 113.960106, z: -317.46722}
+      - {x: -298.27188, y: 114.84549, z: -320.07367}
+      - {x: -302.81064, y: 115.73087, z: -323.65036}
+      - {x: -306.45923, y: 116.61625, z: -328.0156}
+      - {x: -309.08963, y: 117.50163, z: -332.95923}
+      - {x: -310.62155, y: 118.38702, z: -338.25244}
+      - {x: -311.02454, y: 119.2724, z: -343.6585}
+      - {x: -310.31778, y: 120.15778, z: -348.94315}
+      - {x: -308.56784, y: 121.04317, z: -353.88474}
+      - {x: -305.8842, y: 121.92855, z: -358.28372}
+      - {x: -302.41312, y: 122.81393, z: -361.9704}
+      - {x: -298.33017, y: 123.69931, z: -364.81165}
+      - {x: -293.8315, y: 124.584694, z: -366.7155}
+      - {x: -289.12463, y: 125.47008, z: -367.63385}
+      - {x: -284.41885, y: 126.35546, z: -367.56305}
+      - {x: -279.916, y: 127.240845, z: -366.5427}
+      - {x: -275.80173, y: 128.12622, z: -364.6523}
+      - {x: -272.23804, y: 129.01161, z: -362.00647}
+      - {x: -269.35672, y: 129.89699, z: -358.7485}
+      - {x: -267.2547, y: 130.78238, z: -355.04315}
+      - {x: -265.99097, y: 131.66776, z: -351.06836}
+      - {x: -265.58536, y: 132.55315, z: -347.00687}
+      - {x: -266.01913, y: 133.43852, z: -343.03796}
+      - {x: -267.2372, y: 134.3239, z: -339.3295}
+      - {x: -269.15222, y: 135.20929, z: -336.03076}
+      - {x: -271.64954, y: 136.09467, z: -333.26657}
+      - {x: -274.59363, y: 136.98006, z: -331.1326}
+      - {x: -277.83514, y: 137.86543, z: -329.6921}
+      - {x: -281.21805, y: 138.75082, z: -328.9746}
+      - {x: -284.58728, y: 139.6362, z: -328.97577}
+      - {x: -287.79562, y: 140.52158, z: -329.65918}
+      - {x: -290.7102, y: 141.40697, z: -330.95932}
+      - {x: -293.2181, y: 142.29234, z: -332.78604}
+      - {x: -295.23044, y: 143.17773, z: -335.0297}
+      - {x: -296.6856, y: 144.06311, z: -337.56717}
+      - {x: -297.5509, y: 144.9485, z: -340.2685}
+      - {x: -297.82248, y: 145.83388, z: -343.00296}
+      - {x: -297.52438, y: 146.71925, z: -345.6456}
+      - {x: -296.7058, y: 147.60464, z: -348.08276}
+      - {x: -295.43765, y: 148.49002, z: -350.2171}
+      - {x: -293.80786, y: 149.37541, z: -351.9712}
+      - {x: -291.91632, y: 150.26079, z: -353.2906}
+      - {x: -289.86926, y: 151.14618, z: -354.14514}
+      - {x: -287.77377, y: 152.03156, z: -354.5291}
+      - {x: -285.7323, y: 152.91693, z: -354.46024}
+      - {x: -283.83768, y: 153.80232, z: -353.97754}
+      - {x: -282.16913, y: 154.6877, z: -353.1381}
+      - {x: -280.78882, y: 155.57309, z: -352.01312}
+      - {x: -279.73953, y: 156.45847, z: -350.6834}
+      - {x: -279.0436, y: 157.34386, z: -349.23453}
+      - {x: -278.70294, y: 158.22923, z: -347.75198}
+      - {x: -278.7, y: 159.11462, z: -346.3165}
+      - {x: -279, y: 160, z: -345}
+      LandmarkId: 
+    Secrets:
+    - Id: daemmerwald_h1_dornen
+      Name: Hinter den Dornen
+      Hint: "Rote Bl\xFCten verbergen eine Kiste."
+      Position: {x: -14, y: -0.56269807, z: -54}
+      Gate:
+        Keys: 3
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: daemmerwald_h3_dornen
+      Name: Hinter den Dornen
+      Hint: "Rote Bl\xFCten verbergen eine Kiste."
+      Position: {x: 106, y: 4.268134, z: 146}
+      Gate:
+        Keys: 3
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: daemmerwald_wz_haupt_4
+      Name: "D\xE4mmerkathedrale: Krypta"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste in der Krypta."
+      Position: {x: 30.40784, y: -0.7469597, z: 13.218557}
+      Gate:
+        Keys: 3
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: daemmerwald_wz_1_3
+      Name: "H\xE4ngende G\xE4rten: Kronendorf"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am H\xE4ngende G\xE4rten."
+      Position: {x: -138.54175, y: 44.515366, z: 34.37475}
+      Gate:
+        Keys: 2
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: daemmerwald_aufstieg_gipfel
+      Name: 'Gipfelpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -285, y: 160.4, z: -345}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: daemmerwald_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 32, y: 1.5210174, z: 112}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: daemmerwald_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -38, y: 4.7428064, z: 142}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: daemmerwald_lore_szene1
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Tovin: \u201EWir sind zum D\xE4mmerkathedrale gegangen. Folge dem Rauch.\u201C"
+      Figure: Tovin
+      Position: {x: -211, y: 2.0272357, z: 8}
+    - Id: daemmerwald_lore_szene2
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Tovin sp\xE4ter fand."
+      Figure: Tovin
+      Position: {x: -11, y: 3.298367, z: 88}
+    - Id: daemmerwald_lore_szene3
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum D\xE4mmerkathedrale. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Tovin
+      Position: {x: -71, y: 4.0147715, z: 108}
+    - Id: daemmerwald_wz_haupt_lore
+      Title: "D\xE4mmerkathedrale"
+      Text: "Wurzeln drangen durch den Boden der Kathedrale, als die Verderbnis kam. Die M\xF6nche blieben \u2013 in der Krypta, hei\xDFt es, wachen sie noch."
+      Figure: Tovin
+      Position: {x: 94.73393, y: 0.119529404, z: 45.54329}
+    - Id: daemmerwald_wz_1_lore
+      Title: "H\xE4ngende G\xE4rten"
+      Text: "Die G\xE4rten hingen einst \xFCber dem Kreuzgang. Jetzt h\xE4ngen sie \xFCber dem Nichts."
+      Figure: Tovin
+      Position: {x: -150.49516, y: 5.292394, z: 45.94868}
+    - Id: daemmerwald_aufstieg_lore
+      Title: Gipfelpfad
+      Text: "Wer den Gipfelpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Tovin
+      Position: {x: -246.33134, y: 59.189114, z: -352.01807}
+    Loops:
+    - Id: daemmerwald_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: daemmerwald_h1_dornen
+      TriggerPos: {x: -14, y: -0.56269807, z: -54}
+      TargetPos: {x: -14, y: -0.56269807, z: -54}
+      NextGoal: {x: 106, y: 4.268134, z: 146}
+    - Id: daemmerwald_schleife2
+      TriggerKind: Lichtstrahl
+      Target: daemmerwald_h3_dornen
+      TriggerPos: {x: 106, y: 4.268134, z: 146}
+      TargetPos: {x: 106, y: 4.268134, z: 146}
+      NextGoal: {x: 30.40784, y: -0.7469597, z: 13.218557}
+    - Id: daemmerwald_schleife3
+      TriggerKind: Vogelschwarm
+      Target: daemmerwald_wz_haupt_4
+      TriggerPos: {x: 30.40784, y: -0.7469597, z: 13.218557}
+      TargetPos: {x: 30.40784, y: -0.7469597, z: 13.218557}
+      NextGoal: {x: -138.54175, y: 44.515366, z: 34.37475}
+    - Id: daemmerwald_schleife4
+      TriggerKind: Glocke
+      Target: daemmerwald_wz_1_3
+      TriggerPos: {x: -138.54175, y: 44.515366, z: 34.37475}
+      TargetPos: {x: -138.54175, y: 44.515366, z: 34.37475}
+      NextGoal: {x: -285, y: 160.4, z: -345}
+    - Id: daemmerwald_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: daemmerwald_aufstieg_gipfel
+      TriggerPos: {x: -285, y: 160.4, z: -345}
+      TargetPos: {x: -285, y: 160.4, z: -345}
+      NextGoal: {x: 70.76001, y: 138.85304, z: 30.76001}
+    Shortcuts:
+    - Id: daemmerwald_abk_hang
+      Name: Springer-Wand am Gipfelpfad
+      Key: 2
+      From: {x: -167.0169, y: 1.042482, z: -376.0482}
+      To: {x: -257.34158, y: 105.99166, z: -352.27853}
+      FootPath: 886.54095
+      MountPath: 168.58986
+    Scenes:
+    - Id: daemmerwald_szene1
+      Kind: Lager
+      LoreId: daemmerwald_lore_szene1
+      Position: {x: -214, y: 2.0272357, z: 6}
+    - Id: daemmerwald_szene2
+      Kind: Schlachtfeld
+      LoreId: daemmerwald_lore_szene2
+      Position: {x: -14, y: 3.298367, z: 86}
+    - Id: daemmerwald_szene3
+      Kind: Grab
+      LoreId: daemmerwald_lore_szene3
+      Position: {x: -74, y: 4.0147715, z: 106}
+    FootLinks: []
+    Pads:
+    - {x: 70.76001, y: 30.76001, z: 47.396, w: -1.1469597}
+    - {x: -135, y: 45, z: 25.5, w: 4.3153634}
+    MainVisibility: 0.97
+    CompactZone: 0

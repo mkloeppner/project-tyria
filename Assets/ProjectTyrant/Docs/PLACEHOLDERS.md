@@ -92,3 +92,5 @@ Jedes Objekt mit `PlaceholderMarker`-Komponente ist hier gelistet. Austausch: Me
 | Langbogen, Elementarstab, Dolche | CharacterBuilder | ersetzt durch Meshy (`ReplacedByMeshy`) – Primitive bleiben als Rückfall, falls das FBX fehlt |
 | Helden Wildhüter/Elementarweber/Schattenklinge | Figuren | Meshy geliefert, aber nicht rissfrei skinnbar → bleiben geriggte MeshKit-Figuren (Platzhalter), Meshy-Modelle stehen als Statuen im Heldenhain (`PlaceholderMarker` „Statue …“) |
 | Ladebildschirm-Illustrationen | Data/Zones/Loading | Builder-Aufnahmen vom Aussichtspunkt (Spiel-Asset, kein Platzhalter); Ziel wäre gemalte Key-Art |
+| Wahrzeichen (30 Haupt-, 33 Neben-Wahrzeichen) | WorldW1Builder | Primitiv-Baukasten, je Material vereint, Platzhalter-Marker mit Meshy-Prompt (Haupt = Tier 1 „Hero-Fassade“) |
+| Kletterplatten, Springer-Vorsprünge, Startturm, Truhen, Lore-Tafeln, Szenen-Requisiten | WorldW1Builder | Primitiven in Biom-nahen Farben |

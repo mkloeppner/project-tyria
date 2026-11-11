@@ -182,3 +182,455 @@ MonoBehaviour:
   - heart_nebelkamm_3
   Region: 0
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 0
+      Center: {x: -288, y: 52}
+      Radius: 97
+      Height: 170
+      Param: 0
+      Yaw: 350
+    - Kind: 2
+      Center: {x: 135, y: 415}
+      Radius: 55
+      Height: 48.69583
+      Param: 4
+      Yaw: 125
+    - Kind: 2
+      Center: {x: 65, y: 25}
+      Radius: 26
+      Height: 42.4
+      Param: 3
+      Yaw: 0
+    - Kind: 6
+      Center: {x: -22, y: 78}
+      Radius: 46
+      Height: 0
+      Param: 2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: -22, y: 78}
+      Radius: 6
+      Height: 2.8000002
+      Param: 2.5
+      Yaw: 0
+    - Kind: 7
+      Center: {x: 82, y: 62}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 42
+    Landmarks:
+    - Id: nebelkamm_wz_haupt
+      Name: Nebelkathedrale
+      Lore: "Die Ruine steht offen wie eine Hand. Im Nebel h\xF6rt man Gesang \u2013 keiner wei\xDF, wer singt."
+      Kind: 0
+      Main: 1
+      Position: {x: -56.485577, y: 6, z: 193.98152}
+      Height: 85
+      Footprint: 44.4
+      Yaw: 163.76495
+      BuildHeight: 85
+      Primary: {r: 0.47843137, g: 0.5019608, b: 0.53333336, a: 1}
+      Accent: {r: 0.7529412, g: 0.8784314, b: 0.8156863, a: 1}
+      Interior: 1
+      LightProfile: "Lichtsch\xE4chte"
+      SoundProfile: SFX_Amb_Bell_0
+      Stages:
+      - Index: 1
+        Name: Galerie
+        Position: {x: -49.629707, y: 15, z: 193.68651}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -49.629707, y: 15, z: 193.68651}
+      - Index: 2
+        Name: Turmgalerie
+        Position: {x: -52.28231, y: 68.56, z: 221.62384}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -52.28231, y: 68.56, z: 221.62384}
+      - Index: 3
+        Name: Turmspitze
+        Position: {x: -48.788452, y: 74.6, z: 214.76215}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: -48.788452, y: 74.6, z: 214.76215}
+      - Index: 4
+        Name: Krypta
+        Position: {x: -47.81864, y: 6.4, z: 164.21771}
+        Gate:
+          Keys: 4
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -47.81864, y: 6.4, z: 164.21771}
+    - Id: nebelkamm_wz_1
+      Name: "Gro\xDFer Steinkreis"
+      Lore: "Neun Steine, neun W\xE4chter. Der zehnte Stein fehlt \u2013 er liegt im Moor, sagt man."
+      Kind: 10
+      Main: 0
+      Position: {x: 65, y: 2.4, z: 25}
+      Height: 40
+      Footprint: 10
+      Yaw: -111.03751
+      BuildHeight: 40
+      Primary: {r: 0.5411765, g: 0.5411765, b: 0.5019608, a: 1}
+      Accent: {r: 0.627451, g: 0.8784314, b: 1, a: 1}
+      Interior: 0
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_WindHigh_0
+      Stages:
+      - Index: 1
+        Name: Felsband
+        Position: {x: 85.0565, y: 16.5, z: 48.63761}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 85.0565, y: 16.5, z: 48.63761}
+      - Index: 2
+        Name: Gipfel
+        Position: {x: 64.28204, y: 42.7, z: 26.866692}
+        Gate:
+          Keys: 10
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 64.28204, y: 42.7, z: 26.866692}
+    Hazards:
+    - Id: nebelkamm_h1
+      Kind: 1
+      Center: {x: -22, y: 1.2, z: 78}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 28
+      Circular: 1
+    - Id: nebelkamm_h2
+      Kind: 5
+      Center: {x: -263.67346, y: 86.391106, z: 12.300421}
+      Size: {x: 30, y: 10}
+      Yaw: -31.49845
+      Keys: 26
+      Circular: 0
+    Climbs:
+    - Id: nebelkamm_aufstieg
+      Name: Gipfelpfad
+      Base: {x: -231.05002, y: 2, z: -40.939217}
+      Peak: {x: -288, y: 170, z: 52}
+      LaunchTower: {x: -221.64543, y: 2, z: -56.28698}
+      DescentTarget: {x: -415.65744, y: 4.1020827, z: 114.833725}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: -262.15305, y: 60.68685, z: 9.819201}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -238.82578, y: 16.671713, z: -28.249613}
+        - {x: -246.60153, y: 31.343426, z: -15.560009}
+        - {x: -254.37729, y: 46.015137, z: -2.8704052}
+        - {x: -262.15305, y: 60.68685, z: 9.819199}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: -265.19385, y: 112.09536, z: 14.781641}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -262.91324, y: 73.53898, z: 11.059809}
+        - {x: -263.67346, y: 86.391106, z: 12.300419}
+        - {x: -264.43365, y: 99.24323, z: 13.541029}
+        - {x: -265.19385, y: 112.09536, z: 14.781639}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: -288, y: 170, z: 52}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: -241.8665, y: 112.9862, z: 61.03174}
+        - {x: -322.06882, y: 128.1305, z: 40.012745}
+        - {x: -265.66605, y: 143.27478, z: 63.721767}
+        - {x: -299.59323, y: 158.41907, z: 43.57703}
+        - {x: -288, y: 170, z: 52}
+      FootPath:
+      - {x: -234.18488, y: 2, z: -35.8233}
+      - {x: -194.35284, y: 9.335856, z: 29.514797}
+      - {x: -211.58733, y: 16.671713, z: 98.82308}
+      - {x: -268.63922, y: 24.007568, z: 132.63452}
+      - {x: -327.83105, y: 31.343426, z: 117.00204}
+      - {x: -355.62186, y: 38.679283, z: 68.236374}
+      - {x: -341.59143, y: 46.015137, z: 19.161}
+      - {x: -301.11197, y: 53.350994, z: -2.6092143}
+      - {x: -262.15305, y: 60.68685, z: 9.819201}
+      - {x: -262.15305, y: 60.68685, z: 9.819197}
+      - {x: -240.25081, y: 63.899883, z: 40.535156}
+      - {x: -246.4395, y: 67.112915, z: 77.46686}
+      - {x: -276.70502, y: 70.32594, z: 99.04181}
+      - {x: -313.08676, y: 73.53898, z: 92.940186}
+      - {x: -334.3344, y: 76.752014, z: 63.12514}
+      - {x: -328.3199, y: 79.96504, z: 27.293346}
+      - {x: -298.9553, y: 83.17807, z: 6.372987}
+      - {x: -263.67343, y: 86.391106, z: 12.300426}
+      - {x: -243.08038, y: 89.60414, z: 41.214554}
+      - {x: -248.92073, y: 92.81717, z: 75.94648}
+      - {x: -277.38443, y: 96.0302, z: 96.21222}
+      - {x: -311.56635, y: 99.24323, z: 90.45897}
+      - {x: -331.50482, y: 102.45627, z: 62.44574}
+      - {x: -325.83865, y: 105.6693, z: 28.813726}
+      - {x: -298.2759, y: 108.882324, z: 9.202556}
+      - {x: -265.19385, y: 112.09536, z: 14.781641}
+      SpringerLedges:
+      - {x: -234.4644, y: 13.209536, z: -35.36713}
+      - {x: -237.87878, y: 24.219072, z: -29.795046}
+      - {x: -241.29317, y: 35.22861, z: -24.22296}
+      - {x: -244.70755, y: 46.238144, z: -18.650873}
+      - {x: -248.12193, y: 57.24768, z: -13.078788}
+      - {x: -251.53632, y: 68.25722, z: -7.5067005}
+      - {x: -254.9507, y: 79.26675, z: -1.9346169}
+      - {x: -258.36508, y: 90.27628, z: 3.6374702}
+      - {x: -261.77945, y: 101.28582, z: 9.209554}
+      - {x: -265.19385, y: 112.29536, z: 14.781641}
+      ClimbPath:
+      - {x: -241.8665, y: 112.9862, z: 61.03174}
+      - {x: -245.05466, y: 113.877045, z: 69.48533}
+      - {x: -249.7501, y: 114.76788, z: 77.05938}
+      - {x: -255.73581, y: 115.65872, z: 83.49376}
+      - {x: -262.75168, y: 116.54956, z: 88.57851}
+      - {x: -270.50568, y: 117.44041, z: 92.16048}
+      - {x: -278.68576, y: 118.331245, z: 94.14775}
+      - {x: -286.97247, y: 119.222084, z: 94.511475}
+      - {x: -295.05133, y: 120.11292, z: 93.285286}
+      - {x: -302.62476, y: 121.00377, z: 90.56227}
+      - {x: -309.42303, y: 121.89461, z: 86.48974}
+      - {x: -315.21396, y: 122.785446, z: 81.26205}
+      - {x: -319.81058, y: 123.676285, z: 75.11174}
+      - {x: -323.07724, y: 124.56713, z: 68.299484}
+      - {x: -324.93317, y: 125.45797, z: 61.10321}
+      - {x: -325.35406, y: 126.34881, z: 53.80681}
+      - {x: -324.37125, y: 127.239655, z: 46.689007}
+      - {x: -322.06882, y: 128.1305, z: 40.012745}
+      - {x: -318.57874, y: 129.02133, z: 34.015377}
+      - {x: -314.0741, y: 129.91217, z: 28.900349}
+      - {x: -308.76123, y: 130.80301, z: 24.8303}
+      - {x: -302.87045, y: 131.69385, z: 21.922081}
+      - {x: -296.6463, y: 132.5847, z: 20.243683}
+      - {x: -290.33755, y: 133.47554, z: 19.8132}
+      - {x: -284.18732, y: 134.36638, z: 20.599825}
+      - {x: -278.42355, y: 135.25722, z: 22.526731}
+      - {x: -273.25076, y: 136.14806, z: 25.47572}
+      - {x: -268.8427, y: 137.0389, z: 29.293339}
+      - {x: -265.33664, y: 137.92973, z: 33.798233}
+      - {x: -262.8292, y: 138.82057, z: 38.789337}
+      - {x: -261.374, y: 139.71143, z: 44.054665}
+      - {x: -260.98132, y: 140.60226, z: 49.380093}
+      - {x: -261.6191, y: 141.4931, z: 54.558086}
+      - {x: -263.21606, y: 142.38394, z: 59.39568}
+      - {x: -265.66605, y: 143.27478, z: 63.721767}
+      - {x: -268.8338, y: 144.16562, z: 67.3931}
+      - {x: -272.5615, y: 145.05646, z: 70.29892}
+      - {x: -276.6762, y: 145.94731, z: 72.36415}
+      - {x: -280.99768, y: 146.83815, z: 73.550964}
+      - {x: -285.3459, y: 147.72899, z: 73.8587}
+      - {x: -289.54855, y: 148.61983, z: 73.32232}
+      - {x: -293.44797, y: 149.51067, z: 72.00931}
+      - {x: -296.9068, y: 150.4015, z: 70.015434}
+      - {x: -299.81308, y: 151.29234, z: 67.45943}
+      - {x: -302.08353, y: 152.18318, z: 64.476906}
+      - {x: -303.666, y: 153.07404, z: 61.213795}
+      - {x: -304.53992, y: 153.96487, z: 57.81961}
+      - {x: -304.71582, y: 154.85571, z: 54.44085}
+      - {x: -304.23334, y: 155.74655, z: 51.214794}
+      - {x: -303.1579, y: 156.63739, z: 48.26391}
+      - {x: -301.57663, y: 157.52823, z: 45.691296}
+      - {x: -299.59323, y: 158.41907, z: 43.57703}
+      - {x: -297.32257, y: 159.3099, z: 41.975796}
+      - {x: -294.8849, y: 160.20076, z: 40.91574}
+      - {x: -292.3998, y: 161.0916, z: 40.398598}
+      - {x: -289.98105, y: 161.98244, z: 40.401028}
+      - {x: -287.73114, y: 162.87328, z: 40.87709}
+      - {x: -285.7374, y: 163.76411, z: 41.761635}
+      - {x: -284.0684, y: 164.65495, z: 42.974533}
+      - {x: -282.7716, y: 165.54579, z: 44.42538}
+      - {x: -281.87225, y: 166.43663, z: 46.018593}
+      - {x: -281.37323, y: 167.32748, z: 47.658474}
+      - {x: -281.256, y: 168.21832, z: 49.25417}
+      - {x: -281.48294, y: 169.10916, z: 50.724133}
+      - {x: -282, y: 170, z: 52.000004}
+      LandmarkId: 
+    Secrets:
+    - Id: nebelkamm_h1_insel
+      Name: Insel im Giftwasser
+      Hint: "Etwas glitzert in der Mitte \u2013 Giftwasser sch\xFCtzt es."
+      Position: {x: -22, y: 2.8000002, z: 78}
+      Gate:
+        Keys: 28
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelkamm_wz_haupt_4
+      Name: 'Nebelkathedrale: Krypta'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste in der Krypta."
+      Position: {x: -47.81864, y: 6.4, z: 164.21771}
+      Gate:
+        Keys: 4
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelkamm_wz_1_2
+      Name: "Gro\xDFer Steinkreis: Gipfel"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Gro\xDFer Steinkreis."
+      Position: {x: 64.28204, y: 42.7, z: 26.866692}
+      Gate:
+        Keys: 10
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelkamm_aufstieg_gipfel
+      Name: 'Gipfelpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -288, y: 170.4, z: 52}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: nebelkamm_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 82, y: 4, z: 62}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelkamm_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -48, y: 2, z: -388}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelkamm_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -108, y: 6, z: 272}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: nebelkamm_lore_szene1
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Mei: \u201EWir sind zum Nebelkathedrale gegangen. Folge dem Rauch.\u201C"
+      Figure: Mei
+      Position: {x: 79, y: 2, z: -22}
+    - Id: nebelkamm_lore_szene2
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Mei sp\xE4ter fand."
+      Figure: Mei
+      Position: {x: 299, y: 4, z: 58}
+    - Id: nebelkamm_lore_szene3
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Nebelkathedrale. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Mei
+      Position: {x: -101, y: 4.0614357, z: 118}
+    - Id: nebelkamm_wz_haupt_lore
+      Title: Nebelkathedrale
+      Text: "Die Ruine steht offen wie eine Hand. Im Nebel h\xF6rt man Gesang \u2013 keiner wei\xDF, wer singt."
+      Figure: Mei
+      Position: {x: -66.532715, y: 6, z: 214.17793}
+    - Id: nebelkamm_wz_1_lore
+      Title: "Gro\xDFer Steinkreis"
+      Text: "Neun Steine, neun W\xE4chter. Der zehnte Stein fehlt \u2013 er liegt im Moor, sagt man."
+      Figure: Mei
+      Position: {x: 68.23081, y: 2.4457614, z: 30.528278}
+    - Id: nebelkamm_aufstieg_lore
+      Title: Gipfelpfad
+      Text: "Wer den Gipfelpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Mei
+      Position: {x: -259.65305, y: 60.68685, z: 12.319201}
+    Loops:
+    - Id: nebelkamm_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: nebelkamm_h1_insel
+      TriggerPos: {x: -22, y: 2.8000002, z: 78}
+      TargetPos: {x: -22, y: 2.8000002, z: 78}
+      NextGoal: {x: -47.81864, y: 6.4, z: 164.21771}
+    - Id: nebelkamm_schleife2
+      TriggerKind: Lichtstrahl
+      Target: nebelkamm_wz_haupt_4
+      TriggerPos: {x: -47.81864, y: 6.4, z: 164.21771}
+      TargetPos: {x: -47.81864, y: 6.4, z: 164.21771}
+      NextGoal: {x: 64.28204, y: 42.7, z: 26.866692}
+    - Id: nebelkamm_schleife3
+      TriggerKind: Vogelschwarm
+      Target: nebelkamm_wz_1_2
+      TriggerPos: {x: 64.28204, y: 42.7, z: 26.866692}
+      TargetPos: {x: 64.28204, y: 42.7, z: 26.866692}
+      NextGoal: {x: -288, y: 170.4, z: 52}
+    - Id: nebelkamm_schleife4
+      TriggerKind: Glocke
+      Target: nebelkamm_aufstieg_gipfel
+      TriggerPos: {x: -288, y: 170.4, z: 52}
+      TargetPos: {x: -288, y: 170.4, z: 52}
+      NextGoal: {x: 82, y: 4, z: 62}
+    - Id: nebelkamm_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: nebelkamm_hoehle
+      TriggerPos: {x: 82, y: 4, z: 62}
+      TargetPos: {x: 82, y: 4, z: 62}
+      NextGoal: {x: -56.485577, y: 91, z: 193.98152}
+    Shortcuts:
+    - Id: nebelkamm_abk_hang
+      Name: Springer-Wand am Gipfelpfad
+      Key: 2
+      From: {x: -231.05002, y: 2, z: -40.939217}
+      To: {x: -265.19385, y: 112.09536, z: 14.781641}
+      FootPath: 1045.8214
+      MountPath: 153.63564
+    Scenes:
+    - Id: nebelkamm_szene1
+      Kind: Lager
+      LoreId: nebelkamm_lore_szene1
+      Position: {x: 76, y: 2, z: -24}
+    - Id: nebelkamm_szene2
+      Kind: Schlachtfeld
+      LoreId: nebelkamm_lore_szene2
+      Position: {x: 296, y: 4, z: 56}
+    - Id: nebelkamm_szene3
+      Kind: Grab
+      LoreId: nebelkamm_lore_szene3
+      Position: {x: -104, y: 4.0614357, z: 116}
+    FootLinks: []
+    Pads:
+    - {x: -56.485577, y: 193.98152, z: 37.74, w: 6}
+    MainVisibility: 0.944
+    CompactZone: 0

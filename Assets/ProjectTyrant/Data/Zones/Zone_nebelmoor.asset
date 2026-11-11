@@ -195,3 +195,479 @@ MonoBehaviour:
   - heart_moor_jaro
   Region: 0
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 1
+      Center: {x: -345, y: -285}
+      Radius: 110
+      Height: 150
+      Param: 0
+      Yaw: 221
+    - Kind: 6
+      Center: {x: 345, y: 125}
+      Radius: 60
+      Height: 0
+      Param: 1.8
+      Yaw: 121
+    - Kind: 6
+      Center: {x: -92, y: -12}
+      Radius: 46
+      Height: 0
+      Param: 2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: -92, y: -12}
+      Radius: 6
+      Height: 2.5
+      Param: 2.5
+      Yaw: 0
+    - Kind: 6
+      Center: {x: 128, y: -92}
+      Radius: 46
+      Height: 0
+      Param: 2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: 128, y: -92}
+      Radius: 6
+      Height: 2.5
+      Param: 2.5
+      Yaw: 0
+    - Kind: 7
+      Center: {x: 72, y: 92}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 215
+    Landmarks:
+    - Id: nebelmoor_wz_haupt
+      Name: Versunkene Kathedrale
+      Lore: "Die Kathedrale sank in einer einzigen Nacht. Die Glocken l\xE4uten noch, sagen die Fischer, wenn der Nebel tief h\xE4ngt."
+      Kind: 0
+      Main: 1
+      Position: {x: 19.399994, y: 2.7274685, z: -60.600006}
+      Height: 90
+      Footprint: 44.4
+      Yaw: -17.751526
+      BuildHeight: 90
+      Primary: {r: 0.43529412, g: 0.47843137, b: 0.44705883, a: 1}
+      Accent: {r: 0.61960787, g: 0.8784314, b: 0.47843137, a: 1}
+      Interior: 1
+      LightProfile: "Lichtsch\xE4chte"
+      SoundProfile: SFX_Amb_Bell_0
+      Stages:
+      - Index: 1
+        Name: Galerie
+        Position: {x: 12.523472, y: 11.7274685, z: -60.438915}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 12.523472, y: 11.7274685, z: -60.438915}
+      - Index: 2
+        Name: Turmgalerie
+        Position: {x: 16.08218, y: 68.96747, z: -88.82008}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 16.08218, y: 68.96747, z: -88.82008}
+      - Index: 3
+        Name: Turmspitze
+        Position: {x: 12.407957, y: 75.32747, z: -82.053246}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: 12.407957, y: 75.32747, z: -82.053246}
+      - Index: 4
+        Name: Krypta
+        Position: {x: 9.795969, y: 3.1274686, z: -30.599794}
+        Gate:
+          Keys: 4
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 9.795969, y: 3.1274686, z: -30.599794}
+    - Id: nebelmoor_wz_1
+      Name: Pilzhain-Dom
+      Lore: "Riesenpilze, \xE4lter als das Moor selbst. Ihre Kronen tragen das Gewicht von Menschen \u2013 wenn man wei\xDF, wo man springt."
+      Kind: 4
+      Main: 0
+      Position: {x: -95, y: 2.1, z: 105}
+      Height: 45
+      Footprint: 30
+      Yaw: 137.86241
+      BuildHeight: 45
+      Primary: {r: 0.627451, g: 0.3137255, b: 0.22745098, a: 1}
+      Accent: {r: 0.9411765, g: 0.84705883, b: 0.627451, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_BirdCall_0
+      Stages:
+      - Index: 1
+        Name: Wurzelhalle
+        Position: {x: -95, y: 2.5, z: 105}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -95, y: 2.5, z: 105}
+      - Index: 2
+        Name: "\xC4ste"
+        Position: {x: -92.087326, y: 24.85, z: 99.18912}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -92.087326, y: 24.85, z: 99.18912}
+      - Index: 3
+        Name: Kronendorf
+        Position: {x: -103.3052, y: 35.1, z: 97.48577}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -103.3052, y: 35.1, z: 97.48577}
+      - Index: 4
+        Name: Krone
+        Position: {x: -95, y: 56.399998, z: 105}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: -95, y: 56.399998, z: 105}
+    Hazards:
+    - Id: nebelmoor_h1
+      Kind: 1
+      Center: {x: -92, y: 0.9, z: -12}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 28
+      Circular: 1
+    - Id: nebelmoor_h2
+      Kind: 1
+      Center: {x: 128, y: 0.9, z: -92}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 28
+      Circular: 1
+    Climbs:
+    - Id: nebelmoor_aufstieg
+      Name: Hochpfad
+      Base: {x: -227.37785, y: 1.4, z: -317.3887}
+      Peak: {x: -345, y: 150, z: -285}
+      LaunchTower: {x: -210.02377, y: 1.4, z: -322.16736}
+      DescentTarget: {x: -250, y: 2.1, z: -150}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: -293.0341, y: 53.625088, z: -299.30945}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -243.79192, y: 14.456272, z: -312.8689}
+        - {x: -260.20596, y: 27.512545, z: -308.34906}
+        - {x: -276.62003, y: 40.568817, z: -303.82925}
+        - {x: -293.0341, y: 53.625088, z: -299.30945}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: -318.48672, y: 99.392525, z: -292.30075}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -299.39725, y: 65.06695, z: -297.55728}
+        - {x: -305.7604, y: 76.508804, z: -295.8051}
+        - {x: -312.12357, y: 87.95067, z: -294.05292}
+        - {x: -318.48672, y: 99.392525, z: -292.30075}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: -345, y: 150, z: -285}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: -314.69888, y: 100.28037, z: -278.20935}
+        - {x: -360.88052, y: 115.37383, z: -302.25082}
+        - {x: -342.82404, y: 130.46729, z: -269.308}
+        - {x: -341.2808, y: 145.56075, z: -292.34937}
+        - {x: -345, y: 150, z: -285}
+      FootPath:
+      - {x: -233.16254, y: 1.4, z: -315.7958}
+      - {x: -250.89221, y: 7.928136, z: -231.52965}
+      - {x: -318.32578, y: 14.456271, z: -188.13043}
+      - {x: -390.80087, y: 20.984407, z: -204.3905}
+      - {x: -426.90167, y: 27.512543, z: -262.44736}
+      - {x: -412.1112, y: 34.04068, z: -323.13138}
+      - {x: -363.43103, y: 40.568813, z: -351.9338}
+      - {x: -314.5381, y: 47.09695, z: -338.61288}
+      - {x: -293.0341, y: 53.625088, z: -299.30945}
+      - {x: -293.0341, y: 53.625088, z: -299.30945}
+      - {x: -299.57083, y: 56.485554, z: -259.188}
+      - {x: -331.56665, y: 59.346016, z: -236.21567}
+      - {x: -369.1818, y: 62.206482, z: -242.44005}
+      - {x: -390.60272, y: 65.06695, z: -272.44272}
+      - {x: -384.69077, y: 67.927414, z: -307.55157}
+      - {x: -356.68118, y: 70.78788, z: -327.42117}
+      - {x: -324.07864, y: 73.64834, z: -321.82153}
+      - {x: -305.7604, y: 76.508804, z: -295.8051}
+      - {x: -311.04764, y: 79.36927, z: -265.7089}
+      - {x: -335.07098, y: 82.22974, z: -248.94199}
+      - {x: -362.6609, y: 85.0902, z: -253.91687}
+      - {x: -377.87643, y: 87.95067, z: -275.94708}
+      - {x: -373.21393, y: 90.81113, z: -301.03064}
+      - {x: -353.17682, y: 93.67159, z: -314.69485}
+      - {x: -330.59958, y: 96.53206, z: -310.34473}
+      - {x: -318.48672, y: 99.392525, z: -292.30075}
+      SpringerLedges:
+      - {x: -237.50107, y: 12.488058, z: -314.60117}
+      - {x: -247.62427, y: 23.376118, z: -311.8136}
+      - {x: -257.74747, y: 34.264175, z: -309.02606}
+      - {x: -267.8707, y: 45.152233, z: -306.2385}
+      - {x: -277.9939, y: 56.040295, z: -303.45096}
+      - {x: -288.1171, y: 66.92835, z: -300.6634}
+      - {x: -298.2403, y: 77.81641, z: -297.87585}
+      - {x: -308.36353, y: 88.70447, z: -295.0883}
+      - {x: -318.48672, y: 99.59252, z: -292.30075}
+      ClimbPath:
+      - {x: -314.69888, y: 100.28037, z: -278.20935}
+      - {x: -317.32184, y: 101.16823, z: -271.93835}
+      - {x: -321.2011, y: 102.056076, z: -266.4766}
+      - {x: -326.11227, y: 102.943924, z: -262.0659}
+      - {x: -331.78668, y: 103.83178, z: -258.88974}
+      - {x: -337.92612, y: 104.71963, z: -257.0659}
+      - {x: -344.21832, y: 105.607475, z: -256.64227}
+      - {x: -350.35278, y: 106.49533, z: -257.59677}
+      - {x: -356.03607, y: 107.38318, z: -259.84027}
+      - {x: -361.00598, y: 108.27103, z: -263.22308}
+      - {x: -365.04343, y: 109.15888, z: -267.5442}
+      - {x: -367.9821, y: 110.04673, z: -272.5627}
+      - {x: -369.71515, y: 110.93458, z: -278.01123}
+      - {x: -370.19858, y: 111.82243, z: -283.60977}
+      - {x: -369.45145, y: 112.71028, z: -289.08023}
+      - {x: -367.55286, y: 113.59813, z: -294.1602}
+      - {x: -364.6362, y: 114.485985, z: -298.61545}
+      - {x: -360.88052, y: 115.37383, z: -302.25082}
+      - {x: -356.50003, y: 116.26168, z: -304.91864}
+      - {x: -351.7323, y: 117.149536, z: -306.52438}
+      - {x: -346.82544, y: 118.037384, z: -307.02982}
+      - {x: -342.0252, y: 118.92523, z: -306.45267}
+      - {x: -337.56277, y: 119.81309, z: -304.86395}
+      - {x: -333.6436, y: 120.700935, z: -302.38226}
+      - {x: -330.43796, y: 121.58878, z: -299.16617}
+      - {x: -328.07367, y: 122.47664, z: -295.40457}
+      - {x: -326.6312, y: 123.36449, z: -291.306}
+      - {x: -326.14142, y: 124.252335, z: -287.08725}
+      - {x: -326.5861, y: 125.14019, z: -282.96194}
+      - {x: -327.90057, y: 126.02804, z: -279.12976}
+      - {x: -329.97928, y: 126.915886, z: -275.76678}
+      - {x: -332.68265, y: 127.80374, z: -273.0175}
+      - {x: -335.8458, y: 128.69159, z: -270.98843}
+      - {x: -339.2883, y: 129.57944, z: -269.7447}
+      - {x: -342.82404, y: 130.46729, z: -269.308}
+      - {x: -346.2713, y: 131.35513, z: -269.6578}
+      - {x: -349.46204, y: 132.243, z: -270.73413}
+      - {x: -352.25003, y: 133.13084, z: -272.4426}
+      - {x: -354.5176, y: 134.01869, z: -274.66113}
+      - {x: -356.18054, y: 134.90654, z: -277.2476}
+      - {x: -357.19073, y: 135.79439, z: -280.04855}
+      - {x: -357.5372, y: 136.68224, z: -282.9079}
+      - {x: -357.24457, y: 137.5701, z: -285.67554}
+      - {x: -356.36996, y: 138.45795, z: -288.21512}
+      - {x: -354.99823, y: 139.3458, z: -290.4108}
+      - {x: -353.23566, y: 140.23364, z: -292.17242}
+      - {x: -351.20288, y: 141.12149, z: -293.43933}
+      - {x: -349.02753, y: 142.00935, z: -294.18185}
+      - {x: -346.8364, y: 142.8972, z: -294.40128}
+      - {x: -344.74838, y: 143.78505, z: -294.1281}
+      - {x: -342.86813, y: 144.6729, z: -293.4185}
+      - {x: -341.2808, y: 145.56075, z: -292.34937}
+      - {x: -340.04803, y: 146.4486, z: -291.01282}
+      - {x: -339.20605, y: 147.33646, z: -289.5096}
+      - {x: -338.76468, y: 148.2243, z: -287.9425}
+      - {x: -338.70868, y: 149.11215, z: -286.4099}
+      - {x: -339, y: 150, z: -285}
+      LandmarkId: 
+    Secrets:
+    - Id: nebelmoor_h1_insel
+      Name: Insel im Giftwasser
+      Hint: "Etwas glitzert in der Mitte \u2013 Giftwasser sch\xFCtzt es."
+      Position: {x: -92, y: 2.5, z: -12}
+      Gate:
+        Keys: 28
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelmoor_h2_insel
+      Name: Insel im Giftwasser
+      Hint: "Etwas glitzert in der Mitte \u2013 Giftwasser sch\xFCtzt es."
+      Position: {x: 128, y: 2.5, z: -92}
+      Gate:
+        Keys: 28
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelmoor_wz_haupt_4
+      Name: 'Versunkene Kathedrale: Krypta'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste in der Krypta."
+      Position: {x: 9.795969, y: 3.1274686, z: -30.599794}
+      Gate:
+        Keys: 4
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelmoor_wz_1_3
+      Name: 'Pilzhain-Dom: Kronendorf'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Pilzhain-Dom."
+      Position: {x: -103.3052, y: 35.1, z: 97.48577}
+      Gate:
+        Keys: 2
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelmoor_aufstieg_gipfel
+      Name: 'Hochpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -345, y: 150.4, z: -285}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: nebelmoor_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 72, y: 2.3154144, z: 92}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: nebelmoor_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -58, y: -0.21698546, z: 142}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: nebelmoor_lore_szene1
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Tovin: \u201EWir sind zum Versunkene Kathedrale gegangen. Folge dem Rauch.\u201C"
+      Figure: Tovin
+      Position: {x: -211, y: 1.0590041, z: 8}
+    - Id: nebelmoor_lore_szene2
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Tovin sp\xE4ter fand."
+      Figure: Tovin
+      Position: {x: -11, y: 0.1546212, z: 68}
+    - Id: nebelmoor_lore_szene3
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Versunkene Kathedrale. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Tovin
+      Position: {x: 209, y: 3.5927324, z: 108}
+    - Id: nebelmoor_wz_haupt_lore
+      Title: Versunkene Kathedrale
+      Text: "Die Kathedrale sank in einer einzigen Nacht. Die Glocken l\xE4uten noch, sagen die Fischer, wenn der Nebel tief h\xE4ngt."
+      Figure: Tovin
+      Position: {x: 29.978096, y: 2.0029583, z: -80.52345}
+    - Id: nebelmoor_wz_1_lore
+      Title: Pilzhain-Dom
+      Text: "Riesenpilze, \xE4lter als das Moor selbst. Ihre Kronen tragen das Gewicht von Menschen \u2013 wenn man wei\xDF, wo man springt."
+      Figure: Tovin
+      Position: {x: -108.02985, y: 1.1434088, z: 113.439384}
+    - Id: nebelmoor_aufstieg_lore
+      Title: Hochpfad
+      Text: "Wer den Hochpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Tovin
+      Position: {x: -290.5341, y: 53.625088, z: -296.80945}
+    Loops:
+    - Id: nebelmoor_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: nebelmoor_h1_insel
+      TriggerPos: {x: -92, y: 2.5, z: -12}
+      TargetPos: {x: -92, y: 2.5, z: -12}
+      NextGoal: {x: 128, y: 2.5, z: -92}
+    - Id: nebelmoor_schleife2
+      TriggerKind: Lichtstrahl
+      Target: nebelmoor_h2_insel
+      TriggerPos: {x: 128, y: 2.5, z: -92}
+      TargetPos: {x: 128, y: 2.5, z: -92}
+      NextGoal: {x: 9.795969, y: 3.1274686, z: -30.599794}
+    - Id: nebelmoor_schleife3
+      TriggerKind: Vogelschwarm
+      Target: nebelmoor_wz_haupt_4
+      TriggerPos: {x: 9.795969, y: 3.1274686, z: -30.599794}
+      TargetPos: {x: 9.795969, y: 3.1274686, z: -30.599794}
+      NextGoal: {x: -103.3052, y: 35.1, z: 97.48577}
+    - Id: nebelmoor_schleife4
+      TriggerKind: Glocke
+      Target: nebelmoor_wz_1_3
+      TriggerPos: {x: -103.3052, y: 35.1, z: 97.48577}
+      TargetPos: {x: -103.3052, y: 35.1, z: 97.48577}
+      NextGoal: {x: -345, y: 150.4, z: -285}
+    - Id: nebelmoor_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: nebelmoor_aufstieg_gipfel
+      TriggerPos: {x: -345, y: 150.4, z: -285}
+      TargetPos: {x: -345, y: 150.4, z: -285}
+      NextGoal: {x: 19.399994, y: 92.72747, z: -60.600006}
+    Shortcuts:
+    - Id: nebelmoor_abk_hang
+      Name: Springer-Wand am Hochpfad
+      Key: 2
+      From: {x: -227.37785, y: 1.4, z: -317.3887}
+      To: {x: -318.48672, y: 99.392525, z: -292.30075}
+      FootPath: 1027.3602
+      MountPath: 163.36212
+    Scenes:
+    - Id: nebelmoor_szene1
+      Kind: Lager
+      LoreId: nebelmoor_lore_szene1
+      Position: {x: -214, y: 1.0590041, z: 6}
+    - Id: nebelmoor_szene2
+      Kind: Schlachtfeld
+      LoreId: nebelmoor_lore_szene2
+      Position: {x: -14, y: 0.1546212, z: 66}
+    - Id: nebelmoor_szene3
+      Kind: Grab
+      LoreId: nebelmoor_lore_szene3
+      Position: {x: 206, y: 3.5927324, z: 106}
+    FootLinks:
+    - Id: poi_moor_irrlichter
+      Name: Insel der Irrlichter
+      Kind: Bohlenweg
+      Points:
+      - {x: 167.79662, y: 3.4481916, z: 105.727066}
+      - {x: 190, y: 2.5, z: 170}
+    Pads:
+    - {x: 19.399994, y: -60.600006, z: 37.74, w: 2.7274685}
+    - {x: -95, y: 105, z: 25.5, w: 2.1}
+    MainVisibility: 0.974
+    CompactZone: 0

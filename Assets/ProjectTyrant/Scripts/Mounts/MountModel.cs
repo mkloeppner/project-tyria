@@ -184,6 +184,10 @@ namespace ProjectTyrant
             if (owned.Contains(MountKind.Raptor.ToString())) t |= Traversal.Raptor;
             if (owned.Contains(MountKind.Springer.ToString())) t |= Traversal.Springer;
             if (owned.Contains(MountKind.Skimmer.ToString())) t |= Traversal.Skimmer;
+            if (owned.Contains(MountKind.Griffon.ToString())) t |= Traversal.Griffon;      // Welt-Lauf W1
+            if (owned.Contains(MountKind.Skyscale.ToString())) t |= Traversal.Skyscale;
+            if (owned.Contains(MountKind.DuneRunner.ToString())) t |= Traversal.DuneRunner;
+            if (owned.Contains(MountKind.Skiff.ToString())) t |= Traversal.Boat;
             return t;
         }
     }

@@ -446,6 +446,7 @@ namespace ProjectTyrant.EditorTools
                 d.def.Requires = req;
                 EditorUtility.SetDirty(d.def);
                 var expect = d.spot.Expect;
+                if (z.WorldPlan != null && z.WorldPlan.FootLinks.Exists(f => f.Id == d.def.Id)) expect = Traversal.None;   // Welt-Lauf W1: Fußweg (Damm/Rampe/Brücke)
                 string line = z.Id + " · " + d.def.Id + ": " + (ok ? (req == Traversal.None ? "zu Fuß" : ReachabilityModel.Label(req)) : "UNERREICHBAR") + (ok && req == expect ? "" : "  (erwartet: " + (expect == Traversal.None ? "zu Fuß" : ReachabilityModel.Label(expect)) + ")");
                 LastReachReport.Add(line);
                 if (!ok || req != expect) { errors++; Debug.LogWarning("[ProjectTyrant] Erreichbarkeit " + line); }

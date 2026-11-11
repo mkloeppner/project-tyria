@@ -188,3 +188,463 @@ MonoBehaviour:
   - heart_schaedelkueste_3
   Region: 0
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 1
+      Center: {x: 379, y: -381}
+      Radius: 124
+      Height: 150
+      Param: 0
+      Yaw: 103
+    - Kind: 5
+      Center: {x: 395, y: 415}
+      Radius: 85
+      Height: 60
+      Param: 0
+      Yaw: 175
+    - Kind: 6
+      Center: {x: -87, y: -127}
+      Radius: 34
+      Height: 0
+      Param: 2.2
+      Yaw: 0
+    - Kind: 6
+      Center: {x: 198, y: -2}
+      Radius: 46
+      Height: 0
+      Param: 2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: 198, y: -2}
+      Radius: 6
+      Height: 2.6
+      Param: 2.5
+      Yaw: 0
+    - Kind: 7
+      Center: {x: 42, y: -478}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 37
+    Landmarks:
+    - Id: schaedelkueste_wz_haupt
+      Name: Versunkene Kathedrale der alten Hauptstadt
+      Lore: "Hier stand die Hauptstadt, bevor das Meer sie holte. Der Turm ragt noch heraus \u2013 und die Verderbnis steigt aus der Gruft."
+      Kind: 0
+      Main: 1
+      Position: {x: 29.399994, y: 5.6061687, z: 109.399994}
+      Height: 100
+      Footprint: 44.4
+      Yaw: -164.95781
+      BuildHeight: 100
+      Primary: {r: 0.3529412, g: 0.3529412, b: 0.41568628, a: 1}
+      Accent: {r: 0.627451, g: 0.3764706, b: 0.8784314, a: 1}
+      Interior: 1
+      LightProfile: "Lichtsch\xE4chte"
+      SoundProfile: SFX_Amb_Bell_0
+      Stages:
+      - Index: 1
+        Name: Galerie
+        Position: {x: 35.028446, y: 14.606169, z: 105.298706}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 35.028446, y: 14.606169, z: 105.298706}
+      - Index: 2
+        Name: Turmgalerie
+        Position: {x: 44.370525, y: 79.20617, z: 133.07623}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 44.370525, y: 79.20617, z: 133.07623}
+      - Index: 3
+        Name: Turmspitze
+        Position: {x: 47.54592, y: 86.20617, z: 126.06148}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 47.54592, y: 86.20617, z: 126.06148}
+      - Index: 4
+        Name: Krypta
+        Position: {x: 20.575966, y: 6.006169, z: 76.565}
+        Gate:
+          Keys: 4
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 20.575966, y: 6.006169, z: 76.565}
+    - Id: schaedelkueste_wz_1
+      Name: "Sch\xE4delfelsen"
+      Lore: "Die Felsen sehen aus wie Sch\xE4del. Die Fischer meiden sie \u2013 nicht wegen der Form, sondern wegen der Stimmen."
+      Kind: 8
+      Main: 0
+      Position: {x: -87, y: 1, z: -127}
+      Height: 30
+      Footprint: 48
+      Yaw: 34.412678
+      BuildHeight: 30
+      Primary: {r: 0.8156863, g: 0.78431374, b: 0.6901961, a: 1}
+      Accent: {r: 0.41568628, g: 0.2901961, b: 0.5411765, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_Bell_0
+      Stages:
+      - Index: 1
+        Name: Halle
+        Position: {x: -107.34538, y: 1.4, z: -156.69958}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -107.34538, y: 1.4, z: -156.69958}
+      - Index: 2
+        Name: "D\xE4cher"
+        Position: {x: -72.15021, y: 9, z: -137.1727}
+        Gate:
+          Keys: 5
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -72.15021, y: 9, z: -137.1727}
+      - Index: 3
+        Name: Turm
+        Position: {x: -70.04552, y: 28.4, z: -102.25034}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -70.04552, y: 28.4, z: -102.25034}
+    Hazards:
+    - Id: schaedelkueste_h1
+      Kind: 1
+      Center: {x: 198, y: 1, z: -2}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 28
+      Circular: 1
+    - Id: schaedelkueste_h2
+      Kind: 9
+      Center: {x: 20.575966, y: 6.006169, z: 76.565}
+      Size: {x: 26, y: 26}
+      Yaw: 0
+      Keys: 280
+      Circular: 1
+    - Id: schaedelkueste_h3
+      Kind: 4
+      Center: {x: 399.12277, y: 125.14018, z: -378.7728}
+      Size: {x: 40, y: 40}
+      Yaw: 0
+      Keys: 25
+      Circular: 1
+    Climbs:
+    - Id: schaedelkueste_aufstieg
+      Name: Hochpfad
+      Base: {x: 243.6435, y: 1.5778366, z: -394.21423}
+      Peak: {x: 379, y: 150, z: -381}
+      LaunchTower: {x: 225.72867, y: 1.5778366, z: -395.96317}
+      DescentTarget: {x: 12, y: 2.9379792, z: -400}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: 318.52744, y: 53.625107, z: -386.90366}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 262.36447, y: 14.589654, z: -392.3866}
+        - {x: 281.08545, y: 27.60147, z: -390.55896}
+        - {x: 299.80646, y: 40.61329, z: -388.7313}
+        - {x: 318.52744, y: 53.625107, z: -386.90366}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: 348.14658, y: 99.39252, z: -384.0121}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 325.93222, y: 65.066956, z: -386.18076}
+        - {x: 333.337, y: 76.50881, z: -385.4579}
+        - {x: 340.7418, y: 87.95067, z: -384.735}
+        - {x: 348.14658, y: 99.39252, z: -384.0121}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: 379, y: 150, z: -381}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 412.65652, y: 100.280365, z: -373.4574}
+        - {x: 361.49756, y: 115.373825, z: -400.0127}
+        - {x: 381.36154, y: 130.46729, z: -363.96994}
+        - {x: 382.85785, y: 145.56075, z: -388.6233}
+        - {x: 379, y: 150, z: -381}
+      FootPath:
+      - {x: 249.61511, y: 1.5778366, z: -393.63126}
+      - {x: 301.93915, y: 8.083746, z: -474.7349}
+      - {x: 389.94937, y: 14.589655, z: -493.1568}
+      - {x: 459.36353, y: 21.095564, z: -447.06805}
+      - {x: 473.92874, y: 27.601473, z: -371.73254}
+      - {x: 434.07526, y: 34.10738, z: -314.00784}
+      - {x: 371.41443, y: 40.61329, z: -303.29935}
+      - {x: 325.3792, y: 47.119198, z: -336.91757}
+      - {x: 318.52744, y: 53.625107, z: -386.90366}
+      - {x: 318.5274, y: 53.625107, z: -386.90366}
+      - {x: 341.59515, y: 56.48557, z: -426.4983}
+      - {x: 384.5422, y: 59.34603, z: -437.77017}
+      - {x: 421.62473, y: 62.206497, z: -416.04242}
+      - {x: 432.06778, y: 65.066956, z: -375.81924}
+      - {x: 411.68002, y: 67.92742, z: -341.24887}
+      - {x: 374.1807, y: 70.78789, z: -331.6346}
+      - {x: 342.1224, y: 73.648346, z: -350.68237}
+      - {x: 333.337, y: 76.50881, z: -385.45786}
+      - {x: 351.04477, y: 79.36928, z: -415.004}
+      - {x: 383.0964, y: 82.22974, z: -422.9606}
+      - {x: 410.13046, y: 85.0902, z: -406.5928}
+      - {x: 417.2582, y: 87.95067, z: -377.26505}
+      - {x: 402.2304, y: 90.81113, z: -352.74313}
+      - {x: 375.62643, y: 93.67159, z: -346.44418}
+      - {x: 353.6167, y: 96.53205, z: -360.132}
+      - {x: 348.14658, y: 99.39252, z: -384.0121}
+      SpringerLedges:
+      - {x: 255.25494, y: 12.646134, z: -393.08066}
+      - {x: 266.8664, y: 23.514433, z: -391.94708}
+      - {x: 278.47784, y: 34.382732, z: -390.8135}
+      - {x: 290.0893, y: 45.25103, z: -389.67993}
+      - {x: 301.70078, y: 56.119328, z: -388.5464}
+      - {x: 313.31223, y: 66.987625, z: -387.4128}
+      - {x: 324.92368, y: 77.85592, z: -386.27924}
+      - {x: 336.53513, y: 88.72422, z: -385.14566}
+      - {x: 348.14658, y: 99.592514, z: -384.0121}
+      ClimbPath:
+      - {x: 412.65652, y: 100.280365, z: -373.4574}
+      - {x: 409.73236, y: 101.16822, z: -366.49704}
+      - {x: 405.41553, y: 102.05607, z: -360.43997}
+      - {x: 399.95663, y: 102.94392, z: -355.55377}
+      - {x: 393.65506, y: 103.83177, z: -352.04077}
+      - {x: 386.84262, y: 104.71962, z: -350.03012}
+      - {x: 379.86627, y: 105.60747, z: -349.57324}
+      - {x: 373.0704, y: 106.49532, z: -350.6438}
+      - {x: 366.77997, y: 107.38317, z: -353.14114}
+      - {x: 361.28485, y: 108.27103, z: -356.89767}
+      - {x: 356.82657, y: 109.158875, z: -361.68915}
+      - {x: 353.58777, y: 110.04672, z: -367.2476}
+      - {x: 351.68503, y: 110.93458, z: -373.27606}
+      - {x: 351.16507, y: 111.822426, z: -379.4643}
+      - {x: 352.00476, y: 112.71027, z: -385.5047}
+      - {x: 354.11462, y: 113.59813, z: -391.10757}
+      - {x: 357.34537, y: 114.48598, z: -396.01498}
+      - {x: 361.49756, y: 115.373825, z: -400.0127}
+      - {x: 366.3333, y: 116.26168, z: -402.93936}
+      - {x: 371.58948, y: 117.14953, z: -404.69275}
+      - {x: 376.992, y: 118.03738, z: -405.23282}
+      - {x: 382.27, y: 118.92523, z: -404.58145}
+      - {x: 387.16928, y: 119.81308, z: -402.81912}
+      - {x: 391.4647, y: 120.70093, z: -400.0786}
+      - {x: 394.97046, y: 121.58878, z: -396.53632}
+      - {x: 397.54797, y: 122.47663, z: -392.4014}
+      - {x: 399.1111, y: 123.36449, z: -387.90414}
+      - {x: 399.62848, y: 124.252335, z: -383.28314}
+      - {x: 399.12277, y: 125.14018, z: -378.7728}
+      - {x: 397.66748, y: 126.02804, z: -374.59143}
+      - {x: 395.3808, y: 126.915886, z: -370.93076}
+      - {x: 392.4177, y: 127.803734, z: -367.94705}
+      - {x: 388.96024, y: 128.69159, z: -365.75473}
+      - {x: 385.2069, y: 129.57944, z: -364.42206}
+      - {x: 381.36154, y: 130.46729, z: -363.96994}
+      - {x: 377.62222, y: 131.35513, z: -364.37274}
+      - {x: 374.17136, y: 132.243, z: -365.56204}
+      - {x: 371.16666, y: 133.13084, z: -367.43225}
+      - {x: 368.73383, y: 134.01869, z: -369.84796}
+      - {x: 366.96164, y: 134.90654, z: -372.6528}
+      - {x: 365.89902, y: 135.79439, z: -375.67883}
+      - {x: 365.55432, y: 136.68224, z: -378.75632}
+      - {x: 365.8971, y: 137.57008, z: -381.7229}
+      - {x: 366.8619, y: 138.45795, z: -384.43234}
+      - {x: 368.35373, y: 139.3458, z: -386.76147}
+      - {x: 370.255, y: 140.23364, z: -388.61603}
+      - {x: 372.43347, y: 141.12149, z: -389.9341}
+      - {x: 374.7505, y: 142.00934, z: -390.68793}
+      - {x: 377.06943, y: 142.8972, z: -390.8834}
+      - {x: 379.26346, y: 143.78505, z: -390.5578}
+      - {x: 381.2223, y: 144.6729, z: -389.77563}
+      - {x: 382.85785, y: 145.56075, z: -388.6233}
+      - {x: 384.1081, y: 146.4486, z: -387.20242}
+      - {x: 384.93933, y: 147.33646, z: -385.62274}
+      - {x: 385.34637, y: 148.2243, z: -383.9949}
+      - {x: 385.35123, y: 149.11215, z: -382.42334}
+      - {x: 385, y: 150, z: -381}
+      LandmarkId: 
+    Secrets:
+    - Id: schaedelkueste_h1_insel
+      Name: Insel im Giftwasser
+      Hint: "Etwas glitzert in der Mitte \u2013 Giftwasser sch\xFCtzt es."
+      Position: {x: 198, y: 2.6, z: -2}
+      Gate:
+        Keys: 28
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: schaedelkueste_wz_haupt_4
+      Name: 'Versunkene Kathedrale der alten Hauptstadt: Krypta'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste in der Krypta."
+      Position: {x: 20.575966, y: 6.006169, z: 76.565}
+      Gate:
+        Keys: 4
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: schaedelkueste_wz_1_2
+      Name: "Sch\xE4delfelsen: D\xE4cher"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Sch\xE4delfelsen."
+      Position: {x: -72.15021, y: 9, z: -137.1727}
+      Gate:
+        Keys: 5
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: schaedelkueste_aufstieg_gipfel
+      Name: 'Hochpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: 379, y: 150.4, z: -381}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: schaedelkueste_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 42, y: 3, z: -478}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: schaedelkueste_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -28, y: 0, z: 172}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: schaedelkueste_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -108, y: 0, z: 272}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: schaedelkueste_lore_szene1
+      Title: Wrack am Ufer
+      Text: "Das Wrack liegt mit dem Kiel nach oben. Im Logbuch steht nur ein Satz: \u201EKurs auf Versunkene Kathedrale der alten Hauptstadt.\u201C Tovin kannte den Kapit\xE4n."
+      Figure: Tovin
+      Position: {x: 59, y: -3, z: -22}
+    - Id: schaedelkueste_lore_szene2
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Versunkene Kathedrale der alten Hauptstadt. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Tovin
+      Position: {x: 299, y: 0, z: 58}
+    - Id: schaedelkueste_lore_szene3
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Tovin: \u201EWir sind zum Versunkene Kathedrale der alten Hauptstadt gegangen. Folge dem Rauch.\u201C"
+      Figure: Tovin
+      Position: {x: -81, y: 0.0021936607, z: 118}
+    - Id: schaedelkueste_wz_haupt_lore
+      Title: Versunkene Kathedrale der alten Hauptstadt
+      Text: "Hier stand die Hauptstadt, bevor das Meer sie holte. Der Turm ragt noch heraus \u2013 und die Verderbnis steigt aus der Gruft."
+      Figure: Tovin
+      Position: {x: 31.298626, y: 6, z: 131.87743}
+    - Id: schaedelkueste_wz_1_lore
+      Title: "Sch\xE4delfelsen"
+      Text: "Die Felsen sehen aus wie Sch\xE4del. Die Fischer meiden sie \u2013 nicht wegen der Form, sondern wegen der Stimmen."
+      Figure: Tovin
+      Position: {x: -97.26363, y: 1.1791495, z: -149.06032}
+    - Id: schaedelkueste_aufstieg_lore
+      Title: Hochpfad
+      Text: "Wer den Hochpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Tovin
+      Position: {x: 321.02744, y: 53.625107, z: -384.40366}
+    Loops:
+    - Id: schaedelkueste_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: schaedelkueste_h1_insel
+      TriggerPos: {x: 198, y: 2.6, z: -2}
+      TargetPos: {x: 198, y: 2.6, z: -2}
+      NextGoal: {x: 20.575966, y: 6.006169, z: 76.565}
+    - Id: schaedelkueste_schleife2
+      TriggerKind: Lichtstrahl
+      Target: schaedelkueste_wz_haupt_4
+      TriggerPos: {x: 20.575966, y: 6.006169, z: 76.565}
+      TargetPos: {x: 20.575966, y: 6.006169, z: 76.565}
+      NextGoal: {x: -72.15021, y: 9, z: -137.1727}
+    - Id: schaedelkueste_schleife3
+      TriggerKind: Vogelschwarm
+      Target: schaedelkueste_wz_1_2
+      TriggerPos: {x: -72.15021, y: 9, z: -137.1727}
+      TargetPos: {x: -72.15021, y: 9, z: -137.1727}
+      NextGoal: {x: 379, y: 150.4, z: -381}
+    - Id: schaedelkueste_schleife4
+      TriggerKind: Glocke
+      Target: schaedelkueste_aufstieg_gipfel
+      TriggerPos: {x: 379, y: 150.4, z: -381}
+      TargetPos: {x: 379, y: 150.4, z: -381}
+      NextGoal: {x: 42, y: 3, z: -478}
+    - Id: schaedelkueste_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: schaedelkueste_hoehle
+      TriggerPos: {x: 42, y: 3, z: -478}
+      TargetPos: {x: 42, y: 3, z: -478}
+      NextGoal: {x: 29.399994, y: 105.60617, z: 109.399994}
+    Shortcuts:
+    - Id: schaedelkueste_abk_hang
+      Name: Springer-Wand am Hochpfad
+      Key: 2
+      From: {x: 243.6435, y: 1.5778366, z: -394.21423}
+      To: {x: 348.14658, y: 99.39252, z: -384.0121}
+      FootPath: 1154.5293
+      MountPath: 172.20184
+    Scenes:
+    - Id: schaedelkueste_szene1
+      Kind: Wrack
+      LoreId: schaedelkueste_lore_szene1
+      Position: {x: 56, y: -3, z: -24}
+    - Id: schaedelkueste_szene2
+      Kind: Grab
+      LoreId: schaedelkueste_lore_szene2
+      Position: {x: 296, y: 0, z: 56}
+    - Id: schaedelkueste_szene3
+      Kind: Lager
+      LoreId: schaedelkueste_lore_szene3
+      Position: {x: -84, y: 0.0021936607, z: 116}
+    FootLinks: []
+    Pads:
+    - {x: 29.399994, y: 109.399994, z: 37.74, w: 5.6061687}
+    MainVisibility: 0.988
+    CompactZone: 0

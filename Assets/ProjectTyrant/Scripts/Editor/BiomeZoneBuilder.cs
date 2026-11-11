@@ -31,6 +31,7 @@ namespace ProjectTyrant.EditorTools
             t.Flatten(new Vector2(z.DefaultSpawn.x, z.DefaultSpawn.z), 24f, FlatHeight(t, z.DefaultSpawn.x, z.DefaultSpawn.z));
             foreach (var p in z.Portals) t.Flatten(new Vector2(p.Position.x, p.Position.z), 16f, FlatHeight(t, p.Position.x, p.Position.z));
             ExtraFlats(z, t);
+            WorldW1Builder.ApplyToSampler(z, t);   // Welt-Lauf W1: Gelände-Operationen, Fußwege, Plätze
             return t;
         }
 
@@ -52,6 +53,7 @@ namespace ProjectTyrant.EditorTools
             EnsureFolder(ZoneSceneDir);
             _rnd = new System.Random(z.Seed);
             string defPath = AssetDatabase.GetAssetPath(z);
+            if (WorldW1Builder.NeedsPlan(z)) { WorldW1Builder.PlanZone(z); AssetDatabase.SaveAssetIfDirty(z); }   // Welt-Lauf W1
             var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
             z = AssetDatabase.LoadAssetAtPath<ZoneDefinition>(defPath);   // NewScene entlädt ungenutzte Assets
             var b = z.Biome;
@@ -78,6 +80,7 @@ namespace ProjectTyrant.EditorTools
             ArrivalWaypointBuilder.Ensure(z, rootGo.transform, DataDir + "/Zone/" + z.Id, 160);   // Fix-Lauf F1: jeder Eingang mit Wegmarke ≤ 40 m
             ZoneExtrasBuilder.Populate(z, rootGo.transform, (x, zz) => sampler.Height(x, zz));   // Lauf 6: Stadt, Verderbnis, Sandsturm, Dunkelheit, Inseln, Belagerung, Sprungrätsel
             WorldStoryBuilder.Populate(z, rootGo.transform, (x, zz) => sampler.Height(x, zz));   // Lauf 6: Späher, Herzen, Bündel
+            WorldW1Builder.Populate(z, rootGo.transform, (x, zz) => sampler.Height(x, zz));   // Welt-Lauf W1: Wahrzeichen, Hürden, Aufstiege, Geheimnisse
             // Lauf 5 / M23: Welt-Lebendigkeit je Biom
             var w = b.Weather;
             VfxKitBuilder.Ambient(rootGo.transform, w, w == WeatherKind.AshWind ? new Vector2(1f, -0.4f) : new Vector2(0.8f, 0.6f), w == WeatherKind.Snow ? 0.35f : w == WeatherKind.AshWind ? 0.3f : 0.2f,

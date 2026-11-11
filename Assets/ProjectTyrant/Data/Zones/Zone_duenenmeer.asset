@@ -195,3 +195,541 @@ MonoBehaviour:
   - heart_duene_oase
   Region: 0
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 1
+      Center: {x: -346, y: -366}
+      Radius: 139
+      Height: 160
+      Param: 0
+      Yaw: 98
+    - Kind: 1
+      Center: {x: 375, y: -105}
+      Radius: 85
+      Height: 30
+      Param: 0
+      Yaw: 101
+    - Kind: 6
+      Center: {x: 73, y: 173}
+      Radius: 34
+      Height: 0
+      Param: 2.2
+      Yaw: 0
+    - Kind: 6
+      Center: {x: -102, y: -162}
+      Radius: 46
+      Height: 0
+      Param: 1.2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: -102, y: -162}
+      Radius: 6
+      Height: 1.9000001
+      Param: 2.5
+      Yaw: 0
+    - Kind: 7
+      Center: {x: 62, y: 42}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 204
+    Landmarks:
+    - Id: duenenmeer_wz_haupt
+      Name: "Pyramide des Sandk\xF6nigs"
+      Lore: "Drei K\xF6nige, drei Pyramiden \u2013 und nur einer wollte gefunden werden. Seine Pyramide ist die h\xF6chste, sein Treibsand der tiefste."
+      Kind: 1
+      Main: 1
+      Position: {x: 69.8898, y: 2.5154197, z: -210.1102}
+      Height: 90
+      Footprint: 104.88981
+      Yaw: -18.39888
+      BuildHeight: 90
+      Primary: {r: 0.84705883, g: 0.72156864, b: 0.47058824, a: 1}
+      Accent: {r: 0.2901961, g: 0.8156863, b: 0.8784314, a: 1}
+      Interior: 1
+      LightProfile: Spitzenkristall
+      SoundProfile: SFX_Amb_Torch_0
+      Stages:
+      - Index: 1
+        Name: "Halbe H\xF6he"
+        Position: {x: 109.0768, y: 47.81542, z: -242.37527}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 109.0768, y: 47.81542, z: -242.37527}
+      - Index: 2
+        Name: Flanke
+        Position: {x: 69.8898, y: 81.56542, z: -210.1102}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 69.8898, y: 81.56542, z: -210.1102}
+      - Index: 3
+        Name: Spitze
+        Position: {x: 69.8898, y: 94.11542, z: -210.1102}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: 69.8898, y: 94.11542, z: -210.1102}
+      - Index: 4
+        Name: "K\xF6nigskammer"
+        Position: {x: 63.498283, y: 5.71542, z: -190.89534}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 63.498283, y: 5.71542, z: -190.89534}
+      - Index: 5
+        Name: Spitzenkammer
+        Position: {x: 69.8898, y: 81.66542, z: -210.1102}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: 69.8898, y: 81.66542, z: -210.1102}
+    - Id: duenenmeer_wz_1
+      Name: "Pyramide der Sandk\xF6nigin"
+      Lore: "Die K\xF6nigin lie\xDF ihre Pyramide neben die ihres Gemahls setzen \u2013 zwanzig Meter niedriger, aber mit dem sch\xF6neren Blick."
+      Kind: 1
+      Main: 0
+      Position: {x: -44.45877, y: 11.6015415, z: 35.54123}
+      Height: 60
+      Footprint: 70.54123
+      Yaw: 128.63954
+      BuildHeight: 60
+      Primary: {r: 0.72156864, g: 0.5647059, b: 0.34509805, a: 1}
+      Accent: {r: 0.8784314, g: 0.627451, b: 0.2509804, a: 1}
+      Interior: 1
+      LightProfile: Spitzenkristall
+      SoundProfile: SFX_Amb_Torch_0
+      Stages:
+      - Index: 1
+        Name: "Halbe H\xF6he"
+        Position: {x: -82.52874, y: 35.901543, z: 42.930397}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -82.52874, y: 35.901543, z: 42.930397}
+      - Index: 2
+        Name: Flanke
+        Position: {x: -44.45877, y: 59.901543, z: 35.54123}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -44.45877, y: 59.901543, z: 35.54123}
+      - Index: 3
+        Name: Spitze
+        Position: {x: -44.45877, y: 73.20154, z: 35.54123}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: -44.45877, y: 73.20154, z: 35.54123}
+      - Index: 4
+        Name: "K\xF6nigskammer"
+        Position: {x: -33.91406, y: 14.801541, z: 27.111576}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -33.91406, y: 14.801541, z: 27.111576}
+      - Index: 5
+        Name: Spitzenkammer
+        Position: {x: -44.45877, y: 60.00154, z: 35.54123}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: -44.45877, y: 60.00154, z: 35.54123}
+    - Id: duenenmeer_wz_2
+      Name: Versunkene Oasenstadt
+      Lore: "Die Oase trocknete aus, dann kam der Sand. Die D\xE4cher ragen noch heraus wie Inseln."
+      Kind: 8
+      Main: 0
+      Position: {x: 73, y: 0.3, z: 173}
+      Height: 30
+      Footprint: 48
+      Yaw: -157.12195
+      BuildHeight: 30
+      Primary: {r: 0.78431374, g: 0.627451, b: 0.4392157, a: 1}
+      Accent: {r: 0.3764706, g: 0.7529412, b: 0.6901961, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_Bell_0
+      Stages:
+      - Index: 1
+        Name: Halle
+        Position: {x: 86.99576, y: 0.70000005, z: 206.16805}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 86.99576, y: 0.70000005, z: 206.16805}
+      - Index: 2
+        Name: "D\xE4cher"
+        Position: {x: 56.415977, y: 8.3, z: 179.99788}
+        Gate:
+          Keys: 5
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 56.415977, y: 8.3, z: 179.99788}
+      - Index: 3
+        Name: Turm
+        Position: {x: 61.33687, y: 27.699999, z: 145.35997}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 61.33687, y: 27.699999, z: 145.35997}
+    Hazards:
+    - Id: duenenmeer_h1
+      Kind: 0
+      Center: {x: -102, y: 0.3, z: -162}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 28
+      Circular: 1
+    - Id: duenenmeer_h2
+      Kind: 6
+      Center: {x: -350.46027, y: 138.4075, z: -352.83502}
+      Size: {x: 40, y: 14}
+      Yaw: -18.716269
+      Keys: 24
+      Circular: 0
+    Climbs:
+    - Id: duenenmeer_aufstieg
+      Name: Hochpfad
+      Base: {x: -394.45316, y: 1.6107935, z: -222.985}
+      Peak: {x: -346, y: 160, z: -366}
+      LaunchTower: {x: -400.22903, y: 1.6107935, z: -205.93686}
+      DescentTarget: {x: -190, y: 1.5, z: -80}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: -367.8553, y: 57.200104, z: -301.49164}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -387.80368, y: 15.5081215, z: -242.61166}
+        - {x: -381.15424, y: 29.405449, z: -262.2383}
+        - {x: -374.50476, y: 43.302776, z: -281.865}
+        - {x: -367.8553, y: 57.200104, z: -301.49164}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: -357.15067, y: 106.01875, z: -333.08752}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -365.17914, y: 69.40477, z: -309.39062}
+        - {x: -362.503, y: 81.60943, z: -317.28958}
+        - {x: -359.8268, y: 93.81409, z: -325.18854}
+        - {x: -357.15067, y: 106.01875, z: -333.08752}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: -346, y: 160, z: -366}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: -308.6306, y: 106.91844, z: -358.0569}
+        - {x: -369.40085, y: 122.21313, z: -383.00174}
+        - {x: -336.17706, y: 137.50781, z: -348.98618}
+        - {x: -347.08362, y: 152.8025, z: -376.30988}
+        - {x: -346, y: 160, z: -366}
+      FootPath:
+      - {x: -392.52786, y: 1.6107935, z: -228.66771}
+      - {x: -467.3912, y: 8.559457, z: -306.0476}
+      - {x: -465.1263, y: 15.508121, z: -406.35974}
+      - {x: -397.44037, y: 22.456785, z: -470.1561}
+      - {x: -311.8084, y: 29.405449, z: -466.92035}
+      - {x: -259.079, y: 36.35411, z: -408.92834}
+      - {x: -263.28568, y: 43.302776, z: -337.97656}
+      - {x: -311.58374, y: 50.25144, z: -296.31412}
+      - {x: -367.8553, y: 57.200104, z: -301.49164}
+      - {x: -367.8553, y: 57.200104, z: -301.49164}
+      - {x: -405.19888, y: 60.25127, z: -336.763}
+      - {x: -406.55887, y: 63.302437, z: -386.5172}
+      - {x: -373.39047, y: 66.3536, z: -421.46002}
+      - {x: -326.82086, y: 69.40477, z: -422.6094}
+      - {x: -294.27884, y: 72.45593, z: -391.54388}
+      - {x: -293.34012, y: 75.507095, z: -348.15894}
+      - {x: -322.30264, y: 78.558266, z: -318.01773}
+      - {x: -362.503, y: 81.60943, z: -317.28958}
+      - {x: -390.2434, y: 84.66059, z: -344.14917}
+      - {x: -390.76093, y: 87.71176, z: -381.16492}
+      - {x: -366.00424, y: 90.762924, z: -406.50455}
+      - {x: -332.17316, y: 93.81409, z: -406.81146}
+      - {x: -309.2343, y: 96.86526, z: -384.1577}
+      - {x: -309.13806, y: 99.91642, z: -353.51123}
+      - {x: -329.6888, y: 102.96759, z: -332.97324}
+      - {x: -357.15067, y: 106.01875, z: -333.08752}
+      SpringerLedges:
+      - {x: -390.30844, y: 13.411677, z: -235.21861}
+      - {x: -386.16373, y: 25.012564, z: -247.45222}
+      - {x: -382.01898, y: 36.61345, z: -259.68585}
+      - {x: -377.87427, y: 48.214333, z: -271.91946}
+      - {x: -373.72955, y: 59.81522, z: -284.15308}
+      - {x: -369.58484, y: 71.4161, z: -296.3867}
+      - {x: -365.4401, y: 83.01698, z: -308.6203}
+      - {x: -361.29538, y: 94.61787, z: -320.8539}
+      - {x: -357.15067, y: 106.21875, z: -333.08752}
+      ClimbPath:
+      - {x: -308.6306, y: 106.91844, z: -358.0569}
+      - {x: -311.59732, y: 107.81813, z: -350.68295}
+      - {x: -315.97528, y: 108.71782, z: -344.18576}
+      - {x: -321.53207, y: 109.6175, z: -338.82562}
+      - {x: -327.98953, y: 110.51719, z: -334.80496}
+      - {x: -335.0376, y: 111.41688, z: -332.2612}
+      - {x: -342.3489, y: 112.31657, z: -331.26212}
+      - {x: -349.59406, y: 113.216255, z: -331.80496}
+      - {x: -356.4564, y: 114.115944, z: -333.81857}
+      - {x: -362.64587, y: 115.015625, z: -337.16852}
+      - {x: -367.9113, y: 115.91531, z: -341.66504}
+      - {x: -372.0504, y: 116.815, z: -347.07327}
+      - {x: -374.91757, y: 117.71469, z: -353.12506}
+      - {x: -376.42862, y: 118.61438, z: -359.5322}
+      - {x: -376.56256, y: 119.51407, z: -366}
+      - {x: -375.36078, y: 120.41375, z: -372.24084}
+      - {x: -372.923, y: 121.31344, z: -377.9869}
+      - {x: -369.40085, y: 122.21313, z: -383.00174}
+      - {x: -364.9894, y: 123.112816, z: -387.08987}
+      - {x: -359.9167, y: 124.012505, z: -390.10443}
+      - {x: -354.4323, y: 124.912186, z: -391.952}
+      - {x: -348.79526, y: 125.811874, z: -392.5952}
+      - {x: -343.26178, y: 126.71156, z: -392.05237}
+      - {x: -338.0737, y: 127.61125, z: -390.39465}
+      - {x: -333.4479, y: 128.51094, z: -387.74088}
+      - {x: -329.56723, y: 129.41063, z: -384.25043}
+      - {x: -326.57346, y: 130.31032, z: -380.11423}
+      - {x: -324.5621, y: 131.21, z: -375.54477}
+      - {x: -323.58, y: 132.1097, z: -370.76553}
+      - {x: -323.62497, y: 133.00937, z: -366}
+      - {x: -324.6478, y: 133.90906, z: -361.46146}
+      - {x: -326.55667, y: 134.80875, z: -357.34326}
+      - {x: -329.223, y: 135.70844, z: -353.81076}
+      - {x: -332.4891, y: 136.60812, z: -350.99463}
+      - {x: -336.17706, y: 137.50781, z: -348.98618}
+      - {x: -340.09778, y: 138.4075, z: -347.83478}
+      - {x: -344.06058, y: 139.30719, z: -347.54745}
+      - {x: -347.8824, y: 140.20688, z: -348.0903}
+      - {x: -351.3962, y: 141.10657, z: -349.39215}
+      - {x: -354.45834, y: 142.00626, z: -351.3497}
+      - {x: -356.95425, y: 142.90594, z: -353.83408}
+      - {x: -358.8027, y: 143.80562, z: -356.69827}
+      - {x: -359.95822, y: 144.7053, z: -359.7854}
+      - {x: -360.4114, y: 145.605, z: -362.93677}
+      - {x: -360.18753, y: 146.50468, z: -366}
+      - {x: -359.3436, y: 147.40437, z: -368.83627}
+      - {x: -357.96365, y: 148.30406, z: -371.32657}
+      - {x: -356.15317, y: 149.20375, z: -373.3767}
+      - {x: -354.03238, y: 150.10344, z: -374.92084}
+      - {x: -351.7292, y: 151.00313, z: -375.92322}
+      - {x: -349.37213, y: 151.90282, z: -376.37842}
+      - {x: -347.08362, y: 152.8025, z: -376.30988}
+      - {x: -344.97345, y: 153.7022, z: -375.76706}
+      - {x: -343.13388, y: 154.60187, z: -374.82104}
+      - {x: -341.6354, y: 155.50156, z: -373.5597}
+      - {x: -340.52426, y: 156.40125, z: -372.0814}
+      - {x: -339.82114, y: 157.30093, z: -370.48923}
+      - {x: -339.52142, y: 158.20062, z: -368.88443}
+      - {x: -339.5972, y: 159.10031, z: -367.36096}
+      - {x: -340, y: 160, z: -366}
+      LandmarkId: 
+    Secrets:
+    - Id: duenenmeer_h1_insel
+      Name: Insel im Treibsand
+      Hint: "Etwas glitzert in der Mitte \u2013 Treibsand sch\xFCtzt es."
+      Position: {x: -102, y: 1.9000001, z: -162}
+      Gate:
+        Keys: 28
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: duenenmeer_wz_haupt_5
+      Name: "Pyramide des Sandk\xF6nigs: Spitzenkammer"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Pyramide des Sandk\xF6nigs."
+      Position: {x: 69.8898, y: 81.66542, z: -210.1102}
+      Gate:
+        Keys: 24
+        FootAlternative: 0
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: duenenmeer_wz_1_5
+      Name: "Pyramide der Sandk\xF6nigin: Spitzenkammer"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Pyramide der Sandk\xF6nigin."
+      Position: {x: -44.45877, y: 60.00154, z: 35.54123}
+      Gate:
+        Keys: 24
+        FootAlternative: 0
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: duenenmeer_wz_2_2
+      Name: "Versunkene Oasenstadt: D\xE4cher"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Versunkene Oasenstadt."
+      Position: {x: 56.415977, y: 8.3, z: 179.99788}
+      Gate:
+        Keys: 5
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: duenenmeer_aufstieg_gipfel
+      Name: 'Hochpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -346, y: 160.4, z: -366}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: duenenmeer_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 62, y: 12.870427, z: 42}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: duenenmeer_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -28, y: 11.337019, z: 172}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: duenenmeer_lore_szene1
+      Title: Gestrandete Karawane
+      Text: "Die Karawane blieb im Sand stecken. Die Kisten sind leer \u2013 bis auf eine, und die zeigt mit ihren Spuren zum Pyramide des Sandk\xF6nigs."
+      Figure: Nadira
+      Position: {x: -221, y: 3.7009523, z: 18}
+    - Id: duenenmeer_lore_szene2
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Pyramide des Sandk\xF6nigs. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Nadira
+      Position: {x: 299, y: -0.18835068, z: 58}
+    - Id: duenenmeer_lore_szene3
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Nadira sp\xE4ter fand."
+      Figure: Nadira
+      Position: {x: -81, y: 6.9335146, z: 138}
+    - Id: duenenmeer_wz_haupt_lore
+      Title: "Pyramide des Sandk\xF6nigs"
+      Text: "Drei K\xF6nige, drei Pyramiden \u2013 und nur einer wollte gefunden werden. Seine Pyramide ist die h\xF6chste, sein Treibsand der tiefste."
+      Figure: Nadira
+      Position: {x: 90.23854, y: -0.5606895, z: -258.61172}
+    - Id: duenenmeer_wz_1_lore
+      Title: "Pyramide der Sandk\xF6nigin"
+      Text: "Die K\xF6nigin lie\xDF ihre Pyramide neben die ihres Gemahls setzen \u2013 zwanzig Meter niedriger, aber mit dem sch\xF6neren Blick."
+      Figure: Nadira
+      Position: {x: -74.50597, y: 8.6536255, z: 54.440502}
+    - Id: duenenmeer_wz_2_lore
+      Title: Versunkene Oasenstadt
+      Text: "Die Oase trocknete aus, dann kam der Sand. Die D\xE4cher ragen noch heraus wie Inseln."
+      Figure: Nadira
+      Position: {x: 78.64517, y: 12.141492, z: 196.66711}
+    - Id: duenenmeer_aufstieg_lore
+      Title: Hochpfad
+      Text: "Wer den Hochpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Nadira
+      Position: {x: -365.3553, y: 57.200104, z: -298.99164}
+    Loops:
+    - Id: duenenmeer_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: duenenmeer_h1_insel
+      TriggerPos: {x: -102, y: 1.9000001, z: -162}
+      TargetPos: {x: -102, y: 1.9000001, z: -162}
+      NextGoal: {x: 69.8898, y: 81.66542, z: -210.1102}
+    - Id: duenenmeer_schleife2
+      TriggerKind: Lichtstrahl
+      Target: duenenmeer_wz_haupt_5
+      TriggerPos: {x: 69.8898, y: 81.66542, z: -210.1102}
+      TargetPos: {x: 69.8898, y: 81.66542, z: -210.1102}
+      NextGoal: {x: -44.45877, y: 60.00154, z: 35.54123}
+    - Id: duenenmeer_schleife3
+      TriggerKind: Vogelschwarm
+      Target: duenenmeer_wz_1_5
+      TriggerPos: {x: -44.45877, y: 60.00154, z: 35.54123}
+      TargetPos: {x: -44.45877, y: 60.00154, z: 35.54123}
+      NextGoal: {x: 56.415977, y: 8.3, z: 179.99788}
+    - Id: duenenmeer_schleife4
+      TriggerKind: Glocke
+      Target: duenenmeer_wz_2_2
+      TriggerPos: {x: 56.415977, y: 8.3, z: 179.99788}
+      TargetPos: {x: 56.415977, y: 8.3, z: 179.99788}
+      NextGoal: {x: -346, y: 160.4, z: -366}
+    - Id: duenenmeer_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: duenenmeer_aufstieg_gipfel
+      TriggerPos: {x: -346, y: 160.4, z: -366}
+      TargetPos: {x: -346, y: 160.4, z: -366}
+      NextGoal: {x: 69.8898, y: 92.51542, z: -210.1102}
+    Shortcuts:
+    - Id: duenenmeer_abk_hang
+      Name: Springer-Wand am Hochpfad
+      Key: 2
+      From: {x: -394.45316, y: 1.6107935, z: -222.985}
+      To: {x: -357.15067, y: 106.01875, z: -333.08752}
+      FootPath: 1291.4587
+      MountPath: 187.50385
+    Scenes:
+    - Id: duenenmeer_szene1
+      Kind: Karawane
+      LoreId: duenenmeer_lore_szene1
+      Position: {x: -224, y: 3.7009523, z: 16}
+    - Id: duenenmeer_szene2
+      Kind: Grab
+      LoreId: duenenmeer_lore_szene2
+      Position: {x: 296, y: -0.18835068, z: 56}
+    - Id: duenenmeer_szene3
+      Kind: Schlachtfeld
+      LoreId: duenenmeer_lore_szene3
+      Position: {x: -84, y: 6.9335146, z: 136}
+    FootLinks: []
+    Pads:
+    - {x: 69.8898, y: -210.1102, z: 89.15634, w: 2.5154197}
+    - {x: -44.45877, y: 35.54123, z: 59.960045, w: 11.6015415}
+    MainVisibility: 0.97
+    CompactZone: 0

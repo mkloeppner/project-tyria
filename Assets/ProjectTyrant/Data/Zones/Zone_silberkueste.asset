@@ -306,3 +306,439 @@ MonoBehaviour:
   - heart_kueste_fischer
   Region: 0
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 1
+      Center: {x: 21, y: -219}
+      Radius: 126
+      Height: 150
+      Param: 0
+      Yaw: 36
+    - Kind: 5
+      Center: {x: -325, y: 215}
+      Radius: 85
+      Height: 60
+      Param: 0
+      Yaw: 71
+    - Kind: 7
+      Center: {x: -398, y: 82}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 187
+    Landmarks:
+    - Id: silberkueste_wz_haupt
+      Name: Leuchtturm Silbermund
+      Lore: "Der Leuchtturm ist \xE4lter als der Hafen. Die Seefahrer sagen, er habe die Stadt gerufen, nicht umgekehrt."
+      Kind: 6
+      Main: 1
+      Position: {x: -132.68, y: 2.5, z: -12.679993}
+      Height: 70
+      Footprint: 22.32
+      Yaw: 84.540924
+      BuildHeight: 70
+      Primary: {r: 0.9098039, g: 0.8784314, b: 0.8156863, a: 1}
+      Accent: {r: 1, g: 0.84705883, b: 0.4392157, a: 1}
+      Interior: 1
+      LightProfile: Laterne
+      SoundProfile: SFX_Amb_Water_0
+      Stages:
+      - Index: 1
+        Name: Treppe
+        Position: {x: -132.21384, y: 2.9, z: -17.557768}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -132.21384, y: 2.9, z: -17.557768}
+      - Index: 2
+        Name: "Au\xDFengalerie"
+        Position: {x: -131.72769, y: 16.5, z: -22.644592}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -131.72769, y: 16.5, z: -22.644592}
+      - Index: 3
+        Name: Laterne
+        Position: {x: -132.05734, y: 67.3, z: -19.195309}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -132.05734, y: 67.3, z: -19.195309}
+    - Id: silberkueste_wz_1
+      Name: Klippenkathedrale der Seefahrer
+      Lore: "Jeder Kapit\xE4n, der nicht heimkehrte, hat hier eine Kerze. Es brennen mehr Kerzen als Schiffe im Hafen liegen."
+      Kind: 0
+      Main: 0
+      Position: {x: 149.4, y: 5, z: 129.4}
+      Height: 55
+      Footprint: 44.4
+      Yaw: -130.89687
+      BuildHeight: 55
+      Primary: {r: 0.8156863, g: 0.78431374, b: 0.72156864, a: 1}
+      Accent: {r: 0.41568628, g: 0.6901961, b: 0.8784314, a: 1}
+      Interior: 1
+      LightProfile: "Lichtsch\xE4chte"
+      SoundProfile: SFX_Amb_Bell_0
+      Stages:
+      - Index: 1
+        Name: Galerie
+        Position: {x: 151.99258, y: 14, z: 123.04637}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 151.99258, y: 14, z: 123.04637}
+      - Index: 2
+        Name: Turmgalerie
+        Position: {x: 179.15945, y: 45.48, z: 130.31789}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 179.15945, y: 45.48, z: 130.31789}
+      - Index: 3
+        Name: Turmspitze
+        Position: {x: 171.49686, y: 49.6, z: 131.0759}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: 171.49686, y: 49.6, z: 131.0759}
+      - Index: 4
+        Name: Krypta
+        Position: {x: 125.96742, y: 5.4, z: 109.10432}
+        Gate:
+          Keys: 1
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 125.96742, y: 5.4, z: 109.10432}
+    Hazards:
+    - Id: silberkueste_h1
+      Kind: 4
+      Center: {x: 41.3669, y: 125.1402, z: -216.74577}
+      Size: {x: 40, y: 40}
+      Yaw: 0
+      Keys: 25
+      Circular: 1
+    - Id: silberkueste_h2
+      Kind: 5
+      Center: {x: 16.952984, y: 76.50883, z: -172.55591}
+      Size: {x: 30, y: 30.239962}
+      Yaw: 175.02
+      Keys: 26
+      Circular: 0
+    Climbs:
+    - Id: silberkueste_aufstieg
+      Name: Hochpfad
+      Base: {x: 9.020496, y: 2.5, z: -81.520935}
+      Peak: {x: 21, y: 150, z: -219}
+      LaunchTower: {x: 7.4579525, y: 2.5, z: -63.588882}
+      DescentTarget: {x: -99.10004, y: 2.512754, z: -356.2493}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: 15.640451, y: 53.625107, z: -157.49301}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 10.675489, y: 15.281277, z: -100.513954}
+        - {x: 12.3304825, y: 28.062553, z: -119.50697}
+        - {x: 13.985476, y: 40.84383, z: -138.5}
+        - {x: 15.640469, y: 53.625107, z: -157.49301}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: 18.265516, y: 99.39255, z: -187.61882}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 16.296738, y: 65.06697, z: -165.02446}
+        - {x: 16.953005, y: 76.50883, z: -172.55591}
+        - {x: 17.609272, y: 87.95068, z: -180.08737}
+        - {x: 18.265541, y: 99.39255, z: -187.61882}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: 21, y: 150, z: -219}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: 55.135845, y: 100.280396, z: -211.34998}
+        - {x: 3.2658734, y: 115.37385, z: -238.26439}
+        - {x: 23.388033, y: 130.4673, z: -201.77878}
+        - {x: 24.877642, y: 145.56075, z: -226.66245}
+        - {x: 21, y: 150, z: -219}
+      FootPath:
+      - {x: 9.541338, y: 2.5, z: -87.49829}
+      - {x: -73.362434, y: 8.890638, z: -139.76437}
+      - {x: -93.00303, y: 15.281277, z: -228.93388}
+      - {x: -46.940372, y: 21.671915, z: -299.91083}
+      - {x: 29.409113, y: 28.062553, z: -315.50433}
+      - {x: 88.4592, y: 34.453194, z: -275.6451}
+      - {x: 100.005684, y: 40.84383, z: -212.11568}
+      - {x: 66.349846, y: 47.234467, z: -164.9924}
+      - {x: 15.640451, y: 53.625107, z: -157.49301}
+      - {x: 15.640452, y: 53.625107, z: -157.49301}
+      - {x: -24.834377, y: 56.485573, z: -180.51314}
+      - {x: -36.741257, y: 59.34604, z: -224.03142}
+      - {x: -15.056122, y: 62.2065, z: -261.93958}
+      - {x: 25.70328, y: 65.06697, z: -272.97552}
+      - {x: 61.0448, y: 67.92743, z: -252.62537}
+      - {x: 71.20983, y: 70.787895, z: -214.62485}
+      - {x: 52.19462, y: 73.64836, z: -181.84999}
+      - {x: 16.952976, y: 76.50883, z: -172.55592}
+      - {x: -13.255194, y: 79.36929, z: -190.23611}
+      - {x: -21.678352, y: 82.22976, z: -222.71889}
+      - {x: -5.333118, y: 85.090225, z: -250.36041}
+      - {x: 24.39074, y: 87.95068, z: -257.91263}
+      - {x: 49.46562, y: 90.81115, z: -242.90239}
+      - {x: 56.146908, y: 93.671616, z: -215.93738}
+      - {x: 42.471664, y: 96.53208, z: -193.42918}
+      - {x: 18.265516, y: 99.39255, z: -187.61882}
+      SpringerLedges:
+      - {x: 10.047721, y: 13.465838, z: -93.309586}
+      - {x: 11.074945, y: 24.231678, z: -105.09824}
+      - {x: 12.10217, y: 34.997517, z: -116.886894}
+      - {x: 13.129395, y: 45.763355, z: -128.67555}
+      - {x: 14.156619, y: 56.529198, z: -140.4642}
+      - {x: 15.183844, y: 67.29503, z: -152.25285}
+      - {x: 16.211067, y: 78.06087, z: -164.04152}
+      - {x: 17.238293, y: 88.826706, z: -175.83017}
+      - {x: 18.265516, y: 99.592545, z: -187.61882}
+      ClimbPath:
+      - {x: 55.135845, y: 100.280396, z: -211.34998}
+      - {x: 52.16867, y: 101.16825, z: -204.29115}
+      - {x: 47.78931, y: 102.0561, z: -198.14903}
+      - {x: 42.252186, y: 102.94395, z: -193.1949}
+      - {x: 35.861027, y: 103.831795, z: -189.6338}
+      - {x: 28.952454, y: 104.71965, z: -187.59645}
+      - {x: 21.878357, y: 105.6075, z: -187.13483}
+      - {x: 14.988005, y: 106.495346, z: -188.22195}
+      - {x: 8.610837, y: 107.383194, z: -190.75555}
+      - {x: 3.0406773, y: 108.27105, z: -194.56548}
+      - {x: -1.477725, y: 109.1589, z: -199.42413}
+      - {x: -4.7593894, y: 110.046745, z: -205.05972}
+      - {x: -6.686376, y: 110.9346, z: -211.17104}
+      - {x: -7.2115517, y: 111.82245, z: -217.44353}
+      - {x: -6.3586135, y: 112.7103, z: -223.56535}
+      - {x: -4.218578, y: 113.59815, z: -229.2429}
+      - {x: -0.94296217, y: 114.486, z: -234.2149}
+      - {x: 3.2658734, y: 115.37385, z: -238.26439}
+      - {x: 8.166638, y: 116.261696, z: -241.22804}
+      - {x: 13.492603, y: 117.14955, z: -243.0025}
+      - {x: 18.965935, y: 118.0374, z: -243.5475}
+      - {x: 24.312159, y: 118.92525, z: -242.88554}
+      - {x: 29.27384, y: 119.8131, z: -241.09843}
+      - {x: 33.623024, y: 120.70095, z: -238.32095}
+      - {x: 37.171658, y: 121.5888, z: -234.73203}
+      - {x: 39.779633, y: 122.47665, z: -230.54381}
+      - {x: 41.36001, y: 123.3645, z: -225.9896}
+      - {x: 41.88131, y: 124.25235, z: -221.31114}
+      - {x: 41.3669, y: 125.1402, z: -216.74577}
+      - {x: 39.89149, y: 126.02805, z: -212.51454}
+      - {x: 37.575092, y: 126.9159, z: -208.81131}
+      - {x: 34.57488, y: 127.80375, z: -205.79414}
+      - {x: 31.075382, y: 128.6916, z: -203.57848}
+      - {x: 27.277655, y: 129.57945, z: -202.23312}
+      - {x: 23.388033, y: 130.4673, z: -201.77878}
+      - {x: 19.607016, y: 131.35515, z: -202.18916}
+      - {x: 16.118996, y: 132.243, z: -203.39462}
+      - {x: 13.083316, y: 133.13084, z: -205.2879}
+      - {x: 10.626875, y: 134.0187, z: -207.7318}
+      - {x: 8.839103, y: 134.90656, z: -210.56783}
+      - {x: 7.768992, y: 135.7944, z: -213.62602}
+      - {x: 7.4245296, y: 136.68225, z: -216.73465}
+      - {x: 7.7744765, y: 137.5701, z: -219.72968}
+      - {x: 8.752165, y: 138.45795, z: -222.46336}
+      - {x: 10.261148, y: 139.3458, z: -224.81158}
+      - {x: 12.182236, y: 140.23366, z: -226.67941}
+      - {x: 14.381509, y: 141.1215, z: -228.00479}
+      - {x: 16.718775, y: 142.00935, z: -228.76024}
+      - {x: 19.055984, y: 142.8972, z: -228.95227}
+      - {x: 21.265152, y: 143.78505, z: -228.61917}
+      - {x: 23.235216, y: 144.6729, z: -227.82666}
+      - {x: 24.877642, y: 145.56075, z: -226.66245}
+      - {x: 26.13041, y: 146.44861, z: -225.2295}
+      - {x: 26.960094, y: 147.33646, z: -223.63892}
+      - {x: 27.362238, y: 148.2243, z: -222.00241}
+      - {x: 27.359797, y: 149.11215, z: -220.42526}
+      - {x: 27, y: 150, z: -219}
+      LandmarkId: 
+    Secrets:
+    - Id: silberkueste_wz_haupt_2
+      Name: "Leuchtturm Silbermund: Au\xDFengalerie"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Leuchtturm Silbermund."
+      Position: {x: -131.72769, y: 16.5, z: -22.644592}
+      Gate:
+        Keys: 2
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: silberkueste_wz_1_4
+      Name: 'Klippenkathedrale der Seefahrer: Krypta'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste in der Krypta."
+      Position: {x: 125.96742, y: 5.4, z: 109.10432}
+      Gate:
+        Keys: 1
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: silberkueste_aufstieg_gipfel
+      Name: 'Hochpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: 21, y: 150.4, z: -219}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: silberkueste_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: -398, y: 5, z: 82}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: silberkueste_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -28, y: 1.3434589, z: 172}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: silberkueste_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -108, y: 2.5, z: 272}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: silberkueste_versteck4
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -188, y: 5, z: -208}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: silberkueste_lore_szene1
+      Title: Wrack am Ufer
+      Text: "Das Wrack liegt mit dem Kiel nach oben. Im Logbuch steht nur ein Satz: \u201EKurs auf Leuchtturm Silbermund.\u201C Mira kannte den Kapit\xE4n."
+      Figure: Mira
+      Position: {x: -221, y: 0, z: -2}
+    - Id: silberkueste_lore_szene2
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Leuchtturm Silbermund. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Mira
+      Position: {x: -301, y: 5, z: -302}
+    - Id: silberkueste_lore_szene3
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Mira: \u201EWir sind zum Leuchtturm Silbermund gegangen. Folge dem Rauch.\u201C"
+      Figure: Mira
+      Position: {x: -81, y: 0, z: 138}
+    - Id: silberkueste_wz_haupt_lore
+      Title: Leuchtturm Silbermund
+      Text: "Der Leuchtturm ist \xE4lter als der Hafen. Die Seefahrer sagen, er habe die Stadt gerufen, nicht umgekehrt."
+      Figure: Mira
+      Position: {x: -143.40884, y: 2.5, z: -17.723553}
+    - Id: silberkueste_wz_1_lore
+      Title: Klippenkathedrale der Seefahrer
+      Text: "Jeder Kapit\xE4n, der nicht heimkehrte, hat hier eine Kerze. Es brennen mehr Kerzen als Schiffe im Hafen liegen."
+      Figure: Mira
+      Position: {x: 163.56194, y: 5, z: 146.95787}
+    - Id: silberkueste_aufstieg_lore
+      Title: Hochpfad
+      Text: "Wer den Hochpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Mira
+      Position: {x: 18.140451, y: 53.625107, z: -154.99301}
+    Loops:
+    - Id: silberkueste_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: silberkueste_wz_haupt_2
+      TriggerPos: {x: -131.72769, y: 16.5, z: -22.644592}
+      TargetPos: {x: -131.72769, y: 16.5, z: -22.644592}
+      NextGoal: {x: 125.96742, y: 5.4, z: 109.10432}
+    - Id: silberkueste_schleife2
+      TriggerKind: Lichtstrahl
+      Target: silberkueste_wz_1_4
+      TriggerPos: {x: 125.96742, y: 5.4, z: 109.10432}
+      TargetPos: {x: 125.96742, y: 5.4, z: 109.10432}
+      NextGoal: {x: 21, y: 150.4, z: -219}
+    - Id: silberkueste_schleife3
+      TriggerKind: Vogelschwarm
+      Target: silberkueste_aufstieg_gipfel
+      TriggerPos: {x: 21, y: 150.4, z: -219}
+      TargetPos: {x: 21, y: 150.4, z: -219}
+      NextGoal: {x: -398, y: 5, z: 82}
+    - Id: silberkueste_schleife4
+      TriggerKind: Glocke
+      Target: silberkueste_hoehle
+      TriggerPos: {x: -398, y: 5, z: 82}
+      TargetPos: {x: -398, y: 5, z: 82}
+      NextGoal: {x: -28, y: 1.3434589, z: 172}
+    - Id: silberkueste_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: silberkueste_versteck2
+      TriggerPos: {x: -28, y: 1.3434589, z: 172}
+      TargetPos: {x: -28, y: 1.3434589, z: 172}
+      NextGoal: {x: -132.68, y: 72.5, z: -12.679993}
+    Shortcuts:
+    - Id: silberkueste_abk_hang
+      Name: Springer-Wand am Hochpfad
+      Key: 2
+      From: {x: 9.020496, y: 2.5, z: -81.520935}
+      To: {x: 18.265516, y: 99.39255, z: -187.61882}
+      FootPath: 1172.6256
+      MountPath: 172.77666
+    Scenes:
+    - Id: silberkueste_szene1
+      Kind: Wrack
+      LoreId: silberkueste_lore_szene1
+      Position: {x: -224, y: 0, z: -4}
+    - Id: silberkueste_szene2
+      Kind: Grab
+      LoreId: silberkueste_lore_szene2
+      Position: {x: -304, y: 5, z: -304}
+    - Id: silberkueste_szene3
+      Kind: Lager
+      LoreId: silberkueste_lore_szene3
+      Position: {x: -84, y: 0, z: 136}
+    FootLinks: []
+    Pads:
+    - {x: -132.68, y: -12.679993, z: 18.972, w: 2.5}
+    - {x: 149.4, y: 129.4, z: 37.74, w: 5}
+    MainVisibility: 0.934
+    CompactZone: 0

@@ -52,7 +52,7 @@ MonoBehaviour:
   WorldHook: duenenmeer_duene_karawane
   Path:
   - {x: -190, y: 1.5, z: -80}
-  - {x: -60, y: 5.7421756, z: -20}
+  - {x: -60, y: 5.8916507, z: -20}
   - {x: 60, y: 14.282826, z: 60}
   - {x: 180, y: 8.630755, z: 140}
   - {x: 230, y: 6.5274305, z: 180}

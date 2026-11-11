@@ -186,3 +186,452 @@ MonoBehaviour:
   - heart_gruener_schlund_3
   Region: 0
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 0
+      Center: {x: -198, y: -378}
+      Radius: 127
+      Height: 160
+      Param: 0
+      Yaw: 357
+    - Kind: 0
+      Center: {x: -65, y: 295}
+      Radius: 85
+      Height: 30
+      Param: 0
+      Yaw: 151
+    - Kind: 7
+      Center: {x: 42, y: 102}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 309
+    Landmarks:
+    - Id: gruener_schlund_wz_haupt
+      Name: Weltenbaum
+      Lore: Der Weltenbaum war schon alt, als die Berge jung waren. In seiner Krone lebt ein Dorf, das nie den Boden betreten hat.
+      Kind: 4
+      Main: 1
+      Position: {x: 37, y: 2, z: 37}
+      Height: 200
+      Footprint: 32
+      Yaw: -135
+      BuildHeight: 200
+      Primary: {r: 0.3529412, g: 0.2509804, b: 0.1882353, a: 1}
+      Accent: {r: 0.41568628, g: 0.8156863, b: 0.2901961, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_BirdCall_0
+      Stages:
+      - Index: 1
+        Name: Wurzelhalle
+        Position: {x: 37, y: 2.4, z: 37}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 37, y: 2.4, z: 37}
+      - Index: 2
+        Name: "\xC4ste"
+        Position: {x: 38.47375, y: 79, z: 44.35378}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 38.47375, y: 79, z: 44.35378}
+      - Index: 3
+        Name: Kronendorf
+        Position: {x: 27.100506, y: 146.6, z: 46.899494}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 27.100506, y: 146.6, z: 46.899494}
+      - Index: 4
+        Name: Krone
+        Position: {x: 37, y: 205, z: 37}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: 37, y: 205, z: 37}
+    - Id: gruener_schlund_wz_1
+      Name: Wurzeltempel
+      Lore: "Die Wurzeln haben den Tempel nicht zerst\xF6rt \u2013 sie haben ihn umarmt."
+      Kind: 0
+      Main: 0
+      Position: {x: -110.600006, y: 2.6769433, z: -110.600006}
+      Height: 40
+      Footprint: 44.4
+      Yaw: 45
+      BuildHeight: 40
+      Primary: {r: 0.41568628, g: 0.3764706, b: 0.3137255, a: 1}
+      Accent: {r: 0.627451, g: 0.8784314, b: 0.4392157, a: 1}
+      Interior: 1
+      LightProfile: "Lichtsch\xE4chte"
+      SoundProfile: SFX_Amb_Bell_0
+      Stages:
+      - Index: 1
+        Name: Galerie
+        Position: {x: -113.640564, y: 11.676943, z: -104.44817}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -113.640564, y: 11.676943, z: -104.44817}
+      - Index: 2
+        Name: Turmgalerie
+        Position: {x: -139.17561, y: 32.116943, z: -109.980095}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -139.17561, y: 32.116943, z: -109.980095}
+      - Index: 3
+        Name: Turmspitze
+        Position: {x: -132.52031, y: 35.276943, z: -113.85269}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: -132.52031, y: 35.276943, z: -113.85269}
+      - Index: 4
+        Name: Krypta
+        Position: {x: -88.679695, y: 3.0769434, z: -88.679695}
+        Gate:
+          Keys: 3
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -88.679695, y: 3.0769434, z: -88.679695}
+    Hazards:
+    - Id: gruener_schlund_h1
+      Kind: 8
+      Center: {x: 156, y: 2.3033624, z: 56}
+      Size: {x: 20, y: 20}
+      Yaw: 0
+      Keys: 27
+      Circular: 1
+    - Id: gruener_schlund_h2
+      Kind: 4
+      Center: {x: -176.86528, y: 134.06413, z: -373.5077}
+      Size: {x: 40, y: 40}
+      Yaw: 0
+      Keys: 25
+      Circular: 1
+    Climbs:
+    - Id: gruener_schlund_aufstieg
+      Name: Gipfelpfad
+      Base: {x: -61.752472, y: 6.218919, z: -405.52475}
+      Peak: {x: -198, y: 160, z: -378}
+      LaunchTower: {x: -44.10891, y: 6.218919, z: -409.0891}
+      DescentTarget: {x: 12, y: 2.2870584, z: -400}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: -154.43011, y: 59.655827, z: -386.802}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -84.92188, y: 19.578146, z: -400.84406}
+        - {x: -108.09129, y: 32.937374, z: -396.1634}
+        - {x: -131.26071, y: 46.2966, z: -391.4827}
+        - {x: -154.43011, y: 59.655827, z: -386.802}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: -164.38892, y: 106.339584, z: -384.79013}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -156.91982, y: 71.32677, z: -386.29904}
+        - {x: -159.40952, y: 82.9977, z: -385.79608}
+        - {x: -161.89922, y: 94.66865, z: -385.2931}
+        - {x: -164.38892, y: 106.339584, z: -384.79013}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: -198, y: 160, z: -378}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: -161.07304, y: 107.233925, z: -370.15094}
+        - {x: -221.14037, y: 122.437706, z: -394.81247}
+        - {x: -188.27289, y: 137.6415, z: -361.15216}
+        - {x: -199.0772, y: 152.84528, z: -388.2489}
+        - {x: -198, y: 160, z: -378}
+      FootPath:
+      - {x: -67.63366, y: 6.218919, z: -404.33664}
+      - {x: -96.415924, y: 12.898533, z: -310.56183}
+      - {x: -176.04703, y: 19.578146, z: -269.33276}
+      - {x: -253.19429, y: 26.25776, z: -294.85925}
+      - {x: -284.9681, y: 32.937374, z: -360.4307}
+      - {x: -262.69745, y: 39.616985, z: -420.95044}
+      - {x: -211.18565, y: 46.2966, z: -443.26898}
+      - {x: -167.29344, y: 52.976215, z: -424.25415}
+      - {x: -154.43011, y: 59.655827, z: -386.802}
+      - {x: -154.43011, y: 59.655827, z: -386.802}
+      - {x: -161.49652, y: 62.573563, z: -353.7666}
+      - {x: -189.44948, y: 65.491295, z: -335.67496}
+      - {x: -221.53099, y: 68.409035, z: -342.5546}
+      - {x: -239.0802, y: 71.32677, z: -369.70096}
+      - {x: -232.38733, y: 74.2445, z: -400.82858}
+      - {x: -206.04755, y: 77.16224, z: -417.83533}
+      - {x: -175.87383, y: 80.07997, z: -411.32928}
+      - {x: -159.40952, y: 82.9977, z: -385.79605}
+      - {x: -165.72879, y: 85.91544, z: -356.57626}
+      - {x: -190.45544, y: 88.833176, z: -340.65436}
+      - {x: -218.72134, y: 91.75091, z: -346.7869}
+      - {x: -234.10078, y: 94.66865, z: -370.7069}
+      - {x: -228.15508, y: 97.58638, z: -398.01892}
+      - {x: -205.04158, y: 100.50411, z: -412.85593}
+      - {x: -178.6835, y: 103.42185, z: -407.097}
+      - {x: -164.38892, y: 106.339584, z: -384.79013}
+      SpringerLedges:
+      - {x: -73.156525, y: 17.543438, z: -403.22092}
+      - {x: -84.56057, y: 28.667957, z: -400.91705}
+      - {x: -95.96462, y: 39.792477, z: -398.61322}
+      - {x: -107.36867, y: 50.916992, z: -396.30936}
+      - {x: -118.77272, y: 62.041515, z: -394.00552}
+      - {x: -130.17677, y: 73.16603, z: -391.70166}
+      - {x: -141.58083, y: 84.29054, z: -389.39783}
+      - {x: -152.98486, y: 95.41506, z: -387.09396}
+      - {x: -164.38892, y: 106.53958, z: -384.79013}
+      ClimbPath:
+      - {x: -161.07304, y: 107.233925, z: -370.15094}
+      - {x: -164.00354, y: 108.128265, z: -362.8638}
+      - {x: -168.32883, y: 109.022606, z: -356.44263}
+      - {x: -173.81934, y: 109.91695, z: -351.14465}
+      - {x: -180.20038, y: 110.81129, z: -347.17014}
+      - {x: -187.16553, y: 111.70563, z: -344.6549}
+      - {x: -194.39137, y: 112.59997, z: -343.6662}
+      - {x: -201.55238, y: 113.49431, z: -344.20142}
+      - {x: -208.33557, y: 114.38865, z: -346.1904}
+      - {x: -214.45421, y: 115.28299, z: -349.5005}
+      - {x: -219.65993, y: 116.17733, z: -353.9442}
+      - {x: -223.7527, y: 117.07167, z: -359.28958}
+      - {x: -226.58841, y: 117.96601, z: -365.2716}
+      - {x: -228.08366, y: 118.86035, z: -371.60553}
+      - {x: -228.21758, y: 119.754684, z: -378}
+      - {x: -227.03084, y: 120.64903, z: -384.17072}
+      - {x: -224.62184, y: 121.543365, z: -389.8528}
+      - {x: -221.14037, y: 122.437706, z: -394.81247}
+      - {x: -216.77908, y: 123.33205, z: -398.8563}
+      - {x: -211.76337, y: 124.22639, z: -401.83884}
+      - {x: -206.33994, y: 125.12073, z: -403.66766}
+      - {x: -200.76482, y: 126.01507, z: -404.3055}
+      - {x: -195.29144, y: 126.90941, z: -403.7703}
+      - {x: -190.15898, y: 127.80375, z: -402.13217}
+      - {x: -185.58206, y: 128.69809, z: -399.5085}
+      - {x: -181.74165, y: 129.59244, z: -396.05673}
+      - {x: -178.77812, y: 130.48677, z: -391.9655}
+      - {x: -176.78621, y: 131.38112, z: -387.44498}
+      - {x: -175.81247, y: 132.27545, z: -382.7161}
+      - {x: -175.85495, y: 133.1698, z: -378}
+      - {x: -176.86528, y: 134.06413, z: -373.5077}
+      - {x: -178.75278, y: 134.95848, z: -369.43057}
+      - {x: -181.39044, y: 135.85281, z: -365.93243}
+      - {x: -184.6225, y: 136.74715, z: -363.14276}
+      - {x: -188.27289, y: 137.6415, z: -361.15216}
+      - {x: -192.15463, y: 138.53583, z: -360.00977}
+      - {x: -196.079, y: 139.43018, z: -359.7228}
+      - {x: -199.86476, y: 140.32451, z: -360.25803}
+      - {x: -203.34647, y: 141.21886, z: -361.54526}
+      - {x: -206.38168, y: 142.11319, z: -363.4825}
+      - {x: -208.85678, y: 143.00754, z: -365.94232}
+      - {x: -210.69107, y: 143.90187, z: -368.7794}
+      - {x: -211.83917, y: 144.79622, z: -371.8384}
+      - {x: -212.29141, y: 145.69055, z: -374.96228}
+      - {x: -212.07253, y: 146.5849, z: -378}
+      - {x: -211.2386, y: 147.47923, z: -380.81393}
+      - {x: -209.8726, y: 148.37358, z: -383.28604}
+      - {x: -208.07875, y: 149.26791, z: -385.32263}
+      - {x: -205.97594, y: 150.16226, z: -386.8582}
+      - {x: -203.69084, y: 151.0566, z: -387.85684}
+      - {x: -201.35083, y: 151.95094, z: -388.3128}
+      - {x: -199.0772, y: 152.84528, z: -388.2489}
+      - {x: -196.97905, y: 153.73962, z: -387.71368}
+      - {x: -195.14809, y: 154.63396, z: -386.7773}
+      - {x: -193.65457, y: 155.5283, z: -385.5265}
+      - {x: -192.5448, y: 156.42264, z: -384.05862}
+      - {x: -191.83974, y: 157.31699, z: -382.4757}
+      - {x: -191.53545, y: 158.21132, z: -380.8782}
+      - {x: -191.6047, y: 159.10567, z: -379.35934}
+      - {x: -192, y: 160, z: -378}
+      LandmarkId: 
+    Secrets:
+    - Id: gruener_schlund_h1_dornen
+      Name: Hinter den Dornen
+      Hint: "Rote Bl\xFCten verbergen eine Kiste."
+      Position: {x: 156, y: 2.3033624, z: 56}
+      Gate:
+        Keys: 3
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: gruener_schlund_wz_haupt_3
+      Name: 'Weltenbaum: Kronendorf'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Weltenbaum."
+      Position: {x: 27.100506, y: 146.6, z: 46.899494}
+      Gate:
+        Keys: 2
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: gruener_schlund_wz_1_4
+      Name: 'Wurzeltempel: Krypta'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste in der Krypta."
+      Position: {x: -88.679695, y: 3.0769434, z: -88.679695}
+      Gate:
+        Keys: 3
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: gruener_schlund_aufstieg_gipfel
+      Name: 'Gipfelpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -198, y: 160.4, z: -378}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: gruener_schlund_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 42, y: 2.692937, z: 102}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: gruener_schlund_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -28, y: -2.5200775, z: 172}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: gruener_schlund_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: 372, y: 1.9253597, z: 272}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: gruener_schlund_lore_szene1
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Ysa: \u201EWir sind zum Weltenbaum gegangen. Folge dem Rauch.\u201C"
+      Figure: Ysa
+      Position: {x: 79, y: -1.1792227, z: -2}
+    - Id: gruener_schlund_lore_szene2
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Ysa sp\xE4ter fand."
+      Figure: Ysa
+      Position: {x: -1, y: -5.6362705, z: 78}
+    - Id: gruener_schlund_lore_szene3
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Weltenbaum. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Ysa
+      Position: {x: -81, y: 2.5677989, z: 118}
+    - Id: gruener_schlund_wz_haupt_lore
+      Title: Weltenbaum
+      Text: Der Weltenbaum war schon alt, als die Berge jung waren. In seiner Krone lebt ein Dorf, das nie den Boden betreten hat.
+      Figure: Ysa
+      Position: {x: 45.485283, y: 0.7175571, z: 51.142136}
+    - Id: gruener_schlund_wz_1_lore
+      Title: Wurzeltempel
+      Text: "Die Wurzeln haben den Tempel nicht zerst\xF6rt \u2013 sie haben ihn umarmt."
+      Figure: Ysa
+      Position: {x: -123.46935, y: 1.9045484, z: -129.1262}
+    - Id: gruener_schlund_aufstieg_lore
+      Title: Gipfelpfad
+      Text: "Wer den Gipfelpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Ysa
+      Position: {x: -151.93011, y: 59.655827, z: -384.302}
+    Loops:
+    - Id: gruener_schlund_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: gruener_schlund_h1_dornen
+      TriggerPos: {x: 156, y: 2.3033624, z: 56}
+      TargetPos: {x: 156, y: 2.3033624, z: 56}
+      NextGoal: {x: 27.100506, y: 146.6, z: 46.899494}
+    - Id: gruener_schlund_schleife2
+      TriggerKind: Lichtstrahl
+      Target: gruener_schlund_wz_haupt_3
+      TriggerPos: {x: 27.100506, y: 146.6, z: 46.899494}
+      TargetPos: {x: 27.100506, y: 146.6, z: 46.899494}
+      NextGoal: {x: -88.679695, y: 3.0769434, z: -88.679695}
+    - Id: gruener_schlund_schleife3
+      TriggerKind: Vogelschwarm
+      Target: gruener_schlund_wz_1_4
+      TriggerPos: {x: -88.679695, y: 3.0769434, z: -88.679695}
+      TargetPos: {x: -88.679695, y: 3.0769434, z: -88.679695}
+      NextGoal: {x: -198, y: 160.4, z: -378}
+    - Id: gruener_schlund_schleife4
+      TriggerKind: Glocke
+      Target: gruener_schlund_aufstieg_gipfel
+      TriggerPos: {x: -198, y: 160.4, z: -378}
+      TargetPos: {x: -198, y: 160.4, z: -378}
+      NextGoal: {x: 42, y: 2.692937, z: 102}
+    - Id: gruener_schlund_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: gruener_schlund_hoehle
+      TriggerPos: {x: 42, y: 2.692937, z: 102}
+      TargetPos: {x: 42, y: 2.692937, z: 102}
+      NextGoal: {x: 37, y: 202, z: 37}
+    Shortcuts:
+    - Id: gruener_schlund_abk_hang
+      Name: Springer-Wand am Gipfelpfad
+      Key: 2
+      From: {x: -61.752472, y: 6.218919, z: -405.52475}
+      To: {x: -164.38892, y: 106.339584, z: -384.79013}
+      FootPath: 1037.2482
+      MountPath: 173.84811
+    Scenes:
+    - Id: gruener_schlund_szene1
+      Kind: Lager
+      LoreId: gruener_schlund_lore_szene1
+      Position: {x: 76, y: -1.1792227, z: -4}
+    - Id: gruener_schlund_szene2
+      Kind: Schlachtfeld
+      LoreId: gruener_schlund_lore_szene2
+      Position: {x: -4, y: -5.6362705, z: 76}
+    - Id: gruener_schlund_szene3
+      Kind: Grab
+      LoreId: gruener_schlund_lore_szene3
+      Position: {x: -84, y: 2.5677989, z: 116}
+    FootLinks: []
+    Pads:
+    - {x: 37, y: 37, z: 27.2, w: 2}
+    - {x: -110.600006, y: -110.600006, z: 37.74, w: 2.6769433}
+    MainVisibility: 0.976
+    CompactZone: 0

@@ -22,7 +22,7 @@ MonoBehaviour:
   Karma: 0
   Copper: 0
   HeroPoints: 0
-  Requires: 2
+  Requires: 0
   HeartTask: 
   KillValue: 0
   TaskValue: 0

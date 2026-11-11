@@ -226,3 +226,376 @@ MonoBehaviour:
   - heart_sonnentor_3
   Region: 1
   IsHub: 1
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 7
+      Center: {x: 52, y: 92}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 358
+    Landmarks:
+    - Id: sonnentor_wz_haupt
+      Name: Oasenpalast
+      Lore: "Der Palast wurde um die Quelle gebaut, nicht die Quelle um den Palast. Jeder H\xE4ndler trinkt hier, bevor er feilscht."
+      Kind: 2
+      Main: 1
+      Position: {x: -23.5, y: 3.9179091, z: 96.5}
+      Height: 70
+      Footprint: 41.5
+      Yaw: 166.31355
+      BuildHeight: 70
+      Primary: {r: 0.8784314, g: 0.78431374, b: 0.5647059, a: 1}
+      Accent: {r: 0.22745098, g: 0.6901961, b: 0.7529412, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_Torch_0
+      Stages:
+      - Index: 1
+        Name: Wehrgang
+        Position: {x: 4.5352306, y: 15.91791, z: 93.375946}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 4.5352306, y: 15.91791, z: 93.375946}
+      - Index: 2
+        Name: Zinnen
+        Position: {x: -31.704525, y: 16.217909, z: 63.62527}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -31.704525, y: 16.217909, z: 63.62527}
+      - Index: 3
+        Name: Bergfried-Dach
+        Position: {x: -21.71124, y: 74.91791, z: 89.15466}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -21.71124, y: 74.91791, z: 89.15466}
+      - Index: 4
+        Name: Halle
+        Position: {x: -21.71124, y: 4.3179092, z: 89.15466}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -21.71124, y: 4.3179092, z: 89.15466}
+    - Id: sonnentor_wz_1
+      Name: Palastturm
+      Lore: "Vom Palastturm aus sieht man die Rennbahn \u2013 und wer betr\xFCgt."
+      Kind: 6
+      Main: 0
+      Position: {x: 136.20001, y: 8.653696, z: -23.799988}
+      Height: 45
+      Footprint: 21.2
+      Yaw: -80.08804
+      BuildHeight: 45
+      Primary: {r: 0.9098039, g: 0.84705883, b: 0.6901961, a: 1}
+      Accent: {r: 1, g: 0.6039216, b: 0.22745098, a: 1}
+      Interior: 1
+      LightProfile: Laterne
+      SoundProfile: SFX_Amb_Water_0
+      Stages:
+      - Index: 1
+        Name: Treppe
+        Position: {x: 136.92297, y: 9.053696, z: -19.66268}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 136.92297, y: 9.053696, z: -19.66268}
+      - Index: 2
+        Name: "Au\xDFengalerie"
+        Position: {x: 137.76643, y: 22.653696, z: -14.83582}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 137.76643, y: 22.653696, z: -14.83582}
+      - Index: 3
+        Name: Laterne
+        Position: {x: 137.22421, y: 50.453697, z: -17.9388}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 137.22421, y: 50.453697, z: -17.9388}
+    Hazards: []
+    Climbs:
+    - Id: sonnentor_aufstieg
+      Name: Aufstieg Oasenpalast
+      Base: {x: -16.69751, y: 3.9179091, z: 68.56636}
+      Peak: {x: -21.71124, y: 74.91791, z: 89.15466}
+      LaunchTower: {x: -11.965342, y: 3.9179091, z: 49.134262}
+      DescentTarget: {x: -49.029305, y: 3.514513, z: 15.352745}
+      Stages:
+      - Index: 1
+        Name: Halle
+        Position: {x: -21.71124, y: 4.3179092, z: 89.15466}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -21.71124, y: 4.3179092, z: 89.15466}
+      - Index: 2
+        Name: Zinnen
+        Position: {x: -31.704525, y: 16.217909, z: 63.62527}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -31.704525, y: 16.217909, z: 63.62527}
+      - Index: 3
+        Name: Bergfried-Dach
+        Position: {x: -21.71124, y: 74.91791, z: 89.15466}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 2.766593, y: 17.107304, z: 101.56247}
+        - {x: -49.166435, y: 32.227, z: 88.963646}
+        - {x: 1.3338432, y: 47.346695, z: 106.44197}
+        - {x: -47.276337, y: 62.466393, z: 84.24242}
+        - {x: -21.71124, y: 74.91791, z: 89.15466}
+      FootPath: []
+      SpringerLedges:
+      - {x: -24.685303, y: 10.267909, z: 64.155334}
+      - {x: -32.673096, y: 16.41791, z: 59.74431}
+      ClimbPath:
+      - {x: 2.766593, y: 17.107304, z: 101.56247}
+      - {x: 1.3338417, y: 17.996696, z: 106.44197}
+      - {x: -0.99646837, y: 18.886091, z: 110.96214}
+      - {x: -4.1401167, y: 19.775484, z: 114.95962}
+      - {x: -7.9834795, y: 20.664879, z: 118.28991}
+      - {x: -12.38765, y: 21.554272, z: 120.83266}
+      - {x: -17.193449, y: 22.443666, z: 122.49596}
+      - {x: -22.227188, y: 23.333061, z: 123.2197}
+      - {x: -27.306925, y: 24.222454, z: 122.97772}
+      - {x: -32.24907, y: 25.111849, z: 121.77877}
+      - {x: -36.875, y: 26.001242, z: 119.666176}
+      - {x: -41.01753, y: 26.890636, z: 116.7163}
+      - {x: -44.526924, y: 27.78003, z: 113.03575}
+      - {x: -47.27635, y: 28.669424, z: 108.75756}
+      - {x: -49.16644, y: 29.558819, z: 104.03634}
+      - {x: -50.128876, y: 30.448212, z: 99.04274}
+      - {x: -50.128876, y: 31.337605, z: 93.95725}
+      - {x: -49.166435, y: 32.227, z: 88.963646}
+      - {x: -47.27635, y: 33.116394, z: 84.24244}
+      - {x: -44.526917, y: 34.005787, z: 79.96424}
+      - {x: -41.017525, y: 34.89518, z: 76.2837}
+      - {x: -36.874996, y: 35.784576, z: 73.33382}
+      - {x: -32.24906, y: 36.67397, z: 71.22123}
+      - {x: -27.306913, y: 37.563362, z: 70.02228}
+      - {x: -22.227186, y: 38.452755, z: 69.7803}
+      - {x: -17.193436, y: 39.34215, z: 70.50404}
+      - {x: -12.387646, y: 40.231544, z: 72.16734}
+      - {x: -7.983473, y: 41.12094, z: 74.7101}
+      - {x: -4.1401086, y: 42.010334, z: 78.04039}
+      - {x: -0.996462, y: 42.899727, z: 82.037865}
+      - {x: 1.3338417, y: 43.78912, z: 86.55803}
+      - {x: 2.766596, y: 44.678516, z: 91.437546}
+      - {x: 3.25, y: 45.56791, z: 96.50001}
+      - {x: 2.7665944, y: 46.457302, z: 101.56246}
+      - {x: 1.3338432, y: 47.346695, z: 106.44197}
+      - {x: -0.99647474, y: 48.23609, z: 110.96215}
+      - {x: -4.140115, y: 49.125484, z: 114.95962}
+      - {x: -7.983481, y: 50.014877, z: 118.28991}
+      - {x: -12.387643, y: 50.90427, z: 120.83266}
+      - {x: -17.193457, y: 51.793667, z: 122.495964}
+      - {x: -22.227196, y: 52.68306, z: 123.2197}
+      - {x: -27.306923, y: 53.572453, z: 122.97772}
+      - {x: -32.249058, y: 54.461845, z: 121.77878}
+      - {x: -36.875004, y: 55.351242, z: 119.666176}
+      - {x: -41.01752, y: 56.240635, z: 116.7163}
+      - {x: -44.526928, y: 57.130028, z: 113.03574}
+      - {x: -47.27635, y: 58.01942, z: 108.75756}
+      - {x: -49.166443, y: 58.908817, z: 104.03633}
+      - {x: -50.128876, y: 59.79821, z: 99.04274}
+      - {x: -50.128876, y: 60.687603, z: 93.95725}
+      - {x: -49.166435, y: 61.576996, z: 88.963646}
+      - {x: -47.276337, y: 62.466393, z: 84.24242}
+      - {x: -44.52691, y: 63.355785, z: 79.96423}
+      - {x: -41.01752, y: 64.24518, z: 76.2837}
+      - {x: -36.875004, y: 65.134575, z: 73.333824}
+      - {x: -32.249058, y: 66.02397, z: 71.22122}
+      - {x: -27.306921, y: 66.91336, z: 70.02228}
+      - {x: -22.227169, y: 67.80276, z: 69.7803}
+      - {x: -17.193443, y: 68.69215, z: 70.50404}
+      - {x: -13.24679, y: 69.58154, z: 74.048645}
+      - {x: -11.182578, y: 70.47094, z: 79.202614}
+      - {x: -10.62631, y: 71.36033, z: 84.22496}
+      - {x: -11.4356575, y: 72.249725, z: 88.74673}
+      - {x: -13.386423, y: 73.13912, z: 92.45115}
+      - {x: -16.187614, y: 74.02851, z: 95.09066}
+      - {x: -19.5, y: 74.91791, z: 96.5}
+      LandmarkId: sonnentor_wz_haupt
+    Secrets:
+    - Id: sonnentor_wz_haupt_3
+      Name: 'Oasenpalast: Bergfried-Dach'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Oasenpalast."
+      Position: {x: -21.71124, y: 74.91791, z: 89.15466}
+      Gate:
+        Keys: 8
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnentor_wz_1_2
+      Name: "Palastturm: Au\xDFengalerie"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Palastturm."
+      Position: {x: 137.76643, y: 22.653696, z: -14.83582}
+      Gate:
+        Keys: 2
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnentor_aufstieg_gipfel
+      Name: 'Aufstieg Oasenpalast: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -21.71124, y: 75.31791, z: 89.15466}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnentor_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 52, y: 6.9870195, z: 92}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnentor_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -38, y: 3.4041607, z: 202}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnentor_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -118, y: -1.817274, z: 262}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnentor_versteck4
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -178, y: 2.8419318, z: -178}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: sonnentor_lore_szene1
+      Title: Gestrandete Karawane
+      Text: "Die Karawane blieb im Sand stecken. Die Kisten sind leer \u2013 bis auf eine, und die zeigt mit ihren Spuren zum Oasenpalast."
+      Figure: Nadira
+      Position: {x: 89, y: 7.110256, z: -12}
+    - Id: sonnentor_lore_szene2
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Oasenpalast. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Nadira
+      Position: {x: 289, y: 2.3325489, z: 68}
+    - Id: sonnentor_lore_szene3
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Nadira sp\xE4ter fand."
+      Figure: Nadira
+      Position: {x: -91, y: 0.12703755, z: 128}
+    - Id: sonnentor_wz_haupt_lore
+      Title: Oasenpalast
+      Text: "Der Palast wurde um die Quelle gebaut, nicht die Quelle um den Palast. Jeder H\xE4ndler trinkt hier, bevor er feilscht."
+      Figure: Nadira
+      Position: {x: -32.296043, y: 3.895322, z: 115.71437}
+    - Id: sonnentor_wz_1_lore
+      Title: Palastturm
+      Text: "Vom Palastturm aus sieht man die Rennbahn \u2013 und wer betr\xFCgt."
+      Figure: Nadira
+      Position: {x: 147.33032, y: 7.956673, z: -21.684322}
+    - Id: sonnentor_aufstieg_lore
+      Title: Aufstieg Oasenpalast
+      Text: "Wer den Aufstieg Oasenpalast bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Nadira
+      Position: {x: -19.21124, y: 4.3179092, z: 91.65466}
+    Loops:
+    - Id: sonnentor_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: sonnentor_wz_haupt_3
+      TriggerPos: {x: -21.71124, y: 74.91791, z: 89.15466}
+      TargetPos: {x: -21.71124, y: 74.91791, z: 89.15466}
+      NextGoal: {x: 137.76643, y: 22.653696, z: -14.83582}
+    - Id: sonnentor_schleife2
+      TriggerKind: Lichtstrahl
+      Target: sonnentor_wz_1_2
+      TriggerPos: {x: 137.76643, y: 22.653696, z: -14.83582}
+      TargetPos: {x: 137.76643, y: 22.653696, z: -14.83582}
+      NextGoal: {x: -21.71124, y: 75.31791, z: 89.15466}
+    - Id: sonnentor_schleife3
+      TriggerKind: Vogelschwarm
+      Target: sonnentor_aufstieg_gipfel
+      TriggerPos: {x: -21.71124, y: 75.31791, z: 89.15466}
+      TargetPos: {x: -21.71124, y: 75.31791, z: 89.15466}
+      NextGoal: {x: 52, y: 6.9870195, z: 92}
+    - Id: sonnentor_schleife4
+      TriggerKind: Glocke
+      Target: sonnentor_hoehle
+      TriggerPos: {x: 52, y: 6.9870195, z: 92}
+      TargetPos: {x: 52, y: 6.9870195, z: 92}
+      NextGoal: {x: -38, y: 3.4041607, z: 202}
+    - Id: sonnentor_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: sonnentor_versteck2
+      TriggerPos: {x: -38, y: 3.4041607, z: 202}
+      TargetPos: {x: -38, y: 3.4041607, z: 202}
+      NextGoal: {x: -23.5, y: 73.91791, z: 96.5}
+    Shortcuts: []
+    Scenes:
+    - Id: sonnentor_szene1
+      Kind: Karawane
+      LoreId: sonnentor_lore_szene1
+      Position: {x: 86, y: 7.110256, z: -14}
+    - Id: sonnentor_szene2
+      Kind: Grab
+      LoreId: sonnentor_lore_szene2
+      Position: {x: 286, y: 2.3325489, z: 66}
+    - Id: sonnentor_szene3
+      Kind: Schlachtfeld
+      LoreId: sonnentor_lore_szene3
+      Position: {x: -94, y: 0.12703755, z: 126}
+    FootLinks: []
+    Pads:
+    - {x: -23.5, y: 96.5, z: 35.275, w: 3.9179091}
+    - {x: 136.20001, y: -23.799988, z: 18.02, w: 8.653696}
+    MainVisibility: 0.998
+    CompactZone: 1

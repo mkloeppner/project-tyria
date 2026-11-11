@@ -174,3 +174,412 @@ MonoBehaviour:
   - heart_herz_der_flut_3
   Region: 2
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 1
+      Center: {x: 303, y: 143}
+      Radius: 138
+      Height: 150
+      Param: 0
+      Yaw: 153
+    - Kind: 1
+      Center: {x: -75, y: 345}
+      Radius: 85
+      Height: 30
+      Param: 0
+      Yaw: 174
+    - Kind: 7
+      Center: {x: 32, y: 92}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 18
+    Landmarks:
+    - Id: herz_der_flut_wz_haupt
+      Name: Drachenarena
+      Lore: "Die Plattformen schweben \xFCber dem Meer, gehalten von Jade und Erinnerung. Hier erwacht der Drache, wenn er gerufen wird."
+      Kind: 9
+      Main: 1
+      Position: {x: 93.646545, y: 2.6, z: 80.23929}
+      Height: 110
+      Footprint: 30
+      Yaw: -130.591
+      BuildHeight: 90
+      Primary: {r: 0.16470589, g: 0.47843137, b: 0.41568628, a: 1}
+      Accent: {r: 0.5019608, g: 1, b: 0.8784314, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_WindHigh_0
+      Stages:
+      - Index: 1
+        Name: Tempel
+        Position: {x: 93.646545, y: 94.5, z: 80.23929}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 93.646545, y: 94.5, z: 80.23929}
+      - Index: 2
+        Name: Windorgel
+        Position: {x: 76.726204, y: 110.6, z: 81.54391}
+        Gate:
+          Keys: 16
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 76.726204, y: 110.6, z: 81.54391}
+    - Id: herz_der_flut_wz_1
+      Name: Flutschrein
+      Lore: "Ein Schrein f\xFCr die, die auf See blieben. Die Laternen schwimmen jede Nacht hinaus."
+      Kind: 3
+      Main: 0
+      Position: {x: -59.599976, y: 2.6, z: -59.599976}
+      Height: 35
+      Footprint: 25.4
+      Yaw: 45
+      BuildHeight: 35
+      Primary: {r: 0.16470589, g: 0.41568628, b: 0.5411765, a: 1}
+      Accent: {r: 1, g: 0.8784314, b: 0.5019608, a: 1}
+      Interior: 1
+      LightProfile: Laternen
+      SoundProfile: SFX_Amb_Bell_2
+      Stages:
+      - Index: 1
+        Name: Ebene 3
+        Position: {x: -59.599976, y: 17, z: -59.599976}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -59.599976, y: 17, z: -59.599976}
+      - Index: 2
+        Name: Balkon
+        Position: {x: -52.599617, y: 30.6, z: -66.600334}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -52.599617, y: 30.6, z: -66.600334}
+      - Index: 3
+        Name: Spitze
+        Position: {x: -57.26652, y: 38, z: -57.26652}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -57.26652, y: 38, z: -57.26652}
+    Hazards:
+    - Id: herz_der_flut_h1
+      Kind: 4
+      Center: {x: 324.83163, y: 125.14019, z: 145.41634}
+      Size: {x: 40, y: 40}
+      Yaw: 0
+      Keys: 25
+      Circular: 1
+    Climbs:
+    - Id: herz_der_flut_aufstieg
+      Name: Hochpfad
+      Base: {x: 235.29301, y: 1.9, z: 9.150223}
+      Peak: {x: 303, y: 150, z: 143}
+      LaunchTower: {x: 227.16818, y: 1.9, z: -6.911751}
+      DescentTarget: {x: 429.9395, y: 2.6, z: -96.85372}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: 272.47766, y: 53.625095, z: 82.66046}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 244.58917, y: 14.831274, z: 27.527782}
+        - {x: 253.88535, y: 27.762548, z: 45.905342}
+        - {x: 263.1815, y: 40.69382, z: 64.2829}
+        - {x: 272.47766, y: 53.625095, z: 82.66046}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: 287.42737, y: 99.392525, z: 112.21446}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 276.2151, y: 65.066956, z: 90.048965}
+        - {x: 279.9525, y: 76.50881, z: 97.43746}
+        - {x: 283.6899, y: 87.95067, z: 104.82596}
+        - {x: 287.42734, y: 99.392525, z: 112.21446}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: 303, y: 150, z: 143}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 340.01187, y: 100.28037, z: 151.29456}
+        - {x: 283.87567, y: 115.37383, z: 122.225426}
+        - {x: 305.5471, y: 130.46729, z: 161.36813}
+        - {x: 306.99646, y: 145.56075, z: 135.10275}
+        - {x: 303, y: 150, z: 143}
+      FootPath:
+      - {x: 238.00128, y: 1.9, z: 14.504215}
+      - {x: 344.9223, y: 8.365637, z: 15.250238}
+      - {x: 414.45673, y: 14.831273, z: 86.62037}
+      - {x: 412.6067, y: 21.29691, z: 178.96848}
+      - {x: 350.76053, y: 27.762547, z: 237.41766}
+      - {x: 272.98532, y: 34.228184, z: 234.46364}
+      - {x: 225.6214, y: 40.69382, z: 182.14143}
+      - {x: 229.67943, y: 47.15946, z: 118.93912}
+      - {x: 272.47766, y: 53.625095, z: 82.66046}
+      - {x: 272.47766, y: 53.625095, z: 82.66047}
+      - {x: 323.4385, y: 56.48556, z: 80.71776}
+      - {x: 359.6453, y: 59.346024, z: 114.34637}
+      - {x: 361.34863, y: 62.20649, z: 162.14767}
+      - {x: 329.7849, y: 65.066956, z: 195.95103}
+      - {x: 285.1432, y: 67.927414, z: 197.41504}
+      - {x: 253.74321, y: 70.78788, z: 167.91621}
+      - {x: 252.51857, y: 73.648346, z: 126.43401}
+      - {x: 279.9525, y: 76.50881, z: 97.43745}
+      - {x: 318.27512, y: 79.36928, z: 96.45217}
+      - {x: 344.86832, y: 82.22974, z: 121.821236}
+      - {x: 345.6142, y: 85.0902, z: 156.9843}
+      - {x: 322.3101, y: 87.95067, z: 181.17404}
+      - {x: 290.30658, y: 90.811134, z: 181.6806}
+      - {x: 268.5202, y: 93.67159, z: 160.44135}
+      - {x: 268.253, y: 96.53206, z: 131.59743}
+      - {x: 287.42737, y: 99.392525, z: 112.21446}
+      SpringerLedges:
+      - {x: 241.08572, y: 12.932503, z: 20.601805}
+      - {x: 246.87843, y: 23.765007, z: 32.053387}
+      - {x: 252.67113, y: 34.59751, z: 43.50497}
+      - {x: 258.46384, y: 45.43001, z: 54.95655}
+      - {x: 264.25653, y: 56.262516, z: 66.408134}
+      - {x: 270.04926, y: 67.09502, z: 77.85972}
+      - {x: 275.84195, y: 77.92752, z: 89.3113}
+      - {x: 281.63467, y: 88.76002, z: 100.76288}
+      - {x: 287.42737, y: 99.59256, z: 112.21446}
+      ClimbPath:
+      - {x: 340.01187, y: 100.28037, z: 151.29456}
+      - {x: 336.78656, y: 101.16823, z: 158.94426}
+      - {x: 332.03214, y: 102.056076, z: 165.59662}
+      - {x: 326.02554, y: 102.943924, z: 170.95836}
+      - {x: 319.0968, y: 103.83178, z: 174.80817}
+      - {x: 311.6114, y: 104.71963, z: 177.00563}
+      - {x: 303.95087, y: 105.607475, z: 177.49576}
+      - {x: 296.4936, y: 106.49533, z: 176.30917}
+      - {x: 289.59604, y: 107.38318, z: 173.55798}
+      - {x: 283.57565, y: 108.27103, z: 169.42775}
+      - {x: 278.69653, y: 109.15888, z: 164.16591}
+      - {x: 275.15762, y: 110.04673, z: 158.06752}
+      - {x: 273.0852, y: 110.93458, z: 151.4591}
+      - {x: 272.52872, y: 111.82243, z: 144.68115}
+      - {x: 273.461, y: 112.71028, z: 138.0708}
+      - {x: 275.78214, y: 113.59813, z: 131.94505}
+      - {x: 279.32697, y: 114.485985, z: 126.58549}
+      - {x: 283.87567, y: 115.37383, z: 122.225426}
+      - {x: 289.16663, y: 116.26168, z: 119.0399}
+      - {x: 294.9113, y: 117.149536, z: 117.13891}
+      - {x: 300.80948, y: 118.037384, z: 116.564224}
+      - {x: 306.5652, y: 118.92523, z: 117.28981}
+      - {x: 311.9013, y: 119.81309, z: 119.2257}
+      - {x: 316.573, y: 120.700935, z: 122.225006}
+      - {x: 320.37888, y: 121.58878, z: 126.093575}
+      - {x: 323.16962, y: 122.47664, z: 130.60178}
+      - {x: 324.85342, y: 123.36449, z: 135.49773}
+      - {x: 325.39838, y: 124.252335, z: 140.52095}
+      - {x: 324.83163, y: 125.14019, z: 145.41634}
+      - {x: 323.23557, y: 126.02804, z: 149.94688}
+      - {x: 320.74088, y: 126.915886, z: 153.90529}
+      - {x: 317.518, y: 127.80374, z: 157.12335}
+      - {x: 313.76627, y: 128.69159, z: 159.479}
+      - {x: 309.70212, y: 129.57944, z: 160.90054}
+      - {x: 305.5471, y: 130.46729, z: 161.36813}
+      - {x: 301.51575, y: 131.35513, z: 160.91234}
+      - {x: 297.80478, y: 132.243, z: 159.61003}
+      - {x: 294.5833, y: 133.13084, z: 157.57812}
+      - {x: 291.98523, y: 134.01869, z: 154.96521}
+      - {x: 290.10382, y: 134.90654, z: 151.942}
+      - {x: 288.98877, y: 135.79439, z: 148.69087}
+      - {x: 288.6458, y: 136.68224, z: 145.3953}
+      - {x: 289.03876, y: 137.5701, z: 142.22974}
+      - {x: 290.09378, y: 138.45795, z: 139.35046}
+      - {x: 291.7057, y: 139.3458, z: 136.88782}
+      - {x: 293.74564, y: 140.23364, z: 134.94037}
+      - {x: 296.0698, y: 141.12149, z: 133.57112}
+      - {x: 298.5285, y: 142.00935, z: 132.80598}
+      - {x: 300.97525, y: 142.8972, z: 132.63448}
+      - {x: 303.2753, y: 143.78505, z: 133.01256}
+      - {x: 305.31274, y: 144.6729, z: 133.86722}
+      - {x: 306.99646, y: 145.56075, z: 135.10275}
+      - {x: 308.26425, y: 146.4486, z: 136.60799}
+      - {x: 309.0847, y: 147.33646, z: 138.2641}
+      - {x: 309.45743, y: 148.2243, z: 139.95267}
+      - {x: 309.41116, y: 149.11215, z: 141.56323}
+      - {x: 309, y: 150, z: 143}
+      LandmarkId: 
+    Secrets:
+    - Id: herz_der_flut_wz_haupt_2
+      Name: 'Drachenarena: Windorgel'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Drachenarena."
+      Position: {x: 76.726204, y: 110.6, z: 81.54391}
+      Gate:
+        Keys: 16
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: herz_der_flut_aufstieg_gipfel
+      Name: 'Hochpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: 303, y: 150.4, z: 143}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: herz_der_flut_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 32, y: -0.5522418, z: 92}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: herz_der_flut_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -38, y: 0.78278, z: 162}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: herz_der_flut_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -118, y: 2.2277489, z: -298}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: herz_der_flut_versteck4
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -178, y: 1.8781495, z: -198}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: herz_der_flut_versteck5
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: 222, y: 1.069523, z: -118}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: herz_der_flut_lore_szene1
+      Title: Wrack am Ufer
+      Text: "Das Wrack liegt mit dem Kiel nach oben. Im Logbuch steht nur ein Satz: \u201EKurs auf Drachenarena.\u201C Lin Sao kannte den Kapit\xE4n."
+      Figure: Lin Sao
+      Position: {x: 69, y: -1.7666917, z: 8}
+    - Id: herz_der_flut_lore_szene2
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Lin Sao: \u201EWir sind zum Drachenarena gegangen. Folge dem Rauch.\u201C"
+      Figure: Lin Sao
+      Position: {x: -11, y: 1.6271638, z: -312}
+    - Id: herz_der_flut_lore_szene3
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Drachenarena. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Lin Sao
+      Position: {x: -91, y: 0.378474, z: 108}
+    - Id: herz_der_flut_wz_haupt_lore
+      Title: Drachenarena
+      Text: "Die Plattformen schweben \xFCber dem Meer, gehalten von Jade und Erinnerung. Hier erwacht der Drache, wenn er gerufen wird."
+      Figure: Lin Sao
+      Position: {x: 102.434525, y: 0.43684152, z: 93.036606}
+    - Id: herz_der_flut_wz_1_lore
+      Title: Flutschrein
+      Text: "Ein Schrein f\xFCr die, die auf See blieben. Die Laternen schwimmen jede Nacht hinaus."
+      Figure: Lin Sao
+      Position: {x: -65.75181, y: 1.4135156, z: -71.40866}
+    - Id: herz_der_flut_aufstieg_lore
+      Title: Hochpfad
+      Text: "Wer den Hochpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Lin Sao
+      Position: {x: 274.97766, y: 53.625095, z: 85.16046}
+    Loops:
+    - Id: herz_der_flut_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: herz_der_flut_wz_haupt_2
+      TriggerPos: {x: 76.726204, y: 110.6, z: 81.54391}
+      TargetPos: {x: 76.726204, y: 110.6, z: 81.54391}
+      NextGoal: {x: 303, y: 150.4, z: 143}
+    - Id: herz_der_flut_schleife2
+      TriggerKind: Lichtstrahl
+      Target: herz_der_flut_aufstieg_gipfel
+      TriggerPos: {x: 303, y: 150.4, z: 143}
+      TargetPos: {x: 303, y: 150.4, z: 143}
+      NextGoal: {x: 32, y: -0.5522418, z: 92}
+    - Id: herz_der_flut_schleife3
+      TriggerKind: Vogelschwarm
+      Target: herz_der_flut_hoehle
+      TriggerPos: {x: 32, y: -0.5522418, z: 92}
+      TargetPos: {x: 32, y: -0.5522418, z: 92}
+      NextGoal: {x: -38, y: 0.78278, z: 162}
+    - Id: herz_der_flut_schleife4
+      TriggerKind: Glocke
+      Target: herz_der_flut_versteck2
+      TriggerPos: {x: -38, y: 0.78278, z: 162}
+      TargetPos: {x: -38, y: 0.78278, z: 162}
+      NextGoal: {x: -118, y: 2.2277489, z: -298}
+    - Id: herz_der_flut_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: herz_der_flut_versteck3
+      TriggerPos: {x: -118, y: 2.2277489, z: -298}
+      TargetPos: {x: -118, y: 2.2277489, z: -298}
+      NextGoal: {x: 93.646545, y: 112.6, z: 80.23929}
+    Shortcuts:
+    - Id: herz_der_flut_abk_hang
+      Name: Springer-Wand am Hochpfad
+      Key: 2
+      From: {x: 235.29301, y: 1.9, z: 9.150223}
+      To: {x: 287.42737, y: 99.392525, z: 112.21446}
+      FootPath: 1281.7979
+      MountPath: 181.37483
+    Scenes:
+    - Id: herz_der_flut_szene1
+      Kind: Wrack
+      LoreId: herz_der_flut_lore_szene1
+      Position: {x: 66, y: -1.7666917, z: 6}
+    - Id: herz_der_flut_szene2
+      Kind: Lager
+      LoreId: herz_der_flut_lore_szene2
+      Position: {x: -14, y: 1.6271638, z: -314}
+    - Id: herz_der_flut_szene3
+      Kind: Grab
+      LoreId: herz_der_flut_lore_szene3
+      Position: {x: -94, y: 0.378474, z: 106}
+    FootLinks: []
+    Pads:
+    - {x: 93.646545, y: 80.23929, z: 25.5, w: 2.6}
+    - {x: -59.599976, y: -59.599976, z: 21.59, w: 2.6}
+    MainVisibility: 0.894
+    CompactZone: 0

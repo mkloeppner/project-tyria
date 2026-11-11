@@ -186,3 +186,464 @@ MonoBehaviour:
   - heart_glutkessel_3
   Region: 1
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 1
+      Center: {x: -81, y: 379}
+      Radius: 124
+      Height: 160
+      Param: 0
+      Yaw: 157
+    - Kind: 4
+      Center: {x: -325, y: 75}
+      Radius: 85
+      Height: 35
+      Param: 4
+      Yaw: 158
+    - Kind: 6
+      Center: {x: 178, y: -202}
+      Radius: 46
+      Height: 0
+      Param: 2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: 178, y: -202}
+      Radius: 6
+      Height: 2
+      Param: 2.5
+      Yaw: 0
+    - Kind: 7
+      Center: {x: 82, y: 62}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 318
+    Landmarks:
+    - Id: glutkessel_wz_haupt
+      Name: Flammentempel
+      Lore: "Der Flammenk\xF6nig lie\xDF die Pyramidenbasis unter den alten Tempel schieben. Jetzt brennt das Feuer h\xF6her \u2013 und hei\xDFer."
+      Kind: 1
+      Main: 1
+      Position: {x: 150.3446, y: 1.6, z: -429.6554}
+      Height: 80
+      Footprint: 91.34461
+      Yaw: -19.285913
+      BuildHeight: 80
+      Primary: {r: 0.2901961, g: 0.16470589, b: 0.13333334, a: 1}
+      Accent: {r: 1, g: 0.2901961, b: 0.101960786, a: 1}
+      Interior: 1
+      LightProfile: Spitzenkristall
+      SoundProfile: SFX_Amb_Torch_0
+      Stages:
+      - Index: 1
+        Name: "Halbe H\xF6he"
+        Position: {x: 187.01118, y: 36.18571, z: -461.77618}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 187.01118, y: 36.18571, z: -461.77618}
+      - Index: 2
+        Name: Flanke
+        Position: {x: 150.3446, y: 70.47143, z: -429.6554}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 150.3446, y: 70.47143, z: -429.6554}
+      - Index: 3
+        Name: Spitze
+        Position: {x: 150.3446, y: 83.2, z: -429.6554}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 150.3446, y: 83.2, z: -429.6554}
+      - Index: 4
+        Name: "K\xF6nigskammer"
+        Position: {x: 144.39952, y: 4.8, z: -412.66553}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 144.39952, y: 4.8, z: -412.66553}
+      - Index: 5
+        Name: Schatzkammer
+        Position: {x: 163.59836, y: 2, z: -402.13345}
+        Gate:
+          Keys: 32
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 163.59836, y: 2, z: -402.13345}
+    - Id: glutkessel_wz_1
+      Name: Glutturm
+      Lore: "Der Turm leitet die Hitze aus dem Kessel. Wer oben steht, sp\xFCrt die Erde atmen."
+      Kind: 6
+      Main: 0
+      Position: {x: 86.20001, y: 7, z: -13.799988}
+      Height: 40
+      Footprint: 21.2
+      Yaw: -80.90455
+      BuildHeight: 40
+      Primary: {r: 0.3529412, g: 0.22745098, b: 0.1882353, a: 1}
+      Accent: {r: 1, g: 0.627451, b: 0.2509804, a: 1}
+      Interior: 1
+      LightProfile: Laterne
+      SoundProfile: SFX_Amb_Water_0
+      Stages:
+      - Index: 1
+        Name: Treppe
+        Position: {x: 86.863945, y: 7.4, z: -9.652798}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 86.863945, y: 7.4, z: -9.652798}
+      - Index: 2
+        Name: "Au\xDFengalerie"
+        Position: {x: 87.638535, y: 21, z: -4.8144083}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 87.638535, y: 21, z: -4.8144083}
+      - Index: 3
+        Name: Laterne
+        Position: {x: 87.14059, y: 44.2, z: -7.9248004}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 87.14059, y: 44.2, z: -7.9248004}
+    Hazards:
+    - Id: glutkessel_kraterlava
+      Kind: 2
+      Center: {x: -325, y: 0.4, z: 75}
+      Size: {x: 110.49999, y: 110.49999}
+      Yaw: 0
+      Keys: 536
+      Circular: 1
+    - Id: glutkessel_h1
+      Kind: 2
+      Center: {x: 178, y: 0.4, z: -202}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 536
+      Circular: 1
+    Climbs:
+    - Id: glutkessel_aufstieg
+      Name: Hochpfad
+      Base: {x: -67.249, y: 3.5047705, z: 243.69696}
+      Peak: {x: -81, y: 160, z: 379}
+      LaunchTower: {x: -65.429016, y: 3.5047705, z: 225.7892}
+      DescentTarget: {x: 74.74041, y: 2.779786, z: 130.42522}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: -74.98191, y: 59.005157, z: 319.78497}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -69.18223, y: 17.379868, z: 262.71896}
+        - {x: -71.115456, y: 31.254965, z: 281.74097}
+        - {x: -73.04868, y: 45.130062, z: 300.76297}
+        - {x: -74.98191, y: 59.005157, z: 319.78497}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: -77.86557, y: 106.018715, z: 348.15878}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -75.70283, y: 70.758545, z: 326.87842}
+        - {x: -76.42374, y: 82.51193, z: 333.97186}
+        - {x: -77.14465, y: 94.26533, z: 341.06534}
+        - {x: -77.86557, y: 106.018715, z: 348.15878}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: -81, y: 160, z: 379}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -47.237522, y: 106.9184, z: 386.17642}
+        - {x: -102.27719, y: 122.213104, z: 363.5412}
+        - {x: -71.95831, y: 137.5078, z: 394.66064}
+        - {x: -82.03135, y: 152.80249, z: 369.18738}
+        - {x: -81, y: 160, z: 379}
+      FootPath:
+      - {x: -67.85566, y: 3.5047705, z: 249.66623}
+      - {x: 12.9196825, y: 10.442319, z: 302.40945}
+      - {x: 30.80408, y: 17.379868, z: 390.3628}
+      - {x: -15.545058, y: 24.317415, z: 459.26456}
+      - {x: -90.581215, y: 31.254963, z: 473.27438}
+      - {x: -147.60945, y: 38.192513, z: 433.3193}
+      - {x: -157.74472, y: 45.13006, z: 371.20035}
+      - {x: -124.18369, y: 52.067608, z: 326.04565}
+      - {x: -74.98191, y: 59.005157, z: 319.78497}
+      - {x: -74.98191, y: 59.005157, z: 319.78497}
+      - {x: -36.25461, y: 61.943504, z: 342.5106}
+      - {x: -25.33171, y: 64.88185, z: 384.65762}
+      - {x: -46.763634, y: 67.8202, z: 420.98257}
+      - {x: -86.29717, y: 70.758545, z: 431.12158}
+      - {x: -120.21978, y: 73.69689, z: 410.98334}
+      - {x: -129.57486, y: 76.63524, z: 374.0633}
+      - {x: -110.73028, y: 79.573586, z: 342.543}
+      - {x: -76.42374, y: 82.51193, z: 333.9719}
+      - {x: -47.305805, y: 85.45029, z: 351.52274}
+      - {x: -39.518612, y: 88.38863, z: 383.21582}
+      - {x: -55.775776, y: 91.32698, z: 409.93143}
+      - {x: -84.85535, y: 94.26533, z: 416.93466}
+      - {x: -109.16861, y: 97.203674, z: 401.9712}
+      - {x: -115.387955, y: 100.14202, z: 375.5051}
+      - {x: -101.71817, y: 103.08037, z: 353.59418}
+      - {x: -77.86557, y: 106.018715, z: 348.15878}
+      SpringerLedges:
+      - {x: -68.42862, y: 15.095209, z: 255.30383}
+      - {x: -69.60824, y: 26.485647, z: 266.9107}
+      - {x: -70.78786, y: 37.876087, z: 278.51758}
+      - {x: -71.967476, y: 49.266525, z: 290.12445}
+      - {x: -73.147095, y: 60.656967, z: 301.73132}
+      - {x: -74.32671, y: 72.0474, z: 313.33817}
+      - {x: -75.50633, y: 83.437836, z: 324.94504}
+      - {x: -76.68595, y: 94.82828, z: 336.5519}
+      - {x: -77.86557, y: 106.21871, z: 348.15878}
+      ClimbPath:
+      - {x: -47.237522, y: 106.9184, z: 386.17642}
+      - {x: -49.90893, y: 107.81809, z: 392.84265}
+      - {x: -53.857414, y: 108.71778, z: 398.72025}
+      - {x: -58.87403, y: 109.61747, z: 403.5734}
+      - {x: -64.7083, y: 110.51716, z: 407.21805}
+      - {x: -71.08053, y: 111.41685, z: 409.529}
+      - {x: -77.69515, y: 112.31653, z: 410.44354}
+      - {x: -84.25433, y: 113.21622, z: 409.96286}
+      - {x: -90.4714, y: 114.115906, z: 408.14996}
+      - {x: -96.08337, y: 115.015594, z: 405.12515}
+      - {x: -100.862076, y: 115.91528, z: 401.05905}
+      - {x: -104.62335, y: 116.81497, z: 396.16336}
+      - {x: -107.23404, y: 117.71466, z: 390.68015}
+      - {x: -108.61643, y: 118.61435, z: 384.87006}
+      - {x: -108.75006, y: 119.51404, z: 379}
+      - {x: -107.67088, y: 120.41373, z: 373.33093}
+      - {x: -105.46785, y: 121.313416, z: 368.1062}
+      - {x: -102.27719, y: 122.213104, z: 363.5412}
+      - {x: -98.27476, y: 123.112785, z: 359.81442}
+      - {x: -93.666695, y: 124.012474, z: 357.06064}
+      - {x: -88.67909, y: 124.91216, z: 355.36618}
+      - {x: -83.54701, y: 125.81185, z: 354.76675}
+      - {x: -78.50351, y: 126.71154, z: 355.24744}
+      - {x: -73.76898, y: 127.61123, z: 356.74524}
+      - {x: -69.54164, y: 128.51091, z: 359.15353}
+      - {x: -65.989136, y: 129.4106, z: 362.32877}
+      - {x: -63.24204, y: 130.31029, z: 366.09808}
+      - {x: -61.389183, y: 131.20998, z: 370.2687}
+      - {x: -60.47516, y: 132.10966, z: 374.6373}
+      - {x: -60.499958, y: 133.00935, z: 379}
+      - {x: -61.420704, y: 133.90904, z: 383.1617}
+      - {x: -63.155384, y: 134.80873, z: 386.94495}
+      - {x: -65.5882, y: 135.70842, z: 390.19733}
+      - {x: -68.576454, y: 136.60811, z: 392.79776}
+      - {x: -71.95831, y: 137.5078, z: 394.66064}
+      - {x: -75.5613, y: 138.40749, z: 395.73862}
+      - {x: -79.21082, y: 139.30717, z: 396.02292}
+      - {x: -82.73866, y: 140.20686, z: 395.54224}
+      - {x: -85.99062, y: 141.10655, z: 394.3596}
+      - {x: -88.83335, y: 142.00624, z: 392.56775}
+      - {x: -91.15965, y: 142.90593, z: 390.28345}
+      - {x: -92.89257, y: 143.80562, z: 387.64047}
+      - {x: -93.98759, y: 144.7053, z: 384.78244}
+      - {x: -94.43325, y: 145.605, z: 381.85532}
+      - {x: -94.25002, y: 146.50468, z: 379}
+      - {x: -93.4877, y: 147.40437, z: 376.34567}
+      - {x: -92.2214, y: 148.30406, z: 374.0039}
+      - {x: -90.54641, y: 149.20375, z: 372.06412}
+      - {x: -88.572334, y: 150.10342, z: 370.59006}
+      - {x: -86.41668, y: 151.00311, z: 369.61804}
+      - {x: -84.198326, y: 151.9028, z: 369.15656}
+      - {x: -82.03135, y: 152.80249, z: 369.18738}
+      - {x: -80.01917, y: 153.70218, z: 369.66806}
+      - {x: -78.24975, y: 154.60187, z: 370.53558}
+      - {x: -76.79166, y: 155.50156, z: 371.71094}
+      - {x: -75.69156, y: 156.40125, z: 373.10437}
+      - {x: -74.97282, y: 157.30093, z: 374.621}
+      - {x: -74.63563, y: 158.20062, z: 376.1664}
+      - {x: -74.65834, y: 159.10031, z: 377.65204}
+      - {x: -75, y: 160, z: 379}
+      LandmarkId: 
+    Secrets:
+    - Id: glutkessel_h1_insel
+      Name: Insel im Lava
+      Hint: "Etwas glitzert in der Mitte \u2013 Lava sch\xFCtzt es."
+      Position: {x: 178, y: 2, z: -202}
+      Gate:
+        Keys: 536
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: glutkessel_wz_haupt_5
+      Name: 'Flammentempel: Schatzkammer'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Flammentempel."
+      Position: {x: 163.59836, y: 2, z: -402.13345}
+      Gate:
+        Keys: 32
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: glutkessel_wz_1_2
+      Name: "Glutturm: Au\xDFengalerie"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Glutturm."
+      Position: {x: 87.638535, y: 21, z: -4.8144083}
+      Gate:
+        Keys: 2
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: glutkessel_aufstieg_gipfel
+      Name: 'Hochpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -81, y: 160.4, z: 379}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: glutkessel_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 82, y: 7, z: 62}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: glutkessel_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -28, y: 3.5, z: 172}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: glutkessel_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -108, y: 4.5431705, z: -288}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: glutkessel_lore_szene1
+      Title: Gestrandete Karawane
+      Text: "Die Karawane blieb im Sand stecken. Die Kisten sind leer \u2013 bis auf eine, und die zeigt mit ihren Spuren zum Flammentempel."
+      Figure: Zarath
+      Position: {x: -221, y: 0, z: -2}
+    - Id: glutkessel_lore_szene2
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Flammentempel. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Zarath
+      Position: {x: -1, y: 6.7239003, z: -302}
+    - Id: glutkessel_lore_szene3
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Zarath sp\xE4ter fand."
+      Figure: Zarath
+      Position: {x: -81, y: 0.513879, z: 138}
+    - Id: glutkessel_wz_haupt_lore
+      Title: Flammentempel
+      Text: "Der Flammenk\xF6nig lie\xDF die Pyramidenbasis unter den alten Tempel schieben. Jetzt brennt das Feuer h\xF6her \u2013 und hei\xDFer."
+      Figure: Zarath
+      Position: {x: 169.2049, y: 0, z: -471.44354}
+    - Id: glutkessel_wz_1_lore
+      Title: Glutturm
+      Text: "Der Turm leitet die Hitze aus dem Kessel. Wer oben steht, sp\xFCrt die Erde atmen."
+      Figure: Zarath
+      Position: {x: 97.29905, y: 6.999994, z: -11.525927}
+    - Id: glutkessel_aufstieg_lore
+      Title: Hochpfad
+      Text: "Wer den Hochpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Zarath
+      Position: {x: -72.48191, y: 59.005157, z: 322.28497}
+    Loops:
+    - Id: glutkessel_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: glutkessel_h1_insel
+      TriggerPos: {x: 178, y: 2, z: -202}
+      TargetPos: {x: 178, y: 2, z: -202}
+      NextGoal: {x: 163.59836, y: 2, z: -402.13345}
+    - Id: glutkessel_schleife2
+      TriggerKind: Lichtstrahl
+      Target: glutkessel_wz_haupt_5
+      TriggerPos: {x: 163.59836, y: 2, z: -402.13345}
+      TargetPos: {x: 163.59836, y: 2, z: -402.13345}
+      NextGoal: {x: 87.638535, y: 21, z: -4.8144083}
+    - Id: glutkessel_schleife3
+      TriggerKind: Vogelschwarm
+      Target: glutkessel_wz_1_2
+      TriggerPos: {x: 87.638535, y: 21, z: -4.8144083}
+      TargetPos: {x: 87.638535, y: 21, z: -4.8144083}
+      NextGoal: {x: -81, y: 160.4, z: 379}
+    - Id: glutkessel_schleife4
+      TriggerKind: Glocke
+      Target: glutkessel_aufstieg_gipfel
+      TriggerPos: {x: -81, y: 160.4, z: 379}
+      TargetPos: {x: -81, y: 160.4, z: 379}
+      NextGoal: {x: 82, y: 7, z: 62}
+    - Id: glutkessel_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: glutkessel_hoehle
+      TriggerPos: {x: 82, y: 7, z: 62}
+      TargetPos: {x: 82, y: 7, z: 62}
+      NextGoal: {x: 150.3446, y: 81.6, z: -429.6554}
+    Shortcuts:
+    - Id: glutkessel_abk_hang
+      Name: Springer-Wand am Hochpfad
+      Key: 2
+      From: {x: -67.249, y: 3.5047705, z: 243.69696}
+      To: {x: -77.86557, y: 106.018715, z: 348.15878}
+      FootPath: 1143.7375
+      MountPath: 176.094
+    Scenes:
+    - Id: glutkessel_szene1
+      Kind: Karawane
+      LoreId: glutkessel_lore_szene1
+      Position: {x: -224, y: 0, z: -4}
+    - Id: glutkessel_szene2
+      Kind: Grab
+      LoreId: glutkessel_lore_szene2
+      Position: {x: -4, y: 6.7239003, z: -304}
+    - Id: glutkessel_szene3
+      Kind: Schlachtfeld
+      LoreId: glutkessel_lore_szene3
+      Position: {x: -84, y: 0.513879, z: 136}
+    FootLinks: []
+    Pads:
+    - {x: 150.3446, y: -429.6554, z: 77.64292, w: 1.6}
+    - {x: 86.20001, y: -13.799988, z: 18.02, w: 7}
+    MainVisibility: 0.934
+    CompactZone: 0

@@ -69,6 +69,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\MountMomentumTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\StoryModelTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf11LevelTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WorldW1ZoneTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\SkillTraitTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\EliteTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WorldEventTests.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\MapTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\StoryPathTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf10FlightTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WorldW1Tests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\BalanceTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ClassTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\VfxKitTests.cs" />

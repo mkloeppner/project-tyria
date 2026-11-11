@@ -75,7 +75,7 @@ namespace ProjectTyrant.EditorTools
                         float shade = Mathf.Clamp01(Vector3.Dot(normal, light));
                         c *= Mathf.Lerp(0.72f, 1.12f, shade);
                         float contour = Mathf.Abs(Mathf.Repeat(h, contourStep) - contourStep * 0.5f);
-                        if (contour > contourStep * 0.47f && h > wl + 1.5f) c *= 0.9f;
+                        if (contour > contourStep * 0.47f && h > wl + 1.5f) c *= Mathf.RoundToInt(h / contourStep) % 5 == 0 ? 0.78f : 0.9f;   // Welt-Lauf W1: jede 5. Höhenlinie kräftiger (Massive lesbar)
                     }
                     c = Color.Lerp(c, parchment, 0.22f);
                     float edge = Mathf.Max(Mathf.Abs(wx), Mathf.Abs(z)) / half;

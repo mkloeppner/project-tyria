@@ -34,6 +34,8 @@ namespace ProjectTyrant.EditorTools
             _prefabCache.Clear();
             EnsureFolder(MeshDir); EnsureFolder(EnvPrefabDir);
             ConfigureRenderPipeline();
+            var w1Zone = WorldBuilder.Zone("sonnfurt");
+            if (w1Zone != null && WorldW1Builder.NeedsPlan(w1Zone)) { WorldW1Builder.PlanZone(w1Zone); AssetDatabase.SaveAssetIfDirty(w1Zone); }   // Welt-Lauf W1
 
             var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
             SceneBuilder.CreateSun();
@@ -89,6 +91,12 @@ namespace ProjectTyrant.EditorTools
                 EditorUtility.SetDirty(root.Definition);
             }
             if (root.Definition != null) WorldStoryBuilder.Populate(root.Definition, rootGo.transform, (x, zz) => G(x, zz).y);   // Lauf 6: Späher, Herzen, Bündel
+            if (root.Definition != null && root.Definition.WorldPlan != null && !root.Definition.WorldPlan.IsEmpty)   // Welt-Lauf W1: bauen, danach NavMesh neu (Bauwerke als Hindernis)
+            {
+                WorldW1Builder.Populate(root.Definition, rootGo.transform, (x, zz) => G(x, zz).y);
+                var oldNav = GameObject.Find("PT_NavMesh"); if (oldNav != null) Object.DestroyImmediate(oldNav);
+                BakeNavMesh();
+            }
 
             foreach (var r in _env.GetComponentsInChildren<Transform>(true))
                 if (r.GetComponent<Light>() == null && r.GetComponent<WorldBanner>() == null && r.GetComponentInParent<WorldBanner>() == null && r.GetComponent<Bobber>() == null && r.GetComponentInParent<Bobber>() == null)

@@ -75,7 +75,7 @@ namespace ProjectTyrant
             if (mv.Turning && Mathf.Abs(mv.YawDelta) > 0f && !dead && !Dodge.IsDodging && !facingOverride.HasValue) { transform.rotation = Quaternion.Euler(0f, transform.eulerAngles.y + mv.YawDelta, 0f); QaYawAccum += mv.YawDelta; }
             if (mv.Turning && rig != null && (Mathf.Abs(m.x) > 0.01f || m.y > 0.01f)) rig.FollowYaw(transform.eulerAngles.y);
 
-            float speed = (SpeedOverride > 0f ? SpeedOverride : MoveSpeed) * Combatant.MoveSpeedMultiplier * (downed ? 0.2f : 1f) * CastMoveFactor;
+            float speed = (SpeedOverride > 0f ? SpeedOverride : MoveSpeed) * Combatant.MoveSpeedMultiplier * (downed ? 0.2f : 1f) * CastMoveFactor * (Time.frameCount - HazardFrame <= 1 ? HazardSpeed : 1f);   // Welt-Lauf W1: Hürden bremsen
             if (m.y < 0f && (faceCamera || mv.Turning)) speed *= BackwardFactor;
 
             // Dodge
@@ -222,6 +222,8 @@ namespace ProjectTyrant
         public float? HoverFloor { get; set; }
         public bool IsHovering { get; private set; }
         public Vector3 VisualOffset { get; set; }
+        /// <summary>Welt-Lauf W1: Tempo-Faktor der Hürde, in der der Spieler gerade steht (nur gültig im Frame <see cref="HazardFrame"/>).</summary>
+        public float HazardSpeed = 1f; public int HazardFrame = -10;
         /// <summary>Neigung der Figur (z. B. Greif im Sturzflug); Standard keine.</summary>
         public Quaternion VisualTilt { get; set; } = Quaternion.identity;
         public Vector3 LastWish { get; private set; }

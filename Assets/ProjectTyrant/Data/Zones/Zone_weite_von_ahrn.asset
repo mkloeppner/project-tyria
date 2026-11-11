@@ -186,3 +186,441 @@ MonoBehaviour:
   - heart_weite_von_ahrn_3
   Region: 0
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 1
+      Center: {x: -402, y: -362}
+      Radius: 153
+      Height: 150
+      Param: 0
+      Yaw: 68
+    - Kind: 2
+      Center: {x: -15, y: 405}
+      Radius: 55
+      Height: 48.33627
+      Param: 4
+      Yaw: 104
+    - Kind: 7
+      Center: {x: 72, y: 92}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 183
+    Landmarks:
+    - Id: weite_von_ahrn_wz_haupt
+      Name: Liegender Steinriese
+      Lore: "Der Riese legte sich zur Ruhe, als die Nomaden kamen. Sie bauen ihre Feuer zwischen seinen Fingern \u2013 und erz\xE4hlen ihm Geschichten."
+      Kind: 5
+      Main: 1
+      Position: {x: -5, y: 1.6, z: -105}
+      Height: 100
+      Footprint: 60.000004
+      Yaw: 2.726311
+      BuildHeight: 100
+      Primary: {r: 0.6039216, g: 0.5647059, b: 0.5019608, a: 1}
+      Accent: {r: 0.8784314, g: 0.7529412, b: 0.4392157, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_WindHigh_0
+      Stages:
+      - Index: 1
+        Name: Brust
+        Position: {x: 7.283288, y: 28.752977, z: -101.438896}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 7.283288, y: 28.752977, z: -101.438896}
+      - Index: 2
+        Name: Schulter
+        Position: {x: -17.72437, y: 45.091995, z: -85.44719}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -17.72437, y: 45.091995, z: -85.44719}
+      - Index: 3
+        Name: Kopf
+        Position: {x: -3.5800455, y: 64.054756, z: -75.180954}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: -3.5800455, y: 64.054756, z: -75.180954}
+      - Index: 4
+        Name: Brustkammer
+        Position: {x: -5.5707817, y: 2, z: -116.98642}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -5.5707817, y: 2, z: -116.98642}
+    - Id: weite_von_ahrn_wz_1
+      Name: Nomaden-Hochlager
+      Lore: "Das Hochlager liegt dort, wo kein Pferd hinkommt. Die Nomaden m\xF6gen es so."
+      Kind: 2
+      Main: 0
+      Position: {x: -5, y: 1.6, z: 95}
+      Height: 30
+      Footprint: 40
+      Yaw: 176.98721
+      BuildHeight: 30
+      Primary: {r: 0.627451, g: 0.47058824, b: 0.3137255, a: 1}
+      Accent: {r: 0.8784314, g: 0.2901961, b: 0.16470589, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_Torch_0
+      Stages:
+      - Index: 1
+        Name: Wehrgang
+        Position: {x: 20.520927, y: 13.6, z: 85.759865}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 20.520927, y: 13.6, z: 85.759865}
+      - Index: 2
+        Name: Zinnen
+        Position: {x: -18.481339, y: 13.900001, z: 65.75101}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -18.481339, y: 13.900001, z: 65.75101}
+      - Index: 3
+        Name: Bergfried-Dach
+        Position: {x: -4.621576, y: 32.6, z: 87.80995}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: -4.621576, y: 32.6, z: 87.80995}
+      - Index: 4
+        Name: Halle
+        Position: {x: -4.621576, y: 2, z: 87.80995}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -4.621576, y: 2, z: 87.80995}
+    Hazards:
+    - Id: weite_von_ahrn_h1
+      Kind: 4
+      Center: {x: -378.33743, y: 125.1402, z: -359.381}
+      Size: {x: 40, y: 40}
+      Yaw: 0
+      Keys: 25
+      Circular: 1
+    - Id: weite_von_ahrn_h2
+      Kind: 5
+      Center: {x: -346.87683, y: 76.50882, z: -374.88953}
+      Size: {x: 30, y: 36.719955}
+      Yaw: -76.83892
+      Keys: 26
+      Circular: 0
+    Climbs:
+    - Id: weite_von_ahrn_aufstieg
+      Name: Hochpfad
+      Base: {x: -241.33392, y: 1.7019176, z: -399.5687}
+      Peak: {x: -402, y: 150, z: -362}
+      LaunchTower: {x: -223.80672, y: 1.7019176, z: -403.66708}
+      DescentTarget: {x: -314.09122, y: 4.88911, z: 9.486923}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: -328.99908, y: 53.62509, z: -379.0699}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -263.2502, y: 14.682711, z: -394.44397}
+        - {x: -285.1665, y: 27.663502, z: -389.31927}
+        - {x: -307.0828, y: 40.644295, z: -384.19458}
+        - {x: -328.99908, y: 53.625088, z: -379.06985}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: -364.75455, y: 99.39255, z: -370.70914}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -337.93796, y: 65.066956, z: -376.97968}
+        - {x: -346.87683, y: 76.50882, z: -374.8895}
+        - {x: -355.8157, y: 87.95068, z: -372.79932}
+        - {x: -364.75458, y: 99.39255, z: -370.70914}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: -402, y: 150, z: -362}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: -361.39307, y: 100.280396, z: -352.89978}
+        - {x: -422.86212, y: 115.37385, z: -384.6623}
+        - {x: -399.25412, y: 130.4673, z: -342.1982}
+        - {x: -397.855, y: 145.56075, z: -370.19073}
+        - {x: -402, y: 150, z: -362}
+      FootPath:
+      - {x: -247.17632, y: 1.7019176, z: -398.20258}
+      - {x: -275.84732, y: 8.192314, z: -283.66327}
+      - {x: -370.5806, y: 14.682711, z: -227.632}
+      - {x: -469.25458, y: 21.173107, z: -253.6939}
+      - {x: -515.9123, y: 27.663504, z: -335.36377}
+      - {x: -492.4595, y: 34.1539, z: -418.17245}
+      - {x: -423.85306, y: 40.644295, z: -455.4566}
+      - {x: -356.90967, y: 47.134693, z: -434.6129}
+      - {x: -328.99908, y: 53.62509, z: -379.0699}
+      - {x: -328.99908, y: 53.625088, z: -379.0699}
+      - {x: -342.2097, y: 59.34602, z: -324.87216}
+      - {x: -387.0203, y: 65.066956, z: -297.93796}
+      - {x: -434.28506, y: 70.78789, z: -310.00842}
+      - {x: -457.12317, y: 76.50882, z: -349.11047}
+      - {x: -446.19287, y: 82.22975, z: -389.44235}
+      - {x: -412.79932, y: 87.95068, z: -408.1843}
+      - {x: -379.40042, y: 93.671616, z: -398.39413}
+      - {x: -364.75455, y: 99.39255, z: -370.70914}
+      SpringerLedges:
+      - {x: -255.04733, y: 12.756432, z: -396.3621}
+      - {x: -268.76074, y: 23.610947, z: -393.15546}
+      - {x: -282.47412, y: 34.46546, z: -389.94885}
+      - {x: -296.18753, y: 45.319977, z: -386.74222}
+      - {x: -309.90094, y: 56.17449, z: -383.5356}
+      - {x: -323.61435, y: 67.02901, z: -380.32898}
+      - {x: -337.32773, y: 77.883514, z: -377.12238}
+      - {x: -351.04114, y: 88.73803, z: -373.91574}
+      - {x: -364.75455, y: 99.592545, z: -370.70914}
+      ClimbPath:
+      - {x: -361.39307, y: 100.280396, z: -352.89978}
+      - {x: -364.9411, y: 101.16825, z: -344.51147}
+      - {x: -370.16434, y: 102.0561, z: -337.2213}
+      - {x: -376.7578, y: 102.94395, z: -331.3501}
+      - {x: -384.35846, y: 103.831795, z: -327.13937}
+      - {x: -392.56494, y: 104.71965, z: -324.74176}
+      - {x: -400.9585, y: 105.6075, z: -324.216}
+      - {x: -409.12442, y: 106.495346, z: -325.52695}
+      - {x: -416.6725, y: 107.383194, z: -328.55008}
+      - {x: -423.25558, y: 108.27105, z: -333.08075}
+      - {x: -428.58563, y: 109.1589, z: -338.84656}
+      - {x: -432.44608, y: 110.046745, z: -345.5234}
+      - {x: -434.70032, y: 110.9346, z: -352.75323}
+      - {x: -435.29593, y: 111.82245, z: -360.16302}
+      - {x: -434.26447, y: 112.7103, z: -367.384}
+      - {x: -431.71695, y: 113.59815, z: -374.06998}
+      - {x: -427.8356, y: 114.486, z: -379.914}
+      - {x: -422.86212, y: 115.37385, z: -384.6623}
+      - {x: -417.08337, y: 116.261696, z: -388.12515}
+      - {x: -410.81537, y: 117.14955, z: -390.18433}
+      - {x: -404.3861, y: 118.0374, z: -390.7961}
+      - {x: -398.11853, y: 118.92525, z: -389.991}
+      - {x: -392.3144, y: 119.8131, z: -387.86914}
+      - {x: -387.23956, y: 120.70095, z: -384.59253}
+      - {x: -383.11212, y: 121.5888, z: -380.37442}
+      - {x: -380.09293, y: 122.47665, z: -375.46625}
+      - {x: -378.27985, y: 123.3645, z: -370.14313}
+      - {x: -377.70532, y: 124.25235, z: -364.68893}
+      - {x: -378.33743, y: 125.1402, z: -359.381}
+      - {x: -380.08438, y: 126.02805, z: -354.47635}
+      - {x: -382.80188, y: 126.9159, z: -350.19894}
+      - {x: -386.30307, y: 127.80375, z: -346.72977}
+      - {x: -390.37012, y: 128.6916, z: -344.19916}
+      - {x: -394.7673, y: 129.57945, z: -342.68237}
+      - {x: -399.25412, y: 130.4673, z: -342.1982}
+      - {x: -403.59836, y: 131.35515, z: -342.71082}
+      - {x: -407.588, y: 132.243, z: -344.1342}
+      - {x: -411.0417, y: 133.13084, z: -346.33936}
+      - {x: -413.8168, y: 134.0187, z: -349.16354}
+      - {x: -415.81528, y: 134.90656, z: -352.42072}
+      - {x: -416.98648, y: 135.7944, z: -355.91302}
+      - {x: -417.32758, y: 136.68225, z: -359.4423}
+      - {x: -416.8809, y: 137.5701, z: -362.821}
+      - {x: -415.72922, y: 138.45795, z: -365.88226}
+      - {x: -413.98865, y: 139.3458, z: -368.4879}
+      - {x: -411.80008, y: 140.23366, z: -370.5349}
+      - {x: -409.31982, y: 141.1215, z: -371.95898}
+      - {x: -406.70935, y: 142.00935, z: -372.73627}
+      - {x: -404.12564, y: 142.8972, z: -372.88208}
+      - {x: -401.712, y: 143.78505, z: -372.44778}
+      - {x: -399.59036, y: 144.6729, z: -371.51544}
+      - {x: -397.855, y: 145.56075, z: -370.19073}
+      - {x: -396.56845, y: 146.44861, z: -368.59515}
+      - {x: -395.75955, y: 147.33646, z: -366.85712}
+      - {x: -395.42358, y: 148.2243, z: -365.1035}
+      - {x: -395.52466, y: 149.11215, z: -363.45117}
+      - {x: -396, y: 150, z: -362}
+      LandmarkId: 
+    Secrets:
+    - Id: weite_von_ahrn_wz_haupt_4
+      Name: 'Liegender Steinriese: Brustkammer'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Liegender Steinriese."
+      Position: {x: -5.5707817, y: 2, z: -116.98642}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: weite_von_ahrn_wz_1_3
+      Name: 'Nomaden-Hochlager: Bergfried-Dach'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Nomaden-Hochlager."
+      Position: {x: -4.621576, y: 32.6, z: 87.80995}
+      Gate:
+        Keys: 8
+        FootAlternative: 0
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: weite_von_ahrn_aufstieg_gipfel
+      Name: 'Hochpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -402, y: 150.4, z: -362}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: weite_von_ahrn_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 72, y: -1.4638209, z: 92}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: weite_von_ahrn_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -18, y: 2.3012977, z: 162}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: weite_von_ahrn_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -118, y: 2.0688453, z: 262}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: weite_von_ahrn_versteck4
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -178, y: 1.6158454, z: 382}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: weite_von_ahrn_lore_szene1
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Daro: \u201EWir sind zum Liegender Steinriese gegangen. Folge dem Rauch.\u201C"
+      Figure: Daro
+      Position: {x: 69, y: -1.4960456, z: 8}
+    - Id: weite_von_ahrn_lore_szene2
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Daro sp\xE4ter fand."
+      Figure: Daro
+      Position: {x: 289, y: 0.0616436, z: 68}
+    - Id: weite_von_ahrn_lore_szene3
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Liegender Steinriese. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Daro
+      Position: {x: -71, y: 3.5372891, z: 108}
+    - Id: weite_von_ahrn_wz_haupt_lore
+      Title: Liegender Steinriese
+      Text: "Der Riese legte sich zur Ruhe, als die Nomaden kamen. Sie bauen ihre Feuer zwischen seinen Fingern \u2013 und erz\xE4hlen ihm Geschichten."
+      Figure: Daro
+      Position: {x: -2.431482, y: 0.19507241, z: -135.15631}
+    - Id: weite_von_ahrn_wz_1_lore
+      Title: Nomaden-Hochlager
+      Text: "Das Hochlager liegt dort, wo kein Pferd hinkommt. Die Nomaden m\xF6gen es so."
+      Figure: Daro
+      Position: {x: -10.04565, y: 1.2648447, z: 114.76212}
+    - Id: weite_von_ahrn_aufstieg_lore
+      Title: Hochpfad
+      Text: "Wer den Hochpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Daro
+      Position: {x: -326.49908, y: 53.62509, z: -376.5699}
+    Loops:
+    - Id: weite_von_ahrn_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: weite_von_ahrn_wz_haupt_4
+      TriggerPos: {x: -5.5707817, y: 2, z: -116.98642}
+      TargetPos: {x: -5.5707817, y: 2, z: -116.98642}
+      NextGoal: {x: -4.621576, y: 32.6, z: 87.80995}
+    - Id: weite_von_ahrn_schleife2
+      TriggerKind: Lichtstrahl
+      Target: weite_von_ahrn_wz_1_3
+      TriggerPos: {x: -4.621576, y: 32.6, z: 87.80995}
+      TargetPos: {x: -4.621576, y: 32.6, z: 87.80995}
+      NextGoal: {x: -402, y: 150.4, z: -362}
+    - Id: weite_von_ahrn_schleife3
+      TriggerKind: Vogelschwarm
+      Target: weite_von_ahrn_aufstieg_gipfel
+      TriggerPos: {x: -402, y: 150.4, z: -362}
+      TargetPos: {x: -402, y: 150.4, z: -362}
+      NextGoal: {x: 72, y: -1.4638209, z: 92}
+    - Id: weite_von_ahrn_schleife4
+      TriggerKind: Glocke
+      Target: weite_von_ahrn_hoehle
+      TriggerPos: {x: 72, y: -1.4638209, z: 92}
+      TargetPos: {x: 72, y: -1.4638209, z: 92}
+      NextGoal: {x: -18, y: 2.3012977, z: 162}
+    - Id: weite_von_ahrn_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: weite_von_ahrn_versteck2
+      TriggerPos: {x: -18, y: 2.3012977, z: 162}
+      TargetPos: {x: -18, y: 2.3012977, z: 162}
+      NextGoal: {x: -5, y: 101.6, z: -105}
+    Shortcuts:
+    - Id: weite_von_ahrn_abk_hang
+      Name: Springer-Wand am Hochpfad
+      Key: 2
+      From: {x: -241.33392, y: 1.7019176, z: -399.5687}
+      To: {x: -364.75455, y: 99.39255, z: -370.70914}
+      FootPath: 1074.0613
+      MountPath: 192.0337
+    Scenes:
+    - Id: weite_von_ahrn_szene1
+      Kind: Lager
+      LoreId: weite_von_ahrn_lore_szene1
+      Position: {x: 66, y: -1.4960456, z: 6}
+    - Id: weite_von_ahrn_szene2
+      Kind: Schlachtfeld
+      LoreId: weite_von_ahrn_lore_szene2
+      Position: {x: 286, y: 0.0616436, z: 66}
+    - Id: weite_von_ahrn_szene3
+      Kind: Grab
+      LoreId: weite_von_ahrn_lore_szene3
+      Position: {x: -74, y: 3.5372891, z: 106}
+    FootLinks: []
+    Pads:
+    - {x: -5, y: -105, z: 51.000004, w: 1.6}
+    - {x: -5, y: 95, z: 34, w: 1.6}
+    MainVisibility: 0.974
+    CompactZone: 0

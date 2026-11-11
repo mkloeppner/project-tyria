@@ -22,6 +22,9 @@ namespace ProjectTyrant.EditorTools
                 .Fill(Segment(20, 20, 44, 44, 4), Color.white).Fill(Segment(44, 20, 20, 44, 4), Color.white));
             // POI: Quadrat mit Punkt
             Save("map_poi", new IconPainter(64).Fill(Box(32, 32, 22, 22, 5), outline).Fill(Box(32, 32, 18, 18, 4), new Color(0.95f, 0.8f, 0.35f)).Fill(Circle(32, 32, 6), outline));
+            // Welt-Lauf W1: Wahrzeichen – Turm mit Spitze und goldenem Kern
+            Save("map_landmark", new IconPainter(64).Fill(Union(Box(32, 24, 14, 16, 2), Polygon(new Vector2(32, 60), new Vector2(16, 38), new Vector2(48, 38))), outline)
+                .Fill(Union(Box(32, 24, 10, 13, 1), Polygon(new Vector2(32, 54), new Vector2(20, 38), new Vector2(44, 38))), new Color(0.82f, 0.72f, 0.52f)).Fill(Circle(32, 30, 5), new Color(1f, 0.85f, 0.35f)));
             // Aussichtspunkt: Dreieck
             Save("map_vista", new IconPainter(64).Fill(Polygon(new Vector2(32, 58), new Vector2(6, 10), new Vector2(58, 10)), outline).Fill(Polygon(new Vector2(32, 51), new Vector2(12, 14), new Vector2(52, 14)), new Color(0.95f, 0.85f, 0.45f)).Fill(Circle(32, 25, 5), outline));
             // Heldenherausforderung: Pfeil nach oben im Sechseck

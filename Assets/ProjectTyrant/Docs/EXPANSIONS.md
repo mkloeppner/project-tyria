@@ -61,3 +61,6 @@ Erfolgs-Kategorien Erkundung (Regionen-Abschlüsse mit Truhe und Titel), Story, 
 
 ## Spielzeit-Schätzung
 Kernland 30–80: je Band 2–3 h (Simulation: eine Zone allein trägt ihr Band). Glutwüste und Dracheninseln: je Zone 60–90 min Zonenabschluss, Geschichte je Erweiterung ≈ 2 h, Zwischenspiel ≈ 30 min.
+
+## Welt-Lauf W1
+Alle Erweiterungs-Zonen haben ein Haupt-Wahrzeichen (Glutwüste: Pyramiden, Spiegeltempel, Felsbrücken-Kathedrale; Dracheninseln: Pagoden, Jadekathedrale, Kaiserpalast, Drachenknochen-Bogen, Drachenarena), Sandportale mit Dünenläufer in Große Leere, Klingenschlucht und Zarathis (Ziel: Schatzkammer der Pyramide). Städte Sonnentor und Jadehafen: Aufstieg am Palast bzw. an der Pagode. Siehe LANDMARKS.md.

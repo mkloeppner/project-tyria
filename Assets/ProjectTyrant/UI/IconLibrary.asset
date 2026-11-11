@@ -149,6 +149,8 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: 2e81edf70e512814f9621ffc858efc9b, type: 3}
   - Id: map_poi
     Sprite: {fileID: 21300000, guid: 9229a7a12d44b7e48939dd6764e60aab, type: 3}
+  - Id: map_landmark
+    Sprite: {fileID: 21300000, guid: fb717b85dc66b5142a4d10b74c20337b, type: 3}
   - Id: map_vista
     Sprite: {fileID: 21300000, guid: a2539ecdec9321d4199aa9594754d10c, type: 3}
   - Id: map_hero

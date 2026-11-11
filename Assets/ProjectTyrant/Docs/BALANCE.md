@@ -26,3 +26,6 @@ Lebenspunkte = erwarteter Spieler-DPS × Ziel-Zeit-bis-Kill; Angriffskoeffizient
 
 ## Zielwerte, Baseline und Endwerte
 (wird in B5 mit den Messungen gefüllt)
+
+## Welt-Lauf W1 – Belohnungen
+Wahrzeichen entdeckt 250 EP · Lore-Tafel 150 EP + 50 Karma · Geheim-Truhe 200 EP, 10 Silber, 1.500 Karma, beim ersten Fund +1 Beherrschungspunkt (danach täglich erneut) · Stufen-Aussicht/-Einblick wie normale Aussichtspunkte/Einblicke (× `LevelCurves.RewardScale`), Gipfel-Aussicht doppelt. Erfolge: Wahrzeichen-Sammler (30), Gipfelstürmer (10), Schatzsucher (50), Chronist (60).

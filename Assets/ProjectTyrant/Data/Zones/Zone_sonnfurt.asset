@@ -161,3 +161,302 @@ MonoBehaviour:
   - heart_sonnfurt_mira
   Region: 0
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops: []
+    Landmarks:
+    - Id: sonnfurt_wz_haupt
+      Name: Leuchtfeuerturm Sonnfurt
+      Lore: "Die Siedler entz\xFCndeten das Leuchtfeuer in der ersten Nacht nach dem Aschenwinter. Seitdem brennt es jede Nacht, damit Heimkehrer Sonnfurt finden."
+      Kind: 6
+      Main: 1
+      Position: {x: 50.199997, y: 1.7092674, z: 2.199997}
+      Height: 60
+      Footprint: 21.2
+      Yaw: -92.50936
+      BuildHeight: 60
+      Primary: {r: 0.7254902, g: 0.63529414, b: 0.47843137, a: 1}
+      Accent: {r: 1, g: 0.8117647, b: 0.41568628, a: 1}
+      Interior: 1
+      LightProfile: Laterne
+      SoundProfile: SFX_Amb_Water_0
+      Stages:
+      - Index: 1
+        Name: Treppe
+        Position: {x: 50.01611, y: 2.1092675, z: 6.3959694}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 50.01611, y: 2.1092675, z: 6.3959694}
+      - Index: 2
+        Name: "Au\xDFengalerie"
+        Position: {x: 49.801575, y: 15.709268, z: 11.29127}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: 49.801575, y: 15.709268, z: 11.29127}
+      - Index: 3
+        Name: Laterne
+        Position: {x: 49.93949, y: 57.30927, z: 8.144292}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 49.93949, y: 57.30927, z: 8.144292}
+    Hazards:
+    - Id: sonnfurt_h1
+      Kind: 8
+      Center: {x: -78, y: -0.80581814, z: 26}
+      Size: {x: 20, y: 20}
+      Yaw: 0
+      Keys: 27
+      Circular: 1
+    - Id: sonnfurt_h2
+      Kind: 4
+      Center: {x: 66.651886, y: 36.95182, z: 4.4125605}
+      Size: {x: 40, y: 40}
+      Yaw: 0
+      Keys: 25
+      Circular: 1
+    Climbs:
+    - Id: sonnfurt_aufstieg
+      Name: Aufstieg Leuchtfeuerturm Sonnfurt
+      Base: {x: 31.617832, y: 1.7092674, z: 1.3856407}
+      Peak: {x: 49.93949, y: 57.30927, z: 8.144292}
+      LaunchTower: {x: 11.637011, y: 1.7092674, z: 0.5099889}
+      DescentTarget: {x: 40, y: 1.1482588, z: -50}
+      Stages:
+      - Index: 1
+        Name: Treppe
+        Position: {x: 50.01611, y: 2.1092675, z: 6.3959694}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 50.01611, y: 2.1092675, z: 6.3959694}
+      - Index: 2
+        Name: "Au\xDFengalerie"
+        Position: {x: 49.801575, y: 15.709268, z: 11.29127}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 1
+        Reward: 2
+        Checkpoints:
+        - {x: 49.801575, y: 15.709268, z: 11.29127}
+      - Index: 3
+        Name: Laterne
+        Position: {x: 49.93949, y: 57.30927, z: 8.144292}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 1
+        Reward: 3
+        Checkpoints:
+        - {x: 66.21018, y: 16.594374, z: 6.585641}
+        - {x: 51.861595, y: 31.641184, z: -14.316634}
+        - {x: 33.637066, y: 46.687992, z: 3.308749}
+        - {x: 49.93949, y: 57.30927, z: 8.144292}
+      FootPath: []
+      SpringerLedges:
+      - {x: 40.62214, y: 8.909267, z: 8.336537}
+      - {x: 49.626446, y: 15.909267, z: 15.287435}
+      ClimbPath:
+      - {x: 66.21018, y: 16.594374, z: 6.585641}
+      - {x: 64.482666, y: 17.47948, z: 10.659634}
+      - {x: 61.740192, y: 18.364588, z: 14.13247}
+      - {x: 58.177654, y: 19.249693, z: 16.757366}
+      - {x: 54.04821, y: 20.1348, z: 18.347792}
+      - {x: 49.64531, y: 21.019907, z: 18.790728}
+      - {x: 45.281822, y: 21.905012, z: 18.054699}
+      - {x: 41.26783, y: 22.79012, z: 16.192009}
+      - {x: 37.88857, y: 23.675226, z: 13.33502}
+      - {x: 35.384182, y: 24.560331, z: 9.686763}
+      - {x: 33.932632, y: 25.445438, z: 5.506483}
+      - {x: 33.637066, y: 26.330545, z: 1.091239}
+      - {x: 34.51849, y: 27.21565, z: -3.2452183}
+      - {x: 36.514267, y: 28.100758, z: -7.1947265}
+      - {x: 39.482574, y: 28.985863, z: -10.47663}
+      - {x: 43.212482, y: 29.87097, z: -12.857714}
+      - {x: 47.438927, y: 30.756077, z: -14.168769}
+      - {x: 51.861595, y: 31.641184, z: -14.316634}
+      - {x: 56.16617, y: 32.52629, z: -13.290801}
+      - {x: 60.046783, y: 33.411396, z: -11.164163}
+      - {x: 63.22767, y: 34.2965, z: -8.087852}
+      - {x: 65.48279, y: 35.18161, z: -4.2804623}
+      - {x: 66.651886, y: 36.066715, z: -0.01256108}
+      - {x: 66.651886, y: 36.95182, z: 4.4125605}
+      - {x: 65.48279, y: 37.83693, z: 8.680462}
+      - {x: 63.227665, y: 38.722034, z: 12.487849}
+      - {x: 60.04678, y: 39.60714, z: 15.56416}
+      - {x: 56.166164, y: 40.49225, z: 17.690796}
+      - {x: 51.861588, y: 41.377354, z: 18.716629}
+      - {x: 47.43893, y: 42.26246, z: 18.568764}
+      - {x: 43.212482, y: 43.147564, z: 17.257708}
+      - {x: 39.48257, y: 44.032673, z: 14.87662}
+      - {x: 36.514267, y: 44.917778, z: 11.594718}
+      - {x: 34.51849, y: 45.802883, z: 7.645214}
+      - {x: 33.637066, y: 46.687992, z: 3.308749}
+      - {x: 33.932636, y: 47.5731, z: -1.1065065}
+      - {x: 35.38419, y: 48.458206, z: -5.286781}
+      - {x: 37.888577, y: 49.34331, z: -8.935035}
+      - {x: 41.267845, y: 50.22842, z: -11.792025}
+      - {x: 45.281834, y: 51.113525, z: -13.654708}
+      - {x: 49.645313, y: 51.99863, z: -14.390734}
+      - {x: 54.04821, y: 52.883736, z: -13.947797}
+      - {x: 57.275803, y: 53.768845, z: -10.711683}
+      - {x: 58.571888, y: 54.65395, z: -6.4564695}
+      - {x: 58.254818, y: 55.539055, z: -2.5708804}
+      - {x: 56.64347, y: 56.424164, z: 0.43495202}
+      - {x: 54.199997, y: 57.30927, z: 2.1999984}
+      LandmarkId: sonnfurt_wz_haupt
+    Secrets:
+    - Id: sonnfurt_h1_dornen
+      Name: Hinter den Dornen
+      Hint: "Rote Bl\xFCten verbergen eine Kiste."
+      Position: {x: -78, y: -0.80581814, z: 26}
+      Gate:
+        Keys: 3
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnfurt_wz_haupt_2
+      Name: "Leuchtfeuerturm Sonnfurt: Au\xDFengalerie"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Leuchtfeuerturm Sonnfurt."
+      Position: {x: 49.801575, y: 15.709268, z: 11.29127}
+      Gate:
+        Keys: 2
+        FootAlternative: 0
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: sonnfurt_aufstieg_gipfel
+      Name: 'Aufstieg Leuchtfeuerturm Sonnfurt: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: 49.93949, y: 57.70927, z: 8.144292}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 1
+      IsLoreSpot: 0
+    - Id: sonnfurt_versteck1
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: 30, y: -1.5763437, z: 78}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnfurt_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -58, y: -2.6314194, z: 78}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnfurt_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -82, y: 5.243157, z: 78}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnfurt_versteck4
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: 14, y: 5.883363, z: -82}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: sonnfurt_lore_szene1
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Mira: \u201EWir sind zum Leuchtfeuerturm Sonnfurt gegangen. Folge dem Rauch.\u201C"
+      Figure: Mira
+      Position: {x: 84, y: 5.613423, z: -21}
+    - Id: sonnfurt_lore_szene2
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Mira sp\xE4ter fand."
+      Figure: Mira
+      Position: {x: 20, y: -0.8822038, z: 35}
+    - Id: sonnfurt_lore_szene3
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Leuchtfeuerturm Sonnfurt. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Mira
+      Position: {x: -84, y: 21.12645, z: 59}
+    - Id: sonnfurt_wz_haupt_lore
+      Title: Leuchtfeuerturm Sonnfurt
+      Text: "Die Siedler entz\xFCndeten das Leuchtfeuer in der ersten Nacht nach dem Aschenwinter. Seitdem brennt es jede Nacht, damit Heimkehrer Sonnfurt finden."
+      Figure: Mira
+      Position: {x: 60.6147, y: 1.5498488, z: 6.660257}
+    - Id: sonnfurt_aufstieg_lore
+      Title: Aufstieg Leuchtfeuerturm Sonnfurt
+      Text: "Wer den Aufstieg Leuchtfeuerturm Sonnfurt bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Mira
+      Position: {x: 52.51611, y: 2.1092675, z: 8.895969}
+    Loops:
+    - Id: sonnfurt_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: sonnfurt_h1_dornen
+      TriggerPos: {x: -78, y: -0.80581814, z: 26}
+      TargetPos: {x: -78, y: -0.80581814, z: 26}
+      NextGoal: {x: 49.801575, y: 15.709268, z: 11.29127}
+    - Id: sonnfurt_schleife2
+      TriggerKind: Lichtstrahl
+      Target: sonnfurt_wz_haupt_2
+      TriggerPos: {x: 49.801575, y: 15.709268, z: 11.29127}
+      TargetPos: {x: 49.801575, y: 15.709268, z: 11.29127}
+      NextGoal: {x: 49.93949, y: 57.70927, z: 8.144292}
+    - Id: sonnfurt_schleife3
+      TriggerKind: Vogelschwarm
+      Target: sonnfurt_aufstieg_gipfel
+      TriggerPos: {x: 49.93949, y: 57.70927, z: 8.144292}
+      TargetPos: {x: 49.93949, y: 57.70927, z: 8.144292}
+      NextGoal: {x: 30, y: -1.5763437, z: 78}
+    - Id: sonnfurt_schleife4
+      TriggerKind: Glocke
+      Target: sonnfurt_versteck1
+      TriggerPos: {x: 30, y: -1.5763437, z: 78}
+      TargetPos: {x: 30, y: -1.5763437, z: 78}
+      NextGoal: {x: -58, y: -2.6314194, z: 78}
+    - Id: sonnfurt_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: sonnfurt_versteck2
+      TriggerPos: {x: -58, y: -2.6314194, z: 78}
+      TargetPos: {x: -58, y: -2.6314194, z: 78}
+      NextGoal: {x: 50.199997, y: 61.709267, z: 2.199997}
+    Shortcuts: []
+    Scenes:
+    - Id: sonnfurt_szene1
+      Kind: Lager
+      LoreId: sonnfurt_lore_szene1
+      Position: {x: 81, y: 5.613423, z: -23}
+    - Id: sonnfurt_szene2
+      Kind: Schlachtfeld
+      LoreId: sonnfurt_lore_szene2
+      Position: {x: 17, y: -0.8822038, z: 33}
+    - Id: sonnfurt_szene3
+      Kind: Grab
+      LoreId: sonnfurt_lore_szene3
+      Position: {x: -87, y: 21.12645, z: 57}
+    FootLinks: []
+    Pads:
+    - {x: 50.199997, y: 2.199997, z: 18.02, w: 1.7092674}
+    MainVisibility: 1
+    CompactZone: 1

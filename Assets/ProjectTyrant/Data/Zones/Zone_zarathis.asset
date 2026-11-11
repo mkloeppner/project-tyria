@@ -174,3 +174,488 @@ MonoBehaviour:
   - heart_zarathis_3
   Region: 1
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 1
+      Center: {x: -323, y: 257}
+      Radius: 122
+      Height: 150
+      Param: 0
+      Yaw: 337
+    - Kind: 9
+      Center: {x: -25, y: 475}
+      Radius: 85
+      Height: 40
+      Param: 4
+      Yaw: 40
+    - Kind: 6
+      Center: {x: 538, y: 18}
+      Radius: 46
+      Height: 0
+      Param: 1.2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: 538, y: 18}
+      Radius: 6
+      Height: 2.1
+      Param: 2.5
+      Yaw: 0
+    - Kind: 6
+      Center: {x: 558, y: -362}
+      Radius: 46
+      Height: 0
+      Param: 2
+      Yaw: 0
+    - Kind: 2
+      Center: {x: 558, y: -362}
+      Radius: 6
+      Height: 2.1
+      Param: 2.5
+      Yaw: 0
+    - Kind: 7
+      Center: {x: 2, y: 122}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 230
+    Landmarks:
+    - Id: zarathis_wz_haupt
+      Name: Thronpyramide
+      Lore: "Vier Tore f\xFChren zur Spitze, und jedes verlangt etwas anderes. Zarath lie\xDF sie so bauen, damit nur er sie alle besitzt."
+      Kind: 1
+      Main: 1
+      Position: {x: 484.53198, y: 1.7, z: -175.46802}
+      Height: 110
+      Footprint: 125.53199
+      Yaw: -70.09269
+      BuildHeight: 110
+      Primary: {r: 0.8156863, g: 0.6901961, b: 0.5019608, a: 1}
+      Accent: {r: 1, g: 0.22745098, b: 0.16470589, a: 1}
+      Interior: 1
+      LightProfile: Spitzenkristall
+      SoundProfile: SFX_Amb_Torch_0
+      Stages:
+      - Index: 1
+        Name: "Halbe H\xF6he"
+        Position: {x: 544.14404, y: 57, z: -161.95865}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 544.14404, y: 57, z: -161.95865}
+      - Index: 2
+        Name: Flanke
+        Position: {x: 484.53198, y: 101, z: -175.46802}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 484.53198, y: 101, z: -175.46802}
+      - Index: 3
+        Name: Spitze
+        Position: {x: 484.53198, y: 113.299995, z: -175.46802}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 484.53198, y: 113.299995, z: -175.46802}
+      - Index: 4
+        Name: "K\xF6nigskammer"
+        Position: {x: 461.26093, y: 4.9, z: -167.04065}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 461.26093, y: 4.9, z: -167.04065}
+      - Index: 5
+        Name: Schatzkammer
+        Position: {x: 466.71954, y: 2.1000001, z: -137.42992}
+        Gate:
+          Keys: 32
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 466.71954, y: 2.1000001, z: -137.42992}
+    - Id: zarathis_wz_1
+      Name: Knochenmauer-Bastion
+      Lore: Die Mauer ist aus den Knochen derer gebaut, die sie angriffen. Die Bastion aus denen, die sie verteidigten.
+      Kind: 2
+      Main: 0
+      Position: {x: -55, y: 10, z: -75}
+      Height: 40
+      Footprint: 40
+      Yaw: 36.253838
+      BuildHeight: 40
+      Primary: {r: 0.8784314, g: 0.84705883, b: 0.7529412, a: 1}
+      Accent: {r: 0.5411765, g: 0.16470589, b: 0.16470589, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_Torch_0
+      Stages:
+      - Index: 1
+        Name: Wehrgang
+        Position: {x: -68.91017, y: 22, z: -51.693245}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -68.91017, y: 22, z: -51.693245}
+      - Index: 2
+        Name: Zinnen
+        Position: {x: -26.05006, y: 22.3, z: -60.887913}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -26.05006, y: 22.3, z: -60.887913}
+      - Index: 3
+        Name: Bergfried-Dach
+        Position: {x: -50.74218, y: 51, z: -69.193886}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -50.74218, y: 51, z: -69.193886}
+      - Index: 4
+        Name: Halle
+        Position: {x: -50.74218, y: 10.4, z: -69.193886}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -50.74218, y: 10.4, z: -69.193886}
+    Hazards:
+    - Id: zarathis_h1
+      Kind: 0
+      Center: {x: 538, y: 0.5, z: 18}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 28
+      Circular: 1
+    - Id: zarathis_h2
+      Kind: 2
+      Center: {x: 558, y: 0.5, z: -362}
+      Size: {x: 92, y: 92}
+      Yaw: 0
+      Keys: 536
+      Circular: 1
+    - Id: zarathis_h3
+      Kind: 7
+      Center: {x: 470, y: 5, z: -10}
+      Size: {x: 6, y: 6}
+      Yaw: 0
+      Keys: 32
+      Circular: 1
+    Climbs:
+    - Id: zarathis_aufstieg
+      Name: Hochpfad
+      Base: {x: -270.05658, y: 5, z: 133.9025}
+      Peak: {x: -323, y: 150, z: 257}
+      LaunchTower: {x: -262.9448, y: 5, z: 117.36701}
+      DescentTarget: {x: -141.39107, y: 1.7, z: 391.53757}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: -299.8629, y: 55.317326, z: 203.2045}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -277.50818, y: 17.57933, z: 151.228}
+        - {x: -284.95975, y: 30.158663, z: 168.5535}
+        - {x: -292.41132, y: 42.737995, z: 185.879}
+        - {x: -299.8629, y: 55.317326, z: 203.2045}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: -310.9494, y: 99.39255, z: 228.98146}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: -303.5584, y: 70.00906, z: 211.79681}
+        - {x: -307.2539, y: 84.700806, z: 220.38914}
+        - {x: -310.9494, y: 99.39255, z: 228.98146}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: -323, y: 150, z: 257}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -289.82285, y: 100.280396, z: 264.43518}
+        - {x: -340.27072, y: 115.37385, z: 238.239}
+        - {x: -320.66498, y: 130.4673, z: 273.8389}
+        - {x: -319.16196, y: 145.56075, z: 249.41583}
+        - {x: -323, y: 150, z: 257}
+      FootPath:
+      - {x: -272.4272, y: 5, z: 139.41434}
+      - {x: -212.1573, y: 11.289665, z: 212.82806}
+      - {x: -221.36188, y: 17.57933, z: 300.7139}
+      - {x: -285.2547, y: 23.868998, z: 351.7161}
+      - {x: -359.85495, y: 30.158663, z: 342.69058}
+      - {x: -401.58948, y: 36.44833, z: 288.3187}
+      - {x: -392.74304, y: 42.737995, z: 227.00398}
+      - {x: -347.89206, y: 49.02766, z: 194.53714}
+      - {x: -299.8629, y: 55.317326, z: 203.2045}
+      - {x: -299.8629, y: 55.317326, z: 203.2045}
+      - {x: -270.2296, y: 58.072025, z: 235.97046}
+      - {x: -272.42664, y: 60.82673, z: 278.75125}
+      - {x: -303.26892, y: 63.58143, z: 306.51212}
+      - {x: -343.36545, y: 66.33613, z: 304.35126}
+      - {x: -369.25378, y: 69.090836, z: 275.4326}
+      - {x: -367.12915, y: 71.845535, z: 238.02036}
+      - {x: -340.13412, y: 74.600235, z: 214.00447}
+      - {x: -305.40616, y: 77.354935, z: 216.09296}
+      - {x: -283.2628, y: 80.109634, z: 241.16432}
+      - {x: -285.3151, y: 82.86434, z: 273.20804}
+      - {x: -308.4628, y: 85.61904, z: 293.4789}
+      - {x: -337.8222, y: 88.37374, z: 291.46277}
+      - {x: -356.2206, y: 91.12844, z: 270.23874}
+      - {x: -354.24066, y: 93.88315, z: 243.56357}
+      - {x: -334.94028, y: 96.63785, z: 227.03769}
+      - {x: -310.9494, y: 99.39255, z: 228.98146}
+      SpringerLedges:
+      - {x: -275.16818, y: 16.99907, z: 145.78737}
+      - {x: -280.2798, y: 28.798138, z: 157.67224}
+      - {x: -285.3914, y: 40.597206, z: 169.55711}
+      - {x: -290.503, y: 52.396275, z: 181.44199}
+      - {x: -295.6146, y: 64.19534, z: 193.32684}
+      - {x: -300.7262, y: 75.99441, z: 205.21172}
+      - {x: -305.8378, y: 87.79347, z: 217.09659}
+      - {x: -310.9494, y: 99.592545, z: 228.98146}
+      ClimbPath:
+      - {x: -289.82285, y: 100.280396, z: 264.43518}
+      - {x: -292.70395, y: 101.16825, z: 271.29706}
+      - {x: -296.95828, y: 102.0561, z: 277.26907}
+      - {x: -302.33893, y: 102.94395, z: 282.08737}
+      - {x: -308.5509, y: 103.831795, z: 285.55222}
+      - {x: -315.26718, y: 104.71965, z: 287.5362}
+      - {x: -322.1458, y: 105.6075, z: 287.9883}
+      - {x: -328.8472, y: 106.495346, z: 286.93436}
+      - {x: -335.0509, y: 107.383194, z: 284.47327}
+      - {x: -340.47098, y: 108.27105, z: 280.77014}
+      - {x: -344.86914, y: 109.1589, z: 276.04587}
+      - {x: -348.06506, y: 110.046745, z: 270.56454}
+      - {x: -349.94357, y: 110.9346, z: 264.61893}
+      - {x: -350.4583, y: 111.82245, z: 258.51492}
+      - {x: -349.6318, y: 112.7103, z: 252.55592}
+      - {x: -347.55215, y: 113.59815, z: 247.02777}
+      - {x: -344.36627, y: 114.486, z: 242.18495}
+      - {x: -340.27072, y: 115.37385, z: 238.239}
+      - {x: -335.50003, y: 116.261696, z: 235.3493}
+      - {x: -330.31363, y: 117.14955, z: 233.61702}
+      - {x: -324.9819, y: 118.0374, z: 233.08191}
+      - {x: -319.7722, y: 118.92525, z: 233.72267}
+      - {x: -314.9353, y: 119.8131, z: 235.46019}
+      - {x: -310.69363, y: 120.70095, z: 238.16371}
+      - {x: -307.23074, y: 121.5888, z: 241.65944}
+      - {x: -304.6837, y: 122.47665, z: 245.741}
+      - {x: -303.1378, y: 123.3645, z: 250.1813}
+      - {x: -302.6244, y: 124.25235, z: 254.74483}
+      - {x: -303.12134, y: 125.1402, z: 259.2002}
+      - {x: -304.55652, y: 126.02805, z: 263.33167}
+      - {x: -306.8135, y: 126.9159, z: 266.94983}
+      - {x: -309.7395, y: 127.80375, z: 269.90002}
+      - {x: -313.1549, y: 128.6916, z: 272.06903}
+      - {x: -316.86383, y: 129.57945, z: 273.38898}
+      - {x: -320.66498, y: 130.4673, z: 273.8389}
+      - {x: -324.36255, y: 131.35515, z: 273.44366}
+      - {x: -327.77628, y: 132.243, z: 272.2705}
+      - {x: -330.75003, y: 133.13084, z: 270.42343}
+      - {x: -333.15924, y: 134.0187, z: 268.0359}
+      - {x: -334.9158, y: 134.90656, z: 265.26224}
+      - {x: -335.97095, y: 135.7944, z: 262.26834}
+      - {x: -336.3159, y: 136.68225, z: 259.22205}
+      - {x: -335.9803, y: 137.5701, z: 256.28384}
+      - {x: -335.02838, y: 138.45795, z: 253.5987}
+      - {x: -333.5537, y: 139.3458, z: 251.28862}
+      - {x: -331.67224, y: 140.23366, z: 249.44734}
+      - {x: -329.5146, y: 141.1215, z: 248.13657}
+      - {x: -327.2178, y: 142.00935, z: 247.38437}
+      - {x: -324.9171, y: 142.8972, z: 247.18547}
+      - {x: -322.73822, y: 143.78505, z: 247.5036}
+      - {x: -320.79062, y: 144.6729, z: 248.27539}
+      - {x: -319.16196, y: 145.56075, z: 249.41583}
+      - {x: -317.9142, y: 146.44861, z: 250.82466}
+      - {x: -317.08145, y: 147.33646, z: 252.3934}
+      - {x: -316.6695, y: 148.2243, z: 254.01257}
+      - {x: -316.65732, y: 149.11215, z: 255.57857}
+      - {x: -317, y: 150, z: 257}
+      LandmarkId: 
+    Secrets:
+    - Id: zarathis_h1_insel
+      Name: Insel im Treibsand
+      Hint: "Etwas glitzert in der Mitte \u2013 Treibsand sch\xFCtzt es."
+      Position: {x: 538, y: 2.1, z: 18}
+      Gate:
+        Keys: 28
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: zarathis_h2_insel
+      Name: Insel im Lava
+      Hint: "Etwas glitzert in der Mitte \u2013 Lava sch\xFCtzt es."
+      Position: {x: 558, y: 2.1, z: -362}
+      Gate:
+        Keys: 536
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: zarathis_wz_haupt_5
+      Name: 'Thronpyramide: Schatzkammer'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Thronpyramide."
+      Position: {x: 466.71954, y: 2.1000001, z: -137.42992}
+      Gate:
+        Keys: 32
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: zarathis_wz_1_3
+      Name: 'Knochenmauer-Bastion: Bergfried-Dach'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Knochenmauer-Bastion."
+      Position: {x: -50.74218, y: 51, z: -69.193886}
+      Gate:
+        Keys: 8
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: zarathis_aufstieg_gipfel
+      Name: 'Hochpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: -323, y: 150.4, z: 257}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: zarathis_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 2, y: 0, z: 122}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: zarathis_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -28, y: -5.889952, z: 192}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: zarathis_lore_szene1
+      Title: Gestrandete Karawane
+      Text: "Die Karawane blieb im Sand stecken. Die Kisten sind leer \u2013 bis auf eine, und die zeigt mit ihren Spuren zum Thronpyramide."
+      Figure: Zarath
+      Position: {x: 79, y: 5, z: -2}
+    - Id: zarathis_lore_szene2
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Thronpyramide. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Zarath
+      Position: {x: -21, y: 0, z: 58}
+    - Id: zarathis_lore_szene3
+      Title: Altes Schlachtfeld
+      Text: "Banner beider Seiten liegen nebeneinander im Gras. Niemand hat die Toten gez\xE4hlt \u2013 nur die Klingen, die Zarath sp\xE4ter fand."
+      Figure: Zarath
+      Position: {x: -81, y: 0, z: 118}
+    - Id: zarathis_wz_haupt_lore
+      Title: Thronpyramide
+      Text: "Vier Tore f\xFChren zur Spitze, und jedes verlangt etwas anderes. Zarath lie\xDF sie so bauen, damit nur er sie alle besitzt."
+      Figure: Zarath
+      Position: {x: 544.90936, y: 5, z: -193.07883}
+    - Id: zarathis_wz_1_lore
+      Title: Knochenmauer-Bastion
+      Text: Die Mauer ist aus den Knochen derer gebaut, die sie angriffen. Die Bastion aus denen, die sie verteidigten.
+      Figure: Zarath
+      Position: {x: -63.601654, y: 5, z: -93.49355}
+    - Id: zarathis_aufstieg_lore
+      Title: Hochpfad
+      Text: "Wer den Hochpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Zarath
+      Position: {x: -297.3629, y: 55.317326, z: 205.7045}
+    Loops:
+    - Id: zarathis_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: zarathis_h1_insel
+      TriggerPos: {x: 538, y: 2.1, z: 18}
+      TargetPos: {x: 538, y: 2.1, z: 18}
+      NextGoal: {x: 558, y: 2.1, z: -362}
+    - Id: zarathis_schleife2
+      TriggerKind: Lichtstrahl
+      Target: zarathis_h2_insel
+      TriggerPos: {x: 558, y: 2.1, z: -362}
+      TargetPos: {x: 558, y: 2.1, z: -362}
+      NextGoal: {x: 466.71954, y: 2.1000001, z: -137.42992}
+    - Id: zarathis_schleife3
+      TriggerKind: Vogelschwarm
+      Target: zarathis_wz_haupt_5
+      TriggerPos: {x: 466.71954, y: 2.1000001, z: -137.42992}
+      TargetPos: {x: 466.71954, y: 2.1000001, z: -137.42992}
+      NextGoal: {x: -50.74218, y: 51, z: -69.193886}
+    - Id: zarathis_schleife4
+      TriggerKind: Glocke
+      Target: zarathis_wz_1_3
+      TriggerPos: {x: -50.74218, y: 51, z: -69.193886}
+      TargetPos: {x: -50.74218, y: 51, z: -69.193886}
+      NextGoal: {x: -323, y: 150.4, z: 257}
+    - Id: zarathis_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: zarathis_aufstieg_gipfel
+      TriggerPos: {x: -323, y: 150.4, z: 257}
+      TargetPos: {x: -323, y: 150.4, z: 257}
+      NextGoal: {x: 484.53198, y: 111.7, z: -175.46802}
+    Shortcuts:
+    - Id: zarathis_abk_hang
+      Name: Springer-Wand am Hochpfad
+      Key: 2
+      From: {x: -270.05658, y: 5, z: 133.9025}
+      To: {x: -310.9494, y: 99.39255, z: 228.98146}
+      FootPath: 1125.0002
+      MountPath: 168.09506
+    Scenes:
+    - Id: zarathis_szene1
+      Kind: Karawane
+      LoreId: zarathis_lore_szene1
+      Position: {x: 76, y: 5, z: -4}
+    - Id: zarathis_szene2
+      Kind: Grab
+      LoreId: zarathis_lore_szene2
+      Position: {x: -24, y: 0, z: 56}
+    - Id: zarathis_szene3
+      Kind: Schlachtfeld
+      LoreId: zarathis_lore_szene3
+      Position: {x: -84, y: 0, z: 116}
+    FootLinks: []
+    Pads:
+    - {x: 484.53198, y: -175.46802, z: 106.702194, w: 1.7}
+    - {x: -55, y: -75, z: 34, w: 10}
+    MainVisibility: 0.924
+    CompactZone: 0

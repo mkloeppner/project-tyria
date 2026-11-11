@@ -213,3 +213,371 @@ MonoBehaviour:
   - heart_jadehafen_3
   Region: 2
   IsHub: 1
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 7
+      Center: {x: -28, y: 92}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 234
+    Landmarks:
+    - Id: jadehafen_wz_haupt
+      Name: Hafenpagode
+      Lore: "Die Pagode ist das erste, was Seefahrer von Jadehafen sehen \u2013 und das letzte, wenn sie gehen. Ihre Laternen brennen mit Jade-Licht."
+      Kind: 3
+      Main: 1
+      Position: {x: 85.16, y: 2, z: 65.16}
+      Height: 90
+      Footprint: 30.16
+      Yaw: -127.42133
+      BuildHeight: 90
+      Primary: {r: 0.16470589, g: 0.5411765, b: 0.41568628, a: 1}
+      Accent: {r: 0.5019608, g: 1, b: 0.8156863, a: 1}
+      Interior: 1
+      LightProfile: Laternen
+      SoundProfile: SFX_Amb_Bell_2
+      Stages:
+      - Index: 1
+        Name: Ebene 3
+        Position: {x: 85.16, y: 22.4, z: 65.16}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 85.16, y: 22.4, z: 65.16}
+      - Index: 2
+        Name: Balkon
+        Position: {x: 77.28458, y: 42, z: 75.45268}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 77.28458, y: 42, z: 75.45268}
+      - Index: 3
+        Name: Spitze
+        Position: {x: 81.72911, y: 92.4, z: 62.534863}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 81.72911, y: 92.4, z: 62.534863}
+    - Id: jadehafen_wz_1
+      Name: Jade-Thron
+      Lore: "Der Thron steht auf der h\xF6chsten Terrasse. Die Kaiserin sitzt selten darauf \u2013 sie bevorzugt die Werkst\xE4tten."
+      Kind: 2
+      Main: 0
+      Position: {x: -125, y: 4.655024, z: 75}
+      Height: 45
+      Footprint: 40
+      Yaw: 120.96376
+      BuildHeight: 45
+      Primary: {r: 0.101960786, g: 0.41568628, b: 0.3529412, a: 1}
+      Accent: {r: 1, g: 0.84705883, b: 0.4392157, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_Torch_0
+      Stages:
+      - Index: 1
+        Name: Wehrgang
+        Position: {x: -103.075005, y: 16.655024, z: 90.99976}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -103.075005, y: 16.655024, z: 90.99976}
+      - Index: 2
+        Name: Zinnen
+        Position: {x: -108.278885, y: 16.955025, z: 47.474472}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -108.278885, y: 16.955025, z: 47.474472}
+      - Index: 3
+        Name: Bergfried-Dach
+        Position: {x: -118.82605, y: 50.655025, z: 71.29563}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -118.82605, y: 50.655025, z: 71.29563}
+      - Index: 4
+        Name: Halle
+        Position: {x: -118.82605, y: 5.055024, z: 71.29563}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -118.82605, y: 5.055024, z: 71.29563}
+    Hazards: []
+    Climbs:
+    - Id: jadehafen_aufstieg
+      Name: Aufstieg Hafenpagode
+      Base: {x: 66.83014, y: 2, z: 51.13494}
+      Peak: {x: 81.72911, y: 92.4, z: 62.534863}
+      LaunchTower: {x: 50.94637, y: 2, z: 38.981506}
+      DescentTarget: {x: 90.10217, y: 2, z: -23.733654}
+      Stages:
+      - Index: 1
+        Name: Ebene 3
+        Position: {x: 85.16, y: 22.4, z: 65.16}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 75.99507, y: 12.2, z: 58.147472}
+        - {x: 85.16, y: 22.4, z: 65.16}
+      - Index: 2
+        Name: Balkon
+        Position: {x: 77.28458, y: 42, z: 75.45268}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 81.22229, y: 32.2, z: 70.30634}
+        - {x: 77.28458, y: 42, z: 75.45268}
+      - Index: 3
+        Name: Spitze
+        Position: {x: 81.72911, y: 92.4, z: 62.534863}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 105.72979, y: 42.88421, z: 69.7698}
+        - {x: 70.882904, y: 57.91579, z: 49.650944}
+        - {x: 88.05542, y: 72.947365, z: 86.04021}
+        - {x: 93.73121, y: 87.97895, z: 48.222824}
+        - {x: 81.72911, y: 92.4, z: 62.534863}
+      FootPath: []
+      SpringerLedges:
+      - {x: 68.836075, y: 12.2, z: 58.008564}
+      - {x: 70.84201, y: 22.2, z: 64.88219}
+      - {x: 72.84795, y: 32.2, z: 71.75581}
+      - {x: 74.85389, y: 42.2, z: 78.62943}
+      ClimbPath:
+      - {x: 105.72979, y: 42.88421, z: 69.7698}
+      - {x: 104.223854, y: 43.76842, z: 74.15645}
+      - {x: 101.79508, y: 44.65263, z: 78.107605}
+      - {x: 98.56106, y: 45.536842, z: 81.43201}
+      - {x: 94.67832, y: 46.42105, z: 83.96873}
+      - {x: 90.33484, y: 47.305264, z: 85.59496}
+      - {x: 85.74085, y: 48.189472, z: 86.232}
+      - {x: 81.118744, y: 49.073685, z: 85.849}
+      - {x: 76.69227, y: 49.957893, z: 84.46451}
+      - {x: 72.67568, y: 50.842106, z: 82.14553}
+      - {x: 69.263435, y: 51.726315, z: 79.00433}
+      - {x: 66.6207, y: 52.610527, z: 75.19297}
+      - {x: 64.8754, y: 53.494736, z: 70.89595}
+      - {x: 64.112015, y: 54.37895, z: 66.32125}
+      - {x: 64.36751, y: 55.263157, z: 61.690346}
+      - {x: 65.62951, y: 56.14737, z: 57.227398}
+      - {x: 67.83693, y: 57.031578, z: 53.14845}
+      - {x: 70.882904, y: 57.91579, z: 49.650944}
+      - {x: 74.62, y: 58.8, z: 46.904186}
+      - {x: 78.86732, y: 59.68421, z: 45.041145}
+      - {x: 83.41923, y: 60.56842, z: 44.152004}
+      - {x: 88.05542, y: 61.452633, z: 44.279797}
+      - {x: 92.551445, y: 62.33684, z: 45.41835}
+      - {x: 96.689674, y: 63.221054, z: 47.51254}
+      - {x: 100.26978, y: 64.10526, z: 50.460987}
+      - {x: 103.11846, y: 64.98947, z: 54.120975}
+      - {x: 105.09783, y: 65.87369, z: 58.315346}
+      - {x: 106.11206, y: 66.7579, z: 62.841034}
+      - {x: 106.11206, y: 67.642105, z: 67.47899}
+      - {x: 105.09783, y: 68.52631, z: 72.00468}
+      - {x: 103.11846, y: 69.41053, z: 76.199036}
+      - {x: 100.269775, y: 70.29474, z: 79.859024}
+      - {x: 96.689674, y: 71.17895, z: 82.80747}
+      - {x: 92.551445, y: 72.063156, z: 84.901665}
+      - {x: 88.05542, y: 72.947365, z: 86.04021}
+      - {x: 83.419235, y: 73.83158, z: 86.16801}
+      - {x: 78.867294, y: 74.71579, z: 85.278854}
+      - {x: 74.62, y: 75.6, z: 83.41582}
+      - {x: 70.882904, y: 76.484215, z: 80.66906}
+      - {x: 67.83692, y: 77.36842, z: 77.17155}
+      - {x: 65.62951, y: 78.25263, z: 73.09261}
+      - {x: 64.36751, y: 79.13684, z: 68.62966}
+      - {x: 64.112015, y: 80.02105, z: 63.998753}
+      - {x: 64.8754, y: 80.905266, z: 59.424057}
+      - {x: 66.620705, y: 81.789474, z: 55.127026}
+      - {x: 69.26344, y: 82.67368, z: 51.315662}
+      - {x: 72.6757, y: 83.5579, z: 48.174465}
+      - {x: 76.69228, y: 84.44211, z: 45.855495}
+      - {x: 81.118744, y: 85.32632, z: 44.471004}
+      - {x: 85.74085, y: 86.210526, z: 44.08801}
+      - {x: 90.33485, y: 87.094734, z: 44.725048}
+      - {x: 93.73121, y: 87.97895, z: 48.222824}
+      - {x: 95.32266, y: 88.86316, z: 52.820187}
+      - {x: 95.41052, y: 89.74737, z: 57.181717}
+      - {x: 94.19723, y: 90.631584, z: 60.895245}
+      - {x: 91.98715, y: 91.51579, z: 63.630005}
+      - {x: 89.16, y: 92.4, z: 65.16}
+      LandmarkId: jadehafen_wz_haupt
+    Secrets:
+    - Id: jadehafen_wz_1_3
+      Name: 'Jade-Thron: Bergfried-Dach'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Jade-Thron."
+      Position: {x: -118.82605, y: 50.655025, z: 71.29563}
+      Gate:
+        Keys: 8
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: jadehafen_aufstieg_gipfel
+      Name: 'Aufstieg Hafenpagode: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: 81.72911, y: 92.8, z: 62.534863}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: jadehafen_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: -28, y: 5.9043183, z: 92}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: jadehafen_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -38, y: 0, z: 202}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: jadehafen_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -118, y: 0, z: 262}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: jadehafen_versteck4
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -178, y: 0, z: -198}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: jadehafen_versteck5
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: 222, y: 0, z: -118}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: jadehafen_lore_szene1
+      Title: Wrack am Ufer
+      Text: "Das Wrack liegt mit dem Kiel nach oben. Im Logbuch steht nur ein Satz: \u201EKurs auf Hafenpagode.\u201C Lin Sao kannte den Kapit\xE4n."
+      Figure: Lin Sao
+      Position: {x: 69, y: 0, z: -352}
+    - Id: jadehafen_lore_szene2
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Lin Sao: \u201EWir sind zum Hafenpagode gegangen. Folge dem Rauch.\u201C"
+      Figure: Lin Sao
+      Position: {x: 289, y: 3.8967524, z: 68}
+    - Id: jadehafen_lore_szene3
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Hafenpagode. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Lin Sao
+      Position: {x: -71, y: 0, z: 128}
+    - Id: jadehafen_wz_haupt_lore
+      Title: Hafenpagode
+      Text: "Die Pagode ist das erste, was Seefahrer von Jadehafen sehen \u2013 und das letzte, wenn sie gehen. Ihre Laternen brennen mit Jade-Licht."
+      Figure: Lin Sao
+      Position: {x: 94.70568, y: 0.9536742, z: 77.50044}
+    - Id: jadehafen_wz_1_lore
+      Title: Jade-Thron
+      Text: "Der Thron steht auf der h\xF6chsten Terrasse. Die Kaiserin sitzt selten darauf \u2013 sie bevorzugt die Werkst\xE4tten."
+      Figure: Lin Sao
+      Position: {x: -144.20784, y: 1.2252841, z: 81.85995}
+    - Id: jadehafen_aufstieg_lore
+      Title: Aufstieg Hafenpagode
+      Text: "Wer den Aufstieg Hafenpagode bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Lin Sao
+      Position: {x: 87.66, y: 22.4, z: 67.66}
+    Loops:
+    - Id: jadehafen_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: jadehafen_wz_1_3
+      TriggerPos: {x: -118.82605, y: 50.655025, z: 71.29563}
+      TargetPos: {x: -118.82605, y: 50.655025, z: 71.29563}
+      NextGoal: {x: 81.72911, y: 92.8, z: 62.534863}
+    - Id: jadehafen_schleife2
+      TriggerKind: Lichtstrahl
+      Target: jadehafen_aufstieg_gipfel
+      TriggerPos: {x: 81.72911, y: 92.8, z: 62.534863}
+      TargetPos: {x: 81.72911, y: 92.8, z: 62.534863}
+      NextGoal: {x: -28, y: 5.9043183, z: 92}
+    - Id: jadehafen_schleife3
+      TriggerKind: Vogelschwarm
+      Target: jadehafen_hoehle
+      TriggerPos: {x: -28, y: 5.9043183, z: 92}
+      TargetPos: {x: -28, y: 5.9043183, z: 92}
+      NextGoal: {x: -38, y: 0, z: 202}
+    - Id: jadehafen_schleife4
+      TriggerKind: Glocke
+      Target: jadehafen_versteck2
+      TriggerPos: {x: -38, y: 0, z: 202}
+      TargetPos: {x: -38, y: 0, z: 202}
+      NextGoal: {x: -118, y: 0, z: 262}
+    - Id: jadehafen_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: jadehafen_versteck3
+      TriggerPos: {x: -118, y: 0, z: 262}
+      TargetPos: {x: -118, y: 0, z: 262}
+      NextGoal: {x: 85.16, y: 92, z: 65.16}
+    Shortcuts: []
+    Scenes:
+    - Id: jadehafen_szene1
+      Kind: Wrack
+      LoreId: jadehafen_lore_szene1
+      Position: {x: 66, y: 0, z: -354}
+    - Id: jadehafen_szene2
+      Kind: Lager
+      LoreId: jadehafen_lore_szene2
+      Position: {x: 286, y: 3.8967524, z: 66}
+    - Id: jadehafen_szene3
+      Kind: Grab
+      LoreId: jadehafen_lore_szene3
+      Position: {x: -74, y: 0, z: 126}
+    FootLinks: []
+    Pads:
+    - {x: 85.16, y: 65.16, z: 25.636, w: 2}
+    - {x: -125, y: 75, z: 34, w: 4.655024}
+    MainVisibility: 0.998
+    CompactZone: 1

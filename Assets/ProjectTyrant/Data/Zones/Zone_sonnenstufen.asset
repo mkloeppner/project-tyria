@@ -173,3 +173,432 @@ MonoBehaviour:
   - heart_sonnenstufen_3
   Region: 2
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 1
+      Center: {x: 188, y: 428}
+      Radius: 123
+      Height: 150
+      Param: 0
+      Yaw: 209
+    - Kind: 9
+      Center: {x: -55, y: 425}
+      Radius: 85
+      Height: 40
+      Param: 4
+      Yaw: 31
+    - Kind: 7
+      Center: {x: -428, y: 92}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 343
+    Landmarks:
+    - Id: sonnenstufen_wz_haupt
+      Name: Kaiserpalast
+      Lore: "Der Palast steht auf der h\xF6chsten Stufe, damit die Kaiserin jedes Reisfeld sehen kann. Die Bauern sagen, sie z\xE4hlt die K\xF6rner."
+      Kind: 2
+      Main: 1
+      Position: {x: 257.92422, y: 3, z: 79.306885}
+      Height: 100
+      Footprint: 55
+      Yaw: -107.09168
+      BuildHeight: 100
+      Primary: {r: 0.7529412, g: 0.2901961, b: 0.22745098, a: 1}
+      Accent: {r: 1, g: 0.8156863, b: 0.3764706, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_Torch_0
+      Stages:
+      - Index: 1
+        Name: Wehrgang
+        Position: {x: 268.18085, y: 15, z: 40.612408}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 268.18085, y: 15, z: 40.612408}
+      - Index: 2
+        Name: Zinnen
+        Position: {x: 209.73259, y: 15.3, z: 88.02847}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 209.73259, y: 15.3, z: 88.02847}
+      - Index: 3
+        Name: Bergfried-Dach
+        Position: {x: 247.6012, y: 104, z: 76.13275}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 247.6012, y: 104, z: 76.13275}
+      - Index: 4
+        Name: Halle
+        Position: {x: 247.6012, y: 3.4, z: 76.13275}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 247.6012, y: 3.4, z: 76.13275}
+    - Id: sonnenstufen_wz_1
+      Name: Wachturm der Festungsmauer
+      Lore: "Die Mauer h\xE4lt Piraten fern. Der Turm h\xE4lt die Wachen wach."
+      Kind: 6
+      Main: 0
+      Position: {x: -23.799988, y: 12, z: 116.20001}
+      Height: 40
+      Footprint: 21.2
+      Yaw: 168.42482
+      BuildHeight: 40
+      Primary: {r: 0.627451, g: 0.5019608, b: 0.3764706, a: 1}
+      Accent: {r: 1, g: 0.5411765, b: 0.22745098, a: 1}
+      Interior: 1
+      LightProfile: Laterne
+      SoundProfile: SFX_Amb_Water_0
+      Stages:
+      - Index: 1
+        Name: Treppe
+        Position: {x: -27.91457, y: 12.4, z: 115.35727}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: -27.91457, y: 12.4, z: 115.35727}
+      - Index: 2
+        Name: "Au\xDFengalerie"
+        Position: {x: -32.714912, y: 26, z: 114.37406}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: -32.714912, y: 26, z: 114.37406}
+      - Index: 3
+        Name: Laterne
+        Position: {x: -29.628979, y: 49.2, z: 115.00613}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: -29.628979, y: 49.2, z: 115.00613}
+    Hazards:
+    - Id: sonnenstufen_h1
+      Kind: 4
+      Center: {x: 208.00072, y: 125.140205, z: 430.21368}
+      Size: {x: 40, y: 40}
+      Yaw: 0
+      Keys: 25
+      Circular: 1
+    Climbs:
+    - Id: sonnenstufen_aufstieg
+      Name: Hochpfad
+      Base: {x: 159.91763, y: 1.1, z: 295.95312}
+      Peak: {x: 188, y: 150, z: 428}
+      LaunchTower: {x: 156.17332, y: 1.1, z: 278.34686}
+      DescentTarget: {x: 371.88998, y: 3.0765085, z: 246.70944}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: 175.46277, y: 53.625095, z: 369.04834}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 163.80392, y: 14.231274, z: 314.22693}
+        - {x: 167.6902, y: 27.362547, z: 332.50073}
+        - {x: 171.57648, y: 40.49382, z: 350.77454}
+        - {x: 175.46277, y: 53.625095, z: 369.04834}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: 181.60344, y: 99.39256, z: 397.92258}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 176.99794, y: 65.06696, z: 376.2669}
+        - {x: 178.53311, y: 76.50883, z: 383.48547}
+        - {x: 180.06827, y: 87.9507, z: 390.704}
+        - {x: 181.60344, y: 99.39256, z: 397.92258}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: 188, y: 150, z: 428}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 221.41682, y: 100.28041, z: 435.4889}
+        - {x: 170.61343, y: 115.373856, z: 409.11316}
+        - {x: 190.34827, y: 130.4673, z: 444.93448}
+        - {x: 191.84793, y: 145.56075, z: 420.39627}
+        - {x: 188, y: 150, z: 428}
+      FootPath:
+      - {x: 161.16574, y: 1.1, z: 301.82187}
+      - {x: 253.56837, y: 7.665637, z: 327.00964}
+      - {x: 297.37152, y: 14.231275, z: 404.74}
+      - {x: 274.57892, y: 20.796911, z: 484.2117}
+      - {x: 207.68575, y: 27.362549, z: 520.5649}
+      - {x: 141.14499, y: 33.928185, z: 500.16745}
+      - {x: 112.24172, y: 40.493824, z: 444.11148}
+      - {x: 130.244, y: 47.05946, z: 390.50168}
+      - {x: 175.46277, y: 53.625095, z: 369.04834}
+      - {x: 175.46277, y: 53.625095, z: 369.04834}
+      - {x: 219.81525, y: 56.48556, z: 378.99716}
+      - {x: 243.34239, y: 59.346027, z: 416.23035}
+      - {x: 233.9079, y: 62.206497, z: 457.80588}
+      - {x: 199.00206, y: 65.06696, z: 479.73312}
+      - {x: 160.20348, y: 67.92743, z: 470.813}
+      - {x: 139.87617, y: 70.787895, z: 438.2345}
+      - {x: 148.2819, y: 73.64836, z: 402.21286}
+      - {x: 178.5331, y: 76.50883, z: 383.48544}
+      - {x: 211.77773, y: 79.36929, z: 391.3768}
+      - {x: 228.90526, y: 82.22976, z: 419.3007}
+      - {x: 221.52826, y: 85.09023, z: 449.76837}
+      - {x: 195.93173, y: 87.9507, z: 465.29596}
+      - {x: 168.24101, y: 90.811165, z: 458.43335}
+      - {x: 154.31331, y: 93.67163, z: 435.16412}
+      - {x: 160.66156, y: 96.5321, z: 410.2504}
+      - {x: 181.60344, y: 99.39256, z: 397.92258}
+      SpringerLedges:
+      - {x: 162.32716, y: 12.2213955, z: 307.28305}
+      - {x: 164.7367, y: 23.142792, z: 318.613}
+      - {x: 167.14624, y: 34.06419, z: 329.94293}
+      - {x: 169.55577, y: 44.985584, z: 341.2729}
+      - {x: 171.9653, y: 55.906982, z: 352.6028}
+      - {x: 174.37483, y: 66.82838, z: 363.93277}
+      - {x: 176.78438, y: 77.74977, z: 375.2627}
+      - {x: 179.19391, y: 88.671165, z: 386.59265}
+      - {x: 181.60344, y: 99.59256, z: 397.92258}
+      ClimbPath:
+      - {x: 221.41682, y: 100.28041, z: 435.4889}
+      - {x: 218.51419, y: 101.16826, z: 442.4}
+      - {x: 214.22859, y: 102.056114, z: 448.41455}
+      - {x: 208.80885, y: 102.94396, z: 453.26678}
+      - {x: 202.55208, y: 103.83181, z: 456.7557}
+      - {x: 195.78772, y: 104.71966, z: 458.75302}
+      - {x: 188.86023, y: 105.60751, z: 459.20752}
+      - {x: 182.1116, y: 106.49536, z: 458.14526}
+      - {x: 175.86455, y: 107.38321, z: 455.66605}
+      - {x: 170.40694, y: 108.27106, z: 451.93622}
+      - {x: 165.97871, y: 109.15891, z: 447.17834}
+      - {x: 162.76135, y: 110.04676, z: 441.65845}
+      - {x: 160.87074, y: 110.93461, z: 435.67142}
+      - {x: 160.3534, y: 111.82246, z: 429.5253}
+      - {x: 161.1865, y: 112.71031, z: 423.5256}
+      - {x: 163.28125, y: 113.59816, z: 417.9601}
+      - {x: 166.48956, y: 114.48601, z: 413.085}
+      - {x: 170.61343, y: 115.373856, z: 409.11316}
+      - {x: 175.41664, y: 116.26171, z: 406.205}
+      - {x: 180.63794, y: 117.14956, z: 404.46216}
+      - {x: 186.00505, y: 118.03741, z: 403.92456}
+      - {x: 191.2489, y: 118.925255, z: 404.57062}
+      - {x: 196.11697, y: 119.81311, z: 406.32056}
+      - {x: 200.38553, y: 120.70096, z: 409.04254}
+      - {x: 203.86984, y: 121.588806, z: 412.56158}
+      - {x: 206.43213, y: 122.476654, z: 416.6698}
+      - {x: 207.98665, y: 123.36451, z: 421.13858}
+      - {x: 208.50204, y: 124.25236, z: 425.73083}
+      - {x: 208.00072, y: 125.140205, z: 430.21368}
+      - {x: 206.55547, y: 126.02805, z: 434.37012}
+      - {x: 204.28365, y: 126.91591, z: 438.00952}
+      - {x: 201.3391, y: 127.80376, z: 440.97647}
+      - {x: 197.90266, y: 128.6916, z: 443.15714}
+      - {x: 194.17154, y: 129.57945, z: 444.48346}
+      - {x: 190.34827, y: 130.4673, z: 444.93448}
+      - {x: 186.62984, y: 131.35515, z: 444.53546}
+      - {x: 183.19756, y: 132.24301, z: 443.35422}
+      - {x: 180.20831, y: 133.13086, z: 441.49557}
+      - {x: 177.7873, y: 134.0187, z: 439.09396}
+      - {x: 176.02292, y: 134.90656, z: 436.30472}
+      - {x: 174.96405, y: 135.7944, z: 433.29474}
+      - {x: 174.61922, y: 136.68225, z: 430.23285}
+      - {x: 174.9584, y: 137.5701, z: 427.2805}
+      - {x: 175.91676, y: 138.45795, z: 424.5832}
+      - {x: 177.40001, y: 139.34581, z: 422.26358}
+      - {x: 179.29138, y: 140.23366, z: 420.41565}
+      - {x: 181.45944, y: 141.1215, z: 419.10123}
+      - {x: 183.76634, y: 142.00935, z: 418.3482}
+      - {x: 186.07617, y: 142.8972, z: 418.15103}
+      - {x: 188.26262, y: 143.78505, z: 418.4729}
+      - {x: 190.21584, y: 144.6729, z: 419.24988}
+      - {x: 191.84793, y: 145.56075, z: 420.39627}
+      - {x: 193.09695, y: 146.44861, z: 421.81113}
+      - {x: 193.92894, y: 147.33646, z: 423.3853}
+      - {x: 194.33844, y: 148.2243, z: 425.00882}
+      - {x: 194.34695, y: 149.11215, z: 426.5776}
+      - {x: 194, y: 150, z: 428}
+      LandmarkId: 
+    Secrets:
+    - Id: sonnenstufen_wz_haupt_3
+      Name: 'Kaiserpalast: Bergfried-Dach'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Kaiserpalast."
+      Position: {x: 247.6012, y: 104, z: 76.13275}
+      Gate:
+        Keys: 8
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnenstufen_wz_1_2
+      Name: "Wachturm der Festungsmauer: Au\xDFengalerie"
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Wachturm der Festungsmauer."
+      Position: {x: -32.714912, y: 26, z: 114.37406}
+      Gate:
+        Keys: 2
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnenstufen_aufstieg_gipfel
+      Name: 'Hochpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: 188, y: 150.4, z: 428}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnenstufen_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: -428, y: 8.336978, z: 92}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnenstufen_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -38, y: 12, z: 162}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnenstufen_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -118, y: 8.24306, z: 262}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: sonnenstufen_versteck4
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -178, y: 0, z: -198}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: sonnenstufen_lore_szene1
+      Title: Wrack am Ufer
+      Text: "Das Wrack liegt mit dem Kiel nach oben. Im Logbuch steht nur ein Satz: \u201EKurs auf Kaiserpalast.\u201C Yuen kannte den Kapit\xE4n."
+      Figure: Yuen
+      Position: {x: 89, y: 4.4503064, z: -12}
+    - Id: sonnenstufen_lore_szene2
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Yuen: \u201EWir sind zum Kaiserpalast gegangen. Folge dem Rauch.\u201C"
+      Figure: Yuen
+      Position: {x: -311, y: 0, z: 68}
+    - Id: sonnenstufen_lore_szene3
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Kaiserpalast. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Yuen
+      Position: {x: -91, y: 12, z: 128}
+    - Id: sonnenstufen_wz_haupt_lore
+      Title: Kaiserpalast
+      Text: "Der Palast steht auf der h\xF6chsten Stufe, damit die Kaiserin jedes Reisfeld sehen kann. Die Bauern sagen, sie z\xE4hlt die K\xF6rner."
+      Figure: Yuen
+      Position: {x: 283.0341, y: 1.1917796, z: 91.212524}
+    - Id: sonnenstufen_wz_1_lore
+      Title: Wachturm der Festungsmauer
+      Text: "Die Mauer h\xE4lt Piraten fern. Der Turm h\xE4lt die Wachen wach."
+      Figure: Yuen
+      Position: {x: -29.845566, y: 12, z: 125.781815}
+    - Id: sonnenstufen_aufstieg_lore
+      Title: Hochpfad
+      Text: "Wer den Hochpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Yuen
+      Position: {x: 177.96277, y: 53.625095, z: 371.54834}
+    Loops:
+    - Id: sonnenstufen_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: sonnenstufen_wz_haupt_3
+      TriggerPos: {x: 247.6012, y: 104, z: 76.13275}
+      TargetPos: {x: 247.6012, y: 104, z: 76.13275}
+      NextGoal: {x: -32.714912, y: 26, z: 114.37406}
+    - Id: sonnenstufen_schleife2
+      TriggerKind: Lichtstrahl
+      Target: sonnenstufen_wz_1_2
+      TriggerPos: {x: -32.714912, y: 26, z: 114.37406}
+      TargetPos: {x: -32.714912, y: 26, z: 114.37406}
+      NextGoal: {x: 188, y: 150.4, z: 428}
+    - Id: sonnenstufen_schleife3
+      TriggerKind: Vogelschwarm
+      Target: sonnenstufen_aufstieg_gipfel
+      TriggerPos: {x: 188, y: 150.4, z: 428}
+      TargetPos: {x: 188, y: 150.4, z: 428}
+      NextGoal: {x: -428, y: 8.336978, z: 92}
+    - Id: sonnenstufen_schleife4
+      TriggerKind: Glocke
+      Target: sonnenstufen_hoehle
+      TriggerPos: {x: -428, y: 8.336978, z: 92}
+      TargetPos: {x: -428, y: 8.336978, z: 92}
+      NextGoal: {x: -38, y: 12, z: 162}
+    - Id: sonnenstufen_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: sonnenstufen_versteck2
+      TriggerPos: {x: -38, y: 12, z: 162}
+      TargetPos: {x: -38, y: 12, z: 162}
+      NextGoal: {x: 257.92422, y: 103, z: 79.306885}
+    Shortcuts:
+    - Id: sonnenstufen_abk_hang
+      Name: Springer-Wand am Hochpfad
+      Key: 2
+      From: {x: 159.91763, y: 1.1, z: 295.95312}
+      To: {x: 181.60344, y: 99.39256, z: 397.92258}
+      FootPath: 1145.4849
+      MountPath: 171.93732
+    Scenes:
+    - Id: sonnenstufen_szene1
+      Kind: Wrack
+      LoreId: sonnenstufen_lore_szene1
+      Position: {x: 86, y: 4.4503064, z: -14}
+    - Id: sonnenstufen_szene2
+      Kind: Lager
+      LoreId: sonnenstufen_lore_szene2
+      Position: {x: -314, y: 0, z: 66}
+    - Id: sonnenstufen_szene3
+      Kind: Grab
+      LoreId: sonnenstufen_lore_szene3
+      Position: {x: -94, y: 12, z: 126}
+    FootLinks: []
+    Pads:
+    - {x: 257.92422, y: 79.306885, z: 46.75, w: 3}
+    - {x: -23.799988, y: 116.20001, z: 18.02, w: 12}
+    MainVisibility: 0.976
+    CompactZone: 0

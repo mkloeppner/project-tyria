@@ -186,3 +186,460 @@ MonoBehaviour:
   - heart_fluesterhain_3
   Region: 2
   IsHub: 0
+  WorldPlan:
+    Version: 4
+    Ops:
+    - Kind: 0
+      Center: {x: 417, y: 417}
+      Radius: 82
+      Height: 180
+      Param: 0
+      Yaw: 167
+    - Kind: 0
+      Center: {x: -305, y: 95}
+      Radius: 85
+      Height: 30
+      Param: 0
+      Yaw: 36
+    - Kind: 7
+      Center: {x: 82, y: 102}
+      Radius: 18
+      Height: 9
+      Param: 0
+      Yaw: 308
+    Landmarks:
+    - Id: fluesterhain_wz_haupt
+      Name: "Gro\xDFe Pagode"
+      Lore: "Neun Ebenen, neun Geister. Die M\xF6nche sagen, die neunte Ebene geh\xF6re niemandem \u2013 nicht einmal ihnen."
+      Kind: 3
+      Main: 1
+      Position: {x: 19.640015, y: 2.2, z: 79.640015}
+      Height: 110
+      Footprint: 34.64
+      Yaw: -166.14671
+      BuildHeight: 110
+      Primary: {r: 0.5411765, g: 0.22745098, b: 0.16470589, a: 1}
+      Accent: {r: 0.8784314, g: 0.8156863, b: 0.5019608, a: 1}
+      Interior: 1
+      LightProfile: Laternen
+      SoundProfile: SFX_Amb_Bell_2
+      Stages:
+      - Index: 1
+        Name: Ebene 3
+        Position: {x: 19.640015, y: 27.044445, z: 79.640015}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 19.640015, y: 27.044445, z: 79.640015}
+      - Index: 2
+        Name: Balkon
+        Position: {x: 4.260769, y: 51.08889, z: 83.432686}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 4.260769, y: 51.08889, z: 83.432686}
+      - Index: 3
+        Name: Spitze
+        Position: {x: 18.37579, y: 112.6, z: 74.513596}
+        Gate:
+          Keys: 24
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 18.37579, y: 112.6, z: 74.513596}
+    - Id: fluesterhain_wz_1
+      Name: Riesenbambus
+      Lore: "Der Bambus w\xE4chst einen Meter am Tag. Die M\xF6nche haben aufgeh\xF6rt, die Pagode h\xF6her zu bauen."
+      Kind: 4
+      Main: 0
+      Position: {x: 215, y: 5.8988214, z: 15}
+      Height: 55
+      Footprint: 30
+      Yaw: -93.99092
+      BuildHeight: 55
+      Primary: {r: 0.3529412, g: 0.5411765, b: 0.22745098, a: 1}
+      Accent: {r: 0.8156863, g: 0.9411765, b: 0.627451, a: 1}
+      Interior: 1
+      LightProfile: Fackeln
+      SoundProfile: SFX_Amb_BirdCall_0
+      Stages:
+      - Index: 1
+        Name: Wurzelhalle
+        Position: {x: 215, y: 6.2988214, z: 15}
+        Gate:
+          Keys: 0
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 4
+        Checkpoints:
+        - {x: 215, y: 6.2988214, z: 15}
+      - Index: 2
+        Name: "\xC4ste"
+        Position: {x: 208.63104, y: 32.148823, z: 16.298622}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 208.63104, y: 32.148823, z: 16.298622}
+      - Index: 3
+        Name: Kronendorf
+        Position: {x: 214.22049, y: 46.098824, z: 26.172842}
+        Gate:
+          Keys: 2
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 214.22049, y: 46.098824, z: 26.172842}
+      - Index: 4
+        Name: Krone
+        Position: {x: 215, y: 69.59882, z: 15}
+        Gate:
+          Keys: 8
+          FootAlternative: 0
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 215, y: 69.59882, z: 15}
+    Hazards:
+    - Id: fluesterhain_h1
+      Kind: 4
+      Center: {x: 437.59042, y: 150.6267, z: 420.84903}
+      Size: {x: 40, y: 40}
+      Yaw: 0
+      Keys: 25
+      Circular: 1
+    - Id: fluesterhain_h2
+      Kind: 5
+      Center: {x: 401.06317, y: 91.74725, z: 385.0881}
+      Size: {x: 30, y: 10}
+      Yaw: 26.537533
+      Keys: 26
+      Circular: 0
+    Climbs:
+    - Id: fluesterhain_aufstieg
+      Name: Gipfelpfad
+      Base: {x: 375.0022, y: 1.5, z: 332.90372}
+      Peak: {x: 417, y: 180, z: 417}
+      LaunchTower: {x: 366.96008, y: 1.5, z: 316.80017}
+      DescentTarget: {x: 208.80812, y: 2.9997687, z: 132.71112}
+      Stages:
+      - Index: 1
+        Name: Rastplateau
+        Position: {x: 399.78088, y: 64.021324, z: 382.52048}
+        Gate:
+          Keys: 0
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 1
+        Checkpoints:
+        - {x: 379.95795, y: 14.004265, z: 342.82706}
+        - {x: 384.91367, y: 26.50853, z: 352.75043}
+        - {x: 389.86942, y: 39.012794, z: 362.67377}
+        - {x: 394.82513, y: 51.51706, z: 372.59714}
+        - {x: 399.78088, y: 64.021324, z: 382.52048}
+      - Index: 2
+        Name: Hochplateau
+        Position: {x: 402.34543, y: 119.47318, z: 387.65573}
+        Gate:
+          Keys: 2
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 2
+        Checkpoints:
+        - {x: 400.42203, y: 77.88429, z: 383.8043}
+        - {x: 401.06317, y: 91.74725, z: 385.0881}
+        - {x: 401.70428, y: 105.610214, z: 386.37192}
+        - {x: 402.34543, y: 119.47318, z: 387.65573}
+      - Index: 3
+        Name: Gipfel
+        Position: {x: 417, y: 180, z: 417}
+        Gate:
+          Keys: 24
+          FootAlternative: 1
+          ReturnGate: 0
+        Reward: 3
+        Checkpoints:
+        - {x: 452.7282, y: 120.36328, z: 423.67877}
+        - {x: 388.8407, y: 135.495, z: 411.7361}
+        - {x: 437.59042, y: 150.6267, z: 420.84903}
+        - {x: 403.9785, y: 165.75839, z: 414.56586}
+        - {x: 417, y: 180, z: 417}
+      FootPath:
+      - {x: 377.68292, y: 1.5, z: 338.27158}
+      - {x: 443.8891, y: 5.4075828, z: 336.46136}
+      - {x: 490.19733, y: 9.3151655, z: 380.44516}
+      - {x: 491.67435, y: 13.222748, z: 441.9312}
+      - {x: 450.7926, y: 17.130331, z: 484.6662}
+      - {x: 394.02667, y: 21.037914, z: 485.81006}
+      - {x: 354.8649, y: 24.945496, z: 448.03033}
+      - {x: 354.05423, y: 28.853079, z: 395.98453}
+      - {x: 388.7319, y: 32.760662, z: 360.39603}
+      - {x: 436.05756, y: 36.668243, z: 359.91852}
+      - {x: 468.07288, y: 40.57583, z: 391.49417}
+      - {x: 468.2172, y: 44.48341, z: 434.09967}
+      - {x: 439.74362, y: 48.39099, z: 462.54175}
+      - {x: 401.8582, y: 52.298576, z: 462.3529}
+      - {x: 376.98935, y: 56.206158, z: 436.98132}
+      - {x: 377.51138, y: 60.113743, z: 403.8161}
+      - {x: 399.78088, y: 64.021324, z: 382.52048}
+      - {x: 399.78088, y: 64.021324, z: 382.52048}
+      - {x: 429.09134, y: 67.48707, z: 380.7838}
+      - {x: 450.83762, y: 70.952805, z: 400.10144}
+      - {x: 452.5356, y: 74.41855, z: 428.8641}
+      - {x: 433.57797, y: 77.88429, z: 450.1957}
+      - {x: 405.3631, y: 81.35003, z: 451.855}
+      - {x: 384.4462, y: 84.81577, z: 433.25742}
+      - {x: 382.82553, y: 88.28151, z: 405.5903}
+      - {x: 401.06317, y: 91.74725, z: 385.0881}
+      - {x: 428.18246, y: 95.213, z: 383.50613}
+      - {x: 448.27, y: 98.678734, z: 401.38373}
+      - {x: 449.8133, y: 102.14448, z: 427.95526}
+      - {x: 432.29572, y: 105.610214, z: 447.62808}
+      - {x: 406.27197, y: 109.07596, z: 449.13275}
+      - {x: 387.0138, y: 112.5417, z: 431.9751}
+      - {x: 385.54782, y: 116.00744, z: 406.4992}
+      - {x: 402.34543, y: 119.47318, z: 387.65573}
+      SpringerLedges:
+      - {x: 377.7365, y: 13.497318, z: 338.3789}
+      - {x: 380.47086, y: 25.294638, z: 343.85413}
+      - {x: 383.20517, y: 37.091957, z: 349.3293}
+      - {x: 385.93948, y: 48.889275, z: 354.80453}
+      - {x: 388.67383, y: 60.686592, z: 360.27972}
+      - {x: 391.40814, y: 72.48391, z: 365.7549}
+      - {x: 394.14246, y: 84.28123, z: 371.23013}
+      - {x: 396.87677, y: 96.078545, z: 376.70532}
+      - {x: 399.6111, y: 107.87586, z: 382.18054}
+      - {x: 402.34543, y: 119.67318, z: 387.65573}
+      ClimbPath:
+      - {x: 452.7282, y: 120.36328, z: 423.67877}
+      - {x: 450.4703, y: 121.25338, z: 429.96646}
+      - {x: 447.13272, y: 122.143486, z: 435.6574}
+      - {x: 442.85666, y: 123.033585, z: 440.57144}
+      - {x: 437.8122, y: 123.92368, z: 444.55978}
+      - {x: 432.19183, y: 124.81378, z: 447.5093}
+      - {x: 426.20312, y: 125.70389, z: 449.34567}
+      - {x: 420.06116, y: 126.59399, z: 450.03497}
+      - {x: 413.98065, y: 127.484085, z: 449.58398}
+      - {x: 408.16873, y: 128.37419, z: 448.0387}
+      - {x: 402.81763, y: 129.26428, z: 445.48203}
+      - {x: 398.0985, y: 130.15439, z: 442.0296}
+      - {x: 394.1559, y: 131.04448, z: 437.82513}
+      - {x: 391.10336, y: 131.93459, z: 433.03452}
+      - {x: 389.02032, y: 132.82469, z: 427.8394}
+      - {x: 387.95023, y: 133.71478, z: 422.43036}
+      - {x: 387.89996, y: 134.60489, z: 417}
+      - {x: 388.8407, y: 135.495, z: 411.7361}
+      - {x: 390.70975, y: 136.38509, z: 406.8151}
+      - {x: 393.41394, y: 137.27519, z: 402.39615}
+      - {x: 396.83374, y: 138.16528, z: 398.61603}
+      - {x: 400.82812, y: 139.05539, z: 395.58493}
+      - {x: 405.24036, y: 139.9455, z: 393.38345}
+      - {x: 409.90408, y: 140.83559, z: 392.0604}
+      - {x: 414.64932, y: 141.7257, z: 391.63217}
+      - {x: 419.3089, y: 142.61578, z: 392.0832}
+      - {x: 423.72406, y: 143.50589, z: 393.36734}
+      - {x: 427.75018, y: 144.396, z: 395.41074}
+      - {x: 431.2612, y: 145.28609, z: 398.11514}
+      - {x: 434.15372, y: 146.1762, z: 401.36234}
+      - {x: 436.34995, y: 147.06628, z: 405.019}
+      - {x: 437.79962, y: 147.95639, z: 408.94217}
+      - {x: 438.48087, y: 148.8465, z: 412.98453}
+      - {x: 438.40002, y: 149.73659, z: 417}
+      - {x: 437.59042, y: 150.6267, z: 420.84903}
+      - {x: 436.1102, y: 151.5168, z: 424.40335}
+      - {x: 434.03937, y: 152.40689, z: 427.55032}
+      - {x: 431.4759, y: 153.297, z: 430.19653}
+      - {x: 428.5316, y: 154.18709, z: 432.27032}
+      - {x: 425.32745, y: 155.0772, z: 433.7238}
+      - {x: 421.9887, y: 155.96729, z: 434.53354}
+      - {x: 418.6402, y: 156.85739, z: 434.70065}
+      - {x: 415.40158, y: 157.7475, z: 434.24963}
+      - {x: 412.38312, y: 158.63759, z: 433.22656}
+      - {x: 409.682, y: 159.5277, z: 431.69647}
+      - {x: 407.37912, y: 160.4178, z: 429.7401}
+      - {x: 405.53665, y: 161.30789, z: 427.4502}
+      - {x: 404.19672, y: 162.198, z: 424.92746}
+      - {x: 403.3804, y: 163.08809, z: 422.27628}
+      - {x: 403.088, y: 163.9782, z: 419.6006}
+      - {x: 403.3, y: 164.8683, z: 417}
+      - {x: 403.9785, y: 165.75839, z: 414.56586}
+      - {x: 405.06982, y: 166.6485, z: 412.37823}
+      - {x: 406.50732, y: 167.53859, z: 410.5032}
+      - {x: 408.21448, y: 168.4287, z: 408.99094}
+      - {x: 410.1087, y: 169.3188, z: 407.87442}
+      - {x: 412.10474, y: 170.2089, z: 407.169}
+      - {x: 414.1185, y: 171.099, z: 406.87253}
+      - {x: 416.07025, y: 171.98909, z: 406.96652}
+      - {x: 417.88794, y: 172.8792, z: 407.4175}
+      - {x: 419.50964, y: 173.7693, z: 408.1795}
+      - {x: 420.8858, y: 174.6594, z: 409.1963}
+      - {x: 421.9806, y: 175.5495, z: 410.40463}
+      - {x: 422.77298, y: 176.4396, z: 411.73724}
+      - {x: 423.2566, y: 177.3297, z: 413.12607}
+      - {x: 423.43954, y: 178.2198, z: 414.5053}
+      - {x: 423.34308, y: 179.1099, z: 415.81427}
+      - {x: 423, y: 180, z: 417}
+      LandmarkId: 
+    Secrets:
+    - Id: fluesterhain_wz_1_3
+      Name: 'Riesenbambus: Kronendorf'
+      Hint: "Sp\xE4her erz\xE4hlen von einer Kiste oben am Riesenbambus."
+      Position: {x: 214.22049, y: 46.098824, z: 26.172842}
+      Gate:
+        Keys: 2
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: fluesterhain_aufstieg_gipfel
+      Name: 'Gipfelpfad: Gipfeltruhe'
+      Hint: Auf dem Gipfel liegt angeblich der Proviant des ersten Bezwingers.
+      Position: {x: 417, y: 180.4, z: 417}
+      Gate:
+        Keys: 24
+        FootAlternative: 1
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: fluesterhain_hoehle
+      Name: "Verborgene H\xF6hle"
+      Hint: "Hinter dem H\xFCgel f\xFChrt ein Gang in den Fels."
+      Position: {x: 82, y: 0, z: 102}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: fluesterhain_versteck2
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -28, y: 1.1761643, z: 172}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: fluesterhain_versteck3
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -108, y: 4.873085, z: 272}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: fluesterhain_versteck4
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: -188, y: 3, z: -188}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    - Id: fluesterhain_versteck5
+      Name: Versteck
+      Hint: "Ein Vogelschwarm kreist \xFCber einer Stelle ohne Weg."
+      Position: {x: 212, y: 0, z: -108}
+      Gate:
+        Keys: 0
+        FootAlternative: 0
+        ReturnGate: 0
+      IsLoreSpot: 0
+    Lore:
+    - Id: fluesterhain_lore_szene1
+      Title: Wrack am Ufer
+      Text: "Das Wrack liegt mit dem Kiel nach oben. Im Logbuch steht nur ein Satz: \u201EKurs auf Gro\xDFe Pagode.\u201C Mei kannte den Kapit\xE4n."
+      Figure: Mei
+      Position: {x: 79, y: 3, z: 18}
+    - Id: fluesterhain_lore_szene2
+      Title: Verlassenes Lager
+      Text: "Die Asche ist kalt, die Zelte sind zerrissen. Auf einem Brett steht f\xFCr Mei: \u201EWir sind zum Gro\xDFe Pagode gegangen. Folge dem Rauch.\u201C"
+      Figure: Mei
+      Position: {x: -21, y: 0, z: -302}
+    - Id: fluesterhain_lore_szene3
+      Title: Grab eines Wanderers
+      Text: "Ein Wanderer ruht hier, den Blick zum Gro\xDFe Pagode. Auf dem Stein: \u201EIch wollte nur sehen, wie es von oben aussieht.\u201C"
+      Figure: Mei
+      Position: {x: -81, y: 0, z: 138}
+    - Id: fluesterhain_wz_haupt_lore
+      Title: "Gro\xDFe Pagode"
+      Text: "Neun Ebenen, neun Geister. Die M\xF6nche sagen, die neunte Ebene geh\xF6re niemandem \u2013 nicht einmal ihnen."
+      Figure: Mei
+      Position: {x: 19.903406, y: -3, z: 97.413956}
+    - Id: fluesterhain_wz_1_lore
+      Title: Riesenbambus
+      Text: "Der Bambus w\xE4chst einen Meter am Tag. Die M\xF6nche haben aufgeh\xF6rt, die Pagode h\xF6her zu bauen."
+      Figure: Mei
+      Position: {x: 229.68523, y: 3.030066, z: 20.034279}
+    - Id: fluesterhain_aufstieg_lore
+      Title: Gipfelpfad
+      Text: "Wer den Gipfelpfad bis zum Gipfel geht, sieht die ganze Zone \u2013 und das n\xE4chste Ziel dahinter. Die Ungeduldigen nehmen die Wand."
+      Figure: Mei
+      Position: {x: 402.28088, y: 64.021324, z: 385.02048}
+    Loops:
+    - Id: fluesterhain_schleife1
+      TriggerKind: "Rauchs\xE4ule"
+      Target: fluesterhain_wz_1_3
+      TriggerPos: {x: 214.22049, y: 46.098824, z: 26.172842}
+      TargetPos: {x: 214.22049, y: 46.098824, z: 26.172842}
+      NextGoal: {x: 417, y: 180.4, z: 417}
+    - Id: fluesterhain_schleife2
+      TriggerKind: Lichtstrahl
+      Target: fluesterhain_aufstieg_gipfel
+      TriggerPos: {x: 417, y: 180.4, z: 417}
+      TargetPos: {x: 417, y: 180.4, z: 417}
+      NextGoal: {x: 82, y: 0, z: 102}
+    - Id: fluesterhain_schleife3
+      TriggerKind: Vogelschwarm
+      Target: fluesterhain_hoehle
+      TriggerPos: {x: 82, y: 0, z: 102}
+      TargetPos: {x: 82, y: 0, z: 102}
+      NextGoal: {x: -28, y: 1.1761643, z: 172}
+    - Id: fluesterhain_schleife4
+      TriggerKind: Glocke
+      Target: fluesterhain_versteck2
+      TriggerPos: {x: -28, y: 1.1761643, z: 172}
+      TargetPos: {x: -28, y: 1.1761643, z: 172}
+      NextGoal: {x: -108, y: 4.873085, z: 272}
+    - Id: fluesterhain_schleife5
+      TriggerKind: "Gl\xFChen"
+      Target: fluesterhain_versteck3
+      TriggerPos: {x: -108, y: 4.873085, z: 272}
+      TargetPos: {x: -108, y: 4.873085, z: 272}
+      NextGoal: {x: 19.640015, y: 112.2, z: 79.640015}
+    Shortcuts:
+    - Id: fluesterhain_abk_hang
+      Name: Springer-Wand am Gipfelpfad
+      Key: 2
+      From: {x: 375.0022, y: 1.5, z: 332.90372}
+      To: {x: 402.34543, y: 119.47318, z: 387.65573}
+      FootPath: 1219.2256
+      MountPath: 159.48315
+    Scenes:
+    - Id: fluesterhain_szene1
+      Kind: Wrack
+      LoreId: fluesterhain_lore_szene1
+      Position: {x: 76, y: 3, z: 16}
+    - Id: fluesterhain_szene2
+      Kind: Lager
+      LoreId: fluesterhain_lore_szene2
+      Position: {x: -24, y: 0, z: -304}
+    - Id: fluesterhain_szene3
+      Kind: Grab
+      LoreId: fluesterhain_lore_szene3
+      Position: {x: -84, y: 0, z: 136}
+    FootLinks: []
+    Pads:
+    - {x: 19.640015, y: 79.640015, z: 29.444, w: 2.2}
+    - {x: 215, y: 15, z: 25.5, w: 5.8988214}
+    MainVisibility: 0.986
+    CompactZone: 0

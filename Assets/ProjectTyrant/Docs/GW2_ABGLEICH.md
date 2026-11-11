@@ -123,3 +123,6 @@ Feature → GW2-Verhalten → Umsetzung im Prototyp → Abweichung und Grund.
 | Kampfende nach ~5 s ohne Schaden, Aufsitzen nur außerhalb des Kampfes | 5 s, Aufsitzen im Kampf gesperrt, Schaden unterbricht | – |
 | Wachen auf Straßen, NPCs beleben besiegte Spieler | Patrouillen auf den Wegen der Startzone, Aggro-Übernahme; NPC-Wiederbelebung in Stufe 0–1 | NPC-Wiederbelebung nur in Stufe 0–1 |
 | Gefährlichkeit über Ort/Level, kein Schwierigkeitsregler | Gefahrenstufen 0–5 je Gebiet, Event-Stufen, Gegner-Kurve | Stufen als Daten sichtbar im Banner (GW2: nur Level) |
+| Wahrzeichen als Orientierung (Kathedralen, Pyramiden, Riesenbäume) | 11 Baukasten-Typen, je Zone ein Haupt-Wahrzeichen 60–240 m, sichtbar von 89–100 % der Fläche | Sichtbarkeit wird gemessen und validiert |
+| Reittiere öffnen Wege (Masteries/Mounts als Schlüssel) | 10 Hürden, Tore nach Level-Band, Rückkehr-Tore „komm später wieder“ | Pflichtinhalt immer zu Fuß (Fußwege zu drei bisher gesperrten POIs) |
+| Sprungrätsel mit Truhe, Entdeckungen abseits der Marker | 3-stufige Aufstiege mit Kontrollpunkten, 7 Geheim-Truhen je Zone (täglich), Entdeckungsschleifen | Kontrollpunkte statt Wegmarke nach Sturz |

@@ -105,6 +105,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Zone\PointOfInterest.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UIController.Combat.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Enemies\GroundTelegraph.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\SecretChest.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Mastery\Updraft.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Core\EventDebugCommands.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Zone\HeroChallenge.cs" />
@@ -150,6 +151,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Lauf6\CorruptionField.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\StoryNpc.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Classes\ClassDuelBot.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\WorldComponents.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Map\MapMarker.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Mounts\MountSelectionModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Zone\BiomeZoneContent.Lauf6.cs" />
@@ -160,6 +162,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Player\MovementModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Classes\ClassMechanicHost.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Effects\VfxAreaLayer.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\GateRules.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Combat\ActorVisibility.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Mounts\SkyscaleNestObject.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Audio\MusicDirector.cs" />
@@ -168,6 +171,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\World\BiomeTerrain.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Lauf6\PactVendorGate.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Effects\VfxGalleryLooper.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\LandmarkKit.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\TooltipBuilder.Items.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Audio\GameAudio.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Regions\AchievementModel.cs" />
@@ -194,6 +198,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\World\FlickerLight.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Effects\VfxInstance.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UIController.Defiance.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\ClimbArea.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Core\WorldDebugCommands.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Boats\BoatModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Bounties\BountyModel.cs" />
@@ -203,6 +208,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Player\PlayerVisuals.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\AmbientCritter.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UIController.Mechanic.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\InteriorCulling.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Portal.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Player\OutOfCombatRegen.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Lauf6\SandstormDirector.cs" />
@@ -227,6 +233,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\BotProfile.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Skills\SkillFxDirector.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UiFramework.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Balance\NpcRescue.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\StoryState.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\Windows\MailWindow.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Enemies\DefianceBar.cs" />
@@ -244,7 +251,10 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Skills\SkillExecutor.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Events\EventDirector.World.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Skills\SkillFx.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\PeriodicSound.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\WorldModels.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\WorldModel.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Balance\GuardPatrol.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Events\EventDirector.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\Windows\WorldMapWindow.Continent.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\StoryModel.cs" />
@@ -255,6 +265,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Animation\VillagerRoutine.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\Windows\InventoryWindow.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Combat\Combatant.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\WorldPlanTypes.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Mounts\DuneRunnerModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\EffectBar.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Lauf6\FigurePlaza.cs" />
@@ -264,6 +275,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Core\ZoneDebugCommands.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Audio\GameOptions.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Progression\TraitModifiers.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\LoreMarker.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UIController.Map.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\ZoneAnchors.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Zone\WaypointSafety.cs" />
@@ -279,6 +291,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Mastery\PoisonMist.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Mastery\HiddenChest.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Save\ProfileState.Items.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\Circler.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UiItemSlot.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Inventory\EquipmentModel.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Core\GameManager.World.cs" />
@@ -331,6 +344,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\StoryTextTable.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Inventory\LootSystem.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Flight\FlightRules.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\LandmarkMarker.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Save\PlayerProfile.Mounts.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\UIController.Hearts.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\Windows\HeroWindow.Skills.cs" />
@@ -338,6 +352,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Combat\HitFlash.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Zone\Waypoint.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Map\FogTexture.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\TerrainOps.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Classes\ClassMechanicHost.Elite.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\MinimapHud.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Zone\Heart.cs" />
@@ -348,10 +363,12 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\World\Interaction\InteractionSystem.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\Windows\HeroWindow.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\DangerOverlay.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\HazardSurface.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\ZoneDefinition.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Mounts\MountVendor.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\World\BiomeProfile.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\EmoteRunner.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\WorldValidator.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Core\DebugCommands.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Core\GameManager.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Classes\ClassMechanicHost.Pet.cs" />
@@ -359,6 +376,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Combat\DownedController.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\UI\IconLibrary.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Inventory\InventoryModel.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\WorldAdminCommands.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Classes\ClassDefinition.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Mounts\MountController.Flight.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Core\InputManager.cs" />
@@ -371,6 +389,7 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Mounts\MountDefinition.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\WorldStoryModels.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Flight\FlightMotor.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\World\Landmarks\HazardRules.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Classes\EliteSpecDefinition.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Balance\BalanceBot.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Story\StoryDirector.cs" />

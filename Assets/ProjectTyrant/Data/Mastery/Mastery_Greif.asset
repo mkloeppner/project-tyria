@@ -27,7 +27,7 @@ MonoBehaviour:
     Xp: 12000
     Points: 1
   - Name: Sturzflug-Meister
-    Effect: "Abfangen wandelt 85 % statt 60 % des Sturz-Tempos in H\xF6he; Sturz bis 4,6\xD7 Lauftempo"
+    Effect: "Sturzflug beschleunigt schneller (16 statt 12 m/s\xB2); Sturz-Energie h\xE4lt l\xE4nger (2 % statt 5 % Verlust je Sekunde)"
     Xp: 18000
     Points: 2
   - Name: Luftakrobatik

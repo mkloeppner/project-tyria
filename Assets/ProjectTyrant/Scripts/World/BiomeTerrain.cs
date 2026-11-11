@@ -140,9 +140,13 @@ namespace ProjectTyrant
             return h;
         }
 
+        /// <summary>Welt-Lauf W1: Terrain-Operationen (Massiv, Gipfel, Schlucht, Krater …) – nach den Merkmalen, vor Wegen und Plätzen.</summary>
+        public System.Collections.Generic.List<Landmarks.TerrainOpDef> Ops = new System.Collections.Generic.List<Landmarks.TerrainOpDef>();
+
         public float Height(float x, float z)
         {
             float h = _features.Count > 0 ? ApplyFeatures(x, z, RawHeight(x, z)) : RawHeight(x, z);
+            if (Ops.Count > 0) h = Landmarks.TerrainOps.ApplyAll(Ops, x, z, h, _p.WaterLevel);
             if (_roads.Count > 0) h = ApplyRoads(x, z, h);
             for (int i = 0; i < _flats.Count; i++)
             {
