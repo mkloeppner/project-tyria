@@ -66,7 +66,7 @@ namespace ProjectTyrant.Tests
         {
             var m = Up(FlightParams.Skyscale(0), 0.5f); float start = m.Altitude;
             while (m.Endurance > 0f) m.Step(Dt, new FlightInput { JumpHeld = true });
-            Assert.AreEqual(25f, m.Altitude - start, 0.6f);
+            Assert.AreEqual(20f, m.Altitude - start, 0.6f, "nach Lauf 11: 20 m je Tank");
         }
 
         [Test] public void Skyscale_UpdraftRefills()

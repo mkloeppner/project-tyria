@@ -5,7 +5,7 @@ namespace ProjectTyrant.Flight
     public enum FlyerKind { Griffon, Skyscale }
     public enum FlightState { Ground, Glide, Dive, Climb, Hover, WallCling, Stall, Sink, Dash, Descend }
     /// <summary>Ergebnis des letzten Sprint-Versuchs der Himmelsschuppe (für HUD/Hinweise).</summary>
-    public enum DashResult { None, Started, NoEndurance, Cooldown }
+    public enum DashResult { None, Started, NoEndurance, Cooldown, NoCharge }
 
     /// <summary>Lauf 10: Parameter eines Flug-Reittiers (Tempo relativ zum Laufen, 7 m/s).</summary>
     [System.Serializable]
@@ -28,6 +28,8 @@ namespace ProjectTyrant.Flight
         public float DashFactor, DashTime, DashCost, DashCooldown, DashCarry;
         /// <summary>Himmelsschuppe, C halten: sinken (m/s) und dabei Flugausdauer zurückgewinnen (/s).</summary>
         public float DescendSpeed, DescendRegen;
+        /// <summary>Himmelsschuppe (nach Lauf 11): Flugkraft kostet nur Bewegung (je s), Stillstehen in der Luft ist frei, sinkt aber leicht (m/s).</summary>
+        public float MoveCost, HoverSink;
 
         public static FlightParams Griffon(int mastery)
         {
@@ -44,9 +46,9 @@ namespace ProjectTyrant.Flight
             return new FlightParams
             {
                 Kind = FlyerKind.Skyscale, RunSpeed = 7f, GroundFactor = 1.3f, GlideFactor = 1.4f, DiveFactor = 3f, StallFactor = 0f, GlideRatio = 8f,
-                Endurance = mastery >= 2 ? 150f : 100f, ClimbCost = 20f, HoverCost = mastery >= 2 ? 3f : 5f, ClimbSpeed = 5f, GroundRegen = 25f, ClingRegen = 15f, ClingMax = 20f,
+                Endurance = mastery >= 2 ? 150f : 100f, ClimbCost = 25f, HoverCost = 0f, MoveCost = mastery >= 2 ? 5f : 8f, HoverSink = 0.5f, ClimbSpeed = 5f, GroundRegen = 25f, ClingRegen = 15f, ClingMax = 20f,   // Tank: 20 m Steigen (30 m mit Flugkondition), dann rasten
                 SinkSpeed = 1.5f, DiveSinkFactor = 3f, AirRegen = mastery >= 4, AirRegenRate = 5f,
-                DashFactor = 4.5f, DashTime = 0.45f, DashCost = 12f, DashCooldown = 0.9f, DashCarry = 0.45f,
+                DashFactor = 4.5f, DashTime = 0.3f, DashCost = 6f, DashCooldown = 0.9f, DashCarry = 0.4f,   // Sprint: 1 Ausweich-Balken + 6 Flugkraft, ≈ 9,5 m
                 DescendSpeed = 6f, DescendRegen = 20f,
             };
         }
@@ -60,6 +62,8 @@ namespace ProjectTyrant.Flight
         public bool Dash;
         /// <summary>Himmelsschuppe: C gehalten = sinken und Flugausdauer laden.</summary>
         public bool Descend;
+        /// <summary>Spieler bewegt sich in eine Richtung (WASD/QE) – kostet bei der Himmelsschuppe Flugkraft.</summary>
+        public bool Moving;
         /// <summary>−1 (Nase runter/Bremsen) … +1 (Nase hoch/Vorwärts).</summary>
         public float Pitch, Turn;
         public bool NearWall; public float WallSlope;
@@ -79,6 +83,9 @@ namespace ProjectTyrant.Flight
         public float GroundSpeed;
         public float DashTime, DashCooldown;
         public DashResult LastDash;
+        /// <summary>Himmelsschuppe: Flugkraft war leer – Steigen/Bewegen erst wieder ab <see cref="ExhaustedRecover"/> des Tanks (Boden, Wand, C-Sinken, Aufwind).</summary>
+        public bool Exhausted;
+        public const float ExhaustedRecover = 0.3f;
         public int Charges;
         float _chargeT;
         public float Ceiling = 150f;
@@ -86,6 +93,9 @@ namespace ProjectTyrant.Flight
         public const float Gravity = 9.81f, CeilingPush = 6f;
         /// <summary>Greif: Sturz-Tempo (senkrecht), Flügelschläge in diesem Sturz, Zeit seit dem letzten Schlag/Sturzbeginn.</summary>
         public float DiveSpeed; public int DiveFlaps; float _flapT;
+        /// <summary>Greif: aktueller Sturzwinkel (dreht in ≈ 0,7 s auf 80°) und mitgenommene Vorwärtsfahrt, die im Sturz nur langsam ausläuft – keine Vollbremsung beim Abtauchen.</summary>
+        public float DiveAngleNow; float _carry;
+        public const float DivePitchRate = 110f, DiveCarryDecay = 5f;
         /// <summary>Greif: Sturz-Energie = Höhe (m), die mit S wieder erklommen werden kann; Tempo beim Loslassen und Energie zu diesem Zeitpunkt.</summary>
         public float Energy; float _releaseSpeed, _releaseEnergy;
         /// <summary>Greif: beim Loslassen gemerkte Höchstmarke (Höhe beim Loslassen + zurückgewinnbare Höhe) – S steigt nie darüber.</summary>
@@ -149,12 +159,18 @@ namespace ProjectTyrant.Flight
             if (i.Dive)
             {
                 // V halten: senkrechter Sturz, Tempo wächst bis zur Höchstgeschwindigkeit; Leertaste (frühestens alle 1 s) = Flügelschlag → +1 × Lauf Höchsttempo (4× / 5×)
-                if (State != FlightState.Dive) { State = FlightState.Dive; DiveSpeed = Mathf.Max(Speed, Run); DiveFlaps = 0; _flapT = 0f; }
+                if (State != FlightState.Dive)
+                {
+                    _carry = Forward; DiveAngleNow = Mathf.Clamp(Mathf.Atan2(-Vertical, Mathf.Max(0.1f, Forward)) * Mathf.Rad2Deg, 0f, P.DiveAngle);
+                    State = FlightState.Dive; DiveSpeed = Mathf.Max(Speed, Run); DiveFlaps = 0; _flapT = 0f;
+                }
+                DiveAngleNow = Mathf.MoveTowards(DiveAngleNow, P.DiveAngle, DivePitchRate * dt);
+                _carry = Mathf.MoveTowards(_carry, 0f, DiveCarryDecay * dt);
                 _flapT += dt;
                 if (i.Jump && DiveFlaps < P.DiveFlapMax && _flapT >= P.DiveFlapInterval && Charges > 0) { Charges--; DiveFlaps++; _flapT = 0f; DiveSpeed += Run * 0.5f; }   // Flügelschlag kostet eine Ladung (im Spiel: 1 Ausweich-Balken)
                 DiveSpeed = Mathf.Min(DiveCap, DiveSpeed + P.DiveAccel * dt);
-                float a = P.DiveAngle * Mathf.Deg2Rad;
-                Forward = DiveSpeed * Mathf.Cos(a); Vertical = -DiveSpeed * Mathf.Sin(a);   // steil (80°), nicht ganz senkrecht
+                float a = DiveAngleNow * Mathf.Deg2Rad;
+                Forward = Mathf.Max(DiveSpeed * Mathf.Cos(a), _carry); Vertical = -DiveSpeed * Mathf.Sin(a);   // kippt fließend auf 80°, Vorwärtsfahrt läuft weich aus
                 Energy += -Vertical * dt;   // jeder gestürzte Meter lässt sich später mit S zurückholen
                 return;
             }
@@ -208,7 +224,9 @@ namespace ProjectTyrant.Flight
                 return;
             }
             if (i.InUpdraft) Endurance = P.Endurance;
-            if (P.AirRegen) Endurance = Mathf.Min(P.Endurance, Endurance + P.AirRegenRate * dt);
+            bool still = !i.JumpHeld && !i.Moving && i.Pitch <= 0.1f;
+            if (P.AirRegen && still) Endurance = Mathf.Min(P.Endurance, Endurance + P.AirRegenRate * dt);   // Vertrauensband lädt nur im Stillstand
+            if (Endurance <= 0f) Exhausted = true; else if (Endurance >= P.Endurance * ExhaustedRecover) Exhausted = false;
             // Wandhaften (Beherrschung 1 im Controller geprüft): an ≥ 60° bei gedrückter Leertaste
             if (State == FlightState.WallCling)
             {
@@ -224,8 +242,9 @@ namespace ProjectTyrant.Flight
             if (i.Dash)
             {
                 if (DashTime > 0f || DashCooldown > 0f) LastDash = DashResult.Cooldown;
+                else if (Charges <= 0) LastDash = DashResult.NoCharge;   // 1 Ausweich-Balken je Sprint
                 else if (Endurance < P.DashCost) LastDash = DashResult.NoEndurance;
-                else { Endurance -= P.DashCost; DashTime = P.DashTime; DashCooldown = P.DashCooldown; LastDash = DashResult.Started; }
+                else { Charges--; Endurance -= P.DashCost; DashTime = P.DashTime; DashCooldown = P.DashCooldown; LastDash = DashResult.Started; }
             }
             if (DashTime > 0f)
             {
@@ -241,13 +260,42 @@ namespace ProjectTyrant.Flight
                 Endurance = Mathf.Min(P.Endurance, Endurance + P.DescendRegen * dt);
                 return;
             }
-            if (Endurance <= 0f) { State = FlightState.Sink; Vertical = -P.SinkSpeed; Forward = Mathf.MoveTowards(Forward, Run * 0.5f, 3f * dt); return; }
-            if (i.JumpHeld) { State = FlightState.Climb; Vertical = P.ClimbSpeed; Endurance = Mathf.Max(0f, Endurance - P.ClimbCost * dt); }
-            else if (i.Pitch > 0.1f) { State = FlightState.Glide; Forward = Mathf.MoveTowards(Forward, Run * P.GlideFactor, 6f * dt); Vertical = -Forward / P.GlideRatio; }
-            else { State = FlightState.Hover; Vertical = 0f; Forward = Mathf.MoveTowards(Forward, 0f, 6f * dt); Endurance = Mathf.Max(0f, Endurance - P.HoverCost * dt); }
+            bool moving = i.Moving || i.Pitch > 0.1f;
+            if ((Endurance <= 0f || Exhausted) && (i.JumpHeld || moving)) { State = FlightState.Sink; Vertical = -P.SinkSpeed; Forward = Mathf.MoveTowards(Forward, Run * 0.5f, 3f * dt); return; }
+            if (i.JumpHeld) { State = FlightState.Climb; Vertical = P.ClimbSpeed; Endurance = Mathf.Max(0f, Endurance - P.ClimbCost * dt); if (Endurance <= 0f) Exhausted = true; }
+            else if (i.Pitch > 0.1f) { State = FlightState.Glide; Forward = Mathf.MoveTowards(Forward, Run * P.GlideFactor, 6f * dt); Vertical = -Forward / P.GlideRatio; Endurance = Mathf.Max(0f, Endurance - P.MoveCost * dt); }
+            else
+            {
+                // Schweben: Stillstand kostet nichts (leichtes Sinken), seitliches Treiben/Bewegung kostet Flugkraft
+                State = FlightState.Hover; Vertical = -P.HoverSink; Forward = Mathf.MoveTowards(Forward, 0f, 6f * dt);
+                if (moving) Endurance = Mathf.Max(0f, Endurance - P.MoveCost * dt);
+            }
         }
 
         /// <summary>Sturzangriff des Greifs: Schaden proportional zum Tempo (1 = Höchsttempo).</summary>
         public float EngageFactor => P.Kind == FlyerKind.Griffon && State == FlightState.Dive ? Mathf.Clamp01(DiveSpeed / (Run * (P.DiveFactor + P.DiveFlapStep * P.DiveFlapMax))) : 0f;   // 1 = 5 × Lauf
+    }
+
+    /// <summary>
+    /// Nach Lauf 11: Himmelsschuppe in der Luft – freie Richtung (vor/zurück/seitlich, relativ zur Kamera). Schnelles Abbremsen und Umlenken
+    /// (<see cref="Accel"/> m/s²); fliegt der Spieler weiter in die gleiche Richtung, bleibt mitgebrachter Schwung erhalten und klingt nur langsam ab.
+    /// </summary>
+    public static class SkyscaleSteer
+    {
+        public const float Accel = 28f, KeepDecay = 3f, KeepDot = 0.7f;
+        public static Vector3 Step(Vector3 vel, Vector3 wish, float cruise, float dt)
+        {
+            vel.y = 0f; wish.y = 0f;
+            if (wish.sqrMagnitude > 1f) wish.Normalize();
+            float speed = vel.magnitude;
+            if (wish.sqrMagnitude > 0.01f)
+            {
+                var dir = wish.normalized;
+                float target = cruise * wish.magnitude;
+                if (speed > target && speed > 0.01f && Vector3.Dot(dir, vel / speed) > KeepDot) target = Mathf.Max(target, speed - KeepDecay * dt);   // gleiche Richtung: Schwung bleibt
+                return Vector3.MoveTowards(vel, dir * target, Accel * dt);
+            }
+            return Vector3.MoveTowards(vel, Vector3.zero, Accel * dt);
+        }
     }
 }

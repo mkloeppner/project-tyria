@@ -51,6 +51,23 @@ namespace ProjectTyrant.Tests
             Assert.AreEqual(m.DiveSpeed, UnityEngine.Mathf.Sqrt(m.Forward * m.Forward + m.Vertical * m.Vertical), 0.01f);
         }
 
+        [Test] public void Griffon_DiveStart_KeepsForwardMotion_Continuous()
+        {
+            var m = Air(FlightParams.Griffon(0), 400f); m.Ceiling = 999f;
+            for (int i = 0; i < 50; i++) m.Step(Dt, new FlightInput());   // Gleiten
+            float f0 = m.Forward, prev = f0;
+            for (int i = 0; i < 25; i++)   // 0,5 s Sturz
+            {
+                m.Step(Dt, new FlightInput { Dive = true });
+                Assert.Less(prev - m.Forward, 1f, "kein Sprung in der Vorwärtsfahrt");
+                prev = m.Forward;
+            }
+            Assert.Greater(m.Forward, f0 * 0.7f, "Vorwärtsfahrt bleibt beim Abtauchen erhalten");
+            Assert.Less(m.Vertical, -5f, "taucht trotzdem ab");
+            for (int i = 0; i < 200; i++) m.Step(Dt, new FlightInput { Dive = true });
+            Assert.AreEqual(80f, m.DiveAngleNow, 0.01f, "nach kurzer Zeit steil");
+        }
+
         [Test] public void Griffon_DiveFlaps_Reach4xAnd5x_OncePerSecond()
         {
             var m = Air(FlightParams.Griffon(0), 900f); m.Ceiling = 9999f; int charges = m.Charges;
@@ -191,12 +208,27 @@ namespace ProjectTyrant.Tests
         {
             var m = Air(FlightParams.Skyscale(0), 10f);
             for (int i = 0; i < 50; i++) m.Step(Dt, new FlightInput { JumpHeld = true });   // 1 s steigen
-            Assert.AreEqual(80f, m.Endurance, 0.5f);
+            Assert.AreEqual(75f, m.Endurance, 0.5f, "Steigen 25/s");
             float alt = m.Altitude;
+            // Nach Lauf 11 (Spieler-Wunsch): Stillstehen in der Luft kostet nichts, sinkt aber leicht; jede Bewegung kostet Flugkraft
             for (int i = 0; i < 50; i++) m.Step(Dt, new FlightInput());   // 1 s schweben
-            Assert.AreEqual(75f, m.Endurance, 0.5f); Assert.AreEqual(alt, m.Altitude, 0.01f, "Schweben hält die Höhe");
+            Assert.AreEqual(75f, m.Endurance, 0.5f, "Stillstehen ist frei"); Assert.AreEqual(alt - 0.5f, m.Altitude, 0.05f, "sinkt leicht (0,5 m/s)");
             for (int i = 0; i < 50; i++) m.Step(Dt, new FlightInput { Pitch = 1f });
-            Assert.AreEqual(75f, m.Endurance, 0.5f, "Vorwärtsflug kostet nichts");
+            Assert.AreEqual(67f, m.Endurance, 0.5f, "Vorwärtsflug kostet 8/s");
+            for (int i = 0; i < 50; i++) m.Step(Dt, new FlightInput { Moving = true });
+            Assert.AreEqual(59f, m.Endurance, 0.5f, "seitliches Bewegen kostet ebenso");
+        }
+
+        [Test] public void Skyscale_Empty_HoldingSpace_LosesHeight_EvenWithTrustBond()
+        {
+            var m = Air(FlightParams.Skyscale(4), 60f); m.Ceiling = 999f;   // Vertrauensband lädt in der Luft
+            for (int i = 0; i < 300; i++) m.Step(Dt, new FlightInput { JumpHeld = true });   // Tank leeren (6 s)
+            float alt = m.Altitude;
+            for (int i = 0; i < 250; i++) m.Step(Dt, new FlightInput { JumpHeld = true });   // 5 s weiter Leertaste
+            Assert.Less(m.Altitude, alt - 3f, "leer: verliert Höhe, kein Weitersteigen");
+            Assert.IsTrue(m.Exhausted);
+            for (int i = 0; i < 500; i++) m.Step(Dt, new FlightInput());   // 10 s still: Vertrauensband lädt 50 (> 30 %)
+            Assert.IsFalse(m.Exhausted, "ab 30 % wieder bereit");
         }
 
         [Test] public void Skyscale_EmptySinksGently_NoCrash()

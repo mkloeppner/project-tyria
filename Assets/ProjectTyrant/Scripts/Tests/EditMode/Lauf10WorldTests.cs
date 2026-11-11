@@ -54,8 +54,9 @@ namespace ProjectTyrant.Tests
 
         [Test] public void Reach_SkyscaleTankAndRests()
         {
-            Assert.AreEqual(25f, FlightReach.SkyscaleClimbPerTank(FlightParams.Skyscale(0)), 0.01f);
-            Assert.AreEqual(37.5f, FlightReach.SkyscaleClimbPerTank(FlightParams.Skyscale(2)), 0.01f, "Flugkondition");
+            // Nach Lauf 11 (Spieler-Wunsch „schneller leer, öfter rasten“): 20 m je Tank, 30 m mit Flugkondition
+            Assert.AreEqual(20f, FlightReach.SkyscaleClimbPerTank(FlightParams.Skyscale(0)), 0.01f);
+            Assert.AreEqual(30f, FlightReach.SkyscaleClimbPerTank(FlightParams.Skyscale(2)), 0.01f, "Flugkondition");
             Assert.IsFalse(FlightReach.SkyscaleReaches(0f, 60f, 1, FlightParams.Skyscale(0)));
             Assert.IsTrue(FlightReach.SkyscaleReaches(0f, 60f, 2, FlightParams.Skyscale(0)));
             Assert.IsTrue(FlightReach.BothPaths(100f, 200f, 150f, 60f, 2, 0, 0));

@@ -26,7 +26,7 @@ Kinematisch und deterministisch (fester Zeitschritt in den Tests, keine Rigidbod
 | Auftrieb-Ladungen | 3 (am Boden 1 je 0,5 s) | 5 (Flügelkraft) |
 | Gleiten | 1,6 × Lauf, Gleitverhältnis 6 : 1 (aus 100 m ≈ 600 m, ≈ 54 s) | – |
 | W / S | Nase runter (bis 2 × Lauf) / Nase hoch (bis 1,2 × Lauf) | – |
-| Sturzflug (V halten) | steil (80°), Greif neigt sich mit, beschleunigt mit 12 m/s² bis 3 × Lauf; Leertaste im Sturz (frühestens alle 1 s, kostet 1 Ausweich-Balken): 4 × bzw. 5 × Lauf | Beschleunigung 16 m/s² (Sturzflug-Meister) |
+| Sturzflug (V halten) | kippt in ≈ 0,7 s fließend auf steile 80° (Greif neigt sich mit), die Vorwärtsfahrt läuft dabei weich aus (5 m/s²) statt abrupt zu enden, beschleunigt mit 12 m/s² bis 3 × Lauf; Leertaste im Sturz (frühestens alle 1 s, kostet 1 Ausweich-Balken): 4 × bzw. 5 × Lauf | Beschleunigung 16 m/s² (Sturzflug-Meister) |
 | V loslassen | abfangen, kein automatisches Hochziehen, danach leichtes Sinken (1 m/s); Höchstmarke = Höhe beim Loslassen + Rückgewinn wird gemerkt, S steigt nie darüber; das Sturz-Tempo bleibt als Sturz-Energie (= gestürzte Höhe), Verlust 5 %/s | 2 %/s (Sturzflug-Meister) |
 | S mit Sturz-Energie | steiler Aufschwung (50°), verbraucht Energie 1 m je Meter; Rückgewinn nach erreichtem Sturz-Tempo: 3 × = 90 % (knapp unter der Ausgangshöhe), 4 × = 100 % (genau), 5 × = 110 % (etwas darüber); das Tempo sinkt dabei auf Gleittempo | – |
 | HUD | Tempoleiste über der Fertigkeitenleiste (0–5 × Lauf, Marken 3×/4×/5×, Farbe je Stufe) mit „zurück: … m“ im Sturz bzw. „Reserve: … m“ im Energieflug | – |
@@ -42,7 +42,7 @@ Lenkung: der Greif folgt der Kamera (A/D ± 70°), 1,8 rad/s.
 | Steigen (Leertaste halten) | 20/s, 5 m/s | – |
 | Schweben (loslassen) | 5/s, Höhe bleibt | 3/s (Flugkondition) |
 | Vorwärtsflug (W) | kostenlos, 1,4 × Lauf, 8 : 1 | – |
-| Sprint (V drücken, nur in der Luft) | 4,5 × Lauf waagrecht für 0,45 s, kostet 12 Flugausdauer, 0,9 s Abklingzeit; danach bleibt ~2 × Lauf als Schwung | – |
+| Sprint (V drücken, nur in der Luft) | 4,5 × Lauf waagrecht für 0,3 s (≈ 9,5 m), kostet 1 Ausweich-Balken + 6 Flugkraft, 0,9 s Abklingzeit; danach bleibt ~1,8 × Lauf als Schwung | – |
 | Boden | +25/s | – |
 | Wandhaften | – | an Wänden ≥ 60°: +15/s, höchstens 20 s (Wandhaften) |
 | Aufwinde | wirkungslos | füllen die Ausdauer (Aufwind-Segeln) |
@@ -79,3 +79,11 @@ Fortschritt in `ProfileState.Completed` (`sky_egg`, `sky_stone_0–4`, `sky_hatc
 - Auf dem Greif hat die Ausweich-Leiste 3 Balken (sonst 2); Regeneration unverändert (10/s).
 - Jeder Flügelschlag in der Luft (Leertaste) und jeder Flügelschlag im Sturz kostet 1 Balken; Abheben vom Boden ist frei. Aufwinde und Luftakrobatik füllen Balken auf.
 - Die frühere Anzeige „Auftrieb x/y“ entfällt; die Tempoleiste bleibt.
+
+## Himmelsschuppe: Flugkraft (nach Lauf 11)
+- Eigene Leiste (hellblau) direkt über der Ausweich-Leiste; ersetzt die Textanzeige „Flugausdauer“.
+- Leertaste halten = steigen (25/s → 20 m je Tank, 30 m mit Flugkondition). Bewegung in eine Richtung (W, seitlich, Treiben) kostet 8/s (5/s mit Flugkondition), der Sprint zusätzlich 6.
+- Leer = erschöpft: Leertaste oder Bewegung lässt sie sinken (1,5 m/s), bis wieder 30 % geladen sind (Boden, Wand, C-Sinken, Aufwind; Vertrauensband nur im Stillstand). Gedacht: steigen – auf Klippe/Wand rasten – weiter steigen.
+- Stillstehen in der Luft kostet nichts, die Himmelsschuppe sinkt dabei leicht (0,5 m/s). Leer: Stillstehen geht weiter, Bewegung oder Steigen lässt sie sinken.
+- Am Boden lädt die Flugkraft (25/s), außerdem C-Sinken (20/s), Wandhaften, Aufwinde und Vertrauensband.
+- **Freie Richtung in der Luft:** W/S/A/D (und Q/E) bewegen die Himmelsschuppe relativ zur Kamera vor, zurück und seitlich – sie schaut in Kamerarichtung. Richtungswechsel und Abbremsen sind schnell (28 m/s²: volle Umkehr < 0,8 s, Stopp ≈ 0,35 s); weiter in die gleiche Richtung bleibt mitgebrachter Schwung (Aufsitzen, Abheben, Sprint) erhalten und klingt nur mit 3 m/s² ab. Der Sprint (V) geht in die gedrückte Richtung, sonst nach vorn.

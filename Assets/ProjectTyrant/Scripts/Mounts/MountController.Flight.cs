@@ -16,6 +16,7 @@ namespace ProjectTyrant
         public const float GriffonTurnRate = 1.8f, SkyscaleTurnRate = 3.2f;
         float _dashHintAt;
         Vector3 _seat; float _tilt;
+        Vector3 _skyVel, _dashDir = Vector3.forward;
         public const float MaxDiveTilt = 82f, MaxClimbTilt = 55f;
         /// <summary>C gehört gerade dem Sinken (fliegende Himmelsschuppe) – die Action-Kamera schaltet dann nicht um.</summary>
         public bool UsesDescendKey => Flight != null && Flight.Airborne && Flight.P.Kind == FlyerKind.Skyscale;
@@ -31,7 +32,7 @@ namespace ProjectTyrant
         {
             Flight = FlightRules.IsFlyer(k) ? new FlightMotor(ParamsFor(k)) : null;
             _heading = Flat(transform.forward); _ruleT = 0f; _airT = 0f; _wasBanned = false;
-            if (Flight != null && _pc != null) Flight.GroundSpeed = Flat3(_pc.HorizontalVelocity).magnitude;   // Schwung beim Aufsitzen bleibt
+            if (Flight != null && _pc != null) { Flight.GroundSpeed = Flat3(_pc.HorizontalVelocity).magnitude; _skyVel = Flat3(_pc.HorizontalVelocity); }   // Schwung beim Aufsitzen bleibt
         }
 
         float _pullBanT;
@@ -148,8 +149,18 @@ namespace ProjectTyrant
                 Dive = input.DodgeHeld && f.Airborne && f.P.Kind == FlyerKind.Griffon,     // Greif: V halten = Sturzflug
                 Dash = input.DodgePressed && f.Airborne && f.P.Kind == FlyerKind.Skyscale, // Himmelsschuppe: V = Sprint nach vorn
                 Descend = input.DescendHeld && f.Airborne && f.P.Kind == FlyerKind.Skyscale, // Himmelsschuppe: C halten = sinken + Flugausdauer laden
+                Moving = _pc.LastWish.sqrMagnitude > 0.01f || Mathf.Abs(input.Move.y) > 0.1f,
                 Pitch = input.Move.y, Turn = turn, NearWall = nearWall, WallSlope = slope, InUpdraft = _updraftT > 0f,
             };
+            // Himmelsschuppe in der Luft: freie Richtung relativ zur Kamera (vor/zurück/links/rechts), keine A/D-Drehung
+            bool skyAir = f.P.Kind == FlyerKind.Skyscale && f.Airborne;
+            Vector3 skyWish = Vector3.zero;
+            if (skyAir)
+            {
+                var camR = new Vector3(cam.z, 0f, -cam.x);
+                skyWish = Vector3.ClampMagnitude(cam * input.Move.y + camR * (input.Move.x + input.Strafe), 1f);
+                fi.Moving = skyWish.sqrMagnitude > 0.01f; fi.Pitch = fi.Moving ? 1f : 0f; fi.Turn = 0f;
+            }
             if (f.Banned && !f.Airborne) { fi.Jump = false; fi.JumpHeld = false; }
             if (!f.Airborne)
             {
@@ -159,11 +170,13 @@ namespace ProjectTyrant
                 if (hv.sqrMagnitude > 0.25f) _heading = hv.normalized;
             }
             // Greif: Flügelschläge zahlen mit der Ausweich-Ausdauer (3 Balken auf dem Greif, Regeneration wie zu Fuß)
-            var end = f.P.Kind == FlyerKind.Griffon ? _pc.Dodge.Endurance : null;
+            var end = _pc.Dodge.Endurance;   // Greif: Flügelschläge, Himmelsschuppe: Sprint – je 1 Ausweich-Balken
             if (end != null) f.Charges = end.Charges;
             int chargesBefore = f.Charges;
             bool wasAir = f.Airborne;
+            if (f.P.Kind == FlyerKind.Skyscale && !wasAir) _skyVel = Flat3(_pc.HorizontalVelocity);   // Schwung vom Boden/Aufsitzen mitnehmen
             f.Step(dt, fi);
+            if (f.LastDash == DashResult.Started) _dashDir = skyWish.sqrMagnitude > 0.01f ? skyWish.normalized : cam;
             if (end != null && wasAir)
             {
                 int used = chargesBefore - f.Charges;
@@ -171,7 +184,7 @@ namespace ProjectTyrant
                 else if (used < 0) end.Current = Mathf.Min(end.Max, end.Current - used * end.DodgeCost);   // Aufwind / Luftakrobatik füllt Balken
             }
             if (f.LastDash == DashResult.Started) SkillExecutor.VfxPulse(transform.position, 1.4f, new Color(0.75f, 0.55f, 1f));
-            else if (f.LastDash == DashResult.NoEndurance && Time.time >= _dashHintAt) { _dashHintAt = Time.time + 2f; GameEventBus.Notify("Zu wenig Flugausdauer für den Sprint", new Color(1f, 0.7f, 0.4f)); }
+            else if ((f.LastDash == DashResult.NoEndurance || f.LastDash == DashResult.NoCharge) && Time.time >= _dashHintAt) { _dashHintAt = Time.time + 2f; GameEventBus.Notify(f.LastDash == DashResult.NoCharge ? "Kein Ausweich-Balken für den Sprint" : "Zu wenig Flugkraft für den Sprint", new Color(1f, 0.7f, 0.4f)); }
             if (!wasAir && f.Airborne) { _airT = 0f; SkillExecutor.VfxPulse(transform.position, 1.6f, new Color(0.9f, 0.95f, 1f)); }
 
             if (!f.Airborne)
@@ -183,9 +196,24 @@ namespace ProjectTyrant
             }
             // Modell → Welt
             float rate = f.P.Kind == FlyerKind.Griffon ? GriffonTurnRate : SkyscaleTurnRate;
-            _heading = Vector3.RotateTowards(_heading, target, rate * dt, 0f);
-            var vel = _heading * f.Forward * (SpeedFactor != null ? SpeedFactor() : 1f);
-            if (f.State == FlightState.Hover && _pc.LastWish.sqrMagnitude > 0.01f) vel += Flat(_pc.LastWish).normalized * f.Run * 0.6f;   // seitliches Treiben beim Schweben
+            Vector3 vel;
+            if (f.P.Kind == FlyerKind.Skyscale)
+            {
+                // Sofortige Richtungswechsel: schnelles Abbremsen und Umlenken, gleiche Richtung behält den Schwung; Sprint in Wunsch-/Blickrichtung
+                if (f.State == FlightState.Dash) _skyVel = _dashDir * f.Forward;
+                else
+                {
+                    float cruise = f.State == FlightState.Sink || f.State == FlightState.Descend ? f.Run * 0.6f : f.State == FlightState.WallCling ? 0f : f.Run * f.P.GlideFactor;
+                    _skyVel = SkyscaleSteer.Step(_skyVel, skyWish, cruise, dt);
+                }
+                _heading = Vector3.RotateTowards(_heading, cam, 8f * dt, 0f);   // schaut in Kamerarichtung, fliegt in jede Richtung
+                vel = _skyVel * (SpeedFactor != null ? SpeedFactor() : 1f);
+            }
+            else
+            {
+                _heading = Vector3.RotateTowards(_heading, target, rate * dt, 0f);
+                vel = _heading * f.Forward * (SpeedFactor != null ? SpeedFactor() : 1f);
+            }
             _pc.FlightVelocity = vel;
             _pc.GravityScale = 0f; _pc.MaxFallSpeed = 0f;
             _pc.SetVerticalVelocity(f.Vertical);
@@ -224,7 +252,7 @@ namespace ProjectTyrant
         {
             var f = Flight;
             if (f == null) return null;
-            string s = f.P.Kind == FlyerKind.Griffon ? "" : "Flugausdauer " + Mathf.CeilToInt(f.Endurance) + "/" + Mathf.RoundToInt(f.P.Endurance);   // Greif: Flügelschläge zeigt die Ausweich-Leiste
+            string s = "";   // Greif: Flügelschläge zeigt die Ausweich-Leiste; Himmelsschuppe: Flugkraft-Leiste über der Ausweich-Leiste
             if (f.Airborne) s += "   " + Mathf.RoundToInt(f.Speed / f.Run * 10f) / 10f + "× Lauf · " + Mathf.RoundToInt(f.Altitude) + " m";
             if (FlightDebug.Show) s += "\n" + f.State + " · Decke " + Mathf.RoundToInt(f.Ceiling) + " m" + (f.Banned ? " · Verbot: " + FlightRule.Reason : "") + (FlightDebug.Infinite ? " · unendlich" : "");
             return s;

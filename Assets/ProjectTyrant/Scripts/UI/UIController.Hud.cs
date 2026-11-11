@@ -27,6 +27,7 @@ namespace ProjectTyrant
             }
             _end.Root.GetComponent<RectTransform>().sizeDelta = new Vector2(65f * n, 10f);   // je Balken gleich breit
         }
+        Bar _flightPower;
         Bar _end, _xp, _cast, _downedBar, _targetHp, _eventBar, _channel;
         readonly Slot[] _slots = new Slot[SkillCaster.SlotCount];
         TextMeshProUGUI _swapText, _targetName, _crosshair, _help, _rewards, _evTitle, _evDesc, _evTimer, _evMedal, _downedHint, _comboHint;
@@ -77,6 +78,8 @@ namespace ProjectTyrant
 
             // ---- Ausdauer über dem Kreis, Erfahrung über der Leiste ----
             _end = MakeBar("Endurance", hud, new Vector2(0.5f, 0f), new Vector2(0, 138), new Vector2(130, 10), new Color(1f, 0.82f, 0.25f), 0);
+            _flightPower = MakeBar("FlightPower", hud, new Vector2(0.5f, 0f), new Vector2(0, 150), new Vector2(130, 7), new Color(0.55f, 0.85f, 1f), 0);   // Himmelsschuppe: Flugkraft über der Ausweich-Leiste
+            _flightPower.Root.SetActive(false);
             _endDividers.Add(UiFactory.Image("Divider", _end.Root.transform, new Color(0, 0, 0, 0.8f)));
             _xp = MakeBar("Experience", hud, new Vector2(0.5f, 0f), new Vector2(0, 108), new Vector2(980, 7), new Color(0.75f, 0.45f, 1f), 0);
             _xp.Root.GetComponent<Image>().raycastTarget = true;
@@ -255,6 +258,10 @@ namespace ProjectTyrant
                 _orbLevel.text = realLevel == _lastLevel ? CdStrings[Mathf.Clamp(_lastLevel, 0, 199)] : realLevel + "<size=55%> (" + _lastLevel + ")</size>";   // Herabstufung: „30 (18)“
             }
             if (_pc != null) { SetBar(_end, _pc.Dodge.Endurance.Fraction); LayoutEnduranceDividers(_pc.Dodge.Endurance); }
+            var mcf = MountController.Local != null ? MountController.Local.Flight : null;
+            bool fp = mcf != null && mcf.P.Kind == ProjectTyrant.Flight.FlyerKind.Skyscale && !HudHidden;
+            if (_flightPower.Root.activeSelf != fp) _flightPower.Root.SetActive(fp);
+            if (fp) { SetBar(_flightPower, mcf.P.Endurance > 0f ? mcf.Endurance / mcf.P.Endurance : 0f); _flightPower.Root.GetComponent<RectTransform>().sizeDelta = new Vector2(_end.Root.GetComponent<RectTransform>().sizeDelta.x, 7f); }
             var prof = PlayerProfile.Instance;
             if (prof != null)
             {

@@ -6,7 +6,7 @@ namespace ProjectTyrant.Tests
     /// <summary>Nach Lauf 11 (Spieler-Wunsch): Schwung bleibt beim Abheben/Aufsitzen erhalten; Himmelsschuppe sprintet mit V.</summary>
     public class MountMomentumTests
     {
-        static FlightMotor Sky(float groundSpeed, int rank = 0) { var m = new FlightMotor(FlightParams.Skyscale(rank)); m.GroundSpeed = groundSpeed; return m; }
+        static FlightMotor Sky(float groundSpeed, int rank = 0) { var m = new FlightMotor(FlightParams.Skyscale(rank)); m.GroundSpeed = groundSpeed; m.Charges = 2; return m; }   // 2 Ausweich-Balken
 
         [Test] public void Skyscale_TakeOffWhileRunning_KeepsGroundSpeed()
         {
@@ -35,33 +35,47 @@ namespace ProjectTyrant.Tests
             Assert.AreEqual(slow.Run * 1.6f, slow.Forward, 0.3f, "Gleit-Minimum unverändert");
         }
 
-        [Test] public void Skyscale_Dash_IsFast_CostsEndurance_ThenCarriesMomentum()
+        [Test] public void Skyscale_Dash_Short_CostsBarAndPower_ThenCarriesMomentum()
         {
             var m = Sky(0f); m.Step(0.02f, new FlightInput { Jump = true }); m.Altitude = 40f;
             float e0 = m.Endurance;
             m.Step(0.02f, new FlightInput { Dash = true });
             Assert.AreEqual(DashResult.Started, m.LastDash);
-            Assert.AreEqual(e0 - m.P.DashCost, m.Endurance, 0.2f);
-            Assert.Less(m.P.DashCost, m.P.Endurance * 0.15f, "nur etwas Flugausdauer (< 15 %)");
-            float dist = 0f;
-            for (int i = 0; i < 30 && m.State == FlightState.Dash; i++) { dist += m.Forward * 0.02f; m.Step(0.02f, new FlightInput()); }
-            Assert.Greater(dist, 12f, "Sprint trägt deutlich nach vorn");
+            Assert.AreEqual(1, m.Charges, "1 Ausweich-Balken je Sprint");
+            Assert.AreEqual(e0 - m.P.DashCost, m.Endurance, 0.2f, "dazu etwas Flugkraft");
+            float dist = m.Forward * 0.02f;
+            for (int i = 0; i < 30 && m.State == FlightState.Dash; i++) { m.Step(0.02f, new FlightInput()); if (m.State == FlightState.Dash) dist += m.Forward * 0.02f; }
+            Assert.That(dist, Is.InRange(7f, 11f), "kürzer als vorher (≈ 9,5 m statt 14 m)");
             Assert.AreEqual(FlightState.Hover, m.State, "Sprint endet");
             Assert.Greater(m.Forward, m.Run, "Schwung bleibt nach dem Sprint");
-            float alt = m.Altitude; Assert.AreEqual(40f, alt, 0.5f, "Sprint hält die Höhe");
         }
 
-        [Test] public void Skyscale_Dash_RespectsCooldownAndEndurance()
+        [Test] public void Skyscale_Dash_NeedsBar_RespectsCooldown()
         {
             var m = Sky(0f); m.Step(0.02f, new FlightInput { Jump = true }); m.Altitude = 40f;
             m.Step(0.02f, new FlightInput { Dash = true });
             m.Step(0.02f, new FlightInput { Dash = true });
             Assert.AreEqual(DashResult.Cooldown, m.LastDash, "kein Dauer-Sprint");
             for (int i = 0; i < 60; i++) m.Step(0.02f, new FlightInput());
-            m.Endurance = 5f;
+            m.Charges = 0;
+            m.Step(0.02f, new FlightInput { Dash = true });
+            Assert.AreEqual(DashResult.NoCharge, m.LastDash, "ohne Ausweich-Balken kein Sprint");
+            m.Charges = 1; m.Endurance = 2f;
             m.Step(0.02f, new FlightInput { Dash = true });
             Assert.AreEqual(DashResult.NoEndurance, m.LastDash);
             Assert.AreNotEqual(FlightState.Dash, m.State);
+        }
+
+        [Test] public void Skyscale_StandingStillInAir_IsFree_EmptyPowerOnlyStopsMoving()
+        {
+            var m = Sky(0f); m.Step(0.02f, new FlightInput { Jump = true }); m.Altitude = 40f; m.Endurance = 0f;
+            for (int i = 0; i < 50; i++) m.Step(0.02f, new FlightInput());
+            Assert.AreEqual(FlightState.Hover, m.State, "leer, aber still: schwebt weiter (leichtes Sinken)");
+            Assert.AreEqual(40f - 0.5f, m.Altitude, 0.05f);
+            m.Step(0.02f, new FlightInput { Moving = true });
+            Assert.AreEqual(FlightState.Sink, m.State, "leer und Bewegung: sinkt");
+            m.Step(0.02f, new FlightInput { JumpHeld = true });
+            Assert.AreEqual(FlightState.Sink, m.State, "leer: kein Steigen");
         }
 
         [Test] public void Skyscale_Dash_OnlyInAir()
@@ -95,6 +109,31 @@ namespace ProjectTyrant.Tests
             var g = new FlightMotor(FlightParams.Griffon(0)); g.Step(0.02f, new FlightInput { Jump = true }); g.Altitude = 50f;
             g.Step(0.02f, new FlightInput { Descend = true });
             Assert.AreNotEqual(FlightState.Descend, g.State);
+        }
+        // Himmelsschuppe: freie Richtung in der Luft (nach Lauf 11)
+        static UnityEngine.Vector3 Run(UnityEngine.Vector3 v, UnityEngine.Vector3 wish, float seconds, float cruise = 9.8f)
+        { for (float t = 0f; t < seconds; t += 0.02f) v = SkyscaleSteer.Step(v, wish, cruise, 0.02f); return v; }
+
+        [Test] public void SkyscaleSteer_ReversesFast()
+        {
+            var v = Run(new UnityEngine.Vector3(0, 0, 9.8f), UnityEngine.Vector3.back, 0.75f);
+            Assert.Less(v.z, -9f, "volle Umkehr in unter 0,8 s");
+        }
+
+        [Test] public void SkyscaleSteer_StrafesAndStopsFast()
+        {
+            var side = Run(new UnityEngine.Vector3(0, 0, 9.8f), UnityEngine.Vector3.right, 0.6f);
+            Assert.Greater(side.x, 8f); Assert.AreEqual(0f, side.z, 0.5f, "seitlich ohne Vorwärtsdrift");
+            var stop = Run(new UnityEngine.Vector3(0, 0, 9.8f), UnityEngine.Vector3.zero, 0.4f);
+            Assert.AreEqual(0f, stop.magnitude, 0.01f, "schnelles Abbremsen");
+        }
+
+        [Test] public void SkyscaleSteer_SameDirection_KeepsMomentum()
+        {
+            var v = Run(new UnityEngine.Vector3(0, 0, 15f), UnityEngine.Vector3.forward, 1f);
+            Assert.Greater(v.z, 11.5f, "Schwung vom Aufsitzen/Sprint klingt nur langsam ab");
+            var turned = Run(new UnityEngine.Vector3(0, 0, 15f), UnityEngine.Vector3.left, 1f);
+            Assert.AreEqual(9.8f, turned.magnitude, 0.1f, "beim Abbiegen gilt sofort das Reisetempo");
         }
     }
 }

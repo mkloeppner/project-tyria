@@ -165,7 +165,7 @@ namespace ProjectTyrant.Tests
             Assert.IsFalse(MasteryEffects.SkyscaleWallCling(Ranked(MasteryLine.Himmelsschuppe, 0)));
             Assert.IsTrue(MasteryEffects.SkyscaleWallCling(Ranked(MasteryLine.Himmelsschuppe, 1)));
             Assert.AreEqual(100f, FlightParams.Skyscale(1).Endurance); Assert.AreEqual(150f, FlightParams.Skyscale(2).Endurance, "Flugkondition");
-            Assert.AreEqual(5f, FlightParams.Skyscale(1).HoverCost); Assert.AreEqual(3f, FlightParams.Skyscale(2).HoverCost);
+            Assert.AreEqual(8f, FlightParams.Skyscale(1).MoveCost); Assert.AreEqual(5f, FlightParams.Skyscale(2).MoveCost, "Flugkondition: Bewegung günstiger");   // nach Lauf 11: Schweben frei, Bewegung kostet
             Assert.IsTrue(MasteryEffects.SkyscaleUpdrafts(Ranked(MasteryLine.Himmelsschuppe, 3)));
             Assert.IsTrue(MasteryEffects.TrustBond(Ranked(MasteryLine.Himmelsschuppe, 4))); Assert.IsTrue(FlightParams.Skyscale(4).AirRegen);
         }
@@ -218,17 +218,17 @@ namespace ProjectTyrant.Tests
             Assert.AreEqual(FlightState.Climb, m.State); Assert.AreEqual(0f, m.Forward, 0.01f, "senkrechter Start aus dem Stand");
             m.Altitude = 80f; m.Step(0.02f, new FlightInput { Dive = true });
             Assert.AreNotEqual(FlightState.Dive, m.State, "kein Sturz mehr");
-            float before = m.Endurance;
+            float before = m.Endurance; m.Charges = 2;   // im Spiel: Ausweich-Balken
             m.Step(0.02f, new FlightInput { Dash = true });
             Assert.AreEqual(FlightState.Dash, m.State); Assert.AreEqual(m.Run * 4.5f, m.Forward, 0.01f, "schnell: 4,5 × Lauftempo");
             Assert.AreEqual(0f, m.Vertical, 0.01f, "waagrecht nach vorn");
-            Assert.AreEqual(before - 12f, m.Endurance, 0.2f, "kostet etwas Flugausdauer");
+            Assert.AreEqual(before - 6f, m.Endurance, 0.2f, "kostet etwas Flugkraft"); Assert.AreEqual(1, m.Charges, "und einen Ausweich-Balken");
         }
 
         [Test] public void Skyscale_TrustBondRegensInAir()
         {
             var m = new FlightMotor(FlightParams.Skyscale(4)); m.Step(0.02f, new FlightInput { Jump = true }); m.Altitude = 50f; m.Endurance = 50f;
-            for (int i = 0; i < 50; i++) m.Step(0.02f, new FlightInput { Pitch = 1f });
+            for (int i = 0; i < 50; i++) m.Step(0.02f, new FlightInput());   // Stillstehen (frei) – Vertrauensband lädt 5/s
             Assert.AreEqual(55f, m.Endurance, 0.5f);
         }
 
