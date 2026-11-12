@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Luft/Impact
   Chain: []
   Palette: 2
+  Vfx2: {fileID: 11400000, guid: 338e4ab7f50ad8f4a8f6b9075083c543, type: 2}
+  SimElementV1: 3
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 0
   WeaponStyleOverride: 
   ClassId: 

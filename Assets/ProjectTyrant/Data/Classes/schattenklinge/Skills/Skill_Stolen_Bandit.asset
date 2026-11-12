@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Erde/Impact
   Chain: []
   Palette: 3
+  Vfx2: {fileID: 11400000, guid: 99eb90f87d8292d40b9cbd54c3276d3d, type: 2}
+  SimElementV1: 7
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: schattenklinge

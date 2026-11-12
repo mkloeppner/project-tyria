@@ -44,3 +44,20 @@ Jeder per Admin abgeschlossene Schritt wird gekennzeichnet (`story:K03_S02`, Spr
 | Welt W1: /landmark list | – | Wahrzeichen der Zone mit erreichten Stufen |
 | Welt W1: /hazard show | – | Lichtsäulen über den sechs nächsten Hürden, Liste mit Entfernung und Schlüssel |
 | Welt W1: /climb stage N | 1–3 (leer = 3) | Teleport auf die Stufe des nächsten Aufstiegs |
+
+## Grafik-Lauf G1–G7
+| Befehl | Parameter | Wirkung |
+|---|---|---|
+| Grafik: /cam bookmark | Zone/Name | Kamera auf ein Lesezeichen setzen |
+| Grafik: /cam release | – | Kamera wieder dem Spieler geben |
+| Grafik: /cam capture all | – | Bilder aller Lesezeichen der Zone |
+| Grafik: /gfx show | – | aktuelle Stufe, Features, Wetter, Belichtung |
+| Grafik: /gfx preset | Niedrig, Mittel, Hoch, Ultra | Qualitätsstufe wechseln |
+| Grafik: /gfx feature | Name on/off (fog, outline, godrays, distortion, weather, ambient …) | einzelnes Feature schalten |
+| Grafik: /gfx stress | n (Standard 20) | n Effekte gleichzeitig zum Belastungstest |
+| Grafik: /gfx perf | all oder zone, optional Tag | Leistung je Lesezeichen ungedrosselt → `Temp/PT_QA/G1/perf_<Tag>.csv` |
+| Grafik: /tod | 0–24, pause, speed x | Tageszeit |
+| Grafik: /weather | Zustand oder lock | Wetter setzen/festhalten |
+| Grafik: /vfx play | SkillId | Skill-Effekt am Spieler abspielen |
+| Grafik: /vfx capture | Tag | Showcase: 28 Skills (7 je Klasse), Champions je Biom, Reittiere |
+| Grafik: /vfx loop, /vfx slow | –, Faktor | Effekt-Schleife, Zeitlupe |

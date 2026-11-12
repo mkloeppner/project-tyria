@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_W1_SceneCloth2
-  m_Shader: {fileID: 4800000, guid: ba2b7fac5c5cca841ad5d01c2e50fef7, type: 3}
+  m_Shader: {fileID: 4800000, guid: fdefa6192840a4440a6b3920f4bd4d76, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -36,13 +36,16 @@ Material:
     m_Floats:
     - _HeightGradient: 0.15
     - _MidTone: 0.55
+    - _NightEmission: 0
     - _PaintStrength: 0.25
     - _RimPower: 3
     - _RimStrength: 0.6
     - _ShadowSoftness: 0.12
     - _ShadowThreshold: 0.05
+    - _Translucency: 0.45
     - _UseVertexColor: 1
-    - _Wind: 0
+    - _WeatherMask: 0.3
+    - _Wind: 0.8
     - _WindPivot: 0
     - _WorldUVScale: 0.15
     m_Colors:
@@ -51,5 +54,6 @@ Material:
     - _GradientBottom: {r: 0.75, g: 0.7, b: 0.9, a: 1}
     - _RimColor: {r: 1, g: 0.88, b: 0.65, a: 1}
     - _ShadowColor: {r: 0.5, g: 0.55, b: 0.85, a: 1}
+    - _TransColor: {r: 1, g: 0.9, b: 0.75, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

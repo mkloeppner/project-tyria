@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Erde/Impact
   Chain: []
   Palette: 3
+  Vfx2: {fileID: 11400000, guid: 4b78a33edfb2edb409647d346964decc, type: 2}
+  SimElementV1: 7
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 1
   WeaponStyleOverride: Dagger
   ClassId: elementarweber

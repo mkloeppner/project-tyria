@@ -109,7 +109,7 @@ namespace ProjectTyrant.EditorTools
             {
                 string path = MatDir + "/W1_Particle.mat";
                 _particleMat = AssetDatabase.LoadAssetAtPath<Material>(path);
-                if (_particleMat == null) { var sh = Shader.Find("Universal Render Pipeline/Particles/Unlit"); _particleMat = new Material(sh != null ? sh : Shader.Find("Sprites/Default")); AssetDatabase.CreateAsset(_particleMat, path); }
+                if (_particleMat == null) { _particleMat = new Material(Shader.Find(Visuals.PTShaders.FxParticle)); _particleMat.SetFloat("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha); _particleMat.SetFloat("_Intensity", 1f); AssetDatabase.CreateAsset(_particleMat, path); }
             }
             var go = new GameObject("Particles"); go.transform.SetParent(parent, false); go.transform.localPosition = local;
             var ps = go.AddComponent<ParticleSystem>();
@@ -222,6 +222,12 @@ namespace ProjectTyrant.EditorTools
             var area = root.gameObject.AddComponent<ClimbArea>();
             area.Id = cl.Id; area.Name = cl.Name; area.Checkpoints = allCp; area.Radius = Mathf.Max(80f, new Vector2(cl.Base.x - cl.Peak.x, cl.Base.z - cl.Peak.z).magnitude + 40f);
             foreach (var s in cl.Stages) area.Stages.Add(s.Position);
+            // Pfad (für „Aufstieg verlassen“): Serpentine, Springer-Vorsprünge, Kletterplatten, Kontrollpunkte, Stufen, Basis
+            area.PathPoints = new List<Vector3> { cl.Base };
+            foreach (var q in cl.FootPath) area.PathPoints.Add(q);
+            area.PathPoints.AddRange(cl.SpringerLedges); area.PathPoints.AddRange(cl.ClimbPath); area.PathPoints.AddRange(allCp); area.PathPoints.AddRange(area.Stages);
+            area.PathRadius = 18f;
+            if (!string.IsNullOrEmpty(cl.LandmarkId)) { var lm = plan.Landmarks.Find(x => x.Id == cl.LandmarkId); if (lm != null) { area.PathPoints.Add(lm.Position); area.PathRadius = Mathf.Max(18f, lm.Footprint * 0.6f + 6f); } }
             // Greif-Startturm mit Aufwind an der Basis
             var towerMat = Mat("W1_LaunchTower", new Color(0.62f, 0.56f, 0.48f), 0.3f);
             var tb = cl.LaunchTower; tb.y = Ground(tb.x, tb.z);

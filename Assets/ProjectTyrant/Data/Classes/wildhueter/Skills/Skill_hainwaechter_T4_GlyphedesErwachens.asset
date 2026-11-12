@@ -81,6 +81,10 @@ MonoBehaviour:
     SfxImpact: Mondlicht/Impact
   Chain: []
   Palette: 11
+  Vfx2: {fileID: 11400000, guid: 67cd7aef9c50e3d45977e59e5944f886, type: 2}
+  SimElementV1: 2
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: wildhueter

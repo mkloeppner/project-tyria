@@ -59,10 +59,10 @@ namespace ProjectTyrant.EditorTools
             var flash = AssetDatabase.LoadAssetAtPath<Material>(MatDir + "/M_FlashSolid.mat");
             if (flash == null)
             {
-                flash = new Material(Shader.Find("Universal Render Pipeline/Particles/Unlit"));
+                flash = new Material(Shader.Find(Visuals.PTShaders.FxParticle));
                 AssetDatabase.CreateAsset(flash, MatDir + "/M_FlashSolid.mat");
             }
-            flash.SetFloat("_Surface", 1f); flash.SetFloat("_Blend", 0f);
+            flash.shader = Shader.Find(Visuals.PTShaders.FxParticle);   // Grafik-Lauf G2: kein Unity-Partikel-Shader
             flash.SetOverrideTag("RenderType", "Transparent");
             flash.renderQueue = 3000;
             flash.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);

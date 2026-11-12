@@ -81,6 +81,10 @@ MonoBehaviour:
     SfxImpact: Himmel/Impact
   Chain: []
   Palette: 14
+  Vfx2: {fileID: 11400000, guid: d6aa9357bc9caf74e9992836c330cccd, type: 2}
+  SimElementV1: 3
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: wildhueter

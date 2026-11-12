@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Feuer/Impact
   Chain: []
   Palette: 0
+  Vfx2: {fileID: 11400000, guid: 94dd092585a50bc4db6d4d0fc932d8ab, type: 2}
+  SimElementV1: 1
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Dagger
   ClassId: elementarweber

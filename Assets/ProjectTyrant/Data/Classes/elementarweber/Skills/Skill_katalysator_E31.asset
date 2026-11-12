@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Erde/Impact
   Chain: []
   Palette: 3
+  Vfx2: {fileID: 11400000, guid: 9aedc910c6e51324eab2f88f0ecb7946, type: 2}
+  SimElementV1: 7
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Hammer
   ClassId: elementarweber

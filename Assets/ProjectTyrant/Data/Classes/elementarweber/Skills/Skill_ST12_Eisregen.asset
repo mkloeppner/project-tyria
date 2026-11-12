@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Wasser/Impact
   Chain: []
   Palette: 1
+  Vfx2: {fileID: 11400000, guid: edf3dfb498949b84e8958c56a566f4ad, type: 2}
+  SimElementV1: 0
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Staff
   ClassId: elementarweber

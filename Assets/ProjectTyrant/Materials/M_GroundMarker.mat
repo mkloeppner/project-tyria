@@ -27,6 +27,7 @@ Material:
     m_Floats:
     - _Fill: 0
     - _Pulse: 0.3
+    - _RingBoost: 1
     - _RingWidth: 0.08
     m_Colors:
     - _Color: {r: 1, g: 0.3, b: 0.1, a: 0.6}

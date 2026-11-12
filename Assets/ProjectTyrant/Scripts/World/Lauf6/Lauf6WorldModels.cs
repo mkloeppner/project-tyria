@@ -101,10 +101,12 @@ namespace ProjectTyrant
     public static class ZoneGate
     {
         public const string FortressZone = "tyrannenfeste", FortressFlag = "tyrannenfeste_offen";
+        /// <summary>Grafik-Lauf G1: nur für QA-Messungen und Aufnahmen (/gfx perf, /vfx capture); nicht gespeichert.</summary>
+        public static bool QaBypass;
         public static bool Allowed(string zoneId, StoryState s, out string reason)
         {
             reason = null;
-            if (zoneId != FortressZone) return true;
+            if (zoneId != FortressZone || QaBypass) return true;
             if (s != null && (s.HasFlag(FortressFlag) || s.Chapter >= 10 || s.Finished)) return true;   // Lauf 11: Kapitel 11–26 liegen dahinter
             reason = "Die Tyrannenfeste ist versiegelt – sie öffnet sich mit Kapitel 10 der Persönlichen Geschichte.";
             return false;

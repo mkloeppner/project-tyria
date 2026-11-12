@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Natur/Impact
   Chain: []
   Palette: 4
+  Vfx2: {fileID: 11400000, guid: 8310b8902fd17e146a1be427e2ad71ec, type: 2}
+  SimElementV1: 4
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Sword
   ClassId: wildhueter

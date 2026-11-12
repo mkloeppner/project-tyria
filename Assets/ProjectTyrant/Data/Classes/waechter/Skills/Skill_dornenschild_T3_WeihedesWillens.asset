@@ -80,6 +80,10 @@ MonoBehaviour:
     SfxImpact: Smaragd/Impact
   Chain: []
   Palette: 26
+  Vfx2: {fileID: 11400000, guid: dcf52a6d4eeffde4db034bd72bd4ba89, type: 2}
+  SimElementV1: 4
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: waechter

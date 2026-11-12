@@ -72,6 +72,10 @@ MonoBehaviour:
     SfxImpact: Feuer/Impact
   Chain: []
   Palette: 0
+  Vfx2: {fileID: 11400000, guid: fa7498a7c288e81499095ee91fda18ac, type: 2}
+  SimElementV1: 1
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Sword
   ClassId: 

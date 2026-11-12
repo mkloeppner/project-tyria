@@ -81,6 +81,10 @@ MonoBehaviour:
     SfxImpact: Lava/Impact
   Chain: []
   Palette: 18
+  Vfx2: {fileID: 11400000, guid: 81ee2330e0e8c944e94133d313c1ad31, type: 2}
+  SimElementV1: 1
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: elementarweber

@@ -1,4 +1,4 @@
-# Klang-Analyse (AudioBuilder) – 1086 WAV, Rendern 9,4 s, gesamt 22,8 s
+# Klang-Analyse (AudioBuilder) – 1086 WAV, Rendern 9,2 s, gesamt 22,3 s
 SFX_Feuer_Charge_0	SkillEffect	0.70 s · Spitze -1.0 dBFS · RMS -10.2 dBFS · DC 0.0000 · Naht 0.0000 · Schwerpunkt 2342 Hz
 SFX_Feuer_Charge_1	SkillEffect	0.75 s · Spitze -1.0 dBFS · RMS -10.3 dBFS · DC 0.0000 · Naht 0.0000 · Schwerpunkt 2450 Hz
 SFX_Feuer_Charge_2	SkillEffect	0.76 s · Spitze -1.0 dBFS · RMS -10.3 dBFS · DC 0.0000 · Naht 0.0000 · Schwerpunkt 2270 Hz

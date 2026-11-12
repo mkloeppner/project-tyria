@@ -78,6 +78,10 @@ MonoBehaviour:
     SfxImpact: Schatten/Impact
   Chain: []
   Palette: 5
+  Vfx2: {fileID: 11400000, guid: 7c5258770084c3d4883decafa54982e4, type: 2}
+  SimElementV1: 5
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: schattenklinge

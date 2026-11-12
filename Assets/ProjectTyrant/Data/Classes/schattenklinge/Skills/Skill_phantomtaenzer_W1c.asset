@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Staubgold/Impact
   Chain: []
   Palette: 20
+  Vfx2: {fileID: 11400000, guid: f22abd81f01a50f4ab5d66c8d027a7c6, type: 2}
+  SimElementV1: 7
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Staff
   ClassId: schattenklinge

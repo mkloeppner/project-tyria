@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Wildblut/Impact
   Chain: []
   Palette: 12
+  Vfx2: {fileID: 11400000, guid: f94da4745f70fb445b71724a45e98eb8, type: 2}
+  SimElementV1: 4
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Dagger
   ClassId: wildhueter

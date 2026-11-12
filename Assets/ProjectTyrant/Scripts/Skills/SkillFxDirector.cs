@@ -11,6 +11,7 @@ namespace ProjectTyrant
         public Transform Hand;
         public TrailRenderer[] Trails = new TrailRenderer[0];
         SkillCaster _caster; Combatant _self;
+        bool _castAfterDone;   // Grafik-Lauf G5: Nachwirkung einmal je Wirken
         float _trailOff;
 
         void Awake() { _caster = GetComponent<SkillCaster>(); _self = GetComponent<Combatant>(); SetTrails(false); }
@@ -34,7 +35,9 @@ namespace ProjectTyrant
         void OnStarted(SkillDefinition s)
         {
             var tl = s.Timeline; if (tl == null || !tl.IsBuilt) return;
-            SkillFx.Vfx(tl.VfxCharge, HandPos, transform.rotation, Hand, Intensity);
+            _castAfterDone = false;
+            if (s.Vfx2 != null) Visuals.VfxLayerPlayer.Play(s.Vfx2, Visuals.VfxPhase.Aufladen, HandPos, transform.rotation, Hand, Intensity);   // Grafik-Lauf G5
+            else SkillFx.Vfx(tl.VfxCharge, HandPos, transform.rotation, Hand, Intensity);
             SkillFx.Sfx(tl.SfxCharge, HandPos, VolDb);
             if (s.Delivery == SkillDelivery.Melee || s.Delivery == SkillDelivery.Leap) { SetTrails(true); _trailOff = Time.time + Mathf.Max(0.25f, tl.Total * (_self != null && _self.Effects.Has(EffectType.Quickness) ? EffectRules.QuicknessCastFactor : 1f)); }
         }
@@ -43,9 +46,20 @@ namespace ProjectTyrant
         {
             var tl = s.Timeline; if (tl == null || !tl.IsBuilt) return;
             var pos = s.Delivery == SkillDelivery.Self ? transform.position : HandPos;
-            SkillFx.Vfx(tl.VfxRelease, pos, transform.rotation, null, Intensity);
+            if (s.Vfx2 != null)
+            {
+                Visuals.VfxLayerPlayer.Play(s.Vfx2, Visuals.VfxPhase.Auswurf, pos, transform.rotation, null, Intensity);
+                // Flug: Projektile tragen ihre Flug-Komposition selbst (Projectile.cs); sonst Weg/Strahl/Säule am Ziel bzw. am Wirker
+                if (s.Delivery != SkillDelivery.Projectile)
+                {
+                    var fp = s.Delivery == SkillDelivery.GroundTarget && _caster != null ? _caster.LastGroundPoint : s.Delivery == SkillDelivery.Self ? transform.position : pos + transform.forward * Mathf.Min(3f, s.Range * 0.5f);
+                    Visuals.VfxLayerPlayer.Play(s.Vfx2, Visuals.VfxPhase.Flug, fp, transform.rotation, s.Delivery == SkillDelivery.Self ? transform : null, Intensity);
+                }
+                if (s.Delivery == SkillDelivery.Self && !s.DealsDamage) { Visuals.VfxLayerPlayer.Play(s.Vfx2, Visuals.VfxPhase.Nachwirkung, transform.position, Quaternion.identity, transform, Intensity); _castAfterDone = true; }
+            }
+            else SkillFx.Vfx(tl.VfxRelease, pos, transform.rotation, null, Intensity);
             SkillFx.Sfx(tl.SfxRelease, pos, VolDb);
-            if (!string.IsNullOrEmpty(tl.VfxAfter) && s.Field == ComboFieldType.None) SkillFx.Vfx(tl.VfxAfter, transform.position, Quaternion.identity, transform, Intensity);
+            if (s.Vfx2 == null && !string.IsNullOrEmpty(tl.VfxAfter) && s.Field == ComboFieldType.None) SkillFx.Vfx(tl.VfxAfter, transform.position, Quaternion.identity, transform, Intensity);
             // kurzer Boden-Kreis beim Wirken von Flächen-Skills (Reichweite/Radius lesbar)
             if (s.Delivery == SkillDelivery.GroundTarget || (s.Delivery == SkillDelivery.Self && s.DealsDamage && s.Radius >= 2.5f))
                 FlashCircle(s.Delivery == SkillDelivery.GroundTarget && _caster != null ? _caster.LastGroundPoint : transform.position, s.Radius, SkillFx.PaletteColor(s.Palette));
@@ -72,7 +86,12 @@ namespace ProjectTyrant
         {
             if (d.Source != _self || d.Skill == null || d.IsCondition || d.Evaded) return;
             var tl = d.Skill.Timeline; if (tl == null || !tl.IsBuilt) return;
-            SkillFx.Vfx(tl.VfxImpact, d.Point, Quaternion.identity, null, Intensity);
+            if (d.Skill.Vfx2 != null)
+            {
+                Visuals.VfxLayerPlayer.Play(d.Skill.Vfx2, Visuals.VfxPhase.Einschlag, d.Point, Quaternion.identity, null, Intensity);
+                if (!_castAfterDone) { _castAfterDone = true; Visuals.VfxLayerPlayer.Play(d.Skill.Vfx2, Visuals.VfxPhase.Nachwirkung, d.Point, Quaternion.identity, null, Intensity); }
+            }
+            else SkillFx.Vfx(tl.VfxImpact, d.Point, Quaternion.identity, null, Intensity);
             SkillFx.Sfx(tl.SfxImpact, d.Point, VolDb);
         }
 

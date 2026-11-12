@@ -76,6 +76,10 @@ MonoBehaviour:
     SfxImpact: Feuer/Impact
   Chain: []
   Palette: 0
+  Vfx2: {fileID: 11400000, guid: 8c302e4d7af84324984ff1234a79f508, type: 2}
+  SimElementV1: 1
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 1
   WeaponStyleOverride: Scepter
   ClassId: elementarweber

@@ -188,9 +188,10 @@ namespace ProjectTyrant.EditorTools
         /// <summary>Wasser-Material (Wellen, Ufer-Schaum, Fresnel); Lava über Eigenleuchten.</summary>
         public static Material WaterMat(string name, Color shallow, Color deep, Color emission)
         {
-            var m = FxMat("Water_" + name, "ProjectTyrant/Water", Color.white);
+            var m = FxMat("Water_" + name, Visuals.PTShaders.Water2, Color.white);   // Grafik-Lauf G3: Wasser 2.0
             m.SetColor("_ShallowColor", shallow); m.SetColor("_DeepColor", deep); m.SetColor("_Emission", emission);
-            if (emission.maxColorComponent > 0.5f) { m.SetColor("_FoamColor", new Color(1f, 0.85f, 0.4f)); m.SetFloat("_WaveAmp", 0.03f); m.SetColor("_SkyColor", deep); }
+            if (emission.maxColorComponent > 0.5f) { m.SetColor("_FoamColor", new Color(1f, 0.85f, 0.4f)); m.SetFloat("_WaveAmp", 0.03f); m.SetColor("_SkyColor", deep); m.SetFloat("_CausticStrength", 0f); m.SetFloat("_Reflection", 0.2f); }
+            if (emission.maxColorComponent > 0.5f) MaterialMigrator.ToLava(m); else MaterialMigrator.ApplyFamilyDefaults(m);   // Grafik-Lauf G3: Lavaseen
             EditorUtility.SetDirty(m); return m;
         }
 

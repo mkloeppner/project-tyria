@@ -243,6 +243,7 @@ namespace ProjectTyrant.EditorTools
             var sw = System.Diagnostics.Stopwatch.StartNew();
             System.Action<string> lap = key => { LastTimings[key] = sw.Elapsed.TotalSeconds; sw.Restart(); };
             IconPainter.BuildAll(); lap("Icons");
+            GraphicsBuilder.BuildAll(); lap("Grafik: Kunstprofile, Elemente, Texturen");
             ClipBuilder.BuildAll(); CharacterRigs.PrepareMeshy(); lap("Animation (Clips, Meshy-Skinning)");
             AnimGalleryBuilder.Build(); lap("QA-Szene Animationen");
             VfxKitBuilder.BuildAll(); VfxGalleryBuilder.Build(); lap("VFX-Baukasten + QA-Szene");
@@ -260,6 +261,8 @@ namespace ProjectTyrant.EditorTools
             foreach (var z in LoadWorld().Zones) if (!z.LegacyLayout) ids.Add(z.Id);
             foreach (var id in ids) { BiomeZoneBuilder.Build(Zone(id)); lap("Zone " + id); }
             int balanceErrors = BalanceBuilder.ApplyAll(); lap("Balance B1 (Gefahrenstufen, Spawns, Event-Stufen, Validator)");
+            GraphicsBuilder.BuildBookmarks(); GraphicsBuilder.Library(); MaterialMigrator.MigrateAll(); SkillInventoryV1.Build(); VfxDefinitionBuilder.BuildAll(); lap("Grafik: Kamera-Lesezeichen, Material-Migration, VFX 2.0");
+            ElementSimBuilder.BakeAll(false); SkillInventoryV1.Build(); lap("VFX V1: Simulations-Flipbooks (inkrementell), Skill-Inventar, Schaustücke");
             LoadingImageBuilder.BuildAll(); lap("Ladebilder");
             StoryBuilder.BuildAll(true); lap("Geschichte + Sprache (Lauf 6)");
             BuildCore(); lap("Core");

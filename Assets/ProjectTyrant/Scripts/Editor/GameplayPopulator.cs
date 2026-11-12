@@ -21,6 +21,8 @@ namespace ProjectTyrant.EditorTools
             go.AddComponent<LootSystem>();
             var gm = go.GetComponent<GameManager>();
             gm.Vfx = AssetDatabase.LoadAssetAtPath<VfxLibrary>(PTEditorUtil.DataDir + "/VfxLibrary.asset");
+            gm.GraphicsLib = GraphicsBuilder.Library();   // Grafik-Lauf G1
+            if (go.GetComponent<Visuals.GraphicsDirector>() == null) go.AddComponent<Visuals.GraphicsDirector>();
             gm.Effects = DataBuilder.LoadEffects();
             var profile = go.AddComponent<PlayerProfile>();
             ConfigureProfileImpl(profile);

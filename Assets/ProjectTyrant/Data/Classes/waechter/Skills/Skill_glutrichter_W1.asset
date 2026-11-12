@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Richtglut/Impact
   Chain: []
   Palette: 23
+  Vfx2: {fileID: 11400000, guid: bad831b205df8a844bc2733ec2fb0c01, type: 2}
+  SimElementV1: 1
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 1
   WeaponStyleOverride: Bow
   ClassId: waechter

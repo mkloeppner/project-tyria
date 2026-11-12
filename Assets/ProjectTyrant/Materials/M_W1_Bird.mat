@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_W1_Bird
-  m_Shader: {fileID: 4800000, guid: ba2b7fac5c5cca841ad5d01c2e50fef7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 72300d9c88185864eb7b750352bb3714, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -36,12 +36,14 @@ Material:
     m_Floats:
     - _HeightGradient: 0.15
     - _MidTone: 0.55
+    - _NightEmission: 0
     - _PaintStrength: 0.25
     - _RimPower: 3
     - _RimStrength: 0.6
     - _ShadowSoftness: 0.12
     - _ShadowThreshold: 0.05
     - _UseVertexColor: 1
+    - _WeatherMask: 1
     - _Wind: 0
     - _WindPivot: 0
     - _WorldUVScale: 0.15

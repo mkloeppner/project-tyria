@@ -72,6 +72,10 @@ MonoBehaviour:
     SfxImpact: Blut/Impact
   Chain: []
   Palette: 7
+  Vfx2: {fileID: 11400000, guid: 55ada146780c8f541a7729086f0b5ed7, type: 2}
+  SimElementV1: 8
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 0
   WeaponStyleOverride: 
   ClassId: 

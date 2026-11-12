@@ -64,7 +64,10 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.6.7f1\Editor\Data\BCLExtensions\TargetingPacks\netstandard2.1\analyzers\dotnet\roslyn4.0\cs\System.Text.Json.SourceGeneration.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\GraphicsG1DataTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\GraphicsG1PerfTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf6WorldTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\LivelinessTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\LoadingImageTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\MountMomentumTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\StoryModelTests.cs" />
@@ -73,23 +76,30 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\SkillTraitTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\EliteTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WorldEventTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\GraphicsG1Tests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf11RegionTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\StoryDataTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ElementSimV1Tests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf10WorldTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\BiomeZoneTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\FixRunF1Tests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\DownedTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\EventEngineTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf10MoreTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\GraphicsG4Tests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\FoundationTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\SkillTimelineTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\DodgeTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ZoneTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WaterKitV2Tests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ElementAssignV1Tests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\GraphicsG6Tests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf11FoundationTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf11StoryTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\MapTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\StoryPathTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf10FlightTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\GraphicsG2Tests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WorldW1Tests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\BalanceTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ClassTests.cs" />
@@ -98,12 +108,16 @@
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\AnimationTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\BalanceB1DataTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\BalanceB1Tests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\GraphicsG3Tests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WorldStoryTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\MasteryTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\EventChainTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\GraphicsG5Tests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\CharacterMeshFixTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\MountTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ColliderShapeTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\WaypointSafetyTests.cs" />
+    <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\GpuDistortV1Tests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ComboTableTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\Lauf11SystemsTests.cs" />
     <Compile Include="Assets\ProjectTyrant\Scripts\Tests\EditMode\ItemTests.cs" />
@@ -1308,6 +1322,14 @@
     </Reference>
     <Reference Include="Unity.Animation.Rigging">
       <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.UI">

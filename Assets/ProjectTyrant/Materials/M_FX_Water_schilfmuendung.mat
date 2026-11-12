@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_FX_Water_schilfmuendung
-  m_Shader: {fileID: 4800000, guid: b3d3f4defdb9a6c41b543b2fd8637b23, type: 3}
+  m_Shader: {fileID: 4800000, guid: 1d1d784d80f6e434fab913f2deafd2bc, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -22,11 +22,22 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _CausticTex:
+        m_Texture: {fileID: 2800000, guid: 0d1b4b16f7d80564aa3b1c11fe75b223, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: f03dd80421481444da98a74a4ca3e49e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _CausticStrength: 0.8
     - _DepthRange: 2.5
     - _FoamWidth: 0.45
+    - _Reflection: 0.6
+    - _Refraction: 0.03
     - _WaveAmp: 0.06
     - _WaveScale: 0.35
     m_Colors:

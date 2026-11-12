@@ -197,7 +197,7 @@ namespace ProjectTyrant
             var cover = GameObject.CreatePrimitive(PrimitiveType.Cylinder); cover.transform.SetParent(cart.transform, false);
             cover.transform.localPosition = new Vector3(0, 0.55f, 0); cover.transform.localEulerAngles = new Vector3(90, 0, 0); cover.transform.localScale = new Vector3(0.95f, 0.5f, 0.9f);
             Object.Destroy(cover.GetComponent<Collider>());
-            var mat = new Material(Shader.Find("Universal Render Pipeline/Lit")) { color = new Color(0.55f, 0.38f, 0.22f) };
+            var mat = new Material(Visuals.PTShaders.Lit()) { color = new Color(0.55f, 0.38f, 0.22f) };
             cart.GetComponent<MeshRenderer>().sharedMaterial = mat;
             cover.GetComponent<MeshRenderer>().sharedMaterial = new Material(mat) { color = new Color(0.9f, 0.85f, 0.7f) };
             var col = go.AddComponent<CapsuleCollider>(); col.center = new Vector3(0, 0.9f, 0); col.height = 1.8f; col.radius = 1f;
@@ -257,7 +257,7 @@ namespace ProjectTyrant
                 var go = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 go.name = "Vorratskiste"; go.transform.SetParent(SpawnParent, false);
                 go.transform.position = pos + Vector3.up * 0.35f; go.transform.localScale = Vector3.one * 0.7f; go.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
-                go.GetComponent<MeshRenderer>().sharedMaterial = new Material(Shader.Find("Universal Render Pipeline/Lit")) { color = new Color(0.65f, 0.45f, 0.22f) };
+                go.GetComponent<MeshRenderer>().sharedMaterial = new Material(Visuals.PTShaders.Lit()) { color = new Color(0.65f, 0.45f, 0.22f) };
                 var pick = go.AddComponent<EventPickup>(); pick.Runner = w.R; pick.PromptText = "Aufheben"; pick.Range = 2.5f;
                 w.Props.Add(go);
             }
@@ -267,7 +267,7 @@ namespace ProjectTyrant
             var marker = GameObject.CreatePrimitive(PrimitiveType.Cylinder); marker.transform.SetParent(dp.transform, false);
             marker.transform.localPosition = new Vector3(0, 0.05f, 0); marker.transform.localScale = new Vector3(3f, 0.05f, 3f);
             Object.Destroy(marker.GetComponent<Collider>());
-            marker.GetComponent<MeshRenderer>().sharedMaterial = new Material(Shader.Find("Universal Render Pipeline/Lit")) { color = new Color(1f, 0.7f, 0.2f) };
+            marker.GetComponent<MeshRenderer>().sharedMaterial = new Material(Visuals.PTShaders.Lit()) { color = new Color(1f, 0.7f, 0.2f) };
             var del = dp.AddComponent<EventDeliveryPoint>(); del.Runner = w.R; del.PromptText = "Abliefern"; del.Range = 3f;
             w.Props.Add(dp);
         }

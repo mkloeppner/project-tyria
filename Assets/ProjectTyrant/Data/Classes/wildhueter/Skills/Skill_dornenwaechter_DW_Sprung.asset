@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Dorngift/Impact
   Chain: []
   Palette: 13
+  Vfx2: {fileID: 11400000, guid: 5057ae649921e5e4bb1ba75559799882, type: 2}
+  SimElementV1: 4
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 1
   WeaponStyleOverride: Hammer
   ClassId: wildhueter

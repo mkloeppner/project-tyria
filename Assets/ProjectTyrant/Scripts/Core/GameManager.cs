@@ -49,6 +49,15 @@ namespace ProjectTyrant
         IEnumerator RespawnRoutine()
         {
             if (Story != null && Story.Instance.Active) yield break;   // Lauf 6: in Story-Instanzen startet der Direktor am Kontrollpunkt neu
+            // Aufstieg/Sprungrätsel: nur wer auf dem Pfad besiegt wird, erscheint am letzten Kontrollpunkt (sonst Wegmarken-Wahl)
+            var climb = Landmarks.ClimbArea.ActiveTracking();
+            if (climb != null && climb.TryRespawnPoint(out var checkpoint) && PlayerProfile.Instance != null)
+            {
+                GameEventBus.Notify("Besiegt! Zurück zum Kontrollpunkt …", new Color(1f, 0.7f, 0.4f));
+                yield return new WaitForSeconds(1.5f);
+                if (Player != null && Player.IsDead) PlayerProfile.Instance.RespawnAtCheckpoint(checkpoint, climb.Name);
+                yield break;
+            }
             var ui = UIController.Instance;
             if (ui != null && ui.WorldMap != null && PlayerProfile.Instance != null)
             {

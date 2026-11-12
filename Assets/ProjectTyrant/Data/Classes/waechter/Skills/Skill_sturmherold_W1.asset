@@ -74,6 +74,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2c6eca9ec4001a94999846c256f5fe44, type: 2}
   - {fileID: 11400000, guid: 6a7bfbd5fb1531b438310ba782639bea, type: 2}
   Palette: 25
+  Vfx2: {fileID: 11400000, guid: 653ebd53a5594e84e80bd32cb91d151f, type: 2}
+  SimElementV1: 3
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Hammer
   ClassId: waechter

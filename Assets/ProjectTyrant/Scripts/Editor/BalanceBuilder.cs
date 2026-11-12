@@ -129,6 +129,7 @@ namespace ProjectTyrant.EditorTools
                 bool vet = b.Archetype.Tier >= EnemyTier.Veteran;
                 if (!map.SpawnAllowed(p) || (vet && map.At(p) == 0)) if (Relocate(z, map, b.transform, vet ? 1 : 0)) moved++;
             }
+            added += LivelinessBuilder.AddCamps(z, map, root, brains, rng);   // Belebung: Zieldichte je Gefahrenstufe
             // Startzone: neutrale Tiere je Stufe (80/60/40 %)
             if (map.IsStartZone)
             {

@@ -64,8 +64,8 @@ namespace ProjectTyrant.EditorTools
         {
             EnsureFolder(MatDir);
             string path = MatDir + "/M_" + name + ".mat";
-            var shader = Shader.Find("ProjectTyrant/ToonRim");
-            if (shader == null) shader = Shader.Find("Universal Render Pipeline/Lit");
+            var shader = Shader.Find(MaterialMigrator.FamilyShaderFor("M_" + name));   // Grafik-Lauf G2/G3: Toon-Familie nach Name
+            if (shader == null) shader = Shader.Find(Visuals.PTShaders.ToonLit);
             var m = AssetDatabase.LoadAssetAtPath<Material>(path);
             if (m == null) { m = new Material(shader); AssetDatabase.CreateAsset(m, path); }
             m.shader = shader;
@@ -77,6 +77,7 @@ namespace ProjectTyrant.EditorTools
             m.SetFloat("_RimStrength", rim);
             m.SetColor("_EmissionColor", emission ?? Color.black);
             m.enableInstancing = true;
+            if (shader.name != Visuals.PTShaders.ToonLit) MaterialMigrator.ApplyFamilyDefaults(m);
             EditorUtility.SetDirty(m);
             return m;
         }

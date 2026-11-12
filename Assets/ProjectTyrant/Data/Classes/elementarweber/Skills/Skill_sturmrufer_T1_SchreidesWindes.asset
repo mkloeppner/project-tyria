@@ -78,6 +78,10 @@ MonoBehaviour:
     SfxImpact: Gewitter/Buff
   Chain: []
   Palette: 15
+  Vfx2: {fileID: 11400000, guid: d415b77426087824cbab206a6ef50609, type: 2}
+  SimElementV1: 3
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: elementarweber

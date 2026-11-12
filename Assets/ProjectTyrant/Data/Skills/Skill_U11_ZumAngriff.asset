@@ -78,6 +78,10 @@ MonoBehaviour:
     SfxImpact: Licht/Buff
   Chain: []
   Palette: 6
+  Vfx2: {fileID: 11400000, guid: 9652cbb66348d1144ac373d378bdf157, type: 2}
+  SimElementV1: 2
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 0
   WeaponStyleOverride: 
   ClassId: 

@@ -72,6 +72,10 @@ MonoBehaviour:
     SfxImpact: Smaragd/Buff
   Chain: []
   Palette: 26
+  Vfx2: {fileID: 11400000, guid: f57a27f1d6b60aa4abffc2072f53df39, type: 2}
+  SimElementV1: 4
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Scepter
   ClassId: waechter

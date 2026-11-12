@@ -204,3 +204,132 @@ Befund vor Beginn (Inventur, alle 30 Zonen): keine Wahrzeichen aus einem Baukast
 | W2–W5 Zonen (bestehend, Städte, Kernland, Erweiterungen) | fertig | 2026-11-11 02:39 | Rebuild Everything (≈ 19 min, 30 Zonen + Core/Galerien) mit W1-Bau; „Gebaute Zonen prüfen“ auf den gespeicherten Szenen: **30/30 ohne Fehler**, je Zone 7 Truhen, 6–12 Lore-Tafeln, 1 Aufstieg, 1–3 Wahrzeichen, 0 fehlende Skripte. Fußwege: Insel der Irrlichter (Bohlenweg), Adlerhorst (Felsrampe), Verlassene Esse (Steinbrücke) – Flutfüllung „zu Fuß erreichbar“. 178 Aufnahmen unter `Temp/PT_QA/W1/<Szene>/` (Wahrzeichen vom Spawn, nah, Luftbild ohne Nebel, Aufstieg, Gipfelblick, Hürde) + Galerie + Live |
 | W6 Erfolge, Leistung, Doku | fertig (Meshy offen) | 2026-11-11 02:50 | 4 Erfolge (Wahrzeichen-Sammler 30, Gipfelstürmer 10, Schatzsucher 50, Chronist 60) mit Haken in Wahrzeichen/Aufstieg/Truhe/Tafel. Live (Play Mode, Startzone, Level 80): `/landmark tp haupt` → vor dem Leuchtfeuerturm, Entdeckung + Erfolg 1/30, `/climb stage 3` → Laterne (59 m) mit Aussichts-Prompt, 120 FPS, 0 Exceptions. Wahrzeichen je Material vereint + Impostor-LOD. **766/766 EditMode** (+253 W1), Konsole 0 Fehler / 0 Warnungen (alte „missing script“-Warnung behoben). Doku: LANDMARKS (neu), ADMIN, MOUNTS, MECHANICS, BALANCE, GW2_ABGLEICH, EXPANSIONS, PLACEHOLDERS, README, DECISIONS, KNOWN_ISSUES 76–80. Meshy (Budget 6) nicht genutzt – KNOWN_ISSUES 79 |
 | Fix nach W1: Start auf dem Leuchtturm-Dach | fertig | 2026-11-11 08:40 | Ursache: die Live-Prüfung (`/climb stage 3`) hatte die Spielerposition auf der Dachkappe des Leuchtfeuerturms (63 m) gespeichert, und der Admin-Teleport suchte den Boden von oben (Dach statt Laternen-Galerie). Behoben: Spieler auf die Sonnfurt-Wegmarke zurückgesetzt und gespeichert; Admin-Teleporte setzen exakt; Laternen-Boden der Türme hat eine Luke über dem Treppen-Ende (vorher endete die Wendelrampe unter dem Boden). 8 Zonen mit Türmen neu gebaut, 30/30 Zonen ohne Fehler, 767/767 EditMode (+1 Test „Treppe öffnet sich in die Laterne“). Live: WASD vom Start 16 m in 2 s, `/climb stage 3` landet auf dem Laternen-Boden |
+
+
+## Belebung aller Zonen (Spieler-Wunsch, Start 2026-11-11 11:40)
+Befund: Regions-Zonen 24–27 Gegner auf 1,1–1,3 km² (≈ 20/km², 10 Lager à 3/3/1), Städte Sonnentor/Jadehafen ohne Bürger, Wildnis ohne Bewohner außer Herz-NPCs. Der Dichte-Faktor der Gefahrenstufen (`DangerSettings.Density`) war ungenutzt.
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| Belebung Gegner + Bewohner | fertig | 2026-11-11 12:15 | `PopulationModel` (Zieldichte 50/km² × Dichte-Faktor der Stufe, Lagerabstand ≥ 2 × Aggro + 8 m, Gruppengröße/Veteranen nach Stufe) + `LivelinessBuilder` (Lager im Balance-Pass, Bewohner im Zonen-Bau). Rebuild Everything: +537 Gegner in 216 Lagern über 25 Wildnis-Zonen (z. B. Weiße Stille 24 → 71, Große Leere 24 → 65, Weite von Ahrn 24 → 58), Insel-/Wasserzonen wenig (Dichte gilt je trockener Fläche); +469 Bewohner in 28 Zonen (2 je Wegmarke, 3 je Herz; davon Sonnentor 35 und Jadehafen 19 Bürger). Balance-Validator 0 Verstöße in allen 30 Zonen, W1-Validator 30/30. Live: Weiße Stille 71 Gegner + 22 Bewohner bei 120 FPS, Sonnentor 35 Bürger bei 121 FPS, 0 Exceptions. 773/773 EditMode (+6 `LivelinessTests`), Konsole 0/0 |
+| Kontrollpunkte ohne Auto-Zurücksetzen (Spieler-Wunsch) | fertig | 2026-11-11 20:40 | Absturz setzt nicht mehr zurück; nur Niederlage auf dem Pfad → letzter Kontrollpunkt; 1,5 s am Boden abseits des Pfads (> 18 m von Serpentine/Vorsprüngen/Platten) → Verfolgung verworfen, Niederlage → Wegmarken-Wahl. 776/776 EditMode (+3). Rebuild Everything: 30 Aufstiege mit Pfadpunkten (z. B. Frostkamm 137), Balance 0 Verstöße. Live (Frostkamm): Niederlage auf Stufe 2 → Wiederbelebung am Kontrollpunkt 10, ohne Karte; abseits des Pfads → Kontrollpunkt verworfen, Niederlage → Wegmarken-Wahl (5 Optionen), 0 Exceptions |
+
+
+## Grafik-Lauf G1 – Bestand und Werkzeuge (Start 2026-11-11 21:00)
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| Datenmodelle + reine Modelle | fertig | 2026-11-11 | Namespace `ProjectTyrant.Visuals`: `ZoneArtProfile` (30), `ElementPalette` (10), `CameraBookmark` (184 = 6 × 30 + 4 Klassen), `TextureRecipe` (22), `GraphicsLibrary` am GameManager; reine Modelle `VisualMetrics`, `DangerReadability` (CIE76-ΔE), `TextureForge`, `TimeOfDayModel` (48 min), `WeatherModel` (6–14 min, 30 s Blende, 30 % Partikel in Arenen), `EmissiveSchedule`, `PerformanceGovernor`, `QualityTiers`, `Photosensitive` |
+| TextureForge | fertig | 2026-11-11 | 22 Rezepte → `Generated/Textures` (17 MB), Determinismus-Prüfung 0 Abweichungen, Hashes in den Rezepten |
+| Admin-Gerüst | fertig | 2026-11-11 | /cam bookmark·release·capture all, /gfx show·preset·feature·stress·perf, /tod, /weather, /vfx play·loop·slow·capture; `GfxOverlay`, `GraphicsDirector` (Teil des GameManager-Objekts, kein neues Singleton) |
+| Vorher-Captures | fertig | 2026-11-11 | 180 Zonenbilder (`vorher/<Zone>/<Lesezeichen>.png`) + `metrics_vorher.csv`; 56 Skill-Bilder (28 Skills × 2 Phasen, 7 je Klasse), 7 Reittiere, 9 Champions/Veteranen als Boss-Stellvertreter; Kontaktbögen `sheets/` |
+| Leistung vorher | fertig | 2026-11-11 | `perf_vorher.csv` (180 Lesezeichen, ungedrosselt, Editor, RTX 5080): FPS-Mittel min 166 / Median 336; 1-%-Tief < 45 nur an 2 Lesezeichen (Silberküste Wahrzeichen 6,9 – Nachlade-Ruckler, Sonnfurt Wegmarke 36); Draw Calls Median 414 / max 2004; SetPass max 110; Partikel max 1217. Gedrosselte Messung `perf_vorher_vsync.csv` |
+| Technischer Bestand | fertig | 2026-11-11 | `bestand_vorher.md`: 1 URP-Asset für alle 6 Stufen (Forward, 2 Kaskaden/110 m, keine Renderer-Features), 9 eigene Shader, 1150 Materialien, davon 24 auf Unity-Shadern (22 URP/Lit, 2 Particles/Unlit) |
+| ART_BIBLE | fertig | 2026-11-11 | Stilregeln, Biomtabelle, 3 Befunde je Zone, Querschnittsbefunde Q1–Q5; Gefahr-ΔE vorher: nur 2 von 30 Zonen ≥ 25 |
+| Tests | fertig | 2026-11-11 | 889/889 EditMode (+113 inkl. TestCases: `GraphicsG1Tests`, `GraphicsG1DataTests`, `GraphicsG1PerfTests`), Konsole 0 eigene Fehler/Warnungen |
+
+## Grafik-Lauf G2 – Rendering-Basis (Start 2026-11-11 22:05)
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| URP je Stufe | fertig | 2026-11-11 22:40 | `PT_URP_Niedrig/Mittel/Hoch/Ultra` + Renderer, alle Forward+; Schatten 1/2/4/4 Kaskaden bis 40/80/150/200 m (weich ab Mittel), SSAO ab Mittel (Tiefe+Normalen), Decals (DBuffer, Albedo), Renderskala 0,75/0,85/1/1; Unity-Stufen 0–1/2/3–4/5 zugeordnet, Standard = Hoch |
+| Render-Graph-Passes | fertig | 2026-11-11 22:40 | `PTRenderFeature`: Kontur, Nebel (nach Himmel), Lichtschaft, Verzerrung (Hitze + Schockwellen, Dispersion), Unterwasser, Schaden – je Schalter in /gfx feature und Bedingung (z. B. Unterwasser nur unter der Wasserlinie) |
+| Licht/Himmel/Tageszeit | fertig | 2026-11-11 22:40 | `SceneLighting` (Sonne/Mond, Trilight, Höhennebel, Himmel 2.0 `PT/Sky`, ACES-Volume je Zone, Zeit-Volume für Belichtung, Zonen-Cubemap als Echtzeit-Sonde nur mit Himmel); `GraphicsDirector` je Bild, 48-min-Zyklus; Sandsturm und Dunkelheit (Kristalltiefe) steuern den Nebel weiter |
+| ToonLit 2.0 + Migration | fertig | 2026-11-11 22:40 | `PT_Common.hlsl`, `PT/ToonLit` (Forward+, SSAO, Decals, Cookies, Wind in allen Passes, DepthNormals); `MaterialMigrator`: 861 ToonRim, 22 URP/Lit, 2 URP-Partikel, 30 Himmel umgestellt, 22 Meshy-FBX ohne eingebettete Materialien; Validator 0 Restmaterialien |
+| Telegrafen tiefensicher | fertig | 2026-11-11 22:40 | GroundMarker: ZTest Always mit Verdeckungsprüfung, deckender Ring ohne Nebel; Gefahr-ΔE Kampf (vorher → G2-Test): Sonnfurt 4→22, Sturmbucht 1→27, Weite 11→26, Dämmerwald 4→26, Kristalltiefe 12→30, Glutöde 20→26 |
+| Messung | fertig | 2026-11-11 22:40 | Sonnfurt im Spiel (Hoch): 334–470 FPS; Draw Calls Horizont 3488 (> 2500, 4 Kaskaden) → Leistungs-Pass G7; 908/908 EditMode (+19 `GraphicsG2Tests`), Konsole 0/0 |
+
+## Grafik-Lauf G3 – Shader-Bibliothek 2.0 (Start 2026-11-11 22:42)
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| Toon-Familie | fertig | 2026-11-11 23:00 | `PT_ToonForward.hlsl` (gemeinsamer Forward-Pass mit Haken für Oberfläche und Zusatzlicht) + Vorlage: ToonLit, Terrain (Hang-Fels, Großflächen-Variation), Vegetation (Durchscheinen, Wind, beidseitig), Cloth, Lava (fließende Kruste, HDR-Glut), Crystal (Facetten, Atem, Fresnel), Hazard (Muster je Art, Warnstreifen am Rand); alle mit DepthOnly/ShadowCaster/DepthNormals und Wind |
+| Transparent/UI | fertig | 2026-11-11 23:00 | Water2 (Brechung ab Mittel, Kaustik am Grund, Schaum, Cubemap-Fresnel, Nebel im Shader), Glass, UI/Glow (uGUI-Maske, lichtempfindlich gedeckelt), Sky, PostFx, GroundMarker tiefensicher |
+| Migration | fertig | 2026-11-11 23:00 | Familie nach Materialname: 818 ToonLit, 15 Hazard, 10 Vegetation, 6 Crystal, 6 Glass, 5 Cloth, 1 Terrain; 21 Wasser → Water2, 5 Lavaseen → Lava; Validator: 0 Materialien auf alten/Unity-Shadern |
+| Validator | fertig | 2026-11-11 23:00 | `ShaderLibraryValidator`: CBUFFER, Pflicht-Passes, ≤ 8 multi_compile je Pass, SRP-Batcher 13/13, Varianten 1428 (≤ 4000; Toon-Familie je 200 nach Wegfall von `_ADDITIONAL_LIGHTS` – Forward+ setzt es selbst – und DBuffer nur Albedo) |
+| Tests | fertig | 2026-11-11 23:00 | 925/925 EditMode (+17 `GraphicsG3Tests`), Konsole 0/0; Gefahr-ΔE Kampf G3-Test: Glutöde 27, Nebelmoor 24, Silberküste 27, Kristalltiefe 30, Dämmerwald 30 |
+
+## Grafik-Lauf G4 – Wetter und lebendige Welt (Start 2026-11-11 23:01)
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| Wetter | fertig | 2026-11-12 00:10 | 10 Zustände je Zonenprofil, Wechsel 6–14 min, 30 s Überblendung (Partikel-Betten Regen/Jaderegen/Schnee/Schneesturm/Sandsturm/Asche/Niesel, Licht, Nebel, Wolken, Nässe/Schnee in den Shadern), Blitze bei Gewitter (lichtempfindlich gedeckelt), Deckel 30 % in Sprungrätseln und bei Champions; Nebelmoor-Gewitter im Spiel: 1609 Partikel, 120 FPS (vSync) |
+| Umgebung | fertig | 2026-11-12 00:10 | 150 Umgebungs-Volumen (≥ 5 je Zone, aus Lesezeichen-Blickpunkten und Biom-Effekten), nur in Kameranähe aktiv, Glühwürmchen nachts / Pollen tags, Dämpfung auf 40 % im 15-m-Kampfradius, Leistungs-Regler (45/55 FPS, Hysterese) |
+| Licht | fertig | 2026-11-12 00:10 | Laternen/Fenster/Fackeln mit `_NightEmission` (Migrator nach Name), Blätter-Cookie der Sonne in Wald-Zonen bei direkter Sonne (in G7 wieder abgeschaltet, KNOWN_ISSUES 91) |
+| Tests | fertig | 2026-11-12 00:10 | 936/936 EditMode (+11 `GraphicsG4Tests`, u. a. Gameplay-Neutralität), Konsole 0/0 |
+
+## Grafik-Lauf G5 – VFX 2.0 (Start 2026-11-12 00:12)
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| Datenmodell | fertig | 2026-11-12 | `VfxDefinition` (5 Phasen Vorlauf/Aufladung/Auswurf/Einschlag/Nachwirkung, Ebenen Composite/Licht/Druckwelle/Spur/Kamerastoß, Stufen Standard/Finisher/Elite mit ≥ 3/6/5 Ebenen), `VfxComposer` aus Zeitachse + Palette |
+| Wiedergabe | fertig | 2026-11-12 | `VfxLayerPlayer` (verzögerte Warteschlange, 12 gepoolte Lichter, Lichtkurven), `VfxPlayer.PlayV2`, `SkillFxDirector` spielt je Phase; Druckwellen über den einen Verzerrungspuffer |
+| Daten | fertig | 2026-11-12 | `VfxDefinitionBuilder.BuildAll` (Teil von Rebuild Everything): 466 Skills (317 Standard, 143 Finisher, 6 Elite), Validator 0 Verstöße – kein Skill ohne Effekt |
+| Zustands-Auren | fertig | 2026-11-12 | `EffectAuraFx` (Zustände/Segen, dominanter Effekt je Ziel) |
+| Tests | fertig | 2026-11-12 | +15 `GraphicsG5Tests` (inkl. TestCases), Konsole 0/0; Showcase nachher unter `Temp/PT_QA/G1/nachher_g5` |
+
+## Grafik-Lauf G6 – Signaturen (Start 2026-11-12 00:40)
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| Kampf | fertig | 2026-11-12 | Trotzbalken-Bruch (Druckwelle, Licht, Kamerastoß lichtempfindlich 0), Auflösen beim Tod |
+| Rang | fertig | 2026-11-12 | `RankAuraFx`: Veteran/Champion/Boss mit Ring, Funken, Licht in Rangfarbe |
+| Reise | fertig | 2026-11-12 | Wegmarken-Sprung Abreise/Ankunft in Biomfarbe; Reittier Rufen/Absitzen/Spur/Landung in Reittierfarbe |
+| Gekürzt | – | – | Volks-Signaturen, Zwischensequenz-Profile, UI-VFX (Kürzungsreihenfolge des Auftrags), siehe KNOWN_ISSUES |
+| Tests | fertig | 2026-11-12 | +8 `GraphicsG6Tests` (inkl. TestCases) |
+
+## Grafik-Lauf G7 – Stufen, Leistung, Nachher, Doku (Start 2026-11-12 01:00)
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| Stufen + Optionen | fertig | 2026-11-12 | 4 Stufen, Auto-Erkennung beim Erststart, 8 neue Einträge im Grafik-Reiter (u. a. Lichtempfindlich, Leistungs-Regler), `PTShaderStripper` |
+| Post-Processing-Befund | fertig | 2026-11-12 | `postProcessData` war seit Lauf 1 leer → kein Post lief; zugewiesen, Belichtung je Zone kalibriert (`CalibrateExposure`, `belichtung.txt`), Himmel-Ausgleich |
+| Fehlerbilder | fertig | 2026-11-12 | SSAO-Flecken = Blätter-Cookie (aus), Niedrig ohne Tiefe (copyDepth AfterOpaques), große Regentropfen (`maxParticleSize`), Zeit-Volume überschrieb Zonen-Belichtung |
+| Telegrafen | fertig | 2026-11-12 | Overlay-Pass nach Post; Ringfarbe nach geschätzter Bildschirmhelligkeit des Bodens (`_PT_ExposureMul` + ACES-Näherung): hell → Dunkelrot, dunkel → Gelborange |
+| Nachher-Bilder | fertig | 2026-11-12 | 180 Lesezeichen × Tag/Nacht/Regen (`nachher`, `nachher_nacht`, `nachher_regen`); verbessert 163/180 = 90,6 % |
+| Gefahr-ΔE | teilweise | 2026-11-12 | ≥ 25 in Tag 23/30, Nacht 27/30, Regen 24/30 Kampf-Lesezeichen (Ausreißer KNOWN_ISSUES 86) |
+| Leistung Hoch | fertig | 2026-11-12 | `perf_nachher.csv` 180 Lesezeichen ungedrosselt: FPS min 151 / Median 413, Draw Calls Median 811 / max 2518 (1 Lesezeichen über 2500) |
+| Leistung Niedrig | fertig | 2026-11-12 | `perf_nachher_niedrig.csv` (Werte PERFORMANCE.md) |
+| Doku | fertig | 2026-11-12 | GRAPHICS.md, PERFORMANCE.md neu; VFX, ADMIN, ART_BIBLE, DECISIONS, KNOWN_ISSUES ergänzt |
+| Tests | fertig | 2026-11-12 | 960/960 EditMode (+184 im Grafik-Lauf inkl. TestCases, Basis 776), Konsole 0 eigene Fehler/Warnungen |
+
+## VFX-Lauf V1 – Element-Simulationen, Milestone V1 Bestand und Werkzeuge (Start 2026-11-12 01:05)
+
+Grafik-Lauf G1–G7 war beim Start abgeschlossen (Docs GRAPHICS, PERFORMANCE, VFX, ART_BIBLE vorhanden); nicht vorhanden waren TextureForge-Rezepte als eigener Baukasten, FxMeshKit, MotionMetrics und ClassFxStyle – FxMeshKit und MotionMetrics in V1 nachgeholt.
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| Fluid-Löser | fertig | 2026-11-12 01:15 | `FluidSolver2D` (Stable Fluids, Auftrieb, Schwerkraft, Wirbelstärke, Hindernisse, 4 Emitter-Formen), deterministisch |
+| Flipbook-Baker | fertig | 2026-11-12 01:30 | 4 Atlanten je Rezept, Burst/Loop, `SimRecipe` mit Parameter-Hash; 7 Rezepte, 22,8 MB; zweiter Lauf „0 gebacken, 7 unverändert“; Hash zweier Läufe identisch für alle 7 |
+| Generatoren | fertig | 2026-11-12 01:15 | SDF (7 Formen), Kaustik (nahtlos), Blitz (Verzweigung, Zittern), FxMeshKit 2.0 (13 Formen), MotionMetrics |
+| GPU-Partikel | fertig | 2026-11-12 01:35 | Compute `PT_GpuParticles` (Emit/Update, Tiefen-Kollision), `GpuParticleSystem` mit Shuriken-Fallback, Budgets 100 000 / 200 000 |
+| Verzerrungs-Puffer | fertig | 2026-11-12 01:35 | `PTDistortionAccumulatePass` + Blit in PT_PostFx Pass 3, Shader `FX/Refract`; Bild `Temp/PT_QA/V1/werkzeuge/verzerrung20.png` |
+| Flipbook-Shader | fertig | 2026-11-12 01:35 | `FX/Flipbook` (Bewegungsvektoren, Normalen-Licht, Emissiv-Kern, Soft-Particles) |
+| Messung | fertig | 2026-11-12 01:40 | 100 000 GPU-Partikel + 20 Verzerrer im Spiel (Hoch, Editor): Bildzeit 2,97 → 3,04 ms |
+| Inventar + Schaustücke | fertig | 2026-11-12 01:17 | 466 Skills, Wasser 10,7 %, Feuer 20,8 %, Brechung 13,1 %, 164 Schaustücke (`inventar.csv`) |
+| Vorher-Aufnahmen | fertig | 2026-11-12 01:32 | 28 Skills × 5 Phasen + 8-Bild-Streifen = 364 Bilder; Bewegung vorher Differenz 0,0103, Kohärenz 0,13 |
+| Befunde | fertig | 2026-11-12 02:40 | VFX.md „Befund V1“ |
+| Docs | fertig | 2026-11-12 02:40 | SIMULATION.md, ELEMENTS.md neu |
+| Tests | fertig | 2026-11-12 01:37 | 1036/1036 EditMode (+76 V1: `ElementSimV1Tests`, `ElementAssignV1Tests`, `GpuDistortV1Tests`), Konsole 0/0 |
+| Offen in V1 | – | – | ClassFxStyle je Klasse, Galerie-Element-Bänke, Admin `/vfx layer|step|sim bake|gpu`; Milestones V2–V7 nicht begonnen (KNOWN_ISSUES 94–99) |
+
+## VFX-Lauf V2 – Wasser, erster Durchgang (Start 2026-11-12 08:15)
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| Antworten Auftraggeber | fertig | 2026-11-12 08:20 | Kombo vertiefen (V6), Brechung stark (Material `Brechung_Stark` 24 px / Dispersion 0,6), keine Nutzungsdaten – DECISIONS |
+| Lagen-Arten | fertig | 2026-11-12 09:00 | VFX 2.0 um Sim, FxMesh, Refract, WorldMark, Gpu erweitert; Wirt `ElementFxHost` (gepoolt, ≤ 64 Instanzen, ≤ 16 GPU-Effekte) |
+| Wasser-Baukasten | fertig | 2026-11-12 09:00 | `ElementKits` je Typ (Projektil, Fläche/Heilung, Aura, Nahkampf/Sprung) + Schaustück-Zusatz; neue Flipbooks Spritzer seitlich und Kaustik-Loop; Materialien Wasser-Körper, Pfütze, Nässe, Brechung; GPU-Vorlagen sammeln, Tropfen, Gischt |
+| Welt-Kontakt | teilweise | 2026-11-12 09:00 | Pfütze (trocknet aus), Nässe beim Aufladen, Ringe auf Wasser, Dampf auf Lava (nach Kollider/Material-Name); Vegetation biegt sich noch nicht |
+| Migration | fertig | 2026-11-12 09:05 | 50 Wasser-Skills (20 Schaustücke) mit Element-Lagen, 418 neue Lagen; Validator 0 Verstöße (G5 + V2-Prüfung) |
+| Nachher | fertig | 2026-11-12 09:30 | `Temp/PT_QA/V1/nachher_v2`, Vergleich `sheets/v2_wasser_vergleich.jpg`; Bewegung Heilquelle 0,0041 → 0,0063 (Kohärenz 0,05 → 0,15), Quellsegen 0,0056 → 0,0066 (Kohärenz 0,27 → 0,13) |
+| Tests | fertig | 2026-11-12 09:30 | 1050/1050 EditMode (+14 `WaterKitV2Tests`), Konsole 0/0 |
+
+## Fix: Löcher in Gegnern und Reittieren (Spieler-Meldung, Start 2026-11-12 13:55)
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| Ursache | fertig | 2026-11-12 14:05 | `SkinMesh` (MeshKit-Charaktere): (1) `Basis` spiegelte die Seitenachse ohne die Vorderachse → Röhren/Kegel mit Seitenachse nach links (linke Gliedmaßen, Hörner, Schwanz) nach innen; (2) alle Kästen (Hände, Füße, Zehen, Nase, Schnallen) nach innen; (3) Röhren-Deckel nach innen. Back-Face-Culling verwarf diese Flächen. Befund vorher: 1143 von 1579 Meshes, 9296 nach innen zeigende Teile (ohne Kästen) |
+| Korrektur | fertig | 2026-11-12 14:10 | Basis dreht Vorder- mit Seitenachse, Kasten- und Deckel-Reihenfolge umgekehrt, `AddMesh` dreht bei gespiegelter Übernahme; +8 Tests `CharacterMeshFixTests` (alle Richtungen, Kegel, Kasten gedreht, Ellipsoid, Reparatur-Werkzeug) |
+| Rebuild Everything | fertig | 2026-11-12 14:35 | 1073 s ohne Fehler; danach 991 geskinnte Meshes geprüft: nach innen zeigende Röhren/Kegel/Ellipsoide 0 in allen neu gebauten Meshes (übrige Treffer: gewölbte doppelseitige Umhänge = Fehlalarm der Prüfung, und alte, nirgends mehr verwendete Villager-/Test-Meshes vom 09./10.11. (nicht gelöscht)) |
+| Nachweis | fertig | 2026-11-12 14:45 | `Temp/PT_QA/fix_holes/mounts_nah.jpg` (Raptor, Springer beidseitig geschlossen, Füße und Kamm aus Kästen jetzt sichtbar), `ingame.jpg`; 1058/1058 EditMode, Konsole 0/0 |

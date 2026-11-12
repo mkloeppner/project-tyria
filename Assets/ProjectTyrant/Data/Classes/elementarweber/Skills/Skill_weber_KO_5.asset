@@ -78,6 +78,10 @@ MonoBehaviour:
     SfxImpact: Zwielicht/Impact
   Chain: []
   Palette: 16
+  Vfx2: {fileID: 11400000, guid: 603ba25fa626623478415027038a604c, type: 2}
+  SimElementV1: 8
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 1
   WeaponStyleOverride: Sword
   ClassId: elementarweber

@@ -72,6 +72,10 @@ MonoBehaviour:
     SfxImpact: Natur/Buff
   Chain: []
   Palette: 4
+  Vfx2: {fileID: 11400000, guid: 42624cf19b30e164191435824520d1aa, type: 2}
+  SimElementV1: 4
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Sword
   ClassId: 

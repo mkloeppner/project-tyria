@@ -67,6 +67,35 @@ namespace ProjectTyrant.Landmarks
             return false;
         }
 
+        // ---- Spieler-Wunsch: kein automatisches Zurücksetzen beim Absturz; Kontrollpunkt nur nach Niederlage auf dem Pfad ----
+        /// <summary>Wie lange der Spieler abseits des Pfads am Boden stehen muss, bis die Verfolgung endet (s).</summary>
+        public const float LeaveDelay = 1.5f;
+        float _off;
+        public bool Active => Last >= 0;
+        public void Cancel() { Last = -1; _off = 0f; }
+
+        /// <summary>Pro Frame: abseits des Pfads und am Boden → nach <see cref="LeaveDelay"/> abbrechen. Rückgabe true = gerade abgebrochen.</summary>
+        public bool Track(bool onPath, bool grounded, float dt)
+        {
+            if (!Active) { _off = 0f; return false; }
+            if (onPath || !grounded) { _off = 0f; return false; }
+            _off += dt;
+            if (_off < LeaveDelay) return false;
+            Cancel(); return true;
+        }
+
+        /// <summary>Wiederbelebungs-Punkt nach einer Niederlage auf dem Pfad (letzter Kontrollpunkt), sonst null.</summary>
+        public Vector3? RespawnPoint => Current.HasValue ? Current.Value + Vector3.up * 0.5f : (Vector3?)null;
+
+        /// <summary>Liegt <paramref name="pos"/> waagerecht höchstens <paramref name="radius"/> vom Pfad entfernt?</summary>
+        public static bool NearPath(Vector3 pos, IList<Vector3> path, float radius)
+        {
+            if (path == null) return false;
+            float r2 = radius * radius;
+            for (int i = 0; i < path.Count; i++) { float dx = pos.x - path[i].x, dz = pos.z - path[i].z; if (dx * dx + dz * dz <= r2) return true; }
+            return false;
+        }
+
         /// <summary>Ist der Spieler tiefer gefallen als der letzte Kontrollpunkt minus Spielraum? Dann zurücksetzen (Ziel in <paramref name="reset"/>).</summary>
         public bool ShouldReset(Vector3 pos, out Vector3 reset)
         {

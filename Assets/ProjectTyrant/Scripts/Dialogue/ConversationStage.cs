@@ -29,7 +29,7 @@ namespace ProjectTyrant
             back.GetComponent<Renderer>().sharedMaterial = m;
             var floor = GameObject.CreatePrimitive(PrimitiveType.Plane); Destroy(floor.GetComponent<Collider>()); floor.name = "Floor";
             floor.transform.SetParent(root.transform, false); floor.transform.localPosition = new Vector3(0f, 0f, 0.5f); floor.transform.localScale = new Vector3(2.4f, 1f, 1.2f);
-            if (_floorMat == null) _floorMat = new Material(Shader.Find("Universal Render Pipeline/Lit") ?? Shader.Find("Standard"));
+            if (_floorMat == null) _floorMat = new Material(Visuals.PTShaders.Lit() ?? Shader.Find("Standard"));
             var fm = new Material(_floorMat); var fc = GroundTone(backdrop); var floorCol = fc * 0.62f; floorCol.a = 1f;   // Boden im Farbton des unteren Kulissenrands → keine harte Kante
             if (fm.HasProperty("_BaseColor")) fm.SetColor("_BaseColor", floorCol); else fm.color = floorCol;
             if (fm.HasProperty("_Smoothness")) fm.SetFloat("_Smoothness", 0f);

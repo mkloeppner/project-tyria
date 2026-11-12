@@ -74,6 +74,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d8f8f09efd1785418834d2644d339eb, type: 2}
   - {fileID: 11400000, guid: 927e89f4e149d16458c5d4b8ba65a74c, type: 2}
   Palette: 20
+  Vfx2: {fileID: 11400000, guid: f75b76975045f23408817003da8304d9, type: 2}
+  SimElementV1: 7
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Staff
   ClassId: schattenklinge

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_W1_HazardEdge_SteepWall
-  m_Shader: {fileID: 4800000, guid: ba2b7fac5c5cca841ad5d01c2e50fef7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 060189a6dc88de842b6954dbdd3887fb, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -32,16 +32,26 @@ Material:
         m_Texture: {fileID: 2800000, guid: 9d0253b6d90f3b1459e346f7f45ede19, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _PatternTex:
+        m_Texture: {fileID: 2800000, guid: 9dab53558842a854399a117b981fec1f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Edge: 1
+    - _FlowSpeed: 0.04
     - _HeightGradient: 0.15
+    - _Kind: 4
     - _MidTone: 0.55
+    - _NightEmission: 0
     - _PaintStrength: 0.15
+    - _PatternScale: 0.15
     - _RimPower: 3
     - _RimStrength: 0.6
     - _ShadowSoftness: 0.12
     - _ShadowThreshold: 0.05
     - _UseVertexColor: 1
+    - _WeatherMask: 0
     - _Wind: 0
     - _WindPivot: 0
     - _WorldUVScale: 0.15
@@ -51,5 +61,6 @@ Material:
     - _GradientBottom: {r: 0.75, g: 0.7, b: 0.9, a: 1}
     - _RimColor: {r: 1, g: 0.88, b: 0.65, a: 1}
     - _ShadowColor: {r: 0.5, g: 0.55, b: 0.85, a: 1}
+    - _StripeColor: {r: 0.08, g: 0.06, b: 0.05, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

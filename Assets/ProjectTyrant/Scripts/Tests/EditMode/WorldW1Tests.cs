@@ -343,6 +343,38 @@ namespace ProjectTyrant.Tests
             Assert.IsFalse(new CheckpointTracker(null).Visit(Vector3.zero));
         }
 
+        [Test] public void Checkpoints_NoAutoReset_LeavingPathCancels()
+        {
+            var t = new CheckpointTracker(new List<Vector3> { new Vector3(0, 10, 0), new Vector3(0, 25, 0) });
+            t.Visit(new Vector3(0, 25, 0));
+            Assert.IsTrue(t.Active);
+            Assert.AreEqual(new Vector3(0, 25.5f, 0), t.RespawnPoint.Value);
+            Assert.IsFalse(t.Track(false, false, 5f), "in der Luft (Sturz) kein Abbruch");
+            Assert.IsFalse(t.Track(true, true, 5f), "auf dem Pfad kein Abbruch");
+            Assert.IsFalse(t.Track(false, true, 1f), "kurz abseits: noch aktiv");
+            Assert.IsTrue(t.Track(false, true, 0.6f), "1,5 s abseits am Boden: abgebrochen");
+            Assert.IsFalse(t.Active); Assert.IsNull(t.RespawnPoint);
+            Assert.IsFalse(t.Track(false, true, 9f), "abgebrochen bleibt abgebrochen");
+        }
+
+        [Test] public void Checkpoints_OffPathTimerResetsOnReturn()
+        {
+            var t = new CheckpointTracker(new List<Vector3> { new Vector3(0, 10, 0) });
+            t.Visit(new Vector3(0, 10, 0));
+            t.Track(false, true, 1.2f); t.Track(true, true, 0.1f); t.Track(false, true, 1.2f);
+            Assert.IsTrue(t.Active, "Rückkehr auf den Pfad setzt die Frist zurück");
+            t.Cancel(); Assert.IsFalse(t.Active);
+            Assert.IsTrue(t.Visit(new Vector3(0, 10, 0)), "nach Abbruch neu beginnen");
+        }
+
+        [Test] public void Checkpoints_NearPathIsHorizontal()
+        {
+            var path = new List<Vector3> { new Vector3(0, 100, 0), new Vector3(30, 120, 0) };
+            Assert.IsTrue(CheckpointTracker.NearPath(new Vector3(5, 0, 5), path, 18f), "Absturz unter den Pfad zählt als Pfad");
+            Assert.IsFalse(CheckpointTracker.NearPath(new Vector3(80, 100, 0), path, 18f));
+            Assert.IsFalse(CheckpointTracker.NearPath(Vector3.zero, null, 18f));
+        }
+
         // ---------------- Sichtbarkeit ----------------
         [Test] public void Visibility_FlatGroundSeesTower()
         {

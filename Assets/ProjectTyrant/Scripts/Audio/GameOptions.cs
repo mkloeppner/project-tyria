@@ -8,7 +8,7 @@ namespace ProjectTyrant
     /// (Account-Ebene; mit der Account/Charakter-Trennung in M25 wandert der Wert in den Account-Speicherstand). Jede Änderung wirkt sofort.
     /// </summary>
     [Serializable]
-    public class GameOptions
+    public partial class GameOptions
     {
         // Audio 0..1
         public float Master = 1f, Music = 0.8f, Ambience = 0.8f, Effects = 0.9f, Ui = 0.8f;
@@ -28,6 +28,8 @@ namespace ProjectTyrant
         public int SubtitleSize = 26; public float TextSpeed = 1f; public bool AutoAdvanceDialogue = true; public bool StoryHints = true;
         // Grafik
         public int Quality = -1; public float ViewDistance = 1f; public int EffectDensity; public bool Shadows = true;
+        // Grafik-Lauf G7: Grafik-Tab (Barrierefreiheit und Effekt-Schalter), Erkennung beim ersten Start
+        public bool Photosensitive; public bool GfxFog = true, GfxOutline = true, GfxGodrays = true, GfxDistortion = true, GfxWeather = true, GfxAmbient = true, GfxAutoGovernor = true; public bool GfxDetected;
         // Spiel
         public bool AutoLoot = true; public int CombatTextDensity = 2; public bool HitStop = true, ColorblindTelegraphs; public float UiScale = 1f; public bool MinimapRotate;
 
@@ -84,7 +86,9 @@ namespace ProjectTyrant
             GroundTelegraph.Colorblind = ColorblindTelegraphs; GroundTelegraph.ShowEnemyTelegraphs = EnemyTelegraphs;
             UIController.SubtitleSize = SubtitleSize; DialoguePlayer.TextSpeed = TextSpeed; DialoguePlayer.AutoAdvance = AutoAdvanceDialogue;
             var sd = GameManager.Instance != null ? GameManager.Instance.Story : null; if (sd != null && sd.State != null) sd.State.HintsEnabled = StoryHints;
+            if (Quality < 0 && !GfxDetected) { Quality = Visuals.QualityTiers.UnityLevelOf(Visuals.QualityTiers.Suggest(SystemInfo.graphicsMemorySize, 8f)); GfxDetected = true; }   // G7: Erkennung beim ersten Start
             if (Quality >= 0 && Quality < QualitySettings.names.Length && QualitySettings.GetQualityLevel() != Quality) QualitySettings.SetQualityLevel(Quality, true);
+            ApplyGraphics();
             QualitySettings.shadows = Shadows ? ShadowQuality.All : ShadowQuality.Disable;
             var cam = Camera.main; if (cam != null) cam.farClipPlane = 600f * ViewDistance;
             var rig = ThirdPersonCameraRig.Current; if (rig != null) { rig.Sensitivity = 0.15f * CameraSensitivity; rig.ApplyOptions(this); }

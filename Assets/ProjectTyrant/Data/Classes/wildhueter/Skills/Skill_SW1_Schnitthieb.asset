@@ -74,6 +74,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aec1cc29f4914a14e8c9f664d13f0bb4, type: 2}
   - {fileID: 11400000, guid: d996a46e72f176d499b0308f1eb13396, type: 2}
   Palette: 4
+  Vfx2: {fileID: 11400000, guid: 83ad87c191d140844954a238290ba42d, type: 2}
+  SimElementV1: 4
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Sword
   ClassId: wildhueter

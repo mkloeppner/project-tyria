@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Dorngift/Buff
   Chain: []
   Palette: 13
+  Vfx2: {fileID: 11400000, guid: 993b2ae2cf02aab4280adb2a1dc181b8, type: 2}
+  SimElementV1: 4
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: wildhueter

@@ -134,14 +134,14 @@ namespace ProjectTyrant
             var go = new GameObject(use ? "EventUse" : "EventBuild");
             go.transform.SetParent(SpawnParent, false);
             go.transform.position = pos;
-            var mat = new Material(Shader.Find("Universal Render Pipeline/Lit")) { color = use ? new Color(0.35f, 0.35f, 0.4f) : new Color(0.45f, 0.4f, 0.35f) };
+            var mat = new Material(Visuals.PTShaders.Lit()) { color = use ? new Color(0.35f, 0.35f, 0.4f) : new Color(0.45f, 0.4f, 0.35f) };
             var a = GameObject.CreatePrimitive(use ? PrimitiveType.Cylinder : PrimitiveType.Cube); Object.Destroy(a.GetComponent<Collider>());
             a.transform.SetParent(go.transform, false);
             a.transform.localPosition = new Vector3(0, use ? 1f : 0.6f, 0); a.transform.localScale = use ? new Vector3(0.6f, 1f, 0.6f) : new Vector3(1.6f, 1.2f, 0.4f);
             a.GetComponent<MeshRenderer>().sharedMaterial = mat;
             var ring = GameObject.CreatePrimitive(PrimitiveType.Cylinder); Object.Destroy(ring.GetComponent<Collider>());
             ring.transform.SetParent(go.transform, false); ring.transform.localPosition = new Vector3(0, 0.03f, 0); ring.transform.localScale = new Vector3(2.4f, 0.02f, 2.4f);
-            ring.GetComponent<MeshRenderer>().sharedMaterial = new Material(Shader.Find("Universal Render Pipeline/Lit")) { color = new Color(1f, 0.7f, 0.25f) };
+            ring.GetComponent<MeshRenderer>().sharedMaterial = new Material(Visuals.PTShaders.Lit()) { color = new Color(1f, 0.7f, 0.25f) };
             var site = go.AddComponent<EventSite>();
             site.Runner = w.R; site.Body = a.GetComponent<MeshRenderer>(); site.Use = use;
             site.PromptText = w.R.Def.SiteLabel; site.Range = 2.8f; site.ChannelTime = Mathf.Max(0.5f, w.R.Def.SiteChannel);

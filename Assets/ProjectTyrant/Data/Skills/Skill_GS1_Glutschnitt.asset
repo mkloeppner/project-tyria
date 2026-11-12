@@ -77,6 +77,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0bcdb17b72a390c449accc2ea1bb5c62, type: 2}
   - {fileID: 11400000, guid: 42eb9efea5e6aed48a25daa02e0ed514, type: 2}
   Palette: 10
+  Vfx2: {fileID: 11400000, guid: 5b26a627ee814bc40b1e52476fe3cde9, type: 2}
+  SimElementV1: 1
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 0
   WeaponStyleOverride: 
   ClassId: 

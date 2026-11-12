@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Glut/Impact
   Chain: []
   Palette: 10
+  Vfx2: {fileID: 11400000, guid: 01887ec406e10ca438007b0d6a445212, type: 2}
+  SimElementV1: 1
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 0
   WeaponStyleOverride: 
   ClassId: 

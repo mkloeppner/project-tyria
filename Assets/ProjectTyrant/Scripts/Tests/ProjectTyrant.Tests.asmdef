@@ -6,7 +6,9 @@
         "ProjectTyrant.Editor",
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "Unity.Animation.Rigging"
+        "Unity.Animation.Rigging",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.RenderPipelines.Core.Runtime"
     ],
     "includePlatforms": [
         "Editor"

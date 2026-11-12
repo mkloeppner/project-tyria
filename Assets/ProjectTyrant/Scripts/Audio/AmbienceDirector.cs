@@ -104,7 +104,7 @@ namespace ProjectTyrant
             foreach (var r in Object.FindObjectsByType<MeshRenderer>())
             {
                 if (r == null || r.sharedMaterial == null) continue;
-                if (r.sharedMaterial.shader != null && r.sharedMaterial.shader.name == "ProjectTyrant/Water") _waterBounds.Add(r.bounds);
+                if (r.sharedMaterial.shader != null && (r.sharedMaterial.shader.name == "ProjectTyrant/Water" || r.sharedMaterial.shader.name == Visuals.PTShaders.Water2)) _waterBounds.Add(r.bounds);
                 if (r.name == "Lamp") _torches.Add(r.transform);
             }
         }

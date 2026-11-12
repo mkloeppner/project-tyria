@@ -13,7 +13,7 @@ namespace ProjectTyrant
         public float Vision { get; private set; }
 
         void OnEnable() { _baseFog = RenderSettings.fogDensity; }
-        void OnDisable() { RenderSettings.fogDensity = _baseFog; if (_lantern != null) Destroy(_lantern.gameObject); }
+        void OnDisable() { Visuals.SceneLighting.ExternalFogScale = 1f; RenderSettings.fogDensity = _baseFog; if (_lantern != null) Destroy(_lantern.gameObject); }
 
         void Update()
         {
@@ -23,6 +23,7 @@ namespace ProjectTyrant
             PlayerInLight = DarknessModel.InLight(lantern, crystal);
             Vision = Mathf.Lerp(Vision <= 0f ? DarknessModel.BaseVision : Vision, DarknessModel.Vision(lantern, crystal), 1f - Mathf.Exp(-2f * Time.deltaTime));
             RenderSettings.fogDensity = Mathf.Max(_baseFog * 0.5f, DarknessModel.FogDensity(Vision) * 0.35f);
+            Visuals.SceneLighting.ExternalFogScale = _baseFog > 1e-5f ? RenderSettings.fogDensity / _baseFog : 1f;   // Grafik-Lauf G2: Nebel-Pass folgt der Sichtweite
             if (_lantern == null)
             {
                 var g = new GameObject("PT_PlayerGlow"); _lantern = g.AddComponent<Light>(); _lantern.type = LightType.Point; _lantern.shadows = LightShadows.None; _lantern.color = new Color(1f, 0.85f, 0.6f);

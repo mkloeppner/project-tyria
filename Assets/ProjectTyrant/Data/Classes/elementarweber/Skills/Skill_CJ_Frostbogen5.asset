@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Frost/Impact
   Chain: []
   Palette: 9
+  Vfx2: {fileID: 11400000, guid: 5d26bcf24cb83dc4db0eccb5499e9c8b, type: 2}
+  SimElementV1: 2
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 1
   WeaponStyleOverride: Bow
   ClassId: elementarweber

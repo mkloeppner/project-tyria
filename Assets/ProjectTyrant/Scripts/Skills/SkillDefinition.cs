@@ -79,6 +79,10 @@ namespace ProjectTyrant
         public SkillTimeline Timeline = new SkillTimeline();
         [Tooltip("Auto-Angriffs-Kette: Glied 2 und 3 (Glied 1 = dieser Skill)")] public SkillDefinition[] Chain = new SkillDefinition[0];
         public VfxPalette Palette = VfxPalette.Licht;
+        [Tooltip("Grafik-Lauf G5: VFX 2.0 (Lagen je Phase); leer = Zeitachsen-Kennungen aus Lauf 5")] public Visuals.VfxDefinition Vfx2;
+        [Tooltip("VFX-Lauf V1: Hauptelement der Simulations-Lagen (SkillInventoryV1)")] public Visuals.ElementSim.SimElement SimElementV1 = Visuals.ElementSim.SimElement.Keins;
+        [Tooltip("VFX-Lauf V1: Sekundär-Beteiligung eines Leuchtturm-Elements (nie Umbenennung)")] public Visuals.ElementSim.SimElement SimSecondaryV1 = Visuals.ElementSim.SimElement.Keins;
+        [Tooltip("VFX-Lauf V1: Schaustück – volle Behandlung (≥ 7 Lagen, Simulation, Mesh, Brechung oder Licht, Welt-Nachwirkung)")] public bool Showpiece;
         [Tooltip("Palette fest vorgegeben (sonst aus Feld/Farbe abgeleitet)")] public bool PaletteExplicit;
         [Tooltip("Waffenstil der Animation, wenn Weapon = None (z. B. „Dagger“, „Bow“)")] public string WeaponStyleOverride = "";
 

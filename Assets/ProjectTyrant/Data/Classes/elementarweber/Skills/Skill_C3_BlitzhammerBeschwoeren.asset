@@ -72,6 +72,10 @@ MonoBehaviour:
     SfxImpact: Luft/Buff
   Chain: []
   Palette: 2
+  Vfx2: {fileID: 11400000, guid: 932cb577406a2ec4c989dadddb441865, type: 2}
+  SimElementV1: 3
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: elementarweber

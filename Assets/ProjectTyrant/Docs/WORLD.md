@@ -41,3 +41,6 @@ Giftnebel (Nebelmoor, 3) · Sprungpilze (Nebelmoor 2, Frostkamm 2) · Aufwinde (
 
 ## Routen
 Spawn Sonnfurt → Portal Nordrand (≈ 130 m) → Nebelmoor Torfsteg → Bohlenweg nach Norden (≈ 840 m) → Frostkamm Firnpforte → Pass nach Osten (≈ 650 m) → Glutöde Aschentor. Kontinent-Reise zu entdeckten Wegmarken: 10 + 50 + 6 × Stufe Kupfer (Kommandant −20/−40 %).
+
+## Belebung (Stand 2026-11-11)
+Jede Wildnis-Zone: zusätzliche Gegnerlager bis zur Zieldichte (BALANCE.md „Belebung“), zwei Reisende je Wegmarke und drei Helfer je Herz mit Tagesroutine. Städte Sonnentor und Jadehafen: 40 Bürger zwischen Basar, Plätzen und Herzen (Silbermund hatte schon 44).

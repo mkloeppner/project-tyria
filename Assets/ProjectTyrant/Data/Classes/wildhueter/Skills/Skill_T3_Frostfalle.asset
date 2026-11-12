@@ -78,6 +78,10 @@ MonoBehaviour:
     SfxImpact: Frost/Impact
   Chain: []
   Palette: 9
+  Vfx2: {fileID: 11400000, guid: 2114495aeaa70bf45be6b3e5e85e778c, type: 2}
+  SimElementV1: 2
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: wildhueter

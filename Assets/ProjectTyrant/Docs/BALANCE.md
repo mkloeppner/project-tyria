@@ -29,3 +29,6 @@ Lebenspunkte = erwarteter Spieler-DPS × Ziel-Zeit-bis-Kill; Angriffskoeffizient
 
 ## Welt-Lauf W1 – Belohnungen
 Wahrzeichen entdeckt 250 EP · Lore-Tafel 150 EP + 50 Karma · Geheim-Truhe 200 EP, 10 Silber, 1.500 Karma, beim ersten Fund +1 Beherrschungspunkt (danach täglich erneut) · Stufen-Aussicht/-Einblick wie normale Aussichtspunkte/Einblicke (× `LevelCurves.RewardScale`), Gipfel-Aussicht doppelt. Erfolge: Wahrzeichen-Sammler (30), Gipfelstürmer (10), Schatzsucher (50), Chronist (60).
+
+## Belebung (Dichte je Gefahrenstufe)
+`PopulationModel`: Ziel = 50 feindliche Spawns je km² freier, begehbarer Fläche × Dichte-Faktor der Stufe (Stufe 1: 0,7 · 2: 1,0 · 3: 1,2 · 4: 1,4 · Drachenland: 1,8); Stufe 0 (Startzone) bleibt unverändert. Der Balance-Pass füllt fehlende Spawns als Lager auf: Größe nach Stufe (Stufe 1 Paare, sonst 3 / max / 2 / 1, nie über `MaxGroupSize`), jedes fünfte Lager mit einem Veteranen (nur wo die Veteranen-Regel es erlaubt), Lagerabstand ≥ 2 × Aggro-Reichweite + 8 m (nie zwei Lager zugleich), nur auf Gelände (keine Dächer, kein Wasser, Hang ≤ 2,2 m auf 3 m), Sperrkreise um Wegmarken, Sicherheitszonen, Städte, Herzen, Sehenswürdigkeiten, Portale, Ankunft (50 m), Wahrzeichen, Hürden, Aufstiege, Truhen und Fußwege. Neutral-Quote, Rollen und Respawn setzt danach der bestehende Pass; der Validator prüft wie bisher.

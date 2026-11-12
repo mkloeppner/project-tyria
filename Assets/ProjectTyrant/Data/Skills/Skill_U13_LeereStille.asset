@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Frost/Buff
   Chain: []
   Palette: 9
+  Vfx2: {fileID: 11400000, guid: 43abc55cea5c50e4abdc5778522aa832, type: 2}
+  SimElementV1: 2
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 0
   WeaponStyleOverride: 
   ClassId: 

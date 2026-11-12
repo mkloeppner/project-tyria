@@ -64,7 +64,7 @@ namespace ProjectTyrant
             Destroy(go.GetComponent<Collider>()); go.name = "BundleProp_" + def.Id; go.transform.SetParent(hand, false);
             go.transform.localScale = def.Id == "heugabel" || def.Id == "harpune" ? new Vector3(0.06f, 0.7f, 0.06f) : new Vector3(0.28f, 0.22f, 0.28f);
             go.transform.localPosition = new Vector3(0, 0.15f, 0);
-            var r = go.GetComponent<Renderer>(); var m = new Material(Shader.Find("Universal Render Pipeline/Lit") ?? Shader.Find("Standard")); m.color = def.Color; if (m.HasProperty("_BaseColor")) m.SetColor("_BaseColor", def.Color); r.sharedMaterial = m;
+            var r = go.GetComponent<Renderer>(); var m = new Material(Visuals.PTShaders.Lit() ?? Shader.Find("Standard")); m.color = def.Color; if (m.HasProperty("_BaseColor")) m.SetColor("_BaseColor", def.Color); r.sharedMaterial = m;
             if (def.LightRadius > 0f) { var l = go.AddComponent<Light>(); l.type = LightType.Point; l.range = def.LightRadius; l.intensity = 2.5f; l.color = new Color(1f, 0.85f, 0.55f); }
             return go;
         }

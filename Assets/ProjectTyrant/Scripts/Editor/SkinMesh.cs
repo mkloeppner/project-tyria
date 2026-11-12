@@ -27,12 +27,14 @@ namespace ProjectTyrant.EditorTools
         }
         void T(int a, int b, int c) { var l = Sub[_sub]; l.Add(a); l.Add(b); l.Add(c); }
 
-        static void Basis(Vector3 dir, out Vector3 side, out Vector3 front)
+        public static void Basis(Vector3 dir, out Vector3 side, out Vector3 front)
         {
             Vector3 r = Mathf.Abs(Vector3.Dot(dir.normalized, Vector3.forward)) > 0.9f ? Vector3.up : Vector3.forward;
             side = Vector3.Cross(dir, r).normalized; if (side.sqrMagnitude < 0.5f) side = Vector3.right;
             front = Vector3.Cross(side, dir).normalized;
-            if (Vector3.Dot(side, Vector3.right) < 0f && Mathf.Abs(Vector3.Dot(side, Vector3.right)) > 0.5f) side = -side;
+            // Seite zeigt nach +x (gleiche Ellipsen-Lage links/rechts); Vorderachse mitdrehen, sonst wird die Basis linkshändig
+            // und Röhren/Kegel entstehen mit umgekehrter Dreiecks-Richtung (nach innen, weggecullt = Löcher im Körper)
+            if (Vector3.Dot(side, Vector3.right) < 0f && Mathf.Abs(Vector3.Dot(side, Vector3.right)) > 0.5f) { side = -side; front = -front; }
         }
 
         /// <summary>Röhre von a nach b mit elliptischem Querschnitt (rx seitlich, rz vorne bzw. oben), Ringe mit leichter Wölbung.</summary>
@@ -40,7 +42,11 @@ namespace ProjectTyrant.EditorTools
         {
             Vector3 dir = b - a; float len = dir.magnitude; if (len < 1e-4f) return;
             Basis(dir, out var side, out var front);
-            if (frontBias != default) front = (front + frontBias).normalized;
+            if (frontBias != default)
+            {
+                if (Vector3.Dot(front, frontBias) < 0f) { front = -front; side = -side; }   // Händigkeit bleibt, Summe kann nicht verschwinden
+                front = (front + frontBias).normalized;
+            }
             int start = V.Count;
             for (int r = 0; r <= rings; r++)
             {
@@ -66,8 +72,8 @@ namespace ProjectTyrant.EditorTools
                 int last = start + rings * sides;
                 for (int s = 0; s < sides; s++)
                 {
-                    T(ca, start + (s + 1) % sides, start + s);
-                    T(cb, last + s, last + (s + 1) % sides);
+                    T(ca, start + s, start + (s + 1) % sides);       // Deckel nach außen (vorher nach innen, an Röhren-Enden unsichtbar)
+                    T(cb, last + (s + 1) % sides, last + s);
                 }
             }
         }
@@ -98,7 +104,7 @@ namespace ProjectTyrant.EditorTools
         {
             var q = rot ?? Quaternion.identity; var h = size * 0.5f;
             Vector3 P(float x, float y, float z) => center + q * new Vector3(x * h.x, y * h.y, z * h.z);
-            void F(Vector3 a, Vector3 b, Vector3 c, Vector3 d) { int i = AddV(a, col, hint, rigid), j = AddV(b, col, hint, rigid), k = AddV(c, col, hint, rigid), l = AddV(d, col, hint, rigid); T(i, j, k); T(i, k, l); }
+            void F(Vector3 a, Vector3 b, Vector3 c, Vector3 d) { int i = AddV(a, col, hint, rigid), j = AddV(b, col, hint, rigid), k = AddV(c, col, hint, rigid), l = AddV(d, col, hint, rigid); T(i, k, j); T(i, l, k); }   // im Uhrzeigersinn von außen (vorher nach innen: Hände/Füße hohl)
             F(P(-1, -1, 1), P(-1, 1, 1), P(1, 1, 1), P(1, -1, 1));
             F(P(1, -1, -1), P(1, 1, -1), P(-1, 1, -1), P(-1, -1, -1));
             F(P(-1, 1, 1), P(-1, 1, -1), P(1, 1, -1), P(1, 1, 1));
@@ -151,7 +157,9 @@ namespace ProjectTyrant.EditorTools
             {
                 UseSub(subOffset + s);
                 var t = m.GetTriangles(s);
-                for (int i = 0; i + 2 < t.Length; i += 3) T(start + t[i], start + t[i + 1], start + t[i + 2]);
+                bool mirrored = toRoot.determinant < 0f;   // gespiegelte Übernahme dreht sonst die Dreiecke nach innen
+                for (int i = 0; i + 2 < t.Length; i += 3)
+                    if (mirrored) T(start + t[i], start + t[i + 2], start + t[i + 1]); else T(start + t[i], start + t[i + 1], start + t[i + 2]);
             }
             UseSub(0);
         }

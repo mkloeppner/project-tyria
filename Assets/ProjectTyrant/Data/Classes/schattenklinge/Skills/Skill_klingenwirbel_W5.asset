@@ -77,6 +77,10 @@ MonoBehaviour:
     SfxImpact: Stahl/Impact
   Chain: []
   Palette: 22
+  Vfx2: {fileID: 11400000, guid: 028416d5686d3c3458bde7ea05d0cb65, type: 2}
+  SimElementV1: 2
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 1
   WeaponStyleOverride: Axe
   ClassId: schattenklinge

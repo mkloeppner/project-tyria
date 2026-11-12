@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Pulver/Buff
   Chain: []
   Palette: 19
+  Vfx2: {fileID: 11400000, guid: c9d92b893fb02ec418ce77ee049cb431, type: 2}
+  SimElementV1: 1
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: schattenklinge

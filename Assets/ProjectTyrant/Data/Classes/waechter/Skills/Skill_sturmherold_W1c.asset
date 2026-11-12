@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Sturmblau/Impact
   Chain: []
   Palette: 25
+  Vfx2: {fileID: 11400000, guid: 5846b86d08a914548a0c77266f5c229b, type: 2}
+  SimElementV1: 3
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Hammer
   ClassId: waechter

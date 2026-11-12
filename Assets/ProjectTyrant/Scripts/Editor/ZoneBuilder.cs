@@ -130,7 +130,7 @@ namespace ProjectTyrant.EditorTools
 
         static void SetupEnvironmentLighting()
         {
-            var skyShader = Shader.Find("ProjectTyrant/GradientSkybox");
+            var skyShader = Shader.Find(Visuals.PTShaders.Sky);   // Grafik-Lauf G2: Himmel 2.0
             string skyPath = MatDir + "/M_Skybox.mat";
             var sky = AssetDatabase.LoadAssetAtPath<Material>(skyPath);
             if (sky == null) { sky = new Material(skyShader); AssetDatabase.CreateAsset(sky, skyPath); }

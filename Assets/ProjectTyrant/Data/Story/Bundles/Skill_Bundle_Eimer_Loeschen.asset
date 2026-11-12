@@ -72,6 +72,10 @@ MonoBehaviour:
     SfxImpact: Wasser/Buff
   Chain: []
   Palette: 1
+  Vfx2: {fileID: 11400000, guid: 16d63b93ffa193743b4b17f889ecd73f, type: 2}
+  SimElementV1: 0
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Sword
   ClassId: 

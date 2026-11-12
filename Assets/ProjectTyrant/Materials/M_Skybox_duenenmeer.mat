@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Skybox_duenenmeer
-  m_Shader: {fileID: 4800000, guid: 44214e61c76a41c4683956a5126cb88d, type: 3}
+  m_Shader: {fileID: 4800000, guid: da38386b53c3fac4d96397c1550859e3, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -22,16 +22,33 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _CloudTex:
+        m_Texture: {fileID: 2800000, guid: 44b0acff9e887cd448d6f575f6f9f772, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _StarTex:
+        m_Texture: {fileID: 2800000, guid: 95e82257a6f137e47a0361bfd469c01e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Ash: 0
+    - _Aurora: 0
+    - _CloudCover: 0.4
     - _HorizonSharpness: 2.2
+    - _Sand: 0
+    - _Stars: 1
     - _SunGlow: 1.2
     - _SunSize: 0.04
     m_Colors:
     - _BottomColor: {r: 0.78431374, g: 0.65882355, b: 0.47058824, a: 1}
+    - _CloudColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Ground: {r: 0.78431374, g: 0.65882355, b: 0.47058824, a: 1}
+    - _Horizon: {r: 0.95686275, g: 0.8745098, b: 0.7137255, a: 1}
     - _HorizonColor: {r: 0.95686275, g: 0.8745098, b: 0.7137255, a: 1}
     - _SunColor: {r: 1, g: 0.9411765, b: 0.78431374, a: 1}
     - _TopColor: {r: 0.30980393, g: 0.56078434, b: 0.8156863, a: 1}
+    - _Zenith: {r: 0.30980393, g: 0.56078434, b: 0.8156863, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

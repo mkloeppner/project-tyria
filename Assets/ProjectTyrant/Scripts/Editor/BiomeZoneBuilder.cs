@@ -81,6 +81,7 @@ namespace ProjectTyrant.EditorTools
             ZoneExtrasBuilder.Populate(z, rootGo.transform, (x, zz) => sampler.Height(x, zz));   // Lauf 6: Stadt, Verderbnis, Sandsturm, Dunkelheit, Inseln, Belagerung, Sprungrätsel
             WorldStoryBuilder.Populate(z, rootGo.transform, (x, zz) => sampler.Height(x, zz));   // Lauf 6: Späher, Herzen, Bündel
             WorldW1Builder.Populate(z, rootGo.transform, (x, zz) => sampler.Height(x, zz));   // Welt-Lauf W1: Wahrzeichen, Hürden, Aufstiege, Geheimnisse
+            LivelinessBuilder.AddResidents(z, rootGo.transform, sampler);   // Belebung: Reisende, Helfer, Stadtbürger
             // Lauf 5 / M23: Welt-Lebendigkeit je Biom
             var w = b.Weather;
             VfxKitBuilder.Ambient(rootGo.transform, w, w == WeatherKind.AshWind ? new Vector2(1f, -0.4f) : new Vector2(0.8f, 0.6f), w == WeatherKind.Snow ? 0.35f : w == WeatherKind.AshWind ? 0.3f : 0.2f,
@@ -97,13 +98,19 @@ namespace ProjectTyrant.EditorTools
         static void Atmosphere(ZoneDefinition z)
         {
             var b = z.Biome;
-            var shader = Shader.Find("ProjectTyrant/GradientSkybox");
-            string path = MatDir + "/M_Skybox_" + z.Id + ".mat";
-            var sky = AssetDatabase.LoadAssetAtPath<Material>(path);
-            if (sky == null) { sky = new Material(shader); AssetDatabase.CreateAsset(sky, path); }
-            sky.shader = shader;
-            sky.SetColor("_TopColor", b.SkyTop); sky.SetColor("_HorizonColor", b.SkyHorizon); sky.SetColor("_BottomColor", b.SkyBottom); sky.SetColor("_SunColor", b.SunColor);
-            EditorUtility.SetDirty(sky);
+            // Grafik-Lauf G2: Himmel 2.0 aus dem Zonen-Kunstprofil (Fallback: PT/Sky mit Biom-Farben)
+            var prof = GraphicsBuilder.Profile(z.Id);
+            Material sky = prof != null ? prof.SkyMaterial : null;
+            if (sky == null)
+            {
+                var shader = Shader.Find(Visuals.PTShaders.Sky);
+                string path = MatDir + "/M_Skybox_" + z.Id + ".mat";
+                sky = AssetDatabase.LoadAssetAtPath<Material>(path);
+                if (sky == null) { sky = new Material(shader); AssetDatabase.CreateAsset(sky, path); }
+                sky.shader = shader;
+                sky.SetColor("_Zenith", b.SkyTop); sky.SetColor("_Horizon", b.SkyHorizon); sky.SetColor("_Ground", b.SkyBottom);
+                EditorUtility.SetDirty(sky);
+            }
             RenderSettings.skybox = sky;
             RenderSettings.ambientMode = AmbientMode.Trilight;
             RenderSettings.ambientSkyColor = Color.Lerp(b.SkyTop, Color.white, 0.3f);

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_W1_frostkamm_frostkamm_wz_1_Glass
-  m_Shader: {fileID: 4800000, guid: ba2b7fac5c5cca841ad5d01c2e50fef7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 678b0d88751b12845b903ef3c5d6ca4e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -34,19 +34,24 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _FresnelPower: 3
     - _HeightGradient: 0.15
     - _MidTone: 0.55
+    - _NightEmission: 0
     - _PaintStrength: 0.1
+    - _Reflection: 0.7
+    - _Refraction: 0.02
     - _RimPower: 3
     - _RimStrength: 0.6
     - _ShadowSoftness: 0.12
     - _ShadowThreshold: 0.05
     - _UseVertexColor: 1
+    - _WeatherMask: 1
     - _Wind: 0
     - _WindPivot: 0
     - _WorldUVScale: 0.15
     m_Colors:
-    - _BaseColor: {r: 0.7441177, g: 0.88529414, b: 0.9558824, a: 1}
+    - _BaseColor: {r: 0.7441177, g: 0.88529414, b: 0.9558824, a: 0.35}
     - _EmissionColor: {r: 0.23058824, g: 0.29647058, b: 0.32941177, a: 0.35}
     - _GradientBottom: {r: 0.75, g: 0.7, b: 0.9, a: 1}
     - _RimColor: {r: 1, g: 0.88, b: 0.65, a: 1}

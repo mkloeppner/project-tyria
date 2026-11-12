@@ -72,6 +72,10 @@ MonoBehaviour:
     SfxImpact: Erde/Buff
   Chain: []
   Palette: 3
+  Vfx2: {fileID: 11400000, guid: 69729ce9a6e471d4aa40a63fde2f6dbd, type: 2}
+  SimElementV1: 7
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Sword
   ClassId: 

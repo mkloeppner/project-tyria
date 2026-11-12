@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Glut/Impact
   Chain: []
   Palette: 10
+  Vfx2: {fileID: 11400000, guid: 4f625d055bdc8204b9d9403660647d8e, type: 2}
+  SimElementV1: 1
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: schattenklinge

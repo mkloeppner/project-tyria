@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Zwielicht/Buff
   Chain: []
   Palette: 16
+  Vfx2: {fileID: 11400000, guid: bff82226c99626e46808732dbbf6c7f5, type: 2}
+  SimElementV1: 8
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: elementarweber

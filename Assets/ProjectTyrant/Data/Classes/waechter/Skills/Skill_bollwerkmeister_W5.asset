@@ -77,6 +77,10 @@ MonoBehaviour:
     SfxImpact: Bollwerk/Impact
   Chain: []
   Palette: 24
+  Vfx2: {fileID: 11400000, guid: d61dd590958c93f4a90a32680a6de4f1, type: 2}
+  SimElementV1: 2
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 1
   WeaponStyleOverride: Sword
   ClassId: waechter

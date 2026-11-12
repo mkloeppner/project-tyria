@@ -77,6 +77,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0db1575f439072b46a66fb9aa092ab6c, type: 2}
   - {fileID: 11400000, guid: d786aafa08578c843838f610897d9f8a, type: 2}
   Palette: 11
+  Vfx2: {fileID: 11400000, guid: 5c8fae5eebc47d649a9f2d947c6e0351, type: 2}
+  SimElementV1: 2
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 1
   WeaponStyleOverride: Staff
   ClassId: wildhueter

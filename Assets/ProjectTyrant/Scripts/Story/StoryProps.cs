@@ -13,7 +13,7 @@ namespace ProjectTyrant
         static Material M(ref Material m, Color c, Color? emission = null)
         {
             if (m != null) return m;
-            m = new Material(Shader.Find("Universal Render Pipeline/Lit") ?? Shader.Find("Standard"));
+            m = new Material(Visuals.PTShaders.Lit() ?? Shader.Find("Standard"));
             if (m.HasProperty("_BaseColor")) m.SetColor("_BaseColor", c); else m.color = c;
             if (m.HasProperty("_Smoothness")) m.SetFloat("_Smoothness", 0.05f);
             if (emission.HasValue) { m.EnableKeyword("_EMISSION"); m.SetColor("_EmissionColor", emission.Value); }

@@ -74,6 +74,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3bb4716447f70454398e395a5bddef09, type: 2}
   - {fileID: 11400000, guid: 39ea84f01786a7943abdf70d049f9547, type: 2}
   Palette: 13
+  Vfx2: {fileID: 11400000, guid: e13329f835d40f24fa950923d61fc9c2, type: 2}
+  SimElementV1: 4
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Hammer
   ClassId: wildhueter

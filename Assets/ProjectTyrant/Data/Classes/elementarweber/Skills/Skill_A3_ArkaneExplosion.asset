@@ -72,6 +72,10 @@ MonoBehaviour:
     SfxImpact: Arkan/Impact
   Chain: []
   Palette: 8
+  Vfx2: {fileID: 11400000, guid: 7a3e0286e1bd4304a8da40e74cb505d0, type: 2}
+  SimElementV1: 9
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: elementarweber

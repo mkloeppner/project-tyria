@@ -11,7 +11,7 @@ namespace ProjectTyrant
         public bool PlayerSheltered { get; private set; }
 
         void OnEnable() { Current = this; _baseFog = RenderSettings.fogDensity; _baseFogColor = RenderSettings.fogColor; }
-        void OnDisable() { if (Current == this) Current = null; RenderSettings.fogDensity = _baseFog; RenderSettings.fogColor = _baseFogColor; }
+        void OnDisable() { Visuals.SceneLighting.ExternalFogScale = 1f; Visuals.SceneLighting.ExternalFogTint = Color.clear; if (Current == this) Current = null; RenderSettings.fogDensity = _baseFog; RenderSettings.fogColor = _baseFogColor; }
 
         void Update()
         {
@@ -27,6 +27,7 @@ namespace ProjectTyrant
             Intensity = SandstormModel.Intensity(t);
             RenderSettings.fogDensity = _baseFog * SandstormModel.FogFactor(Intensity);
             RenderSettings.fogColor = Color.Lerp(_baseFogColor, new Color(0.85f, 0.68f, 0.42f), Intensity * 0.8f);
+            Visuals.SceneLighting.ExternalFogScale = SandstormModel.FogFactor(Intensity); Visuals.SceneLighting.ExternalFogTint = new Color(0.85f, 0.68f, 0.42f, Intensity * 0.8f);   // Grafik-Lauf G2
             var gm = GameManager.Instance; var p = gm != null ? gm.Player : null;
             if (p == null) return;
             PlayerSheltered = SandShelter.Covers(p.transform.position);

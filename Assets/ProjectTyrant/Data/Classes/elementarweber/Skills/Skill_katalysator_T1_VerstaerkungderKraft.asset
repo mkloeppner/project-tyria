@@ -75,6 +75,10 @@ MonoBehaviour:
     SfxImpact: Jade/Buff
   Chain: []
   Palette: 17
+  Vfx2: {fileID: 11400000, guid: bba2e9d369ba60a40b1b335bf35e72a7, type: 2}
+  SimElementV1: 6
+  SimSecondaryV1: 10
+  Showpiece: 1
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: elementarweber

@@ -81,6 +81,10 @@ MonoBehaviour:
     SfxImpact: Wildblut/Buff
   Chain: []
   Palette: 12
+  Vfx2: {fileID: 11400000, guid: 9092d85f5fed4bc4aaab1f21175b2b50, type: 2}
+  SimElementV1: 4
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: 
   ClassId: wildhueter

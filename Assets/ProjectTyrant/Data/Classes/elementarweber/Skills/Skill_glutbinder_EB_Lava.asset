@@ -82,6 +82,10 @@ MonoBehaviour:
     SfxImpact: Lava/Impact
   Chain: []
   Palette: 18
+  Vfx2: {fileID: 11400000, guid: 8742f3782f484db4db298218f12b77df, type: 2}
+  SimElementV1: 1
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Scepter
   ClassId: elementarweber

@@ -74,6 +74,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7ee4e6b23fbba1c47b680ad298629803, type: 2}
   - {fileID: 11400000, guid: 3e2e6041068414646b00c11eda260bfc, type: 2}
   Palette: 12
+  Vfx2: {fileID: 11400000, guid: 9d236b198877a7845a1b7da78060670c, type: 2}
+  SimElementV1: 4
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Dagger
   ClassId: wildhueter

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_FX_Water_gluetoede
-  m_Shader: {fileID: 4800000, guid: b3d3f4defdb9a6c41b543b2fd8637b23, type: 3}
+  m_Shader: {fileID: 4800000, guid: 02a1d285153583c4392e5fce43c57ebb, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -22,17 +22,63 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _AlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 9d0253b6d90f3b1459e346f7f45ede19, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CausticTex:
+        m_Texture: {fileID: 2800000, guid: 0d1b4b16f7d80564aa3b1c11fe75b223, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CrackTex:
+        m_Texture: {fileID: 2800000, guid: 9dab53558842a854399a117b981fec1f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: f03dd80421481444da98a74a4ca3e49e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _CausticStrength: 0
+    - _CrackScale: 0.03
     - _DepthRange: 2.5
     - _FoamWidth: 0.45
+    - _HeightGradient: 0.15
+    - _MidTone: 0.55
+    - _NightEmission: 0
+    - _PaintStrength: 0.1
+    - _Pulse: 0.35
+    - _Reflection: 0.2
+    - _Refraction: 0.03
+    - _RimPower: 3
+    - _RimStrength: 0.6
+    - _ShadowSoftness: 0.12
+    - _ShadowThreshold: 0.05
+    - _UseVertexColor: 0
     - _WaveAmp: 0.03
     - _WaveScale: 0.35
+    - _WeatherMask: 0
+    - _Wind: 0
+    - _WindPivot: 0
+    - _WorldUVScale: 0.15
     m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _CrustColor: {r: 0.225, g: 0.1134, b: 0.043199997, a: 0.42749998}
     - _DeepColor: {r: 0.5, g: 0.252, b: 0.096, a: 0.95}
     - _Emission: {r: 1.5749999, g: 0.52919996, b: 0.09449999, a: 1.5749999}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Flow: {r: 1, g: 0.3, b: 0.05, a: 0}
     - _FoamColor: {r: 1, g: 0.85, b: 0.4, a: 1}
+    - _GlowColor: {r: 1.8112499, g: 0.60857993, b: 0.10867499, a: 1.15}
+    - _GradientBottom: {r: 0.75, g: 0.7, b: 0.9, a: 1}
+    - _RimColor: {r: 1, g: 0.88, b: 0.65, a: 1}
+    - _ShadowColor: {r: 0.4, g: 0.3, b: 0.45, a: 1}
     - _ShallowColor: {r: 1, g: 0.55, b: 0.15, a: 0.95}
     - _SkyColor: {r: 0.5, g: 0.252, b: 0.096, a: 0.95}
   m_BuildTextureStacks: []

@@ -161,6 +161,24 @@ namespace ProjectTyrant
             if (ui != null) ui.FadeAction(go); else go();
         }
 
+        /// <summary>Niederlage auf einem Aufstieg: genau am letzten Kontrollpunkt mit vollen HP erscheinen (ohne Versatz – Plattformen sind schmal).</summary>
+        public void RespawnAtCheckpoint(Vector3 checkpoint, string climbName)
+        {
+            if (Player == null) return;
+            var ui = UIController.Instance;
+            System.Action go = () =>
+            {
+                var pc = Player.GetComponent<PlayerController>();
+                if (pc != null) { pc.Teleport(checkpoint, Player.transform.rotation); pc.ResetFallTracking(); } else Player.transform.position = checkpoint;
+                var downed = Player.GetComponent<DownedController>();
+                if (downed != null) downed.ResetState();
+                Player.Revive(1f);
+                GameEventBus.RaisePlayerRespawned(Player);
+                GameEventBus.Notify("Wiederbelebt am Kontrollpunkt: " + climbName, new Color(0.6f, 0.9f, 1f));
+            };
+            if (ui != null) ui.FadeAction(go); else go();
+        }
+
         /// <summary>Debug: alle Zonen-Objekte erledigen (für den Truhen-Test).</summary>
         public int CompleteAllZoneObjects()
         {

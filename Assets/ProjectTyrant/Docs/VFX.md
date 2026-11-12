@@ -93,3 +93,37 @@ Wetter-Betten folgen der Kamera (Pollen Sonnfurt, Nebelschwaden Nebelmoor, Schne
 - Signatur-Captures der Spezialisierungen: `Temp/PT_QA/m26_<spez>.png` (Duell-Bot).
 - Tests: Komposition → Prefab für alle Schlüssel, Partikelbudget je Größe, 3-s-Regel, Paletten vollständig, jeder Skill hat auflösbare VFX, Flächen-Ebenen je Boden-Komposition.
 
+
+## VFX 2.0 (Grafik-Lauf G5–G6)
+
+Jeder Skill trägt eine `VfxDefinition` (Feld `SkillDefinition.Vfx2`), gebaut von `VfxDefinitionBuilder.BuildAll` (Teil von Rebuild Everything) aus Zeitachse und Palette.
+
+| Phase | Inhalt |
+|---|---|
+| Aufladen | Charge-Komposition, ab Elite zusätzlich Siegel, Lichtpuls |
+| Auswurf | Release + Spur (Nahkampf, Sprung), ab Elite Lichtstoß |
+| Flug | Projektil / Sprungspur / Säule (Bodenziel) / Aura (Selbst) / Kegel; Finisher mit Licht |
+| Einschlag | Impact + Licht, Druckwelle ab Elite oder Größe L, Kamerastoß bei Finishern |
+| Nachwirkung | Schleier (Radius ≥ 2,5 m) oder Aura, ab Elite kleine Druckwelle |
+
+Stufen: Standard ≥ 3 Ebenen (317 Skills), Elite ≥ 5 (6), Finisher ≥ 6 (143). Ebenen-Arten: Composite (Baukasten-Prefab), Light (Pool 12), Shockwave (gemeinsamer Verzerrungspuffer, max. 8), Trail, CameraKick. Niedrig spielt nur Ebene 1, Mittel bis 2 (`TierSettings.VfxMaxLayer`). Validator: jede Phase belegt, Mindest-Ebenen je Stufe, gültige Kompositions-Schlüssel, Licht ≤ 6; Lichtfarben meiden die reservierte Gefahrenfarbe (`SkillFxColor`).
+
+Signaturen (G6): Trotzbalken-Bruch, Auflösen beim Tod, Wegmarken-Sprung (Biomfarbe), Reittier Rufen/Absitzen/Spur/Landung (Reittierfarbe), Rang-Auren Veteran/Champion/Boss (`RankAuraFx`), Zustands-Auren (`EffectAuraFx`). Lichtempfindlich: Blitze ≤ 0,15, Bloom ≤ 0,35, kein Kamerastoß.
+
+## Befund V1 (vorher, 28 Schaustücke, `Temp/PT_QA/V1/vorher`, Bewegung `motion_vorher.csv`)
+
+Bewegungs-Metrik vorher: mittlere Bild-Differenz 0,0103, Richtungs-Kohärenz 0,13, keine toten Bilder; Übersicht `Temp/PT_QA/V1/sheets/vorher_elemente.jpg`.
+
+| Element | Befund (Arbeitsliste) | Status |
+|---|---|---|
+| Feuer | Flammenwall und Glutkugel sind kleine, flache Leuchtflecken ohne Flammenzungen; Rauch fehlt bzw. ist unbeleuchtet; am Boden bleibt nur ein Ring, keine Brandspur. | offen (Werkzeuge bereit: `feuer_flammen_loop`, `feuer_explosion_burst`, `rauch_loop`, Flammenzunge, Feuerwand) |
+| Wasser | Heilquelle und Quellsegen zeigen eine durchscheinende Kuppel ohne Strömung, Spritzer oder Tropfen; der Hintergrund wird nicht gebrochen; keine Pfütze und keine Ringe als Nachwirkung. | offen (Werkzeuge bereit: `wasser_spritzer_burst`, `wasser_gischt_loop`, Spritzkrone, Wellenring, Verzerrungs-Puffer) |
+| Brechung | Licht-, Eis- und Kristall-Skills nutzen nur Fresnel-Ränder und Bloom; keine Linse, keine Dispersion, keine Kaustik; Strahlen ohne Streuung. | offen (Werkzeuge bereit: `ProjectTyrant/FX/Refract`, Kaustik-Generator, Prisma, Linsenkugel, Lichtkegel) |
+| Blitz | Kettenblitz ist eine starre Linie ohne Verästelung und ohne Zittern je Bild. | offen (Blitz-Generator, Blitzast-Mesh) |
+| Natur | Dornen und Ranken erscheinen als Partikelwolke, nichts wächst. | offen (Ranke mit Wachstums-UV) |
+| Schatten, Jade, Sand, Chaos, Arkan | einlagige Leuchtpartikel in Elementfarbe; kaum Bewegungsrichtung (Kohärenz 0,04–0,13). | offen |
+| alle | In den Bildern sind Effekte klein im Bildausschnitt (Kamera am Klassen-Lesezeichen); Einschlag und Nachwirkung unterscheiden sich wenig. | offen |
+
+## VFX-Lauf V1 – Werkzeuge
+
+Siehe SIMULATION.md (Löser, Baker, Generatoren, GPU-Partikel, Verzerrungs-Puffer, Flipbook-Shader) und ELEMENTS.md (Zuordnung, Schaustücke, Gestaltungsregeln).

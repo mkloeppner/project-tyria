@@ -74,6 +74,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1af1abe6b82de624999254e523ec4216, type: 2}
   - {fileID: 11400000, guid: 3ad2e4650e2a0f64c800fe11f1a4ba6e, type: 2}
   Palette: 24
+  Vfx2: {fileID: 11400000, guid: 984299bc4e445554abe48bdcf786e73a, type: 2}
+  SimElementV1: 2
+  SimSecondaryV1: 10
+  Showpiece: 0
   PaletteExplicit: 1
   WeaponStyleOverride: Sword
   ClassId: waechter

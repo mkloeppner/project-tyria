@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Terrain
-  m_Shader: {fileID: 4800000, guid: ba2b7fac5c5cca841ad5d01c2e50fef7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 217ed8f96296533478b04eb50f2ebfa7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -32,16 +32,24 @@ Material:
         m_Texture: {fileID: 2800000, guid: 9d0253b6d90f3b1459e346f7f45ede19, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _VariationTex:
+        m_Texture: {fileID: 2800000, guid: f8c7a6300ca423c4e89578d87608b1dd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _HeightGradient: 0.15
     - _MidTone: 0.55
-    - _PaintStrength: 0.4
+    - _NightEmission: 0
+    - _PaintStrength: 0.15
     - _RimPower: 3
     - _RimStrength: 0.12
     - _ShadowSoftness: 0.12
     - _ShadowThreshold: 0.05
     - _UseVertexColor: 1
+    - _Variation: 0.08
+    - _VariationScale: 0.012
+    - _WeatherMask: 1
     - _Wind: 0
     - _WindPivot: 0
     - _WorldUVScale: 0.15
@@ -50,6 +58,8 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GradientBottom: {r: 0.75, g: 0.7, b: 0.9, a: 1}
     - _RimColor: {r: 1, g: 0.88, b: 0.65, a: 1}
+    - _RockColor: {r: 0.55, g: 0.52, b: 0.5, a: 1}
+    - _RockSlope: {r: 0.38, g: 0.6, b: 0, a: 0}
     - _ShadowColor: {r: 0.5, g: 0.55, b: 0.85, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
