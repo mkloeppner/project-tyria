@@ -14,7 +14,8 @@ namespace ProjectTyrant.Anim
     /// <summary>Körperbau eines Vierbeiners/Tiers für Skelett und Gangarten.</summary>
     public struct CreatureProfile
     {
-        public enum GaitKind { Legs, Wings, Fins, Biped }
+        /// <summary>Hop (Spieler-Wunsch 2026-11-12): Hasen sitzen aufrecht und bewegen sich in kleinen Sprüngen vorwärts.</summary>
+        public enum GaitKind { Legs, Wings, Fins, Biped, Hop }
         public string Name; public float Length, LegHeight, Neck, Tail, Width, FrontLeg; public GaitKind Gait;
         public CreatureProfile(string name, float length, float legHeight, float neck, float tail, float width, GaitKind gait, float frontLeg = 1f)
         { Name = name; Length = length; LegHeight = legHeight; Neck = neck; Tail = tail; Width = width; Gait = gait; FrontLeg = frontLeg; }
@@ -48,7 +49,8 @@ namespace ProjectTyrant.Anim
             new CreatureProfile("Bird", 0.4f, 0.7f, 0.25f, 0.2f, 0.5f, CreatureProfile.GaitKind.Wings, 0.6f),
             new CreatureProfile("Ray", 1.2f, 0.9f, 0.1f, 0.8f, 0.9f, CreatureProfile.GaitKind.Fins),
             new CreatureProfile("Raptor", 1.3f, 1.05f, 0.6f, 1.0f, 0.64f, CreatureProfile.GaitKind.Biped, 0.4f),
-            new CreatureProfile("Springer", 0.9f, 0.9f, 0.5f, 0.3f, 0.6f, CreatureProfile.GaitKind.Legs),
+            new CreatureProfile("Springer", 0.9f, 0.9f, 0.5f, 0.3f, 0.6f, CreatureProfile.GaitKind.Hop),
+            new CreatureProfile("Hare", 0.9f, 0.59f, 0.3f, 0.15f, 0.42f, CreatureProfile.GaitKind.Hop),   // Maße wie der Schneehase (Beinlänge 0,4 + Rumpf × 0,35)
         };
 
         public static readonly string[] HumanoidCoreClips =
@@ -573,9 +575,10 @@ namespace ProjectTyrant.Anim
             float L = pr.LegHeight, sz = Mathf.Max(0.4f, pr.LegHeight);
             var sec = Sec(sk, al, "Hd", "N", "T1", "T2");
             float restFoot = sk.WorldPositions(null, Vector3.zero)[sk.IndexOf("BL_Foot")].y;
+            float sitDrop = pr.Gait == CreatureProfile.GaitKind.Hop ? SitDrop(sk, al, pr) : 0f;
             ClipData B(string n, float len, bool loop, ClipLayer layer, Action<float, PoseBuilder> f)
             {
-                var c = Bake(sk, al, pr.Name + "_" + n, len, loop, layer, (t, p) => { if (layer != ClipLayer.Additive) BasePose(p, pr); f(t, p); }, sec);
+                var c = Bake(sk, al, pr.Name + "_" + n, len, loop, layer, (t, p) => { if (layer != ClipLayer.Additive) BasePose(p, pr); f(t, p); if (layer != ClipLayer.Additive) p.Root.y += sitDrop; }, sec);
                 list.Add(c); return c;
             }
             ClipData K(string n, float len, ClipLayer layer, Action<KeyTrack> keys, bool loop = false)
@@ -588,6 +591,20 @@ namespace ProjectTyrant.Anim
 
             void Loco(string n, float len, float amp, float knee, float[] off, float spine, float bobK, float wingBase = 15f, float wingAmp = 5f)
             {
+                if (pr.Gait == CreatureProfile.GaitKind.Hop)
+                {
+                    // kleine Sprünge: Höhe wächst mit dem Tempo der Gangart (amp), Vorderpfoten landen bei 70 %, Hinterläufe bei 85 %
+                    float h = HopHeight(amp) * sz;
+                    B(n, len, true, ClipLayer.Locomotion, (t, p) =>
+                    {
+                        HopGait(p, t / len, h);
+                        // tiefster Fuß bleibt auf dem Boden (gestreckte Hinterläufe beim Abstoßen), Sprungbogen kommt obendrauf; B addiert danach sitDrop
+                        float arc = p.Root.y; var pos = sk.WorldPositions(p.E, Vector3.zero); float mn = float.MaxValue;
+                        foreach (var l in SkeletonDef.Legs) mn = Mathf.Min(mn, pos[sk.IndexOf(l + "_Foot")].y);
+                        p.Root.y = restFoot - mn + arc - sitDrop;
+                    }).AddMarker(Marker.FootL, len * 0.7f).AddMarker(Marker.FootR, len * 0.85f);
+                    return;
+                }
                 var c = B(n, len, true, ClipLayer.Locomotion, (t, p) => QGait(p, pr, TwoPi * t / len, amp, knee, off, spine, bobK, wingBase, wingAmp));
                 if (pr.Gait == CreatureProfile.GaitKind.Fins) { c.AddMarker(Marker.FootL, 0f); return; }
                 bool back = pr.Gait == CreatureProfile.GaitKind.Wings || pr.Gait == CreatureProfile.GaitKind.Biped;
@@ -657,6 +674,13 @@ namespace ProjectTyrant.Anim
                     .AddMarker(Marker.Effect, 0.15f).AddMarker(Marker.FootL, 0.7f).AddMarker(Marker.End, 0.85f);
                 B("MCharge", 0.5f, true, ClipLayer.Locomotion, (t, p) =>
                 {
+                    if (pr.Gait == CreatureProfile.GaitKind.Hop)
+                    {
+                        // Sprung aufladen: tief geduckt, Hinterläufe gespannt, leichtes Zittern
+                        float q = 2f * Mathf.Sin(TwoPi * t / 0.5f * 2f);
+                        p.R("P", 12f + q); p.R("BLU", -15f); p.R("BRU", -15f); p.R("BLL", 20f); p.R("BRL", 20f); p.R("FLU", -10f); p.R("FRU", -10f); p.R("Hd", -10f);
+                        p.Root.y = -0.06f * sz; return;
+                    }
                     QGait(p, pr, TwoPi * t / 0.5f, 42f, 65f, gallop, 6f, 0.6f, 50f, 20f);
                     p.R("N", 25f); p.R("Hd", 20f); p.R("C", 8f); p.Root.y -= 0.08f * sz;
                 }).AddMarker(Marker.FootL, 0.125f).AddMarker(Marker.FootR, 0.185f);
@@ -690,8 +714,78 @@ namespace ProjectTyrant.Anim
         /// <summary>Grundhaltung je Körperbau (Flossen waagrecht, Flügel angelegt), auf alle nicht-additiven Clips addiert.</summary>
         public static void BasePose(PoseBuilder p, CreatureProfile pr)
         {
+            if (pr.Gait == CreatureProfile.GaitKind.Hop) SitPose(p, SitPitch(pr));
             if (pr.Gait == CreatureProfile.GaitKind.Fins) foreach (var l in SkeletonDef.Legs) p.R(l + "U", 0, 0, l[1] == 'L' ? -82f : 82f);
             if (pr.Gait == CreatureProfile.GaitKind.Wings) { p.R("FLU", 0, 0, -12f); p.R("FRU", 0, 0, 12f); }
+        }
+
+        /// <summary>
+        /// Hasen-Sitz: Oberkörper 30° aufgerichtet, Hinterläufe zusammengefaltet unter dem Körper (Oberschenkel nach vorn, Lauf nach hinten),
+        /// Vorderpfoten senkrecht auf dem Boden, Kopf blickt geradeaus, Blume hoch. Absenkung der Wurzel über <see cref="SitDrop"/>.
+        /// </summary>
+        public static void SitPose(PoseBuilder p, float pitch)
+        {
+            p.R("P", -pitch);
+            p.R("BLU", -40f); p.R("BRU", -40f); p.R("BLL", 120f); p.R("BRL", 120f); p.R("BLF", -50f); p.R("BRF", -50f);
+            p.R("FLU", pitch - 3f); p.R("FRU", pitch - 3f); p.R("FLL", -4f); p.R("FRL", -4f);   // Vorderläufe senkrecht in der Welt
+            p.R("N", pitch * 0.4f); p.R("Hd", pitch * 0.6f); p.R("T1", 25f);
+        }
+
+        static readonly Dictionary<string, float> _sitPitch = new Dictionary<string, float>();
+        /// <summary>Aufrichtwinkel (10–40°), bei dem Vorder- und Hinterpfoten gleichzeitig aufsetzen – hängt vom Verhältnis Körperlänge zu Beinlänge ab.</summary>
+        public static float SitPitch(CreatureProfile pr)
+        {
+            if (_sitPitch.TryGetValue(pr.Name, out var cached)) return cached;
+            var sk = pr.Skeleton(); var al = CreatureAlias(sk);
+            float best = 30f, bestErr = float.MaxValue;
+            for (float a = 10f; a <= 40.01f; a += 0.5f)
+            {
+                var p = new PoseBuilder(sk, al); SitPose(p, a);
+                var pos = sk.WorldPositions(p.E, Vector3.zero);
+                float front = Mathf.Min(pos[sk.IndexOf("FL_Foot")].y, pos[sk.IndexOf("FR_Foot")].y), hind = Mathf.Min(pos[sk.IndexOf("BL_Foot")].y, pos[sk.IndexOf("BR_Foot")].y);
+                float err = Mathf.Abs(front - hind) + Mathf.Abs(a - 30f) * 0.001f;   // bei Gleichstand 30° bevorzugen
+                if (err < bestErr) { bestErr = err; best = a; }
+            }
+            _sitPitch[pr.Name] = best; return best;
+        }
+
+        /// <summary>Wurzel-Absenkung, damit der tiefste Fuß des Sitzes auf dem Boden steht (Vorwärtskinematik der Sitzpose).</summary>
+        public static float SitDrop(SkeletonDef sk, Dictionary<string, int> al, CreatureProfile pr)
+        {
+            var p = new PoseBuilder(sk, al); SitPose(p, SitPitch(pr));
+            float rest = sk.WorldPositions(null, Vector3.zero)[sk.IndexOf("BL_Foot")].y;
+            var pos = sk.WorldPositions(p.E, Vector3.zero); float mn = float.MaxValue;
+            foreach (var l in SkeletonDef.Legs) mn = Mathf.Min(mn, pos[sk.IndexOf(l + "_Foot")].y);
+            return rest - mn;
+        }
+
+        /// <summary>Sprunghöhe (Anteil der Beinlänge) je Gangart: Gehen kleine, Laufen etwas größere Sprünge.</summary>
+        public static float HopHeight(float amp) => Mathf.Lerp(0.12f, 0.3f, Mathf.InverseLerp(20f, 45f, amp));
+
+        static readonly float[] HopU = { 0f, 0.2f, 0.45f, 0.7f, 0.85f, 1f };
+        static float HopKey(float u, float a, float b, float c, float d, float e)
+        {
+            var v = new[] { 0f, a, b, c, d, e };
+            for (int i = 0; i < HopU.Length - 1; i++)
+                if (u <= HopU[i + 1]) { float k = (u - HopU[i]) / (HopU[i + 1] - HopU[i]); k = k * k * (3f - 2f * k); return Mathf.Lerp(v[i], v[i + 1], k); }
+            return 0f;
+        }
+
+        /// <summary>
+        /// Ein Hoppelsprung (u = 0…1) als Abweichung vom Sitz: Abstoßen mit den Hinterläufen (0–0,2), gestreckter Flug mit nach vorn
+        /// greifenden Vorderpfoten (0,2–0,7), Landung vorn (0,7), Hinterläufe schwingen unter den Körper (0,85), zurück im Sitz (1).
+        /// </summary>
+        public static void HopGait(PoseBuilder p, float u, float height)
+        {
+            u = Mathf.Repeat(u, 1f);
+            float pitch = HopKey(u, 15f, 30f, 10f, 0f, 0f);
+            p.R("P", pitch); p.R("C", HopKey(u, -5f, -5f, 5f, 0f, 0f));
+            float bu = HopKey(u, 40f, 85f, 20f, -5f, 0f), bl = HopKey(u, -60f, -110f, -30f, 5f, 0f);
+            float fu = HopKey(u, -15f, -50f, -10f, 5f, 0f), fl = HopKey(u, 10f, 20f, 15f, -5f, 0f);
+            p.R("BLU", bu); p.R("BRU", bu); p.R("BLL", bl); p.R("BRL", bl);
+            p.R("FLU", fu); p.R("FRU", fu); p.R("FLL", fl); p.R("FRL", fl);
+            p.R("Hd", -pitch * 0.6f); p.R("T1", HopKey(u, 5f, -10f, 5f, 0f, 0f));
+            p.Root.y = height * HopKey(u, 0.1f, 1f, 0.3f, 0f, 0f);
         }
 
         static void Wings(PoseBuilder p, CreatureProfile pr, float t, float rate, float amp, float baseAngle)

@@ -96,6 +96,11 @@ namespace ProjectTyrant.Flight
         /// <summary>Greif: aktueller Sturzwinkel (dreht in ≈ 0,7 s auf 80°) und mitgenommene Vorwärtsfahrt, die im Sturz nur langsam ausläuft – keine Vollbremsung beim Abtauchen.</summary>
         public float DiveAngleNow; float _carry;
         public const float DivePitchRate = 110f, DiveCarryDecay = 5f;
+        /// <summary>Greif nach dem Loslassen von V (Spieler-Wunsch 2026-11-12): Abfang-Winkel (° Nase unten, negativ = Aufschwung), läuft weich auf waagrecht
+        /// bzw. mit S auf den Steigwinkel – schnell, aber ohne Sprung. Schnell bei steilem Winkel, sanft kurz vor waagrecht.</summary>
+        public float PullAngle; public bool PullingOut;
+        public const float PullRateMin = 110f, PullRateMax = 240f, PullRateS = 260f;
+        public static float PullRate(float angle, bool s) => s ? PullRateS : Mathf.Lerp(PullRateMin, PullRateMax, Mathf.Clamp01(Mathf.Abs(angle) / 80f));
         /// <summary>Greif: Sturz-Energie = Höhe (m), die mit S wieder erklommen werden kann; Tempo beim Loslassen und Energie zu diesem Zeitpunkt.</summary>
         public float Energy; float _releaseSpeed, _releaseEnergy;
         /// <summary>Greif: beim Loslassen gemerkte Höchstmarke (Höhe beim Loslassen + zurückgewinnbare Höhe) – S steigt nie darüber.</summary>
@@ -142,7 +147,7 @@ namespace ProjectTyrant.Flight
         /// <summary>Von einer Kante gelaufen: Greif gleitet, Himmelsschuppe schwebt.</summary>
         public void LeaveGround() { if (Airborne || Banned) return; if (P.Kind == FlyerKind.Griffon) { State = FlightState.Glide; Forward = Mathf.Max(Mathf.Max(Forward, GroundSpeed), Run * P.GlideFactor); } else { State = FlightState.Hover; Forward = Mathf.Max(Forward, GroundSpeed); } Vertical = 0f; }
 
-        void Land() { State = FlightState.Ground; Vertical = 0f; Forward = Mathf.Min(Speed, Run * P.GroundFactor); DiveSpeed = 0f; DiveFlaps = 0; Energy = 0f; }
+        void Land() { State = FlightState.Ground; Vertical = 0f; Forward = Mathf.Min(Speed, Run * P.GroundFactor); DiveSpeed = 0f; DiveFlaps = 0; Energy = 0f; PullingOut = false; PullAngle = 0f; }
 
         void StepGriffon(float dt, FlightInput i)
         {
@@ -162,7 +167,8 @@ namespace ProjectTyrant.Flight
                 if (State != FlightState.Dive)
                 {
                     _carry = Forward; DiveAngleNow = Mathf.Clamp(Mathf.Atan2(-Vertical, Mathf.Max(0.1f, Forward)) * Mathf.Rad2Deg, 0f, P.DiveAngle);
-                    State = FlightState.Dive; DiveSpeed = Mathf.Max(Speed, Run); DiveFlaps = 0; _flapT = 0f;
+                    if (PullingOut) DiveAngleNow = Mathf.Max(DiveAngleNow, PullAngle);   // erneut V im Abfangen: vom aktuellen Winkel weiter
+                    float speedBefore = Speed; State = FlightState.Dive; DiveSpeed = Mathf.Max(speedBefore, Run); DiveFlaps = 0; _flapT = 0f; PullingOut = false;   // Tempo vor dem Zustandswechsel lesen (sonst 1 × Lauf → Neigungssprung)
                 }
                 DiveAngleNow = Mathf.MoveTowards(DiveAngleNow, P.DiveAngle, DivePitchRate * dt);
                 _carry = Mathf.MoveTowards(_carry, 0f, DiveCarryDecay * dt);
@@ -177,10 +183,27 @@ namespace ProjectTyrant.Flight
             if (State == FlightState.Dive)
             {
                 // Loslassen: kein automatisches Hochziehen – der Greif fängt waagrecht ab und behält das Sturz-Tempo als Energie
-                State = FlightState.Glide; Forward = DiveSpeed; Vertical = 0f;
+                State = FlightState.Glide;
                 Energy *= Recovery(DiveSpeed / Run);   // 3× knapp darunter, 4× genau, 5× etwas darüber
                 _releaseSpeed = DiveSpeed; _releaseEnergy = Mathf.Max(0.01f, Energy); DiveSpeed = 0f; EnergySpeed = _releaseSpeed;
                 PeakAltitude = Altitude + Energy;   // gemerkt: so hoch kommt S höchstens – sofort ziehen bringt alles, warten kostet Höhe und Tempo
+                PullAngle = DiveAngleNow; PullingOut = PullAngle > 0.5f;   // kein Sprung auf waagrecht: weich abfangen
+                if (!PullingOut) { Forward = _releaseSpeed; Vertical = 0f; }
+            }
+            if (PullingOut)
+            {
+                // Abfangbogen: Tempo bleibt, Winkel läuft auf waagrecht (bzw. mit S weiter auf den Steigwinkel); gefallene Meter zählen als Energie,
+                // gestiegene verbrauchen sie – die Höchstmarke bleibt dieselbe
+                bool pullS = i.Pitch < -0.1f;
+                float pullTarget = pullS ? -P.ClimbAngle * Mathf.Clamp01(-i.Pitch) : 0f;
+                PullAngle = Mathf.MoveTowards(PullAngle, pullTarget, PullRate(PullAngle, pullS) * dt);
+                float pv = Mathf.Max(EnergySpeed, glide), pa = PullAngle * Mathf.Deg2Rad;
+                Forward = pv * Mathf.Cos(pa); Vertical = -pv * Mathf.Sin(pa);
+                if (Vertical > 0f && Altitude + Vertical * dt >= PeakAltitude) { Vertical = Mathf.Max(0f, (PeakAltitude - Altitude) / dt); PullAngle = pullTarget; }
+                Energy = Mathf.Max(0f, Energy - Vertical * dt);
+                if (Mathf.Abs(PullAngle - pullTarget) < 0.01f) PullingOut = false;   // waagrecht bzw. im Aufschwung angekommen – Energie-Flug übernimmt
+                if (Energy > 0f) _releaseEnergy = Mathf.Max(_releaseEnergy, Energy);
+                return;
             }
             if (i.Jump && Charges > 0) { Charges--; Vertical = Mathf.Max(Vertical, 0f) + P.FlapImpulse; }
             if (Energy > 0.05f)
@@ -277,12 +300,37 @@ namespace ProjectTyrant.Flight
     }
 
     /// <summary>
+    /// Greif in der Luft (Spieler-Wunsch 2026-11-12): Richtungswechsel lenken das ganze Tempo um – kein Weitertreiben in die alte Richtung.
+    /// Die Flugrichtung dreht mit <see cref="TurnRate"/> (180° in ≈ 0,3 s) zur Wunschrichtung, der Betrag bleibt erhalten.
+    /// </summary>
+    public static class GriffonSteer
+    {
+        public const float TurnRate = 10f, VisualTurnDegPerSec = 720f;
+        public static Vector3 Direction(Vector3 current, Vector3 target, float dt)
+        {
+            current.y = 0f; target.y = 0f;
+            if (target.sqrMagnitude < 1e-6f) return current.sqrMagnitude > 1e-6f ? current.normalized : Vector3.forward;
+            if (current.sqrMagnitude < 1e-6f) return target.normalized;
+            var c = current.normalized; var tg = target.normalized;
+            if (Vector3.Dot(c, tg) < -0.999f) tg = (tg + Vector3.Cross(Vector3.up, c) * 0.02f).normalized;   // genaue Kehrtwende: waagrecht drehen, nie über oben
+            var d = Vector3.RotateTowards(c, tg, TurnRate * dt, 0f); d.y = 0f;
+            return d.normalized;
+        }
+        /// <summary>Horizontale Geschwindigkeit: immer exakt in Flugrichtung (keine Restbewegung quer oder rückwärts).</summary>
+        public static Vector3 Velocity(Vector3 dir, float speed) => dir * speed;
+    }
+
+    /// <summary>
     /// Nach Lauf 11: Himmelsschuppe in der Luft – freie Richtung (vor/zurück/seitlich, relativ zur Kamera). Schnelles Abbremsen und Umlenken
     /// (<see cref="Accel"/> m/s²); fliegt der Spieler weiter in die gleiche Richtung, bleibt mitgebrachter Schwung erhalten und klingt nur langsam ab.
     /// </summary>
     public static class SkyscaleSteer
     {
         public const float Accel = 28f, KeepDecay = 3f, KeepDot = 0.7f;
+        /// <summary>Spieler-Wunsch 2026-11-12: Himmelsschuppe hat ein festes horizontales Tempo – am Boden wie in der Luft, in jedem Flugzustand
+        /// (Schweben, Steigen, Sinken, erschöpft), ohne Tempo-Effekte (Eile, Verlangsamung, Beherrschung). Nur am Fels haftend steht sie; der Sprint (V) bleibt eine eigene Fähigkeit.</summary>
+        public const float FixedSpeed = 9.1f;
+        public static float Cruise(FlightState state) => state == FlightState.WallCling ? 0f : FixedSpeed;
         public static Vector3 Step(Vector3 vel, Vector3 wish, float cruise, float dt)
         {
             vel.y = 0f; wish.y = 0f;

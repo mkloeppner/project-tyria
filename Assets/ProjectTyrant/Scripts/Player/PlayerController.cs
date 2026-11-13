@@ -77,6 +77,7 @@ namespace ProjectTyrant
 
             float speed = (SpeedOverride > 0f ? SpeedOverride : MoveSpeed) * Combatant.MoveSpeedMultiplier * (downed ? 0.2f : 1f) * CastMoveFactor * (Time.frameCount - HazardFrame <= 1 ? HazardSpeed : 1f);   // Welt-Lauf W1: Hürden bremsen
             if (m.y < 0f && (faceCamera || mv.Turning)) speed *= BackwardFactor;
+            if (FixedSpeed > 0f) speed = FixedSpeed;   // Himmelsschuppe: festes Tempo, keine Tempo-Effekte (Spieler-Wunsch 2026-11-12)
 
             // Dodge
             Dodge.Endurance.RegenMultiplier = (Combatant.Effects.Has(EffectType.Vigor) ? EffectRules.VigorEnduranceFactor : 1f) * (Combatant.Effects.Has(EffectType.Weakness) ? EffectRules.WeaknessEnduranceFactor : 1f);
@@ -213,6 +214,8 @@ namespace ProjectTyrant
         public bool MountedControl { get; set; }
         /// <summary>&gt; 0: Bodengeschwindigkeit des Reittiers statt <see cref="MoveSpeed"/>.</summary>
         public float SpeedOverride { get; set; }
+        /// <summary>&gt; 0: festes horizontales Tempo ohne jeden Tempo-Effekt (Eile, Verlangsamung, Hürden, Rückwärts) – Himmelsschuppe.</summary>
+        public float FixedSpeed { get; set; }
         public float GravityScale { get; set; } = 1f;
         /// <summary>Lauf 10: horizontale Fluggeschwindigkeit (Greif/Himmelsschuppe); null = normale Steuerung.</summary>
         public Vector3? FlightVelocity { get; set; }

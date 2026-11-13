@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49aa0f0b23e7f484da686edf3f028124, type: 3}
+  m_Name: rauch_loop
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Visuals.ElementSim.SimRecipe
+  Id: rauch_loop
+  Element: Feuer
+  Seed: 23
+  Mode: 1
+  Grid: 128
+  Columns: 8
+  Rows: 8
+  TileSize: 128
+  StepsPerFrame: 1
+  WarmupSteps: 60
+  Dt: 0.016666668
+  Iterations: 20
+  Buoyancy: 0.9
+  Gravity: 0
+  Weight: 0.05
+  Vorticity: 2.5
+  Cooling: 0.3
+  DensityFade: 0.25
+  Viscosity: 0.00001
+  Diffusion: 0.00002
+  Damping: 0.02
+  FloorHeight: 0
+  Emitters:
+  - Shape: 0
+    X: 0.5
+    Y: 0.1
+    X2: 0.5
+    Y2: 0.15
+    Radius: 0.14
+    Density: 6
+    Temperature: 6
+    VelX: 0
+    VelY: 0.25
+    Start: 0
+    End: 1
+    Jitter: 0.4
+  ColorFromTemperature: 0
+  Ramp:
+    serializedVersion: 2
+    key0: {r: 0.12, g: 0.11, b: 0.12, a: 1}
+    key1: {r: 0.55, g: 0.53, b: 0.52, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  AlphaScale: 1.2
+  NormalStrength: 6
+  MaxVelocity: 1.5
+  CoreThreshold: 0.7
+  Exposure: 1.2
+  ParamHash: fc2a6f87
+  ResultHash: e19cba3d
+  LoopSeam: 0.01253937
+  PeakTime: 0.75000006

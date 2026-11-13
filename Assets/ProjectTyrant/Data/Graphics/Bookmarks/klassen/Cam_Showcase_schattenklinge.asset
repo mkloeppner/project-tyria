@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bee15e7a215f144da868249233de26d, type: 3}
+  m_Name: Cam_Showcase_schattenklinge
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Visuals.CameraBookmark
+  ZoneId: klassen
+  Name: Showcase_schattenklinge
+  Kind: 6
+  Position: {x: -55.1, y: 3.6, z: -53.5}
+  Euler: {x: 7.280289, y: 43.619644, z: 0.00000021517813}
+  Fov: 60
+  ClassId: schattenklinge

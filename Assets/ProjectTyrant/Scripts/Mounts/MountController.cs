@@ -271,7 +271,7 @@ namespace ProjectTyrant
             bool was = Motor.IsMounted;
             if (was) Motor.Dismount();
             _pc.MountedControl = false;
-            _pc.SpeedOverride = 0f;
+            _pc.SpeedOverride = 0f; _pc.FixedSpeed = 0f;
             _pc.VisualOffset = Vector3.zero; _pc.VisualTilt = Quaternion.identity; _tilt = 0f;
             _pc.HoverFloor = null;
             _pc.FallDamageHeight = _baseFallHeight;
@@ -292,6 +292,7 @@ namespace ProjectTyrant
         {
             bool onWater = Motor.HoversOnWater && _pc.IsHovering;
             _pc.SpeedOverride = Motor.GroundSpeed(onWater) * (Motor.Charging ? 0.5f : 1f) * (SpeedFactor != null ? SpeedFactor() : 1f);
+            _pc.FixedSpeed = Motor.Mounted == MountKind.Skyscale ? SkyscaleSteer.FixedSpeed : 0f;   // Himmelsschuppe: immer gleiches Tempo, am Boden wie in der Luft
             if (input == null) return;
             bool grounded = _pc.IsGrounded || _pc.IsHovering;
             var fwd = _pc.LastWish.sqrMagnitude > 0.01f ? _pc.LastWish.normalized : transform.forward;

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15c0f4c5c2a6fd49ab41e8a2685fa04, type: 3}
+  m_Name: Element_Eis
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Visuals.ElementPalette
+  Element: 1
+  Primary: {r: 0.47843137, g: 0.84705883, b: 1, a: 1}
+  Secondary: {r: 0.9098039, g: 0.98039216, b: 1, a: 1}
+  Core: {r: 2.2, g: 2.2, b: 2.2, a: 2.2}
+  Particle: 5
+  Motion: 1
+  TrailWidth: 0.25
+  TrailTime: 0.4
+  TrailJitter: 0
+  ImpactShockwave: 1
+  ImpactShards: 1
+  ImpactSparks: 0
+  AfterOverlay: vereist
+  SoundFamily: Frost
+  Description: "kantig und still, Frostfl\xE4che"

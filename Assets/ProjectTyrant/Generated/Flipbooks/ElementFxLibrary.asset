@@ -1,0 +1,166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6025e6e9a59f8745b82ab4f6fd29363, type: 3}
+  m_Name: ElementFxLibrary
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Visuals.ElementSim.ElementFxLibrary
+  Flipbooks:
+  - Id: feuer/feuer_explosion_burst
+    Material: {fileID: 2100000, guid: bccc3b2c7392d51418d5412220f61fa4, type: 2}
+    Loop: 0
+    Fps: 48
+    PeakTime: 0.6041667
+  - Id: feuer/feuer_flammen_loop
+    Material: {fileID: 2100000, guid: d443c6622f2de114aa9bd791e2282cce, type: 2}
+    Loop: 1
+    Fps: 75
+    PeakTime: 0.17333333
+  - Id: feuer/rauch_loop
+    Material: {fileID: 2100000, guid: 5ebd41bc92cac9048a45a268bb84e4fa, type: 2}
+    Loop: 1
+    Fps: 59.999996
+    PeakTime: 0.75000006
+  - Id: test/v1_test_burst
+    Material: {fileID: 2100000, guid: 3b3e21be6ee815e4e81da0ddbaecbee8, type: 2}
+    Loop: 0
+    Fps: 48
+    PeakTime: 0.9166667
+  - Id: test/v1_test_loop
+    Material: {fileID: 2100000, guid: fba5d4128ae72d04f91872a9679e8b14, type: 2}
+    Loop: 1
+    Fps: 59.999996
+    PeakTime: 0.10000001
+  - Id: wasser/wasser_gischt_loop
+    Material: {fileID: 2100000, guid: 276bd171b3e2ce647b9116a5eef0b181, type: 2}
+    Loop: 1
+    Fps: 59.999996
+    PeakTime: 0.5166667
+  - Id: wasser/wasser_spritzer_burst
+    Material: {fileID: 2100000, guid: f283d94473a2a3c4cbf0b1a0f64af7de, type: 2}
+    Loop: 0
+    Fps: 48
+    PeakTime: 0.125
+  - Id: wasser/wasser_spritzer_seitlich_burst
+    Material: {fileID: 2100000, guid: 24332a76327546148b8233b5c61f6cee, type: 2}
+    Loop: 0
+    Fps: 48
+    PeakTime: 0.33333334
+  - Id: wasser/wasser_kaustik_loop
+    Material: {fileID: 2100000, guid: f2ca253131890f144a759bd50e7a3324, type: 2}
+    Loop: 1
+    Fps: 24
+    PeakTime: 0
+  Materials:
+  - Element: wasser
+    Key: Mesh
+    Material: {fileID: 2100000, guid: f6445f75cf0d5844395a54370547d17d, type: 2}
+  - Element: wasser
+    Key: Pfuetze
+    Material: {fileID: 2100000, guid: 8004a8dac4a32e045ab25850622e73c4, type: 2}
+  - Element: wasser
+    Key: Nass
+    Material: {fileID: 2100000, guid: d74fb671e18342c42854bde63840f2cd, type: 2}
+  - Element: wasser
+    Key: Refract
+    Material: {fileID: 2100000, guid: 084b737c545d9734e9f328f5b238e389, type: 2}
+  - Element: 
+    Key: Refract
+    Material: {fileID: 2100000, guid: 4fa9d90b40f3b3d40b53c06017dd662b, type: 2}
+  GpuPresets:
+  - Id: wasser/sammeln
+    Settings:
+      Capacity: 2048
+      EmitPerSecond: 2500
+      Burst: 0
+      Shape: 1
+      ShapeRadius: 1.1
+      ConeAngle: 25
+      Speed: 0.2
+      SpeedJitter: 0.5
+      LifeMin: 0.25
+      LifeMax: 0.4
+      SizeStart: 0.04
+      SizeEnd: 0.015
+      Gravity: {x: 0, y: 0, z: 0}
+      WindFactor: 0.3
+      Drag: 1
+      VortexStrength: 0
+      VortexRadius: 2
+      Attract: 9
+      CurlStrength: 0
+      CurlScale: 0.6
+      CollideDepth: 0
+      Bounce: 0.3
+      StickBelowSpeed: 0.6
+      Render: 0
+      ColorStart: {r: 0.5, g: 0.8, b: 1.1, a: 0.35}
+      ColorEnd: {r: 0.9, g: 1.1, b: 1.4, a: 0}
+    Duration: 0.25
+  - Id: wasser/tropfen
+    Settings:
+      Capacity: 4096
+      EmitPerSecond: 0
+      Burst: 350
+      Shape: 2
+      ShapeRadius: 0.5
+      ConeAngle: 55
+      Speed: 4.5
+      SpeedJitter: 0.5
+      LifeMin: 0.8
+      LifeMax: 1.4
+      SizeStart: 0.035
+      SizeEnd: 0.02
+      Gravity: {x: 0, y: -9.81, z: 0}
+      WindFactor: 0.3
+      Drag: 0.2
+      VortexStrength: 0
+      VortexRadius: 2
+      Attract: 0
+      CurlStrength: 0
+      CurlScale: 0.6
+      CollideDepth: 1
+      Bounce: 0.15
+      StickBelowSpeed: 1.2
+      Render: 1
+      ColorStart: {r: 0.7, g: 0.95, b: 1.2, a: 0.5}
+      ColorEnd: {r: 0.4, g: 0.7, b: 1, a: 0}
+    Duration: 0.15
+  - Id: wasser/gischt
+    Settings:
+      Capacity: 2048
+      EmitPerSecond: 500
+      Burst: 0
+      Shape: 3
+      ShapeRadius: 1.2
+      ConeAngle: 25
+      Speed: 1.2
+      SpeedJitter: 0.6
+      LifeMin: 1.2
+      LifeMax: 2.2
+      SizeStart: 0.2
+      SizeEnd: 0.45
+      Gravity: {x: 0, y: -0.6, z: 0}
+      WindFactor: 0.6
+      Drag: 0.9
+      VortexStrength: 0
+      VortexRadius: 2
+      Attract: 0
+      CurlStrength: 1.2
+      CurlScale: 0.6
+      CollideDepth: 0
+      Bounce: 0.3
+      StickBelowSpeed: 0.6
+      Render: 0
+      ColorStart: {r: 0.5, g: 0.65, b: 0.75, a: 0.06}
+      ColorEnd: {r: 0.45, g: 0.6, b: 0.7, a: 0}
+    Duration: 0.8
+  ParticleCompute: {fileID: 7200000, guid: a12d040b4cfc2864dbb389424a053785, type: 3}
+  ParticleMaterial: {fileID: 2100000, guid: 8fe2604d5e1ebac4fbad54c417ff9e6b, type: 2}

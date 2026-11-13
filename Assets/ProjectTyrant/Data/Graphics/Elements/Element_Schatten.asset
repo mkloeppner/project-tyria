@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15c0f4c5c2a6fd49ab41e8a2685fa04, type: 3}
+  m_Name: Element_Schatten
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Visuals.ElementPalette
+  Element: 4
+  Primary: {r: 0.3529412, g: 0.22745098, b: 0.5411765, a: 1}
+  Secondary: {r: 0.16470589, g: 0.101960786, b: 0.22745098, a: 1}
+  Core: {r: 1.3552941, g: 1.0164706, b: 1.8, a: 1.8}
+  Particle: 1
+  Motion: 6
+  TrailWidth: 0.4
+  TrailTime: 0.5
+  TrailJitter: 0.1
+  ImpactShockwave: 0
+  ImpactShards: 0
+  ImpactSparks: 0
+  AfterOverlay: verderbt
+  SoundFamily: Schatten
+  Description: saugt und verwischt, dunkle Schleier

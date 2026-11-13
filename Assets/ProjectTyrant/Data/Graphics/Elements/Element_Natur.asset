@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15c0f4c5c2a6fd49ab41e8a2685fa04, type: 3}
+  m_Name: Element_Natur
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Visuals.ElementPalette
+  Element: 3
+  Primary: {r: 0.3529412, g: 0.84705883, b: 0.2901961, a: 1}
+  Secondary: {r: 0.78431374, g: 0.9411765, b: 0.4392157, a: 1}
+  Core: {r: 1.882353, g: 2, b: 1.6313726, a: 2}
+  Particle: 6
+  Motion: 5
+  TrailWidth: 0.3
+  TrailTime: 0.45
+  TrailJitter: 0.05
+  ImpactShockwave: 0
+  ImpactShards: 0
+  ImpactSparks: 0
+  AfterOverlay: vergiftet
+  SoundFamily: Natur
+  Description: "w\xE4chst und wiegt, Ranken und Bl\xE4tter"

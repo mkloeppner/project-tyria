@@ -13,7 +13,7 @@ namespace ProjectTyrant
     /// </summary>
     public partial class MountController
     {
-        public const float GriffonTurnRate = 1.8f, SkyscaleTurnRate = 3.2f;
+        public const float GriffonTurnRate = GriffonSteer.TurnRate, SkyscaleTurnRate = 3.2f;   // Greif: siehe GriffonSteer (vorher 1,8 rad/s → Tempo trieb in die alte Richtung)
         float _dashHintAt;
         Vector3 _seat; float _tilt;
         Vector3 _skyVel, _dashDir = Vector3.forward;
@@ -195,7 +195,6 @@ namespace ProjectTyrant
                 return;
             }
             // Modell → Welt
-            float rate = f.P.Kind == FlyerKind.Griffon ? GriffonTurnRate : SkyscaleTurnRate;
             Vector3 vel;
             if (f.P.Kind == FlyerKind.Skyscale)
             {
@@ -203,22 +202,22 @@ namespace ProjectTyrant
                 if (f.State == FlightState.Dash) _skyVel = _dashDir * f.Forward;
                 else
                 {
-                    float cruise = f.State == FlightState.Sink || f.State == FlightState.Descend ? f.Run * 0.6f : f.State == FlightState.WallCling ? 0f : f.Run * f.P.GlideFactor;
-                    _skyVel = SkyscaleSteer.Step(_skyVel, skyWish, cruise, dt);
+                    _skyVel = SkyscaleSteer.Step(_skyVel, skyWish, SkyscaleSteer.Cruise(f.State), dt);   // festes Tempo, keine Tempo-Effekte
+                    f.Forward = _skyVel.magnitude;   // Anzeige (× Lauf) zeigt das echte Flugtempo
                 }
                 _heading = Vector3.RotateTowards(_heading, cam, 8f * dt, 0f);   // schaut in Kamerarichtung, fliegt in jede Richtung
-                vel = _skyVel * (SpeedFactor != null ? SpeedFactor() : 1f);
+                vel = _skyVel;   // kein Beherrschungs-/Tempo-Faktor bei der Himmelsschuppe
             }
             else
             {
-                _heading = Vector3.RotateTowards(_heading, target, rate * dt, 0f);
-                vel = _heading * f.Forward * (SpeedFactor != null ? SpeedFactor() : 1f);
+                _heading = GriffonSteer.Direction(_heading, target, dt);   // Tempo wird sofort mit umgelenkt (kein Treiben in die alte Richtung)
+                vel = GriffonSteer.Velocity(_heading, f.Forward * (SpeedFactor != null ? SpeedFactor() : 1f));
             }
             _pc.FlightVelocity = vel;
             _pc.GravityScale = 0f; _pc.MaxFallSpeed = 0f;
             _pc.SetVerticalVelocity(f.Vertical);
             _pc.ResetFallTracking();
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(_heading), 360f * dt);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(_heading), (f.P.Kind == FlyerKind.Griffon ? GriffonSteer.VisualTurnDegPerSec : 360f) * dt);   // Körper folgt der Flugrichtung
             ApplyTilt(f, dt);
         }
 

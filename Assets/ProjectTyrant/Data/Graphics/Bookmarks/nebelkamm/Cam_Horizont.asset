@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bee15e7a215f144da868249233de26d, type: 3}
+  m_Name: Cam_Horizont
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Visuals.CameraBookmark
+  ZoneId: nebelkamm
+  Name: Horizont
+  Kind: 5
+  Position: {x: 0, y: 3.8000002, z: -410}
+  Euler: {x: 358.28165, y: 0, z: 0}
+  Fov: 62
+  ClassId: 

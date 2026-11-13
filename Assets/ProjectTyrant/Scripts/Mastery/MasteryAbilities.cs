@@ -58,7 +58,7 @@ namespace ProjectTyrant
             if (!Gliding) return;
             Gliding = false;
             _pc.GravityScale = 1f; _pc.MaxFallSpeed = 0f;
-            if (_mc == null || !_mc.Motor.IsMounted) _pc.SpeedOverride = 0f;
+            if (_mc == null || !_mc.Motor.IsMounted) { _pc.SpeedOverride = 0f; _pc.FixedSpeed = 0f; }
             _pc.ResetFallTracking();
             if (_wings != null) _wings.SetActive(false);
         }

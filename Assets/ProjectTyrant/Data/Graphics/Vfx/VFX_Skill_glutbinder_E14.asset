@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889582a98a279d64c86c5ee810950344, type: 3}
+  m_Name: VFX_Skill_glutbinder_E14
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Visuals.VfxDefinition
+  SkillId: elementarweber_glutbinder_E14
+  Element: 1
+  Palette: 1
+  Tier: 0
+  Phases:
+  - Phase: 0
+    Layers:
+    - Kind: 0
+      Id: Charge/Wasser/M
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+    - Kind: 1
+      Id: 
+      Color: {r: 0.25, g: 0.65, b: 1, a: 1}
+      Strength: 1.2
+      Radius: 4
+      Duration: 0.35
+      Delay: 0
+    - Kind: 8
+      Id: wasser/nass
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Strength: 1
+      Radius: 4
+      Duration: 1.2
+      Delay: 0
+  - Phase: 1
+    Layers:
+    - Kind: 0
+      Id: Shockwave/Wasser/M
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+    - Kind: 6
+      Id: wasser/WaterColumn
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Strength: 1
+      Radius: 1.6
+      Duration: 0.8
+      Delay: 0
+  - Phase: 2
+    Layers:
+    - Kind: 0
+      Id: Aura/Wasser/S
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+    - Kind: 5
+      Id: wasser/wasser_gischt_loop
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Strength: 1
+      Radius: 1.5
+      Duration: 1.2
+      Delay: 0
+  - Phase: 3
+    Layers:
+    - Kind: 0
+      Id: Impact/Wasser/M
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+    - Kind: 1
+      Id: 
+      Color: {r: 0.25, g: 0.65, b: 1, a: 1}
+      Strength: 1.6
+      Radius: 4
+      Duration: 0.18
+      Delay: 0
+    - Kind: 6
+      Id: wasser/WaveRing
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Strength: 1
+      Radius: 4
+      Duration: 1.2
+      Delay: 0
+    - Kind: 5
+      Id: wasser/wasser_kaustik_loop
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Strength: 1
+      Radius: 4
+      Duration: 2.5
+      Delay: 0
+    - Kind: 9
+      Id: wasser/gischt
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Strength: 1
+      Radius: 2
+      Duration: 1.2
+      Delay: 0
+  - Phase: 4
+    Layers:
+    - Kind: 0
+      Id: Veil/Wasser/S
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0.15
+    - Kind: 8
+      Id: wasser/pfuetze
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Strength: 1
+      Radius: 3.2
+      Duration: 16
+      Delay: 0

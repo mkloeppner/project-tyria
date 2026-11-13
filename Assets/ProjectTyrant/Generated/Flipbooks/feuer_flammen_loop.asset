@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49aa0f0b23e7f484da686edf3f028124, type: 3}
+  m_Name: feuer_flammen_loop
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Visuals.ElementSim.SimRecipe
+  Id: feuer_flammen_loop
+  Element: Feuer
+  Seed: 21
+  Mode: 1
+  Grid: 128
+  Columns: 8
+  Rows: 8
+  TileSize: 128
+  StepsPerFrame: 1
+  WarmupSteps: 60
+  Dt: 0.013333334
+  Iterations: 20
+  Buoyancy: 2.6
+  Gravity: 0
+  Weight: 0.05
+  Vorticity: 6
+  Cooling: 1.6
+  DensityFade: 0.9
+  Viscosity: 0.00001
+  Diffusion: 0.00002
+  Damping: 0.02
+  FloorHeight: 0
+  Emitters:
+  - Shape: 1
+    X: 0.35
+    Y: 0.08
+    X2: 0.65
+    Y2: 0.08
+    Radius: 0.06
+    Density: 20
+    Temperature: 35
+    VelX: 0
+    VelY: 0.7
+    Start: 0
+    End: 1
+    Jitter: 0.6
+  ColorFromTemperature: 1
+  Ramp:
+    serializedVersion: 2
+    key0: {r: 0.18, g: 0.05, b: 0.12, a: 1}
+    key1: {r: 0.85, g: 0.2, b: 0.04, a: 1}
+    key2: {r: 1, g: 0.6, b: 0.12, a: 0}
+    key3: {r: 1, g: 0.97, b: 0.8, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 22937
+    ctime2: 45875
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 4
+    m_NumAlphaKeys: 2
+  AlphaScale: 2
+  NormalStrength: 6
+  MaxVelocity: 1.5
+  CoreThreshold: 0.75
+  Exposure: 1.1
+  ParamHash: 65011db7
+  ResultHash: c9e847ad
+  LoopSeam: 0.021984505
+  PeakTime: 0.17333333

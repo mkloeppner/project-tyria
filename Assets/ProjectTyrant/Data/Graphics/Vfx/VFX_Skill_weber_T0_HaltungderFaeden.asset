@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889582a98a279d64c86c5ee810950344, type: 3}
+  m_Name: VFX_Skill_weber_T0_HaltungderFaeden
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Visuals.VfxDefinition
+  SkillId: elementarweber_weber_T0_HaltungderFaeden
+  Element: 8
+  Palette: 16
+  Tier: 0
+  Phases:
+  - Phase: 0
+    Layers:
+    - Kind: 0
+      Id: Charge/Zwielicht/M
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+    - Kind: 1
+      Id: 
+      Color: {r: 0.8, g: 0.5, b: 0.75, a: 1}
+      Strength: 1.2
+      Radius: 4
+      Duration: 0.35
+      Delay: 0
+  - Phase: 1
+    Layers:
+    - Kind: 0
+      Id: Release/Zwielicht/M
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+  - Phase: 2
+    Layers:
+    - Kind: 0
+      Id: Aura/Zwielicht/S
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+  - Phase: 3
+    Layers:
+    - Kind: 0
+      Id: Aura/Zwielicht/M
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+    - Kind: 1
+      Id: 
+      Color: {r: 0.8, g: 0.5, b: 0.75, a: 1}
+      Strength: 1.6
+      Radius: 4
+      Duration: 0.18
+      Delay: 0
+  - Phase: 4
+    Layers:
+    - Kind: 0
+      Id: Aura/Zwielicht/S
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0.15

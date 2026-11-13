@@ -233,17 +233,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47242be0d052edd498c38807df20fb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Anim.CharacterAnimator
-  Set: {fileID: 11400000, guid: 812adbc4d77d0224783a0a1f24ad9762, type: 2}
-  ClipPrefix: Quadruped_
+  Set: {fileID: 11400000, guid: a11fee99d77a1be43a7326259d72c2f3, type: 2}
+  ClipPrefix: Hare_
   WeaponStyle: Greatsword
   LocoClips:
-  - Quadruped_Idle
-  - Quadruped_Walk
-  - Quadruped_Run
-  - Quadruped_Run
-  - Quadruped_Walk
-  - Quadruped_Walk
-  - Quadruped_Walk
+  - Hare_Idle
+  - Hare_Walk
+  - Hare_Run
+  - Hare_Run
+  - Hare_Walk
+  - Hare_Walk
+  - Hare_Walk
   BreathClip: 
   StartClip: 
   UpperBodyLayer: 0
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Anim.AnimDriver
   Mode: 4
   Anim: {fileID: 8591144392269062878}
-  Prefix: Quadruped_
+  Prefix: Hare_
   WeaponStyle: Greatsword
   NpcAttackClip: 
   HandSocket: {fileID: 0}
@@ -846,8 +846,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 3263111401296302592}
   m_AABB:
-    m_Center: {x: 0, y: -0.061540306, z: 0.49824262}
-    m_Extent: {x: 0.71992, y: 1.2051356, z: 1.4891467}
+    m_Center: {x: 0, y: 0.028005779, z: 0.49824262}
+    m_Extent: {x: 0.865648, y: 1.4434493, z: 1.4891467}
   m_DirtyAABB: 0
 --- !u!1 &8916856058258107883
 GameObject:

@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889582a98a279d64c86c5ee810950344, type: 3}
+  m_Name: VFX_Skill_wegelagerer_T4_KantripLetzteKugel
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Visuals.VfxDefinition
+  SkillId: schattenklinge_wegelagerer_T4_KantripLetzteKugel
+  Element: 0
+  Palette: 19
+  Tier: 2
+  Phases:
+  - Phase: 0
+    Layers:
+    - Kind: 0
+      Id: Charge/Pulver/Elite
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+    - Kind: 0
+      Id: Sigil/Pulver/M
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0.05
+    - Kind: 1
+      Id: 
+      Color: {r: 0.85, g: 0.15, b: 0.15, a: 1}
+      Strength: 2
+      Radius: 4
+      Duration: 0.35
+      Delay: 0
+  - Phase: 1
+    Layers:
+    - Kind: 0
+      Id: Shockwave/Pulver/Elite
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+    - Kind: 1
+      Id: 
+      Color: {r: 0.85, g: 0.15, b: 0.15, a: 1}
+      Strength: 3
+      Radius: 7
+      Duration: 0.2
+      Delay: 0
+  - Phase: 2
+    Layers:
+    - Kind: 0
+      Id: Aura/Pulver/M
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+    - Kind: 1
+      Id: 
+      Color: {r: 0.85, g: 0.15, b: 0.15, a: 1}
+      Strength: 1.5
+      Radius: 5
+      Duration: 0.4
+      Delay: 0
+  - Phase: 3
+    Layers:
+    - Kind: 0
+      Id: Impact/Pulver/Elite
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+    - Kind: 1
+      Id: 
+      Color: {r: 0.85, g: 0.15, b: 0.15, a: 1}
+      Strength: 3.2
+      Radius: 8
+      Duration: 0.18
+      Delay: 0
+    - Kind: 2
+      Id: 
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 1
+      Radius: 6
+      Duration: 0.35
+      Delay: 0
+    - Kind: 4
+      Id: 
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0.12
+      Radius: 0
+      Duration: 0.06
+      Delay: 0
+  - Phase: 4
+    Layers:
+    - Kind: 0
+      Id: Aura/Pulver/S
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0.15
+    - Kind: 0
+      Id: Shockwave/Pulver/M
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0.05

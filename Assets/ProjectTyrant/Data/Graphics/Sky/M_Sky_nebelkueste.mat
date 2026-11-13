@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_Sky_nebelkueste
+  m_Shader: {fileID: 4800000, guid: da38386b53c3fac4d96397c1550859e3, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _CloudTex:
+        m_Texture: {fileID: 2800000, guid: 44b0acff9e887cd448d6f575f6f9f772, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _StarTex:
+        m_Texture: {fileID: 2800000, guid: 95e82257a6f137e47a0361bfd469c01e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Ash: 0
+    - _Aurora: 0
+    - _CloudCover: 0.35
+    - _Sand: 0
+    - _Stars: 1
+    - _SunSize: 0.025
+    m_Colors:
+    - _CloudColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Ground: {r: 0.65882355, g: 0.78431374, b: 0.70274514, a: 1}
+    - _Horizon: {r: 0.84705883, g: 0.95686275, b: 0.92862743, a: 1}
+    - _Zenith: {r: 0.16470586, g: 0.81411767, b: 0.84705883, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

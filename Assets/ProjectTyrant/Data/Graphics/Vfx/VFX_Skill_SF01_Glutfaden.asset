@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889582a98a279d64c86c5ee810950344, type: 3}
+  m_Name: VFX_Skill_SF01_Glutfaden
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Visuals.VfxDefinition
+  SkillId: elementarweber_SF01_Glutfaden
+  Element: 0
+  Palette: 0
+  Tier: 2
+  Phases:
+  - Phase: 0
+    Layers:
+    - Kind: 0
+      Id: Charge/Feuer/L
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+    - Kind: 0
+      Id: Sigil/Feuer/S
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0.05
+    - Kind: 1
+      Id: 
+      Color: {r: 1, g: 0.5775, b: 0.40199998, a: 1}
+      Strength: 2
+      Radius: 4
+      Duration: 0.35
+      Delay: 0
+  - Phase: 1
+    Layers:
+    - Kind: 0
+      Id: Release/Feuer/L
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+    - Kind: 1
+      Id: 
+      Color: {r: 1, g: 0.5775, b: 0.40199998, a: 1}
+      Strength: 3
+      Radius: 7
+      Duration: 0.2
+      Delay: 0
+  - Phase: 2
+    Layers:
+    - Kind: 0
+      Id: Projectile/Feuer/L
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+    - Kind: 1
+      Id: 
+      Color: {r: 1, g: 0.5775, b: 0.40199998, a: 1}
+      Strength: 1.5
+      Radius: 5
+      Duration: 0.4
+      Delay: 0
+  - Phase: 3
+    Layers:
+    - Kind: 0
+      Id: Impact/Feuer/L
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0
+    - Kind: 1
+      Id: 
+      Color: {r: 1, g: 0.5775, b: 0.40199998, a: 1}
+      Strength: 3.2
+      Radius: 8
+      Duration: 0.18
+      Delay: 0
+    - Kind: 2
+      Id: 
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 1
+      Radius: 3
+      Duration: 0.35
+      Delay: 0
+    - Kind: 4
+      Id: 
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0.12
+      Radius: 0
+      Duration: 0.06
+      Delay: 0
+  - Phase: 4
+    Layers:
+    - Kind: 0
+      Id: Veil/Feuer/S
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0.15
+    - Kind: 0
+      Id: Shockwave/Feuer/S
+      Color: {r: 0, g: 0, b: 0, a: 0}
+      Strength: 0
+      Radius: 0
+      Duration: 0
+      Delay: 0.05

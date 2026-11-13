@@ -1,0 +1,84 @@
+// Project Tyrant – VFX-Lauf V1: GPU-Partikel (nur Hoch/Ultra; darunter Shuriken-Fallback).
+// Kräfte wie GpuParticleModel (CPU-Referenz): Schwerkraft, Wind, Luftwiderstand, Wirbel um die Achse, Anziehung/Abstoßung,
+// Wirbel-Rauschen, Kollision gegen den Tiefenpuffer (Tropfen bleiben liegen, Funken springen).
+#pragma kernel Emit
+#pragma kernel Update
+
+struct Particle { float3 pos; float age; float3 vel; float life; float size; uint seed; uint flags; float pad; };
+RWStructuredBuffer<Particle> _Particles;
+
+uint _Capacity, _EmitStart, _EmitCount, _FrameSeed, _Shape;
+float3 _Origin, _Forward, _Gravity, _Wind, _Center;
+float _ShapeRadius, _ConeAngle, _Speed, _SpeedJitter, _LifeMin, _LifeMax, _SizeStart, _SizeEnd;
+float _WindFactor, _Drag, _VortexStrength, _VortexRadius, _Attract, _CurlStrength, _CurlScale, _Bounce, _StickBelowSpeed, _Collide, _Dt, _Time;
+Texture2D<float> _DepthTex; SamplerState sampler_point_clamp;
+float4x4 _ViewProj; float4 _ZParams; float _DepthValid;
+
+uint Hash(uint s) { s ^= 2747636419u; s *= 2654435769u; s ^= s >> 16; s *= 2654435769u; s ^= s >> 16; s *= 2654435769u; return s; }
+float Rand01(inout uint s) { s = Hash(s); return (s & 0xFFFFFF) / 16777216.0; }
+float3 RotateAxis(float3 v, float3 axis, float ang) { float c = cos(ang), s = sin(ang); return v * c + cross(axis, v) * s + axis * dot(axis, v) * (1 - c); }
+
+[numthreads(64, 1, 1)]
+void Emit(uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= _EmitCount) return;
+    uint index = (_EmitStart + id.x) % _Capacity;
+    uint s = Hash(index * 9781u + _FrameSeed * 6271u);
+    Particle p; p.seed = s; p.flags = 0; p.pad = 0;
+    float3 dir = normalize(_Forward + 1e-5);
+    float3 rnd = float3(Rand01(s) * 2 - 1, Rand01(s) * 2 - 1, Rand01(s) * 2 - 1);
+    rnd = dot(rnd, rnd) < 1e-6 ? float3(0, 1, 0) : rnd;
+    p.pos = _Origin;
+    if (_Shape == 1) { p.pos = _Origin + normalize(rnd) * _ShapeRadius * Rand01(s); dir = normalize(rnd); }
+    else if (_Shape == 2) { dir = RotateAxis(dir, normalize(cross(dir, rnd) + 1e-5), (Rand01(s) * 2 - 1) * radians(_ConeAngle)); }
+    else if (_Shape == 3) { float a = Rand01(s) * 6.2831853; float3 ring = float3(cos(a), 0, sin(a)); p.pos = _Origin + ring * _ShapeRadius; dir = normalize(float3(0, 1, 0) + ring * 0.3); }
+    else if (_Shape == 4) { p.pos = _Origin + _Forward * Rand01(s); dir = normalize(rnd); }
+    p.vel = dir * _Speed * (1 + (Rand01(s) * 2 - 1) * _SpeedJitter);
+    p.life = lerp(_LifeMin, _LifeMax, Rand01(s)); p.age = 0; p.size = _SizeStart;
+    _Particles[index] = p;
+}
+
+float3 Curl(float3 p, float t)
+{
+    float a = sin(p.y * 1.7 + t) + cos(p.z * 1.3), b = sin(p.z * 1.5 + t * 0.7) + cos(p.x * 1.9), c = sin(p.x * 1.1 - t * 0.9) + cos(p.y * 1.4);
+    return float3(b - c, c - a, a - b) * 0.5;
+}
+
+[numthreads(256, 1, 1)]
+void Update(uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= _Capacity) return;
+    Particle p = _Particles[id.x];
+    if (p.age >= p.life) return;
+    float3 acc = _Gravity + _Wind * _WindFactor - p.vel * _Drag;
+    float3 rel = p.pos - _Center;
+    if (_VortexStrength != 0) { float3 flat = float3(rel.x, 0, rel.z); float r = length(flat); if (r > 1e-4) acc += cross(float3(0, 1, 0), flat / r) * _VortexStrength * exp(-r / max(0.1, _VortexRadius)); }
+    if (_Attract != 0 && dot(rel, rel) > 1e-6) acc -= normalize(rel) * _Attract;
+    if (_CurlStrength != 0) acc += Curl(p.pos * _CurlScale, p.age) * _CurlStrength;
+    if ((p.flags & 1u) == 0) { p.vel += acc * _Dt; p.pos += p.vel * _Dt; }
+    p.age += _Dt;
+    p.size = lerp(_SizeStart, _SizeEnd, saturate(p.age / p.life));
+    if (_Collide > 0.5 && _DepthValid > 0.5 && (p.flags & 1u) == 0)
+    {
+        float4 cs = mul(_ViewProj, float4(p.pos, 1));
+        if (cs.w > 0.01)
+        {
+            float2 uv = cs.xy / cs.w * 0.5 + 0.5;
+            #if UNITY_UV_STARTS_AT_TOP
+            uv.y = 1 - uv.y;
+            #endif
+            if (all(uv > 0) && all(uv < 1))
+            {
+                float raw = _DepthTex.SampleLevel(sampler_point_clamp, uv, 0);
+                float scene = 1.0 / (_ZParams.z * raw + _ZParams.w);   // LinearEyeDepth
+                float eye = cs.w;
+                if (eye > scene + 0.02 && eye < scene + 0.6)   // knapp hinter der Oberfläche = Aufprall
+                {
+                    if (abs(p.vel.y) < _StickBelowSpeed) { p.vel = 0; p.flags |= 1u; }
+                    else { p.vel = float3(p.vel.x * 0.6, -p.vel.y * _Bounce, p.vel.z * 0.6); p.pos += p.vel * _Dt; }
+                }
+            }
+        }
+    }
+    _Particles[id.x] = p;
+}

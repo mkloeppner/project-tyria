@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd52eae51de1747468b14508499b6be7, type: 3}
+  m_Name: ZoneArt_daemmerwald
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Visuals.ZoneArtProfile
+  ZoneId: daemmerwald
+  Biome: moor
+  Ground: {r: 0.24235293, g: 0.3529412, b: 0.20392157, a: 1}
+  VegetationRock: {r: 0.35686275, g: 0.33882356, b: 0.19607843, a: 1}
+  Sky: {r: 0.602353, g: 0.5254902, b: 0.65882355, a: 1}
+  Accent: {r: 0.68078434, g: 0.84705883, b: 0.3529412, a: 1}
+  Hazard: {r: 0.7137255, g: 0.76862746, b: 0.22745098, a: 1}
+  LightColor: {r: 1, g: 0.8509804, b: 0.627451, a: 1}
+  ShadowColor: {r: 0.36392155, g: 0.24705882, b: 0.43137255, a: 1}
+  SunAzimuth: 232
+  SunNoonElevation: 28
+  SunIntensity: 1.1
+  AmbientSky: {r: 0.57890195, g: 0.5411765, b: 0.6609804, a: 1}
+  AmbientEquator: {r: 0.63215685, g: 0.5588235, b: 0.63431376, a: 1}
+  AmbientGround: {r: 0.2425098, g: 0.24000001, b: 0.25411767, a: 0.8}
+  UnderLight: 0
+  SkyZenith: {r: 0.35215688, g: 0.29411766, b: 0.47843137, a: 1}
+  SkyHorizon: {r: 0.72156864, g: 0.6627451, b: 0.7019608, a: 1}
+  SkyGround: {r: 0.26509804, g: 0.2901961, b: 0.22745098, a: 1}
+  CloudColor: {r: 0.84705883, g: 0.8156863, b: 0.8627451, a: 1}
+  CloudCover: 0.65
+  Stars: 1
+  Aurora: 0
+  AshSky: 0
+  SandVeil: 0
+  Underground: 0
+  FogColor: {r: 0.54901963, g: 0.6039216, b: 0.5592157, a: 1}
+  FogDensity: 0.0048
+  FogHeight: 6
+  FogHeightFalloff: 0.15
+  SunScatter: 0.7
+  Exposure: 0.1
+  Contrast: 12
+  Saturation: 6
+  ExposureCalibration: 0.15354614
+  TargetSaturation: 0.34
+  WhiteBalance: 0
+  SplitShadows: {r: 0.36392155, g: 0.24705882, b: 0.43137255, a: 1}
+  SplitHighlights: {r: 0.7607843, g: 0.65882355, b: 0.40784314, a: 1}
+  BloomThreshold: 1.1
+  BloomIntensity: 0.5
+  Vignette: 0.2
+  OutlineColor: {r: 0.07764706, g: 0.101960786, b: 0.07058824, a: 1}
+  WindStrength: 0.6
+  WaterShallow: {r: 0.30980393, g: 0.53725487, b: 0.72156864, a: 1}
+  WaterDeep: {r: 0.07058824, g: 0.11137254, b: 0.36078432, a: 1}
+  Weathers: 04000000010000000200000000000000i
+  AmbientFx: 00000000040000000d0000000a0000000c000000i
+  AmbientVolumes:
+  - Center: {x: 0, y: 1.1565566, z: -390}
+    Radius: 24
+    Kind: 0
+  - Center: {x: -64.58373, y: 3.7434373, z: -307.9858}
+    Radius: 24
+    Kind: 4
+  - Center: {x: 22.064835, y: 1.3286853, z: -279.44116}
+    Radius: 24
+    Kind: 13
+  - Center: {x: 38.251488, y: 6.1272964, z: 5.3749056}
+    Radius: 24
+    Kind: 10
+  - Center: {x: 9.450174, y: 5.1874495, z: -378.00687}
+    Radius: 24
+    Kind: 12
+  SkyMaterial: {fileID: 2100000, guid: f7623b0760ca0714288833946f532f3e, type: 2}
+  Volume: {fileID: 11400000, guid: 0417bcd5f07835c42bdca0d2c1dfc83b, type: 2}

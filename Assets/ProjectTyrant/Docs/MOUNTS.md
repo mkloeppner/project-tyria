@@ -33,7 +33,9 @@ Kinematisch und deterministisch (fester Zeitschritt in den Tests, keine Rigidbod
 | Strömungsabriss | unter 0,6 × Lauf: sackt ab, bis wieder 0,72 × | – |
 | Aufwinde | wirkungslos | heben und füllen den Auftrieb (Aufwindflug) |
 | Luftakrobatik | – | 1 Auftrieb-Ladung je 4 s Gleiten |
-Lenkung: der Greif folgt der Kamera (A/D ± 70°), 1,8 rad/s.
+Loslassen von V: weicher Abfangbogen statt Sprung auf waagrecht – der Sturzwinkel läuft mit 240°/s (steil) bis 110°/s (kurz vor waagrecht) zurück, aus 80° in ≈ 0,5 s; das Tempo bleibt, die ≈ 5 m Bogen-Höhe kommen als Sturz-Energie zurück. S während des Bogens geht mit 260°/s direkt in den 50°-Aufschwung über; erneut V taucht vom aktuellen Winkel aus wieder ab (Spieler-Wunsch 2026-11-12).
+
+Lenkung: der Greif folgt der Kamera (A/D ± 70°) mit 10 rad/s (Kehrtwende ≈ 0,3 s); das ganze Tempo wird beim Richtungswechsel sofort mit umgelenkt, es treibt nichts in die alte Richtung weiter (`GriffonSteer`, Spieler-Wunsch 2026-11-12). Der Körper dreht mit bis zu 720°/s nach.
 
 ### Himmelsschuppe
 | Wert | Rang 0 | mit Beherrschung |
@@ -41,7 +43,7 @@ Lenkung: der Greif folgt der Kamera (A/D ± 70°), 1,8 rad/s.
 | Flugausdauer | 100 | 150 (Flugkondition) |
 | Steigen (Leertaste halten) | 20/s, 5 m/s | – |
 | Schweben (loslassen) | 5/s, Höhe bleibt | 3/s (Flugkondition) |
-| Vorwärtsflug (W) | kostenlos, 1,4 × Lauf, 8 : 1 | – |
+| Vorwärtsflug (W, frei in alle Richtungen) | festes Tempo 9,1 m/s – am Boden wie in der Luft, in jedem Zustand (Schweben, Steigen, Sinken, erschöpft), ohne Tempo-Effekte (Eile, Verlangsamung, Hürden, Beherrschung); nur am Fels haftend 0 und der Sprint (V) als eigene Fähigkeit (seit 2026-11-12) | – |
 | Sprint (V drücken, nur in der Luft) | 4,5 × Lauf waagrecht für 0,3 s (≈ 9,5 m), kostet 1 Ausweich-Balken + 6 Flugkraft, 0,9 s Abklingzeit; danach bleibt ~1,8 × Lauf als Schwung | – |
 | Boden | +25/s | – |
 | Wandhaften | – | an Wänden ≥ 60°: +15/s, höchstens 20 s (Wandhaften) |

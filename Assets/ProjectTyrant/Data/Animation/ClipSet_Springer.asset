@@ -29,9 +29,9 @@ MonoBehaviour:
     Length: 1.2
     Markers:
     - Type: FootL
-      Time: 0.9
+      Time: 0.84000003
     - Type: FootR
-      Time: 1
+      Time: 1.0200001
     FootL: []
     FootR: []
   - Name: Springer_Run
@@ -41,9 +41,9 @@ MonoBehaviour:
     Length: 0.6
     Markers:
     - Type: FootL
-      Time: 0.43333334
+      Time: 0.42000002
     - Type: FootR
-      Time: 0.4
+      Time: 0.51000005
     FootL: []
     FootR: []
   - Name: Springer_Jump
@@ -121,9 +121,9 @@ MonoBehaviour:
     Length: 0.55
     Markers:
     - Type: FootL
-      Time: 0.4
+      Time: 0.385
     - Type: FootR
-      Time: 0.4
+      Time: 0.46750003
     FootL: []
     FootR: []
   - Name: Springer_MLeap

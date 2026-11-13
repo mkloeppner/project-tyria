@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15c0f4c5c2a6fd49ab41e8a2685fa04, type: 3}
+  m_Name: Element_Arkan
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Visuals.ElementPalette
+  Element: 9
+  Primary: {r: 0.7529412, g: 0.3764706, b: 1, a: 1}
+  Secondary: {r: 0.5019608, g: 0.7529412, b: 1, a: 1}
+  Core: {r: 2.7231371, g: 2.547451, b: 2.8, a: 2.8}
+  Particle: 8
+  Motion: 2
+  TrailWidth: 0.3
+  TrailTime: 0.35
+  TrailJitter: 0.05
+  ImpactShockwave: 1
+  ImpactShards: 0
+  ImpactSparks: 1
+  AfterOverlay: 
+  SoundFamily: Arkan
+  Description: wirbelt in Glyphen, Runenringe

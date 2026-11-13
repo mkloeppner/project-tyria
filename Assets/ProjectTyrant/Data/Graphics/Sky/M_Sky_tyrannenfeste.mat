@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_Sky_tyrannenfeste
+  m_Shader: {fileID: 4800000, guid: da38386b53c3fac4d96397c1550859e3, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _CloudTex:
+        m_Texture: {fileID: 2800000, guid: 44b0acff9e887cd448d6f575f6f9f772, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _StarTex:
+        m_Texture: {fileID: 2800000, guid: 95e82257a6f137e47a0361bfd469c01e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Ash: 0
+    - _Aurora: 0
+    - _CloudCover: 0.75
+    - _Sand: 0
+    - _Stars: 0
+    - _SunSize: 0.025
+    m_Colors:
+    - _CloudColor: {r: 0.47843137, g: 0.41568628, b: 0.5411765, a: 1}
+    - _Ground: {r: 0.16470589, g: 0.1254902, b: 0.1882353, a: 1}
+    - _Horizon: {r: 0.5411765, g: 0.41568628, b: 0.6039216, a: 1}
+    - _Zenith: {r: 0.16470589, g: 0.101960786, b: 0.2901961, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

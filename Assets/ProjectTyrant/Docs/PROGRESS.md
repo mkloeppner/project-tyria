@@ -333,3 +333,44 @@ Grafik-Lauf G1–G7 war beim Start abgeschlossen (Docs GRAPHICS, PERFORMANCE, VF
 | Korrektur | fertig | 2026-11-12 14:10 | Basis dreht Vorder- mit Seitenachse, Kasten- und Deckel-Reihenfolge umgekehrt, `AddMesh` dreht bei gespiegelter Übernahme; +8 Tests `CharacterMeshFixTests` (alle Richtungen, Kegel, Kasten gedreht, Ellipsoid, Reparatur-Werkzeug) |
 | Rebuild Everything | fertig | 2026-11-12 14:35 | 1073 s ohne Fehler; danach 991 geskinnte Meshes geprüft: nach innen zeigende Röhren/Kegel/Ellipsoide 0 in allen neu gebauten Meshes (übrige Treffer: gewölbte doppelseitige Umhänge = Fehlalarm der Prüfung, und alte, nirgends mehr verwendete Villager-/Test-Meshes vom 09./10.11. (nicht gelöscht)) |
 | Nachweis | fertig | 2026-11-12 14:45 | `Temp/PT_QA/fix_holes/mounts_nah.jpg` (Raptor, Springer beidseitig geschlossen, Füße und Kamm aus Kästen jetzt sichtbar), `ingame.jpg`; 1058/1058 EditMode, Konsole 0/0 |
+
+## Fix: Greif treibt beim Richtungswechsel in die alte Richtung (Spieler-Meldung, 2026-11-12 15:35)
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| Ursache | fertig | 2026-11-12 15:40 | Flugrichtung drehte mit 1,8 rad/s zur Wunschrichtung, das volle Tempo hing an der alten Richtung: Kehrtwende ≈ 1,75 s, bei 21 m/s ≈ 12 m weiter in die alte Richtung |
+| Korrektur | fertig | 2026-11-12 15:45 | `GriffonSteer`: Richtung dreht mit 10 rad/s (180° in 0,32 s), Geschwindigkeit immer exakt in Flugrichtung mit unverändertem Betrag, genaue Kehrtwende dreht waagrecht; Körper dreht mit 720°/s nach. Himmelsschuppe unverändert |
+| Tests | fertig | 2026-11-12 15:50 | 1063/1063 EditMode (+5 `GriffonSteerTests`: Kehrtwende ≤ 0,34 s, Betrag bleibt, kein Rest in alter Richtung, Weg in alte Richtung < 2,5 m), Konsole 0/0 |
+
+## Fix: Greif springt beim Loslassen von V auf waagrecht (Spieler-Meldung, 2026-11-12 15:48)
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| Ursache | fertig | 2026-11-12 15:55 | Loslassen setzte Sinktempo in einem Bild auf 0 und das ganze Tempo waagrecht – die Bahn knickte ab, die Neigung sprang hinterher; zusätzlich las erneutes Abtauchen das Tempo nach dem Zustandswechsel (1 × Lauf → Neigungssprung) |
+| Korrektur | fertig | 2026-11-12 16:00 | Abfangbogen im Flugmodell (`PullAngle`, 240 → 110 °/s, mit S 260 °/s in den 50°-Aufschwung); aus 80° bei 21 m/s: 0,48 s, 5,0 m Höhe, die als Energie zurückkommen (Höchstmarke unverändert); erneutes V setzt am aktuellen Winkel an |
+| Tests | fertig | 2026-11-12 16:05 | 1069/1069 EditMode (+6 `GriffonPullOutTests`; `Griffon_ReleaseKeepsSpeed_NoAutoLift` auf die neue Vorgabe umgestellt: Tempo als Betrag, Sinken gemessen nach dem Bogen, Bogen ≤ 8 m), Konsole 0/0 |
+
+## Fix: Himmelsschuppe läuft schneller als sie fliegt (Spieler-Meldung, 2026-11-12 16:30)
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| Ursache | fertig | 2026-11-12 16:35 | Flug-Reisetempo fest 7 × 1,4 = 9,8 m/s; Laufen = Reittier-Tempo 9,1 m/s × Bewegungs-Effekte (Eile, Tempo-Boni) × Reittier-Beherrschung → mit Effekt am Boden schneller |
+| Korrektur | fertig | 2026-11-12 16:40 | `SkyscaleSteer.Cruise`: Flugtempo = Lauftempo (gleiche Formel); erschöpftes Sinken und C-Sinken 60 %, Wandhaften 0; Tempo-Anzeige zeigt das echte Flugtempo |
+| Tests | fertig | 2026-11-12 16:45 | 1075/1075 EditMode (+6 `SkyscaleCruiseTests`), Konsole 0/0 |
+
+## Änderung: Himmelsschuppe mit festem Tempo (Spieler-Wunsch, 2026-11-12 19:13)
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| Umsetzung | fertig | 2026-11-12 19:20 | `SkyscaleSteer.FixedSpeed` 9,1 m/s in allen Flugzuständen (vorher Sinken 60 %), ohne Tempo-Effekte und ohne Beherrschungs-Faktor; am Boden `PlayerController.FixedSpeed` (überschreibt Eile, Verlangsamung, Hürden, Rückwärts, Wasser), beim Absitzen zurückgesetzt; Wandhaften 0, Sprint unverändert |
+| Tests | fertig | 2026-11-12 19:20 | `SkyscaleCruiseTests` auf festes Tempo umgestellt (+1); Kompilieren 0/0 |
+
+## Fix: Leere Anzeige beim Start + Hasen sitzen und hoppeln (Spieler-Meldung, 2026-11-12 19:27)
+
+| Schritt | Status | Ende | Nachweis |
+|---|---|---|---|
+| Leere Anzeige | fertig | 2026-11-12 19:30 | Im Editor war eine leere, unbenannte Szene offen (vom abgebrochenen Testlauf um 19:20 zurückgelassen); PT_Core + Startzone wieder geöffnet, nach dem nächsten Testlauf weiter offen |
+| Hasen-Gangart | fertig | 2026-11-12 19:50 | Neue Gangart `Hop` (ClipLibrary): Sitz mit aufgerichtetem Oberkörper (Winkel je Profil so, dass Vorder- und Hinterpfoten aufsetzen: Springer 23,5°, Schneehase 13°), gefaltete Hinterläufe; Fortbewegung als kleine Sprünge (Abstoßen, gestreckter Flug, Landung vorn bei 70 %, hinten bei 85 %), tiefster Fuß nie im Boden; Aufladen geduckt. Springer-Reittier und neues Profil „Hare“ für den Schneehasen (lange Ohren, kräftige Hinterläufe) |
+| Bau | fertig | 2026-11-12 19:50 | Clips neu gebacken, Schneehase-Prefab neu; Bilder `Temp/PT_QA/hase/sheet.jpg` |
+| Tests | fertig | 2026-11-12 19:55 | 1087/1087 EditMode (+10 `HareHopTests`), Konsole 0/0 |
+| Absturz Charakterauswahl | Code fertig, Kompilieren offen | 2026-11-12 21:10 | Absturzbericht `CrashReport_1eeed754…`: Zugriffsverletzung in `mecanim::animation::DestroyAnimationSet` ← `Animator::Deactivate` ← `GameObject.SetActive` in `CharacterSelectController.Refresh` (aufgerufen von `CloseCreate`, Knopf „Abbrechen“/„Erstellen“ im Erstellungsdialog). Ursache: die Vorschaufiguren (geriggt, mit Animator) wurden per SetActive ein-/ausgeblendet – Verstoß gegen „nie SetActive auf geriggten Figuren“. Neu: `ShowFigure` schaltet nur die Renderer (`ActorVisibility.SetRenderersVisible`), die Figur bleibt aktiv (einmaliges Einschalten, falls gespeichert inaktiv). Neue Tests `CharacterSelectFigureTests` (2). Editor war beim Fix nicht erreichbar (abgestürzt) → Kompilieren/Testlauf beim nächsten Start |

@@ -22,10 +22,11 @@ namespace ProjectTyrant.EditorTools
         }
 
         /// <summary>Vierbeiner (Wolf, Ziege, Hase, Kröte, Salamander): Länge, Beinlänge, Rumpfhöhe, Hals, Schwanz, Ohren/Hörner/Schnauze.</summary>
-        public static GameObject Quadruped(Transform parent, string key, Look l, float length, float legLen, float bodyH, float neck, float tail, bool ears, bool horns, bool snout)
+        public static GameObject Quadruped(Transform parent, string key, Look l, float length, float legLen, float bodyH, float neck, float tail, bool ears, bool horns, bool snout, string profile = "Quadruped")
         {
             var bl = B(l); bl.Ears = ears; bl.Horns = horns; bl.Snout = snout;
-            return CharacterRigs.Beast(parent, "PT_Creature_" + key, "Quadruped", bl, length, legLen + bodyH * 0.35f, bodyH, Mathf.Max(0.12f, neck * 0.7f), tail, Mathf.Max(0.18f, bodyH * 0.7f), l.Scale);
+            if (profile == "Hare") { bl.LongEars = true; bl.BigHind = true; }   // Hase: lange Ohren, kräftige Hinterläufe, sitzt und hoppelt
+            return CharacterRigs.Beast(parent, "PT_Creature_" + key, profile, bl, length, legLen + bodyH * 0.35f, bodyH, Mathf.Max(0.12f, neck * 0.7f), tail, Mathf.Max(0.18f, bodyH * 0.7f), l.Scale);
         }
 
         /// <summary>Humanoid (Moorkoloss, Frosthüter, Beschwörer, Golem, Weltboss): Humanoid-Skelett, optional Schild/Stab/Glutrisse.</summary>

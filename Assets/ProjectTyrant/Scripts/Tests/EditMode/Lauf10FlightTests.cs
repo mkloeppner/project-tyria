@@ -104,12 +104,15 @@ namespace ProjectTyrant.Tests
             float speed = m.DiveSpeed, low = m.Altitude;
             m.Step(Dt, new FlightInput());
             Assert.AreEqual(FlightState.Glide, m.State);
-            Assert.AreEqual(speed, m.Forward, 0.5f, "Sturz-Tempo bleibt erhalten");
+            Assert.AreEqual(speed, UnityEngine.Mathf.Sqrt(m.Forward * m.Forward + m.Vertical * m.Vertical), 0.5f, "Sturz-Tempo bleibt erhalten (Abfangbogen seit 2026-11-12: Betrag statt sofort waagrecht)");
             float peak = m.Altitude;
-            for (int i = 0; i < 100; i++) { m.Step(Dt, new FlightInput()); peak = System.Math.Max(peak, m.Altitude); }
+            int arcSteps = 0; while (m.PullingOut && arcSteps < 100) { m.Step(Dt, new FlightInput()); peak = System.Math.Max(peak, m.Altitude); arcSteps++; }
+            float level = m.Altitude;   // Abfangbogen (seit 2026-11-12) fertig: ab hier waagrecht
+            Assert.Greater(level, low - 8f, "der Bogen kostet nur wenige Meter (kommen als Energie zurück)");
+            for (int i = arcSteps; i < 100; i++) { m.Step(Dt, new FlightInput()); peak = System.Math.Max(peak, m.Altitude); }
             Assert.LessOrEqual(peak, low + 0.01f, "kein automatisches Hochziehen");
             Assert.Greater(m.Forward, speed * 0.85f, "Tempo hält sich (nur langsamer Verlust)");
-            Assert.Less(m.Altitude, low - 0.5f, "verliert leicht an Höhe"); Assert.Greater(m.Altitude, low - 3f, "nur leicht (≈ 1 m/s)");
+            Assert.Less(m.Altitude, level - 0.5f, "verliert danach leicht an Höhe"); Assert.Greater(m.Altitude, level - 3f, "nur leicht (≈ 1 m/s)");
         }
 
         /// <summary>Sturz bis zur Stufe (0/1/2 Flügelschläge = 3×/4×/5×), loslassen, S halten bis die Energie verbraucht ist → Endhöhe, Ausgangshöhe.</summary>

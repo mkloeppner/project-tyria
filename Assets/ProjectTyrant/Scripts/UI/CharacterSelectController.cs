@@ -166,12 +166,24 @@ namespace ProjectTyrant
                 if (Figures.Length > i && Figures[i] != null)
                 {
                     bool show = c != null || (_creating && i == _sel);
-                    Figures[i].gameObject.SetActive(show);
+                    ShowFigure(Figures[i], show);
                     if (c != null && !(_creating && i == _sel)) Dress(Figures[i], cls, c.PrimaryHex, c.SecondaryHex, c.EliteSpec);
                 }
             }
             var cur = AccountModel.Get(_acc, _sel);
             _info.text = cur != null ? cur.Name + " – zuletzt gespielt " + (string.IsNullOrEmpty(cur.LastPlayed) ? "–" : cur.LastPlayed) : "Freier Platz – „Erstellen“ für einen neuen Charakter";
+        }
+
+        /// <summary>
+        /// Vorschaufigur ein-/ausblenden OHNE GameObject.SetActive: das Deaktivieren einer geriggten Figur baut im Animator das
+        /// AnimationSet ab (Animator::Deactivate → mecanim DestroyAnimationSet) und ließ den Editor beim Schließen des
+        /// Erstellungsdialogs abstürzen (Absturzbericht 12.11.2026). Die Figur bleibt aktiv, nur ihre Renderer werden umgeschaltet.
+        /// </summary>
+        static void ShowFigure(Transform fig, bool show)
+        {
+            if (fig == null) return;
+            if (!fig.gameObject.activeSelf) fig.gameObject.SetActive(true);   // nur einmalig einschalten (gespeichert inaktiv), nie wieder aus
+            ActorVisibility.SetRenderersVisible(fig, show);
         }
 
         static string ZoneName(string id) => id == "nebelmoor" ? "Nebelmoor" : id == "frostkamm" ? "Frostkamm" : id == "gluetoede" ? "Glutöde" : "Sonnfurt";
@@ -263,7 +275,7 @@ namespace ProjectTyrant
         void UpdatePreview()
         {
             var fig = Figures.Length > _sel ? Figures[_sel] : null; if (fig == null) return;
-            fig.gameObject.SetActive(true);
+            ShowFigure(fig, true);
             Dress(fig, Classes != null ? Classes.Get(_newClass) : null, Palette[_p], Palette[_s]);
         }
 

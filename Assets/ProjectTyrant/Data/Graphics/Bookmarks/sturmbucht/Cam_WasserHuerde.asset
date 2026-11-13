@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bee15e7a215f144da868249233de26d, type: 3}
+  m_Name: Cam_WasserHuerde
+  m_EditorClassIdentifier: ProjectTyrant.Runtime::ProjectTyrant.Visuals.CameraBookmark
+  ZoneId: sturmbucht
+  Name: WasserHuerde
+  Kind: 4
+  Position: {x: 247.57695, y: 5.0638366, z: -18.15676}
+  Euler: {x: 11.469702, y: 34.380356, z: 0.00000021779273}
+  Fov: 60
+  ClassId: 
